@@ -1,0 +1,38 @@
+-cp ./
+--main Main
+--macro Macros.setup()
+-D collect.info
+
+--each
+
+-D jvm
+--java ./
+
+--next
+
+--java ./java/
+
+--next
+
+-lib hxnodejs
+--js main.js
+
+--next
+
+--python main.py
+
+--next
+
+--neko main.n
+
+#--next
+
+#--lua main.lua
+
+--next
+
+--hl main.hl
+
+--next
+
+--interp
