@@ -1,0 +1,9 @@
+@:realPath("java.nio.file.attribute.UserPrincipal") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.UserPrincipal") @:javaCanonical("java.nio.file.attribute", "UserPrincipal")
+extern interface java.nio.file.attribute.UserPrincipal implements java.security.Principal {
+
+	@:overload
+	function getName():java.lang.String;
+
+	@:overload
+	function implies(param1:javax.security.auth.Subject):Bool;
+}

@@ -1,0 +1,9 @@
+@:keep @:directlyUsed @:used @:hxGen @:ifFeature("anon_read.keyValueIterator", "dynamic_read.keyValueIterator")
+class haxe.iterators.ArrayKeyValueIterator<T : haxe.iterators.ArrayKeyValueIterator.T> {
+
+	public inline function new(array:Array<haxe.iterators.ArrayKeyValueIterator.T>) {
+		this.array = array;
+	}
+
+	var array:Array<haxe.iterators.ArrayKeyValueIterator.T>;
+}

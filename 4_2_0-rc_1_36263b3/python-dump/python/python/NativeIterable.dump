@@ -1,0 +1,2 @@
+@:used
+abstract python.NativeIterable<T> from python.NativeIterableRaw<python.NativeIterable.T> to python.NativeIterableRaw<python.NativeIterable.T> {}

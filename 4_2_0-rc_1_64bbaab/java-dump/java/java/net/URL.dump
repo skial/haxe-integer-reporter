@@ -1,0 +1,71 @@
+@:realPath("java.net.URL") @:nativeGen @:libType @:javaNative @:native("java.net.URL") @:javaCanonical("java.net", "URL")
+extern class java.net.URL implements java.io.Serializable {
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:java.net.URL, param2:String, param3:java.net.URLStreamHandler):Void;
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:String, param2:String, param3:Int, param4:String):Void;
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:String, param2:String, param3:String):Void;
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:String, param2:String, param3:Int, param4:String, param5:java.net.URLStreamHandler):Void;
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:String):Void;
+
+	@:throws("java.net.MalformedURLException")
+	function new(param1:java.net.URL, param2:String):Void;
+
+	@:throws("java.io.IOException")
+	function getContent(param1:java.NativeArray<java.lang.Class<Dynamic>>):Dynamic;
+
+	@:throws("java.io.IOException")
+	function getContent():Dynamic;
+
+	@:throws("java.io.IOException")
+	function openStream():java.io.InputStream;
+
+	@:throws("java.io.IOException")
+	function openConnection(param1:java.net.Proxy):java.net.URLConnection;
+
+	@:throws("java.io.IOException")
+	function openConnection():java.net.URLConnection;
+
+	@:throws("java.net.URISyntaxException")
+	function toURI():java.net.URI;
+
+	function toExternalForm():String;
+
+	function toString():String;
+
+	function sameFile(param1:java.net.URL):Bool;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getRef():String;
+
+	function getFile():String;
+
+	function getHost():String;
+
+	function getProtocol():String;
+
+	function getDefaultPort():Int;
+
+	function getPort():Int;
+
+	function getAuthority():String;
+
+	function getUserInfo():String;
+
+	function getPath():String;
+
+	function getQuery():String;
+
+	static function setURLStreamHandlerFactory(param1:java.net.URLStreamHandlerFactory):Void;
+}

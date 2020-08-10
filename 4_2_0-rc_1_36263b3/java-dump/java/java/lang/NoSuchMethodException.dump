@@ -1,0 +1,7 @@
+@:realPath("java.lang.NoSuchMethodException") @:nativeGen @:libType @:javaNative @:native("java.lang.NoSuchMethodException") @:javaCanonical("java.lang", "NoSuchMethodException")
+extern class java.lang.NoSuchMethodException extends java.lang.ReflectiveOperationException {
+
+	function new(param1:String):Void;
+
+	function new():Void;
+}

@@ -1,0 +1,43 @@
+@:used @:jsRequire("stream", "Writable")
+extern class js.node.stream.Writable<TSelf : js.node.stream.Writable.TSelf> extends js.node.Stream<js.node.stream.Writable.TSelf> {
+
+	function new(options:Null<js.node.stream.WritableNewOptionsAdapter>):Void;
+
+	function cork():Void;
+
+	function destroy(error:Null<Error>):js.node.stream.Writable.TSelf;
+
+	var destroyed(default,null):Bool;
+
+	function end(chunk:Dynamic, encoding:Null<String>, callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Void;
+
+	function end(callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Void;
+
+	function setDefaultEncoding(encoding:String):js.node.stream.Writable.TSelf;
+
+	function uncork():Void;
+
+	var writable(default,null):Bool;
+
+	var writableEnded(default,null):Bool;
+
+	var writableFinished(default,null):Bool;
+
+	var writablehighWaterMark(default,null):Int;
+
+	var writableLength(default,null):Int;
+
+	var writableObjectMode(default,null):Bool;
+
+	function write(chunk:Dynamic, encoding:Null<String>, callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Bool;
+
+	function _write(chunk:Dynamic, encoding:String, callback:Null<Error> -> Void):Void;
+
+	function _writev(chunks:Array<js.node.stream.Chunk>, callback:Null<Error> -> Void):Void;
+
+	function _destroy(err:Null<Error>, callback:Null<Error> -> Void):Void;
+
+	function _final(callback:Null<Error> -> Void):Void;
+
+	var isTTY(default,null):Bool;
+}

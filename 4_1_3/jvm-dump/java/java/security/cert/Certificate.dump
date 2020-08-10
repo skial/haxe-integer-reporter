@@ -1,0 +1,36 @@
+@:realPath("java.security.cert.Certificate") @:abstract @:libType @:javaNative @:native("java.security.cert.Certificate") @:javaCanonical("java.security.cert", "Certificate")
+extern class java.security.cert.Certificate implements java.io.Serializable {
+
+	@:overload @:protected
+	function new(param1:java.lang.String):Void;
+
+	@:overload @:throws("java.io.ObjectStreamException") @:protected
+	function writeReplace():Dynamic;
+
+	@:overload
+	function getPublicKey():java.security.PublicKey;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload @:throws("java.security.SignatureException") @:throws("java.security.InvalidKeyException") @:throws("java.security.NoSuchAlgorithmException") @:throws("java.security.cert.CertificateException")
+	function verify(param1:java.security.PublicKey, param2:java.security.Provider):Void;
+
+	@:overload @:throws("java.security.SignatureException") @:throws("java.security.NoSuchProviderException") @:throws("java.security.InvalidKeyException") @:throws("java.security.NoSuchAlgorithmException") @:throws("java.security.cert.CertificateException")
+	function verify(param1:java.security.PublicKey):Void;
+
+	@:overload @:throws("java.security.SignatureException") @:throws("java.security.NoSuchProviderException") @:throws("java.security.InvalidKeyException") @:throws("java.security.NoSuchAlgorithmException") @:throws("java.security.cert.CertificateException")
+	function verify(param1:java.security.PublicKey, param2:java.lang.String):Void;
+
+	@:overload @:throws("java.security.cert.CertificateEncodingException")
+	function getEncoded():java.NativeArray<java.types.Int8>;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getType():java.lang.String;
+}

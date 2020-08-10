@@ -1,0 +1,49 @@
+extern class python.lib.Stat {
+
+	var st_mode:Int;
+
+	var st_ino:Int;
+
+	var st_dev:Int;
+
+	var st_nlink:Int;
+
+	var st_uid:Int;
+
+	var st_gid:Int;
+
+	var st_size:Int;
+
+	var st_atime:Int;
+
+	var st_mtime:Int;
+
+	var st_ctime:Int;
+
+	@:optional
+	var st_blocks:Int;
+
+	@:optional
+	var st_blksize:Int;
+
+	@:optional
+	var st_rdev:Int;
+
+	@:optional
+	var st_flags:Int;
+
+	@:optional
+	var st_gen:Int;
+
+	@:optional
+	var st_birthtime:Int;
+
+	@:optional
+	var st_rsize:Int;
+
+	@:optional
+	var st_creator:Int;
+
+	@:optional
+	var st_type:Int;
+}

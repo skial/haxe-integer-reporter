@@ -1,0 +1,228 @@
+@:directlyUsed @:used @:jsRequire("fs")
+extern class js.node.Fs {
+
+	static var constants(default,null):js.node.FsConstants;
+
+	static function rename(oldPath:js.node.FsPath, newPath:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function renameSync(oldPath:js.node.FsPath, newPath:js.node.FsPath):Void;
+
+	static function ftruncate(fd:Int, len:Int, callback:Error -> Void):Void;
+
+	static function ftruncateSync(fd:Int, len:Int):Void;
+
+	static function truncate(path:js.node.FsPath, len:Int, callback:Error -> Void):Void;
+
+	static function truncateSync(path:js.node.FsPath, len:Int):Void;
+
+	static function chown(path:js.node.FsPath, uid:Int, gid:Int, callback:Error -> Void):Void;
+
+	static function chownSync(path:js.node.FsPath, uid:Int, gid:Int):Void;
+
+	static function fchown(fd:Int, uid:Int, gid:Int, callback:Error -> Void):Void;
+
+	static function fchownSync(fd:Int, uid:Int, gid:Int):Void;
+
+	static function lchown(path:js.node.FsPath, uid:Int, gid:Int, callback:Error -> Void):Void;
+
+	static function lchownSync(path:js.node.FsPath, uid:Int, gid:Int):Void;
+
+	static function chmod(path:js.node.FsPath, mode:js.node.FsMode, callback:Error -> Void):Void;
+
+	static function chmodSync(path:js.node.FsPath, mode:js.node.FsMode):Void;
+
+	static function fchmod(fd:Int, mode:js.node.FsMode, callback:Error -> Void):Void;
+
+	static function fchmodSync(fd:Int, mode:js.node.FsMode):Void;
+
+	static function lchmod(path:js.node.FsPath, mode:js.node.FsMode, callback:Error -> Void):Void;
+
+	static function lchmodSync(path:js.node.FsPath, mode:js.node.FsMode):Void;
+
+	static function stat(path:js.node.FsPath, callback:(Error, js.node.fs.Stats) -> Void):Void;
+
+	static function lstat(path:js.node.FsPath, callback:(Error, js.node.fs.Stats) -> Void):Void;
+
+	static function fstat(fd:Int, callback:(Error, js.node.fs.Stats) -> Void):Void;
+
+	static function statSync(path:js.node.FsPath):js.node.fs.Stats;
+
+	static function lstatSync(path:js.node.FsPath):js.node.fs.Stats;
+
+	static function fstatSync(fd:Int):js.node.fs.Stats;
+
+	static function link(srcpath:js.node.FsPath, dstpath:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function linkSync(srcpath:js.node.FsPath, dstpath:js.node.FsPath):Void;
+
+	static function symlink(srcpath:js.node.FsPath, dstpath:js.node.FsPath, type:js.node.SymlinkType, callback:Error -> Void):Void;
+
+	static function symlink(srcpath:js.node.FsPath, dstpath:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function symlinkSync(srcpath:js.node.FsPath, dstpath:js.node.FsPath, type:js.node.SymlinkType):Void;
+
+	static function symlinkSync(srcpath:js.node.FsPath, dstpath:js.node.FsPath):Void;
+
+	static function readlink(path:js.node.FsPath, callback:(Error, String) -> Void):Void;
+
+	static function readlinkSync(path:js.node.FsPath):String;
+
+	static function realpath(path:js.node.FsPath, cache:haxe.DynamicAccess<String>, callback:(Error, String) -> Void):Void;
+
+	static function realpath(path:js.node.FsPath, callback:(Error, String) -> Void):Void;
+
+	static function realpathSync(path:js.node.FsPath, cache:haxe.DynamicAccess<String>):String;
+
+	static function realpathSync(path:js.node.FsPath):String;
+
+	static function unlink(path:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function unlinkSync(path:js.node.FsPath):Void;
+
+	static function rmdir(path:js.node.FsPath, options:js.node.FsRmdirOptions, callback:Error -> Void):Void;
+
+	static function rmdir(path:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function rmdirSync(path:js.node.FsPath, options:Null<js.node.FsRmdirOptions>):Void;
+
+	static function mkdir(path:js.node.FsPath, mode:js.node.FsMode, callback:Error -> Void):Void;
+
+	static function mkdir(path:js.node.FsPath, callback:Error -> Void):Void;
+
+	static function mkdirSync(path:js.node.FsPath, mode:Null<js.node.FsMode>):Void;
+
+	static function mkdtemp(prefix:String, callback:(Error, String) -> Void):Void;
+
+	static function mkdtempSync(template:String):String;
+
+	static function readdir(path:js.node.FsPath, callback:(Error, Array<String>) -> Void):Void;
+
+	static function readdirSync(path:js.node.FsPath):Array<String>;
+
+	static function close(fd:Int, callback:Error -> Void):Void;
+
+	static function closeSync(fd:Int):Void;
+
+	static function open(path:js.node.FsPath, flags:js.node.FsOpenFlag, mode:js.node.FsMode, callback:(Error, Int) -> Void):Void;
+
+	static function open(path:js.node.FsPath, flags:js.node.FsOpenFlag, callback:(Error, Int) -> Void):Void;
+
+	static function openSync(path:js.node.FsPath, flags:js.node.FsOpenFlag, mode:js.node.FsMode):Int;
+
+	static function openSync(path:js.node.FsPath, flags:js.node.FsOpenFlag):Int;
+
+	static function utimes(path:js.node.FsPath, atime:Date, mtime:Date, callback:Error -> Void):Void;
+
+	static function utimesSync(path:js.node.FsPath, atime:Date, mtime:Date):Void;
+
+	static function futimes(fd:Int, atime:Date, mtime:Date, callback:Error -> Void):Void;
+
+	static function futimesSync(fd:Int, atime:Date, mtime:Date):Void;
+
+	static function fsync(fd:Int, callback:Error -> Void):Void;
+
+	static function fsyncSync(fd:Int):Void;
+
+	static function write(fd:Int, buffer:js.node.Buffer, offset:Int, length:Int, position:Int, callback:(Error, Int, js.node.Buffer) -> Void):Void;
+
+	static function write(fd:Int, data:Dynamic, position:Int, encoding:String, callback:(Error, Int, String) -> Void):Void;
+
+	static function write(fd:Int, data:Dynamic, position:Int, callback:(Error, Int, String) -> Void):Void;
+
+	static function write(fd:Int, data:Dynamic, callback:(Error, Int, String) -> Void):Void;
+
+	static function write(fd:Int, buffer:js.node.Buffer, offset:Int, length:Int, callback:(Error, Int, js.node.Buffer) -> Void):Void;
+
+	static function writeSync(fd:Int, buffer:js.node.Buffer, offset:Int, length:Int, position:Null<Int>):Int;
+
+	static function writeSync(fd:Int, data:Dynamic, position:Int, encoding:String):Int;
+
+	static function writeSync(fd:Int, data:Dynamic, position:Null<Int>):Int;
+
+	static function read(fd:Int, buffer:js.node.Buffer, offset:Int, length:Int, position:Null<Int>, callback:(Error, Int, js.node.Buffer) -> Void):Void;
+
+	static function readSync(fd:Int, buffer:js.node.Buffer, offset:Int, length:Int, position:Null<Int>):Int;
+
+	static function readFile(filename:js.node.FsPath, options:{ ?flag : Null<js.node.FsOpenFlag>, encoding : String }, callback:(Error, String) -> Void):Void;
+
+	static function readFile(filename:js.node.FsPath, callback:(Error, js.node.Buffer) -> Void):Void;
+
+	static function readFile(filename:js.node.FsPath, options:{ flag : js.node.FsOpenFlag }, callback:(Error, js.node.Buffer) -> Void):Void;
+
+	static function readFile(filename:js.node.FsPath, options:String, callback:(Error, String) -> Void):Void;
+
+	static function readFileSync(filename:js.node.FsPath, options:{ ?flag : Null<js.node.FsOpenFlag>, encoding : String }):String;
+
+	static function readFileSync(filename:js.node.FsPath):js.node.Buffer;
+
+	static function readFileSync(filename:js.node.FsPath, options:{ flag : js.node.FsOpenFlag }):js.node.Buffer;
+
+	static function readFileSync(filename:js.node.FsPath, options:String):String;
+
+	static function writeFile(filename:js.node.FsPath, data:String, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>, callback:Error -> Void):Void;
+
+	static function writeFile(filename:js.node.FsPath, data:js.node.Buffer, callback:Error -> Void):Void;
+
+	static function writeFile(filename:js.node.FsPath, data:String, callback:Error -> Void):Void;
+
+	static function writeFile(filename:js.node.FsPath, data:js.node.Buffer, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>, callback:Error -> Void):Void;
+
+	static function writeFileSync(filename:js.node.FsPath, data:String, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>):Void;
+
+	static function writeFileSync(filename:js.node.FsPath, data:js.node.Buffer):Void;
+
+	static function writeFileSync(filename:js.node.FsPath, data:String):Void;
+
+	static function writeFileSync(filename:js.node.FsPath, data:js.node.Buffer, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>):Void;
+
+	static function appendFile(filename:js.node.FsPath, data:String, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>, callback:Error -> Void):Void;
+
+	static function appendFile(filename:js.node.FsPath, data:js.node.Buffer, callback:Error -> Void):Void;
+
+	static function appendFile(filename:js.node.FsPath, data:String, callback:Error -> Void):Void;
+
+	static function appendFile(filename:js.node.FsPath, data:js.node.Buffer, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>, callback:Error -> Void):Void;
+
+	static function appendFileSync(filename:js.node.FsPath, data:String, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>):Void;
+
+	static function appendFileSync(filename:js.node.FsPath, data:js.node.Buffer):Void;
+
+	static function appendFileSync(filename:js.node.FsPath, data:String):Void;
+
+	static function appendFileSync(filename:js.node.FsPath, data:js.node.Buffer, options:haxe.extern.EitherType<String, js.node.FsWriteFileOptions>):Void;
+
+	static function watchFile(filename:js.node.FsPath, options:js.node.FsWatchFileOptions, listener:(js.node.fs.Stats, js.node.fs.Stats) -> Void):Void;
+
+	static function watchFile(filename:js.node.FsPath, listener:(js.node.fs.Stats, js.node.fs.Stats) -> Void):Void;
+
+	static function unwatchFile(filename:js.node.FsPath, listener:Null<(js.node.fs.Stats, js.node.fs.Stats) -> Void>):Void;
+
+	static function watch(filename:js.node.FsPath, listener:(js.node.fs.FSWatcherChangeType, js.node.FsPath) -> Void):js.node.fs.FSWatcher;
+
+	static function watch(filename:js.node.FsPath):js.node.fs.FSWatcher;
+
+	static function watch(filename:js.node.FsPath, options:{ ?recursive : Null<Bool>, persistent : Bool }, listener:(js.node.fs.FSWatcherChangeType, String) -> Void):js.node.fs.FSWatcher;
+
+	@:deprecated("Use Fs.stat or Fs.access instead")
+	static function exists(path:js.node.FsPath, callback:Bool -> Void):Void;
+
+	static function existsSync(path:js.node.FsPath):Bool;
+
+	static function access(path:js.node.FsPath, mode:Int, callback:Error -> Void):Void;
+
+	static function access(path:js.node.FsPath, callback:Error -> Void):Void;
+
+	static var F_OK(default,null):Int;
+
+	static var R_OK(default,null):Int;
+
+	static var W_OK(default,null):Int;
+
+	static var X_OK(default,null):Int;
+
+	static function accessSync(path:js.node.FsPath, mode:Null<Int>):Void;
+
+	static function createReadStream(path:js.node.FsPath, options:Null<haxe.extern.EitherType<String, js.node.FsCreateReadStreamOptions>>):js.node.fs.ReadStream;
+
+	static function createWriteStream(path:js.node.FsPath, options:Null<js.node.FsCreateWriteStreamOptions>):js.node.fs.WriteStream;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.nio.file.WatchEvent_Modifier") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.WatchEvent$Modifier") @:javaCanonical("java.nio.file", "WatchEvent.Modifier")
+extern interface java.nio.file.WatchEvent$Modifier {
+
+	@:overload
+	function name():java.lang.String;
+}

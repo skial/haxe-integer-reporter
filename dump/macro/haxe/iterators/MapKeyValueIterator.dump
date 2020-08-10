@@ -1,0 +1,72 @@
+@:ifFeature("anon_read.keyValueIterator", "dynamic_read.keyValueIterator")
+class haxe.iterators.MapKeyValueIterator<K : haxe.iterators.MapKeyValueIterator.K,V : haxe.iterators.MapKeyValueIterator.V> {
+
+	public inline function new[Function:(map : haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>) -> Void]
+		[Arg:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] [Local map(109537):haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+		[Block:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+			[Binop:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+				[Field:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+					[Const:haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] this
+					[FInstance:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+						haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+						map:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+				=
+				[Local map(109537):haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+			[Binop:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+				[Field:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+					[Const:haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] this
+					[FInstance:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+						haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+						keys:Iterator<haxe.iterators.MapKeyValueIterator.K>
+				=
+				[Call:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+					[Field:Void -> Iterator<haxe.iterators.MapKeyValueIterator.K>]
+						[Local map(109537):haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+						[FInstance:Void -> Iterator<haxe.iterators.MapKeyValueIterator.K>]
+							haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+							keys:Void -> Iterator<haxe.IMap.K>
+
+	var map:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>;
+
+	var keys:Iterator<haxe.iterators.MapKeyValueIterator.K>;
+
+	@:maybeUsed
+	public inline function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Bool]
+					[Field:Void -> Bool]
+						[Field:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+							[Const:haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] this
+							[FInstance:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+								haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+								keys:Iterator<haxe.iterators.MapKeyValueIterator.K>
+						[FAnon:Void -> Bool] hasNext:Void -> Bool
+
+	@:maybeUsed
+	public inline function next[Function:Void -> { value : haxe.iterators.MapKeyValueIterator.V, key : haxe.iterators.MapKeyValueIterator.K }]
+		[Block:Dynamic]
+			[Var key(109538):haxe.iterators.MapKeyValueIterator.K]
+				[Call:haxe.iterators.MapKeyValueIterator.K]
+					[Field:Void -> haxe.iterators.MapKeyValueIterator.K]
+						[Field:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+							[Const:haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] this
+							[FInstance:Iterator<haxe.iterators.MapKeyValueIterator.K>]
+								haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+								keys:Iterator<haxe.iterators.MapKeyValueIterator.K>
+						[FAnon:Void -> haxe.iterators.MapKeyValueIterator.K] next:Void -> haxe.iterators.MapKeyValueIterator.K
+			[Return:Dynamic]
+				[ObjectDecl:{ value : Null<haxe.iterators.MapKeyValueIterator.V>, key : haxe.iterators.MapKeyValueIterator.K }]
+					value: [Call:Null<haxe.iterators.MapKeyValueIterator.V>]
+						[Field:(k : haxe.iterators.MapKeyValueIterator.K) -> Null<haxe.iterators.MapKeyValueIterator.V>]
+							[Field:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+								[Const:haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>] this
+								[FInstance:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>]
+									haxe.iterators.MapKeyValueIterator<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+									map:haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+							[FInstance:(k : haxe.iterators.MapKeyValueIterator.K) -> Null<haxe.iterators.MapKeyValueIterator.V>]
+								haxe.IMap<haxe.iterators.MapKeyValueIterator.K, haxe.iterators.MapKeyValueIterator.V>
+								get:(k : haxe.IMap.K) -> Null<haxe.IMap.V>
+						[Local key(109538):haxe.iterators.MapKeyValueIterator.K:haxe.iterators.MapKeyValueIterator.K]
+					key: [Local key(109538):haxe.iterators.MapKeyValueIterator.K:haxe.iterators.MapKeyValueIterator.K]
+}

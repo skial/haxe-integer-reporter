@@ -1,0 +1,3 @@
+@:realPath("java.io.File_TempDirectory") @:nativeGen @:libType @:javaNative @:native("java.io.File$TempDirectory") @:javaCanonical("java.io", "File.TempDirectory")
+extern class java.io.File$TempDirectory {
+}

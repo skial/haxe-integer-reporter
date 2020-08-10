@@ -1,0 +1,5 @@
+@:realPath("python.BaseException") @:directlyUsed @:used @:native("BaseException")
+extern class BaseException {
+
+	function new(args:haxe.extern.Rest<Dynamic>):Void;
+}

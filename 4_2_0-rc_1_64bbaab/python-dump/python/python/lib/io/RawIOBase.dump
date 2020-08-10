@@ -1,0 +1,12 @@
+@:used @:pythonImport("io", "RawIOBase")
+extern class python.lib.io.RawIOBase extends python.lib.io.IOBase {
+
+	function readall():bytes;
+
+	@:value({ n : -1 })
+	function read(n:Int):Null<bytes>;
+
+	function write(b:bytearray):Null<Int>;
+
+	function readinto(b:bytearray):Null<Int>;
+}

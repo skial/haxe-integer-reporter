@@ -1,0 +1,12 @@
+@:realPath("java.javax.security.auth.Subject_ClassSet") @:used @:libType @:javaNative @:native("javax.security.auth.Subject$ClassSet") @:javaCanonical("javax.security.auth", "Subject.ClassSet")
+extern class javax.security.auth.Subject$ClassSet<T : java.javax.security.auth.Subject_ClassSet.T> extends java.util.AbstractSet<java.javax.security.auth.Subject_ClassSet.T> {
+
+	@:overload
+	function add(param1:java.javax.security.auth.Subject_ClassSet.T):Bool;
+
+	@:overload
+	function iterator():java.util.Iterator<java.javax.security.auth.Subject_ClassSet.T>;
+
+	@:overload
+	function size():Int;
+}

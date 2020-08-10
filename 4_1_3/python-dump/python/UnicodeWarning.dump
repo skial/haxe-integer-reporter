@@ -1,0 +1,3 @@
+@:realPath("python.UnicodeWarning") @:native("UnicodeWarning")
+extern class UnicodeWarning extends Warning {
+}

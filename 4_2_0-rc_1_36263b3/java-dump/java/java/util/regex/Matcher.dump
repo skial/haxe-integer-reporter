@@ -1,0 +1,71 @@
+@:realPath("java.util.regex.Matcher") @:used @:nativeGen @:libType @:javaNative @:native("java.util.regex.Matcher") @:javaCanonical("java.util.regex", "Matcher")
+extern class java.util.regex.Matcher implements java.util.regex.MatchResult {
+
+	function requireEnd():Bool;
+
+	function hitEnd():Bool;
+
+	function toString():String;
+
+	function useAnchoringBounds(param1:Bool):java.util.regex.Matcher;
+
+	function hasAnchoringBounds():Bool;
+
+	function useTransparentBounds(param1:Bool):java.util.regex.Matcher;
+
+	function hasTransparentBounds():Bool;
+
+	function regionEnd():Int;
+
+	function regionStart():Int;
+
+	function region(param1:Int, param2:Int):java.util.regex.Matcher;
+
+	function replaceFirst(param1:String):String;
+
+	function replaceAll(param1:String):String;
+
+	function appendTail(param1:java.lang.StringBuffer):java.lang.StringBuffer;
+
+	function appendReplacement(param1:java.lang.StringBuffer, param2:String):java.util.regex.Matcher;
+
+	function lookingAt():Bool;
+
+	function find(param1:Int):Bool;
+
+	function find():Bool;
+
+	function matches():Bool;
+
+	function groupCount():Int;
+
+	function group(param1:String):String;
+
+	function group():String;
+
+	function group(param1:Int):String;
+
+	function end(param1:String):Int;
+
+	function end():Int;
+
+	function end(param1:Int):Int;
+
+	function start(param1:String):Int;
+
+	function start():Int;
+
+	function start(param1:Int):Int;
+
+	function reset(param1:java.lang.CharSequence):java.util.regex.Matcher;
+
+	function reset():java.util.regex.Matcher;
+
+	function usePattern(param1:java.util.regex.Pattern):java.util.regex.Matcher;
+
+	function toMatchResult():java.util.regex.MatchResult;
+
+	function pattern():java.util.regex.Pattern;
+
+	static function quoteReplacement(param1:String):String;
+}

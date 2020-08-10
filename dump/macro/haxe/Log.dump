@@ -1,0 +1,109 @@
+class haxe.Log {
+
+	public static function formatOutput[Function:(v : Dynamic, infos : haxe.PosInfos) -> String]
+		[Arg:Dynamic] [Local v(115143):Dynamic]
+		[Arg:haxe.PosInfos] [Local infos(115144):haxe.PosInfos]
+		[Block:Dynamic]
+			[Var str(115145):String]
+				[Call:String]
+					[Field:(s : Dynamic) -> String]
+						[TypeExpr Std:Class<Std>]
+						[FStatic:(s : Dynamic) -> String]
+							Std
+							string:(s : Dynamic) -> String
+					[Local v(115143):Dynamic:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Local infos(115144):haxe.PosInfos:haxe.PosInfos]
+					==
+					[Const:haxe.PosInfos] null
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local str(115145):String:String]
+			[Var pstr(115146):String]
+				[Binop:String]
+					[Binop:String]
+						[Field:String]
+							[Local infos(115144):haxe.PosInfos:haxe.PosInfos]
+							[FAnon:String] fileName:String
+						+
+						[Const:String] ":"
+					+
+					[Field:Int]
+						[Local infos(115144):haxe.PosInfos:haxe.PosInfos]
+						[FAnon:Int] lineNumber:Int
+			[If:Void]
+				[Binop:Bool]
+					[Field:Null<Array<Dynamic>>]
+						[Local infos(115144):haxe.PosInfos:haxe.PosInfos]
+						[FAnon:Null<Array<Dynamic>>] customParams:Null<Array<Dynamic>>
+					!=
+					[Const:Null<Array<Dynamic>>] null
+				[Then:Void] [Block:Void]
+					[Block:Void]
+						[Var `(115149):Int] [Const:Int] 0
+						[Var `1(115150):Null<Array<Dynamic>>]
+							[Field:Null<Array<Dynamic>>]
+								[Local infos(115144):haxe.PosInfos:haxe.PosInfos]
+								[FAnon:Null<Array<Dynamic>>] customParams:Null<Array<Dynamic>>
+						[While:Void]
+							[Binop:Bool]
+								[Local `(115149):Int:Int]
+								<
+								[Field:Int]
+									[Local `1(115150):Null<Array<Dynamic>>:Null<Array<Dynamic>>]
+									[FInstance:Int]
+										Array<Dynamic>
+										length:Int
+							[Block:Void]
+								[Var v(115147):Dynamic]
+									[Array:Dynamic]
+										[Local `1(115150):Null<Array<Dynamic>>:Null<Array<Dynamic>>]
+										[Local `(115149):Int:Int]
+								[Unop:Int]
+									++
+									Prefix
+									[Local `(115149):Int:Int]
+								[Binop:String]
+									[Local str(115145):String:String]
+									+=
+									[Binop:String]
+										[Const:String] ", "
+										+
+										[Call:String]
+											[Field:(s : Dynamic) -> String]
+												[TypeExpr Std:Class<Std>]
+												[FStatic:(s : Dynamic) -> String]
+													Std
+													string:(s : Dynamic) -> String
+											[Local v(115147):Dynamic:Dynamic]
+			[Return:Dynamic]
+				[Binop:String]
+					[Binop:String]
+						[Local pstr(115146):String:String]
+						+
+						[Const:String] ": "
+					+
+					[Local str(115145):String:String]
+
+	public static dynamic function trace[Function:(v : Dynamic, ?infos : Null<haxe.PosInfos>) -> Void]
+		[Arg:Dynamic] [Local v(115141):Dynamic]
+		[Arg:Null<haxe.PosInfos>]
+			[Local infos(115142):Null<haxe.PosInfos>]
+			[Const:Null<haxe.PosInfos>] null
+		[Block:Void]
+			[Var str(115151):String]
+				[Call:String]
+					[Field:(v : Dynamic, infos : haxe.PosInfos) -> String]
+						[TypeExpr haxe.Log:Class<haxe.Log>]
+						[FStatic:(v : Dynamic, infos : haxe.PosInfos) -> String]
+							haxe.Log
+							formatOutput:(v : Dynamic, infos : haxe.PosInfos) -> String
+					[Local v(115141):Dynamic:Dynamic]
+					[Local infos(115142):Null<haxe.PosInfos>:Null<haxe.PosInfos>]
+			[Call:Void]
+				[Field:(v : Dynamic) -> Void]
+					[TypeExpr Sys:Class<Sys>]
+					[FStatic:(v : Dynamic) -> Void]
+						Sys
+						println:(v : Dynamic) -> Void
+				[Local str(115151):String:String]
+}

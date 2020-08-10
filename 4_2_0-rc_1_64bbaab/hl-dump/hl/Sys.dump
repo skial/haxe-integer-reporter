@@ -1,0 +1,24 @@
+@:keep @:directlyUsed @:used @:coreApi @:keepInit @:access(String)
+class Sys {
+
+	static var utf8Path:Bool;
+
+	static function getPath(s:String) {
+		if ((Sys.utf8Path)) return hl._Bytes.Bytes_Impl_.utf16ToUtf8(s.bytes, 0, null) else return s.bytes;
+	}
+
+	public static function println(v:Dynamic) {
+		Sys.sys_print(Std.string(v).bytes);
+		Sys.sys_print("\n".bytes);
+	}
+
+	@:hlNative("std", "sys_utf8_path")
+	static function sys_utf8_path() {
+		return false;
+	}
+
+	@:hlNative("std", "sys_print")
+	static function sys_print(v:hl.Bytes) {}
+
+	static function __init__() Sys.utf8Path = Sys.sys_utf8_path()
+}

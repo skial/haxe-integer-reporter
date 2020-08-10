@@ -1,0 +1,5 @@
+@:directlyUsed @:used @:pythonImport("functools")
+extern class python.lib.Functools {
+
+	static function cmp_to_key<A : cmp_to_key.A>(f:(cmp_to_key.A, cmp_to_key.A) -> Int):Dynamic;
+}

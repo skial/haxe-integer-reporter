@@ -1,0 +1,2 @@
+@:nativeGen
+typedef Iterable<T : Iterable.T> = { iterator : Void -> Iterator<Iterable.T> }

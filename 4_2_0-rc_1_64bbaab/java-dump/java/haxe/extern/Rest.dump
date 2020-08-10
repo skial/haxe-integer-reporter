@@ -1,0 +1,2 @@
+@:used @:hxGen
+abstract haxe.extern.Rest<T> {}

@@ -1,0 +1,11 @@
+@:jsRequire("buffer")
+private extern class js.node.buffer._Buffer.BufferModule {
+
+	static var INSPECT_MAX_BYTES:Int;
+
+	static var kMaxLength(default,never):Int;
+
+	static function transcode(source:Uint8Array, fromEnc:String, toEnc:String):js.node.buffer.Buffer;
+
+	static var constants(default,never):js.node.buffer.BufferConstants;
+}

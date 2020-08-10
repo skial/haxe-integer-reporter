@@ -1,0 +1,13 @@
+extern class python.DictView<T> {
+
+	var length(get,never):Int;
+
+	inline function get_length():Int;
+
+	inline function iter():python.NativeIterator<python.DictView.T>;
+
+	inline function iterator():Iterator<python.DictView.T>;
+
+	@:maybeUsed
+	function __iter__():python.NativeIterator<python.DictView.T>;
+}

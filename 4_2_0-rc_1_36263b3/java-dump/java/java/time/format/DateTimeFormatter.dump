@@ -1,0 +1,95 @@
+@:realPath("java.time.format.DateTimeFormatter") @:used @:nativeGen @:libType @:javaNative @:native("java.time.format.DateTimeFormatter") @:javaCanonical("java.time.format", "DateTimeFormatter")
+extern class java.time.format.DateTimeFormatter {
+
+	function toString():String;
+
+	function toFormat(param1:java.time.temporal.TemporalQuery<Dynamic>):java.text.Format;
+
+	function toFormat():java.text.Format;
+
+	function parseUnresolved(param1:java.lang.CharSequence, param2:java.text.ParsePosition):java.time.temporal.TemporalAccessor;
+
+	function parseBest(param1:java.lang.CharSequence, param2:java.NativeArray<java.time.temporal.TemporalQuery<Dynamic>>):java.time.temporal.TemporalAccessor;
+
+	function parse<T:Dynamic>(param1:java.lang.CharSequence, param2:java.time.temporal.TemporalQuery<parse.T>):parse.T;
+
+	function parse(param1:java.lang.CharSequence):java.time.temporal.TemporalAccessor;
+
+	function parse(param1:java.lang.CharSequence, param2:java.text.ParsePosition):java.time.temporal.TemporalAccessor;
+
+	function formatTo(param1:java.time.temporal.TemporalAccessor, param2:java.lang.Appendable):Void;
+
+	function format(param1:java.time.temporal.TemporalAccessor):String;
+
+	function withResolverFields(param1:java.util.Set<java.time.temporal.TemporalField>):java.time.format.DateTimeFormatter;
+
+	function withResolverFields(param1:java.NativeArray<java.time.temporal.TemporalField>):java.time.format.DateTimeFormatter;
+
+	function getResolverFields():java.util.Set<java.time.temporal.TemporalField>;
+
+	function withResolverStyle(param1:java.time.format.ResolverStyle):java.time.format.DateTimeFormatter;
+
+	function getResolverStyle():java.time.format.ResolverStyle;
+
+	function withZone(param1:java.time.ZoneId):java.time.format.DateTimeFormatter;
+
+	function getZone():java.time.ZoneId;
+
+	function withChronology(param1:java.time.chrono.Chronology):java.time.format.DateTimeFormatter;
+
+	function getChronology():java.time.chrono.Chronology;
+
+	function withDecimalStyle(param1:java.time.format.DecimalStyle):java.time.format.DateTimeFormatter;
+
+	function getDecimalStyle():java.time.format.DecimalStyle;
+
+	function withLocale(param1:java.util.Locale):java.time.format.DateTimeFormatter;
+
+	function getLocale():java.util.Locale;
+
+	static function parsedLeapSecond():java.time.temporal.TemporalQuery<java.lang.Boolean>;
+
+	static function parsedExcessDays():java.time.temporal.TemporalQuery<java.time.Period>;
+
+	static function ofLocalizedDateTime(param1:java.time.format.FormatStyle, param2:java.time.format.FormatStyle):java.time.format.DateTimeFormatter;
+
+	static function ofLocalizedDateTime(param1:java.time.format.FormatStyle):java.time.format.DateTimeFormatter;
+
+	static function ofLocalizedTime(param1:java.time.format.FormatStyle):java.time.format.DateTimeFormatter;
+
+	static function ofLocalizedDate(param1:java.time.format.FormatStyle):java.time.format.DateTimeFormatter;
+
+	static function ofPattern(param1:String, param2:java.util.Locale):java.time.format.DateTimeFormatter;
+
+	static function ofPattern(param1:String):java.time.format.DateTimeFormatter;
+
+	static var ISO_LOCAL_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_OFFSET_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_LOCAL_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_OFFSET_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_LOCAL_DATE_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_OFFSET_DATE_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_ZONED_DATE_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_DATE_TIME(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_ORDINAL_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_WEEK_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var ISO_INSTANT(default,never):java.time.format.DateTimeFormatter;
+
+	static var BASIC_ISO_DATE(default,never):java.time.format.DateTimeFormatter;
+
+	static var RFC_1123_DATE_TIME(default,never):java.time.format.DateTimeFormatter;
+}

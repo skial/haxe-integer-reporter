@@ -1,0 +1,12 @@
+@:used @:enum
+private extern class js.node._Fs.SymlinkType_Impl_ {
+
+	@:value(cast "dir") @:enum @:impl
+	static inline var Dir:js.node.SymlinkType = cast "dir";
+
+	@:value(cast "file") @:enum @:impl
+	static inline var File:js.node.SymlinkType = cast "file";
+
+	@:value(cast "junction") @:enum @:impl
+	static inline var Junction:js.node.SymlinkType = cast "junction";
+}

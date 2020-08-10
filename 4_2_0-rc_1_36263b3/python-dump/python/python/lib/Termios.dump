@@ -1,0 +1,11 @@
+@:pythonImport("termios", ignoreError = true)
+extern class python.lib.Termios {
+
+	static var TCSADRAIN:Int;
+
+	static var ECHO:Int;
+
+	static function tcgetattr(fileNo:Int):python.lib.TermiosSettings;
+
+	static function tcsetattr(fileNo:Int, when:Int, settings:python.lib.TermiosSettings):Void;
+}

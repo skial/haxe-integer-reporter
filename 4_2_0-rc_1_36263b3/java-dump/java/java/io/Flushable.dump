@@ -1,0 +1,6 @@
+@:realPath("java.io.Flushable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.Flushable") @:javaCanonical("java.io", "Flushable")
+extern interface java.io.Flushable {
+
+	@:throws("java.io.IOException")
+	function flush():Void;
+}

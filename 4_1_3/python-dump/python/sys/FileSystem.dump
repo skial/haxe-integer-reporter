@@ -1,0 +1,11 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.FileSystem {
+
+	public static function exists(path:str) {
+		return python.lib.os.Path.exists(path);
+	}
+
+	public static function createDirectory(path:str) {
+		python.lib.Os.makedirs(path, 511, true);
+	}
+}

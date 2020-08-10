@@ -1,0 +1,3 @@
+@:realPath("java.lang.Class_MethodArray") @:libType @:javaNative @:native("java.lang.Class$MethodArray") @:javaCanonical("java.lang", "Class.MethodArray")
+extern class java.lang.Class$MethodArray {
+}

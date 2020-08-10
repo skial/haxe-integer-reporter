@@ -1,0 +1,8 @@
+@:realPath("java.nio.channels.Channel") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.channels.Channel") @:javaCanonical("java.nio.channels", "Channel")
+extern interface java.nio.channels.Channel implements java.io.Closeable {
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	function isOpen():Bool;
+}

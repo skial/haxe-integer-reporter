@@ -1,0 +1,3 @@
+@:realPath("java.time.Duration_DurationUnits") @:libType @:javaNative @:native("java.time.Duration$DurationUnits") @:javaCanonical("java.time", "Duration.DurationUnits")
+extern class java.time.Duration$DurationUnits {
+}

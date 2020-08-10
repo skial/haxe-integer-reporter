@@ -1,0 +1,2 @@
+@:nativeGen
+typedef Iterator<T : Iterator.T> = { next : Void -> Iterator.T, hasNext : Void -> Bool }

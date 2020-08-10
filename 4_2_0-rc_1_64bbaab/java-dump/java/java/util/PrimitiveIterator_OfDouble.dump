@@ -1,0 +1,17 @@
+@:realPath("java.util.PrimitiveIterator_OfDouble") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.PrimitiveIterator$OfDouble") @:javaCanonical("java.util", "PrimitiveIterator.OfDouble")
+extern interface java.util.PrimitiveIterator$OfDouble implements java.util.PrimitiveIterator<java.lang.Double, java.util.function.DoubleConsumer> {
+
+	function next():java.lang.Double;
+
+	function forEachRemaining(param1:Dynamic):Void;
+
+	function forEachRemaining(param1:java.util.function.DoubleConsumer):Void;
+
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	function nextDouble():Float;
+
+	function remove():Void;
+
+	function hasNext():Bool;
+}

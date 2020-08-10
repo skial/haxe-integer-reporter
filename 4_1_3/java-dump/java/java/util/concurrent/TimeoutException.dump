@@ -1,0 +1,9 @@
+@:realPath("java.util.concurrent.TimeoutException") @:nativeGen @:libType @:javaNative @:native("java.util.concurrent.TimeoutException") @:javaCanonical("java.util.concurrent", "TimeoutException")
+extern class java.util.concurrent.TimeoutException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

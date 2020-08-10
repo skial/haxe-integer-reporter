@@ -1,0 +1,6 @@
+@:realPath("java.util.HashMap_HashMapSpliterator") @:used @:libType @:javaNative @:native("java.util.HashMap$HashMapSpliterator") @:javaCanonical("java.util", "HashMap.HashMapSpliterator")
+extern class java.util.HashMap$HashMapSpliterator<K : java.util.HashMap_HashMapSpliterator.K,V : java.util.HashMap_HashMapSpliterator.V> {
+
+	@:overload
+	function estimateSize():haxe.Int64;
+}

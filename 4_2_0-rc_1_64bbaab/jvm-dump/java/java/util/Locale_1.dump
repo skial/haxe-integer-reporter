@@ -1,0 +1,8 @@
+@:realPath("java.util.Locale_1") @:used @:native("java.util.Locale$1") @:libType
+extern class java.util.Locale$1 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_util_Locale_Category") @:native("$SwitchMap$java$util$Locale$Category")
+	static var $SwitchMap$java$util$Locale$Category(default,never):java.NativeArray<Int>;
+}

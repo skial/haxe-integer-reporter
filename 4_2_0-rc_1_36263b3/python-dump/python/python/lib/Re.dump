@@ -1,0 +1,73 @@
+@:pythonImport("re")
+extern class python.lib.Re {
+
+	static var A:Int;
+
+	static var ASCII:Int;
+
+	static var DEBUG:Int;
+
+	static var I:Int;
+
+	static var IGNORECASE:Int;
+
+	static var L:Int;
+
+	static var LOCALE:Int;
+
+	static var M:Int;
+
+	static var MULTILINE:Int;
+
+	static var S:Int;
+
+	static var DOTALL:Int;
+
+	static var X:Int;
+
+	static var VERBOSE:Int;
+
+	static var U:Int;
+
+	static var UNICODE:Int;
+
+	@:value({ flags : 0 })
+	static function compile(pattern:str, flags:Null<Int>):python.lib.Regex;
+
+	@:value({ flags : 0 })
+	static function match(pattern:python.lib.Pattern, string:str, flags:Int):Null<python.lib.MatchObject>;
+
+	@:value({ flags : 0 })
+	static function search(pattern:python.lib.Pattern, string:str, flags:Int):Null<python.lib.MatchObject>;
+
+	@:value({ flags : 0, maxsplit : 0 })
+	static function split(pattern:python.lib.Pattern, string:str, maxsplit:Int, flags:Int):list<str>;
+
+	@:value({ flags : 0 })
+	static inline function findallDynamic(pattern:python.lib.Pattern, string:str, flags:Int):list<Dynamic>;
+
+	@:value({ flags : 0 })
+	static inline function findallString(pattern:python.lib.Pattern, string:str, flags:Int):list<str>;
+
+	@:value({ flags : 0 })
+	static inline function findallTuple(pattern:python.lib.Pattern, string:str, flags:Int):list<tuple<str>>;
+
+	@:value({ flags : 0 })
+	static inline function findallArray(pattern:python.lib.Pattern, string:str, flags:Int):list<list<str>>;
+
+	@:value({ flags : 0 })
+	static function finditer(pattern:python.lib.Pattern, string:str, flags:Int):python.NativeIterator<python.lib.MatchObject>;
+
+	@:value({ flags : 0, count : 0 })
+	static function sub(pattern:python.lib.Pattern, repl:python.lib.MatchObject -> str, string:str, count:Null<Int>, flags:Null<Int>):str;
+
+	@:value({ flags : 0, count : 0 })
+	static function sub(pattern:python.lib.Pattern, repl:str, string:str, count:Null<Int>, flags:Null<Int>):str;
+
+	@:value({ flags : 0, count : 0 })
+	static function subn(pattern:python.lib.Pattern, repl:python.lib.Repl, string:str, count:Int, flags:Int):str;
+
+	static function escape(string:str):str;
+
+	static function purge():Void;
+}

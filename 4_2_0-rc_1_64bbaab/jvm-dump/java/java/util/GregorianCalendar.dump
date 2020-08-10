@@ -1,0 +1,100 @@
+@:realPath("java.util.GregorianCalendar") @:used @:native("java.util.GregorianCalendar") @:libType
+extern class java.util.GregorianCalendar extends java.util.Calendar {
+
+	function new():Void;
+
+	function new(param1:java.util.TimeZone, param2:java.util.Locale, param3:Bool):Void;
+
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int, param7:Int):Void;
+
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	function new(param1:Int, param2:Int, param3:Int):Void;
+
+	function new(param1:java.util.TimeZone, param2:java.util.Locale):Void;
+
+	function new(param1:java.util.Locale):Void;
+
+	function new(param1:java.util.TimeZone):Void;
+
+	function setGregorianChange(param1:java.util.Date):Void;
+
+	function getGregorianChange():java.util.Date;
+
+	function isLeapYear(param1:Int):Bool;
+
+	function getCalendarType():java.lang.String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function add(param1:Int, param2:Int):Void;
+
+	function roll(param1:Int, param2:Bool):Void;
+
+	function roll(param1:Int, param2:Int):Void;
+
+	function getMinimum(param1:Int):Int;
+
+	function getMaximum(param1:Int):Int;
+
+	function getGreatestMinimum(param1:Int):Int;
+
+	function getLeastMaximum(param1:Int):Int;
+
+	function getActualMinimum(param1:Int):Int;
+
+	function getActualMaximum(param1:Int):Int;
+
+	function clone():Dynamic;
+
+	function getTimeZone():java.util.TimeZone;
+
+	function setTimeZone(param1:java.util.TimeZone):Void;
+
+	function isWeekDateSupported():Bool;
+
+	function getWeekYear():Int;
+
+	function setWeekDate(param1:Int, param2:Int, param3:Int):Void;
+
+	function getWeeksInWeekYear():Int;
+
+	function computeFields():Void;
+
+	function computeTime():Void;
+
+	function toZonedDateTime():java.time.ZonedDateTime;
+
+	static function from(param1:java.time.ZonedDateTime):java.util.GregorianCalendar;
+
+	static function <clinit>():Void;
+
+	static var BC(default,never):Int;
+
+	static var BCE(default,never):Int;
+
+	static var AD(default,never):Int;
+
+	static var CE(default,never):Int;
+
+	static var MONTH_LENGTH(default,never):java.NativeArray<Int>;
+
+	static var LEAP_MONTH_LENGTH(default,never):java.NativeArray<Int>;
+
+	static var MIN_VALUES(default,never):java.NativeArray<Int>;
+
+	static var LEAST_MAX_VALUES(default,never):java.NativeArray<Int>;
+
+	static var MAX_VALUES(default,never):java.NativeArray<Int>;
+
+	static var serialVersionUID(default,never):haxe.Int64;
+
+	static var DEFAULT_GREGORIAN_CUTOVER(default,never):haxe.Int64;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

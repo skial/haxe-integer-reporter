@@ -1,0 +1,37 @@
+@:keep @:used
+class haxe.io.Output {
+
+	public function writeByte(c:Int) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "haxe/io/Output.hx", lineNumber : 47, className : "haxe.io.Output", methodName : "writeByte"});
+	}
+
+	@:has_untyped
+	public function writeBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		var b = s.b;
+		var k = len;
+		while ((k > 0)) {
+			this.writeByte(__dollar__sget(b, pos));
+			++ pos;
+			-- k;
+		};
+		return len;
+	}
+
+	public function close() {}
+
+	public function writeFullBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		while ((len > 0)) {
+			var k = this.writeBytes(s, pos, len);
+			pos += k;
+			len -= k;
+		};
+	}
+
+	@:has_untyped
+	public function writeString(s:String, encoding:Null<haxe.io.Encoding> = null) {
+		var b = new haxe.io.Bytes(s.length, s.__s);
+		this.writeFullBytes(b, 0, b.length);
+	}
+
+	static function __init__() haxe.io.Output.prototype.bigEndian = false
+}

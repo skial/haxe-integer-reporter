@@ -1,0 +1,9 @@
+@:realPath("java.net.SocketException") @:nativeGen @:libType @:javaNative @:native("java.net.SocketException") @:javaCanonical("java.net", "SocketException")
+extern class java.net.SocketException extends java.io.IOException {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:String):Void;
+}

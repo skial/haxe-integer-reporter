@@ -1,0 +1,21 @@
+@:realPath("java.util.stream.LongStream_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.stream.LongStream") @:javaCanonical("java.util.stream", "LongStream")
+extern class java.util.stream.LongStream {
+
+	static function concat(param1:java.util.stream.LongStream, param2:java.util.stream.LongStream):java.util.stream.LongStream;
+
+	static function rangeClosed(param1:haxe.Int64, param2:haxe.Int64):java.util.stream.LongStream;
+
+	static function range(param1:haxe.Int64, param2:haxe.Int64):java.util.stream.LongStream;
+
+	static function generate(param1:java.util.function.LongSupplier):java.util.stream.LongStream;
+
+	static function iterate(param1:haxe.Int64, param2:java.util.function.LongUnaryOperator):java.util.stream.LongStream;
+
+	static function of(param1:java.NativeArray<haxe.Int64>):java.util.stream.LongStream;
+
+	static function of(param1:haxe.Int64):java.util.stream.LongStream;
+
+	static function empty():java.util.stream.LongStream;
+
+	static function builder():java.util.stream.LongStream$Builder;
+}

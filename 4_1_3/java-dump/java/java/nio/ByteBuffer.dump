@@ -1,0 +1,177 @@
+@:realPath("java.nio.ByteBuffer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.ByteBuffer") @:javaCanonical("java.nio", "ByteBuffer")
+extern class java.nio.ByteBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.ByteBuffer> {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.nio.ByteBuffer):Int;
+
+	@:overload
+	function array():java.NativeArray<java.types.Int8>;
+
+	@:overload
+	function asDoubleBuffer():java.nio.DoubleBuffer;
+
+	@:overload
+	function putDouble(param1:Int, param2:Float):java.nio.ByteBuffer;
+
+	@:overload
+	function putDouble(param1:Float):java.nio.ByteBuffer;
+
+	@:overload
+	function getDouble(param1:Int):Float;
+
+	@:overload
+	function getDouble():Float;
+
+	@:overload
+	function asFloatBuffer():java.nio.FloatBuffer;
+
+	@:overload
+	function putFloat(param1:Int, param2:Single):java.nio.ByteBuffer;
+
+	@:overload
+	function putFloat(param1:Single):java.nio.ByteBuffer;
+
+	@:overload
+	function getFloat(param1:Int):Single;
+
+	@:overload
+	function getFloat():Single;
+
+	@:overload
+	function asLongBuffer():java.nio.LongBuffer;
+
+	@:overload
+	function putLong(param1:Int, param2:haxe.Int64):java.nio.ByteBuffer;
+
+	@:overload
+	function putLong(param1:haxe.Int64):java.nio.ByteBuffer;
+
+	@:overload
+	function getLong(param1:Int):haxe.Int64;
+
+	@:overload
+	function getLong():haxe.Int64;
+
+	@:overload
+	function asIntBuffer():java.nio.IntBuffer;
+
+	@:overload
+	function putInt(param1:Int, param2:Int):java.nio.ByteBuffer;
+
+	@:overload
+	function putInt(param1:Int):java.nio.ByteBuffer;
+
+	@:overload
+	function getInt(param1:Int):Int;
+
+	@:overload
+	function getInt():Int;
+
+	@:overload
+	function asShortBuffer():java.nio.ShortBuffer;
+
+	@:overload
+	function putShort(param1:Int, param2:java.types.Int16):java.nio.ByteBuffer;
+
+	@:overload
+	function putShort(param1:java.types.Int16):java.nio.ByteBuffer;
+
+	@:overload
+	function getShort(param1:Int):java.types.Int16;
+
+	@:overload
+	function getShort():java.types.Int16;
+
+	@:overload
+	function asCharBuffer():java.nio.CharBuffer;
+
+	@:overload
+	function putChar(param1:Int, param2:java.types.Char16):java.nio.ByteBuffer;
+
+	@:overload
+	function putChar(param1:java.types.Char16):java.nio.ByteBuffer;
+
+	@:overload
+	function getChar(param1:Int):java.types.Char16;
+
+	@:overload
+	function getChar():java.types.Char16;
+
+	@:overload
+	function order(param1:java.nio.ByteOrder):java.nio.ByteBuffer;
+
+	@:overload
+	function order():java.nio.ByteOrder;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function isDirect():Bool;
+
+	@:overload
+	function compact():java.nio.ByteBuffer;
+
+	@:overload
+	function arrayOffset():Int;
+
+	@:overload
+	function hasArray():Bool;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Int8>):java.nio.ByteBuffer;
+
+	@:overload
+	function put(param1:java.types.Int8):java.nio.ByteBuffer;
+
+	@:overload
+	function put(param1:Int, param2:java.types.Int8):java.nio.ByteBuffer;
+
+	@:overload
+	function put(param1:java.nio.ByteBuffer):java.nio.ByteBuffer;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):java.nio.ByteBuffer;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Int8>):java.nio.ByteBuffer;
+
+	@:overload
+	function get():java.types.Int8;
+
+	@:overload
+	function get(param1:Int):java.types.Int8;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):java.nio.ByteBuffer;
+
+	@:overload
+	function asReadOnlyBuffer():java.nio.ByteBuffer;
+
+	@:overload
+	function duplicate():java.nio.ByteBuffer;
+
+	@:overload
+	function slice():java.nio.ByteBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Int8>):java.nio.ByteBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):java.nio.ByteBuffer;
+
+	@:overload
+	static function allocate(param1:Int):java.nio.ByteBuffer;
+
+	@:overload
+	static function allocateDirect(param1:Int):java.nio.ByteBuffer;
+}

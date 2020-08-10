@@ -1,0 +1,19 @@
+@:realPath("java.text.Format") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.text.Format") @:javaCanonical("java.text", "Format")
+extern class java.text.Format implements java.io.Serializable implements java.lang.Cloneable {
+
+	@:protected
+	function new():Void;
+
+	function clone():Dynamic;
+
+	@:throws("java.text.ParseException")
+	function parseObject(param1:String):Dynamic;
+
+	function parseObject(param1:String, param2:java.text.ParsePosition):Dynamic;
+
+	function formatToCharacterIterator(param1:Dynamic):java.text.AttributedCharacterIterator;
+
+	function format(param1:Dynamic, param2:java.lang.StringBuffer, param3:java.text.FieldPosition):java.lang.StringBuffer;
+
+	function format(param1:Dynamic):String;
+}

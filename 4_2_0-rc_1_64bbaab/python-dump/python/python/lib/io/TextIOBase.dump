@@ -1,0 +1,17 @@
+@:used @:pythonImport("io", "TextIOBase")
+extern class python.lib.io.TextIOBase extends python.lib.io.IOBase {
+
+	var encoding:str;
+
+	var error:str;
+
+	var newlines:Null<haxe.extern.EitherType<str, tuple<str>>>;
+
+	function detach():python.lib.io.BufferedIOBase;
+
+	function write(s:str):Int;
+
+	function read(n:Int):str;
+
+	var buffer:python.lib.io.BufferedIOBase;
+}

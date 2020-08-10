@@ -1,0 +1,24 @@
+@:realPath("java.time.Clock_FixedClock") @:used @:libType @:javaNative @:native("java.time.Clock$FixedClock") @:javaCanonical("java.time", "Clock.FixedClock")
+extern class java.time.Clock$FixedClock extends java.time.Clock implements java.io.Serializable {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function instant():java.time.Instant;
+
+	@:overload
+	function millis():haxe.Int64;
+
+	@:overload
+	function withZone(param1:java.time.ZoneId):java.time.Clock;
+
+	@:overload
+	function getZone():java.time.ZoneId;
+}

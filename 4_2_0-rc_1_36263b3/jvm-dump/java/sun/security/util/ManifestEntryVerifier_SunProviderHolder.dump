@@ -1,0 +1,8 @@
+@:realPath("java.sun.security.util.ManifestEntryVerifier_SunProviderHolder") @:native("sun.security.util.ManifestEntryVerifier$SunProviderHolder") @:libType
+extern class sun.security.util.ManifestEntryVerifier$SunProviderHolder {
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000():java.security.Provider;
+
+	static function <clinit>():Void;
+}

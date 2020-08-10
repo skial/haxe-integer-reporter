@@ -1,0 +1,6 @@
+@:realPath("java.time.temporal.TemporalAdjuster") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.time.temporal.TemporalAdjuster") @:javaCanonical("java.time.temporal", "TemporalAdjuster")
+extern interface java.time.temporal.TemporalAdjuster {
+
+	@:overload
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+}

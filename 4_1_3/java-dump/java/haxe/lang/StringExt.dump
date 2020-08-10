@@ -1,0 +1,60 @@
+@:realPath("java.internal._StringExt.StringExt") @:directlyUsed @:used @:nativeGen @:keep @:nativeGen @:native("haxe.lang.StringExt")
+private class haxe.lang.StringExt {
+
+	@:functionCode("\r\n\t\t\tif ( index >= me.length() || index < 0 )\r\n\t\t\t\treturn \"\";\r\n\t\t\telse\r\n\t\t\t\treturn java.lang.Character.toString(me.charAt(index));\r\n\t")
+	public static function charAt(me:java.internal._StringExt.NativeString, index:Int) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\t\tif ( index >= me.length() || index < 0 )\r\n\t\t\t\treturn null;\r\n\t\t\telse\r\n\t\t\t\treturn (int) me.charAt(index);\r\n\t")
+	public static function charCodeAt(me:java.internal._StringExt.NativeString, index:Int) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\t\tint sIndex = (startIndex != null ) ? (haxe.lang.Runtime.toInt(startIndex)) : 0;\r\n\t\t\tif(str == \"\") {\r\n\t\t\t\tint length = me.length();\r\n\t\t\t\tif(sIndex < 0) {\r\n\t\t\t\t\tsIndex = length + sIndex;\r\n\t\t\t\t\tif(sIndex < 0) sIndex = 0;\r\n\t\t\t\t}\r\n\t\t\t\treturn sIndex > length ? length : sIndex;\r\n\t\t\t}\r\n\t\t\tif (sIndex >= me.length() || sIndex < 0)\r\n\t\t\t\treturn -1;\r\n\t\t\treturn me.indexOf(str, sIndex);\r\n\t")
+	public static function indexOf(me:java.internal._StringExt.NativeString, str:java.internal._StringExt.NativeString, startIndex:Null<Int> = null) {
+		return -1;
+	}
+
+	@:functionCode("\r\n\t\t\tint sIndex = (startIndex != null ) ? (haxe.lang.Runtime.toInt(startIndex)) : (me.length() - 1);\r\n\t\t\tif (sIndex > me.length() || sIndex < 0)\r\n\t\t\t\tsIndex = me.length() - 1;\r\n\t\t\telse if (sIndex < 0)\r\n\t\t\t\treturn -1;\r\n\t\t\tif (str.length() == 0) {\r\n\t\t\t\treturn startIndex == null || haxe.lang.Runtime.toInt(startIndex) > me.length() ? me.length() : haxe.lang.Runtime.toInt(startIndex);\r\n\t\t\t}\r\n\t\t\treturn me.lastIndexOf(str, sIndex);\r\n\t")
+	public static function lastIndexOf(me:java.internal._StringExt.NativeString, str:java.internal._StringExt.NativeString, startIndex:Null<Int> = null) {
+		return -1;
+	}
+
+	@:functionCode("\r\n\t\t\tArray<java.lang.String> ret = new Array<java.lang.String>();\r\n\r\n\t\t\tint slen = delimiter.length();\r\n\t\t\tif (slen == 0)\r\n\t\t\t{\r\n\t\t\t\tint len = me.length();\r\n\t\t\t\tfor (int i = 0; i < len; i++)\r\n\t\t\t\t{\r\n\t\t\t\t\tret.push(me.substring(i, i + 1));\r\n\t\t\t\t}\r\n\t\t\t} else {\r\n\t\t\t\tint start = 0;\r\n\t\t\t\tint pos = me.indexOf(delimiter, start);\r\n\r\n\t\t\t\twhile (pos >= 0)\r\n\t\t\t\t{\r\n\t\t\t\t\tret.push(me.substring(start, pos));\r\n\r\n\t\t\t\t\tstart = pos + slen;\r\n\t\t\t\t\tpos = me.indexOf(delimiter, start);\r\n\t\t\t\t}\r\n\r\n\t\t\t\tret.push(me.substring(start));\r\n\t\t\t}\r\n\t\t\treturn ret;\r\n\t")
+	public static function split(me:java.internal._StringExt.NativeString, delimiter:java.internal._StringExt.NativeString) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\t\tint meLen = me.length();\r\n\t\t\tint targetLen = meLen;\r\n\t\t\tif (len != null)\r\n\t\t\t{\r\n\t\t\t\ttargetLen = haxe.lang.Runtime.toInt(len);\r\n\t\t\t\tif (targetLen == 0)\r\n\t\t\t\t\treturn \"\";\r\n\t\t\t\tif( pos != 0 && targetLen < 0 ){\r\n\t\t\t\t\treturn \"\";\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t\tif( pos < 0 ){\r\n\t\t\t\tpos = meLen + pos;\r\n\t\t\t\tif( pos < 0 ) pos = 0;\r\n\t\t\t} else if( targetLen < 0 ){\r\n\t\t\t\ttargetLen = meLen + targetLen - pos;\r\n\t\t\t}\r\n\r\n\t\t\tif( pos + targetLen > meLen ){\r\n\t\t\t\ttargetLen = meLen - pos;\r\n\t\t\t}\r\n\r\n\t\t\tif ( pos < 0 || targetLen <= 0 ) return \"\";\r\n\r\n\t\t\treturn me.substring(pos, pos + targetLen);\r\n\t")
+	public static function substr(me:java.internal._StringExt.NativeString, pos:Int, len:Null<Int> = null) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\tint endIdx;\r\n\t\tint len = me.length();\r\n\t\tif ( endIndex == null) {\r\n\t\t\tendIdx = len;\r\n\t\t} else if ( (endIdx = haxe.lang.Runtime.toInt(endIndex)) < 0 ) {\r\n\t\t\tendIdx = 0;\r\n\t\t} else if ( endIdx > len ) {\r\n\t\t\tendIdx = len;\r\n\t\t}\r\n\r\n\t\tif ( startIndex < 0 ) {\r\n\t\t\tstartIndex = 0;\r\n\t\t} else if ( startIndex > len ) {\r\n\t\t\tstartIndex = len;\r\n\t\t}\r\n\r\n\t\tif ( startIndex > endIdx ) {\r\n\t\t\tint tmp = startIndex;\r\n\t\t\tstartIndex = endIdx;\r\n\t\t\tendIdx = tmp;\r\n\t\t}\r\n\r\n\t\treturn me.substring(startIndex, endIdx);\r\n\r\n\t")
+	public static function substring(me:java.internal._StringExt.NativeString, startIndex:Int, endIndex:Null<Int> = null) {
+		return null;
+	}
+
+	public static function toString(me:java.internal._StringExt.NativeString) {
+		return me;
+	}
+
+	@:functionCode("\r\n\t\t\treturn me.toLowerCase();\r\n\t")
+	public static function toLowerCase(me:java.internal._StringExt.NativeString) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\t\treturn me.toUpperCase();\r\n\t")
+	public static function toUpperCase(me:java.internal._StringExt.NativeString) {
+		return null;
+	}
+
+	public static function toNativeString(me:java.internal._StringExt.NativeString) {
+		return me;
+	}
+
+	public static function fromCharCode(code:Int) {
+		return new String(java.lang.Character.toChars(code));
+	}
+}

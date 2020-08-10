@@ -1,0 +1,9 @@
+@:realPath("java.lang.Thread_WeakClassKey") @:libType @:javaNative @:native("java.lang.Thread$WeakClassKey") @:javaCanonical("java.lang", "Thread.WeakClassKey")
+extern class java.lang.Thread$WeakClassKey extends java.lang.ref.WeakReference<java.lang.Class<Dynamic>> {
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+}

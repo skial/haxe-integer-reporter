@@ -1,0 +1,3 @@
+@:realPath("java.internal.IHxObject") @:directlyUsed @:used @:hxGen @:native("haxe.lang.IHxObject") @:keep
+interface haxe.lang.IHxObject {
+}

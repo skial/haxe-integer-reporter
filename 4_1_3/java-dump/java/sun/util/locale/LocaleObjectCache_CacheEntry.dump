@@ -1,0 +1,3 @@
+@:realPath("java.sun.util.locale.LocaleObjectCache_CacheEntry") @:nativeGen @:noCompletion @:libType @:javaNative @:native("sun.util.locale.LocaleObjectCache$CacheEntry") @:javaCanonical("sun.util.locale", "LocaleObjectCache.CacheEntry")
+extern class sun.util.locale.LocaleObjectCache$CacheEntry<K : java.sun.util.locale.LocaleObjectCache_CacheEntry.K,V : java.sun.util.locale.LocaleObjectCache_CacheEntry.V> extends java.lang.ref.SoftReference<java.sun.util.locale.LocaleObjectCache_CacheEntry.V> {
+}

@@ -1,0 +1,5 @@
+@:realPath("java.util.function.IntFunction") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.IntFunction") @:javaCanonical("java.util.function", "IntFunction")
+extern interface java.util.function.IntFunction<R:Dynamic> {
+
+	function apply(param1:Int):java.util.function.IntFunction.R;
+}

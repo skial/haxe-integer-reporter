@@ -1,0 +1,7 @@
+@:realPath("java.internal._Function.VarArgsBase") @:used @:nativeGen @:nativeGen @:native("haxe.lang.VarArgsBase") @:keep
+private class haxe.lang.VarArgsBase extends haxe.lang.Function {
+
+	public function __hx_invokeDynamic(dynArgs:java.NativeArray<Dynamic>) {
+		throw cast haxe.Exception.thrown("Abstract implementation");
+	}
+}

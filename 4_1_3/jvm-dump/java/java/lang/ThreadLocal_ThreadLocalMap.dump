@@ -1,0 +1,3 @@
+@:realPath("java.lang.ThreadLocal_ThreadLocalMap") @:libType @:javaNative @:native("java.lang.ThreadLocal$ThreadLocalMap") @:javaCanonical("java.lang", "ThreadLocal.ThreadLocalMap")
+extern class java.lang.ThreadLocal$ThreadLocalMap {
+}

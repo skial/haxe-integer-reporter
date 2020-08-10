@@ -1,0 +1,17 @@
+@:realPath("java.io.FileDescriptor") @:nativeGen @:libType @:javaNative @:native("java.io.FileDescriptor") @:javaCanonical("java.io", "FileDescriptor")
+extern class java.io.FileDescriptor {
+
+	function new():Void;
+
+	@:throws("java.io.SyncFailedException")
+	function sync():Void;
+
+	function valid():Bool;
+
+	@:realPath("_in") @:native("in")
+	static var in(default,never):java.io.FileDescriptor;
+
+	static var out(default,never):java.io.FileDescriptor;
+
+	static var err(default,never):java.io.FileDescriptor;
+}

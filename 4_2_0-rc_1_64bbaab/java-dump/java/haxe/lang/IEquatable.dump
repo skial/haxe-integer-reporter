@@ -1,0 +1,5 @@
+@:realPath("java.internal.IEquatable") @:used @:nativeGen @:native("haxe.lang.IEquatable") @:keep @:nativeGen
+interface haxe.lang.IEquatable {
+
+	function equals(to:Dynamic):Bool;
+}

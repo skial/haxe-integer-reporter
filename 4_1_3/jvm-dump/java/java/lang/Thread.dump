@@ -1,0 +1,162 @@
+@:realPath("java.lang.Thread") @:used @:libType @:javaNative @:native("java.lang.Thread") @:javaCanonical("java.lang", "Thread")
+extern class java.lang.Thread implements java.lang.Runnable {
+
+	@:overload
+	function new(param1:java.lang.ThreadGroup, param2:java.lang.Runnable, param3:java.lang.String, param4:haxe.Int64):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.Runnable):Void;
+
+	@:overload
+	function new(param1:java.lang.ThreadGroup, param2:java.lang.Runnable):Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.ThreadGroup, param2:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.Runnable, param2:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.ThreadGroup, param2:java.lang.Runnable, param3:java.lang.String):Void;
+
+	@:overload
+	function setUncaughtExceptionHandler(param1:java.lang.Thread$UncaughtExceptionHandler):Void;
+
+	@:overload
+	function getUncaughtExceptionHandler():java.lang.Thread$UncaughtExceptionHandler;
+
+	@:overload
+	function getState():java.lang.Thread$State;
+
+	@:overload
+	function getId():haxe.Int64;
+
+	@:overload
+	function getStackTrace():java.NativeArray<java.lang.StackTraceElement>;
+
+	@:overload
+	function setContextClassLoader(param1:java.lang.ClassLoader):Void;
+
+	@:overload
+	function getContextClassLoader():java.lang.ClassLoader;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function checkAccess():Void;
+
+	@:overload
+	function isDaemon():Bool;
+
+	@:overload
+	function setDaemon(param1:Bool):Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function join():Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function join(param1:haxe.Int64):Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function join(param1:haxe.Int64, param2:Int):Void;
+
+	@:overload @:deprecated
+	function countStackFrames():Int;
+
+	@:overload
+	function getThreadGroup():java.lang.ThreadGroup;
+
+	@:overload
+	function getName():java.lang.String;
+
+	@:overload
+	function setName(param1:java.lang.String):Void;
+
+	@:overload
+	function getPriority():Int;
+
+	@:overload
+	function setPriority(param1:Int):Void;
+
+	@:overload @:deprecated
+	function resume():Void;
+
+	@:overload @:deprecated
+	function suspend():Void;
+
+	@:overload
+	function isAlive():Bool;
+
+	@:overload @:deprecated
+	function destroy():Void;
+
+	@:overload
+	function isInterrupted():Bool;
+
+	@:overload
+	function interrupt():Void;
+
+	@:overload @:deprecated
+	function stop(param1:java.lang.Throwable):Void;
+
+	@:overload @:deprecated
+	function stop():Void;
+
+	@:overload
+	function run():Void;
+
+	@:overload
+	function start():Void;
+
+	@:overload @:throws("java.lang.CloneNotSupportedException") @:protected
+	function clone():Dynamic;
+
+	@:overload
+	static function getDefaultUncaughtExceptionHandler():java.lang.Thread$UncaughtExceptionHandler;
+
+	@:overload
+	static function setDefaultUncaughtExceptionHandler(param1:java.lang.Thread$UncaughtExceptionHandler):Void;
+
+	@:overload
+	static function getAllStackTraces():java.util.Map<java.lang.Thread, java.NativeArray<java.lang.StackTraceElement>>;
+
+	@:overload
+	static function holdsLock(param1:Dynamic):Bool;
+
+	@:overload
+	static function dumpStack():Void;
+
+	@:overload
+	static function enumerate(param1:java.NativeArray<java.lang.Thread>):Int;
+
+	@:overload
+	static function activeCount():Int;
+
+	@:overload
+	static function interrupted():Bool;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	static function sleep(param1:haxe.Int64, param2:Int):Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	static function sleep(param1:haxe.Int64):Void;
+
+	@:overload
+	static function yield():Void;
+
+	@:overload
+	static function currentThread():java.lang.Thread;
+
+	static var MIN_PRIORITY(default,null):Int;
+
+	static var NORM_PRIORITY(default,null):Int;
+
+	static var MAX_PRIORITY(default,null):Int;
+}

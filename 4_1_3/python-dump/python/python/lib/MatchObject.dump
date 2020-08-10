@@ -1,0 +1,45 @@
+extern class python.lib.MatchObject {
+
+	var pos(default,null):Int;
+
+	var endpos(default,null):Int;
+
+	var lastindex(default,null):Int;
+
+	var lastgroup(default,null):Int;
+
+	var re(default,null):python.lib.Regex;
+
+	var string(default,null):str;
+
+	function expand(template:str):str;
+
+	@:value({ i : 0 })
+	function group(i:Null<Int>):str;
+
+	function group(x:str):str;
+
+	@:value({ defaultVal : null })
+	function groups(defaultVal:Null<str>):tuple<str>;
+
+	@:value({ defaultVal : null })
+	function groupdict(defaultVal:Null<dict<str, str>>):dict<str, str>;
+
+	@:value({ i : 0 })
+	function start(i:Null<Int>):Int;
+
+	function start(x:str):Int;
+
+	@:value({ i : 0 })
+	function end(i:Null<Int>):Int;
+
+	function end(x:str):Int;
+
+	function span(i:Null<Int>):tuple<Int, Int>;
+
+	inline function groupById(s:str):str;
+
+	inline function startById(s:str):Int;
+
+	inline function endById(s:str):Int;
+}

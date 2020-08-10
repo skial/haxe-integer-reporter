@@ -1,0 +1,6 @@
+extern class python.lib.StartupInfo {
+
+	var dwFlags:Int;
+
+	var wShowWindow:Int;
+}

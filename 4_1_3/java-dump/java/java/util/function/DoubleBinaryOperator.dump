@@ -1,0 +1,6 @@
+@:realPath("java.util.function.DoubleBinaryOperator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.DoubleBinaryOperator") @:javaCanonical("java.util.function", "DoubleBinaryOperator")
+extern interface java.util.function.DoubleBinaryOperator {
+
+	@:overload
+	function applyAsDouble(param1:Float, param2:Float):Float;
+}

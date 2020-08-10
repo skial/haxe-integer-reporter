@@ -1,0 +1,39 @@
+@:realPath("java.lang.Object") @:nativeGen @:libType @:javaNative @:native("java.lang.Object") @:javaCanonical("java.lang", "Object")
+extern class java.lang.Object {
+
+	@:overload
+	function new():Void;
+
+	@:overload @:throws("java.lang.Throwable") @:protected
+	function finalize():Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function wait():Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function wait(param1:haxe.Int64):Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function wait(param1:haxe.Int64, param2:Int):Void;
+
+	@:overload
+	function notifyAll():Void;
+
+	@:overload
+	function notify():Void;
+
+	@:overload
+	function toString():String;
+
+	@:overload @:throws("java.lang.CloneNotSupportedException") @:protected
+	function clone():Dynamic;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function getClass():java.lang.Class<Dynamic>;
+}

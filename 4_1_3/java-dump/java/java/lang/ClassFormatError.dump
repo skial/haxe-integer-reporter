@@ -1,0 +1,9 @@
+@:realPath("java.lang.ClassFormatError") @:nativeGen @:libType @:javaNative @:native("java.lang.ClassFormatError") @:javaCanonical("java.lang", "ClassFormatError")
+extern class java.lang.ClassFormatError extends java.lang.LinkageError {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

@@ -1,0 +1,25 @@
+@:realPath("java.sun.security.util.ManifestEntryVerifier") @:native("sun.security.util.ManifestEntryVerifier") @:libType
+extern class sun.security.util.ManifestEntryVerifier {
+
+	function new(param1:java.util.jar.Manifest):Void;
+
+	function setEntry(param1:java.lang.String, param2:java.util.jar.JarEntry):Void;
+
+	function update(param1:java.types.Int8):Void;
+
+	function update(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	function getEntry():java.util.jar.JarEntry;
+
+	function verify(param1:java.util.Hashtable<java.lang.String, java.NativeArray<java.security.CodeSigner>>, param2:java.util.Hashtable<java.lang.String, java.NativeArray<java.security.CodeSigner>>):java.NativeArray<java.security.CodeSigner>;
+
+	var createdDigests:java.util.HashMap<java.lang.String, java.security.MessageDigest>;
+
+	var digests:java.util.ArrayList<java.security.MessageDigest>;
+
+	var manifestHashes:java.util.ArrayList<java.NativeArray<java.types.Int8>>;
+
+	static function toHex(param1:java.NativeArray<java.types.Int8>):java.lang.String;
+
+	static function <clinit>():Void;
+}

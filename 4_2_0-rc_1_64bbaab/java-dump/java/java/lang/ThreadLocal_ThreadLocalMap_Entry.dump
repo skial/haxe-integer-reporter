@@ -1,0 +1,3 @@
+@:realPath("java.lang.ThreadLocal_ThreadLocalMap_Entry") @:nativeGen @:libType @:javaNative @:native("java.lang.ThreadLocal$ThreadLocalMap$Entry") @:javaCanonical("java.lang", "ThreadLocal.ThreadLocalMap.Entry")
+extern class java.lang.ThreadLocal$ThreadLocalMap$Entry extends java.lang.ref.WeakReference<java.lang.ThreadLocal<Dynamic>> {
+}

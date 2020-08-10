@@ -1,0 +1,6 @@
+@:realPath("java.time.zone.ZoneOffsetTransitionRule_TimeDefinition") @:used @:flatEnum @:javaCanonical("java.time.zone", "ZoneOffsetTransitionRule.TimeDefinition") @:native("java.time.zone.ZoneOffsetTransitionRule$TimeDefinition")
+extern enum java.time.zone.ZoneOffsetTransitionRule$TimeDefinition {
+	STANDARD;
+	WALL;
+	UTC;
+}

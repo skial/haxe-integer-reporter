@@ -1,0 +1,3 @@
+@:realPath("python.MemoryError") @:native("MemoryError")
+extern class MemoryError extends Exception {
+}

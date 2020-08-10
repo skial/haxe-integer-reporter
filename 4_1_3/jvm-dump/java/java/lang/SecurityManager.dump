@@ -1,0 +1,132 @@
+@:realPath("java.lang.SecurityManager") @:libType @:javaNative @:native("java.lang.SecurityManager") @:javaCanonical("java.lang", "SecurityManager")
+extern class java.lang.SecurityManager {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function getThreadGroup():java.lang.ThreadGroup;
+
+	@:overload
+	function checkSecurityAccess(param1:java.lang.String):Void;
+
+	@:overload @:deprecated
+	function checkMemberAccess(param1:java.lang.Class<Dynamic>, param2:Int):Void;
+
+	@:overload
+	function checkSetFactory():Void;
+
+	@:overload
+	function checkPackageDefinition(param1:java.lang.String):Void;
+
+	@:overload
+	function checkPackageAccess(param1:java.lang.String):Void;
+
+	@:overload @:deprecated
+	function checkAwtEventQueueAccess():Void;
+
+	@:overload @:deprecated
+	function checkSystemClipboardAccess():Void;
+
+	@:overload
+	function checkPrintJobAccess():Void;
+
+	@:overload @:deprecated
+	function checkTopLevelWindow(param1:Dynamic):Bool;
+
+	@:overload
+	function checkPropertyAccess(param1:java.lang.String):Void;
+
+	@:overload
+	function checkPropertiesAccess():Void;
+
+	@:overload @:deprecated
+	function checkMulticast(param1:java.net.InetAddress, param2:java.types.Int8):Void;
+
+	@:overload
+	function checkMulticast(param1:java.net.InetAddress):Void;
+
+	@:overload
+	function checkAccept(param1:java.lang.String, param2:Int):Void;
+
+	@:overload
+	function checkListen(param1:Int):Void;
+
+	@:overload
+	function checkConnect(param1:java.lang.String, param2:Int, param3:Dynamic):Void;
+
+	@:overload
+	function checkConnect(param1:java.lang.String, param2:Int):Void;
+
+	@:overload
+	function checkDelete(param1:java.lang.String):Void;
+
+	@:overload
+	function checkWrite(param1:java.lang.String):Void;
+
+	@:overload
+	function checkWrite(param1:java.io.FileDescriptor):Void;
+
+	@:overload
+	function checkRead(param1:java.lang.String, param2:Dynamic):Void;
+
+	@:overload
+	function checkRead(param1:java.io.FileDescriptor):Void;
+
+	@:overload
+	function checkRead(param1:java.lang.String):Void;
+
+	@:overload
+	function checkLink(param1:java.lang.String):Void;
+
+	@:overload
+	function checkExec(param1:java.lang.String):Void;
+
+	@:overload
+	function checkExit(param1:Int):Void;
+
+	@:overload
+	function checkAccess(param1:java.lang.ThreadGroup):Void;
+
+	@:overload
+	function checkAccess(param1:java.lang.Thread):Void;
+
+	@:overload
+	function checkCreateClassLoader():Void;
+
+	@:overload
+	function checkPermission(param1:java.security.Permission, param2:Dynamic):Void;
+
+	@:overload
+	function checkPermission(param1:java.security.Permission):Void;
+
+	@:overload
+	function getSecurityContext():Dynamic;
+
+	@:overload @:deprecated @:protected
+	function inClassLoader():Bool;
+
+	@:overload @:deprecated @:protected
+	function inClass(param1:java.lang.String):Bool;
+
+	@:overload @:deprecated @:protected
+	function classLoaderDepth():Int;
+
+	@:overload @:deprecated @:protected
+	function classDepth(param1:java.lang.String):Int;
+
+	@:overload @:deprecated @:protected
+	function currentLoadedClass():java.lang.Class<Dynamic>;
+
+	@:overload @:deprecated @:protected
+	function currentClassLoader():java.lang.ClassLoader;
+
+	@:overload @:protected
+	function getClassContext():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:overload @:deprecated
+	function getInCheck():Bool;
+
+	@:deprecated @:protected
+	var inCheck:Bool;
+}

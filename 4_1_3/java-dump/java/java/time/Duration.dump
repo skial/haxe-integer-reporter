@@ -1,0 +1,158 @@
+@:realPath("java.time.Duration") @:used @:nativeGen @:libType @:javaNative @:native("java.time.Duration") @:javaCanonical("java.time", "Duration")
+extern class java.time.Duration implements java.io.Serializable implements java.lang.Comparable<java.time.Duration> implements java.time.temporal.TemporalAmount {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.time.Duration):Int;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function toNanos():haxe.Int64;
+
+	@:overload
+	function toMillis():haxe.Int64;
+
+	@:overload
+	function toMinutes():haxe.Int64;
+
+	@:overload
+	function toHours():haxe.Int64;
+
+	@:overload
+	function toDays():haxe.Int64;
+
+	@:overload
+	function subtractFrom(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function addTo(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function abs():java.time.Duration;
+
+	@:overload
+	function negated():java.time.Duration;
+
+	@:overload
+	function dividedBy(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function multipliedBy(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusNanos(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusMillis(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusSeconds(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusMinutes(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusHours(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minusDays(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Duration;
+
+	@:overload
+	function minus(param1:java.time.Duration):java.time.Duration;
+
+	@:overload
+	function plusNanos(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plusMillis(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plusSeconds(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plusMinutes(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plusHours(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plusDays(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Duration;
+
+	@:overload
+	function plus(param1:java.time.Duration):java.time.Duration;
+
+	@:overload
+	function withNanos(param1:Int):java.time.Duration;
+
+	@:overload
+	function withSeconds(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	function getNano():Int;
+
+	@:overload
+	function getSeconds():haxe.Int64;
+
+	@:overload
+	function isNegative():Bool;
+
+	@:overload
+	function isZero():Bool;
+
+	@:overload
+	function getUnits():java.util.List<java.time.temporal.TemporalUnit>;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	@:overload
+	static function between(param1:java.time.temporal.Temporal, param2:java.time.temporal.Temporal):java.time.Duration;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence):java.time.Duration;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAmount):java.time.Duration;
+
+	@:overload
+	static function of(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Duration;
+
+	@:overload
+	static function ofNanos(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofMillis(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofSeconds(param1:haxe.Int64, param2:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofSeconds(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofMinutes(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofHours(param1:haxe.Int64):java.time.Duration;
+
+	@:overload
+	static function ofDays(param1:haxe.Int64):java.time.Duration;
+
+	static var ZERO(default,never):java.time.Duration;
+}

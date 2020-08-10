@@ -1,0 +1,25 @@
+@:realPath("java.lang.Process") @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.Process") @:javaCanonical("java.lang", "Process")
+extern class java.lang.Process {
+
+	function new():Void;
+
+	function isAlive():Bool;
+
+	function destroyForcibly():java.lang.Process;
+
+	function destroy():Void;
+
+	function exitValue():Int;
+
+	@:throws("java.lang.InterruptedException")
+	function waitFor(param1:haxe.Int64, param2:java.util.concurrent.TimeUnit):Bool;
+
+	@:throws("java.lang.InterruptedException")
+	function waitFor():Int;
+
+	function getErrorStream():java.io.InputStream;
+
+	function getInputStream():java.io.InputStream;
+
+	function getOutputStream():java.io.OutputStream;
+}

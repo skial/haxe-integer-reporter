@@ -1,0 +1,7 @@
+@:realPath("java.util.function.IntConsumer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.IntConsumer") @:javaCanonical("java.util.function", "IntConsumer")
+extern interface java.util.function.IntConsumer {
+
+	function andThen(param1:java.util.function.IntConsumer):java.util.function.IntConsumer;
+
+	function accept(param1:Int):Void;
+}

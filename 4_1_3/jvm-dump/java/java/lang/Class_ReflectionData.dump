@@ -1,0 +1,3 @@
+@:realPath("java.lang.Class_ReflectionData") @:libType @:javaNative @:native("java.lang.Class$ReflectionData") @:javaCanonical("java.lang", "Class.ReflectionData")
+extern class java.lang.Class$ReflectionData<T : java.lang.Class_ReflectionData.T> {
+}

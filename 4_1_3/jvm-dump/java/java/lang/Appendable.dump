@@ -1,0 +1,12 @@
+@:realPath("java.lang.Appendable") @:used @:abstract @:libType @:javaNative @:native("java.lang.Appendable") @:javaCanonical("java.lang", "Appendable")
+extern interface java.lang.Appendable {
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.types.Char16):java.lang.Appendable;
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.lang.CharSequence):java.lang.Appendable;
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.lang.CharSequence, param2:Int, param3:Int):java.lang.Appendable;
+}

@@ -1,0 +1,15 @@
+@:realPath("java.time.temporal.TemporalAmount") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.time.temporal.TemporalAmount") @:javaCanonical("java.time.temporal", "TemporalAmount")
+extern interface java.time.temporal.TemporalAmount {
+
+	@:overload
+	function subtractFrom(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function addTo(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function getUnits():java.util.List<java.time.temporal.TemporalUnit>;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalUnit):haxe.Int64;
+}

@@ -1,0 +1,70 @@
+@:realPath("java.util.TimeZone") @:used @:native("java.util.TimeZone") @:libType
+extern class java.util.TimeZone implements java.io.Serializable implements java.lang.Cloneable {
+
+	function new():Void;
+
+	function getOffset(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Int;
+
+	function getOffset(param1:haxe.Int64):Int;
+
+	function getOffsets(param1:haxe.Int64, param2:java.NativeArray<Int>):Int;
+
+	function setRawOffset(param1:Int):Void;
+
+	function getRawOffset():Int;
+
+	function getID():java.lang.String;
+
+	function setID(param1:java.lang.String):Void;
+
+	function getDisplayName():java.lang.String;
+
+	function getDisplayName(param1:Bool, param2:Int, param3:java.util.Locale):java.lang.String;
+
+	function getDisplayName(param1:Bool, param2:Int):java.lang.String;
+
+	function getDisplayName(param1:java.util.Locale):java.lang.String;
+
+	function getDSTSavings():Int;
+
+	function useDaylightTime():Bool;
+
+	function observesDaylightTime():Bool;
+
+	function inDaylightTime(param1:java.util.Date):Bool;
+
+	function toZoneId():java.time.ZoneId;
+
+	function hasSameRules(param1:java.util.TimeZone):Bool;
+
+	function clone():Dynamic;
+
+	static function getTimeZone(param1:java.lang.String):java.util.TimeZone;
+
+	static function getTimeZone(param1:java.time.ZoneId):java.util.TimeZone;
+
+	static function getAvailableIDs(param1:Int):java.NativeArray<java.lang.String>;
+
+	static function getAvailableIDs():java.NativeArray<java.lang.String>;
+
+	static function getDefault():java.util.TimeZone;
+
+	static function getDefaultRef():java.util.TimeZone;
+
+	static function setDefault(param1:java.util.TimeZone):Void;
+
+	static function <clinit>():Void;
+
+	static var SHORT(default,never):Int;
+
+	static var LONG(default,never):Int;
+
+	static var serialVersionUID(default,never):haxe.Int64;
+
+	static var NO_TIMEZONE(default,never):java.util.TimeZone;
+
+	static var GMT_ID(default,never):java.lang.String;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

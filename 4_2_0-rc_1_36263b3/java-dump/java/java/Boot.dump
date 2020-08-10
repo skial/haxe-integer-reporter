@@ -1,0 +1,3 @@
+@:nativeGen @:dox(hide)
+extern class java.Boot {
+}

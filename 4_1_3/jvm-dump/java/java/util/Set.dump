@@ -1,0 +1,57 @@
+@:realPath("java.util.Set") @:used @:abstract @:libType @:javaNative @:native("java.util.Set") @:javaCanonical("java.util", "Set")
+extern interface java.util.Set<E : java.util.Set.E> implements java.util.Collection<java.util.Set.E> {
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.util.Set.E>;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function removeAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function retainAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function addAll(param1:java.util.Collection<java.util.Set.E>):Bool;
+
+	@:overload
+	function containsAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function add(param1:java.util.Set.E):Bool;
+
+	@:overload
+	function toArray<T : toArray.T>(param1:java.NativeArray<toArray.T>):java.NativeArray<toArray.T>;
+
+	@:overload
+	function toArray():java.NativeArray<Dynamic>;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.Set.E>;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function isEmpty():Bool;
+
+	@:overload
+	function size():Int;
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function removeIf(param1:java.util.function.Predicate<Dynamic>):Bool;
+
+	@:overload
+	function stream():java.util.stream.Stream<java.util.Set.E>;
+
+	@:overload
+	function parallelStream():java.util.stream.Stream<java.util.Set.E>;
+}

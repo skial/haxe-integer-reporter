@@ -1,0 +1,6 @@
+@:realPath("java.io.Closeable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.Closeable") @:javaCanonical("java.io", "Closeable")
+extern interface java.io.Closeable implements java.lang.AutoCloseable {
+
+	@:throws("java.io.IOException")
+	function close():Void;
+}

@@ -1,0 +1,3 @@
+@:realPath("python.PermissionError") @:native("PermissionError")
+extern class PermissionError extends OSError {
+}

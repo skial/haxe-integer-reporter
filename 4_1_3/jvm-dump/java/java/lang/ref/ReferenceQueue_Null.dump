@@ -1,0 +1,3 @@
+@:realPath("java.lang.ref.ReferenceQueue_Null") @:libType @:javaNative @:native("java.lang.ref.ReferenceQueue$Null") @:javaCanonical("java.lang.ref", "ReferenceQueue.Null")
+extern class java.lang.ref.ReferenceQueue$Null<S : java.lang.ref.ReferenceQueue_Null.S> extends java.lang.ref.ReferenceQueue<java.lang.ref.ReferenceQueue_Null.S> {
+}

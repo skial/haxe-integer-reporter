@@ -1,0 +1,19 @@
+@:keep @:directlyUsed @:used
+class python.internal.MethodClosure {
+
+	public function new(obj:Dynamic, func:haxe.Function) {
+		this.obj = obj;
+		this.func = func;
+	}
+
+	@:allow(Reflect)
+	var obj:Dynamic;
+
+	@:allow(Reflect)
+	var func:haxe.Function;
+
+	@:keep
+	public function __call__(args:python.VarArgs<Dynamic>) {
+		return this.func(this.obj, args);
+	}
+}

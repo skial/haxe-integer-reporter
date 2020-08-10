@@ -1,0 +1,3 @@
+@:realPath("python.KeyError") @:native("KeyError")
+extern class KeyError extends LookupError {
+}

@@ -1,0 +1,33 @@
+@:used @:remove
+extern interface js.node.events.IEventEmitter {
+
+	function addListener<T : addListener.T>(eventName:js.node.events.Event<addListener.T>, listener:addListener.T):js.node.events.IEventEmitter;
+
+	function emit<T : emit.T>(eventName:js.node.events.Event<emit.T>, args:haxe.extern.Rest<Dynamic>):Bool;
+
+	function eventNames():Array<haxe.extern.EitherType<String, Symbol>>;
+
+	function getMaxListeners():Int;
+
+	function listenerCount<T : listenerCount.T>(eventName:js.node.events.Event<listenerCount.T>):Int;
+
+	function listeners<T : listeners.T>(eventName:js.node.events.Event<listeners.T>):Array<listeners.T>;
+
+	function off<T : off.T>(eventName:js.node.events.Event<off.T>, listener:off.T):js.node.events.IEventEmitter;
+
+	function on<T : on.T>(eventName:js.node.events.Event<on.T>, listener:on.T):js.node.events.IEventEmitter;
+
+	function once<T : once.T>(eventName:js.node.events.Event<once.T>, listener:once.T):js.node.events.IEventEmitter;
+
+	function prependListener<T : prependListener.T>(eventName:js.node.events.Event<prependListener.T>, listener:prependListener.T):js.node.events.IEventEmitter;
+
+	function prependOnceListener<T : prependOnceListener.T>(eventName:js.node.events.Event<prependOnceListener.T>, listener:prependOnceListener.T):js.node.events.IEventEmitter;
+
+	function removeAllListeners<T : removeAllListeners.T>(eventName:Null<js.node.events.Event<removeAllListeners.T>>):js.node.events.IEventEmitter;
+
+	function removeListener<T : removeListener.T>(eventName:js.node.events.Event<removeListener.T>, listener:removeListener.T):js.node.events.IEventEmitter;
+
+	function setMaxListeners(n:Int):Void;
+
+	function rawListeners<T : rawListeners.T>(eventName:js.node.events.Event<rawListeners.T>):Array<rawListeners.T>;
+}

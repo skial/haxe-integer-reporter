@@ -1,0 +1,32 @@
+@:keep @:directlyUsed @:used @:dce @:coreApi
+class sys.FileSystem {
+
+	public static function exists(path:String) {
+		try {
+			js.node.Fs.accessSync(path);
+			return true;
+		} catch (_g:Dynamic) {
+			return false;
+		};
+	}
+
+	public static function createDirectory(path:String) {
+		try {
+			js.node.Fs.mkdirSync(path);
+		} catch (_g:Dynamic) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			if ((e.code == "ENOENT")) {
+				sys.FileSystem.createDirectory(js.node.Path.dirname(path));
+				js.node.Fs.mkdirSync(path);
+			} else {
+				var stat;
+				try {
+					stat = js.node.Fs.statSync(path);
+				} catch (_g1:Dynamic) {
+					throw cast e;
+				};
+				if ((! stat.isDirectory())) throw cast e;
+			};
+		};
+	}
+}

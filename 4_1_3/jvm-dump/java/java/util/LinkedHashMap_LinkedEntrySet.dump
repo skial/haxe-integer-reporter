@@ -1,0 +1,24 @@
+@:realPath("java.util.LinkedHashMap_LinkedEntrySet") @:used @:libType @:javaNative @:native("java.util.LinkedHashMap$LinkedEntrySet") @:javaCanonical("java.util", "LinkedHashMap.LinkedEntrySet")
+extern class java.util.LinkedHashMap$LinkedEntrySet extends java.util.AbstractSet<java.util.Map$Entry<Dynamic, Dynamic>> {
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.util.Map$Entry<Dynamic, Dynamic>>;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.Map$Entry<Dynamic, Dynamic>>;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function size():Int;
+}

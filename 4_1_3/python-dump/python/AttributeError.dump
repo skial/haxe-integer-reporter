@@ -1,0 +1,3 @@
+@:realPath("python.AttributeError") @:native("AttributeError")
+extern class AttributeError extends Exception {
+}

@@ -1,0 +1,6 @@
+@:realPath("java.net.SocketAddress") @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.SocketAddress") @:javaCanonical("java.net", "SocketAddress")
+extern class java.net.SocketAddress implements java.io.Serializable {
+
+	@:overload
+	function new():Void;
+}

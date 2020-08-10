@@ -1,0 +1,15 @@
+@:realPath("java.util.concurrent.Future") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.concurrent.Future") @:javaCanonical("java.util.concurrent", "Future")
+extern interface java.util.concurrent.Future<V:Dynamic> {
+
+	@:throws("java.util.concurrent.TimeoutException") @:throws("java.util.concurrent.ExecutionException") @:throws("java.lang.InterruptedException")
+	function get(param1:haxe.Int64, param2:java.util.concurrent.TimeUnit):java.util.concurrent.Future.V;
+
+	@:throws("java.util.concurrent.ExecutionException") @:throws("java.lang.InterruptedException")
+	function get():java.util.concurrent.Future.V;
+
+	function isDone():Bool;
+
+	function isCancelled():Bool;
+
+	function cancel(param1:Bool):Bool;
+}

@@ -1,0 +1,7 @@
+@:realPath("java.time.chrono.ChronoLocalDate_Statics") @:nativeGen @:libType @:javaNative @:native("java.time.chrono.ChronoLocalDate") @:javaCanonical("java.time.chrono", "ChronoLocalDate")
+extern class java.time.chrono.ChronoLocalDate {
+
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.chrono.ChronoLocalDate;
+
+	static function timeLineOrder():java.util.Comparator<java.time.chrono.ChronoLocalDate>;
+}

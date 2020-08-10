@@ -1,0 +1,13 @@
+@:realPath("java.util.concurrent.ExecutionException") @:nativeGen @:libType @:javaNative @:native("java.util.concurrent.ExecutionException") @:javaCanonical("java.util.concurrent", "ExecutionException")
+extern class java.util.concurrent.ExecutionException extends java.lang.Exception {
+
+	function new(param1:java.lang.Throwable):Void;
+
+	@:protected
+	function new():Void;
+
+	@:protected
+	function new(param1:String):Void;
+
+	function new(param1:String, param2:java.lang.Throwable):Void;
+}

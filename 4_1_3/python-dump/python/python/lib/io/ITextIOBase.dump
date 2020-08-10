@@ -1,0 +1,17 @@
+@:used @:remove
+extern interface python.lib.io.ITextIOBase {
+
+	var encoding:str;
+
+	var error:str;
+
+	var newlines:Null<haxe.extern.EitherType<str, tuple<str>>>;
+
+	var buffer:python.lib.io.BufferedIOBase;
+
+	function detach():python.lib.io.BufferedIOBase;
+
+	function write(s:str):Int;
+
+	function read(n:Int):str;
+}

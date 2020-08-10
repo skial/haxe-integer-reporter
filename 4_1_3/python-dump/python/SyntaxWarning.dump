@@ -1,0 +1,3 @@
+@:realPath("python.SyntaxWarning") @:native("SyntaxWarning")
+extern class SyntaxWarning extends Warning {
+}

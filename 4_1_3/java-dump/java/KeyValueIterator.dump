@@ -1,0 +1,2 @@
+@:nativeGen
+typedef KeyValueIterator<K : KeyValueIterator.K,V : KeyValueIterator.V> = Iterator<{ value : KeyValueIterator.V, key : KeyValueIterator.K }>

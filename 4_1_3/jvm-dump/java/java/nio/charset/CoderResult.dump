@@ -1,0 +1,37 @@
+@:realPath("java.nio.charset.CoderResult") @:libType @:javaNative @:native("java.nio.charset.CoderResult") @:javaCanonical("java.nio.charset", "CoderResult")
+extern class java.nio.charset.CoderResult {
+
+	@:overload @:throws("java.nio.charset.CharacterCodingException")
+	function throwException():Void;
+
+	@:overload
+	function length():Int;
+
+	@:overload
+	function isUnmappable():Bool;
+
+	@:overload
+	function isMalformed():Bool;
+
+	@:overload
+	function isError():Bool;
+
+	@:overload
+	function isOverflow():Bool;
+
+	@:overload
+	function isUnderflow():Bool;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	static function unmappableForLength(param1:Int):java.nio.charset.CoderResult;
+
+	@:overload
+	static function malformedForLength(param1:Int):java.nio.charset.CoderResult;
+
+	static var UNDERFLOW(default,never):java.nio.charset.CoderResult;
+
+	static var OVERFLOW(default,never):java.nio.charset.CoderResult;
+}

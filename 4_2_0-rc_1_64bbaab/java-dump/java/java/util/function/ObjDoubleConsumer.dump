@@ -1,0 +1,5 @@
+@:realPath("java.util.function.ObjDoubleConsumer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.ObjDoubleConsumer") @:javaCanonical("java.util.function", "ObjDoubleConsumer")
+extern interface java.util.function.ObjDoubleConsumer<T:Dynamic> {
+
+	function accept(param1:java.util.function.ObjDoubleConsumer.T, param2:Float):Void;
+}

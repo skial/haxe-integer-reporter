@@ -1,0 +1,30 @@
+@:realPath("java.lang.StackTraceElement") @:used @:libType @:javaNative @:native("java.lang.StackTraceElement") @:javaCanonical("java.lang", "StackTraceElement")
+extern class java.lang.StackTraceElement implements java.io.Serializable {
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:Int):Void;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function isNativeMethod():Bool;
+
+	@:overload
+	function getMethodName():java.lang.String;
+
+	@:overload
+	function getClassName():java.lang.String;
+
+	@:overload
+	function getLineNumber():Int;
+
+	@:overload
+	function getFileName():java.lang.String;
+}

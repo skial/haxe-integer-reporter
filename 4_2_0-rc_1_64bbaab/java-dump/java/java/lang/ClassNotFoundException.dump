@@ -1,0 +1,13 @@
+@:realPath("java.lang.ClassNotFoundException") @:nativeGen @:libType @:javaNative @:native("java.lang.ClassNotFoundException") @:javaCanonical("java.lang", "ClassNotFoundException")
+extern class java.lang.ClassNotFoundException extends java.lang.ReflectiveOperationException {
+
+	function new(param1:String, param2:java.lang.Throwable):Void;
+
+	function new():Void;
+
+	function new(param1:String):Void;
+
+	function getCause():java.lang.Throwable;
+
+	function getException():java.lang.Throwable;
+}

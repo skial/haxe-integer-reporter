@@ -1,0 +1,33 @@
+@:keep @:directlyUsed @:used
+private class hl._Type.Type_Impl_ {
+
+	@:hlNative("std", "type_name")
+	static function getNameBytes(this1:hl.Type) {
+		return null;
+	}
+
+	@:hlNative("std", "type_safe_cast")
+	public static function safeCast(this1:hl.Type, t:hl.Type) {
+		return false;
+	}
+
+	@:hlNative("std", "type_set_global")
+	public static function setGlobal(this1:hl.Type, v:Dynamic) {
+		return false;
+	}
+
+	@:hlNative("std", "type_enum_fields")
+	public static function getEnumFields(this1:hl.Type) {
+		return null;
+	}
+
+	@:hlNative("std", "type_enum_values")
+	public static function getEnumValues(this1:hl.Type) {
+		return null;
+	}
+
+	@:hlNative("std", "alloc_obj")
+	public static function allocObject(this1:hl.Type) {
+		return null;
+	}
+}

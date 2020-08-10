@@ -1,0 +1,75 @@
+@:realPath("java.util.GregorianCalendar") @:used @:nativeGen @:libType @:javaNative @:native("java.util.GregorianCalendar") @:javaCanonical("java.util", "GregorianCalendar")
+extern class java.util.GregorianCalendar extends java.util.Calendar {
+
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	function new():Void;
+
+	function new(param1:java.util.TimeZone):Void;
+
+	function new(param1:java.util.Locale):Void;
+
+	function new(param1:java.util.TimeZone, param2:java.util.Locale):Void;
+
+	function new(param1:Int, param2:Int, param3:Int):Void;
+
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	function toZonedDateTime():java.time.ZonedDateTime;
+
+	@:protected
+	function computeTime():Void;
+
+	@:protected
+	function computeFields():Void;
+
+	function getWeeksInWeekYear():Int;
+
+	function setWeekDate(param1:Int, param2:Int, param3:Int):Void;
+
+	function getWeekYear():Int;
+
+	function isWeekDateSupported():Bool;
+
+	function setTimeZone(param1:java.util.TimeZone):Void;
+
+	function getTimeZone():java.util.TimeZone;
+
+	function clone():Dynamic;
+
+	function getActualMaximum(param1:Int):Int;
+
+	function getActualMinimum(param1:Int):Int;
+
+	function getLeastMaximum(param1:Int):Int;
+
+	function getGreatestMinimum(param1:Int):Int;
+
+	function getMaximum(param1:Int):Int;
+
+	function getMinimum(param1:Int):Int;
+
+	function roll(param1:Int, param2:Int):Void;
+
+	function roll(param1:Int, param2:Bool):Void;
+
+	function add(param1:Int, param2:Int):Void;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getCalendarType():String;
+
+	function isLeapYear(param1:Int):Bool;
+
+	function getGregorianChange():java.util.Date;
+
+	function setGregorianChange(param1:java.util.Date):Void;
+
+	static function from(param1:java.time.ZonedDateTime):java.util.GregorianCalendar;
+
+	static var BC(default,null):Int;
+
+	static var AD(default,null):Int;
+}

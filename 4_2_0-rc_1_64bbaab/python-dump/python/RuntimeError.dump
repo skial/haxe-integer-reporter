@@ -1,0 +1,3 @@
+@:realPath("python.RuntimeError") @:native("RuntimeError")
+extern class RuntimeError extends Exception {
+}

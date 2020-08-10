@@ -1,0 +1,17 @@
+@:keep @:directlyUsed @:used @:noDoc
+class HxOverrides {
+
+	@:pure
+	static function cca(s:String, index:Int) {
+		var x = cast s.charCodeAt(index);
+		if ((x != x)) return js.Syntax.code("undefined");
+		return x;
+	}
+
+	@:pure
+	static function now() {
+		return Date.now();
+	}
+
+	static function __init__() __feature__("HxOverrides.now", if ((if ((js.Syntax.typeof(performance) != "undefined")) js.Syntax.typeof(performance.now) == "function" else false)) HxOverrides.now = performance.now.bind(performance))
+}

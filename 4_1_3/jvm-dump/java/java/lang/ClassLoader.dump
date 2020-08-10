@@ -1,0 +1,102 @@
+@:realPath("java.lang.ClassLoader") @:abstract @:libType @:javaNative @:native("java.lang.ClassLoader") @:javaCanonical("java.lang", "ClassLoader")
+extern class java.lang.ClassLoader {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:protected
+	function new(param1:java.lang.ClassLoader):Void;
+
+	@:overload
+	function clearAssertionStatus():Void;
+
+	@:overload
+	function setClassAssertionStatus(param1:java.lang.String, param2:Bool):Void;
+
+	@:overload
+	function setPackageAssertionStatus(param1:java.lang.String, param2:Bool):Void;
+
+	@:overload
+	function setDefaultAssertionStatus(param1:Bool):Void;
+
+	@:overload @:protected
+	function findLibrary(param1:java.lang.String):java.lang.String;
+
+	@:overload @:protected
+	function getPackages():java.NativeArray<java.lang.Package>;
+
+	@:overload @:protected
+	function getPackage(param1:java.lang.String):java.lang.Package;
+
+	@:overload @:throws("java.lang.IllegalArgumentException") @:protected
+	function definePackage(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String, param5:java.lang.String, param6:java.lang.String, param7:java.lang.String, param8:java.net.URL):java.lang.Package;
+
+	@:overload
+	function getParent():java.lang.ClassLoader;
+
+	@:overload
+	function getResourceAsStream(param1:java.lang.String):java.io.InputStream;
+
+	@:overload @:throws("java.io.IOException") @:protected
+	function findResources(param1:java.lang.String):java.util.Enumeration<java.net.URL>;
+
+	@:overload @:protected
+	function findResource(param1:java.lang.String):java.net.URL;
+
+	@:overload @:throws("java.io.IOException")
+	function getResources(param1:java.lang.String):java.util.Enumeration<java.net.URL>;
+
+	@:overload
+	function getResource(param1:java.lang.String):java.net.URL;
+
+	@:overload @:protected
+	function setSigners(param1:java.lang.Class<Dynamic>, param2:java.NativeArray<Dynamic>):Void;
+
+	@:overload @:protected
+	function findLoadedClass(param1:java.lang.String):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassNotFoundException") @:protected
+	function findSystemClass(param1:java.lang.String):java.lang.Class<Dynamic>;
+
+	@:overload @:protected
+	function resolveClass(param1:java.lang.Class<Dynamic>):Void;
+
+	@:overload @:throws("java.lang.ClassFormatError") @:protected
+	function defineClass(param1:java.lang.String, param2:java.nio.ByteBuffer, param3:java.security.ProtectionDomain):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassFormatError") @:deprecated @:protected
+	function defineClass(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassFormatError") @:protected
+	function defineClass(param1:java.lang.String, param2:java.NativeArray<java.types.Int8>, param3:Int, param4:Int):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassFormatError") @:protected
+	function defineClass(param1:java.lang.String, param2:java.NativeArray<java.types.Int8>, param3:Int, param4:Int, param5:java.security.ProtectionDomain):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassNotFoundException") @:protected
+	function findClass(param1:java.lang.String):java.lang.Class<Dynamic>;
+
+	@:overload @:protected
+	function getClassLoadingLock(param1:java.lang.String):Dynamic;
+
+	@:overload @:throws("java.lang.ClassNotFoundException") @:protected
+	function loadClass(param1:java.lang.String, param2:Bool):java.lang.Class<Dynamic>;
+
+	@:overload @:throws("java.lang.ClassNotFoundException")
+	function loadClass(param1:java.lang.String):java.lang.Class<Dynamic>;
+
+	@:overload
+	static function getSystemClassLoader():java.lang.ClassLoader;
+
+	@:overload
+	static function getSystemResourceAsStream(param1:java.lang.String):java.io.InputStream;
+
+	@:overload @:throws("java.io.IOException")
+	static function getSystemResources(param1:java.lang.String):java.util.Enumeration<java.net.URL>;
+
+	@:overload
+	static function getSystemResource(param1:java.lang.String):java.net.URL;
+
+	@:overload @:protected
+	static function registerAsParallelCapable():Bool;
+}

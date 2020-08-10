@@ -1,0 +1,7 @@
+@:realPath("java.net.MalformedURLException") @:nativeGen @:libType @:javaNative @:native("java.net.MalformedURLException") @:javaCanonical("java.net", "MalformedURLException")
+extern class java.net.MalformedURLException extends java.io.IOException {
+
+	function new(param1:String):Void;
+
+	function new():Void;
+}

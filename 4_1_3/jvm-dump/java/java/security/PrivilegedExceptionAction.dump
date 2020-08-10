@@ -1,0 +1,6 @@
+@:realPath("java.security.PrivilegedExceptionAction") @:used @:abstract @:libType @:javaNative @:native("java.security.PrivilegedExceptionAction") @:javaCanonical("java.security", "PrivilegedExceptionAction")
+extern interface java.security.PrivilegedExceptionAction<T : java.security.PrivilegedExceptionAction.T> {
+
+	@:overload @:throws("java.lang.Exception")
+	function run():java.security.PrivilegedExceptionAction.T;
+}

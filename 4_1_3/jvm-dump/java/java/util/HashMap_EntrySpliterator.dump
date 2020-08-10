@@ -1,0 +1,24 @@
+@:realPath("java.util.HashMap_EntrySpliterator") @:used @:libType @:javaNative @:native("java.util.HashMap$EntrySpliterator") @:javaCanonical("java.util", "HashMap.EntrySpliterator")
+extern class java.util.HashMap$EntrySpliterator<K : java.util.HashMap_EntrySpliterator.K,V : java.util.HashMap_EntrySpliterator.V> extends java.util.HashMap$HashMapSpliterator<java.util.HashMap_EntrySpliterator.K, java.util.HashMap_EntrySpliterator.V> implements java.util.Spliterator<java.util.Map$Entry<java.util.HashMap_EntrySpliterator.K, java.util.HashMap_EntrySpliterator.V>> {
+
+	@:overload
+	function trySplit():java.util.HashMap$EntrySpliterator<java.util.HashMap_EntrySpliterator.K, java.util.HashMap_EntrySpliterator.V>;
+
+	@:overload
+	function characteristics():Int;
+
+	@:overload
+	function tryAdvance(param1:java.util.function.Consumer<Dynamic>):Bool;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function getExactSizeIfKnown():haxe.Int64;
+
+	@:overload
+	function hasCharacteristics(param1:Int):Bool;
+
+	@:overload
+	function getComparator():java.util.Comparator<Dynamic>;
+}

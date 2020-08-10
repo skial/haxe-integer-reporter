@@ -1,0 +1,3 @@
+@:realPath("python.Exception") @:directlyUsed @:used @:native("Exception")
+extern class Exception extends BaseException {
+}

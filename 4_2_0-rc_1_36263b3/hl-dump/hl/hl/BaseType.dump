@@ -1,0 +1,31 @@
+@:used @:keep
+class hl.BaseType {
+
+	public var __type__:hl.Type;
+
+	public var __meta__:Dynamic;
+
+	public var __implementedBy__:hl.NativeArray<hl.Type>;
+
+	public function check(v:Dynamic) {
+		var t = $tdyntype(v);
+		if (($tkind(t) == cast 15)) {
+			var v2 = hl.Api.getVirtualValue(v);
+			if ((v2 != null)) t = $tdyntype(cast v2);
+		};
+		if ((this.__implementedBy__ == null)) {
+			if ((hl._Type.Type_Impl_.safeCast(t, this.__type__))) return true;
+			return false;
+		};
+		{
+			var _g = 0;
+			var _g1 = this.__implementedBy__;
+			while ((_g < $asize(_g1))) {
+				var i = $aget(_g1, _g);
+				++ _g;
+				if ((hl._Type.Type_Impl_.safeCast(t, i))) return true;
+			};
+		};
+		return false;
+	}
+}

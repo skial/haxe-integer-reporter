@@ -1,0 +1,54 @@
+@:realPath("java.sun.misc.URLClassPath_JarLoader") @:used @:native("sun.misc.URLClassPath$JarLoader") @:libType
+extern class sun.misc.URLClassPath$JarLoader extends sun.misc.URLClassPath$Loader {
+
+	function new(param1:java.net.URL, param2:java.net.URLStreamHandler, param3:java.util.HashMap<java.lang.String, sun.misc.URLClassPath$Loader>):Void;
+
+	function close():Void;
+
+	function getJarFile():java.util.jar.JarFile;
+
+	function getIndex():sun.misc.JarIndex;
+
+	function checkResource(param1:java.lang.String, param2:Bool, param3:java.util.jar.JarEntry):sun.misc.Resource;
+
+	function validIndex(param1:java.lang.String):Bool;
+
+	function findResource(param1:java.lang.String, param2:Bool):java.net.URL;
+
+	function getResource(param1:java.lang.String, param2:Bool):sun.misc.Resource;
+
+	function getResource(param1:java.lang.String, param2:Bool, param3:java.util.Set<java.lang.String>):sun.misc.Resource;
+
+	function getClassPath():java.NativeArray<java.net.URL>;
+
+	static function checkJar(param1:java.util.jar.JarFile):java.util.jar.JarFile;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500(param1:sun.misc.URLClassPath$JarLoader):java.net.URL;
+
+	@:realPath("access_602") @:native("access$602")
+	static function access$602(param1:sun.misc.URLClassPath$JarLoader, param2:java.util.jar.JarFile):java.util.jar.JarFile;
+
+	@:realPath("access_700") @:native("access$700")
+	static function access$700(param1:sun.misc.URLClassPath$JarLoader, param2:java.net.URL):java.util.jar.JarFile;
+
+	@:realPath("access_802") @:native("access$802")
+	static function access$802(param1:sun.misc.URLClassPath$JarLoader, param2:sun.misc.JarIndex):sun.misc.JarIndex;
+
+	@:realPath("access_600") @:native("access$600")
+	static function access$600(param1:sun.misc.URLClassPath$JarLoader):java.util.jar.JarFile;
+
+	@:realPath("access_900") @:native("access$900")
+	static function access$900(param1:sun.misc.URLClassPath$JarLoader):sun.misc.MetaIndex;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800(param1:sun.misc.URLClassPath$JarLoader):sun.misc.JarIndex;
+
+	@:realPath("access_1000") @:native("access$1000")
+	static function access$1000(param1:sun.misc.URLClassPath$JarLoader):java.util.HashMap<Dynamic, Dynamic>;
+
+	@:realPath("access_1200") @:native("access$1200")
+	static function access$1200(param1:sun.misc.URLClassPath$JarLoader):java.net.URLStreamHandler;
+
+	static function <clinit>():Void;
+}

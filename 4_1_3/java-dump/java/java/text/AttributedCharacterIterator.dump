@@ -1,0 +1,60 @@
+@:realPath("java.text.AttributedCharacterIterator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.text.AttributedCharacterIterator") @:javaCanonical("java.text", "AttributedCharacterIterator")
+extern interface java.text.AttributedCharacterIterator implements java.text.CharacterIterator {
+
+	@:overload
+	function getAllAttributeKeys():java.util.Set<java.text.AttributedCharacterIterator$Attribute>;
+
+	@:overload
+	function getAttribute(param1:java.text.AttributedCharacterIterator$Attribute):Dynamic;
+
+	@:overload
+	function getAttributes():java.util.Map<java.text.AttributedCharacterIterator$Attribute, Dynamic>;
+
+	@:overload
+	function getRunLimit(param1:java.util.Set<java.text.AttributedCharacterIterator$Attribute>):Int;
+
+	@:overload
+	function getRunLimit():Int;
+
+	@:overload
+	function getRunLimit(param1:java.text.AttributedCharacterIterator$Attribute):Int;
+
+	@:overload
+	function getRunStart(param1:java.util.Set<java.text.AttributedCharacterIterator$Attribute>):Int;
+
+	@:overload
+	function getRunStart():Int;
+
+	@:overload
+	function getRunStart(param1:java.text.AttributedCharacterIterator$Attribute):Int;
+
+	@:overload
+	function first():java.types.Char16;
+
+	@:overload
+	function last():java.types.Char16;
+
+	@:overload
+	function current():java.types.Char16;
+
+	@:overload
+	function next():java.types.Char16;
+
+	@:overload
+	function previous():java.types.Char16;
+
+	@:overload
+	function setIndex(param1:Int):java.types.Char16;
+
+	@:overload
+	function getBeginIndex():Int;
+
+	@:overload
+	function getEndIndex():Int;
+
+	@:overload
+	function getIndex():Int;
+
+	@:overload
+	function clone():Dynamic;
+}

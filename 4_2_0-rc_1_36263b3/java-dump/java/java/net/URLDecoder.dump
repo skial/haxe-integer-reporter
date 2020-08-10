@@ -1,0 +1,11 @@
+@:realPath("java.net.URLDecoder") @:nativeGen @:libType @:javaNative @:native("java.net.URLDecoder") @:javaCanonical("java.net", "URLDecoder")
+extern class java.net.URLDecoder {
+
+	function new():Void;
+
+	@:throws("java.io.UnsupportedEncodingException")
+	static function decode(param1:String, param2:String):String;
+
+	@:deprecated
+	static function decode(param1:String):String;
+}

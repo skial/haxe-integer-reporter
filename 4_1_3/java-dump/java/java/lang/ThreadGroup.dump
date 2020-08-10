@@ -1,0 +1,81 @@
+@:realPath("java.lang.ThreadGroup") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.ThreadGroup") @:javaCanonical("java.lang", "ThreadGroup")
+extern class java.lang.ThreadGroup implements java.lang.Thread$UncaughtExceptionHandler {
+
+	@:overload
+	function new(param1:java.lang.ThreadGroup, param2:String):Void;
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function toString():String;
+
+	@:overload @:deprecated
+	function allowThreadSuspension(param1:Bool):Bool;
+
+	@:overload
+	function uncaughtException(param1:java.lang.Thread, param2:java.lang.Throwable):Void;
+
+	@:overload
+	function list():Void;
+
+	@:overload
+	function destroy():Void;
+
+	@:overload @:deprecated
+	function resume():Void;
+
+	@:overload @:deprecated
+	function suspend():Void;
+
+	@:overload
+	function interrupt():Void;
+
+	@:overload @:deprecated
+	function stop():Void;
+
+	@:overload
+	function enumerate(param1:java.NativeArray<java.lang.ThreadGroup>, param2:Bool):Int;
+
+	@:overload
+	function enumerate(param1:java.NativeArray<java.lang.Thread>):Int;
+
+	@:overload
+	function enumerate(param1:java.NativeArray<java.lang.Thread>, param2:Bool):Int;
+
+	@:overload
+	function enumerate(param1:java.NativeArray<java.lang.ThreadGroup>):Int;
+
+	@:overload
+	function activeGroupCount():Int;
+
+	@:overload
+	function activeCount():Int;
+
+	@:overload
+	function checkAccess():Void;
+
+	@:overload
+	function parentOf(param1:java.lang.ThreadGroup):Bool;
+
+	@:overload
+	function setMaxPriority(param1:Int):Void;
+
+	@:overload
+	function setDaemon(param1:Bool):Void;
+
+	@:overload
+	function isDestroyed():Bool;
+
+	@:overload
+	function isDaemon():Bool;
+
+	@:overload
+	function getMaxPriority():Int;
+
+	@:overload
+	function getParent():java.lang.ThreadGroup;
+
+	@:overload
+	function getName():String;
+}

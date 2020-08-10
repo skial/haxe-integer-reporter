@@ -1,0 +1,7 @@
+@:realPath("java.lang.IllegalAccessException") @:nativeGen @:libType @:javaNative @:native("java.lang.IllegalAccessException") @:javaCanonical("java.lang", "IllegalAccessException")
+extern class java.lang.IllegalAccessException extends java.lang.ReflectiveOperationException {
+
+	function new(param1:String):Void;
+
+	function new():Void;
+}

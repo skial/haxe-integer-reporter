@@ -1,0 +1,11 @@
+@:realPath("java.util.function.DoublePredicate") @:used @:native("java.util.function.DoublePredicate") @:libType
+extern interface java.util.function.DoublePredicate {
+
+	function test(param1:Float):Bool;
+
+	function and(param1:java.util.function.DoublePredicate):java.util.function.DoublePredicate;
+
+	function negate():java.util.function.DoublePredicate;
+
+	function or(param1:java.util.function.DoublePredicate):java.util.function.DoublePredicate;
+}

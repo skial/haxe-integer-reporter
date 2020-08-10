@@ -1,0 +1,3 @@
+@:realPath("java.nio.file.CopyOption") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.CopyOption") @:javaCanonical("java.nio.file", "CopyOption")
+extern interface java.nio.file.CopyOption {
+}

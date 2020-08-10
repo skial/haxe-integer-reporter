@@ -1,0 +1,3 @@
+@:realPath("python.ChildProcessError") @:native("ChildProcessError")
+extern class ChildProcessError extends OSError {
+}

@@ -1,0 +1,11 @@
+@:realPath("java.io.IOException") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.io.IOException") @:javaCanonical("java.io", "IOException")
+extern class java.io.IOException extends java.lang.Exception {
+
+	function new(param1:java.lang.Throwable):Void;
+
+	function new():Void;
+
+	function new(param1:String):Void;
+
+	function new(param1:String, param2:java.lang.Throwable):Void;
+}

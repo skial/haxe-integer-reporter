@@ -1,0 +1,12 @@
+@:realPath("java.time.format.DateTimeFormatter_ClassicFormat") @:used @:nativeGen @:libType @:javaNative @:native("java.time.format.DateTimeFormatter$ClassicFormat") @:javaCanonical("java.time.format", "DateTimeFormatter.ClassicFormat")
+extern class java.time.format.DateTimeFormatter$ClassicFormat extends java.text.Format {
+
+	function new(param1:java.time.format.DateTimeFormatter, param2:java.time.temporal.TemporalQuery<Dynamic>):Void;
+
+	function parseObject(param1:String, param2:java.text.ParsePosition):Dynamic;
+
+	@:throws("java.text.ParseException")
+	function parseObject(param1:String):Dynamic;
+
+	function format(param1:Dynamic, param2:java.lang.StringBuffer, param3:java.text.FieldPosition):java.lang.StringBuffer;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.io.InvalidObjectException") @:libType @:javaNative @:native("java.io.InvalidObjectException") @:javaCanonical("java.io", "InvalidObjectException")
+extern class java.io.InvalidObjectException extends java.io.ObjectStreamException {
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+}

@@ -1,0 +1,37 @@
+@:realPath("java.io.ByteArrayOutputStream") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.io.ByteArrayOutputStream") @:javaCanonical("java.io", "ByteArrayOutputStream")
+extern class java.io.ByteArrayOutputStream extends java.io.OutputStream {
+
+	function new(param1:Int):Void;
+
+	function new():Void;
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	@:deprecated
+	function toString(param1:Int):String;
+
+	function toString():String;
+
+	@:throws("java.io.UnsupportedEncodingException")
+	function toString(param1:String):String;
+
+	function size():Int;
+
+	function toByteArray():java.NativeArray<java.types.Int8>;
+
+	function reset():Void;
+
+	@:throws("java.io.IOException")
+	function writeTo(param1:java.io.OutputStream):Void;
+
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	function write(param1:Int):Void;
+
+	@:protected
+	var buf:java.NativeArray<java.types.Int8>;
+
+	@:protected
+	var count:Int;
+}

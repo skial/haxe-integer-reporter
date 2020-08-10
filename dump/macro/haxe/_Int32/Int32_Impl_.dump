@@ -1,0 +1,191 @@
+private class haxe._Int32.Int32_Impl_ {
+
+	@:impl @:op(-A)
+	static inline function negate[Function:(this : Int) -> haxe.Int32]
+		[Arg:Int] [Local this(110823):Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Unop:Int]
+						~
+						Prefix
+						[Local this(110823):Int:Int]
+					+
+					[Const:Int] 1
+
+	@:impl @:op(++A)
+	static inline function preIncrement[Function:(this : Int) -> haxe.Int32]
+		[Arg:Int] [Local this(111907):Int]
+		[Return:Dynamic]
+			[Binop:Int]
+				[Local this(111907):Int:Int]
+				=
+				[Block:Int]
+					[Var x(111910):Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local this(111907):Int:Int]
+					[Parenthesis:Int] [Local x(111910):Int:Int]
+
+	@:impl @:op(A++)
+	static inline function postIncrement[Function:(this : Int) -> haxe.Int32]
+		[Arg:Int] [Local this(110831):Int]
+		[Block:Dynamic]
+			[Var ret(110832):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Local this(110831):Int:Int]
+			[Binop:Int]
+				[Local this(110831):Int:Int]
+				=
+				[Parenthesis:Int] [Local this(110831):Int:Int]
+			[Return:Dynamic] [Local ret(110832):Int:Int]
+
+	@:impl @:op(--A)
+	static inline function preDecrement[Function:(this : Int) -> haxe.Int32]
+		[Arg:Int] [Local this(111911):Int]
+		[Return:Dynamic]
+			[Binop:Int]
+				[Local this(111911):Int:Int]
+				=
+				[Block:Int]
+					[Var x(111914):Int]
+						[Unop:Int]
+							--
+							Prefix
+							[Local this(111911):Int:Int]
+					[Parenthesis:Int] [Local x(111914):Int:Int]
+
+	@:impl @:op(A--)
+	static inline function postDecrement[Function:(this : Int) -> haxe.Int32]
+		[Arg:Int] [Local this(111034):Int]
+		[Block:Dynamic]
+			[Var ret(111035):Int]
+				[Unop:Int]
+					--
+					Postfix
+					[Local this(111034):Int:Int]
+			[Binop:Int]
+				[Local this(111034):Int:Int]
+				=
+				[Parenthesis:Int] [Local this(111034):Int:Int]
+			[Return:Dynamic] [Local ret(111035):Int:Int]
+
+	@:op(A + B)
+	static inline function add[Function:(a : haxe.Int32, b : haxe.Int32) -> haxe.Int32]
+		[Arg:haxe.Int32] [Local a(111158):haxe.Int32]
+		[Arg:haxe.Int32] [Local b(111159):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(111158):haxe.Int32:haxe.Int32]
+					+
+					[Cast:Int] [Local b(111159):haxe.Int32:haxe.Int32]
+
+	@:op(A + B) @:commutative
+	static inline function addInt[Function:(a : haxe.Int32, b : Int) -> haxe.Int32]
+		[Arg:haxe.Int32] [Local a(111163):haxe.Int32]
+		[Arg:Int] [Local b(111164):Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(111163):haxe.Int32:haxe.Int32]
+					+
+					[Local b(111164):Int:Int]
+
+	@:op(A - B)
+	static inline function sub[Function:(a : haxe.Int32, b : haxe.Int32) -> haxe.Int32]
+		[Arg:haxe.Int32] [Local a(110680):haxe.Int32]
+		[Arg:haxe.Int32] [Local b(110681):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(110680):haxe.Int32:haxe.Int32]
+					-
+					[Cast:Int] [Local b(110681):haxe.Int32:haxe.Int32]
+
+	@:op(A - B)
+	static inline function subInt[Function:(a : haxe.Int32, b : Int) -> haxe.Int32]
+		[Arg:haxe.Int32] [Local a(111915):haxe.Int32]
+		[Arg:Int] [Local b(111916):Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(111915):haxe.Int32:haxe.Int32]
+					-
+					[Local b(111916):Int:Int]
+
+	@:op(A - B)
+	static inline function intSub[Function:(a : Int, b : haxe.Int32) -> haxe.Int32]
+		[Arg:Int] [Local a(111920):Int]
+		[Arg:haxe.Int32] [Local b(111921):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Local a(111920):Int:Int]
+					-
+					[Cast:Int] [Local b(111921):haxe.Int32:haxe.Int32]
+
+	@:impl @:to
+	static inline function toFloat[Function:(this : Int) -> Float]
+		[Arg:Int] [Local this(111168):Int]
+		[Return:Dynamic] [Local this(111168):Int:Int]
+
+	public static function ucompare[Function:(a : haxe.Int32, b : haxe.Int32) -> Int]
+		[Arg:haxe.Int32] [Local a(110691):haxe.Int32]
+		[Arg:haxe.Int32] [Local b(110692):haxe.Int32]
+		[Block:Dynamic]
+			[If:Void]
+				[Cast:Bool]
+					[Binop:Bool]
+						[Local a(110691):haxe.Int32:haxe.Int32]
+						<
+						[Const:Int] 0
+				[Then:Dynamic] [Block:Dynamic]
+					[Return:Dynamic]
+						[If:Int]
+							[Cast:Bool]
+								[Binop:Bool]
+									[Local b(110692):haxe.Int32:haxe.Int32]
+									<
+									[Const:Int] 0
+							[Then:haxe.Int32] [Block:haxe.Int32]
+								[Parenthesis:haxe.Int32]
+									[Cast:haxe.Int32]
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Cast:Int]
+													[Unop:haxe.Int32]
+														~
+														Prefix
+														[Local b(110692):haxe.Int32:Int]
+												-
+												[Cast:Int]
+													[Unop:haxe.Int32]
+														~
+														Prefix
+														[Local a(110691):haxe.Int32:Int]
+							[Else:Int] [Block:Int] [Const:Int] 1
+			[Return:Dynamic]
+				[If:Int]
+					[Cast:Bool]
+						[Binop:Bool]
+							[Local b(110692):haxe.Int32:haxe.Int32]
+							<
+							[Const:Int] 0
+					[Then:Int] [Block:Int] [Const:Int] -1
+					[Else:haxe.Int32] [Block:haxe.Int32]
+						[Parenthesis:haxe.Int32]
+							[Cast:haxe.Int32]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Cast:Int] [Local a(110691):haxe.Int32:haxe.Int32]
+										-
+										[Cast:Int] [Local b(110692):haxe.Int32:haxe.Int32]
+
+	static inline function clamp[Function:(x : Int) -> Int]
+		[Arg:Int] [Local x(110682):Int]
+		[Block:Dynamic] [Return:Dynamic] [Parenthesis:Int] [Local x(110682):Int:Int]
+}

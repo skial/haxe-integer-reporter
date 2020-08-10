@@ -1,0 +1,3 @@
+@:realPath("python.SyntaxError") @:native("SyntaxError")
+extern class SyntaxError extends Exception {
+}

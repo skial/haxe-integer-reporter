@@ -1,0 +1,15 @@
+@:realPath("java.lang.ref.Reference") @:used @:abstract @:libType @:javaNative @:native("java.lang.ref.Reference") @:javaCanonical("java.lang.ref", "Reference")
+extern class java.lang.ref.Reference<T : java.lang.ref.Reference.T> {
+
+	@:overload
+	function enqueue():Bool;
+
+	@:overload
+	function isEnqueued():Bool;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function get():java.lang.ref.Reference.T;
+}

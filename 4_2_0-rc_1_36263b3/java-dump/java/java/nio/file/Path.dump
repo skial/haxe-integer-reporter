@@ -1,0 +1,64 @@
+@:realPath("java.nio.file.Path") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.Path") @:javaCanonical("java.nio.file", "Path")
+extern interface java.nio.file.Path implements java.nio.file.Watchable implements java.lang.Iterable<java.nio.file.Path> implements java.lang.Comparable<java.nio.file.Path> {
+
+	function compareTo(param1:Dynamic):Int;
+
+	function compareTo(param1:java.nio.file.Path):Int;
+
+	function iterator():java.util.Iterator<java.nio.file.Path>;
+
+	@:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>):java.nio.file.WatchKey;
+
+	@:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>, param3:java.NativeArray<java.nio.file.WatchEvent$Modifier>):java.nio.file.WatchKey;
+
+	function toFile():java.io.File;
+
+	@:throws("java.io.IOException")
+	function toRealPath(param1:java.NativeArray<java.nio.file.LinkOption>):java.nio.file.Path;
+
+	function toAbsolutePath():java.nio.file.Path;
+
+	function toUri():java.net.URI;
+
+	function relativize(param1:java.nio.file.Path):java.nio.file.Path;
+
+	function resolveSibling(param1:String):java.nio.file.Path;
+
+	function resolveSibling(param1:java.nio.file.Path):java.nio.file.Path;
+
+	function resolve(param1:String):java.nio.file.Path;
+
+	function resolve(param1:java.nio.file.Path):java.nio.file.Path;
+
+	function normalize():java.nio.file.Path;
+
+	function endsWith(param1:String):Bool;
+
+	function endsWith(param1:java.nio.file.Path):Bool;
+
+	function startsWith(param1:String):Bool;
+
+	function startsWith(param1:java.nio.file.Path):Bool;
+
+	function subpath(param1:Int, param2:Int):java.nio.file.Path;
+
+	function getName(param1:Int):java.nio.file.Path;
+
+	function getNameCount():Int;
+
+	function getParent():java.nio.file.Path;
+
+	function getFileName():java.nio.file.Path;
+
+	function getRoot():java.nio.file.Path;
+
+	function isAbsolute():Bool;
+
+	function getFileSystem():java.nio.file.FileSystem;
+
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	function spliterator():java.util.Spliterator<java.nio.file.Path>;
+}

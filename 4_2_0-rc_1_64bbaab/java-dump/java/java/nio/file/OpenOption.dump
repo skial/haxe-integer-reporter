@@ -1,0 +1,3 @@
+@:realPath("java.nio.file.OpenOption") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.OpenOption") @:javaCanonical("java.nio.file", "OpenOption")
+extern interface java.nio.file.OpenOption {
+}

@@ -1,0 +1,33 @@
+@:realPath("java.util.ServiceLoader") @:used @:native("java.util.ServiceLoader") @:libType
+extern class java.util.ServiceLoader<S:Dynamic> implements java.lang.Iterable<java.util.ServiceLoader.S> {
+
+	function reload():Void;
+
+	function iterator():java.util.Iterator<java.util.ServiceLoader.S>;
+
+	function toString():java.lang.String;
+
+	static function load<S:Dynamic>(param1:java.lang.Class<load.S>, param2:java.lang.ClassLoader):java.util.ServiceLoader<load.S>;
+
+	static function load<S:Dynamic>(param1:java.lang.Class<load.S>):java.util.ServiceLoader<load.S>;
+
+	static function loadInstalled<S:Dynamic>(param1:java.lang.Class<loadInstalled.S>):java.util.ServiceLoader<loadInstalled.S>;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:java.lang.Class<Dynamic>, param2:java.lang.String, param3:java.lang.Throwable):Void;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:java.util.ServiceLoader<Dynamic>, param2:java.lang.Class<Dynamic>, param3:java.net.URL):java.util.Iterator<Dynamic>;
+
+	@:realPath("access_300") @:native("access$300")
+	static function access$300(param1:java.lang.Class<Dynamic>, param2:java.lang.String):Void;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:java.util.ServiceLoader<Dynamic>):java.util.LinkedHashMap<Dynamic, Dynamic>;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500(param1:java.util.ServiceLoader<Dynamic>):java.security.AccessControlContext;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800(param1:java.util.ServiceLoader<Dynamic>):java.util.ServiceLoader$LazyIterator;
+}

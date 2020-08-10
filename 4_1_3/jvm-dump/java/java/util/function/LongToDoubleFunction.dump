@@ -1,0 +1,6 @@
+@:realPath("java.util.function.LongToDoubleFunction") @:used @:abstract @:libType @:javaNative @:native("java.util.function.LongToDoubleFunction") @:javaCanonical("java.util.function", "LongToDoubleFunction")
+extern interface java.util.function.LongToDoubleFunction {
+
+	@:overload
+	function applyAsDouble(param1:haxe.Int64):Float;
+}

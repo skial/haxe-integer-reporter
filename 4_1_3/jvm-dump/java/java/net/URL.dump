@@ -1,0 +1,87 @@
+@:realPath("java.net.URL") @:libType @:javaNative @:native("java.net.URL") @:javaCanonical("java.net", "URL")
+extern class java.net.URL implements java.io.Serializable {
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.net.URL, param2:java.lang.String, param3:java.net.URLStreamHandler):Void;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:Int, param4:java.lang.String):Void;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String):Void;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:Int, param4:java.lang.String, param5:java.net.URLStreamHandler):Void;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.lang.String):Void;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function new(param1:java.net.URL, param2:java.lang.String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent(param1:java.NativeArray<java.lang.Class<Dynamic>>):Dynamic;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent():Dynamic;
+
+	@:overload @:throws("java.io.IOException")
+	function openStream():java.io.InputStream;
+
+	@:overload @:throws("java.io.IOException")
+	function openConnection(param1:java.net.Proxy):java.net.URLConnection;
+
+	@:overload @:throws("java.io.IOException")
+	function openConnection():java.net.URLConnection;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function toURI():java.net.URI;
+
+	@:overload
+	function toExternalForm():java.lang.String;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function sameFile(param1:java.net.URL):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getRef():java.lang.String;
+
+	@:overload
+	function getFile():java.lang.String;
+
+	@:overload
+	function getHost():java.lang.String;
+
+	@:overload
+	function getProtocol():java.lang.String;
+
+	@:overload
+	function getDefaultPort():Int;
+
+	@:overload
+	function getPort():Int;
+
+	@:overload
+	function getAuthority():java.lang.String;
+
+	@:overload
+	function getUserInfo():java.lang.String;
+
+	@:overload
+	function getPath():java.lang.String;
+
+	@:overload
+	function getQuery():java.lang.String;
+
+	@:overload
+	static function setURLStreamHandlerFactory(param1:java.net.URLStreamHandlerFactory):Void;
+}

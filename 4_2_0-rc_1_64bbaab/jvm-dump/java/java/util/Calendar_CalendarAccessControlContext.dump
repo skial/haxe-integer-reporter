@@ -1,0 +1,8 @@
+@:realPath("java.util.Calendar_CalendarAccessControlContext") @:native("java.util.Calendar$CalendarAccessControlContext") @:libType
+extern class java.util.Calendar$CalendarAccessControlContext {
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100():java.security.AccessControlContext;
+
+	static function <clinit>():Void;
+}

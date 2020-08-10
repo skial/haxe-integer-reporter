@@ -1,0 +1,8 @@
+@:realPath("java.util.Calendar_AvailableCalendarTypes") @:native("java.util.Calendar$AvailableCalendarTypes") @:libType
+extern class java.util.Calendar$AvailableCalendarTypes {
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000():java.util.Set<Dynamic>;
+
+	static function <clinit>():Void;
+}

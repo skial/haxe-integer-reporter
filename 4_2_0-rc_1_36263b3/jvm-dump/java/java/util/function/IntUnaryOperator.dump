@@ -1,0 +1,11 @@
+@:realPath("java.util.function.IntUnaryOperator") @:used @:native("java.util.function.IntUnaryOperator") @:libType
+extern interface java.util.function.IntUnaryOperator {
+
+	function applyAsInt(param1:Int):Int;
+
+	function compose(param1:java.util.function.IntUnaryOperator):java.util.function.IntUnaryOperator;
+
+	function andThen(param1:java.util.function.IntUnaryOperator):java.util.function.IntUnaryOperator;
+
+	static function identity():java.util.function.IntUnaryOperator;
+}

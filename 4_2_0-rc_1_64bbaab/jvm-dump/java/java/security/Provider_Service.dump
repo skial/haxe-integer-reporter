@@ -1,0 +1,48 @@
+@:realPath("java.security.Provider_Service") @:native("java.security.Provider$Service") @:libType
+extern class java.security.Provider$Service {
+
+	function new(param1:java.security.Provider, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String, param5:java.util.List<java.lang.String>, param6:java.util.Map<java.lang.String, java.lang.String>):Void;
+
+	function new(param1:java.security.Provider, param2:java.security.Provider$1):Void;
+
+	function addAttribute(param1:java.lang.String, param2:java.lang.String):Void;
+
+	function getType():java.lang.String;
+
+	function getAlgorithm():java.lang.String;
+
+	function getProvider():java.security.Provider;
+
+	function getClassName():java.lang.String;
+
+	function getAttribute(param1:java.lang.String):java.lang.String;
+
+	function newInstance(param1:Dynamic):Dynamic;
+
+	function supportsParameter(param1:Dynamic):Bool;
+
+	function toString():java.lang.String;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.security.Provider$Service):Bool;
+
+	@:realPath("access_302") @:native("access$302")
+	static function access$302(param1:java.security.Provider$Service, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_402") @:native("access$402")
+	static function access$402(param1:java.security.Provider$Service, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500(param1:java.security.Provider$Service, param2:java.lang.String):Void;
+
+	@:realPath("access_602") @:native("access$602")
+	static function access$602(param1:java.security.Provider$Service, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_700") @:native("access$700")
+	static function access$700(param1:java.security.Provider$Service):java.util.List<Dynamic>;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800(param1:java.security.Provider$Service):java.util.Map<Dynamic, Dynamic>;
+
+	static function <clinit>():Void;
+}

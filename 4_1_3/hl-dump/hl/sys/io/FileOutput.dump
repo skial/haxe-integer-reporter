@@ -1,0 +1,39 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.FileOutput extends haxe.io.Output {
+
+	function new(f:sys.io.FileHandle) {
+		this.__f = f;
+	}
+
+	var __f:sys.io.FileHandle;
+
+	public function writeByte(c:Int) {
+		if ((! sys.io.FileOutput.file_write_char(this.__f, c))) throw haxe.Exception.thrown(new haxe.io.Eof());
+	}
+
+	public function writeBytes(s:haxe.io.Bytes, p:Int, l:Int) {
+		if ((p < 0 || l < 0 || p + l > s.length)) throw haxe.Exception.thrown(haxe.io.Error.OutsideBounds);
+		var v = this.__f;
+		var this1 = new haxe.io.BytesDataImpl(s.b, s.length);
+		var this1 = cast this1;
+		var v = sys.io.FileOutput.file_write(v, @:implicitCast if ((this1 == null)) null else this1.bytes, p, l);
+		if ((v <= 0)) throw haxe.Exception.thrown(new haxe.io.Eof());
+		return v;
+	}
+
+	public function close() {
+		super.close();
+		sys.io.FileInput.file_close(this.__f);
+		this.__f = null;
+	}
+
+	@:hlNative("std", "file_write")
+	static function file_write(f:sys.io.FileHandle, bytes:hl.Bytes, pos:Int, len:Int) {
+		return 0;
+	}
+
+	@:hlNative("std", "file_write_char")
+	static function file_write_char(f:sys.io.FileHandle, v:Int) {
+		return true;
+	}
+}

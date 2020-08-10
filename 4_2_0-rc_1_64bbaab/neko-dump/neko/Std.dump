@@ -1,0 +1,29 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Std {
+
+	@:has_untyped
+	public static function isOfType(v:Dynamic, t:Dynamic) {
+		return neko.Boot.__instanceof(v, t);
+	}
+
+	@:has_untyped
+	public static function string(s:Dynamic) {
+		return new String(__dollar__string(s));
+	}
+
+	static function __init__() {
+		Int = {__name__ : ["Int"]};
+		Float = {__name__ : ["Float"]};
+		Bool = {__ename__ : ["Bool"]};
+		Dynamic = {__name__ : ["Dynamic"]};
+		Class = {__name__ : ["Class"]};
+		Enum = {};
+		var cl = neko.Boot.__classes;
+		cl.Int = Int;
+		cl.Float = Float;
+		cl.Bool = Bool;
+		cl.Dynamic = Dynamic;
+		cl.Class = Class;
+		cl.Enum = Enum;
+	}
+}

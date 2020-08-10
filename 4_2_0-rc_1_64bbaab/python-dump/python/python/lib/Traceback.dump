@@ -1,0 +1,7 @@
+@:directlyUsed @:used @:pythonImport("traceback")
+extern class python.lib.Traceback {
+
+	static function extract_stack(f:Null<python.lib.Frame>, limit:Null<Int>):list<python.lib._Traceback.StackItem>;
+
+	static function extract_tb(tb:python.lib.TB, limit:Null<Int>):list<python.lib._Traceback.StackItem>;
+}

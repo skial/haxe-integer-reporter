@@ -1,0 +1,3 @@
+@:realPath("python.ConnectionError") @:native("ConnectionError")
+extern class ConnectionError extends OSError {
+}

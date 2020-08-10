@@ -1,0 +1,2 @@
+@:used @:coreApi
+abstract UInt from Int to Int {}

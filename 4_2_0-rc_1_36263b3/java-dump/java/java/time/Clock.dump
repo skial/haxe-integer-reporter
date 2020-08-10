@@ -1,0 +1,34 @@
+@:realPath("java.time.Clock") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.time.Clock") @:javaCanonical("java.time", "Clock")
+extern class java.time.Clock {
+
+	@:protected
+	function new():Void;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function instant():java.time.Instant;
+
+	function millis():haxe.Int64;
+
+	function withZone(param1:java.time.ZoneId):java.time.Clock;
+
+	function getZone():java.time.ZoneId;
+
+	static function offset(param1:java.time.Clock, param2:java.time.Duration):java.time.Clock;
+
+	static function fixed(param1:java.time.Instant, param2:java.time.ZoneId):java.time.Clock;
+
+	static function tick(param1:java.time.Clock, param2:java.time.Duration):java.time.Clock;
+
+	static function tickMinutes(param1:java.time.ZoneId):java.time.Clock;
+
+	static function tickSeconds(param1:java.time.ZoneId):java.time.Clock;
+
+	static function system(param1:java.time.ZoneId):java.time.Clock;
+
+	static function systemDefaultZone():java.time.Clock;
+
+	static function systemUTC():java.time.Clock;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.lang.Readable") @:used @:abstract @:libType @:javaNative @:native("java.lang.Readable") @:javaCanonical("java.lang", "Readable")
+extern interface java.lang.Readable {
+
+	@:overload @:throws("java.io.IOException")
+	function read(param1:java.nio.CharBuffer):Int;
+}

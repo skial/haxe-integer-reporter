@@ -1,0 +1,2 @@
+@:used @:hxGen @:coreType @:notNull @:runtimeValue
+abstract Bool {}

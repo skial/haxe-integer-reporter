@@ -1,0 +1,3 @@
+@:realPath("python.OSError") @:native("OSError")
+extern class OSError extends EnvironmentError {
+}

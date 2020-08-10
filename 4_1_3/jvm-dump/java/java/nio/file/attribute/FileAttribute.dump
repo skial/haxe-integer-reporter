@@ -1,0 +1,9 @@
+@:realPath("java.nio.file.attribute.FileAttribute") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.FileAttribute") @:javaCanonical("java.nio.file.attribute", "FileAttribute")
+extern interface java.nio.file.attribute.FileAttribute<T : java.nio.file.attribute.FileAttribute.T> {
+
+	@:overload
+	function value():java.nio.file.attribute.FileAttribute.T;
+
+	@:overload
+	function name():java.lang.String;
+}

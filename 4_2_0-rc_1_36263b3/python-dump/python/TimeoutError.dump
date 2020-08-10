@@ -1,0 +1,3 @@
+@:realPath("python.TimeoutError") @:native("TimeoutError")
+extern class TimeoutError extends OSError {
+}

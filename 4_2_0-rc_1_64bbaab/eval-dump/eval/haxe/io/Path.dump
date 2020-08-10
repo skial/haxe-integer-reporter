@@ -1,0 +1,64 @@
+@:keep @:directlyUsed @:used
+class haxe.io.Path {
+
+	public static function normalize(path:String) {
+		var slash = "/";
+		path = path.split("\\").join(slash);
+		if ((path == slash)) return slash;
+		var target = [];
+		{
+			var ` = 0;
+			var `1 = path.split(slash);
+			while ((` < `1.length)) {
+				var token = `1[`];
+				++ `;
+				if ((token == ".." && target.length > 0 && target[target.length - 1] != "..")) target.pop() else if ((token == "")) {
+					if ((target.length > 0 || path.charCodeAt(0) == 47)) target.push(token);
+				} else if ((token != ".")) target.push(token);
+			};
+		};
+		var tmp = target.join(slash);
+		var acc = new StringBuf();
+		var colon = false;
+		var slashes = false;
+		{
+			var `2 = 0;
+			var `3 = tmp.length;
+			while ((`2 < `3)) {
+				var i = `2 ++;
+				{
+					var `2 = StringTools.fastCodeAt(tmp, i);
+					switch ((`2)) {
+						case 47: if ((! colon)) slashes = true else {
+							var i = `2;
+							{
+								colon = false;
+								if ((slashes)) {
+									acc.add("/");
+									slashes = false;
+								};
+								acc.addChar(i);
+							};
+						};
+						case 58: {
+							acc.add(":");
+							colon = true;
+						};
+						default: {
+							var i = `2;
+							{
+								colon = false;
+								if ((slashes)) {
+									acc.add("/");
+									slashes = false;
+								};
+								acc.addChar(i);
+							};
+						}
+					};
+				};
+			};
+		};
+		return acc.toString();
+	}
+}

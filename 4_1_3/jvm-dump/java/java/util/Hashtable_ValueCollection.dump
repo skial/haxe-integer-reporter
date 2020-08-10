@@ -1,0 +1,15 @@
+@:realPath("java.util.Hashtable_ValueCollection") @:used @:libType @:javaNative @:native("java.util.Hashtable$ValueCollection") @:javaCanonical("java.util", "Hashtable.ValueCollection")
+extern class java.util.Hashtable$ValueCollection extends java.util.AbstractCollection<Dynamic> {
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function size():Int;
+
+	@:overload
+	function iterator():java.util.Iterator<Dynamic>;
+}

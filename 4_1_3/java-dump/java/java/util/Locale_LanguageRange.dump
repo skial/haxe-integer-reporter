@@ -1,0 +1,34 @@
+@:realPath("java.util.Locale_LanguageRange") @:nativeGen @:libType @:javaNative @:native("java.util.Locale$LanguageRange") @:javaCanonical("java.util", "Locale.LanguageRange")
+extern class java.util.Locale$LanguageRange {
+
+	@:overload
+	function new(param1:String, param2:Float):Void;
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function getWeight():Float;
+
+	@:overload
+	function getRange():String;
+
+	@:overload
+	static function mapEquivalents(param1:java.util.List<java.util.Locale$LanguageRange>, param2:java.util.Map<String, java.util.List<String>>):java.util.List<java.util.Locale$LanguageRange>;
+
+	@:overload
+	static function parse(param1:String, param2:java.util.Map<String, java.util.List<String>>):java.util.List<java.util.Locale$LanguageRange>;
+
+	@:overload
+	static function parse(param1:String):java.util.List<java.util.Locale$LanguageRange>;
+
+	static var MAX_WEIGHT(default,null):Float;
+
+	static var MIN_WEIGHT(default,null):Float;
+}

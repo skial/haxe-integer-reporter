@@ -1,0 +1,21 @@
+@:realPath("java.sun.util.locale.LocaleObjectCache") @:used @:noCompletion @:abstract @:libType @:javaNative @:native("sun.util.locale.LocaleObjectCache") @:javaCanonical("sun.util.locale", "LocaleObjectCache")
+extern class sun.util.locale.LocaleObjectCache<K : java.sun.util.locale.LocaleObjectCache.K,V : java.sun.util.locale.LocaleObjectCache.V> {
+
+	@:overload
+	function new(param1:Int, param2:Single, param3:Int):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload @:protected
+	function normalizeKey(param1:java.sun.util.locale.LocaleObjectCache.K):java.sun.util.locale.LocaleObjectCache.K;
+
+	@:overload @:protected
+	function createObject(param1:java.sun.util.locale.LocaleObjectCache.K):java.sun.util.locale.LocaleObjectCache.V;
+
+	@:overload @:protected
+	function put(param1:java.sun.util.locale.LocaleObjectCache.K, param2:java.sun.util.locale.LocaleObjectCache.V):java.sun.util.locale.LocaleObjectCache.V;
+
+	@:overload
+	function get(param1:java.sun.util.locale.LocaleObjectCache.K):java.sun.util.locale.LocaleObjectCache.V;
+}

@@ -1,0 +1,113 @@
+@:realPath("java.time.Period") @:used @:libType @:javaNative @:native("java.time.Period") @:javaCanonical("java.time", "Period")
+extern class java.time.Period implements java.time.chrono.ChronoPeriod implements java.io.Serializable {
+
+	@:overload
+	function getChronology():java.time.chrono.IsoChronology;
+
+	@:overload
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	@:overload
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	@:overload
+	function multipliedBy(param1:Int):java.time.Period;
+
+	@:overload
+	function negated():java.time.Period;
+
+	@:overload
+	function normalized():java.time.Period;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function subtractFrom(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function addTo(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function toTotalMonths():haxe.Int64;
+
+	@:overload
+	function minusDays(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function minusMonths(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function minusYears(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function plusDays(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function plusMonths(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function plusYears(param1:haxe.Int64):java.time.Period;
+
+	@:overload
+	function withDays(param1:Int):java.time.Period;
+
+	@:overload
+	function withMonths(param1:Int):java.time.Period;
+
+	@:overload
+	function withYears(param1:Int):java.time.Period;
+
+	@:overload
+	function getDays():Int;
+
+	@:overload
+	function getMonths():Int;
+
+	@:overload
+	function getYears():Int;
+
+	@:overload
+	function isNegative():Bool;
+
+	@:overload
+	function isZero():Bool;
+
+	@:overload
+	function getUnits():java.util.List<java.time.temporal.TemporalUnit>;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	@:overload
+	static function between(param1:java.time.LocalDate, param2:java.time.LocalDate):java.time.Period;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence):java.time.Period;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	@:overload
+	static function of(param1:Int, param2:Int, param3:Int):java.time.Period;
+
+	@:overload
+	static function ofDays(param1:Int):java.time.Period;
+
+	@:overload
+	static function ofWeeks(param1:Int):java.time.Period;
+
+	@:overload
+	static function ofMonths(param1:Int):java.time.Period;
+
+	@:overload
+	static function ofYears(param1:Int):java.time.Period;
+
+	static var ZERO(default,never):java.time.Period;
+}

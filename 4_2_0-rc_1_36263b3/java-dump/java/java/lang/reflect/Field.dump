@@ -1,0 +1,87 @@
+@:realPath("java.lang.reflect.Field") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.reflect.Field") @:javaCanonical("java.lang.reflect", "Field")
+extern class java.lang.reflect.Field extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member {
+
+	function getAnnotatedType():java.lang.reflect.AnnotatedType;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	function getAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setDouble(param1:Dynamic, param2:Float):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setFloat(param1:Dynamic, param2:Single):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setLong(param1:Dynamic, param2:haxe.Int64):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setInt(param1:Dynamic, param2:Int):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setShort(param1:Dynamic, param2:java.types.Int16):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setChar(param1:Dynamic, param2:java.types.Char16):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setByte(param1:Dynamic, param2:java.types.Int8):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setBoolean(param1:Dynamic, param2:Bool):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function set(param1:Dynamic, param2:Dynamic):Void;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getDouble(param1:Dynamic):Float;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getFloat(param1:Dynamic):Single;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getLong(param1:Dynamic):haxe.Int64;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getInt(param1:Dynamic):Int;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getShort(param1:Dynamic):java.types.Int16;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getChar(param1:Dynamic):java.types.Char16;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getByte(param1:Dynamic):java.types.Int8;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getBoolean(param1:Dynamic):Bool;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function get(param1:Dynamic):Dynamic;
+
+	function toGenericString():String;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getGenericType():java.lang.reflect.Type;
+
+	function getType():java.lang.Class<Dynamic>;
+
+	function isSynthetic():Bool;
+
+	function isEnumConstant():Bool;
+
+	function getModifiers():Int;
+
+	function getName():String;
+
+	function getDeclaringClass():java.lang.Class<Dynamic>;
+}

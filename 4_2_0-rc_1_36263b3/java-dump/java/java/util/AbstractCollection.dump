@@ -1,0 +1,44 @@
+@:realPath("java.util.AbstractCollection") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.AbstractCollection") @:javaCanonical("java.util", "AbstractCollection")
+extern class java.util.AbstractCollection<E:Dynamic> implements java.util.Collection<java.util.AbstractCollection.E> {
+
+	@:protected
+	function new():Void;
+
+	function toString():String;
+
+	function clear():Void;
+
+	function retainAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function removeAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function addAll(param1:java.util.Collection<java.util.AbstractCollection.E>):Bool;
+
+	function containsAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function remove(param1:Dynamic):Bool;
+
+	function add(param1:java.util.AbstractCollection.E):Bool;
+
+	function toArray<T:Dynamic>(param1:java.NativeArray<toArray.T>):java.NativeArray<toArray.T>;
+
+	function toArray():java.NativeArray<Dynamic>;
+
+	function contains(param1:Dynamic):Bool;
+
+	function isEmpty():Bool;
+
+	function size():Int;
+
+	function iterator():java.util.Iterator<java.util.AbstractCollection.E>;
+
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	function removeIf(param1:java.util.function.Predicate<Dynamic>):Bool;
+
+	function spliterator():java.util.Spliterator<java.util.AbstractCollection.E>;
+
+	function stream():java.util.stream.Stream<java.util.AbstractCollection.E>;
+
+	function parallelStream():java.util.stream.Stream<java.util.AbstractCollection.E>;
+}

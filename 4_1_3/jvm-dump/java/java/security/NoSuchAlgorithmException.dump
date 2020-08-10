@@ -1,0 +1,15 @@
+@:realPath("java.security.NoSuchAlgorithmException") @:libType @:javaNative @:native("java.security.NoSuchAlgorithmException") @:javaCanonical("java.security", "NoSuchAlgorithmException")
+extern class java.security.NoSuchAlgorithmException extends java.security.GeneralSecurityException {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+}

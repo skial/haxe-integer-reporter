@@ -1,0 +1,9 @@
+@:realPath("java.util.function.Consumer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.Consumer") @:javaCanonical("java.util.function", "Consumer")
+extern interface java.util.function.Consumer<T : java.util.function.Consumer.T> {
+
+	@:overload
+	function andThen(param1:java.util.function.Consumer<Dynamic>):java.util.function.Consumer<java.util.function.Consumer.T>;
+
+	@:overload
+	function accept(param1:java.util.function.Consumer.T):Void;
+}

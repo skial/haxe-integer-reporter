@@ -1,0 +1,11 @@
+@:realPath("java.lang.ref.Reference") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.ref.Reference") @:javaCanonical("java.lang.ref", "Reference")
+extern class java.lang.ref.Reference<T:Dynamic> {
+
+	function enqueue():Bool;
+
+	function isEnqueued():Bool;
+
+	function clear():Void;
+
+	function get():java.lang.ref.Reference.T;
+}

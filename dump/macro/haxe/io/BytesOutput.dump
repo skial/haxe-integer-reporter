@@ -1,0 +1,80 @@
+class haxe.io.BytesOutput extends haxe.io.Output {
+
+	public function new[Function:Void -> Void]
+		[Block:haxe.io.BytesBuffer]
+			[Binop:haxe.io.BytesBuffer]
+				[Field:haxe.io.BytesBuffer]
+					[Const:haxe.io.BytesOutput] this
+					[FInstance:haxe.io.BytesBuffer]
+						haxe.io.BytesOutput
+						b:haxe.io.BytesBuffer
+				=
+				[New:haxe.io.BytesBuffer] haxe.io.BytesBuffer
+
+	var b:haxe.io.BytesBuffer;
+
+	public var length(get,never):Int;
+
+	inline function get_length[Function:Void -> Int]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Int]
+					[Field:Void -> Int]
+						[Field:haxe.io.BytesBuffer]
+							[Const:haxe.io.BytesOutput] this
+							[FInstance:haxe.io.BytesBuffer]
+								haxe.io.BytesOutput
+								b:haxe.io.BytesBuffer
+						[FInstance:Void -> Int]
+							haxe.io.BytesBuffer
+							get_length:Void -> Int
+
+	public function writeByte[Function:(c : Int) -> Void]
+		[Arg:Int] [Local c(110277):Int]
+		[Block:Void]
+			[Call:Void]
+				[Field:(byte : Int) -> Void]
+					[Field:haxe.io.BytesBuffer]
+						[Const:haxe.io.BytesOutput] this
+						[FInstance:haxe.io.BytesBuffer]
+							haxe.io.BytesOutput
+							b:haxe.io.BytesBuffer
+					[FInstance:(byte : Int) -> Void]
+						haxe.io.BytesBuffer
+						addByte:(byte : Int) -> Void
+				[Local c(110277):Int:Int]
+
+	public function writeBytes[Function:(buf : haxe.io.Bytes, pos : Int, len : Int) -> Int]
+		[Arg:haxe.io.Bytes] [Local buf(110279):haxe.io.Bytes]
+		[Arg:Int] [Local pos(110280):Int]
+		[Arg:Int] [Local len(110281):Int]
+		[Block:Dynamic]
+			[Call:Void]
+				[Field:(src : haxe.io.Bytes, pos : Int, len : Int) -> Void]
+					[Field:haxe.io.BytesBuffer]
+						[Const:haxe.io.BytesOutput] this
+						[FInstance:haxe.io.BytesBuffer]
+							haxe.io.BytesOutput
+							b:haxe.io.BytesBuffer
+					[FInstance:(src : haxe.io.Bytes, pos : Int, len : Int) -> Void]
+						haxe.io.BytesBuffer
+						addBytes:(src : haxe.io.Bytes, pos : Int, len : Int) -> Void
+				[Local buf(110279):haxe.io.Bytes:haxe.io.Bytes]
+				[Local pos(110280):Int:Int]
+				[Local len(110281):Int:Int]
+			[Return:Dynamic] [Local len(110281):Int:Int]
+
+	public function getBytes[Function:Void -> haxe.io.Bytes]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:haxe.io.Bytes]
+					[Field:Void -> haxe.io.Bytes]
+						[Field:haxe.io.BytesBuffer]
+							[Const:haxe.io.BytesOutput] this
+							[FInstance:haxe.io.BytesBuffer]
+								haxe.io.BytesOutput
+								b:haxe.io.BytesBuffer
+						[FInstance:Void -> haxe.io.Bytes]
+							haxe.io.BytesBuffer
+							getBytes:Void -> haxe.io.Bytes
+}

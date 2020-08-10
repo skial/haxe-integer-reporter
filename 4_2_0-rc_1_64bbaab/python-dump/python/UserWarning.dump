@@ -1,0 +1,3 @@
+@:realPath("python.UserWarning") @:native("UserWarning")
+extern class UserWarning extends Warning {
+}

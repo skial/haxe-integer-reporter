@@ -1,0 +1,57 @@
+@:directlyUsed @:used @:pythonImport("os", "path")
+extern class python.lib.os.Path {
+
+	static var sep:str;
+
+	static function exists(path:str):Bool;
+
+	static function abspath(path:str):str;
+
+	static function basename(path:str):str;
+
+	static function commonprefix(paths:list<str>):str;
+
+	static function lexists(path:str):Bool;
+
+	static function expanduser(path:str):str;
+
+	static function expandvars(path:str):str;
+
+	static function getmtime(path:str):Float;
+
+	static function getatime(path:str):Float;
+
+	static function getctime(path:str):Float;
+
+	static function getsize(path:str):Int;
+
+	static function isabs(path:str):Bool;
+
+	static function isfile(path:str):Bool;
+
+	static function isdir(path:str):Bool;
+
+	static function dirname(path:str):str;
+
+	static function islink(path:str):Bool;
+
+	static function ismount(path:str):Bool;
+
+	static function join(path:str, paths:haxe.extern.Rest<str>):str;
+
+	static function normpath(path:str):str;
+
+	static function realpath(path:str):str;
+
+	static function relpath(path:str):str;
+
+	static function samefile(path1:str, path2:str):str;
+
+	static function split(path:str):tuple<str, str>;
+
+	static function splitdrive(path:str):tuple<str, str>;
+
+	static function splitext(path:str):tuple<str, str>;
+
+	static function supports_unicode_filenames():Bool;
+}

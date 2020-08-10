@@ -1,0 +1,2 @@
+@:nativeGen
+private typedef java.internal._HxObject.StdType = Type

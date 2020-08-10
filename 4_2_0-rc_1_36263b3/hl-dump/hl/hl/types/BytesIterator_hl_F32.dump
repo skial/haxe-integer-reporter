@@ -1,0 +1,20 @@
+@:directlyUsed @:used @:keep @:noDoc
+class hl.types.BytesIterator_hl_F32 extends haxe.iterators.ArrayIterator<hl.F32> {
+
+	public function new(a:hl.types.ArrayBytes_hl_F32) {
+		super(cast null);
+		this.a = a;
+	}
+
+	var a:hl.types.ArrayBytes_hl_F32;
+
+	public function hasNext() {
+		return this.current < this.a.length;
+	}
+
+	public function next() {
+		var this1 = this.a.bytes;
+		var pos = this.current ++;
+		return $bget(this1, pos);
+	}
+}

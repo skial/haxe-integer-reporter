@@ -1,0 +1,9 @@
+@:realPath("java.util.HashMap_EntryIterator") @:used @:libType @:javaNative @:native("java.util.HashMap$EntryIterator") @:javaCanonical("java.util", "HashMap.EntryIterator")
+extern class java.util.HashMap$EntryIterator extends java.util.HashMap$HashIterator implements java.util.Iterator<java.util.Map$Entry<Dynamic, Dynamic>> {
+
+	@:overload
+	function next():java.util.Map$Entry<Dynamic, Dynamic>;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+}

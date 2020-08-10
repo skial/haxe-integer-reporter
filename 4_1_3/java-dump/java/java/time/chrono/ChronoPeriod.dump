@@ -1,0 +1,6 @@
+@:realPath("java.time.chrono.ChronoPeriod_Statics") @:nativeGen @:libType @:javaNative @:native("java.time.chrono.ChronoPeriod") @:javaCanonical("java.time.chrono", "ChronoPeriod")
+extern class java.time.chrono.ChronoPeriod {
+
+	@:overload
+	static function between(param1:java.time.chrono.ChronoLocalDate, param2:java.time.chrono.ChronoLocalDate):java.time.chrono.ChronoPeriod;
+}

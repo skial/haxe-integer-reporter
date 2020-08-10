@@ -1,0 +1,12 @@
+@:realPath("java.nio.MappedByteBuffer") @:abstract @:libType @:javaNative @:native("java.nio.MappedByteBuffer") @:javaCanonical("java.nio", "MappedByteBuffer")
+extern class java.nio.MappedByteBuffer extends java.nio.ByteBuffer {
+
+	@:overload
+	function force():java.nio.MappedByteBuffer;
+
+	@:overload
+	function load():java.nio.MappedByteBuffer;
+
+	@:overload
+	function isLoaded():Bool;
+}

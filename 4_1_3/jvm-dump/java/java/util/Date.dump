@@ -1,0 +1,111 @@
+@:realPath("java.util.Date") @:used @:libType @:javaNative @:native("java.util.Date") @:javaCanonical("java.util", "Date")
+extern class java.util.Date implements java.lang.Comparable<java.util.Date> implements java.lang.Cloneable implements java.io.Serializable {
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:haxe.Int64):Void;
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int):Void;
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.util.Date):Int;
+
+	@:overload
+	function toInstant():java.time.Instant;
+
+	@:overload
+	function getTimezoneOffset():Int;
+
+	@:overload
+	function toGMTString():java.lang.String;
+
+	@:overload
+	function toLocaleString():java.lang.String;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function after(param1:java.util.Date):Bool;
+
+	@:overload
+	function before(param1:java.util.Date):Bool;
+
+	@:overload
+	function setTime(param1:haxe.Int64):Void;
+
+	@:overload
+	function getTime():haxe.Int64;
+
+	@:overload
+	function setSeconds(param1:Int):Void;
+
+	@:overload
+	function getSeconds():Int;
+
+	@:overload
+	function setMinutes(param1:Int):Void;
+
+	@:overload
+	function getMinutes():Int;
+
+	@:overload
+	function setHours(param1:Int):Void;
+
+	@:overload
+	function getHours():Int;
+
+	@:overload
+	function getDay():Int;
+
+	@:overload
+	function setDate(param1:Int):Void;
+
+	@:overload
+	function getDate():Int;
+
+	@:overload
+	function setMonth(param1:Int):Void;
+
+	@:overload
+	function getMonth():Int;
+
+	@:overload
+	function setYear(param1:Int):Void;
+
+	@:overload
+	function getYear():Int;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	static function from(param1:java.time.Instant):java.util.Date;
+
+	@:overload
+	static function parse(param1:java.lang.String):haxe.Int64;
+
+	@:overload
+	static function UTC(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):haxe.Int64;
+}

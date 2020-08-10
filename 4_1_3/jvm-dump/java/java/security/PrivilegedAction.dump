@@ -1,0 +1,6 @@
+@:realPath("java.security.PrivilegedAction") @:used @:abstract @:libType @:javaNative @:native("java.security.PrivilegedAction") @:javaCanonical("java.security", "PrivilegedAction")
+extern interface java.security.PrivilegedAction<T : java.security.PrivilegedAction.T> {
+
+	@:overload
+	function run():java.security.PrivilegedAction.T;
+}

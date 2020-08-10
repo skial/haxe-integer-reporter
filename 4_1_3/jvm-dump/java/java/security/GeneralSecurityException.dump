@@ -1,0 +1,15 @@
+@:realPath("java.security.GeneralSecurityException") @:libType @:javaNative @:native("java.security.GeneralSecurityException") @:javaCanonical("java.security", "GeneralSecurityException")
+extern class java.security.GeneralSecurityException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+}

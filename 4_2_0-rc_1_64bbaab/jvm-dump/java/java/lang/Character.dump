@@ -1,0 +1,2 @@
+@:used @:native("") @:transitive @:forwardStatics @:forward
+abstract java.lang.Character from java.lang.Character to java.lang.Character {}

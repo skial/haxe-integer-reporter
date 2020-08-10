@@ -1,0 +1,48 @@
+@:realPath("java.util.Calendar_Builder") @:nativeGen @:libType @:javaNative @:native("java.util.Calendar$Builder") @:javaCanonical("java.util", "Calendar.Builder")
+extern class java.util.Calendar$Builder {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function build():java.util.Calendar;
+
+	@:overload
+	function setWeekDefinition(param1:Int, param2:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setLocale(param1:java.util.Locale):java.util.Calendar$Builder;
+
+	@:overload
+	function setCalendarType(param1:String):java.util.Calendar$Builder;
+
+	@:overload
+	function setLenient(param1:Bool):java.util.Calendar$Builder;
+
+	@:overload
+	function setTimeZone(param1:java.util.TimeZone):java.util.Calendar$Builder;
+
+	@:overload
+	function setWeekDate(param1:Int, param2:Int, param3:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setTimeOfDay(param1:Int, param2:Int, param3:Int, param4:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setTimeOfDay(param1:Int, param2:Int, param3:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setDate(param1:Int, param2:Int, param3:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setFields(param1:java.NativeArray<Int>):java.util.Calendar$Builder;
+
+	@:overload
+	function set(param1:Int, param2:Int):java.util.Calendar$Builder;
+
+	@:overload
+	function setInstant(param1:java.util.Date):java.util.Calendar$Builder;
+
+	@:overload
+	function setInstant(param1:haxe.Int64):java.util.Calendar$Builder;
+}

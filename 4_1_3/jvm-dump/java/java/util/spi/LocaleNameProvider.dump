@@ -1,0 +1,18 @@
+@:realPath("java.util.spi.LocaleNameProvider") @:abstract @:libType @:javaNative @:native("java.util.spi.LocaleNameProvider") @:javaCanonical("java.util.spi", "LocaleNameProvider")
+extern class java.util.spi.LocaleNameProvider extends java.util.spi.LocaleServiceProvider {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload
+	function getDisplayVariant(param1:java.lang.String, param2:java.util.Locale):java.lang.String;
+
+	@:overload
+	function getDisplayCountry(param1:java.lang.String, param2:java.util.Locale):java.lang.String;
+
+	@:overload
+	function getDisplayScript(param1:java.lang.String, param2:java.util.Locale):java.lang.String;
+
+	@:overload
+	function getDisplayLanguage(param1:java.lang.String, param2:java.util.Locale):java.lang.String;
+}

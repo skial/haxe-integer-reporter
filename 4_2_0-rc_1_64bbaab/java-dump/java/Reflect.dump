@@ -1,0 +1,23 @@
+@:keep @:directlyUsed @:used @:hxGen @:coreApi
+class Reflect {
+
+	@:has_untyped @:keep
+	public static function field(o:Dynamic, field:String) {
+		if ((Std.isOfType(o, haxe.lang.IHxObject))) return cast o.__hx_getField(field, false, false, false);
+		return haxe.lang.Runtime.slowGetField(o, field, false);
+	}
+
+	@:has_untyped @:keep
+	public static function setField(o:Dynamic, field:String, value:Dynamic) {
+		if ((Std.isOfType(o, haxe.lang.IHxObject))) cast o.__hx_setField(field, value, false) else haxe.lang.Runtime.slowSetField(o, field, value);
+	}
+
+	@:has_untyped @:keep
+	public static function fields(o:Dynamic) {
+		if ((Std.isOfType(o, haxe.lang.IHxObject))) {
+			var ret = [];
+			cast o.__hx_getFields(ret);
+			return ret;
+		} else if ((Std.isOfType(o, java.lang.Class))) return Type.getClassFields(cast o) else return [];
+	}
+}

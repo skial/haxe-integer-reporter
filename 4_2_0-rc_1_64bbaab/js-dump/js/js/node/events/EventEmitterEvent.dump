@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.events.EventEmitterEvent<T:haxe.Function> to js.node.events.Event<js.node.events.EventEmitterEvent.T> {}

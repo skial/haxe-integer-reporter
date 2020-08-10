@@ -1,0 +1,18 @@
+@:realPath("java.lang.RuntimeException") @:directlyUsed @:used @:libType @:javaNative @:native("java.lang.RuntimeException") @:javaCanonical("java.lang", "RuntimeException")
+extern class java.lang.RuntimeException extends java.lang.Exception {
+
+	@:overload @:protected
+	function new(param1:java.lang.String, param2:java.lang.Throwable, param3:Bool, param4:Bool):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+}

@@ -1,0 +1,45 @@
+@:realPath("java.lang.reflect.Executable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.reflect.Executable") @:javaCanonical("java.lang.reflect", "Executable")
+extern class java.lang.reflect.Executable extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member implements java.lang.reflect.GenericDeclaration {
+
+	function getAnnotatedExceptionTypes():java.NativeArray<java.lang.reflect.AnnotatedType>;
+
+	function getAnnotatedParameterTypes():java.NativeArray<java.lang.reflect.AnnotatedType>;
+
+	function getAnnotatedReceiverType():java.lang.reflect.AnnotatedType;
+
+	function getAnnotatedReturnType():java.lang.reflect.AnnotatedType;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	function getAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	function getParameterAnnotations():java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+
+	function isSynthetic():Bool;
+
+	function isVarArgs():Bool;
+
+	function toGenericString():String;
+
+	function getGenericExceptionTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	function getExceptionTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	function getParameters():java.NativeArray<java.lang.reflect.Parameter>;
+
+	function getGenericParameterTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	function getParameterCount():Int;
+
+	function getParameterTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	function getTypeParameters():java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
+
+	function getModifiers():Int;
+
+	function getName():String;
+
+	function getDeclaringClass():java.lang.Class<Dynamic>;
+}

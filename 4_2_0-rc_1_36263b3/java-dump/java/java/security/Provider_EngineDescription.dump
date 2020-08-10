@@ -1,0 +1,3 @@
+@:realPath("java.security.Provider_EngineDescription") @:nativeGen @:libType @:javaNative @:native("java.security.Provider$EngineDescription") @:javaCanonical("java.security", "Provider.EngineDescription")
+extern class java.security.Provider$EngineDescription {
+}

@@ -1,0 +1,47 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.FileOutput extends haxe.io.Output {
+
+	function new(f:sys.io.FileHandle) {
+		this.__f = f;
+	}
+
+	var __f:sys.io.FileHandle;
+
+	public function writeByte(c:Int) {
+		try {
+			sys.io.FileOutput.file_write_char(this.__f, c);
+		} catch (_g:Dynamic) {
+			{
+				null;
+			};
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+	}
+
+	public function writeBytes(s:haxe.io.Bytes, p:Int, l:Int) {
+		try {
+			return sys.io.FileOutput.file_write(this.__f, s.b, p, l);
+		} catch (_g:Dynamic) {
+			{
+				null;
+			};
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+	}
+
+	public function close() {
+		super.close();
+		sys.io.FileOutput.file_close(this.__f);
+	}
+
+	@:value(neko.Lib.load("std", "file_close", 1))
+	static var file_close:sys.io.FileHandle -> Unknown<11> = neko.Lib.load("std", "file_close", 1);
+
+	@:value(neko.Lib.load("std", "file_write", 4))
+	static var file_write:(sys.io.FileHandle, haxe.io.BytesData, Int, Int) -> Int = neko.Lib.load("std", "file_write", 4);
+
+	@:value(neko.Lib.load("std", "file_write_char", 2))
+	static var file_write_char:(sys.io.FileHandle, Int) -> Unknown<12> = neko.Lib.load("std", "file_write_char", 2);
+}

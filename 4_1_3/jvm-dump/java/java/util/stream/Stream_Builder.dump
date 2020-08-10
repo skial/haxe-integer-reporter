@@ -1,0 +1,15 @@
+@:realPath("java.util.stream.Stream_Builder") @:used @:abstract @:libType @:javaNative @:native("java.util.stream.Stream$Builder") @:javaCanonical("java.util.stream", "Stream.Builder")
+extern interface java.util.stream.Stream$Builder<T : java.util.stream.Stream_Builder.T> implements java.util.function.Consumer<java.util.stream.Stream_Builder.T> {
+
+	@:overload
+	function build():java.util.stream.Stream<java.util.stream.Stream_Builder.T>;
+
+	@:overload
+	function add(param1:java.util.stream.Stream_Builder.T):java.util.stream.Stream$Builder<java.util.stream.Stream_Builder.T>;
+
+	@:overload
+	function accept(param1:java.util.stream.Stream_Builder.T):Void;
+
+	@:overload
+	function andThen(param1:java.util.function.Consumer<Dynamic>):java.util.function.Consumer<java.util.stream.Stream_Builder.T>;
+}

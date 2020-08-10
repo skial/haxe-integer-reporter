@@ -1,0 +1,174 @@
+@:realPath("java.internal.DynamicObject") @:used @:hxGen @:native("haxe.lang.DynamicObject") @:keep
+class haxe.lang.DynamicObject extends haxe.lang.HxObject {
+
+	@:overload
+	public function new() {
+		this.__hx_fields = new java.NativeArray(0);
+		this.__hx_dynamics = new java.NativeArray(0);
+		this.__hx_fields_f = new java.NativeArray(0);
+		this.__hx_dynamics_f = new java.NativeArray(0);
+	}
+
+	@:overload
+	public function new(fields:java.NativeArray<String>, dynamics:java.NativeArray<Dynamic>, fields_f:java.NativeArray<String>, dynamics_f:java.NativeArray<Float>) {
+		this.__hx_fields = fields;
+		this.__hx_dynamics = dynamics;
+		this.__hx_fields_f = fields_f;
+		this.__hx_dynamics_f = dynamics_f;
+		this.__hx_length = fields.length;
+		this.__hx_length_f = fields_f.length;
+	}
+
+	@:skipReflection
+	var __hx_fields:java.NativeArray<String>;
+
+	@:skipReflection
+	var __hx_dynamics:java.NativeArray<Dynamic>;
+
+	@:skipReflection
+	var __hx_fields_f:java.NativeArray<String>;
+
+	@:skipReflection
+	var __hx_dynamics_f:java.NativeArray<Float>;
+
+	@:skipReflection
+	var __hx_length:Int;
+
+	@:skipReflection
+	var __hx_length_f:Int;
+
+	public function __hx_deleteField(field:String) {
+		var res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields, this.__hx_length);
+		if ((res >= 0)) {
+			haxe.lang.FieldLookup.removeString(this.__hx_fields, this.__hx_length, res);
+			haxe.lang.FieldLookup.removeDynamic(this.__hx_dynamics, this.__hx_length, res);
+			this.__hx_length --;
+			return true;
+		};
+		var res1 = haxe.lang.FieldLookup.findHash(field, this.__hx_fields_f, this.__hx_length_f);
+		if ((res1 >= 0)) {
+			haxe.lang.FieldLookup.removeString(this.__hx_fields_f, this.__hx_length_f, res1);
+			haxe.lang.FieldLookup.removeFloat(this.__hx_dynamics_f, this.__hx_length_f, res1);
+			this.__hx_length_f --;
+			return true;
+		};
+		return false;
+	}
+
+	public function __hx_getField(field:String, throwErrors:Bool, isCheck:Bool, handleProperties:Bool) {
+		var res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields, this.__hx_length);
+		if ((res >= 0)) return this.__hx_dynamics[res];
+		res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields_f, this.__hx_length_f);
+		if ((res >= 0)) return this.__hx_dynamics_f[res];
+		if ((isCheck)) return haxe.lang.Runtime.undefined else return null;
+	}
+
+	public function __hx_setField(field:String, value:Dynamic, handleProperties:Bool) {
+		var res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields, this.__hx_length);
+		if ((res >= 0)) return this.__hx_dynamics[res] = value else {
+			var res1 = haxe.lang.FieldLookup.findHash(field, this.__hx_fields_f, this.__hx_length_f);
+			if ((res1 >= 0)) {
+				if ((Std.isOfType(value, Float))) return this.__hx_dynamics_f[res1] = value;
+				haxe.lang.FieldLookup.removeString(this.__hx_fields_f, this.__hx_length_f, res1);
+				haxe.lang.FieldLookup.removeFloat(this.__hx_dynamics_f, this.__hx_length_f, res1);
+				this.__hx_length_f --;
+			};
+		};
+		this.__hx_fields = haxe.lang.FieldLookup.insertString(this.__hx_fields, this.__hx_length, ~ res, field);
+		this.__hx_dynamics = haxe.lang.FieldLookup.insertDynamic(this.__hx_dynamics, this.__hx_length, ~ res, value);
+		this.__hx_length ++;
+		return value;
+	}
+
+	public function __hx_getField_f(field:String, throwErrors:Bool, handleProperties:Bool) {
+		var res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields_f, this.__hx_length_f);
+		if ((res >= 0)) return this.__hx_dynamics_f[res];
+		res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields, this.__hx_length);
+		if ((res >= 0)) return this.__hx_dynamics[res];
+		return 0.0;
+	}
+
+	public function __hx_setField_f(field:String, value:Float, handleProperties:Bool) {
+		var res = haxe.lang.FieldLookup.findHash(field, this.__hx_fields_f, this.__hx_length_f);
+		if ((res >= 0)) return this.__hx_dynamics_f[res] = value else {
+			var res1 = haxe.lang.FieldLookup.findHash(field, this.__hx_fields, this.__hx_length);
+			if ((res1 >= 0)) {
+				haxe.lang.FieldLookup.removeString(this.__hx_fields, this.__hx_length, res1);
+				haxe.lang.FieldLookup.removeDynamic(this.__hx_dynamics, this.__hx_length, res1);
+				this.__hx_length --;
+			};
+		};
+		this.__hx_fields_f = haxe.lang.FieldLookup.insertString(this.__hx_fields_f, this.__hx_length_f, ~ res, field);
+		this.__hx_dynamics_f = haxe.lang.FieldLookup.insertFloat(this.__hx_dynamics_f, this.__hx_length_f, ~ res, value);
+		this.__hx_length_f ++;
+		return value;
+	}
+
+	public function __hx_getFields(baseArr:Array<String>) {
+		{
+			var _g = 0;
+			var _g1 = this.__hx_length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				baseArr.push(this.__hx_fields[i]);
+			};
+		};
+		{
+			var _g2 = 0;
+			var _g3 = this.__hx_length_f;
+			while ((_g2 < _g3)) {
+				var i1 = _g2 ++;
+				baseArr.push(this.__hx_fields_f[i1]);
+			};
+		};
+	}
+
+	@:has_untyped
+	public function __hx_invokeField(field:String, dynargs:java.NativeArray<Dynamic>) {
+		if ((field == "toString")) return this.toString();
+		var fn = this.__hx_getField(field, false, false, false);
+		if ((fn == null)) throw cast haxe.Exception.thrown("Cannot invoke field " + field + ": It does not exist");
+		return fn.__hx_invokeDynamic(dynargs);
+	}
+
+	public function toString() {
+		if ((haxe.lang.DynamicObject.__hx_toString_depth >= 5)) return "...";
+		++ haxe.lang.DynamicObject.__hx_toString_depth;
+		try {
+			var s = this.__hx_toString();
+			-- haxe.lang.DynamicObject.__hx_toString_depth;
+			return s;
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			-- haxe.lang.DynamicObject.__hx_toString_depth;
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+
+	function __hx_toString() {
+		var ts = this.__hx_getField("toString", false, false, false);
+		if ((ts != null)) return ts();
+		var ret = new StringBuf();
+		ret.add("{");
+		var first = true;
+		{
+			var _g = 0;
+			var _g1 = Reflect.fields(this);
+			while ((_g < _g1.length)) {
+				var f = _g1[_g];
+				++ _g;
+				if ((first)) first = false else ret.add(",");
+				ret.add(" ");
+				ret.add(f);
+				ret.add(" : ");
+				ret.add(Reflect.field(this, f));
+			};
+		};
+		if ((! first)) ret.add(" ");
+		ret.add("}");
+		return ret.toString();
+	}
+
+	@:value(0) @:skipReflection
+	static var __hx_toString_depth:Int = 0;
+}

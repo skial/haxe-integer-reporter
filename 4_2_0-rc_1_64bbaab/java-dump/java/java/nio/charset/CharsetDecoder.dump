@@ -1,0 +1,57 @@
+@:realPath("java.nio.charset.CharsetDecoder") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.charset.CharsetDecoder") @:javaCanonical("java.nio.charset", "CharsetDecoder")
+extern class java.nio.charset.CharsetDecoder {
+
+	@:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single):Void;
+
+	function detectedCharset():java.nio.charset.Charset;
+
+	function isCharsetDetected():Bool;
+
+	function isAutoDetecting():Bool;
+
+	@:throws("java.nio.charset.CharacterCodingException")
+	function decode(param1:java.nio.ByteBuffer):java.nio.CharBuffer;
+
+	function decode(param1:java.nio.ByteBuffer, param2:java.nio.CharBuffer, param3:Bool):java.nio.charset.CoderResult;
+
+	@:protected
+	function decodeLoop(param1:java.nio.ByteBuffer, param2:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	@:protected
+	function implReset():Void;
+
+	function reset():java.nio.charset.CharsetDecoder;
+
+	@:protected
+	function implFlush(param1:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	function flush(param1:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	function maxCharsPerByte():Single;
+
+	function averageCharsPerByte():Single;
+
+	@:protected
+	function implOnUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):Void;
+
+	function onUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetDecoder;
+
+	function unmappableCharacterAction():java.nio.charset.CodingErrorAction;
+
+	@:protected
+	function implOnMalformedInput(param1:java.nio.charset.CodingErrorAction):Void;
+
+	function onMalformedInput(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetDecoder;
+
+	function malformedInputAction():java.nio.charset.CodingErrorAction;
+
+	@:protected
+	function implReplaceWith(param1:String):Void;
+
+	function replaceWith(param1:String):java.nio.charset.CharsetDecoder;
+
+	function replacement():String;
+
+	function charset():java.nio.charset.Charset;
+}

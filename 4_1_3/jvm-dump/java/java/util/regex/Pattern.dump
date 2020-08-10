@@ -1,0 +1,63 @@
+@:realPath("java.util.regex.Pattern") @:libType @:javaNative @:native("java.util.regex.Pattern") @:javaCanonical("java.util.regex", "Pattern")
+extern class java.util.regex.Pattern implements java.io.Serializable {
+
+	@:overload
+	function splitAsStream(param1:java.lang.CharSequence):java.util.stream.Stream<java.lang.String>;
+
+	@:overload
+	function asPredicate():java.util.function.Predicate<java.lang.String>;
+
+	@:overload
+	function split(param1:java.lang.CharSequence):java.NativeArray<java.lang.String>;
+
+	@:overload
+	function split(param1:java.lang.CharSequence, param2:Int):java.NativeArray<java.lang.String>;
+
+	@:overload
+	function flags():Int;
+
+	@:overload
+	function matcher(param1:java.lang.CharSequence):java.util.regex.Matcher;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function pattern():java.lang.String;
+
+	@:overload
+	static function quote(param1:java.lang.String):java.lang.String;
+
+	@:overload
+	static function matches(param1:java.lang.String, param2:java.lang.CharSequence):Bool;
+
+	@:overload
+	static function compile(param1:java.lang.String, param2:Int):java.util.regex.Pattern;
+
+	@:overload
+	static function compile(param1:java.lang.String):java.util.regex.Pattern;
+
+	@:realPath("_compile") @:native("compile") @:deprecated("This static field `_compile` is deprecated and will be removed in later versions. Please use `compile` instead") @:overload
+	static function compile(param1:java.lang.String, param2:Int):java.util.regex.Pattern;
+
+	@:native("compile") @:deprecated("This static field `_compile` is deprecated and will be removed in later versions. Please use `compile` instead") @:overload
+	static function compile(param1:java.lang.String):java.util.regex.Pattern;
+
+	static var UNIX_LINES(default,null):Int;
+
+	static var CASE_INSENSITIVE(default,null):Int;
+
+	static var COMMENTS(default,null):Int;
+
+	static var MULTILINE(default,null):Int;
+
+	static var LITERAL(default,null):Int;
+
+	static var DOTALL(default,null):Int;
+
+	static var UNICODE_CASE(default,null):Int;
+
+	static var CANON_EQ(default,null):Int;
+
+	static var UNICODE_CHARACTER_CLASS(default,null):Int;
+}

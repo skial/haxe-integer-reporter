@@ -1,0 +1,12 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.FileSystem {
+
+	public static function exists(path:java.lang.String) {
+		return new java.io.File(path).exists();
+	}
+
+	public static function createDirectory(path:java.lang.String) {
+		var f = new java.io.File(path);
+		if ((! f.isDirectory() && ! f.mkdirs())) throw cast haxe.Exception.thrown("Cannot create dir " + path);
+	}
+}

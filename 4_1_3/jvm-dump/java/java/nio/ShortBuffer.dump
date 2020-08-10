@@ -1,0 +1,81 @@
+@:realPath("java.nio.ShortBuffer") @:used @:abstract @:libType @:javaNative @:native("java.nio.ShortBuffer") @:javaCanonical("java.nio", "ShortBuffer")
+extern class java.nio.ShortBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.ShortBuffer> {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.nio.ShortBuffer):Int;
+
+	@:overload
+	function array():java.NativeArray<java.types.Int16>;
+
+	@:overload
+	function order():java.nio.ByteOrder;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function isDirect():Bool;
+
+	@:overload
+	function compact():java.nio.ShortBuffer;
+
+	@:overload
+	function arrayOffset():Int;
+
+	@:overload
+	function hasArray():Bool;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	@:overload
+	function put(param1:java.types.Int16):java.nio.ShortBuffer;
+
+	@:overload
+	function put(param1:Int, param2:java.types.Int16):java.nio.ShortBuffer;
+
+	@:overload
+	function put(param1:java.nio.ShortBuffer):java.nio.ShortBuffer;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	@:overload
+	function get():java.types.Int16;
+
+	@:overload
+	function get(param1:Int):java.types.Int16;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	@:overload
+	function asReadOnlyBuffer():java.nio.ShortBuffer;
+
+	@:overload
+	function duplicate():java.nio.ShortBuffer;
+
+	@:overload
+	function slice():java.nio.ShortBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	@:overload
+	static function allocate(param1:Int):java.nio.ShortBuffer;
+}

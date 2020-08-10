@@ -1,0 +1,87 @@
+@:keep @:directlyUsed @:used @:keepInit @:coreApi
+class Std {
+
+	@:has_untyped @:access(python.Boot) @:ifFeature("typed_cast")
+	public static function isOfType(v:Dynamic, t:Dynamic) {
+		if ((v == null && t == null)) return false;
+		if ((t == null)) return false;
+		if ((cast python.Syntax.binop(t, "==", cast Dynamic))) return v != null;
+		var isBool = python.internal.UBuiltins.isinstance(v, python.internal.UBuiltins.bool);
+		if ((cast python.Syntax.binop(t, "==", cast Bool) && isBool)) return true;
+		if ((! isBool && ! cast python.Syntax.binop(t, "==", cast Bool) && cast python.Syntax.binop(t, "==", cast Int) && python.internal.UBuiltins.isinstance(v, python.internal.UBuiltins.int))) return true;
+		var vIsFloat = python.internal.UBuiltins.isinstance(v, python.internal.UBuiltins.float);
+		var tmp;
+		var tmp1;
+		if ((! isBool && vIsFloat && cast python.Syntax.binop(t, "==", cast Int))) {
+			var f = cast v;
+			tmp1 = f != Math.POSITIVE_INFINITY && f != Math.NEGATIVE_INFINITY && ! python.lib.Math.isnan(f);
+		} else tmp1 = false;
+		if ((tmp1)) {
+			var tmp1;
+			try {
+				tmp1 = python.internal.UBuiltins.int(cast v);
+			} catch (_g:BaseException) {
+				{
+					null;
+				};
+				tmp1 = null;
+			};
+			tmp = v == cast tmp1;
+		} else tmp = false;
+		if ((tmp && v <= 2147483647 && v >= -2147483648)) return true;
+		if ((! isBool && cast python.Syntax.binop(t, "==", cast Float) && python.internal.UBuiltins.isinstance(v, python.Syntax._tuple([python.internal.UBuiltins.float, python.internal.UBuiltins.int])))) return true;
+		if ((cast python.Syntax.binop(t, "==", cast python.internal.UBuiltins.str))) return python.internal.UBuiltins.isinstance(v, str);
+		var isEnumType = cast python.Syntax.binop(t, "==", cast Enum);
+		if ((isEnumType && python.lib.Inspect.isclass(v) && __define_feature__("python._hx_constructs", python.internal.UBuiltins.hasattr(v, "_hx_constructs")))) return true;
+		if ((isEnumType)) return false;
+		var isClassType = cast python.Syntax.binop(t, "==", cast Class);
+		if ((isClassType && ! python.internal.UBuiltins.isinstance(v, Enum) && python.lib.Inspect.isclass(v) && __define_feature__("python._hx_class_name", python.internal.UBuiltins.hasattr(v, "_hx_class_name")) && ! __define_feature__("python._hx_constructs", python.internal.UBuiltins.hasattr(v, "_hx_constructs")))) return true;
+		if ((isClassType)) return false;
+		var tmp;
+		try {
+			tmp = python.internal.UBuiltins.isinstance(v, t);
+		} catch (_g:BaseException) {
+			{
+				null;
+			};
+			tmp = false;
+		};
+		if ((tmp)) return true;
+		if ((python.lib.Inspect.isclass(t))) {
+			var cls = cast t;
+			var loop = null;
+			loop = function(intf:Class<Dynamic>) {
+				var f = if ((__define_feature__("python._hx_interfaces", python.internal.UBuiltins.hasattr(intf, "_hx_interfaces")))) __define_feature__("python._hx_interfaces", python.Syntax.field(intf, "_hx_interfaces")) else [];
+				if ((f != null)) {
+					{
+						var _g = 0;
+						while ((_g < f.length)) {
+							var i = f[_g];
+							++ _g;
+							if ((i == cls)) return true else {
+								var l = loop(i);
+								if ((l)) return true;
+							};
+						};
+					};
+					return false;
+				} else return false;
+			};
+			var currentClass = python.Syntax.field(v, "__class__");
+			var result = false;
+			while ((currentClass != null)) {
+				if ((loop(currentClass))) {
+					result = true;
+					break;
+				};
+				currentClass = python.Boot.getSuperClass(currentClass);
+			};
+			return result;
+		} else return false;
+	}
+
+	@:access(python.Boot)
+	public static function string(s:Dynamic) {
+		return python.Boot.toString1(s, "");
+	}
+}

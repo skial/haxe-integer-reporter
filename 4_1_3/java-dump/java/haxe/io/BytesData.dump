@@ -1,0 +1,2 @@
+@:nativeGen
+typedef haxe.io.BytesData = java.NativeArray<java.Int8>

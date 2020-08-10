@@ -1,0 +1,1053 @@
+class haxe.io.Path {
+
+	public function new[Function:(path : String) -> Void]
+		[Arg:String] [Local path(112244):String]
+		[Block:Void]
+			[Meta:Void]
+				:ast(switch (path) {
+	case "." | "..":
+		dir = path;
+		file = "";
+		return;	
+})
+				[Switch:Void]
+					[Local path(112244):String:String]
+					[Case:Dynamic]
+						[Const:String] "."
+						[Const:String] ".."
+						[Block:Dynamic]
+							[Block:Dynamic]
+								[Binop:Null<String>]
+									[Field:Null<String>]
+										[Const:haxe.io.Path] this
+										[FInstance:Null<String>]
+											haxe.io.Path
+											dir:Null<String>
+									=
+									[Local path(112244):String:String]
+								[Binop:String]
+									[Field:String]
+										[Const:haxe.io.Path] this
+										[FInstance:String]
+											haxe.io.Path
+											file:String
+									=
+									[Const:String] ""
+								[Return:Dynamic]
+			[Var c1(112245):Int]
+				[Call:Int]
+					[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+						[Local path(112244):String:String]
+						[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+							String
+							lastIndexOf:(str : String, ?startIndex : Null<Int>) -> Int
+					[Const:String] "/"
+					[Const:Null<Int>] null
+			[Var c2(112246):Int]
+				[Call:Int]
+					[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+						[Local path(112244):String:String]
+						[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+							String
+							lastIndexOf:(str : String, ?startIndex : Null<Int>) -> Int
+					[Const:String] "\\"
+					[Const:Null<Int>] null
+			[If:Void]
+				[Binop:Bool]
+					[Local c1(112245):Int:Int]
+					<
+					[Local c2(112246):Int:Int]
+				[Then:Bool] [Block:Bool]
+					[Binop:Null<String>]
+						[Field:Null<String>]
+							[Const:haxe.io.Path] this
+							[FInstance:Null<String>]
+								haxe.io.Path
+								dir:Null<String>
+						=
+						[Call:String]
+							[Field:(pos : Int, ?len : Null<Int>) -> String]
+								[Local path(112244):String:String]
+								[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+									String
+									substr:(pos : Int, ?len : Null<Int>) -> String
+							[Const:Int] 0
+							[Local c2(112246):Int:Int]
+					[Binop:String]
+						[Local path(112244):String:String]
+						=
+						[Call:String]
+							[Field:(pos : Int, ?len : Null<Int>) -> String]
+								[Local path(112244):String:String]
+								[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+									String
+									substr:(pos : Int, ?len : Null<Int>) -> String
+							[Binop:Int]
+								[Local c2(112246):Int:Int]
+								+
+								[Const:Int] 1
+							[Const:Null<Int>] null
+					[Binop:Bool]
+						[Field:Bool]
+							[Const:haxe.io.Path] this
+							[FInstance:Bool]
+								haxe.io.Path
+								backslash:Bool
+						=
+						[Const:Bool] true
+				[Else:Void] [Block:Void]
+					[If:Void]
+						[Binop:Bool]
+							[Local c2(112246):Int:Int]
+							<
+							[Local c1(112245):Int:Int]
+						[Then:String] [Block:String]
+							[Binop:Null<String>]
+								[Field:Null<String>]
+									[Const:haxe.io.Path] this
+									[FInstance:Null<String>]
+										haxe.io.Path
+										dir:Null<String>
+								=
+								[Call:String]
+									[Field:(pos : Int, ?len : Null<Int>) -> String]
+										[Local path(112244):String:String]
+										[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+											String
+											substr:(pos : Int, ?len : Null<Int>) -> String
+									[Const:Int] 0
+									[Local c1(112245):Int:Int]
+							[Binop:String]
+								[Local path(112244):String:String]
+								=
+								[Call:String]
+									[Field:(pos : Int, ?len : Null<Int>) -> String]
+										[Local path(112244):String:String]
+										[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+											String
+											substr:(pos : Int, ?len : Null<Int>) -> String
+									[Binop:Int]
+										[Local c1(112245):Int:Int]
+										+
+										[Const:Int] 1
+									[Const:Null<Int>] null
+						[Else:Null<String>] [Block:Null<String>]
+							[Binop:Null<String>]
+								[Field:Null<String>]
+									[Const:haxe.io.Path] this
+									[FInstance:Null<String>]
+										haxe.io.Path
+										dir:Null<String>
+								=
+								[Const:Null<String>] null
+			[Var cp(112247):Int]
+				[Call:Int]
+					[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+						[Local path(112244):String:String]
+						[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+							String
+							lastIndexOf:(str : String, ?startIndex : Null<Int>) -> Int
+					[Const:String] "."
+					[Const:Null<Int>] null
+			[If:Void]
+				[Binop:Bool]
+					[Local cp(112247):Int:Int]
+					!=
+					[Const:Int] -1
+				[Then:String] [Block:String]
+					[Binop:Null<String>]
+						[Field:Null<String>]
+							[Const:haxe.io.Path] this
+							[FInstance:Null<String>]
+								haxe.io.Path
+								ext:Null<String>
+						=
+						[Call:String]
+							[Field:(pos : Int, ?len : Null<Int>) -> String]
+								[Local path(112244):String:String]
+								[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+									String
+									substr:(pos : Int, ?len : Null<Int>) -> String
+							[Binop:Int]
+								[Local cp(112247):Int:Int]
+								+
+								[Const:Int] 1
+							[Const:Null<Int>] null
+					[Binop:String]
+						[Field:String]
+							[Const:haxe.io.Path] this
+							[FInstance:String]
+								haxe.io.Path
+								file:String
+						=
+						[Call:String]
+							[Field:(pos : Int, ?len : Null<Int>) -> String]
+								[Local path(112244):String:String]
+								[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+									String
+									substr:(pos : Int, ?len : Null<Int>) -> String
+							[Const:Int] 0
+							[Local cp(112247):Int:Int]
+				[Else:String] [Block:String]
+					[Binop:Null<String>]
+						[Field:Null<String>]
+							[Const:haxe.io.Path] this
+							[FInstance:Null<String>]
+								haxe.io.Path
+								ext:Null<String>
+						=
+						[Const:Null<String>] null
+					[Binop:String]
+						[Field:String]
+							[Const:haxe.io.Path] this
+							[FInstance:String]
+								haxe.io.Path
+								file:String
+						=
+						[Local path(112244):String:String]
+
+	public var dir:Null<String>;
+
+	public var file:String;
+
+	public var ext:Null<String>;
+
+	public var backslash:Bool;
+
+	public function toString[Function:Void -> String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:String]
+					[Binop:String]
+						[Parenthesis:String]
+							[If:String]
+								[Binop:Bool]
+									[Field:Null<String>]
+										[Const:haxe.io.Path] this
+										[FInstance:Null<String>]
+											haxe.io.Path
+											dir:Null<String>
+									==
+									[Const:Null<String>] null
+								[Then:String] [Block:String] [Const:String] ""
+								[Else:String] [Block:String]
+									[Binop:String]
+										[Field:Null<String>]
+											[Const:haxe.io.Path] this
+											[FInstance:Null<String>]
+												haxe.io.Path
+												dir:Null<String>
+										+
+										[If:String]
+											[Field:Bool]
+												[Const:haxe.io.Path] this
+												[FInstance:Bool]
+													haxe.io.Path
+													backslash:Bool
+											[Then:String] [Block:String] [Const:String] "\\"
+											[Else:String] [Block:String] [Const:String] "/"
+						+
+						[Field:String]
+							[Const:haxe.io.Path] this
+							[FInstance:String]
+								haxe.io.Path
+								file:String
+					+
+					[Parenthesis:String]
+						[If:String]
+							[Binop:Bool]
+								[Field:Null<String>]
+									[Const:haxe.io.Path] this
+									[FInstance:Null<String>]
+										haxe.io.Path
+										ext:Null<String>
+								==
+								[Const:Null<String>] null
+							[Then:String] [Block:String] [Const:String] ""
+							[Else:String] [Block:String]
+								[Binop:String]
+									[Const:String] "."
+									+
+									[Field:Null<String>]
+										[Const:haxe.io.Path] this
+										[FInstance:Null<String>]
+											haxe.io.Path
+											ext:Null<String>
+
+	public static function withoutExtension[Function:(path : String) -> String]
+		[Arg:String] [Local path(112248):String]
+		[Block:Dynamic]
+			[Var s(112249):haxe.io.Path]
+				[New:haxe.io.Path]
+					haxe.io.Path
+					[Local path(112248):String:String]
+			[Binop:Null<String>]
+				[Field:Null<String>]
+					[Local s(112249):haxe.io.Path:haxe.io.Path]
+					[FInstance:Null<String>]
+						haxe.io.Path
+						ext:Null<String>
+				=
+				[Const:Null<String>] null
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local s(112249):haxe.io.Path:haxe.io.Path]
+						[FInstance:Void -> String]
+							haxe.io.Path
+							toString:Void -> String
+
+	public static function withoutDirectory[Function:(path : String) -> String]
+		[Arg:String] [Local path(112250):String]
+		[Block:Dynamic]
+			[Var s(112251):haxe.io.Path]
+				[New:haxe.io.Path]
+					haxe.io.Path
+					[Local path(112250):String:String]
+			[Binop:Null<String>]
+				[Field:Null<String>]
+					[Local s(112251):haxe.io.Path:haxe.io.Path]
+					[FInstance:Null<String>]
+						haxe.io.Path
+						dir:Null<String>
+				=
+				[Const:Null<String>] null
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local s(112251):haxe.io.Path:haxe.io.Path]
+						[FInstance:Void -> String]
+							haxe.io.Path
+							toString:Void -> String
+
+	public static function directory[Function:(path : String) -> String]
+		[Arg:String] [Local path(112252):String]
+		[Block:Dynamic]
+			[Var s(112253):haxe.io.Path]
+				[New:haxe.io.Path]
+					haxe.io.Path
+					[Local path(112252):String:String]
+			[If:Void]
+				[Binop:Bool]
+					[Field:Null<String>]
+						[Local s(112253):haxe.io.Path:haxe.io.Path]
+						[FInstance:Null<String>]
+							haxe.io.Path
+							dir:Null<String>
+					==
+					[Const:Null<String>] null
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] ""
+			[Return:Dynamic]
+				[Field:Null<String>]
+					[Local s(112253):haxe.io.Path:haxe.io.Path]
+					[FInstance:Null<String>]
+						haxe.io.Path
+						dir:Null<String>
+
+	public static function extension[Function:(path : String) -> String]
+		[Arg:String] [Local path(112254):String]
+		[Block:Dynamic]
+			[Var s(112255):haxe.io.Path]
+				[New:haxe.io.Path]
+					haxe.io.Path
+					[Local path(112254):String:String]
+			[If:Void]
+				[Binop:Bool]
+					[Field:Null<String>]
+						[Local s(112255):haxe.io.Path:haxe.io.Path]
+						[FInstance:Null<String>]
+							haxe.io.Path
+							ext:Null<String>
+					==
+					[Const:Null<String>] null
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] ""
+			[Return:Dynamic]
+				[Field:Null<String>]
+					[Local s(112255):haxe.io.Path:haxe.io.Path]
+					[FInstance:Null<String>]
+						haxe.io.Path
+						ext:Null<String>
+
+	public static function withExtension[Function:(path : String, ext : Null<String>) -> String]
+		[Arg:String] [Local path(112256):String]
+		[Arg:Null<String>] [Local ext(112257):Null<String>]
+		[Block:Dynamic]
+			[Var s(112258):haxe.io.Path]
+				[New:haxe.io.Path]
+					haxe.io.Path
+					[Local path(112256):String:String]
+			[Binop:Null<String>]
+				[Field:Null<String>]
+					[Local s(112258):haxe.io.Path:haxe.io.Path]
+					[FInstance:Null<String>]
+						haxe.io.Path
+						ext:Null<String>
+				=
+				[Local ext(112257):Null<String>:Null<String>]
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local s(112258):haxe.io.Path:haxe.io.Path]
+						[FInstance:Void -> String]
+							haxe.io.Path
+							toString:Void -> String
+
+	public static function join[Function:(paths : Array<String>) -> String]
+		[Arg:Array<String>] [Local paths(110324):Array<String>]
+		[Block:Dynamic]
+			[Var paths(110334):Array<String>]
+				[Block:Array<String>]
+					[Var `(110329):Array<String>] [ArrayDecl:Array<String>]
+					[Block:Void]
+						[Var `1(110330):Int] [Const:Int] 0
+						[Var `2(110331):Array<String>] [Local paths(110324):Array<String>:Array<String>]
+						[While:Void]
+							[Binop:Bool]
+								[Local `1(110330):Int:Int]
+								<
+								[Field:Int]
+									[Local `2(110331):Array<String>:Array<String>]
+									[FInstance:Int]
+										Array<String>
+										length:Int
+							[Block:Void]
+								[Var v(110332):String]
+									[Array:String]
+										[Local `2(110331):Array<String>:Array<String>]
+										[Local `1(110330):Int:Int]
+								[Unop:Int]
+									++
+									Prefix
+									[Local `1(110330):Int:Int]
+								[If:Void]
+									[Call:Bool]
+										[Function:(s : String) -> Bool]
+											[Arg:String] [Local s(110333):String]
+											[Block:Dynamic]
+												[Return:Dynamic]
+													[Binop:Bool]
+														[Binop:Bool]
+															[Local s(110333):String:String]
+															!=
+															[Const:String] null
+														&&
+														[Binop:Bool]
+															[Local s(110333):String:String]
+															!=
+															[Const:String] ""
+										[Local v(110332):String:String]
+									[Then:Int] [Block:Int]
+										[Call:Int]
+											[Field:(x : String) -> Int]
+												[Local `(110329):Array<String>:Array<String>]
+												[FInstance:(x : String) -> Int]
+													Array<String>
+													push:(x : Array.T) -> Int
+											[Local v(110332):String:String]
+					[Local `(110329):Array<String>:Array<String>]
+			[If:Void]
+				[Binop:Bool]
+					[Field:Int]
+						[Local paths(110334):Array<String>:Array<String>]
+						[FInstance:Int]
+							Array<String>
+							length:Int
+					==
+					[Const:Int] 0
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] ""
+			[Var path(110335):String]
+				[Array:String]
+					[Local paths(110334):Array<String>:Array<String>]
+					[Const:Int] 0
+			[Block:Void]
+				[Var `(110341):Int] [Const:Int] 1
+				[Var `1(110342):Int]
+					[Field:Int]
+						[Local paths(110334):Array<String>:Array<String>]
+						[FInstance:Int]
+							Array<String>
+							length:Int
+				[While:Void]
+					[Binop:Bool]
+						[Local `(110341):Int:Int]
+						<
+						[Local `1(110342):Int:Int]
+					[Block:String]
+						[Var i(110336):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local `(110341):Int:Int]
+						[Binop:String]
+							[Local path(110335):String:String]
+							=
+							[Call:String]
+								[Field:(path : String) -> String]
+									[TypeExpr haxe.io.Path:Class<haxe.io.Path>]
+									[FStatic:(path : String) -> String]
+										haxe.io.Path
+										addTrailingSlash:(path : String) -> String
+								[Local path(110335):String:String]
+						[Binop:String]
+							[Local path(110335):String:String]
+							+=
+							[Array:String]
+								[Local paths(110334):Array<String>:Array<String>]
+								[Local i(110336):Int:Int]
+			[Return:Dynamic]
+				[Call:String]
+					[Field:(path : String) -> String]
+						[TypeExpr haxe.io.Path:Class<haxe.io.Path>]
+						[FStatic:(path : String) -> String]
+							haxe.io.Path
+							normalize:(path : String) -> String
+					[Local path(110335):String:String]
+
+	public static function normalize[Function:(path : String) -> String]
+		[Arg:String] [Local path(110343):String]
+		[Block:Dynamic]
+			[Var slash(110344):String] [Const:String] "/"
+			[Binop:String]
+				[Local path(110343):String:String]
+				=
+				[Call:String]
+					[Field:(sep : String) -> String]
+						[Call:Array<String>]
+							[Field:(delimiter : String) -> Array<String>]
+								[Local path(110343):String:String]
+								[FInstance:(delimiter : String) -> Array<String>]
+									String
+									split:(delimiter : String) -> Array<String>
+							[Const:String] "\\"
+						[FInstance:(sep : String) -> String]
+							Array<String>
+							join:(sep : String) -> String
+					[Local slash(110344):String:String]
+			[If:Void]
+				[Binop:Bool]
+					[Local path(110343):String:String]
+					==
+					[Local slash(110344):String:String]
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local slash(110344):String:String]
+			[Var target(110345):Array<String>] [ArrayDecl:Array<String>]
+			[Block:Void]
+				[Var `(110347):Int] [Const:Int] 0
+				[Var `1(110348):Array<String>]
+					[Call:Array<String>]
+						[Field:(delimiter : String) -> Array<String>]
+							[Local path(110343):String:String]
+							[FInstance:(delimiter : String) -> Array<String>]
+								String
+								split:(delimiter : String) -> Array<String>
+						[Local slash(110344):String:String]
+				[While:Void]
+					[Binop:Bool]
+						[Local `(110347):Int:Int]
+						<
+						[Field:Int]
+							[Local `1(110348):Array<String>:Array<String>]
+							[FInstance:Int]
+								Array<String>
+								length:Int
+					[Block:Void]
+						[Var token(110346):String]
+							[Array:String]
+								[Local `1(110348):Array<String>:Array<String>]
+								[Local `(110347):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local `(110347):Int:Int]
+						[If:Void]
+							[Binop:Bool]
+								[Binop:Bool]
+									[Binop:Bool]
+										[Local token(110346):String:String]
+										==
+										[Const:String] ".."
+									&&
+									[Binop:Bool]
+										[Field:Int]
+											[Local target(110345):Array<String>:Array<String>]
+											[FInstance:Int]
+												Array<String>
+												length:Int
+										>
+										[Const:Int] 0
+								&&
+								[Binop:Bool]
+									[Array:String]
+										[Local target(110345):Array<String>:Array<String>]
+										[Binop:Int]
+											[Field:Int]
+												[Local target(110345):Array<String>:Array<String>]
+												[FInstance:Int]
+													Array<String>
+													length:Int
+											-
+											[Const:Int] 1
+									!=
+									[Const:String] ".."
+							[Then:Null<String>] [Block:Null<String>]
+								[Call:Null<String>]
+									[Field:Void -> Null<String>]
+										[Local target(110345):Array<String>:Array<String>]
+										[FInstance:Void -> Null<String>]
+											Array<String>
+											pop:Void -> Null<Array.T>
+							[Else:Void] [Block:Void]
+								[If:Void]
+									[Binop:Bool]
+										[Local token(110346):String:String]
+										==
+										[Const:String] ""
+									[Then:Void] [Block:Void]
+										[If:Void]
+											[Binop:Bool]
+												[Binop:Bool]
+													[Field:Int]
+														[Local target(110345):Array<String>:Array<String>]
+														[FInstance:Int]
+															Array<String>
+															length:Int
+													>
+													[Const:Int] 0
+												||
+												[Binop:Bool]
+													[Call:Null<Int>]
+														[Field:(index : Int) -> Null<Int>]
+															[Local path(110343):String:String]
+															[FInstance:(index : Int) -> Null<Int>]
+																String
+																charCodeAt:(index : Int) -> Null<Int>
+														[Const:Int] 0
+													==
+													[Const:Int] 47
+											[Then:Int] [Block:Int]
+												[Call:Int]
+													[Field:(x : String) -> Int]
+														[Local target(110345):Array<String>:Array<String>]
+														[FInstance:(x : String) -> Int]
+															Array<String>
+															push:(x : Array.T) -> Int
+													[Local token(110346):String:String]
+									[Else:Void] [Block:Void]
+										[If:Void]
+											[Binop:Bool]
+												[Local token(110346):String:String]
+												!=
+												[Const:String] "."
+											[Then:Int] [Block:Int]
+												[Call:Int]
+													[Field:(x : String) -> Int]
+														[Local target(110345):Array<String>:Array<String>]
+														[FInstance:(x : String) -> Int]
+															Array<String>
+															push:(x : Array.T) -> Int
+													[Local token(110346):String:String]
+			[Var tmp(110349):String]
+				[Call:String]
+					[Field:(sep : String) -> String]
+						[Local target(110345):Array<String>:Array<String>]
+						[FInstance:(sep : String) -> String]
+							Array<String>
+							join:(sep : String) -> String
+					[Local slash(110344):String:String]
+			[Var acc(110350):StringBuf] [New:StringBuf] StringBuf
+			[Var colon(110351):Bool] [Const:Bool] false
+			[Var slashes(110352):Bool] [Const:Bool] false
+			[Block:Void]
+				[Var `2(110359):Int] [Const:Int] 0
+				[Var `3(110360):Int]
+					[Field:Int]
+						[Local tmp(110349):String:String]
+						[FInstance:Int]
+							String
+							length:Int
+				[While:Void]
+					[Binop:Bool]
+						[Local `2(110359):Int:Int]
+						<
+						[Local `3(110360):Int:Int]
+					[Block:Void]
+						[Var i(110353):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local `2(110359):Int:Int]
+						[Meta:Void]
+							:ast(switch (StringTools.fastCodeAt(tmp, i)) {
+	case ":".code:
+		acc.add(":");
+		colon = true;	
+	case "/".code if (!colon):
+		slashes = true;	
+	case var i:
+		colon = false;
+		if (slashes) {
+			acc.add("/");
+			slashes = false;
+		};
+		acc.addChar(i);	
+})
+							[Block:Void]
+								[Var `2(110356):Int]
+									[Call:Int]
+										[Field:(s : String, index : Int) -> Int]
+											[TypeExpr StringTools:Class<StringTools>]
+											[FStatic:(s : String, index : Int) -> Int]
+												StringTools
+												fastCodeAt:(s : String, index : Int) -> Int
+										[Local tmp(110349):String:String]
+										[Local i(110353):Int:Int]
+								[Switch:Void]
+									[Local `2(110356):Int:Int]
+									[Case:Void]
+										[Const:Int] 47
+										[Block:Void]
+											[If:Void]
+												[Unop:Bool]
+													!
+													Prefix
+													[Local colon(110351):Bool:Bool]
+												[Then:Bool] [Block:Bool]
+													[Binop:Bool]
+														[Local slashes(110352):Bool:Bool]
+														=
+														[Const:Bool] true
+												[Else:Void] [Block:Void]
+													[Var i(110357):Int] [Local `2(110356):Int:Int]
+													[Block:Void]
+														[Binop:Bool]
+															[Local colon(110351):Bool:Bool]
+															=
+															[Const:Bool] false
+														[If:Void]
+															[Local slashes(110352):Bool:Bool]
+															[Then:Bool] [Block:Bool]
+																[Call:Void]
+																	[Field:(x : String) -> Void]
+																		[Local acc(110350):StringBuf:StringBuf]
+																		[FInstance:(x : String) -> Void]
+																			StringBuf
+																			add:(x : add.T) -> Void
+																	[Const:String] "/"
+																[Binop:Bool]
+																	[Local slashes(110352):Bool:Bool]
+																	=
+																	[Const:Bool] false
+														[Call:Void]
+															[Field:(c : Int) -> Void]
+																[Local acc(110350):StringBuf:StringBuf]
+																[FInstance:(c : Int) -> Void]
+																	StringBuf
+																	addChar:(c : Int) -> Void
+															[Local i(110357):Int:Int]
+									[Case:Bool]
+										[Const:Int] 58
+										[Block:Bool]
+											[Block:Bool]
+												[Call:Void]
+													[Field:(x : String) -> Void]
+														[Local acc(110350):StringBuf:StringBuf]
+														[FInstance:(x : String) -> Void]
+															StringBuf
+															add:(x : add.T) -> Void
+													[Const:String] ":"
+												[Binop:Bool]
+													[Local colon(110351):Bool:Bool]
+													=
+													[Const:Bool] true
+									[Default:Void]
+										[Block:Void]
+											[Var i(110358):Int] [Local `2(110356):Int:Int]
+											[Block:Void]
+												[Binop:Bool]
+													[Local colon(110351):Bool:Bool]
+													=
+													[Const:Bool] false
+												[If:Void]
+													[Local slashes(110352):Bool:Bool]
+													[Then:Bool] [Block:Bool]
+														[Call:Void]
+															[Field:(x : String) -> Void]
+																[Local acc(110350):StringBuf:StringBuf]
+																[FInstance:(x : String) -> Void]
+																	StringBuf
+																	add:(x : add.T) -> Void
+															[Const:String] "/"
+														[Binop:Bool]
+															[Local slashes(110352):Bool:Bool]
+															=
+															[Const:Bool] false
+												[Call:Void]
+													[Field:(c : Int) -> Void]
+														[Local acc(110350):StringBuf:StringBuf]
+														[FInstance:(c : Int) -> Void]
+															StringBuf
+															addChar:(c : Int) -> Void
+													[Local i(110358):Int:Int]
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local acc(110350):StringBuf:StringBuf]
+						[FInstance:Void -> String]
+							StringBuf
+							toString:Void -> String
+
+	public static function addTrailingSlash[Function:(path : String) -> String]
+		[Arg:String] [Local path(110337):String]
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Field:Int]
+						[Local path(110337):String:String]
+						[FInstance:Int]
+							String
+							length:Int
+					==
+					[Const:Int] 0
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "/"
+			[Var c1(110338):Int]
+				[Call:Int]
+					[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+						[Local path(110337):String:String]
+						[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+							String
+							lastIndexOf:(str : String, ?startIndex : Null<Int>) -> Int
+					[Const:String] "/"
+					[Const:Null<Int>] null
+			[Var c2(110339):Int]
+				[Call:Int]
+					[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+						[Local path(110337):String:String]
+						[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+							String
+							lastIndexOf:(str : String, ?startIndex : Null<Int>) -> Int
+					[Const:String] "\\"
+					[Const:Null<Int>] null
+			[Return:Dynamic]
+				[If:String]
+					[Binop:Bool]
+						[Local c1(110338):Int:Int]
+						<
+						[Local c2(110339):Int:Int]
+					[Then:String] [Block:String]
+						[If:String]
+							[Binop:Bool]
+								[Local c2(110339):Int:Int]
+								!=
+								[Binop:Int]
+									[Field:Int]
+										[Local path(110337):String:String]
+										[FInstance:Int]
+											String
+											length:Int
+									-
+									[Const:Int] 1
+							[Then:String] [Block:String]
+								[Binop:String]
+									[Local path(110337):String:String]
+									+
+									[Const:String] "\\"
+							[Else:String] [Block:String] [Local path(110337):String:String]
+					[Else:String] [Block:String]
+						[If:String]
+							[Binop:Bool]
+								[Local c1(110338):Int:Int]
+								!=
+								[Binop:Int]
+									[Field:Int]
+										[Local path(110337):String:String]
+										[FInstance:Int]
+											String
+											length:Int
+									-
+									[Const:Int] 1
+							[Then:String] [Block:String]
+								[Binop:String]
+									[Local path(110337):String:String]
+									+
+									[Const:String] "/"
+							[Else:String] [Block:String] [Local path(110337):String:String]
+
+	public static function removeTrailingSlashes[Function:(path : String) -> String]
+		[Arg:String] [Local path(112259):String]
+		[Block:Dynamic]
+			[While:Void]
+				[Const:Bool] true
+				[Block:Void]
+					[Meta:Void]
+						:ast(switch (path.charCodeAt(path.length - 1)) {
+	case "/".code | "\\".code:
+		path = path.substr(0, -1);	
+	case _:
+		break;	
+})
+						[Block:Void]
+							[Var `(112261):Null<Int>]
+								[Call:Null<Int>]
+									[Field:(index : Int) -> Null<Int>]
+										[Local path(112259):String:String]
+										[FInstance:(index : Int) -> Null<Int>]
+											String
+											charCodeAt:(index : Int) -> Null<Int>
+									[Binop:Int]
+										[Field:Int]
+											[Local path(112259):String:String]
+											[FInstance:Int]
+												String
+												length:Int
+										-
+										[Const:Int] 1
+							[If:Void]
+								[Binop:Bool]
+									[Local `(112261):Null<Int>:Null<Int>]
+									==
+									[Const:Null<Int>] null
+								[Then:Dynamic] [Block:Dynamic] [Break:Dynamic]
+								[Else:Void] [Switch:Void]
+									[Local `(112261):Null<Int>:Null<Int>]
+									[Case:String]
+										[Const:Int] 47
+										[Const:Int] 92
+										[Block:String]
+											[Block:String]
+												[Binop:String]
+													[Local path(112259):String:String]
+													=
+													[Call:String]
+														[Field:(pos : Int, ?len : Null<Int>) -> String]
+															[Local path(112259):String:String]
+															[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+																String
+																substr:(pos : Int, ?len : Null<Int>) -> String
+														[Const:Int] 0
+														[Const:Int] -1
+									[Default:Dynamic] [Block:Dynamic] [Break:Dynamic]
+			[Return:Dynamic] [Local path(112259):String:String]
+
+	public static function isAbsolute[Function:(path : String) -> Bool]
+		[Arg:String] [Local path(110321):String]
+		[Block:Dynamic]
+			[If:Void]
+				[Call:Bool]
+					[Field:(s : String, start : String) -> Bool]
+						[TypeExpr StringTools:Class<StringTools>]
+						[FStatic:(s : String, start : String) -> Bool]
+							StringTools
+							startsWith:(s : String, start : String) -> Bool
+					[Local path(110321):String:String]
+					[Const:String] "/"
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[If:Void]
+				[Binop:Bool]
+					[Call:String]
+						[Field:(index : Int) -> String]
+							[Local path(110321):String:String]
+							[FInstance:(index : Int) -> String]
+								String
+								charAt:(index : Int) -> String
+						[Const:Int] 1
+					==
+					[Const:String] ":"
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[If:Void]
+				[Call:Bool]
+					[Field:(s : String, start : String) -> Bool]
+						[TypeExpr StringTools:Class<StringTools>]
+						[FStatic:(s : String, start : String) -> Bool]
+							StringTools
+							startsWith:(s : String, start : String) -> Bool
+					[Local path(110321):String:String]
+					[Const:String] "\\\\"
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[Return:Dynamic] [Const:Bool] false
+
+	static function unescape[Function:(path : String) -> String]
+		[Arg:String] [Local path(112262):String]
+		[Block:Dynamic]
+			[Var regex(112263):EReg]
+				[New:EReg]
+					EReg
+					[Const:String] "-x([0-9][0-9])"
+					[Const:String] "g"
+			[Return:Dynamic]
+				[Call:String]
+					[Field:(s : String, f : (EReg -> String)) -> String]
+						[Local regex(112263):EReg:EReg]
+						[FInstance:(s : String, f : (EReg -> String)) -> String]
+							EReg
+							map:(s : String, f : (EReg -> String)) -> String
+					[Local path(112262):String:String]
+					[Function:(regex : EReg) -> String]
+						[Arg:EReg] [Local regex(112264):EReg]
+						[Return:Dynamic]
+							[Call:String]
+								[Field:(code : Int) -> String]
+									[TypeExpr String:Class<String>]
+									[FStatic:(code : Int) -> String]
+										String
+										fromCharCode:(code : Int) -> String
+								[Call:Null<Int>]
+									[Field:(x : String) -> Null<Int>]
+										[TypeExpr Std:Class<Std>]
+										[FStatic:(x : String) -> Null<Int>]
+											Std
+											parseInt:(x : String) -> Null<Int>
+									[Call:String]
+										[Field:(n : Int) -> String]
+											[Local regex(112264):EReg:EReg]
+											[FInstance:(n : Int) -> String]
+												EReg
+												matched:(n : Int) -> String
+										[Const:Int] 1
+
+	@:value({ allowSlashes : false })
+	static function escape[Function:(path : String, ?allowSlashes : Bool) -> String]
+		[Arg:String] [Local path(112265):String]
+		[Arg:Bool]
+			[Local allowSlashes(112266):Bool]
+			[Const:Bool] false
+		[Block:Dynamic]
+			[Var regex(112267):EReg]
+				[If:EReg]
+					[Local allowSlashes(112266):Bool:Bool]
+					[Then:EReg] [Block:EReg]
+						[New:EReg]
+							EReg
+							[Const:String] "[^A-Za-z0-9_/\\\\\\.]"
+							[Const:String] "g"
+					[Else:EReg] [Block:EReg]
+						[New:EReg]
+							EReg
+							[Const:String] "[^A-Za-z0-9_\\.]"
+							[Const:String] "g"
+			[Return:Dynamic]
+				[Call:String]
+					[Field:(s : String, f : (EReg -> String)) -> String]
+						[Local regex(112267):EReg:EReg]
+						[FInstance:(s : String, f : (EReg -> String)) -> String]
+							EReg
+							map:(s : String, f : (EReg -> String)) -> String
+					[Local path(112265):String:String]
+					[Function:(v : EReg) -> String]
+						[Arg:EReg] [Local v(112268):EReg]
+						[Return:Dynamic]
+							[Binop:String]
+								[Const:String] "-x"
+								+
+								[Call:Null<Int>]
+									[Field:(index : Int) -> Null<Int>]
+										[Call:String]
+											[Field:(n : Int) -> String]
+												[Local v(112268):EReg:EReg]
+												[FInstance:(n : Int) -> String]
+													EReg
+													matched:(n : Int) -> String
+											[Const:Int] 0
+										[FInstance:(index : Int) -> Null<Int>]
+											String
+											charCodeAt:(index : Int) -> Null<Int>
+									[Const:Int] 0
+}

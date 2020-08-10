@@ -1,0 +1,87 @@
+@:realPath("java.lang.reflect.Modifier") @:directlyUsed @:used @:libType @:javaNative @:native("java.lang.reflect.Modifier") @:javaCanonical("java.lang.reflect", "Modifier")
+extern class java.lang.reflect.Modifier {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	static function parameterModifiers():Int;
+
+	@:overload
+	static function fieldModifiers():Int;
+
+	@:overload
+	static function methodModifiers():Int;
+
+	@:overload
+	static function constructorModifiers():Int;
+
+	@:overload
+	static function interfaceModifiers():Int;
+
+	@:overload
+	static function classModifiers():Int;
+
+	@:overload
+	static function toString(param1:Int):java.lang.String;
+
+	@:overload
+	static function isStrict(param1:Int):Bool;
+
+	@:overload
+	static function isAbstract(param1:Int):Bool;
+
+	@:overload
+	static function isInterface(param1:Int):Bool;
+
+	@:overload
+	static function isNative(param1:Int):Bool;
+
+	@:overload
+	static function isTransient(param1:Int):Bool;
+
+	@:overload
+	static function isVolatile(param1:Int):Bool;
+
+	@:overload
+	static function isSynchronized(param1:Int):Bool;
+
+	@:overload
+	static function isFinal(param1:Int):Bool;
+
+	@:overload
+	static function isStatic(param1:Int):Bool;
+
+	@:overload
+	static function isProtected(param1:Int):Bool;
+
+	@:overload
+	static function isPrivate(param1:Int):Bool;
+
+	@:overload
+	static function isPublic(param1:Int):Bool;
+
+	static var PUBLIC(default,null):Int;
+
+	static var PRIVATE(default,null):Int;
+
+	static var PROTECTED(default,null):Int;
+
+	static var STATIC(default,null):Int;
+
+	static var FINAL(default,null):Int;
+
+	static var SYNCHRONIZED(default,null):Int;
+
+	static var VOLATILE(default,null):Int;
+
+	static var TRANSIENT(default,null):Int;
+
+	static var NATIVE(default,null):Int;
+
+	static var INTERFACE(default,null):Int;
+
+	static var ABSTRACT(default,null):Int;
+
+	static var STRICT(default,null):Int;
+}

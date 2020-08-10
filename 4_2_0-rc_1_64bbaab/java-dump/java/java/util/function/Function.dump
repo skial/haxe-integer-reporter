@@ -1,0 +1,5 @@
+@:realPath("java.util.function.Function_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.function.Function") @:javaCanonical("java.util.function", "Function")
+extern class java.util.function.Function {
+
+	static function identity<T:Dynamic>():java.util.function.Function<identity.T, identity.T>;
+}

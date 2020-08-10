@@ -1,0 +1,90 @@
+@:realPath("java.nio.file.Path") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.Path") @:javaCanonical("java.nio.file", "Path")
+extern interface java.nio.file.Path implements java.nio.file.Watchable implements java.lang.Iterable<java.nio.file.Path> implements java.lang.Comparable<java.nio.file.Path> {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.nio.file.Path):Int;
+
+	@:overload
+	function iterator():java.util.Iterator<java.nio.file.Path>;
+
+	@:overload @:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>):java.nio.file.WatchKey;
+
+	@:overload @:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>, param3:java.NativeArray<java.nio.file.WatchEvent$Modifier>):java.nio.file.WatchKey;
+
+	@:overload
+	function toFile():java.io.File;
+
+	@:overload @:throws("java.io.IOException")
+	function toRealPath(param1:java.NativeArray<java.nio.file.LinkOption>):java.nio.file.Path;
+
+	@:overload
+	function toAbsolutePath():java.nio.file.Path;
+
+	@:overload
+	function toUri():java.net.URI;
+
+	@:overload
+	function relativize(param1:java.nio.file.Path):java.nio.file.Path;
+
+	@:overload
+	function resolveSibling(param1:java.lang.String):java.nio.file.Path;
+
+	@:overload
+	function resolveSibling(param1:java.nio.file.Path):java.nio.file.Path;
+
+	@:overload
+	function resolve(param1:java.lang.String):java.nio.file.Path;
+
+	@:overload
+	function resolve(param1:java.nio.file.Path):java.nio.file.Path;
+
+	@:overload
+	function normalize():java.nio.file.Path;
+
+	@:overload
+	function endsWith(param1:java.lang.String):Bool;
+
+	@:overload
+	function endsWith(param1:java.nio.file.Path):Bool;
+
+	@:overload
+	function startsWith(param1:java.lang.String):Bool;
+
+	@:overload
+	function startsWith(param1:java.nio.file.Path):Bool;
+
+	@:overload
+	function subpath(param1:Int, param2:Int):java.nio.file.Path;
+
+	@:overload
+	function getName(param1:Int):java.nio.file.Path;
+
+	@:overload
+	function getNameCount():Int;
+
+	@:overload
+	function getParent():java.nio.file.Path;
+
+	@:overload
+	function getFileName():java.nio.file.Path;
+
+	@:overload
+	function getRoot():java.nio.file.Path;
+
+	@:overload
+	function isAbsolute():Bool;
+
+	@:overload
+	function getFileSystem():java.nio.file.FileSystem;
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.nio.file.Path>;
+}

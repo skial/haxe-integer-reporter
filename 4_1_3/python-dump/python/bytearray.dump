@@ -1,0 +1,30 @@
+@:realPath("python.Bytearray") @:used @:native("bytearray")
+extern class bytearray implements ArrayAccess<Int> {
+
+	function new(source:str, encoding:str, errors:Null<Dynamic>):Void;
+
+	function new():Void;
+
+	function new(it:list<Int>):Void;
+
+	function new(it:python.NativeIterable<Int>):Void;
+
+	function new(size:Int):Void;
+
+	var length(get,never):Int;
+
+	inline function get_length():Int;
+
+	function append(x:Int):Void;
+
+	function extend(t:bytearray):Void;
+
+	inline function get(i:Int):Int;
+
+	inline function set(i:Int, v:Int):Void;
+
+	function __setitem__(i:Int, v:Int):Void;
+
+	@:value({ errors : "strict", encoding : "utf-8" })
+	function decode(encoding:str, errors:str):str;
+}

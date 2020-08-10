@@ -1,0 +1,33 @@
+@:realPath("java.util.DoubleSummaryStatistics") @:used @:nativeGen @:libType @:javaNative @:native("java.util.DoubleSummaryStatistics") @:javaCanonical("java.util", "DoubleSummaryStatistics")
+extern class java.util.DoubleSummaryStatistics implements java.util.function.DoubleConsumer {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function getAverage():Float;
+
+	@:overload
+	function getMax():Float;
+
+	@:overload
+	function getMin():Float;
+
+	@:overload
+	function getSum():Float;
+
+	@:overload
+	function getCount():haxe.Int64;
+
+	@:overload
+	function combine(param1:java.util.DoubleSummaryStatistics):Void;
+
+	@:overload
+	function accept(param1:Float):Void;
+
+	@:overload
+	function andThen(param1:java.util.function.DoubleConsumer):java.util.function.DoubleConsumer;
+}

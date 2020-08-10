@@ -1,0 +1,22 @@
+@:realPath("java.util.jar.JarVerifier_VerifierCodeSource") @:used @:native("java.util.jar.JarVerifier$VerifierCodeSource") @:libType
+extern class java.util.jar.JarVerifier$VerifierCodeSource extends java.security.CodeSource {
+
+	function new(param1:Dynamic, param2:java.net.URL, param3:java.NativeArray<java.security.CodeSigner>):Void;
+
+	function new(param1:Dynamic, param2:java.net.URL, param3:java.NativeArray<java.security.cert.Certificate>):Void;
+
+	function equals(param1:Dynamic):Bool;
+
+	function isSameDomain(param1:Dynamic):Bool;
+
+	var vlocation:java.net.URL;
+
+	var vsigners:java.NativeArray<java.security.CodeSigner>;
+
+	var vcerts:java.NativeArray<java.security.cert.Certificate>;
+
+	var csdomain:Dynamic;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.util.jar.JarVerifier$VerifierCodeSource):java.NativeArray<java.security.CodeSigner>;
+}

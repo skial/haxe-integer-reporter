@@ -1,0 +1,8 @@
+@:keep @:used @:access(python.Boot) @:coreApi
+class Reflect {
+
+	@:ifFeature("dynamic_read", "anon_optional_read")
+	public static function field(o:Dynamic, field:str) {
+		return python.Boot.field(o, field);
+	}
+}

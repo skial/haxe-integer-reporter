@@ -1,0 +1,3 @@
+@:realPath("python.StopIteration") @:directlyUsed @:used @:native("StopIteration")
+extern class StopIteration extends Exception {
+}

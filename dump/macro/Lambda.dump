@@ -1,0 +1,483 @@
+class Lambda {
+
+	public static function array<A : array.A>[Function:(it : Iterable<array.A>) -> Array<array.A>]
+		[Arg:Iterable<array.A>] [Local it(112308):Iterable<array.A>]
+		[Block:Dynamic]
+			[Var a(112309):Array<array.A>] [New:Array<array.A>] Array<array.A>
+			[For:Void]
+				[Local i(112310):array.A]
+				[Call:Iterator<array.A>]
+					[Field:Void -> Iterator<array.A>]
+						[Local it(112308):Iterable<array.A>:Iterable<array.A>]
+						[FAnon:Void -> Iterator<array.A>] iterator:Void -> Iterator<array.A>
+				[Block:Int]
+					[Call:Int]
+						[Field:(x : array.A) -> Int]
+							[Local a(112309):Array<array.A>:Array<array.A>]
+							[FInstance:(x : array.A) -> Int]
+								Array<array.A>
+								push:(x : Array.T) -> Int
+						[Local i(112310):array.A:array.A]
+			[Return:Dynamic] [Local a(112309):Array<array.A>:Array<array.A>]
+
+	public static function list<A : list.A>[Function:(it : Iterable<list.A>) -> haxe.ds.List<list.A>]
+		[Arg:Iterable<list.A>] [Local it(112311):Iterable<list.A>]
+		[Block:Dynamic]
+			[Var l(112312):haxe.ds.List<list.A>] [New:haxe.ds.List<list.A>] haxe.ds.List<list.A>
+			[For:Void]
+				[Local i(112313):list.A]
+				[Call:Iterator<list.A>]
+					[Field:Void -> Iterator<list.A>]
+						[Local it(112311):Iterable<list.A>:Iterable<list.A>]
+						[FAnon:Void -> Iterator<list.A>] iterator:Void -> Iterator<list.A>
+				[Block:Void]
+					[Call:Void]
+						[Field:(item : list.A) -> Void]
+							[Local l(112312):haxe.ds.List<list.A>:haxe.ds.List<list.A>]
+							[FInstance:(item : list.A) -> Void]
+								haxe.ds.List<list.A>
+								add:(item : haxe.ds.List.T) -> Void
+						[Local i(112313):list.A:list.A]
+			[Return:Dynamic] [Local l(112312):haxe.ds.List<list.A>:haxe.ds.List<list.A>]
+
+	public static inline function map<A : map.A,B : map.B>[Function:(it : Iterable<map.A>, f : ((item : map.A) -> map.B)) -> Array<map.B>]
+		[Arg:Iterable<map.A>] [Local it(112314):Iterable<map.A>]
+		[Arg:(item : map.A) -> map.B] [Local f(112315):(item : map.A) -> map.B]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Block:Array<map.B>]
+					[Var `(112316):Array<map.B>] [ArrayDecl:Array<map.B>]
+					[For:Void]
+						[Local x(112317):map.A]
+						[Call:Iterator<map.A>]
+							[Field:Void -> Iterator<map.A>]
+								[Local it(112314):Iterable<map.A>:Iterable<map.A>]
+								[FAnon:Void -> Iterator<map.A>] iterator:Void -> Iterator<map.A>
+						[Block:Int]
+							[Call:Int]
+								[Field:(x : map.B) -> Int]
+									[Local `(112316):Array<map.B>:Array<map.B>]
+									[FInstance:(x : map.B) -> Int]
+										Array<map.B>
+										push:(x : Array.T) -> Int
+								[Call:map.B]
+									[Local f(112315):(item : map.A) -> map.B:(item : map.A) -> map.B]
+									[Local x(112317):map.A:map.A]
+					[Local `(112316):Array<map.B>:Array<map.B>]
+
+	public static inline function mapi<A : mapi.A,B : mapi.B>[Function:(it : Iterable<mapi.A>, f : ((index : Int, item : mapi.A) -> mapi.B)) -> Array<mapi.B>]
+		[Arg:Iterable<mapi.A>] [Local it(112318):Iterable<mapi.A>]
+		[Arg:(index : Int, item : mapi.A) -> mapi.B] [Local f(112319):(index : Int, item : mapi.A) -> mapi.B]
+		[Block:Dynamic]
+			[Var i(112320):Int] [Const:Int] 0
+			[Return:Dynamic]
+				[Block:Array<mapi.B>]
+					[Var `(112321):Array<mapi.B>] [ArrayDecl:Array<mapi.B>]
+					[For:Void]
+						[Local x(112322):mapi.A]
+						[Call:Iterator<mapi.A>]
+							[Field:Void -> Iterator<mapi.A>]
+								[Local it(112318):Iterable<mapi.A>:Iterable<mapi.A>]
+								[FAnon:Void -> Iterator<mapi.A>] iterator:Void -> Iterator<mapi.A>
+						[Block:Int]
+							[Call:Int]
+								[Field:(x : mapi.B) -> Int]
+									[Local `(112321):Array<mapi.B>:Array<mapi.B>]
+									[FInstance:(x : mapi.B) -> Int]
+										Array<mapi.B>
+										push:(x : Array.T) -> Int
+								[Call:mapi.B]
+									[Local f(112319):(index : Int, item : mapi.A) -> mapi.B:(index : Int, item : mapi.A) -> mapi.B]
+									[Unop:Int]
+										++
+										Postfix
+										[Local i(112320):Int:Int]
+									[Local x(112322):mapi.A:mapi.A]
+					[Local `(112321):Array<mapi.B>:Array<mapi.B>]
+
+	public static inline function flatten<A : flatten.A>[Function:(it : Iterable<Iterable<flatten.A>>) -> Array<flatten.A>]
+		[Arg:Iterable<Iterable<flatten.A>>] [Local it(112323):Iterable<Iterable<flatten.A>>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Block:Array<flatten.A>]
+					[Var `(112324):Array<flatten.A>] [ArrayDecl:Array<flatten.A>]
+					[For:Void]
+						[Local e(112325):Iterable<flatten.A>]
+						[Call:Iterator<Iterable<flatten.A>>]
+							[Field:Void -> Iterator<Iterable<flatten.A>>]
+								[Local it(112323):Iterable<Iterable<flatten.A>>:Iterable<Iterable<flatten.A>>]
+								[FAnon:Void -> Iterator<Iterable<flatten.A>>] iterator:Void -> Iterator<Iterable<flatten.A>>
+						[Block:Void]
+							[For:Void]
+								[Local x(112326):flatten.A]
+								[Call:Iterator<flatten.A>]
+									[Field:Void -> Iterator<flatten.A>]
+										[Local e(112325):Iterable<flatten.A>:Iterable<flatten.A>]
+										[FAnon:Void -> Iterator<flatten.A>] iterator:Void -> Iterator<flatten.A>
+								[Block:Int]
+									[Call:Int]
+										[Field:(x : flatten.A) -> Int]
+											[Local `(112324):Array<flatten.A>:Array<flatten.A>]
+											[FInstance:(x : flatten.A) -> Int]
+												Array<flatten.A>
+												push:(x : Array.T) -> Int
+										[Local x(112326):flatten.A:flatten.A]
+					[Local `(112324):Array<flatten.A>:Array<flatten.A>]
+
+	public static inline function flatMap<A : flatMap.A,B : flatMap.B>[Function:(it : Iterable<flatMap.A>, f : ((item : flatMap.A) -> Iterable<flatMap.B>)) -> Array<flatMap.B>]
+		[Arg:Iterable<flatMap.A>] [Local it(112327):Iterable<flatMap.A>]
+		[Arg:(item : flatMap.A) -> Iterable<flatMap.B>] [Local f(112328):(item : flatMap.A) -> Iterable<flatMap.B>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Block:Array<flatMap.B>]
+					[Var it(112337):Iterable<Iterable<flatMap.B>>]
+						[Block:Array<Iterable<flatMap.B>>]
+							[Var `(112333):Array<Iterable<flatMap.B>>] [ArrayDecl:Array<Iterable<flatMap.B>>]
+							[For:Void]
+								[Local x(112334):flatMap.A]
+								[Call:Iterator<flatMap.A>]
+									[Field:Void -> Iterator<flatMap.A>]
+										[Local it(112327):Iterable<flatMap.A>:Iterable<flatMap.A>]
+										[FAnon:Void -> Iterator<flatMap.A>] iterator:Void -> Iterator<flatMap.A>
+								[Call:Int]
+									[Field:(x : Iterable<flatMap.B>) -> Int]
+										[Local `(112333):Array<Iterable<flatMap.B>>:Array<Iterable<flatMap.B>>]
+										[FInstance:(x : Iterable<flatMap.B>) -> Int]
+											Array<Iterable<flatMap.B>>
+											push:(x : Array.T) -> Int
+									[Call:Iterable<flatMap.B>]
+										[Local f(112328):(item : flatMap.A) -> Iterable<flatMap.B>:(item : flatMap.A) -> Iterable<flatMap.B>]
+										[Local x(112334):flatMap.A:flatMap.A]
+							[Local `(112333):Array<Iterable<flatMap.B>>:Array<Iterable<flatMap.B>>]
+					[Block:Array<flatMap.B>]
+						[Var `(112338):Array<flatMap.B>] [ArrayDecl:Array<flatMap.B>]
+						[For:Void]
+							[Local e(112339):Iterable<flatMap.B>]
+							[Call:Iterator<Iterable<flatMap.B>>]
+								[Field:Void -> Iterator<Iterable<flatMap.B>>]
+									[Local it(112337):Iterable<Iterable<flatMap.B>>:Iterable<Iterable<flatMap.B>>]
+									[FAnon:Void -> Iterator<Iterable<flatMap.B>>] iterator:Void -> Iterator<Iterable<flatMap.B>>
+							[Block:Void]
+								[For:Void]
+									[Local x(112340):flatMap.B]
+									[Call:Iterator<flatMap.B>]
+										[Field:Void -> Iterator<flatMap.B>]
+											[Local e(112339):Iterable<flatMap.B>:Iterable<flatMap.B>]
+											[FAnon:Void -> Iterator<flatMap.B>] iterator:Void -> Iterator<flatMap.B>
+									[Block:Int]
+										[Call:Int]
+											[Field:(x : flatMap.B) -> Int]
+												[Local `(112338):Array<flatMap.B>:Array<flatMap.B>]
+												[FInstance:(x : flatMap.B) -> Int]
+													Array<flatMap.B>
+													push:(x : Array.T) -> Int
+											[Local x(112340):flatMap.B:flatMap.B]
+						[Local `(112338):Array<flatMap.B>:Array<flatMap.B>]
+
+	public static function has<A : has.A>[Function:(it : Iterable<has.A>, elt : has.A) -> Bool]
+		[Arg:Iterable<has.A>] [Local it(112074):Iterable<has.A>]
+		[Arg:has.A] [Local elt(112075):has.A]
+		[Block:Dynamic]
+			[For:Void]
+				[Local x(112076):has.A]
+				[Call:Iterator<has.A>]
+					[Field:Void -> Iterator<has.A>]
+						[Local it(112074):Iterable<has.A>:Iterable<has.A>]
+						[FAnon:Void -> Iterator<has.A>] iterator:Void -> Iterator<has.A>
+				[Block:Void]
+					[If:Void]
+						[Binop:Bool]
+							[Local x(112076):has.A:has.A]
+							==
+							[Local elt(112075):has.A:has.A]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[Return:Dynamic] [Const:Bool] false
+
+	public static function exists<A : exists.A>[Function:(it : Iterable<exists.A>, f : ((item : exists.A) -> Bool)) -> Bool]
+		[Arg:Iterable<exists.A>] [Local it(112341):Iterable<exists.A>]
+		[Arg:(item : exists.A) -> Bool] [Local f(112342):(item : exists.A) -> Bool]
+		[Block:Dynamic]
+			[For:Void]
+				[Local x(112343):exists.A]
+				[Call:Iterator<exists.A>]
+					[Field:Void -> Iterator<exists.A>]
+						[Local it(112341):Iterable<exists.A>:Iterable<exists.A>]
+						[FAnon:Void -> Iterator<exists.A>] iterator:Void -> Iterator<exists.A>
+				[Block:Void]
+					[If:Void]
+						[Call:Bool]
+							[Local f(112342):(item : exists.A) -> Bool:(item : exists.A) -> Bool]
+							[Local x(112343):exists.A:exists.A]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[Return:Dynamic] [Const:Bool] false
+
+	public static function foreach<A : foreach.A>[Function:(it : Iterable<foreach.A>, f : ((item : foreach.A) -> Bool)) -> Bool]
+		[Arg:Iterable<foreach.A>] [Local it(112344):Iterable<foreach.A>]
+		[Arg:(item : foreach.A) -> Bool] [Local f(112345):(item : foreach.A) -> Bool]
+		[Block:Dynamic]
+			[For:Void]
+				[Local x(112346):foreach.A]
+				[Call:Iterator<foreach.A>]
+					[Field:Void -> Iterator<foreach.A>]
+						[Local it(112344):Iterable<foreach.A>:Iterable<foreach.A>]
+						[FAnon:Void -> Iterator<foreach.A>] iterator:Void -> Iterator<foreach.A>
+				[Block:Void]
+					[If:Void]
+						[Unop:Bool]
+							!
+							Prefix
+							[Call:Bool]
+								[Local f(112345):(item : foreach.A) -> Bool:(item : foreach.A) -> Bool]
+								[Local x(112346):foreach.A:foreach.A]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Return:Dynamic] [Const:Bool] true
+
+	public static function iter<A : iter.A>[Function:(it : Iterable<iter.A>, f : ((item : iter.A) -> Void)) -> Void]
+		[Arg:Iterable<iter.A>] [Local it(112347):Iterable<iter.A>]
+		[Arg:(item : iter.A) -> Void] [Local f(112348):(item : iter.A) -> Void]
+		[Block:Void]
+			[For:Void]
+				[Local x(112349):iter.A]
+				[Call:Iterator<iter.A>]
+					[Field:Void -> Iterator<iter.A>]
+						[Local it(112347):Iterable<iter.A>:Iterable<iter.A>]
+						[FAnon:Void -> Iterator<iter.A>] iterator:Void -> Iterator<iter.A>
+				[Block:Void]
+					[Call:Void]
+						[Local f(112348):(item : iter.A) -> Void:(item : iter.A) -> Void]
+						[Local x(112349):iter.A:iter.A]
+
+	public static function filter<A : filter.A>[Function:(it : Iterable<filter.A>, f : ((item : filter.A) -> Bool)) -> Array<filter.A>]
+		[Arg:Iterable<filter.A>] [Local it(112350):Iterable<filter.A>]
+		[Arg:(item : filter.A) -> Bool] [Local f(112351):(item : filter.A) -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Block:Array<filter.A>]
+					[Var `(112352):Array<filter.A>] [ArrayDecl:Array<filter.A>]
+					[For:Void]
+						[Local x(112353):filter.A]
+						[Call:Iterator<filter.A>]
+							[Field:Void -> Iterator<filter.A>]
+								[Local it(112350):Iterable<filter.A>:Iterable<filter.A>]
+								[FAnon:Void -> Iterator<filter.A>] iterator:Void -> Iterator<filter.A>
+						[Block:Void]
+							[If:Void]
+								[Call:Bool]
+									[Local f(112351):(item : filter.A) -> Bool:(item : filter.A) -> Bool]
+									[Local x(112353):filter.A:filter.A]
+								[Then:Int] [Block:Int]
+									[Call:Int]
+										[Field:(x : filter.A) -> Int]
+											[Local `(112352):Array<filter.A>:Array<filter.A>]
+											[FInstance:(x : filter.A) -> Int]
+												Array<filter.A>
+												push:(x : Array.T) -> Int
+										[Local x(112353):filter.A:filter.A]
+					[Local `(112352):Array<filter.A>:Array<filter.A>]
+
+	public static function fold<A : fold.A,B : fold.B>[Function:(it : Iterable<fold.A>, f : ((item : fold.A, result : fold.B) -> fold.B), first : fold.B) -> fold.B]
+		[Arg:Iterable<fold.A>] [Local it(112354):Iterable<fold.A>]
+		[Arg:(item : fold.A, result : fold.B) -> fold.B] [Local f(112355):(item : fold.A, result : fold.B) -> fold.B]
+		[Arg:fold.B] [Local first(112356):fold.B]
+		[Block:Dynamic]
+			[For:Void]
+				[Local x(112357):fold.A]
+				[Call:Iterator<fold.A>]
+					[Field:Void -> Iterator<fold.A>]
+						[Local it(112354):Iterable<fold.A>:Iterable<fold.A>]
+						[FAnon:Void -> Iterator<fold.A>] iterator:Void -> Iterator<fold.A>
+				[Block:fold.B]
+					[Binop:fold.B]
+						[Local first(112356):fold.B:fold.B]
+						=
+						[Call:fold.B]
+							[Local f(112355):(item : fold.A, result : fold.B) -> fold.B:(item : fold.A, result : fold.B) -> fold.B]
+							[Local x(112357):fold.A:fold.A]
+							[Local first(112356):fold.B:fold.B]
+			[Return:Dynamic] [Local first(112356):fold.B:fold.B]
+
+	public static function foldi<A : foldi.A,B : foldi.B>[Function:(it : Iterable<foldi.A>, f : ((item : foldi.A, result : foldi.B, index : Int) -> foldi.B), first : foldi.B) -> foldi.B]
+		[Arg:Iterable<foldi.A>] [Local it(112358):Iterable<foldi.A>]
+		[Arg:(item : foldi.A, result : foldi.B, index : Int) -> foldi.B] [Local f(112359):(item : foldi.A, result : foldi.B, index : Int) -> foldi.B]
+		[Arg:foldi.B] [Local first(112360):foldi.B]
+		[Block:Dynamic]
+			[Var i(112361):Int] [Const:Int] 0
+			[For:Void]
+				[Local x(112362):foldi.A]
+				[Call:Iterator<foldi.A>]
+					[Field:Void -> Iterator<foldi.A>]
+						[Local it(112358):Iterable<foldi.A>:Iterable<foldi.A>]
+						[FAnon:Void -> Iterator<foldi.A>] iterator:Void -> Iterator<foldi.A>
+				[Block:Int]
+					[Binop:foldi.B]
+						[Local first(112360):foldi.B:foldi.B]
+						=
+						[Call:foldi.B]
+							[Local f(112359):(item : foldi.A, result : foldi.B, index : Int) -> foldi.B:(item : foldi.A, result : foldi.B, index : Int) -> foldi.B]
+							[Local x(112362):foldi.A:foldi.A]
+							[Local first(112360):foldi.B:foldi.B]
+							[Local i(112361):Int:Int]
+					[Unop:Int]
+						++
+						Prefix
+						[Local i(112361):Int:Int]
+			[Return:Dynamic] [Local first(112360):foldi.B:foldi.B]
+
+	public static function count<A : count.A>[Function:(it : Iterable<count.A>, ?pred : Null<(item : count.A) -> Bool>) -> Int]
+		[Arg:Iterable<count.A>] [Local it(112363):Iterable<count.A>]
+		[Arg:Null<(item : count.A) -> Bool>]
+			[Local pred(112364):Null<(item : count.A) -> Bool>]
+			[Const:Null<(item : count.A) -> Bool>] null
+		[Block:Dynamic]
+			[Var n(112365):Int] [Const:Int] 0
+			[If:Void]
+				[Binop:Bool]
+					[Local pred(112364):Null<(item : count.A) -> Bool>:Null<(item : count.A) -> Bool>]
+					==
+					[Const:Null<(item : count.A) -> Bool>] null
+				[Then:Void] [Block:Void]
+					[For:Void]
+						[Local _(112366):count.A]
+						[Call:Iterator<count.A>]
+							[Field:Void -> Iterator<count.A>]
+								[Local it(112363):Iterable<count.A>:Iterable<count.A>]
+								[FAnon:Void -> Iterator<count.A>] iterator:Void -> Iterator<count.A>
+						[Block:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local n(112365):Int:Int]
+				[Else:Void] [Block:Void]
+					[For:Void]
+						[Local x(112367):count.A]
+						[Call:Iterator<count.A>]
+							[Field:Void -> Iterator<count.A>]
+								[Local it(112363):Iterable<count.A>:Iterable<count.A>]
+								[FAnon:Void -> Iterator<count.A>] iterator:Void -> Iterator<count.A>
+						[Block:Void]
+							[If:Void]
+								[Call:Bool]
+									[Local pred(112364):Null<(item : count.A) -> Bool>:Null<(item : count.A) -> Bool>]
+									[Local x(112367):count.A:count.A]
+								[Then:Int] [Block:Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local n(112365):Int:Int]
+			[Return:Dynamic] [Local n(112365):Int:Int]
+
+	public static function empty<T : empty.T>[Function:(it : Iterable<empty.T>) -> Bool]
+		[Arg:Iterable<empty.T>] [Local it(112368):Iterable<empty.T>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:Void -> Bool]
+							[Call:Iterator<empty.T>]
+								[Field:Void -> Iterator<empty.T>]
+									[Local it(112368):Iterable<empty.T>:Iterable<empty.T>]
+									[FAnon:Void -> Iterator<empty.T>] iterator:Void -> Iterator<empty.T>
+							[FAnon:Void -> Bool] hasNext:Void -> Bool
+
+	public static function indexOf<T : indexOf.T>[Function:(it : Iterable<indexOf.T>, v : indexOf.T) -> Int]
+		[Arg:Iterable<indexOf.T>] [Local it(112369):Iterable<indexOf.T>]
+		[Arg:indexOf.T] [Local v(112370):indexOf.T]
+		[Block:Dynamic]
+			[Var i(112371):Int] [Const:Int] 0
+			[For:Void]
+				[Local v2(112372):indexOf.T]
+				[Call:Iterator<indexOf.T>]
+					[Field:Void -> Iterator<indexOf.T>]
+						[Local it(112369):Iterable<indexOf.T>:Iterable<indexOf.T>]
+						[FAnon:Void -> Iterator<indexOf.T>] iterator:Void -> Iterator<indexOf.T>
+				[Block:Int]
+					[If:Void]
+						[Binop:Bool]
+							[Local v(112370):indexOf.T:indexOf.T]
+							==
+							[Local v2(112372):indexOf.T:indexOf.T]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local i(112371):Int:Int]
+					[Unop:Int]
+						++
+						Postfix
+						[Local i(112371):Int:Int]
+			[Return:Dynamic] [Const:Int] -1
+
+	public static function find<T : find.T>[Function:(it : Iterable<find.T>, f : ((item : find.T) -> Bool)) -> Null<find.T>]
+		[Arg:Iterable<find.T>] [Local it(112373):Iterable<find.T>]
+		[Arg:(item : find.T) -> Bool] [Local f(112374):(item : find.T) -> Bool]
+		[Block:Dynamic]
+			[For:Void]
+				[Local v(112375):find.T]
+				[Call:Iterator<find.T>]
+					[Field:Void -> Iterator<find.T>]
+						[Local it(112373):Iterable<find.T>:Iterable<find.T>]
+						[FAnon:Void -> Iterator<find.T>] iterator:Void -> Iterator<find.T>
+				[Block:Void]
+					[If:Void]
+						[Call:Bool]
+							[Local f(112374):(item : find.T) -> Bool:(item : find.T) -> Bool]
+							[Local v(112375):find.T:find.T]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local v(112375):find.T:find.T]
+			[Return:Dynamic] [Const:Null<find.T>] null
+
+	public static function findIndex<T : findIndex.T>[Function:(it : Iterable<findIndex.T>, f : ((item : findIndex.T) -> Bool)) -> Int]
+		[Arg:Iterable<findIndex.T>] [Local it(112376):Iterable<findIndex.T>]
+		[Arg:(item : findIndex.T) -> Bool] [Local f(112377):(item : findIndex.T) -> Bool]
+		[Block:Dynamic]
+			[Var i(112378):Int] [Const:Int] 0
+			[For:Void]
+				[Local v(112379):findIndex.T]
+				[Call:Iterator<findIndex.T>]
+					[Field:Void -> Iterator<findIndex.T>]
+						[Local it(112376):Iterable<findIndex.T>:Iterable<findIndex.T>]
+						[FAnon:Void -> Iterator<findIndex.T>] iterator:Void -> Iterator<findIndex.T>
+				[Block:Int]
+					[If:Void]
+						[Call:Bool]
+							[Local f(112377):(item : findIndex.T) -> Bool:(item : findIndex.T) -> Bool]
+							[Local v(112379):findIndex.T:findIndex.T]
+						[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local i(112378):Int:Int]
+					[Unop:Int]
+						++
+						Postfix
+						[Local i(112378):Int:Int]
+			[Return:Dynamic] [Const:Int] -1
+
+	public static function concat<T : concat.T>[Function:(a : Iterable<concat.T>, b : Iterable<concat.T>) -> Array<concat.T>]
+		[Arg:Iterable<concat.T>] [Local a(112380):Iterable<concat.T>]
+		[Arg:Iterable<concat.T>] [Local b(112381):Iterable<concat.T>]
+		[Block:Dynamic]
+			[Var l(112382):Array<concat.T>] [New:Array<concat.T>] Array<concat.T>
+			[For:Void]
+				[Local x(112383):concat.T]
+				[Call:Iterator<concat.T>]
+					[Field:Void -> Iterator<concat.T>]
+						[Local a(112380):Iterable<concat.T>:Iterable<concat.T>]
+						[FAnon:Void -> Iterator<concat.T>] iterator:Void -> Iterator<concat.T>
+				[Block:Int]
+					[Call:Int]
+						[Field:(x : concat.T) -> Int]
+							[Local l(112382):Array<concat.T>:Array<concat.T>]
+							[FInstance:(x : concat.T) -> Int]
+								Array<concat.T>
+								push:(x : Array.T) -> Int
+						[Local x(112383):concat.T:concat.T]
+			[For:Void]
+				[Local x(112384):concat.T]
+				[Call:Iterator<concat.T>]
+					[Field:Void -> Iterator<concat.T>]
+						[Local b(112381):Iterable<concat.T>:Iterable<concat.T>]
+						[FAnon:Void -> Iterator<concat.T>] iterator:Void -> Iterator<concat.T>
+				[Block:Int]
+					[Call:Int]
+						[Field:(x : concat.T) -> Int]
+							[Local l(112382):Array<concat.T>:Array<concat.T>]
+							[FInstance:(x : concat.T) -> Int]
+								Array<concat.T>
+								push:(x : Array.T) -> Int
+						[Local x(112384):concat.T:concat.T]
+			[Return:Dynamic] [Local l(112382):Array<concat.T>:Array<concat.T>]
+}

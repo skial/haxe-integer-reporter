@@ -1,0 +1,2 @@
+@:used @:hxGen @:notNull @:runtimeValue @:coreType
+abstract java.Char16 from Int {}

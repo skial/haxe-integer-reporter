@@ -1,0 +1,6 @@
+@:realPath("java.nio.channels.AsynchronousCloseException") @:libType @:javaNative @:native("java.nio.channels.AsynchronousCloseException") @:javaCanonical("java.nio.channels", "AsynchronousCloseException")
+extern class java.nio.channels.AsynchronousCloseException extends java.nio.channels.ClosedChannelException {
+
+	@:overload
+	function new():Void;
+}

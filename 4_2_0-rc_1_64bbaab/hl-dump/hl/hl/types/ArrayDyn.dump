@@ -1,0 +1,266 @@
+@:directlyUsed @:used @:keep
+class hl.types.ArrayDyn extends hl.types.ArrayAccess {
+
+	public function new() {
+		this.array = new hl.types.ArrayObj();
+		this.allowReinterpret = true;
+	}
+
+	public var length(get,never):Int;
+
+	var array:hl.types.ArrayBase;
+
+	var allowReinterpret:Bool;
+
+	inline function get_length() {
+		return this.array.length;
+	}
+
+	public function getDyn(i:Int) {
+		return this.array.getDyn(i);
+	}
+
+	public function setDyn(pos:Int, value:Dynamic) {
+		this.array.setDyn(pos, value);
+	}
+
+	public function blit(pos:Int, src:hl.types.ArrayAccess, srcpos:Int, len:Int) {
+		this.array.blit(pos, src, srcpos, len);
+	}
+
+	public function concat(a:hl.types.ArrayDyn) {
+		var a1 = this.array;
+		var a2 = a.array;
+		var alen = a1.length;
+		var length = alen + a2.length;
+		var this1 = $aalloc(length);
+		var anew = this1;
+		{
+			var _g = 0;
+			var _g1 = alen;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				{
+					var value = a1.getDyn(i);
+					$aset(anew, i, value);
+				};
+			};
+		};
+		{
+			var _g = 0;
+			var _g1 = a2.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				{
+					var value = a2.getDyn(i);
+					$aset(anew, i + alen, value);
+				};
+			};
+		};
+		return hl.types.ArrayDyn.alloc(hl.types.ArrayObj.alloc(anew), true);
+	}
+
+	public function join(sep:String) {
+		return this.array.join(sep);
+	}
+
+	public function pop() {
+		return this.array.popDyn();
+	}
+
+	public function push(x:Dynamic) {
+		return this.array.pushDyn(x);
+	}
+
+	public function reverse() {
+		this.array.reverse();
+	}
+
+	public function resize(len:Int) {
+		this.array.resize(len);
+	}
+
+	public function shift() {
+		return this.array.shiftDyn();
+	}
+
+	public function slice(pos:Int, end:Null<Int> = null) {
+		return hl.types.ArrayDyn.alloc(this.array.slice(pos, end), true);
+	}
+
+	public function sort(f:(Dynamic, Dynamic) -> Int) {
+		this.array.sortDyn(f);
+	}
+
+	public function splice(pos:Int, len:Int) {
+		return hl.types.ArrayDyn.alloc(this.array.splice(pos, len), true);
+	}
+
+	public function toString() {
+		return this.array.toString();
+	}
+
+	public function unshift(x:Dynamic) {
+		this.array.unshiftDyn(x);
+	}
+
+	public function insert(pos:Int, x:Dynamic) {
+		this.array.insertDyn(pos, x);
+	}
+
+	public function contains(x:Dynamic) {
+		return this.array.containsDyn(x);
+	}
+
+	public function remove(x:Dynamic) {
+		return this.array.removeDyn(x);
+	}
+
+	public function indexOf(x:Dynamic, fromIndex:Null<Int> = null) {
+		var i = fromIndex;
+		var length = this.array.length;
+		var array = this.array;
+		while ((i < length)) {
+			if ((array.getDyn(i) == x)) return i;
+			++ i;
+		};
+		return -1;
+	}
+
+	public function lastIndexOf(x:Dynamic, fromIndex:Null<Int> = null) {
+		var len = this.array.length;
+		var i = if ((fromIndex != null)) fromIndex else len - 1;
+		if ((i >= len)) i = len - 1 else if ((i < 0)) i += len;
+		while ((i >= 0)) {
+			if ((this.array.getDyn(i) == x)) return i;
+			-- i;
+		};
+		return -1;
+	}
+
+	public function copy() {
+		var length = this.array.length;
+		var this1 = $aalloc(length);
+		var a = this1;
+		{
+			var _g = 0;
+			var _g1 = this.array.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				{
+					var value = this.array.getDyn(i);
+					$aset(a, i, value);
+				};
+			};
+		};
+		return hl.types.ArrayDyn.alloc(hl.types.ArrayObj.alloc(a), true);
+	}
+
+	public function iterator() {
+		return new hl.types.ArrayDynIterator(this.array);
+	}
+
+	public function keyValueIterator() {
+		return new hl.types.ArrayDynKeyValueIterator(this.array);
+	}
+
+	public function map(f:Dynamic -> Dynamic) {
+		var length = this.array.length;
+		var this1 = $aalloc(length);
+		var a = this1;
+		{
+			var _g = 0;
+			var _g1 = this.array.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				{
+					var value = f(this.array.getDyn(i));
+					$aset(a, i, value);
+				};
+			};
+		};
+		return hl.types.ArrayDyn.alloc(hl.types.ArrayObj.alloc(a), true);
+	}
+
+	public function filter(f:Dynamic -> Bool) {
+		var a = new hl.types.ArrayObj();
+		{
+			var _g = 0;
+			var _g1 = this.array.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				var v = this.array.getDyn(i);
+				if ((f(v))) a.push(v);
+			};
+		};
+		return hl.types.ArrayDyn.alloc(a, true);
+	}
+
+	@:has_untyped
+	function __get_field(fid:Int) {
+		if ((fid == $hash("length"))) return this.array.length;
+		return null;
+	}
+
+	function __cast(t:hl.Type) {
+		var v = cast this.array;
+		if ((t == $tdyntype(v))) return this.array;
+		if ((! this.allowReinterpret)) return null;
+		var v = null;
+		if ((t == $ttype(v))) {
+			var a = null;
+			var this1 = hl._Bytes.Bytes_Impl_.alloc(this.array.length << $bytes_sizebits(a));
+			a = this1;
+			{
+				var _g = 0;
+				var _g1 = this.array.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					{
+						var value = cast this.array.getDyn(i);
+						$bset(a, i, value);
+					};
+				};
+			};
+			var arr = hl.types.ArrayBase.allocI32(a, this.array.length);
+			this.array = arr;
+			this.allowReinterpret = false;
+			return arr;
+		};
+		var v = null;
+		if ((t == $ttype(v))) {
+			var a = null;
+			var this1 = hl._Bytes.Bytes_Impl_.alloc(this.array.length << $bytes_sizebits(a));
+			a = this1;
+			{
+				var _g = 0;
+				var _g1 = this.array.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					{
+						var value = cast this.array.getDyn(i);
+						$bset(a, i, value);
+					};
+				};
+			};
+			var arr = hl.types.ArrayBase.allocF64(a, this.array.length);
+			this.array = arr;
+			this.allowReinterpret = false;
+			return arr;
+		};
+		return null;
+	}
+
+	@:keep
+	function __compare(a:Dynamic) {
+		if ((a == this.array)) return 0 else return hl.Api.comparePointer(this, a);
+	}
+
+	@:has_untyped @:value({ allowReinterpret : false })
+	public static function alloc(a:hl.types.ArrayBase, allowReinterpret:Bool = false) {
+		var arr = $new(hl.types.ArrayDyn);
+		arr.array = a;
+		arr.allowReinterpret = allowReinterpret;
+		return arr;
+	}
+}

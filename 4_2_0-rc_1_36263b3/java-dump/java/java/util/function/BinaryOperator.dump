@@ -1,0 +1,7 @@
+@:realPath("java.util.function.BinaryOperator_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.function.BinaryOperator") @:javaCanonical("java.util.function", "BinaryOperator")
+extern class java.util.function.BinaryOperator {
+
+	static function maxBy<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.function.BinaryOperator<maxBy.T>;
+
+	static function minBy<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.function.BinaryOperator<minBy.T>;
+}

@@ -1,0 +1,78 @@
+@:realPath("java.net.InetAddress") @:libType @:javaNative @:native("java.net.InetAddress") @:javaCanonical("java.net", "InetAddress")
+extern class java.net.InetAddress implements java.io.Serializable {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function getHostAddress():java.lang.String;
+
+	@:overload
+	function getAddress():java.NativeArray<java.types.Int8>;
+
+	@:overload
+	function getCanonicalHostName():java.lang.String;
+
+	@:overload
+	function getHostName():java.lang.String;
+
+	@:overload @:throws("java.io.IOException")
+	function isReachable(param1:java.net.NetworkInterface, param2:Int, param3:Int):Bool;
+
+	@:overload @:throws("java.io.IOException")
+	function isReachable(param1:Int):Bool;
+
+	@:overload
+	function isMCOrgLocal():Bool;
+
+	@:overload
+	function isMCSiteLocal():Bool;
+
+	@:overload
+	function isMCLinkLocal():Bool;
+
+	@:overload
+	function isMCNodeLocal():Bool;
+
+	@:overload
+	function isMCGlobal():Bool;
+
+	@:overload
+	function isSiteLocalAddress():Bool;
+
+	@:overload
+	function isLinkLocalAddress():Bool;
+
+	@:overload
+	function isLoopbackAddress():Bool;
+
+	@:overload
+	function isAnyLocalAddress():Bool;
+
+	@:overload
+	function isMulticastAddress():Bool;
+
+	@:overload @:throws("java.net.UnknownHostException")
+	static function getLocalHost():java.net.InetAddress;
+
+	@:overload @:throws("java.net.UnknownHostException")
+	static function getByAddress(param1:java.NativeArray<java.types.Int8>):java.net.InetAddress;
+
+	@:overload @:throws("java.net.UnknownHostException")
+	static function getByAddress(param1:java.lang.String, param2:java.NativeArray<java.types.Int8>):java.net.InetAddress;
+
+	@:overload
+	static function getLoopbackAddress():java.net.InetAddress;
+
+	@:overload @:throws("java.net.UnknownHostException")
+	static function getAllByName(param1:java.lang.String):java.NativeArray<java.net.InetAddress>;
+
+	@:overload @:throws("java.net.UnknownHostException")
+	static function getByName(param1:java.lang.String):java.net.InetAddress;
+}

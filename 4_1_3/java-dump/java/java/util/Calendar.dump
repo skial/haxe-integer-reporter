@@ -1,0 +1,286 @@
+@:realPath("java.util.Calendar") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.Calendar") @:javaCanonical("java.util", "Calendar")
+extern class java.util.Calendar implements java.lang.Comparable<java.util.Calendar> implements java.lang.Cloneable implements java.io.Serializable {
+
+	@:overload @:protected
+	function new(param1:java.util.TimeZone, param2:java.util.Locale):Void;
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.util.Calendar):Int;
+
+	@:overload
+	function toInstant():java.time.Instant;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	function getActualMaximum(param1:Int):Int;
+
+	@:overload
+	function getActualMinimum(param1:Int):Int;
+
+	@:overload
+	function getLeastMaximum(param1:Int):Int;
+
+	@:overload
+	function getGreatestMinimum(param1:Int):Int;
+
+	@:overload
+	function getMaximum(param1:Int):Int;
+
+	@:overload
+	function getMinimum(param1:Int):Int;
+
+	@:overload
+	function getWeeksInWeekYear():Int;
+
+	@:overload
+	function setWeekDate(param1:Int, param2:Int, param3:Int):Void;
+
+	@:overload
+	function getWeekYear():Int;
+
+	@:overload
+	function isWeekDateSupported():Bool;
+
+	@:overload
+	function getMinimalDaysInFirstWeek():Int;
+
+	@:overload
+	function setMinimalDaysInFirstWeek(param1:Int):Void;
+
+	@:overload
+	function getFirstDayOfWeek():Int;
+
+	@:overload
+	function setFirstDayOfWeek(param1:Int):Void;
+
+	@:overload
+	function isLenient():Bool;
+
+	@:overload
+	function setLenient(param1:Bool):Void;
+
+	@:overload
+	function getTimeZone():java.util.TimeZone;
+
+	@:overload
+	function setTimeZone(param1:java.util.TimeZone):Void;
+
+	@:overload
+	function roll(param1:Int, param2:Int):Void;
+
+	@:overload
+	function roll(param1:Int, param2:Bool):Void;
+
+	@:overload
+	function add(param1:Int, param2:Int):Void;
+
+	@:overload
+	function after(param1:Dynamic):Bool;
+
+	@:overload
+	function before(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getCalendarType():String;
+
+	@:overload @:protected
+	function complete():Void;
+
+	@:overload
+	function getDisplayNames(param1:Int, param2:Int, param3:java.util.Locale):java.util.Map<String, java.lang.Integer>;
+
+	@:overload
+	function getDisplayName(param1:Int, param2:Int, param3:java.util.Locale):String;
+
+	@:overload
+	function isSet(param1:Int):Bool;
+
+	@:overload
+	function clear(param1:Int):Void;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function set(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	@:overload
+	function set(param1:Int, param2:Int):Void;
+
+	@:overload
+	function set(param1:Int, param2:Int, param3:Int):Void;
+
+	@:overload
+	function set(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	@:overload @:protected
+	function internalGet(param1:Int):Int;
+
+	@:overload
+	function get(param1:Int):Int;
+
+	@:overload
+	function setTimeInMillis(param1:haxe.Int64):Void;
+
+	@:overload
+	function getTimeInMillis():haxe.Int64;
+
+	@:overload
+	function setTime(param1:java.util.Date):Void;
+
+	@:overload
+	function getTime():java.util.Date;
+
+	@:overload @:protected
+	function computeFields():Void;
+
+	@:overload @:protected
+	function computeTime():Void;
+
+	@:protected
+	var fields:java.NativeArray<Int>;
+
+	@:protected
+	var time:haxe.Int64;
+
+	@:protected
+	var isTimeSet:Bool;
+
+	@:protected
+	var areFieldsSet:Bool;
+
+	@:overload
+	static function getAvailableCalendarTypes():java.util.Set<String>;
+
+	@:overload
+	static function getAvailableLocales():java.NativeArray<java.util.Locale>;
+
+	@:overload
+	static function getInstance(param1:java.util.TimeZone, param2:java.util.Locale):java.util.Calendar;
+
+	@:overload
+	static function getInstance():java.util.Calendar;
+
+	@:overload
+	static function getInstance(param1:java.util.TimeZone):java.util.Calendar;
+
+	@:overload
+	static function getInstance(param1:java.util.Locale):java.util.Calendar;
+
+	static var ERA(default,null):Int;
+
+	static var YEAR(default,null):Int;
+
+	static var MONTH(default,null):Int;
+
+	static var WEEK_OF_YEAR(default,null):Int;
+
+	static var WEEK_OF_MONTH(default,null):Int;
+
+	static var DATE(default,null):Int;
+
+	static var DAY_OF_MONTH(default,null):Int;
+
+	static var DAY_OF_YEAR(default,null):Int;
+
+	static var DAY_OF_WEEK(default,null):Int;
+
+	static var DAY_OF_WEEK_IN_MONTH(default,null):Int;
+
+	static var AM_PM(default,null):Int;
+
+	static var HOUR(default,null):Int;
+
+	static var HOUR_OF_DAY(default,null):Int;
+
+	static var MINUTE(default,null):Int;
+
+	static var SECOND(default,null):Int;
+
+	static var MILLISECOND(default,null):Int;
+
+	static var ZONE_OFFSET(default,null):Int;
+
+	static var DST_OFFSET(default,null):Int;
+
+	static var FIELD_COUNT(default,null):Int;
+
+	static var SUNDAY(default,null):Int;
+
+	static var MONDAY(default,null):Int;
+
+	static var TUESDAY(default,null):Int;
+
+	static var WEDNESDAY(default,null):Int;
+
+	static var THURSDAY(default,null):Int;
+
+	static var FRIDAY(default,null):Int;
+
+	static var SATURDAY(default,null):Int;
+
+	static var JANUARY(default,null):Int;
+
+	static var FEBRUARY(default,null):Int;
+
+	static var MARCH(default,null):Int;
+
+	static var APRIL(default,null):Int;
+
+	static var MAY(default,null):Int;
+
+	static var JUNE(default,null):Int;
+
+	static var JULY(default,null):Int;
+
+	static var AUGUST(default,null):Int;
+
+	static var SEPTEMBER(default,null):Int;
+
+	static var OCTOBER(default,null):Int;
+
+	static var NOVEMBER(default,null):Int;
+
+	static var DECEMBER(default,null):Int;
+
+	static var UNDECIMBER(default,null):Int;
+
+	static var AM(default,null):Int;
+
+	static var PM(default,null):Int;
+
+	static var ALL_STYLES(default,null):Int;
+
+	static var SHORT(default,null):Int;
+
+	static var LONG(default,null):Int;
+
+	static var NARROW_FORMAT(default,null):Int;
+
+	static var NARROW_STANDALONE(default,null):Int;
+
+	static var SHORT_FORMAT(default,null):Int;
+
+	static var LONG_FORMAT(default,null):Int;
+
+	static var SHORT_STANDALONE(default,null):Int;
+
+	static var LONG_STANDALONE(default,null):Int;
+}

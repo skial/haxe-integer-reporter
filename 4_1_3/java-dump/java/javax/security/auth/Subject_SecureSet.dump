@@ -1,0 +1,27 @@
+@:realPath("java.javax.security.auth.Subject_SecureSet") @:used @:nativeGen @:libType @:javaNative @:native("javax.security.auth.Subject$SecureSet") @:javaCanonical("javax.security.auth", "Subject.SecureSet")
+extern class javax.security.auth.Subject$SecureSet<E : java.javax.security.auth.Subject_SecureSet.E> extends java.util.AbstractSet<java.javax.security.auth.Subject_SecureSet.E> implements java.io.Serializable {
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function retainAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function removeAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function add(param1:java.javax.security.auth.Subject_SecureSet.E):Bool;
+
+	@:overload
+	function iterator():java.util.Iterator<java.javax.security.auth.Subject_SecureSet.E>;
+
+	@:overload
+	function size():Int;
+}

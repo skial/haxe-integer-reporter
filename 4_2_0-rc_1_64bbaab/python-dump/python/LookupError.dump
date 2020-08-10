@@ -1,0 +1,3 @@
+@:realPath("python.LookupError") @:native("LookupError")
+extern class LookupError extends Exception {
+}

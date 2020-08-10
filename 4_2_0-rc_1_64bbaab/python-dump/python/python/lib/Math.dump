@@ -1,0 +1,25 @@
+@:directlyUsed @:used @:pythonImport("math")
+extern class python.lib.Math {
+
+	static function isnan(f:Float):Bool;
+
+	static var pi:Float;
+
+	static function sqrt(f:Float):Float;
+
+	static function log(f:Float):Float;
+
+	static function cos(f:Float):Float;
+
+	static function sin(f:Float):Float;
+
+	static function tan(f:Float):Float;
+
+	static function asin(v:Float):Float;
+
+	static function acos(v:Float):Float;
+
+	static function atan(v:Float):Float;
+
+	static function atan2(y:Float, x:Float):Float;
+}

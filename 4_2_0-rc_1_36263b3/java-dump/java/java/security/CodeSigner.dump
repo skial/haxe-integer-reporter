@@ -1,0 +1,15 @@
+@:realPath("java.security.CodeSigner") @:nativeGen @:libType @:javaNative @:native("java.security.CodeSigner") @:javaCanonical("java.security", "CodeSigner")
+extern class java.security.CodeSigner implements java.io.Serializable {
+
+	function new(param1:java.security.cert.CertPath, param2:java.security.Timestamp):Void;
+
+	function toString():String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function getTimestamp():java.security.Timestamp;
+
+	function getSignerCertPath():java.security.cert.CertPath;
+}

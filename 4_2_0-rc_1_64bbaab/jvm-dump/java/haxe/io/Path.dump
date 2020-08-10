@@ -1,0 +1,70 @@
+@:keep @:directlyUsed @:used
+class haxe.io.Path {
+
+	public static function normalize(path:java.lang.String) {
+		var slash = "/";
+		path = haxe.jvm.StringExt.split(path, "\\").join(slash);
+		if ((path == slash)) return slash;
+		var target = [];
+		{
+			var _g = 0;
+			var _g1 = haxe.jvm.StringExt.split(path, slash);
+			while ((_g < _g1.length)) {
+				var token = _g1[_g];
+				++ _g;
+				if ((token == ".." && target.length > 0 && target[target.length - 1] != "..")) target.pop() else if ((token == "")) {
+					if ((target.length > 0 || haxe.jvm.StringExt.charCodeAt(path, 0) == 47)) target.push(token);
+				} else if ((token != ".")) target.push(token);
+			};
+		};
+		var tmp = target.join(slash);
+		var acc = new StringBuf();
+		var colon = false;
+		var slashes = false;
+		{
+			var _g2_offset = 0;
+			var _g2_s = tmp;
+			while ((_g2_offset < _g2_s.length)) {
+				var s = _g2_s;
+				var index = _g2_offset ++;
+				var c = if ((index < s.length)) cast (cast s.charAt(index),Int) else -1;
+				if ((c >= 55296 && c <= 56319)) {
+					var index = index + 1;
+					c = c - 55232 << 10 | (if ((index < s.length)) cast (cast s.charAt(index),Int) else -1) & 1023;
+				};
+				var c = c;
+				if ((c >= 65536)) ++ _g2_offset;
+				var c = c;
+				switch ((c)) {
+					case 47: if ((! colon)) slashes = true else {
+						var i = c;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc.add("/");
+								slashes = false;
+							};
+							acc.addChar(i);
+						};
+					};
+					case 58: {
+						acc.add(":");
+						colon = true;
+					};
+					default: {
+						var i = c;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc.add("/");
+								slashes = false;
+							};
+							acc.addChar(i);
+						};
+					}
+				};
+			};
+		};
+		return acc.toString();
+	}
+}

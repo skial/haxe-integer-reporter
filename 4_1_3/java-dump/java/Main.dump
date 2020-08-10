@@ -1,0 +1,16 @@
+@:used @:hxGen @:build(Macros.build())
+class Main {
+
+	@:keep
+	public static function main() {
+		Writer.writePair(-2147450880, -2147450880, {fileName : "Main.hx", lineNumber : 8, className : "Main", methodName : "main"});
+		Writer.writePair(-2147450881, -2147450881, {fileName : "Main.hx", lineNumber : 9, className : "Main", methodName : "main"});
+		Writer.writePair(-1, -1, {fileName : "Main.hx", lineNumber : 10, className : "Main", methodName : "main"});
+		Writer.writePair(2147483647, 2147483647, {fileName : "Main.hx", lineNumber : 11, className : "Main", methodName : "main"});
+		Writer.writePair(1073741823, 1073741823, {fileName : "Main.hx", lineNumber : 12, className : "Main", methodName : "main"});
+		Writer.writePair(-2147483648, -2147483648, {fileName : "Main.hx", lineNumber : 13, className : "Main", methodName : "main"});
+		Writer.writePair(-1073741824, -1073741824, {fileName : "Main.hx", lineNumber : 14, className : "Main", methodName : "main"});
+		Writer.writePair(-536870912, -536870912, {fileName : "Main.hx", lineNumber : 15, className : "Main", methodName : "main"});
+		Writer.close();
+	}
+}

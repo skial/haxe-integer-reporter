@@ -1,0 +1,21 @@
+@:realPath("java.util.Comparator_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.Comparator") @:javaCanonical("java.util", "Comparator")
+extern class java.util.Comparator {
+
+	static function comparingDouble<T:Dynamic>(param1:java.util.function.ToDoubleFunction<Dynamic>):java.util.Comparator<comparingDouble.T>;
+
+	static function comparingLong<T:Dynamic>(param1:java.util.function.ToLongFunction<Dynamic>):java.util.Comparator<comparingLong.T>;
+
+	static function comparingInt<T:Dynamic>(param1:java.util.function.ToIntFunction<Dynamic>):java.util.Comparator<comparingInt.T>;
+
+	static function comparing<T:Dynamic, U:java.lang.Comparable<Dynamic>>(param1:java.util.function.Function<Dynamic, comparing.U>):java.util.Comparator<comparing.T>;
+
+	static function comparing<T:Dynamic, U:Dynamic>(param1:java.util.function.Function<Dynamic, comparing.U>, param2:java.util.Comparator<Dynamic>):java.util.Comparator<comparing.T>;
+
+	static function nullsLast<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<nullsLast.T>;
+
+	static function nullsFirst<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<nullsFirst.T>;
+
+	static function naturalOrder<T:java.lang.Comparable<Dynamic>>():java.util.Comparator<naturalOrder.T>;
+
+	static function reverseOrder<T:java.lang.Comparable<Dynamic>>():java.util.Comparator<reverseOrder.T>;
+}

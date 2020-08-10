@@ -1,0 +1,17 @@
+@:realPath("java.net.Proxy") @:nativeGen @:libType @:javaNative @:native("java.net.Proxy") @:javaCanonical("java.net", "Proxy")
+extern class java.net.Proxy {
+
+	function new(param1:java.net.Proxy$Type, param2:java.net.SocketAddress):Void;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function toString():String;
+
+	function address():java.net.SocketAddress;
+
+	function type():java.net.Proxy$Type;
+
+	static var NO_PROXY(default,never):java.net.Proxy;
+}

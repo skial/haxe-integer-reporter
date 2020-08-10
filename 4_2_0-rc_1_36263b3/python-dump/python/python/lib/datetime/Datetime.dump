@@ -1,0 +1,57 @@
+@:pythonImport("datetime", "datetime")
+extern class python.lib.datetime.Datetime {
+
+	@:value({ tzinfo : null, microsecond : 0, second : 0, minute : 0, hour : 0 })
+	function new(year:Int, month:Int, day:Int, hour:Int, minute:Int, second:Int, microsecond:Int, tzinfo:Null<python.lib.datetime.Tzinfo>):Void;
+
+	var year:Int;
+
+	var month:Int;
+
+	var day:Int;
+
+	var hour:Int;
+
+	var minute:Int;
+
+	var second:Int;
+
+	var microsecond:Int;
+
+	var tzinfo:python.lib.datetime.Tzinfo;
+
+	function timetuple():python.lib.time.StructTime;
+
+	function strftime(format:str):str;
+
+	function replace(kwargs:python.KwArgs<{ ?year : Null<Int>, ?tzinfo : Null<python.lib.datetime.Tzinfo>, ?second : Null<Int>, ?month : Null<Int>, ?minute : Null<Int>, ?microsecond : Null<Int>, ?hour : Null<Int>, ?day : Null<Int> }>):python.lib.datetime.Datetime;
+
+	function weekday():Int;
+
+	function isoweekday():Int;
+
+	function utcoffset():Int;
+
+	function timestamp():Float;
+
+	function astimezone(tz:Null<python.lib.datetime.Tzinfo>):python.lib.datetime.Datetime;
+
+	static var min:python.lib.datetime.Datetime;
+
+	static var max:python.lib.datetime.Datetime;
+
+	static var resolution:python.lib.datetime.Timedelta;
+
+	static function today():python.lib.datetime.Datetime;
+
+	static function now(tzinfo:Null<python.lib.datetime.Tzinfo>):python.lib.datetime.Datetime;
+
+	static function utcnow():python.lib.datetime.Datetime;
+
+	@:value({ tzInfo : null })
+	static function fromtimestamp(timestamp:Float, tzInfo:Null<python.lib.datetime.Tzinfo>):python.lib.datetime.Datetime;
+
+	static function utcfromtimestamp(timestamp:Int):python.lib.datetime.Datetime;
+
+	static function fromordinal(ordinal:Int):python.lib.datetime.Datetime;
+}

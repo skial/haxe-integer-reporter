@@ -1,0 +1,6 @@
+@:realPath("java.nio.charset.CoderResult_Cache") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.charset.CoderResult$Cache") @:javaCanonical("java.nio.charset", "CoderResult.Cache")
+extern class java.nio.charset.CoderResult$Cache {
+
+	@:overload @:protected
+	function create(param1:Int):java.nio.charset.CoderResult;
+}

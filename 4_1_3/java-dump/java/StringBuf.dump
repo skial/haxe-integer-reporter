@@ -1,0 +1,26 @@
+@:keep @:directlyUsed @:used @:hxGen @:coreApi
+class StringBuf {
+
+	public function new() {
+		this.b = new java.lang.StringBuilder();
+	}
+
+	var b:java.lang.StringBuilder;
+
+	public function add<T : add.T>(x:add.T) {
+		if ((Std.isOfType(x, Int))) {
+			var x1 = cast x;
+			var xd = x1;
+			this.b.append(xd);
+		} else this.b.append(x);
+	}
+
+	@:has_untyped
+	public function addChar(c:Int) {
+		this.b.appendCodePoint(c);
+	}
+
+	public function toString() {
+		return this.b.toString();
+	}
+}

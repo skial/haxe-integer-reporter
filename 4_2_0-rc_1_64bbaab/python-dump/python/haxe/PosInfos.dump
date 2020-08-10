@@ -1,0 +1,1 @@
+typedef haxe.PosInfos = { methodName : str, lineNumber : Int, fileName : str, ?customParams : Null<list<Dynamic>>, className : str }

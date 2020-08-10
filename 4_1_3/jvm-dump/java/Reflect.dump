@@ -1,0 +1,15 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Reflect {
+
+	public static function compare<T : compare.T>(a:compare.T, b:compare.T) {
+		if ((haxe.jvm.Jvm.referenceEquals(a, b))) return 0;
+		if ((a == null)) return -1;
+		if ((b == null)) return 1;
+		if ((haxe.jvm.Jvm.instanceof(a, java.lang.Number) && haxe.jvm.Jvm.instanceof(b, java.lang.Number))) return java.lang.Long.compare(cast a.longValue(), cast b.longValue());
+		if ((haxe.jvm.Jvm.instanceof(a, java.lang.String))) {
+			if ((! haxe.jvm.Jvm.instanceof(b, java.lang.String))) return -1;
+			return cast a.compareTo(cast b);
+		};
+		return -1;
+	}
+}

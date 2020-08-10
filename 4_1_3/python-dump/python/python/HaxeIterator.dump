@@ -1,0 +1,48 @@
+@:keep @:directlyUsed @:used
+class python.HaxeIterator<T : python.HaxeIterator.T> {
+
+	public function new(it:python.NativeIteratorRaw<python.HaxeIterator.T>) {
+		this.checked = false;
+		this.has = false;
+		this.x = null;
+		this.it = it;
+	}
+
+	var it:python.NativeIteratorRaw<python.HaxeIterator.T>;
+
+	@:value(null)
+	var x:Null<python.HaxeIterator.T>;
+
+	@:value(false)
+	var has:Bool;
+
+	@:value(false)
+	var checked:Bool;
+
+	@:maybeUsed
+	public inline function next() {
+		if ((! this.checked)) this.hasNext();
+		this.checked = false;
+		return this.x;
+	}
+
+	@:maybeUsed
+	public function hasNext() {
+		if ((! this.checked)) {
+			try {
+				this.x = this.it.__next__();
+				this.has = true;
+			} catch (_g:BaseException) {
+				{
+					null;
+				};
+				if ((Std.isOfType(cast haxe.Exception.caught(_g).unwrap(), StopIteration))) {
+					this.has = false;
+					this.x = null;
+				} else throw _g;
+			};
+			this.checked = true;
+		};
+		return this.has;
+	}
+}

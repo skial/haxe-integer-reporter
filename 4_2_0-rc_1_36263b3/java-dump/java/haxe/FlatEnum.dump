@@ -1,0 +1,2 @@
+@:hxGen
+abstract haxe.FlatEnum {}

@@ -1,0 +1,5 @@
+@:keep @:used @:keepInit
+extern class Math {
+
+	static function __init__() __feature__("Type.resolveClass", $hxClasses["Math"] = Math)
+}

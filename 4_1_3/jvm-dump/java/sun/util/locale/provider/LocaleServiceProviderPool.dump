@@ -1,0 +1,18 @@
+@:realPath("java.sun.util.locale.provider.LocaleServiceProviderPool") @:noCompletion @:libType @:javaNative @:native("sun.util.locale.provider.LocaleServiceProviderPool") @:javaCanonical("sun.util.locale.provider", "LocaleServiceProviderPool")
+extern class sun.util.locale.provider.LocaleServiceProviderPool {
+
+	@:overload
+	function getLocalizedObject<P : getLocalizedObject.P,S : getLocalizedObject.S>(param1:sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter<getLocalizedObject.P, getLocalizedObject.S>, param2:java.util.Locale, param3:java.lang.String, param4:java.NativeArray<Dynamic>):getLocalizedObject.S;
+
+	@:overload
+	function getLocalizedObject<P : getLocalizedObject.P,S : getLocalizedObject.S>(param1:sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter<getLocalizedObject.P, getLocalizedObject.S>, param2:java.util.Locale, param3:java.NativeArray<Dynamic>):getLocalizedObject.S;
+
+	@:overload
+	function getAvailableLocales():java.NativeArray<java.util.Locale>;
+
+	@:overload
+	static function getAllAvailableLocales():java.NativeArray<java.util.Locale>;
+
+	@:overload
+	static function getPool(param1:java.lang.Class<java.util.spi.LocaleServiceProvider>):sun.util.locale.provider.LocaleServiceProviderPool;
+}

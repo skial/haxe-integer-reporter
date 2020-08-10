@@ -1,0 +1,7 @@
+@:realPath("java.security.Principal") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.security.Principal") @:javaCanonical("java.security", "Principal")
+extern interface java.security.Principal {
+
+	function implies(param1:javax.security.auth.Subject):Bool;
+
+	function getName():String;
+}

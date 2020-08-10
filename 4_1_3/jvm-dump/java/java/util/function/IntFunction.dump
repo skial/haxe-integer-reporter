@@ -1,0 +1,6 @@
+@:realPath("java.util.function.IntFunction") @:used @:abstract @:libType @:javaNative @:native("java.util.function.IntFunction") @:javaCanonical("java.util.function", "IntFunction")
+extern interface java.util.function.IntFunction<R : java.util.function.IntFunction.R> {
+
+	@:overload
+	function apply(param1:Int):java.util.function.IntFunction.R;
+}

@@ -1,0 +1,7 @@
+@:pythonImport("urllib.parse")
+extern class python.lib.urllib.Parse {
+
+	static function quote(s:str, safe:Null<str>):str;
+
+	static function unquote(s:str):str;
+}

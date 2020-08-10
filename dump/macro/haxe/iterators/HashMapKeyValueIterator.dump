@@ -1,0 +1,83 @@
+class haxe.iterators.HashMapKeyValueIterator<K : haxe.iterators.HashMapKeyValueIterator.K,V : haxe.iterators.HashMapKeyValueIterator.V> {
+
+	public inline function new[Function:(map : haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>) -> Void]
+		[Arg:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] [Local map(109539):haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+		[Block:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+			[Binop:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+				[Field:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+					[Const:haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] this
+					[FInstance:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+						haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+						map:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+				=
+				[Local map(109539):haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+			[Binop:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+				[Field:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+					[Const:haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] this
+					[FInstance:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+						haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+						keys:Iterator<haxe.iterators.HashMapKeyValueIterator.K>
+				=
+				[Call:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+					[Field:Void -> Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+						[Field:haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.K>]
+							[Cast:haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] [Local map(109539):haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+							[FInstance:haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.K>]
+								haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+								keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+						[FInstance:Void -> Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+							haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.K>
+							iterator:Void -> Iterator<haxe.ds.IntMap.T>
+
+	var map(default,ctor):haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>;
+
+	var keys(default,ctor):Iterator<haxe.iterators.HashMapKeyValueIterator.K>;
+
+	public inline function hasNext[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Bool]
+					[Field:Void -> Bool]
+						[Field:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+							[Const:haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] this
+							[FInstance:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+								haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+								keys:Iterator<haxe.iterators.HashMapKeyValueIterator.K>
+						[FAnon:Void -> Bool] hasNext:Void -> Bool
+
+	public inline function next[Function:Void -> { value : haxe.iterators.HashMapKeyValueIterator.V, key : haxe.iterators.HashMapKeyValueIterator.K }]
+		[Block:Dynamic]
+			[Var key(109544):haxe.iterators.HashMapKeyValueIterator.K]
+				[Call:haxe.iterators.HashMapKeyValueIterator.K]
+					[Field:Void -> haxe.iterators.HashMapKeyValueIterator.K]
+						[Field:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+							[Const:haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] this
+							[FInstance:Iterator<haxe.iterators.HashMapKeyValueIterator.K>]
+								haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+								keys:Iterator<haxe.iterators.HashMapKeyValueIterator.K>
+						[FAnon:Void -> haxe.iterators.HashMapKeyValueIterator.K] next:Void -> haxe.iterators.HashMapKeyValueIterator.K
+			[Return:Dynamic]
+				[ObjectDecl:{ value : Null<haxe.iterators.HashMapKeyValueIterator.V>, key : haxe.iterators.HashMapKeyValueIterator.K }]
+					value: [Block:Null<haxe.iterators.HashMapKeyValueIterator.V>]
+						[Var this(109549):haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+							[Field:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+								[Const:haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] this
+								[FInstance:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+									haxe.iterators.HashMapKeyValueIterator<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+									map:haxe.ds.HashMap<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+						[Call:Null<haxe.iterators.HashMapKeyValueIterator.V>]
+							[Field:(key : Int) -> Null<haxe.iterators.HashMapKeyValueIterator.V>]
+								[Field:haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.V>]
+									[Cast:haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>] [Local this(109549):haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>:haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>]
+									[FInstance:haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.V>]
+										haxe.ds._HashMap.HashMapData<haxe.iterators.HashMapKeyValueIterator.K, haxe.iterators.HashMapKeyValueIterator.V>
+										values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+								[FInstance:(key : Int) -> Null<haxe.iterators.HashMapKeyValueIterator.V>]
+									haxe.ds.IntMap<haxe.iterators.HashMapKeyValueIterator.V>
+									get:(key : Int) -> Null<haxe.ds.IntMap.T>
+							[Call:Int]
+								[Field:Void -> Int]
+									[Local key(109544):haxe.iterators.HashMapKeyValueIterator.K:haxe.iterators.HashMapKeyValueIterator.K]
+									[FAnon:Void -> Int] hashCode:Void -> Int
+					key: [Local key(109544):haxe.iterators.HashMapKeyValueIterator.K:haxe.iterators.HashMapKeyValueIterator.K]
+}

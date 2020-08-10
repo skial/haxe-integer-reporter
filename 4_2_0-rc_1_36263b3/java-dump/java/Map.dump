@@ -1,0 +1,2 @@
+@:nativeGen
+typedef Map<K, V> = haxe.ds.Map<Map.K, Map.V>

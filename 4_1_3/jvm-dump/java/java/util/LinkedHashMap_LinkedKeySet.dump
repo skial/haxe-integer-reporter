@@ -1,0 +1,24 @@
+@:realPath("java.util.LinkedHashMap_LinkedKeySet") @:used @:libType @:javaNative @:native("java.util.LinkedHashMap$LinkedKeySet") @:javaCanonical("java.util", "LinkedHashMap.LinkedKeySet")
+extern class java.util.LinkedHashMap$LinkedKeySet extends java.util.AbstractSet<Dynamic> {
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function spliterator():java.util.Spliterator<Dynamic>;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function iterator():java.util.Iterator<Dynamic>;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function size():Int;
+}

@@ -1,0 +1,3 @@
+@:realPath("java.util.Calendar_AvailableCalendarTypes") @:nativeGen @:libType @:javaNative @:native("java.util.Calendar$AvailableCalendarTypes") @:javaCanonical("java.util", "Calendar.AvailableCalendarTypes")
+extern class java.util.Calendar$AvailableCalendarTypes {
+}

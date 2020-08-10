@@ -1,0 +1,19 @@
+@:realPath("java.util.Spliterator_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.Spliterator") @:javaCanonical("java.util", "Spliterator")
+extern class java.util.Spliterator {
+
+	static var ORDERED(default,null):Int;
+
+	static var DISTINCT(default,null):Int;
+
+	static var SORTED(default,null):Int;
+
+	static var SIZED(default,null):Int;
+
+	static var NONNULL(default,null):Int;
+
+	static var IMMUTABLE(default,null):Int;
+
+	static var CONCURRENT(default,null):Int;
+
+	static var SUBSIZED(default,null):Int;
+}

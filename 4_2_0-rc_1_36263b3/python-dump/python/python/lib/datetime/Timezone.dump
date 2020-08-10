@@ -1,0 +1,5 @@
+@:pythonImport("datetime", "timezone")
+extern class python.lib.datetime.Timezone extends python.lib.datetime.Tzinfo {
+
+	static var utc(default,never):python.lib.datetime.Tzinfo;
+}

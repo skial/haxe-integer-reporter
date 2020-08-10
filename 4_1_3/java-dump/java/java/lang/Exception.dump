@@ -1,0 +1,18 @@
+@:realPath("java.lang.Exception") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.Exception") @:javaCanonical("java.lang", "Exception")
+extern class java.lang.Exception extends java.lang.Throwable {
+
+	@:overload @:protected
+	function new(param1:String, param2:java.lang.Throwable, param3:Bool, param4:Bool):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new(param1:String, param2:java.lang.Throwable):Void;
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+}

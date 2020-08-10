@@ -1,0 +1,3 @@
+@:realPath("python.ImportError") @:native("ImportError")
+extern class ImportError extends Exception {
+}

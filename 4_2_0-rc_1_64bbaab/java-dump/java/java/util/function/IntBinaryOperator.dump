@@ -1,0 +1,5 @@
+@:realPath("java.util.function.IntBinaryOperator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.IntBinaryOperator") @:javaCanonical("java.util.function", "IntBinaryOperator")
+extern interface java.util.function.IntBinaryOperator {
+
+	function applyAsInt(param1:Int, param2:Int):Int;
+}

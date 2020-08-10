@@ -1,0 +1,75 @@
+@:realPath("java.nio.charset.CharsetEncoder") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.charset.CharsetEncoder") @:javaCanonical("java.nio.charset", "CharsetEncoder")
+extern class java.nio.charset.CharsetEncoder {
+
+	@:overload @:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single):Void;
+
+	@:overload @:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single, param4:java.NativeArray<java.types.Int8>):Void;
+
+	@:overload
+	function canEncode(param1:java.lang.CharSequence):Bool;
+
+	@:overload
+	function canEncode(param1:java.types.Char16):Bool;
+
+	@:overload @:throws("java.nio.charset.CharacterCodingException")
+	function encode(param1:java.nio.CharBuffer):java.nio.ByteBuffer;
+
+	@:overload
+	function encode(param1:java.nio.CharBuffer, param2:java.nio.ByteBuffer, param3:Bool):java.nio.charset.CoderResult;
+
+	@:overload @:protected
+	function encodeLoop(param1:java.nio.CharBuffer, param2:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	@:overload @:protected
+	function implReset():Void;
+
+	@:overload
+	function reset():java.nio.charset.CharsetEncoder;
+
+	@:overload @:protected
+	function implFlush(param1:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	@:overload
+	function flush(param1:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	@:overload
+	function maxBytesPerChar():Single;
+
+	@:overload
+	function averageBytesPerChar():Single;
+
+	@:overload @:protected
+	function implOnUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):Void;
+
+	@:overload
+	function onUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetEncoder;
+
+	@:overload
+	function unmappableCharacterAction():java.nio.charset.CodingErrorAction;
+
+	@:overload @:protected
+	function implOnMalformedInput(param1:java.nio.charset.CodingErrorAction):Void;
+
+	@:overload
+	function onMalformedInput(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetEncoder;
+
+	@:overload
+	function malformedInputAction():java.nio.charset.CodingErrorAction;
+
+	@:overload
+	function isLegalReplacement(param1:java.NativeArray<java.types.Int8>):Bool;
+
+	@:overload @:protected
+	function implReplaceWith(param1:java.NativeArray<java.types.Int8>):Void;
+
+	@:overload
+	function replaceWith(param1:java.NativeArray<java.types.Int8>):java.nio.charset.CharsetEncoder;
+
+	@:overload
+	function replacement():java.NativeArray<java.types.Int8>;
+
+	@:overload
+	function charset():java.nio.charset.Charset;
+}

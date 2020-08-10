@@ -1,0 +1,3 @@
+@:realPath("python.ResourceWarning") @:native("ResourceWarning")
+extern class ResourceWarning extends Warning {
+}

@@ -1,0 +1,208 @@
+@:directlyUsed @:used @:jsRequire("buffer", "Buffer")
+extern class js.node.buffer.Buffer extends Uint8Array {
+
+	@:deprecated
+	function new(string:String, encoding:Null<String>):Void;
+
+	@:deprecated
+	function new(array:Array<Int>):Void;
+
+	@:deprecated
+	function new(arrayBuffer:ArrayBuffer, byteOffset:Null<Int>, length:Null<Int>):Void;
+
+	@:deprecated
+	function new(buffer:haxe.io.UInt8Array):Void;
+
+	@:deprecated
+	function new(size:Int):Void;
+
+	function compare(target:Uint8Array, targetStart:Null<Int>, targetEnd:Null<Int>, sourceStart:Null<Int>, sourceEnd:Null<Int>):Int;
+
+	function compare(target:Uint8Array):Int;
+
+	function copy(target:Uint8Array, targetStart:Null<Int>, sourceStart:Null<Int>, sourceEnd:Null<Int>):Void;
+
+	function copy(target:Uint8Array):Void;
+
+	function entries():js.node.Iterator<js.node.KeyValue<Int, Int>>;
+
+	function equals(otherBuffer:Uint8Array):Bool;
+
+	function fill(value:String, offset:Null<Int>, end:Null<Int>, encoding:Null<String>):js.node.buffer.Buffer;
+
+	function fill(value:Uint8Array, offset:Null<Int>, end:Null<Int>):js.node.buffer.Buffer;
+
+	function fill(value:Int, offset:Null<Int>, end:Null<Int>):js.node.buffer.Buffer;
+
+	function includes(value:String, byteOffset:Null<Int>, encoding:Null<String>):Bool;
+
+	function includes(value:Uint8Array, byteOffset:Null<Int>):Bool;
+
+	function includes(value:Int, byteOffset:Null<Int>):Bool;
+
+	function indexOf(value:String, byteOffset:Null<Int>, encoding:Null<String>):Int;
+
+	function indexOf(value:Uint8Array, byteOffset:Null<Int>):Int;
+
+	function indexOf(value:Int, byteOffset:Null<Int>):Int;
+
+	function keys():js.node.Iterator<Int>;
+
+	function lastIndexOf(value:String, byteOffset:Null<Int>, encoding:Null<String>):Int;
+
+	function lastIndexOf(value:Uint8Array, byteOffset:Null<Int>):Int;
+
+	function lastIndexOf(value:Int, byteOffset:Null<Int>):Int;
+
+	function readDoubleBE(offset:Null<Int>):Float;
+
+	function readDoubleLE(offset:Null<Int>):Float;
+
+	function readFloatBE(offset:Null<Int>):Float;
+
+	function readFloatLE(offset:Null<Int>):Float;
+
+	function readInt8(offset:Null<Int>):Int;
+
+	function readInt16BE(offset:Null<Int>):Int;
+
+	function readInt16LE(offset:Null<Int>):Int;
+
+	function readInt32BE(offset:Null<Int>):Int;
+
+	function readInt32LE(offset:Null<Int>):Int;
+
+	function readIntBE(offset:Int, byteLength:Int):Int;
+
+	function readIntLE(offset:Int, byteLength:Int):Int;
+
+	function readUInt8(offset:Null<Int>):Int;
+
+	function readUInt16BE(offset:Null<Int>):Int;
+
+	function readUInt16LE(offset:Null<Int>):Int;
+
+	function readUInt32BE(offset:Null<Int>):Int;
+
+	function readUInt32LE(offset:Null<Int>):Int;
+
+	function subarray(start:Null<Int>, end:Null<Int>):js.node.buffer.Buffer;
+
+	function slice(start:Null<Int>, end:Null<Int>):js.node.buffer.Buffer;
+
+	function swap16():js.node.buffer.Buffer;
+
+	function swap32():js.node.buffer.Buffer;
+
+	function swap64():js.node.buffer.Buffer;
+
+	function toJSON():Dynamic;
+
+	function toString():String;
+
+	function toString(encoding:Null<String>, start:Null<Int>, end:Null<Int>):String;
+
+	function values():js.node.Iterator<Int>;
+
+	function write(string:String, offset:Null<Int>, length:Null<Int>, encoding:Null<String>):Int;
+
+	function writeDoubleBE(value:Float, offset:Null<Int>):Void;
+
+	function writeDoubleLE(value:Float, offset:Null<Int>):Void;
+
+	function writeFloatBE(value:Float, offset:Null<Int>):Void;
+
+	function writeFloatLE(value:Float, offset:Null<Int>):Void;
+
+	function writeInt8(value:Int, offset:Null<Int>):Void;
+
+	function writeInt16BE(value:Int, offset:Null<Int>):Void;
+
+	function writeInt16LE(value:Int, offset:Null<Int>):Void;
+
+	function writeInt32BE(value:Int, offset:Null<Int>):Void;
+
+	function writeInt32LE(value:Int, offset:Null<Int>):Void;
+
+	function writeIntBE(value:Int, offset:Int, byteLength:Int):Int;
+
+	function writeIntLE(value:Int, offset:Int, byteLength:Int):Int;
+
+	function writeUInt8(value:Int, offset:Null<Int>):Void;
+
+	function writeUInt16BE(value:Int, offset:Null<Int>):Void;
+
+	function writeUInt16LE(value:Int, offset:Null<Int>):Void;
+
+	function writeUInt32BE(value:Int, offset:Null<Int>):Void;
+
+	function writeUInt32LE(value:Int, offset:Null<Int>):Void;
+
+	inline function hxToBytes():haxe.io.Bytes;
+
+	static function alloc(size:Int):js.node.buffer.Buffer;
+
+	static function alloc(size:Int, fill:String, encoding:Null<String>):js.node.buffer.Buffer;
+
+	static function alloc(size:Int, fill:Uint8Array):js.node.buffer.Buffer;
+
+	static function alloc(size:Int, fill:Int):js.node.buffer.Buffer;
+
+	static function allocUnsafe(size:Int):js.node.buffer.Buffer;
+
+	static function allocUnsafeSlow(size:Int):js.node.buffer.Buffer;
+
+	static function byteLength(string:js.node.buffer.Buffer):Int;
+
+	static function byteLength(string:String, encoding:Null<String>):Int;
+
+	static function byteLength(string:js.lib.ArrayBufferView):Int;
+
+	static function byteLength(string:ArrayBuffer):Int;
+
+	@:has_untyped @:deprecated("In haxe 3.3+, use Buffer.byteLength instead!")
+	static inline function _byteLength(string:String, encoding:Null<String>):Int;
+
+	@:realPath("compareBuffers") @:native("compare")
+	static function compare(buf1:Uint8Array, buf2:Uint8Array):Int;
+
+	static function concat<T:Uint8Array>(list:Array<concat.T>, totalLength:Null<Int>):js.node.buffer.Buffer;
+
+	static function from(string:String, encoding:Null<String>):js.node.buffer.Buffer;
+
+	static function from(array:Array<Int>):js.node.buffer.Buffer;
+
+	static function from(arrayBuffer:ArrayBuffer, byteOffset:Null<Int>, length:Null<Int>):js.node.buffer.Buffer;
+
+	static function from(buffer:Uint8Array):js.node.buffer.Buffer;
+
+	static function from(object:{ }, offset:Null<Int>, length:Null<Int>):js.node.buffer.Buffer;
+
+	static function from(object:{ }, encoding:Null<String>, length:Null<Int>):js.node.buffer.Buffer;
+
+	static function isBuffer(obj:Dynamic):Bool;
+
+	static function isEncoding(encoding:String):Bool;
+
+	static var poolSize:Int;
+
+	static var byteOffset(default,null):Int;
+
+	static var INSPECT_MAX_BYTES(get,set):Int;
+
+	static inline function get_INSPECT_MAX_BYTES():Int;
+
+	static inline function set_INSPECT_MAX_BYTES(bytes:Int):Int;
+
+	static var kMaxLength(get,never):Int;
+
+	static inline function get_kMaxLength():Int;
+
+	static inline function transcode(source:Uint8Array, fromEnc:String, toEnc:String):js.node.buffer.Buffer;
+
+	static var constants(default,never):js.node.buffer.BufferConstants;
+
+	static inline function get_constants():js.node.buffer.BufferConstants;
+
+	static inline function hxFromBytes(b:haxe.io.Bytes):js.node.buffer.Buffer;
+}

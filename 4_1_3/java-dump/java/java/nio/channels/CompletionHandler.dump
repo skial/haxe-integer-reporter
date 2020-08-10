@@ -1,0 +1,9 @@
+@:realPath("java.nio.channels.CompletionHandler") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.channels.CompletionHandler") @:javaCanonical("java.nio.channels", "CompletionHandler")
+extern interface java.nio.channels.CompletionHandler<V : java.nio.channels.CompletionHandler.V,A : java.nio.channels.CompletionHandler.A> {
+
+	@:overload
+	function failed(param1:java.lang.Throwable, param2:java.nio.channels.CompletionHandler.A):Void;
+
+	@:overload
+	function completed(param1:java.nio.channels.CompletionHandler.V, param2:java.nio.channels.CompletionHandler.A):Void;
+}

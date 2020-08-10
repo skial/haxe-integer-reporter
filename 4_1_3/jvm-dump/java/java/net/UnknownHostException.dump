@@ -1,0 +1,9 @@
+@:realPath("java.net.UnknownHostException") @:libType @:javaNative @:native("java.net.UnknownHostException") @:javaCanonical("java.net", "UnknownHostException")
+extern class java.net.UnknownHostException extends java.io.IOException {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+}

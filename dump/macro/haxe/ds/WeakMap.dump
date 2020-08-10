@@ -1,0 +1,43 @@
+class haxe.ds.WeakMap<K : haxe.ds.WeakMap.K,V : haxe.ds.WeakMap.V> implements haxe.IMap<haxe.ds.WeakMap.K, haxe.ds.WeakMap.V> {
+
+	public function new[Function:Void -> Void]
+		[Block:Unknown<39>]
+			[Throw:Unknown<39>]
+				[Throw:Unknown<39>]
+					[Call:Any]
+						[Field:(value : Any) -> Any]
+							[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+							[FStatic:(value : Any) -> Any]
+								haxe.Exception
+								thrown:(value : Any) -> Any
+						[Const:String] "Not implemented for this platform"
+
+	public function set[Function:(key : haxe.ds.WeakMap.K, value : haxe.ds.WeakMap.V) -> Void]
+		[Arg:haxe.ds.WeakMap.K] [Local key(109564):haxe.ds.WeakMap.K]
+		[Arg:haxe.ds.WeakMap.V] [Local value(109565):haxe.ds.WeakMap.V]
+		[Block:Void]
+
+	public function get[Function:(key : haxe.ds.WeakMap.K) -> Null<haxe.ds.WeakMap.V>]
+		[Arg:haxe.ds.WeakMap.K] [Local key(109566):haxe.ds.WeakMap.K]
+		[Block:Dynamic] [Return:Dynamic] [Const:Null<haxe.ds.WeakMap.V>] null
+
+	public function exists[Function:(key : haxe.ds.WeakMap.K) -> Bool]
+		[Arg:haxe.ds.WeakMap.K] [Local key(109567):haxe.ds.WeakMap.K]
+		[Block:Dynamic] [Return:Dynamic] [Const:Bool] false
+
+	public function remove[Function:(key : haxe.ds.WeakMap.K) -> Bool]
+		[Arg:haxe.ds.WeakMap.K] [Local key(109568):haxe.ds.WeakMap.K]
+		[Block:Dynamic] [Return:Dynamic] [Const:Bool] false
+
+	public function keys[Function:Void -> Iterator<haxe.ds.WeakMap.K>] [Block:Dynamic] [Return:Dynamic] [Const:Iterator<haxe.ds.WeakMap.K>] null
+
+	public function iterator[Function:Void -> Iterator<haxe.ds.WeakMap.V>] [Block:Dynamic] [Return:Dynamic] [Const:Iterator<haxe.ds.WeakMap.V>] null
+
+	public inline function keyValueIterator[Function:Void -> KeyValueIterator<haxe.ds.WeakMap.K, haxe.ds.WeakMap.V>] [Block:Dynamic] [Return:Dynamic] [Const:KeyValueIterator<haxe.ds.WeakMap.K, haxe.ds.WeakMap.V>] null
+
+	public function copy[Function:Void -> haxe.ds.WeakMap<haxe.ds.WeakMap.K, haxe.ds.WeakMap.V>] [Block:Dynamic] [Return:Dynamic] [Const:haxe.ds.WeakMap<haxe.ds.WeakMap.K, haxe.ds.WeakMap.V>] null
+
+	public function toString[Function:Void -> String] [Block:Dynamic] [Return:Dynamic] [Const:String] null
+
+	public function clear[Function:Void -> Void] [Block:Void]
+}

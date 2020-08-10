@@ -1,0 +1,31 @@
+@:realPath("java.internal._StringExt.StringRefl") @:used @:nativeGen @:keep @:nativeGen @:native("haxe.lang.StringRefl")
+private class haxe.lang.StringRefl {
+
+	@:value(["length", "toUpperCase", "toLowerCase", "charAt", "charCodeAt", "indexOf", "lastIndexOf", "split", "substr", "substring"])
+	public static var fields:Array<String> = ["length", "toUpperCase", "toLowerCase", "charAt", "charCodeAt", "indexOf", "lastIndexOf", "split", "substr", "substring"];
+
+	public static function handleGetField(str:java.internal._StringExt.NativeString, f:java.internal._StringExt.NativeString, throwErrors:Bool) {
+		switch ((f)) {
+			case "length": return str.length;
+			case "charAt", "charCodeAt", "indexOf", "lastIndexOf", "split", "substr", "substring", "toLowerCase", "toUpperCase": return new haxe.lang.Closure(str, f);
+			default: if ((throwErrors)) throw cast haxe.Exception.thrown("Field not found: '" + f + "' in String") else return null
+		};
+	}
+
+	public static function handleCallField(str:java.internal._StringExt.NativeString, f:java.internal._StringExt.NativeString, args:java.NativeArray<Dynamic>) {
+		var _args;
+		if ((args == null)) _args = java.NativeArray.make(str) else {
+			_args = new java.NativeArray(args.length + 1);
+			_args[0] = str;
+			{
+				var _g = 0;
+				var _g1 = args.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					_args[i + 1] = args[i];
+				};
+			};
+		};
+		return haxe.lang.Runtime.slowCallField(haxe.lang.StringExt, f, _args);
+	}
+}

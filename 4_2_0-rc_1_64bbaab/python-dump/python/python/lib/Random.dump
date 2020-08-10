@@ -1,0 +1,41 @@
+@:pythonImport("random")
+extern class python.lib.Random {
+
+	static function seed(a:Null<Int>, version:Null<Int>):Float;
+
+	static function getstate():python.lib.RandomState;
+
+	static function setstate(state:python.lib.RandomState):Void;
+
+	static function getrandbits(k:Int):Int;
+
+	static function randrange(start:Int, stop:Int, step:Null<Int>):Int;
+
+	static function randrange(stop:Int):Int;
+
+	static function randint(a:Int, b:Int):Int;
+
+	static function random():Float;
+
+	static function uniform(a:Float, b:Float):Float;
+
+	static function triangular(low:Null<Float>, high:Null<Float>, mode:Null<Float>):Float;
+
+	static function betavariate(alpha:Float, beta:Float):Float;
+
+	static function expovariate(lambd:Float):Float;
+
+	static function gammavariate(alpha:Float, beta:Float):Float;
+
+	static function gauss(mu:Float, sigma:Float):Float;
+
+	static function lognormvariate(mu:Float, sigma:Float):Float;
+
+	static function normalvariate(mu:Float, sigma:Float):Float;
+
+	static function vonmisesvariate(mu:Float, kappa:Float):Float;
+
+	static function paretovariate(alpha:Float):Float;
+
+	static function weibullvariate(alpha:Float, beta:Float):Float;
+}

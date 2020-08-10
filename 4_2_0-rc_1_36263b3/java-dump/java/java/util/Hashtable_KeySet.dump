@@ -1,0 +1,13 @@
+@:realPath("java.util.Hashtable_KeySet") @:used @:nativeGen @:libType @:javaNative @:native("java.util.Hashtable$KeySet") @:javaCanonical("java.util", "Hashtable.KeySet")
+extern class java.util.Hashtable$KeySet extends java.util.AbstractSet<Dynamic> {
+
+	function clear():Void;
+
+	function remove(param1:Dynamic):Bool;
+
+	function contains(param1:Dynamic):Bool;
+
+	function size():Int;
+
+	function iterator():java.util.Iterator<Dynamic>;
+}

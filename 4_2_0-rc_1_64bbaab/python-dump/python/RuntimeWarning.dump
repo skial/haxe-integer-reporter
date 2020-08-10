@@ -1,0 +1,3 @@
+@:realPath("python.RuntimeWarning") @:native("RuntimeWarning")
+extern class RuntimeWarning extends Warning {
+}

@@ -1,0 +1,15 @@
+@:realPath("java.security.Timestamp") @:nativeGen @:libType @:javaNative @:native("java.security.Timestamp") @:javaCanonical("java.security", "Timestamp")
+extern class java.security.Timestamp implements java.io.Serializable {
+
+	function new(param1:java.util.Date, param2:java.security.cert.CertPath):Void;
+
+	function toString():String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function getSignerCertPath():java.security.cert.CertPath;
+
+	function getTimestamp():java.util.Date;
+}

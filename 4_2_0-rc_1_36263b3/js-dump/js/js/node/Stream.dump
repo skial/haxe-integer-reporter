@@ -1,0 +1,25 @@
+@:used @:jsRequire("stream")
+extern class js.node.Stream<TSelf:js.node.Stream<js.node.Stream.TSelf>> extends js.node.events.EventEmitter<js.node.Stream.TSelf> {
+
+	function new():Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, streams:haxe.extern.Rest<js.node.stream.IWritable>):Promise<Void>;
+
+	static function pipeline(readable:js.node.stream.IReadable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, writable4:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, writable4:js.node.stream.IWritable, writable5:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, writable4:js.node.stream.IWritable, writable5:js.node.stream.IWritable, writable6:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, writable4:js.node.stream.IWritable, writable5:js.node.stream.IWritable, writable6:js.node.stream.IWritable, writable7:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+
+	static function pipeline(readable:js.node.stream.IReadable, writable1:js.node.stream.IWritable, writable2:js.node.stream.IWritable, writable3:js.node.stream.IWritable, writable4:js.node.stream.IWritable, writable5:js.node.stream.IWritable, writable6:js.node.stream.IWritable, writable7:js.node.stream.IWritable, writable8:js.node.stream.IWritable, callback:Null<Error> -> Void):Void;
+}

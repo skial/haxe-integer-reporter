@@ -1,0 +1,3 @@
+@:realPath("python.InterruptedError") @:native("InterruptedError")
+extern class InterruptedError extends OSError {
+}

@@ -1,0 +1,120 @@
+@:realPath("java.nio.CharBuffer") @:used @:abstract @:libType @:javaNative @:native("java.nio.CharBuffer") @:javaCanonical("java.nio", "CharBuffer")
+extern class java.nio.CharBuffer extends java.nio.Buffer implements java.lang.Readable implements java.lang.CharSequence implements java.lang.Appendable implements java.lang.Comparable<java.nio.CharBuffer> {
+
+	@:overload
+	function subSequence(param1:Int, param2:Int):java.nio.CharBuffer;
+
+	@:overload
+	function append(param1:java.lang.CharSequence):java.nio.CharBuffer;
+
+	@:overload
+	function append(param1:java.types.Char16):java.nio.CharBuffer;
+
+	@:overload
+	function append(param1:java.lang.CharSequence, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.nio.CharBuffer):Int;
+
+	@:overload
+	function array():java.NativeArray<java.types.Char16>;
+
+	@:overload
+	function chars():java.util.stream.IntStream;
+
+	@:overload
+	function order():java.nio.ByteOrder;
+
+	@:overload
+	function charAt(param1:Int):java.types.Char16;
+
+	@:overload
+	function length():Int;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function isDirect():Bool;
+
+	@:overload
+	function compact():java.nio.CharBuffer;
+
+	@:overload
+	function arrayOffset():Int;
+
+	@:overload
+	function hasArray():Bool;
+
+	@:overload
+	function put(param1:java.lang.String):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:java.types.Char16):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:Int, param2:java.types.Char16):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:java.nio.CharBuffer):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:java.NativeArray<java.types.Char16>):java.nio.CharBuffer;
+
+	@:overload
+	function put(param1:java.lang.String, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Char16>):java.nio.CharBuffer;
+
+	@:overload
+	function get():java.types.Char16;
+
+	@:overload
+	function get(param1:Int):java.types.Char16;
+
+	@:overload
+	function get(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	function asReadOnlyBuffer():java.nio.CharBuffer;
+
+	@:overload
+	function duplicate():java.nio.CharBuffer;
+
+	@:overload
+	function slice():java.nio.CharBuffer;
+
+	@:overload @:throws("java.io.IOException")
+	function read(param1:java.nio.CharBuffer):Int;
+
+	@:overload
+	function codePoints():java.util.stream.IntStream;
+
+	@:overload
+	static function wrap(param1:java.lang.CharSequence):java.nio.CharBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<java.types.Char16>):java.nio.CharBuffer;
+
+	@:overload
+	static function wrap(param1:java.lang.CharSequence, param2:Int, param3:Int):java.nio.CharBuffer;
+
+	@:overload
+	static function allocate(param1:Int):java.nio.CharBuffer;
+}

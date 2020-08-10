@@ -1,0 +1,41 @@
+@:realPath("java.net.URLStreamHandler") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.URLStreamHandler") @:javaCanonical("java.net", "URLStreamHandler")
+extern class java.net.URLStreamHandler {
+
+	function new():Void;
+
+	@:deprecated @:protected
+	function setURL(param1:java.net.URL, param2:String, param3:String, param4:Int, param5:String, param6:String):Void;
+
+	@:protected
+	function setURL(param1:java.net.URL, param2:String, param3:String, param4:Int, param5:String, param6:String, param7:String, param8:String, param9:String):Void;
+
+	@:protected
+	function toExternalForm(param1:java.net.URL):String;
+
+	@:protected
+	function hostsEqual(param1:java.net.URL, param2:java.net.URL):Bool;
+
+	@:protected
+	function getHostAddress(param1:java.net.URL):java.net.InetAddress;
+
+	@:protected
+	function sameFile(param1:java.net.URL, param2:java.net.URL):Bool;
+
+	@:protected
+	function hashCode(param1:java.net.URL):Int;
+
+	@:protected
+	function equals(param1:java.net.URL, param2:java.net.URL):Bool;
+
+	@:protected
+	function getDefaultPort():Int;
+
+	@:protected
+	function parseURL(param1:java.net.URL, param2:String, param3:Int, param4:Int):Void;
+
+	@:throws("java.io.IOException") @:protected
+	function openConnection(param1:java.net.URL, param2:java.net.Proxy):java.net.URLConnection;
+
+	@:throws("java.io.IOException") @:protected
+	function openConnection(param1:java.net.URL):java.net.URLConnection;
+}

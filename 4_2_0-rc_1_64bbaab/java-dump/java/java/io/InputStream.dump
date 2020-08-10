@@ -1,0 +1,30 @@
+@:realPath("java.io.InputStream") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.InputStream") @:javaCanonical("java.io", "InputStream")
+extern class java.io.InputStream implements java.io.Closeable {
+
+	function new():Void;
+
+	function markSupported():Bool;
+
+	@:throws("java.io.IOException")
+	function reset():Void;
+
+	function mark(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	@:throws("java.io.IOException")
+	function available():Int;
+
+	@:throws("java.io.IOException")
+	function skip(param1:haxe.Int64):haxe.Int64;
+
+	@:throws("java.io.IOException")
+	function read(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Int;
+
+	@:throws("java.io.IOException")
+	function read():Int;
+
+	@:throws("java.io.IOException")
+	function read(param1:java.NativeArray<java.types.Int8>):Int;
+}

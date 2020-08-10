@@ -1,0 +1,57 @@
+@:realPath("java.util.Properties") @:used @:libType @:javaNative @:native("java.util.Properties") @:javaCanonical("java.util", "Properties")
+extern class java.util.Properties extends java.util.Hashtable<Dynamic, Dynamic> {
+
+	@:overload
+	function new(param1:java.util.Properties):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function list(param1:java.io.PrintWriter):Void;
+
+	@:overload
+	function list(param1:java.io.PrintStream):Void;
+
+	@:overload
+	function stringPropertyNames():java.util.Set<java.lang.String>;
+
+	@:overload
+	function propertyNames():java.util.Enumeration<Dynamic>;
+
+	@:overload
+	function getProperty(param1:java.lang.String, param2:java.lang.String):java.lang.String;
+
+	@:overload
+	function getProperty(param1:java.lang.String):java.lang.String;
+
+	@:overload @:throws("java.io.IOException")
+	function storeToXML(param1:java.io.OutputStream, param2:java.lang.String, param3:java.lang.String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function storeToXML(param1:java.io.OutputStream, param2:java.lang.String):Void;
+
+	@:overload @:throws("java.util.InvalidPropertiesFormatException") @:throws("java.io.IOException")
+	function loadFromXML(param1:java.io.InputStream):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function store(param1:java.io.OutputStream, param2:java.lang.String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function store(param1:java.io.Writer, param2:java.lang.String):Void;
+
+	@:overload @:deprecated
+	function save(param1:java.io.OutputStream, param2:java.lang.String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function load(param1:java.io.InputStream):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function load(param1:java.io.Reader):Void;
+
+	@:overload
+	function setProperty(param1:java.lang.String, param2:java.lang.String):Dynamic;
+
+	@:protected
+	var defaults:java.util.Properties;
+}

@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.stream.WritableEvent<T:haxe.Function> to js.node.events.Event<js.node.stream.WritableEvent.T> {}

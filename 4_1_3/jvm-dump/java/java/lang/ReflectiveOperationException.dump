@@ -1,0 +1,15 @@
+@:realPath("java.lang.ReflectiveOperationException") @:used @:libType @:javaNative @:native("java.lang.ReflectiveOperationException") @:javaCanonical("java.lang", "ReflectiveOperationException")
+extern class java.lang.ReflectiveOperationException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+}

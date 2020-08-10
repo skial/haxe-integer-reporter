@@ -1,0 +1,9 @@
+@:used @:enum
+private extern class js.node.events._EventEmitter.EventEmitterEvent_Impl_ {
+
+	@:value(cast "newListener") @:enum @:impl
+	static inline var NewListener:js.node.events.EventEmitterEvent<(eventName : haxe.extern.EitherType<String, Symbol>, listener : haxe.Function) -> Void> = cast "newListener";
+
+	@:value(cast "removeListener") @:enum @:impl
+	static inline var RemoveListener:js.node.events.EventEmitterEvent<(eventName : haxe.extern.EitherType<String, Symbol>, listener : haxe.Function) -> Void> = cast "removeListener";
+}

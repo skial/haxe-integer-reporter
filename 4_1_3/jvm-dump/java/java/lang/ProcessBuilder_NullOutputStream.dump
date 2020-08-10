@@ -1,0 +1,6 @@
+@:realPath("java.lang.ProcessBuilder_NullOutputStream") @:used @:libType @:javaNative @:native("java.lang.ProcessBuilder$NullOutputStream") @:javaCanonical("java.lang", "ProcessBuilder.NullOutputStream")
+extern class java.lang.ProcessBuilder$NullOutputStream extends java.io.OutputStream {
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:Int):Void;
+}

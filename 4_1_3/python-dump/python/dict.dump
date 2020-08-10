@@ -1,0 +1,44 @@
+@:realPath("python.Dict") @:native("dict")
+extern class dict<K : python.Dict.K,V : python.Dict.V> {
+
+	function new():Void;
+
+	var length(get,never):Int;
+
+	inline function get_length():Int;
+
+	function get(key:python.Dict.K, def:Null<python.Dict.V>):python.Dict.V;
+
+	inline function getSafe(key:python.Dict.K):python.Dict.V;
+
+	inline function set(key:python.Dict.K, val:python.Dict.V):Void;
+
+	inline function remove(key:python.Dict.K):Void;
+
+	inline function hasKey(k:python.Dict.K):Bool;
+
+	function clear():Void;
+
+	function copy():dict<python.Dict.K, python.Dict.V>;
+
+	function items():python.DictView<tuple<python.Dict.K, python.Dict.V>>;
+
+	function keys():python.DictView<python.Dict.K>;
+
+	function pop(key:python.Dict.K, def:Null<python.Dict.V>):python.Dict.V;
+
+	function popitem():tuple<python.Dict.K, python.Dict.V>;
+
+	function setdefault(key:python.Dict.K, def:Null<python.Dict.V>):python.Dict.V;
+
+	function update(d:dict<python.Dict.K, python.Dict.V>):Void;
+
+	function values():python.DictView<python.Dict.V>;
+
+	inline function iter():python.NativeIterator<python.Dict.K>;
+
+	inline function iterator():Iterator<python.Dict.V>;
+
+	@:maybeUsed
+	function __iter__():python.NativeIterator<python.Dict.K>;
+}

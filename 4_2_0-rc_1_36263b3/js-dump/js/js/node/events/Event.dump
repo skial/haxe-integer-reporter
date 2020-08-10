@@ -1,0 +1,2 @@
+@:used
+abstract js.node.events.Event<T:haxe.Function> from String  from Symbol to String  to Symbol {}

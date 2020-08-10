@@ -1,0 +1,624 @@
+class haxe.ds.List<T : haxe.ds.List.T> {
+
+	public function new[Function:Void -> Void]
+		[Block:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:Int]
+						haxe.ds.List<haxe.ds.List.T>
+						length:Int
+				=
+				[Const:Int] 0
+
+	var h:haxe.ds._List.ListNode<haxe.ds.List.T>;
+
+	var q:haxe.ds._List.ListNode<haxe.ds.List.T>;
+
+	public var length(default,null):Int;
+
+	public function add[Function:(item : haxe.ds.List.T) -> Void]
+		[Arg:haxe.ds.List.T] [Local item(112269):haxe.ds.List.T]
+		[Block:Int]
+			[Var x(112278):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Var next(112277):haxe.ds._List.ListNode<haxe.ds.List.T>] [Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+					[New:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds._List.ListNode<haxe.ds.List.T>
+						[Local item(112269):haxe.ds.List.T:haxe.ds.List.T]
+						[Local next(112277):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[If:Void]
+				[Binop:Bool]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					==
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Then:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								h:haxe.ds._List.ListNode<haxe.ds.List.T>
+						=
+						[Local x(112278):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Else:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[Const:haxe.ds.List<haxe.ds.List.T>] this
+								[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									haxe.ds.List<haxe.ds.List.T>
+									q:haxe.ds._List.ListNode<haxe.ds.List.T>
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+						=
+						[Local x(112278):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						q:haxe.ds._List.ListNode<haxe.ds.List.T>
+				=
+				[Local x(112278):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[Unop:Int]
+				++
+				Postfix
+				[Field:Int]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:Int]
+						haxe.ds.List<haxe.ds.List.T>
+						length:Int
+
+	public function push[Function:(item : haxe.ds.List.T) -> Void]
+		[Arg:haxe.ds.List.T] [Local item(112279):haxe.ds.List.T]
+		[Block:Int]
+			[Var x(112284):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Var next(112283):haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					[New:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds._List.ListNode<haxe.ds.List.T>
+						[Local item(112279):haxe.ds.List.T:haxe.ds.List.T]
+						[Local next(112283):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+				=
+				[Local x(112284):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[If:Void]
+				[Binop:Bool]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							q:haxe.ds._List.ListNode<haxe.ds.List.T>
+					==
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Then:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								q:haxe.ds._List.ListNode<haxe.ds.List.T>
+						=
+						[Local x(112284):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+			[Unop:Int]
+				++
+				Postfix
+				[Field:Int]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:Int]
+						haxe.ds.List<haxe.ds.List.T>
+						length:Int
+
+	public function first[Function:Void -> Null<haxe.ds.List.T>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[If:Null<haxe.ds.List.T>]
+					[Binop:Bool]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								h:haxe.ds._List.ListNode<haxe.ds.List.T>
+						==
+						[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+					[Then:Null<haxe.ds.List.T>] [Block:Null<haxe.ds.List.T>] [Const:Null<haxe.ds.List.T>] null
+					[Else:haxe.ds.List.T] [Block:haxe.ds.List.T]
+						[Field:haxe.ds.List.T]
+							[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[Const:haxe.ds.List<haxe.ds.List.T>] this
+								[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									haxe.ds.List<haxe.ds.List.T>
+									h:haxe.ds._List.ListNode<haxe.ds.List.T>
+							[FInstance:haxe.ds.List.T]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								item:haxe.ds._List.ListNode.T
+
+	public function last[Function:Void -> Null<haxe.ds.List.T>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[If:Null<haxe.ds.List.T>]
+					[Binop:Bool]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								q:haxe.ds._List.ListNode<haxe.ds.List.T>
+						==
+						[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+					[Then:Null<haxe.ds.List.T>] [Block:Null<haxe.ds.List.T>] [Const:Null<haxe.ds.List.T>] null
+					[Else:haxe.ds.List.T] [Block:haxe.ds.List.T]
+						[Field:haxe.ds.List.T]
+							[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[Const:haxe.ds.List<haxe.ds.List.T>] this
+								[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									haxe.ds.List<haxe.ds.List.T>
+									q:haxe.ds._List.ListNode<haxe.ds.List.T>
+							[FInstance:haxe.ds.List.T]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								item:haxe.ds._List.ListNode.T
+
+	public function pop[Function:Void -> Null<haxe.ds.List.T>]
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					==
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Null<haxe.ds.List.T>] null
+			[Var x(112285):haxe.ds.List.T]
+				[Field:haxe.ds.List.T]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					[FInstance:haxe.ds.List.T]
+						haxe.ds._List.ListNode<haxe.ds.List.T>
+						item:haxe.ds._List.ListNode.T
+			[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+				=
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds._List.ListNode<haxe.ds.List.T>
+						next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+			[If:Void]
+				[Binop:Bool]
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+					==
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Then:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								q:haxe.ds._List.ListNode<haxe.ds.List.T>
+						=
+						[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+			[Unop:Int]
+				--
+				Postfix
+				[Field:Int]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:Int]
+						haxe.ds.List<haxe.ds.List.T>
+						length:Int
+			[Return:Dynamic] [Local x(112285):haxe.ds.List.T:haxe.ds.List.T]
+
+	public function isEmpty[Function:Void -> Bool]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Const:haxe.ds.List<haxe.ds.List.T>] this
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds.List<haxe.ds.List.T>
+								h:haxe.ds._List.ListNode<haxe.ds.List.T>
+						==
+						[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+
+	public function clear[Function:Void -> Void]
+		[Block:Int]
+			[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+				=
+				[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+			[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						q:haxe.ds._List.ListNode<haxe.ds.List.T>
+				=
+				[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+			[Binop:Int]
+				[Field:Int]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:Int]
+						haxe.ds.List<haxe.ds.List.T>
+						length:Int
+				=
+				[Const:Int] 0
+
+	public function remove[Function:(v : haxe.ds.List.T) -> Bool]
+		[Arg:haxe.ds.List.T] [Local v(112286):haxe.ds.List.T]
+		[Block:Dynamic]
+			[Var prev(112287):haxe.ds._List.ListNode<haxe.ds.List.T>] [Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+			[Var l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+			[While:Void]
+				[Binop:Bool]
+					[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					!=
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[If:Void]
+						[Binop:Bool]
+							[Field:haxe.ds.List.T]
+								[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[FInstance:haxe.ds.List.T]
+									haxe.ds._List.ListNode<haxe.ds.List.T>
+									item:haxe.ds._List.ListNode.T
+							==
+							[Local v(112286):haxe.ds.List.T:haxe.ds.List.T]
+						[Then:Dynamic] [Block:Dynamic]
+							[If:Void]
+								[Binop:Bool]
+									[Local prev(112287):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									==
+									[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+								[Then:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+										[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[Const:haxe.ds.List<haxe.ds.List.T>] this
+											[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+												haxe.ds.List<haxe.ds.List.T>
+												h:haxe.ds._List.ListNode<haxe.ds.List.T>
+										=
+										[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+												haxe.ds._List.ListNode<haxe.ds.List.T>
+												next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+								[Else:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+										[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[Local prev(112287):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+												haxe.ds._List.ListNode<haxe.ds.List.T>
+												next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+										=
+										[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+												haxe.ds._List.ListNode<haxe.ds.List.T>
+												next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+							[If:Void]
+								[Binop:Bool]
+									[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+										[Const:haxe.ds.List<haxe.ds.List.T>] this
+										[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											haxe.ds.List<haxe.ds.List.T>
+											q:haxe.ds._List.ListNode<haxe.ds.List.T>
+									==
+									[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[Then:haxe.ds._List.ListNode<haxe.ds.List.T>] [Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+									[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+										[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+											[Const:haxe.ds.List<haxe.ds.List.T>] this
+											[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+												haxe.ds.List<haxe.ds.List.T>
+												q:haxe.ds._List.ListNode<haxe.ds.List.T>
+										=
+										[Local prev(112287):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Unop:Int]
+								--
+								Postfix
+								[Field:Int]
+									[Const:haxe.ds.List<haxe.ds.List.T>] this
+									[FInstance:Int]
+										haxe.ds.List<haxe.ds.List.T>
+										length:Int
+							[Return:Dynamic] [Const:Bool] true
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local prev(112287):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Local l(112288):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+			[Return:Dynamic] [Const:Bool] false
+
+	public inline function iterator[Function:Void -> haxe.ds._List.ListIterator<haxe.ds.List.T>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[New:haxe.ds._List.ListIterator<haxe.ds.List.T>]
+					haxe.ds._List.ListIterator<haxe.ds.List.T>
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+
+	@:pure @:runtime
+	public inline function keyValueIterator[Function:Void -> haxe.ds._List.ListKeyValueIterator<haxe.ds.List.T>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[New:haxe.ds._List.ListKeyValueIterator<haxe.ds.List.T>]
+					haxe.ds._List.ListKeyValueIterator<haxe.ds.List.T>
+					[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Const:haxe.ds.List<haxe.ds.List.T>] this
+						[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							haxe.ds.List<haxe.ds.List.T>
+							h:haxe.ds._List.ListNode<haxe.ds.List.T>
+
+	public function toString[Function:Void -> String]
+		[Block:Dynamic]
+			[Var s(112291):StringBuf] [New:StringBuf] StringBuf
+			[Var first(112292):Bool] [Const:Bool] true
+			[Var l(112293):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+			[Call:Void]
+				[Field:(x : String) -> Void]
+					[Local s(112291):StringBuf:StringBuf]
+					[FInstance:(x : String) -> Void]
+						StringBuf
+						add:(x : add.T) -> Void
+				[Const:String] "{"
+			[While:Void]
+				[Binop:Bool]
+					[Local l(112293):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					!=
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[If:Void]
+						[Local first(112292):Bool:Bool]
+						[Then:Bool] [Block:Bool]
+							[Binop:Bool]
+								[Local first(112292):Bool:Bool]
+								=
+								[Const:Bool] false
+						[Else:Void] [Block:Void]
+							[Call:Void]
+								[Field:(x : String) -> Void]
+									[Local s(112291):StringBuf:StringBuf]
+									[FInstance:(x : String) -> Void]
+										StringBuf
+										add:(x : add.T) -> Void
+								[Const:String] ", "
+					[Call:Void]
+						[Field:(x : String) -> Void]
+							[Local s(112291):StringBuf:StringBuf]
+							[FInstance:(x : String) -> Void]
+								StringBuf
+								add:(x : add.T) -> Void
+						[Call:String]
+							[Field:(s : Dynamic) -> String]
+								[TypeExpr Std:Class<Std>]
+								[FStatic:(s : Dynamic) -> String]
+									Std
+									string:(s : Dynamic) -> String
+							[Field:haxe.ds.List.T]
+								[Local l(112293):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								[FInstance:haxe.ds.List.T]
+									haxe.ds._List.ListNode<haxe.ds.List.T>
+									item:haxe.ds._List.ListNode.T
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local l(112293):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Local l(112293):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+			[Call:Void]
+				[Field:(x : String) -> Void]
+					[Local s(112291):StringBuf:StringBuf]
+					[FInstance:(x : String) -> Void]
+						StringBuf
+						add:(x : add.T) -> Void
+				[Const:String] "}"
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local s(112291):StringBuf:StringBuf]
+						[FInstance:Void -> String]
+							StringBuf
+							toString:Void -> String
+
+	public function join[Function:(sep : String) -> String]
+		[Arg:String] [Local sep(112294):String]
+		[Block:Dynamic]
+			[Var s(112295):StringBuf] [New:StringBuf] StringBuf
+			[Var first(112296):Bool] [Const:Bool] true
+			[Var l(112297):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+			[While:Void]
+				[Binop:Bool]
+					[Local l(112297):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					!=
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Block:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[If:Void]
+						[Local first(112296):Bool:Bool]
+						[Then:Bool] [Block:Bool]
+							[Binop:Bool]
+								[Local first(112296):Bool:Bool]
+								=
+								[Const:Bool] false
+						[Else:Void] [Block:Void]
+							[Call:Void]
+								[Field:(x : String) -> Void]
+									[Local s(112295):StringBuf:StringBuf]
+									[FInstance:(x : String) -> Void]
+										StringBuf
+										add:(x : add.T) -> Void
+								[Local sep(112294):String:String]
+					[Call:Void]
+						[Field:(x : haxe.ds.List.T) -> Void]
+							[Local s(112295):StringBuf:StringBuf]
+							[FInstance:(x : haxe.ds.List.T) -> Void]
+								StringBuf
+								add:(x : add.T) -> Void
+						[Field:haxe.ds.List.T]
+							[Local l(112297):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds.List.T]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								item:haxe.ds._List.ListNode.T
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local l(112297):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Local l(112297):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[Local s(112295):StringBuf:StringBuf]
+						[FInstance:Void -> String]
+							StringBuf
+							toString:Void -> String
+
+	public function filter[Function:(f : (haxe.ds.List.T -> Bool)) -> haxe.ds.List<haxe.ds.List.T>]
+		[Arg:haxe.ds.List.T -> Bool] [Local f(112298):haxe.ds.List.T -> Bool]
+		[Block:Dynamic]
+			[Var l2(112299):haxe.ds.List<haxe.ds.List.T>] [New:haxe.ds.List<haxe.ds.List.T>] haxe.ds.List<haxe.ds.List.T>
+			[Var l(112300):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+			[While:Void]
+				[Binop:Bool]
+					[Local l(112300):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					!=
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Block:Void]
+					[Var v(112301):haxe.ds.List.T]
+						[Field:haxe.ds.List.T]
+							[Local l(112300):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds.List.T]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								item:haxe.ds._List.ListNode.T
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local l(112300):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Local l(112300):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+					[If:Void]
+						[Call:Bool]
+							[Local f(112298):haxe.ds.List.T -> Bool:haxe.ds.List.T -> Bool]
+							[Local v(112301):haxe.ds.List.T:haxe.ds.List.T]
+						[Then:Void] [Block:Void]
+							[Call:Void]
+								[Field:(item : haxe.ds.List.T) -> Void]
+									[Local l2(112299):haxe.ds.List<haxe.ds.List.T>:haxe.ds.List<haxe.ds.List.T>]
+									[FInstance:(item : haxe.ds.List.T) -> Void]
+										haxe.ds.List<haxe.ds.List.T>
+										add:(item : haxe.ds.List.T) -> Void
+								[Local v(112301):haxe.ds.List.T:haxe.ds.List.T]
+			[Return:Dynamic] [Local l2(112299):haxe.ds.List<haxe.ds.List.T>:haxe.ds.List<haxe.ds.List.T>]
+
+	public function map<X : map.X>[Function:(f : (haxe.ds.List.T -> map.X)) -> haxe.ds.List<map.X>]
+		[Arg:haxe.ds.List.T -> map.X] [Local f(112302):haxe.ds.List.T -> map.X]
+		[Block:Dynamic]
+			[Var b(112303):haxe.ds.List<map.X>] [New:haxe.ds.List<map.X>] haxe.ds.List<map.X>
+			[Var l(112304):haxe.ds._List.ListNode<haxe.ds.List.T>]
+				[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					[Const:haxe.ds.List<haxe.ds.List.T>] this
+					[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						haxe.ds.List<haxe.ds.List.T>
+						h:haxe.ds._List.ListNode<haxe.ds.List.T>
+			[While:Void]
+				[Binop:Bool]
+					[Local l(112304):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+					!=
+					[Const:haxe.ds._List.ListNode<haxe.ds.List.T>] null
+				[Block:Void]
+					[Var v(112305):haxe.ds.List.T]
+						[Field:haxe.ds.List.T]
+							[Local l(112304):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds.List.T]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								item:haxe.ds._List.ListNode.T
+					[Binop:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						[Local l(112304):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+						=
+						[Field:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[Local l(112304):haxe.ds._List.ListNode<haxe.ds.List.T>:haxe.ds._List.ListNode<haxe.ds.List.T>]
+							[FInstance:haxe.ds._List.ListNode<haxe.ds.List.T>]
+								haxe.ds._List.ListNode<haxe.ds.List.T>
+								next:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>
+					[Call:Void]
+						[Field:(item : map.X) -> Void]
+							[Local b(112303):haxe.ds.List<map.X>:haxe.ds.List<map.X>]
+							[FInstance:(item : map.X) -> Void]
+								haxe.ds.List<map.X>
+								add:(item : haxe.ds.List.T) -> Void
+						[Call:map.X]
+							[Local f(112302):haxe.ds.List.T -> map.X:haxe.ds.List.T -> map.X]
+							[Local v(112305):haxe.ds.List.T:haxe.ds.List.T]
+			[Return:Dynamic] [Local b(112303):haxe.ds.List<map.X>:haxe.ds.List<map.X>]
+}

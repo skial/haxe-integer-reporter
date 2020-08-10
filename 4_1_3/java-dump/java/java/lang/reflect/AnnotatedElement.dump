@@ -1,0 +1,3 @@
+@:realPath("java.lang.reflect.AnnotatedElement_Statics") @:nativeGen @:libType @:javaNative @:native("java.lang.reflect.AnnotatedElement") @:javaCanonical("java.lang.reflect", "AnnotatedElement")
+extern class java.lang.reflect.AnnotatedElement {
+}

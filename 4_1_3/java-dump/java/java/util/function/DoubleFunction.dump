@@ -1,0 +1,6 @@
+@:realPath("java.util.function.DoubleFunction") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.DoubleFunction") @:javaCanonical("java.util.function", "DoubleFunction")
+extern interface java.util.function.DoubleFunction<R : java.util.function.DoubleFunction.R> {
+
+	@:overload
+	function apply(param1:Float):java.util.function.DoubleFunction.R;
+}

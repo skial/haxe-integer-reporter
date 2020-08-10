@@ -1,0 +1,63 @@
+@:realPath("java.util.AbstractList") @:used @:abstract @:libType @:javaNative @:native("java.util.AbstractList") @:javaCanonical("java.util", "AbstractList")
+extern class java.util.AbstractList<E : java.util.AbstractList.E> extends java.util.AbstractCollection<java.util.AbstractList.E> implements java.util.List<java.util.AbstractList.E> {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:protected
+	function removeRange(param1:Int, param2:Int):Void;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function subList(param1:Int, param2:Int):java.util.List<java.util.AbstractList.E>;
+
+	@:overload
+	function listIterator(param1:Int):java.util.ListIterator<java.util.AbstractList.E>;
+
+	@:overload
+	function listIterator():java.util.ListIterator<java.util.AbstractList.E>;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.AbstractList.E>;
+
+	@:overload
+	function addAll(param1:Int, param2:java.util.Collection<java.util.AbstractList.E>):Bool;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function lastIndexOf(param1:Dynamic):Int;
+
+	@:overload
+	function indexOf(param1:Dynamic):Int;
+
+	@:overload
+	function remove(param1:Int):java.util.AbstractList.E;
+
+	@:overload
+	function add(param1:Int, param2:java.util.AbstractList.E):Void;
+
+	@:overload
+	function add(param1:java.util.AbstractList.E):Bool;
+
+	@:overload
+	function set(param1:Int, param2:java.util.AbstractList.E):java.util.AbstractList.E;
+
+	@:overload
+	function get(param1:Int):java.util.AbstractList.E;
+
+	@:overload
+	function replaceAll(param1:java.util.function.UnaryOperator<java.util.AbstractList.E>):Void;
+
+	@:overload
+	function sort(param1:java.util.Comparator<Dynamic>):Void;
+
+	@:protected @:transient
+	var modCount:Int;
+}

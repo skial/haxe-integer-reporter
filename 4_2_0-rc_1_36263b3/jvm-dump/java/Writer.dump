@@ -1,0 +1,41 @@
+@:directlyUsed @:used
+class Writer {
+
+	@:value(Macros.getDirectory().normalize())
+	static var directory:java.lang.String = haxe.io.Path.normalize("/");
+
+	@:value(Macros.getHaxever())
+	static var haxever:java.lang.String = "4.2.0-rc.1_36263b3";
+
+	@:value(Macros.getTarget())
+	public static var file:java.lang.String = "jvm";
+
+	@:isVar
+	public static var handle(get,default):java.lang.String;
+
+	static function get_handle() {
+		if ((Writer.handle == null)) {
+			if ((! sys.FileSystem.exists("./" + Writer.directory))) sys.FileSystem.createDirectory("./" + Writer.directory);
+			Writer.handle = sys.io.File.getContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"));
+		};
+		return Writer.handle;
+	}
+
+	@:value(0)
+	static var lastIndex:Int = 0;
+
+	public static function writePair<T>(v1:writePair.T, v2:writePair.T, pos:Null<haxe.PosInfos> = null) {
+		var index = haxe.jvm.StringExt.indexOf(Writer.get_handle(), "| " + pos.lineNumber + " |", cast Writer.lastIndex);
+		var addition = "" + Std.string(v1) + "|" + Std.string(v2) + "|\n";
+		if ((index > -1)) {
+			Writer.lastIndex = index;
+			var nl = haxe.jvm.StringExt.indexOf(Writer.get_handle(), "\n", index);
+			if ((nl > -1)) Writer.handle = haxe.jvm.StringExt.substring(Writer.get_handle(), 0, nl) + addition + haxe.jvm.StringExt.substring(Writer.get_handle(), nl + 1, cast Writer.get_handle().length) else throw cast haxe.Exception.thrown("Unable to find newline.");
+		} else throw cast haxe.Exception.thrown("Unable to find line number `" + pos.lineNumber + "` for values " + Std.string(v1) + " and " + Std.string(v2));
+		haxe.Log.trace(pos.lineNumber, {fileName : "Writer.hx", lineNumber : 49, className : "Writer", methodName : "writePair", customParams : [v1, v2]});
+	}
+
+	public static function close() {
+		sys.io.File.saveContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"), Writer.get_handle());
+	}
+}

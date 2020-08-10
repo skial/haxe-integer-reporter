@@ -1,0 +1,17 @@
+@:realPath("java.util.stream.Stream_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.stream.Stream") @:javaCanonical("java.util.stream", "Stream")
+extern class java.util.stream.Stream {
+
+	static function concat<T:Dynamic>(param1:java.util.stream.Stream<concat.T>, param2:java.util.stream.Stream<concat.T>):java.util.stream.Stream<concat.T>;
+
+	static function generate<T:Dynamic>(param1:java.util.function.Supplier<generate.T>):java.util.stream.Stream<generate.T>;
+
+	static function iterate<T:Dynamic>(param1:iterate.T, param2:java.util.function.UnaryOperator<iterate.T>):java.util.stream.Stream<iterate.T>;
+
+	static function of<T:Dynamic>(param1:java.NativeArray<of.T>):java.util.stream.Stream<of.T>;
+
+	static function of<T:Dynamic>(param1:of.T):java.util.stream.Stream<of.T>;
+
+	static function empty<T:Dynamic>():java.util.stream.Stream<empty.T>;
+
+	static function builder<T:Dynamic>():java.util.stream.Stream$Builder<builder.T>;
+}

@@ -1,0 +1,6 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.FileInput extends haxe.io.Input {
+
+	@:hlNative("std", "file_close")
+	static function file_close(f:sys.io.FileHandle) {}
+}

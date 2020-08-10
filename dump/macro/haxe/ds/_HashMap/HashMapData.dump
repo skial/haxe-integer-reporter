@@ -1,0 +1,25 @@
+private class haxe.ds._HashMap.HashMapData<K : haxe.ds._HashMap.HashMapData.K,V : haxe.ds._HashMap.HashMapData.V> {
+
+	public inline function new[Function:Void -> Void]
+		[Block:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>]
+			[Binop:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>]
+				[Field:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>]
+					[Const:haxe.ds._HashMap.HashMapData<haxe.ds._HashMap.HashMapData.K, haxe.ds._HashMap.HashMapData.V>] this
+					[FInstance:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>]
+						haxe.ds._HashMap.HashMapData<haxe.ds._HashMap.HashMapData.K, haxe.ds._HashMap.HashMapData.V>
+						keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+				=
+				[New:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>] haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+			[Binop:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>]
+				[Field:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>]
+					[Const:haxe.ds._HashMap.HashMapData<haxe.ds._HashMap.HashMapData.K, haxe.ds._HashMap.HashMapData.V>] this
+					[FInstance:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>]
+						haxe.ds._HashMap.HashMapData<haxe.ds._HashMap.HashMapData.K, haxe.ds._HashMap.HashMapData.V>
+						values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+				=
+				[New:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>] haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+
+	public var keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>;
+
+	public var values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>;
+}

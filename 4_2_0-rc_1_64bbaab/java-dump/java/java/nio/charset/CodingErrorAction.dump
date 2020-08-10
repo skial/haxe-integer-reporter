@@ -1,0 +1,11 @@
+@:realPath("java.nio.charset.CodingErrorAction") @:nativeGen @:libType @:javaNative @:native("java.nio.charset.CodingErrorAction") @:javaCanonical("java.nio.charset", "CodingErrorAction")
+extern class java.nio.charset.CodingErrorAction {
+
+	function toString():String;
+
+	static var IGNORE(default,never):java.nio.charset.CodingErrorAction;
+
+	static var REPLACE(default,never):java.nio.charset.CodingErrorAction;
+
+	static var REPORT(default,never):java.nio.charset.CodingErrorAction;
+}

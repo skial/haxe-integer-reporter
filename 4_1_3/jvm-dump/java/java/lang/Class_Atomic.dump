@@ -1,0 +1,3 @@
+@:realPath("java.lang.Class_Atomic") @:libType @:javaNative @:native("java.lang.Class$Atomic") @:javaCanonical("java.lang", "Class.Atomic")
+extern class java.lang.Class$Atomic {
+}

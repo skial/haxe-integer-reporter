@@ -1,0 +1,3 @@
+@:realPath("java.lang.CharSequence") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.CharSequence") @:javaCanonical("java.lang", "CharSequence")
+extern interface java.lang.CharSequence {
+}

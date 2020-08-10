@@ -1,0 +1,3 @@
+@:realPath("java.util.regex.Pattern_BackRef") @:nativeGen @:libType @:javaNative @:native("java.util.regex.Pattern$BackRef") @:javaCanonical("java.util.regex", "Pattern.BackRef")
+extern class java.util.regex.Pattern$BackRef extends java.util.regex.Pattern$Node {
+}

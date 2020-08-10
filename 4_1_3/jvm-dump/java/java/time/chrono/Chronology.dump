@@ -1,0 +1,15 @@
+@:realPath("java.time.chrono.Chronology_Statics") @:libType @:javaNative @:native("java.time.chrono.Chronology") @:javaCanonical("java.time.chrono", "Chronology")
+extern class java.time.chrono.Chronology {
+
+	@:overload
+	static function getAvailableChronologies():java.util.Set<java.time.chrono.Chronology>;
+
+	@:overload
+	static function of(param1:java.lang.String):java.time.chrono.Chronology;
+
+	@:overload
+	static function ofLocale(param1:java.util.Locale):java.time.chrono.Chronology;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.chrono.Chronology;
+}

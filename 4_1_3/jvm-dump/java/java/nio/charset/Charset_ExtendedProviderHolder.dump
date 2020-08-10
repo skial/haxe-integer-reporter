@@ -1,0 +1,3 @@
+@:realPath("java.nio.charset.Charset_ExtendedProviderHolder") @:libType @:javaNative @:native("java.nio.charset.Charset$ExtendedProviderHolder") @:javaCanonical("java.nio.charset", "Charset.ExtendedProviderHolder")
+extern class java.nio.charset.Charset$ExtendedProviderHolder {
+}

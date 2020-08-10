@@ -1,0 +1,40 @@
+@:keep @:directlyUsed @:used @:hxGen
+class haxe.io.Bytes {
+
+	function new(length:Int, b:haxe.io.BytesData) {
+		this.length = length;
+		this.b = b;
+	}
+
+	public var length(default,null):Int;
+
+	var b:haxe.io.BytesData;
+
+	public function toString() {
+		try {
+			return new String(this.b, 0, this.length, "UTF-8");
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+
+	public static function alloc(length:Int) {
+		return new haxe.io.Bytes(length, new java.NativeArray(length));
+	}
+
+	@:pure
+	public static function ofString(s:String, encoding:Null<haxe.io.Encoding> = null) {
+		try {
+			var b;
+			if ((encoding == null)) b = s.getBytes("UTF-8") else switch ((@:exhaustive enumIndex encoding)) {
+				case 0: b = s.getBytes("UTF-8");
+				case 1: b = s.getBytes("UTF-16LE");
+			};
+			return new haxe.io.Bytes(b.length, b);
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+}

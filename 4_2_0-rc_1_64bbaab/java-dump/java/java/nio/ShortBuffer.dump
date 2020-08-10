@@ -1,0 +1,55 @@
+@:realPath("java.nio.ShortBuffer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.ShortBuffer") @:javaCanonical("java.nio", "ShortBuffer")
+extern class java.nio.ShortBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.ShortBuffer> {
+
+	function compareTo(param1:Dynamic):Int;
+
+	function compareTo(param1:java.nio.ShortBuffer):Int;
+
+	function array():java.NativeArray<java.types.Int16>;
+
+	function order():java.nio.ByteOrder;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function toString():String;
+
+	function isDirect():Bool;
+
+	function compact():java.nio.ShortBuffer;
+
+	function arrayOffset():Int;
+
+	function hasArray():Bool;
+
+	function put(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	function put(param1:java.types.Int16):java.nio.ShortBuffer;
+
+	function put(param1:Int, param2:java.types.Int16):java.nio.ShortBuffer;
+
+	function put(param1:java.nio.ShortBuffer):java.nio.ShortBuffer;
+
+	function put(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	function get(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	function get():java.types.Int16;
+
+	function get(param1:Int):java.types.Int16;
+
+	function get(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	function asReadOnlyBuffer():java.nio.ShortBuffer;
+
+	function duplicate():java.nio.ShortBuffer;
+
+	function slice():java.nio.ShortBuffer;
+
+	static function wrap(param1:java.NativeArray<java.types.Int16>):java.nio.ShortBuffer;
+
+	static function wrap(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.nio.ShortBuffer;
+
+	static function allocate(param1:Int):java.nio.ShortBuffer;
+}

@@ -1,0 +1,3 @@
+@:realPath("python.IOError") @:native("IOError")
+extern class IOError extends EnvironmentError {
+}

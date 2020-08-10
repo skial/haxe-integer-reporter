@@ -1,0 +1,7 @@
+@:realPath("java.text.FieldPosition_Delegate") @:used @:nativeGen @:libType @:javaNative @:native("java.text.FieldPosition$Delegate") @:javaCanonical("java.text", "FieldPosition.Delegate")
+extern class java.text.FieldPosition$Delegate implements java.text.Format$FieldDelegate {
+
+	function formatted(param1:Int, param2:java.text.Format$Field, param3:Dynamic, param4:Int, param5:Int, param6:java.lang.StringBuffer):Void;
+
+	function formatted(param1:java.text.Format$Field, param2:Dynamic, param3:Int, param4:Int, param5:java.lang.StringBuffer):Void;
+}

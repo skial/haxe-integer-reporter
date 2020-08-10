@@ -1,0 +1,3 @@
+@:realPath("java.util.regex.Pattern_SliceNode") @:nativeGen @:libType @:javaNative @:native("java.util.regex.Pattern$SliceNode") @:javaCanonical("java.util.regex", "Pattern.SliceNode")
+extern class java.util.regex.Pattern$SliceNode extends java.util.regex.Pattern$Node {
+}

@@ -1,0 +1,8 @@
+@:realPath("java.util.Locale_FilteringMode") @:used @:nativeGen @:flatEnum @:javaCanonical("java.util", "Locale.FilteringMode") @:native("java.util.Locale$FilteringMode")
+extern enum java.util.Locale$FilteringMode {
+	REJECT_EXTENDED_RANGES;
+	MAP_EXTENDED_RANGES;
+	IGNORE_EXTENDED_RANGES;
+	EXTENDED_FILTERING;
+	AUTOSELECT_FILTERING;
+}

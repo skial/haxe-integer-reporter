@@ -1,0 +1,30 @@
+@:realPath("java.sun.util.locale.BaseLocale_Key") @:used @:native("sun.util.locale.BaseLocale$Key") @:libType
+extern class sun.util.locale.BaseLocale$Key {
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String):Void;
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:sun.util.locale.BaseLocale$1):Void;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	static function normalize(param1:sun.util.locale.BaseLocale$Key):sun.util.locale.BaseLocale$Key;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:sun.util.locale.BaseLocale$Key):java.lang.ref.SoftReference<Dynamic>;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:sun.util.locale.BaseLocale$Key):java.lang.ref.SoftReference<Dynamic>;
+
+	@:realPath("access_300") @:native("access$300")
+	static function access$300(param1:sun.util.locale.BaseLocale$Key):java.lang.ref.SoftReference<Dynamic>;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:sun.util.locale.BaseLocale$Key):java.lang.ref.SoftReference<Dynamic>;
+
+	static function <clinit>():Void;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

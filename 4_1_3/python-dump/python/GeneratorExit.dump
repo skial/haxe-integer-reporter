@@ -1,0 +1,3 @@
+@:realPath("python.GeneratorExit") @:native("GeneratorExit")
+extern class GeneratorExit extends BaseException {
+}

@@ -1,0 +1,8 @@
+@:realPath("java.lang.ClassLoader_NativeLibrary") @:nativeGen @:libType @:javaNative @:native("java.lang.ClassLoader$NativeLibrary") @:javaCanonical("java.lang", "ClassLoader.NativeLibrary")
+extern class java.lang.ClassLoader$NativeLibrary {
+
+	function new(param1:java.lang.Class<Dynamic>, param2:String, param3:Bool):Void;
+
+	@:protected
+	function finalize():Void;
+}

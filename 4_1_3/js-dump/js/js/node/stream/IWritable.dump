@@ -1,0 +1,33 @@
+@:used @:remove
+extern interface js.node.stream.IWritable {
+
+	function cork():Void;
+
+	function destroy(error:Null<Error>):js.node.stream.IWritable;
+
+	var destroyed(default,null):Bool;
+
+	function end(chunk:Dynamic, encoding:Null<String>, callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Void;
+
+	function end(callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Void;
+
+	function setDefaultEncoding(encoding:String):js.node.stream.IWritable;
+
+	function uncork():Void;
+
+	var writable(default,null):Bool;
+
+	var writableEnded(default,null):Bool;
+
+	var writableFinished(default,null):Bool;
+
+	var writablehighWaterMark(default,null):Int;
+
+	var writableLength(default,null):Int;
+
+	var writableObjectMode(default,null):Bool;
+
+	function write(chunk:Dynamic, encoding:Null<String>, callback:Null<haxe.extern.EitherType<Void -> Void, Null<Error> -> Void>>):Bool;
+
+	var isTTY(default,null):Bool;
+}

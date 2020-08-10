@@ -1,0 +1,31 @@
+@:realPath("java.time.ZoneId") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.time.ZoneId") @:javaCanonical("java.time", "ZoneId")
+extern class java.time.ZoneId implements java.io.Serializable {
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function normalized():java.time.ZoneId;
+
+	function getRules():java.time.zone.ZoneRules;
+
+	function getDisplayName(param1:java.time.format.TextStyle, param2:java.util.Locale):String;
+
+	function getId():String;
+
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.ZoneId;
+
+	static function ofOffset(param1:String, param2:java.time.ZoneOffset):java.time.ZoneId;
+
+	static function of(param1:String):java.time.ZoneId;
+
+	static function of(param1:String, param2:java.util.Map<String, String>):java.time.ZoneId;
+
+	static function getAvailableZoneIds():java.util.Set<String>;
+
+	static function systemDefault():java.time.ZoneId;
+
+	static var SHORT_IDS(default,never):java.util.Map<String, String>;
+}

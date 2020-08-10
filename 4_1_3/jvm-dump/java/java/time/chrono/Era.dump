@@ -1,0 +1,27 @@
+@:realPath("java.time.chrono.Era") @:used @:abstract @:libType @:javaNative @:native("java.time.chrono.Era") @:javaCanonical("java.time.chrono", "Era")
+extern interface java.time.chrono.Era implements java.time.temporal.TemporalAccessor implements java.time.temporal.TemporalAdjuster {
+
+	@:overload
+	function getDisplayName(param1:java.time.format.TextStyle, param2:java.util.Locale):java.lang.String;
+
+	@:overload
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function query<R : query.R>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	@:overload
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	@:overload
+	function getValue():Int;
+}

@@ -1,0 +1,226 @@
+@:realPath("java.lang.Math") @:libType @:javaNative @:native("java.lang.Math") @:javaCanonical("java.lang", "Math")
+extern class java.lang.Math {
+
+	@:overload
+	static function scalb(param1:Single, param2:Int):Single;
+
+	@:overload
+	static function scalb(param1:Float, param2:Int):Float;
+
+	@:overload
+	static function nextDown(param1:Single):Single;
+
+	@:overload
+	static function nextDown(param1:Float):Float;
+
+	@:overload
+	static function nextUp(param1:Single):Single;
+
+	@:overload
+	static function nextUp(param1:Float):Float;
+
+	@:overload
+	static function nextAfter(param1:Single, param2:Float):Single;
+
+	@:overload
+	static function nextAfter(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function getExponent(param1:Float):Int;
+
+	@:overload
+	static function getExponent(param1:Single):Int;
+
+	@:overload
+	static function copySign(param1:Single, param2:Single):Single;
+
+	@:overload
+	static function copySign(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function log1p(param1:Float):Float;
+
+	@:overload
+	static function expm1(param1:Float):Float;
+
+	@:overload
+	static function hypot(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function tanh(param1:Float):Float;
+
+	@:overload
+	static function cosh(param1:Float):Float;
+
+	@:overload
+	static function sinh(param1:Float):Float;
+
+	@:overload
+	static function signum(param1:Single):Single;
+
+	@:overload
+	static function signum(param1:Float):Float;
+
+	@:overload
+	static function ulp(param1:Single):Single;
+
+	@:overload
+	static function ulp(param1:Float):Float;
+
+	@:overload
+	static function min(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function min(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function min(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function min(param1:Single, param2:Single):Single;
+
+	@:overload
+	static function max(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function max(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function max(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function max(param1:Single, param2:Single):Single;
+
+	@:overload
+	static function abs(param1:Float):Float;
+
+	@:overload
+	static function abs(param1:Int):Int;
+
+	@:overload
+	static function abs(param1:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function abs(param1:Single):Single;
+
+	@:overload
+	static function floorMod(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function floorMod(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function floorDiv(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function floorDiv(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function toIntExact(param1:haxe.Int64):Int;
+
+	@:overload
+	static function negateExact(param1:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function negateExact(param1:Int):Int;
+
+	@:overload
+	static function decrementExact(param1:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function decrementExact(param1:Int):Int;
+
+	@:overload
+	static function incrementExact(param1:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function incrementExact(param1:Int):Int;
+
+	@:overload
+	static function multiplyExact(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function multiplyExact(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function subtractExact(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function subtractExact(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function addExact(param1:haxe.Int64, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	static function addExact(param1:Int, param2:Int):Int;
+
+	@:overload
+	static function random():Float;
+
+	@:overload
+	static function round(param1:Float):haxe.Int64;
+
+	@:overload
+	static function round(param1:Single):Int;
+
+	@:overload
+	static function pow(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function atan2(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function rint(param1:Float):Float;
+
+	@:overload
+	static function floor(param1:Float):Float;
+
+	@:overload
+	static function ceil(param1:Float):Float;
+
+	@:overload
+	static function IEEEremainder(param1:Float, param2:Float):Float;
+
+	@:overload
+	static function cbrt(param1:Float):Float;
+
+	@:overload
+	static function sqrt(param1:Float):Float;
+
+	@:overload
+	static function log10(param1:Float):Float;
+
+	@:overload
+	static function log(param1:Float):Float;
+
+	@:overload
+	static function exp(param1:Float):Float;
+
+	@:overload
+	static function toDegrees(param1:Float):Float;
+
+	@:overload
+	static function toRadians(param1:Float):Float;
+
+	@:overload
+	static function atan(param1:Float):Float;
+
+	@:overload
+	static function acos(param1:Float):Float;
+
+	@:overload
+	static function asin(param1:Float):Float;
+
+	@:overload
+	static function tan(param1:Float):Float;
+
+	@:overload
+	static function cos(param1:Float):Float;
+
+	@:overload
+	static function sin(param1:Float):Float;
+
+	static var E(default,null):Float;
+
+	static var PI(default,null):Float;
+}

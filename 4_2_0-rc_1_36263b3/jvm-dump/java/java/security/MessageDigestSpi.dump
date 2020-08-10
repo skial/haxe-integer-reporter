@@ -1,0 +1,21 @@
+@:realPath("java.security.MessageDigestSpi") @:used @:native("java.security.MessageDigestSpi") @:libType
+extern class java.security.MessageDigestSpi {
+
+	function new():Void;
+
+	function engineGetDigestLength():Int;
+
+	function engineUpdate(param1:java.types.Int8):Void;
+
+	function engineUpdate(param1:java.nio.ByteBuffer):Void;
+
+	function engineUpdate(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	function engineDigest():java.NativeArray<java.types.Int8>;
+
+	function engineDigest(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Int;
+
+	function engineReset():Void;
+
+	function clone():Dynamic;
+}

@@ -1,0 +1,9 @@
+@:realPath("java.nio.channels.InterruptibleChannel") @:used @:abstract @:libType @:javaNative @:native("java.nio.channels.InterruptibleChannel") @:javaCanonical("java.nio.channels", "InterruptibleChannel")
+extern interface java.nio.channels.InterruptibleChannel implements java.nio.channels.Channel {
+
+	@:overload @:throws("java.io.IOException")
+	function close():Void;
+
+	@:overload
+	function isOpen():Bool;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.util.function.ObjLongConsumer") @:used @:abstract @:libType @:javaNative @:native("java.util.function.ObjLongConsumer") @:javaCanonical("java.util.function", "ObjLongConsumer")
+extern interface java.util.function.ObjLongConsumer<T : java.util.function.ObjLongConsumer.T> {
+
+	@:overload
+	function accept(param1:java.util.function.ObjLongConsumer.T, param2:haxe.Int64):Void;
+}

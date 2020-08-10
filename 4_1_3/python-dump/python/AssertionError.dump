@@ -1,0 +1,3 @@
+@:realPath("python.AssertionError") @:native("AssertionError")
+extern class AssertionError extends Exception {
+}

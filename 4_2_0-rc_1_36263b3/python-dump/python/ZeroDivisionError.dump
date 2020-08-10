@@ -1,0 +1,3 @@
+@:realPath("python.ZeroDivisionError") @:native("ZeroDivisionError")
+extern class ZeroDivisionError extends ArithmeticError {
+}

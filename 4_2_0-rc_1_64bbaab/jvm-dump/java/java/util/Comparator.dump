@@ -1,0 +1,39 @@
+@:realPath("java.util.Comparator") @:used @:native("java.util.Comparator") @:libType
+extern interface java.util.Comparator<T:Dynamic> {
+
+	function compare(param1:java.util.Comparator.T, param2:java.util.Comparator.T):Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function reversed():java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparing(param1:java.util.Comparator<Dynamic>):java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparing<U:java.lang.Comparable<Dynamic>>(param1:java.util.function.Function<Dynamic, thenComparing.U>):java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparing<U:Dynamic>(param1:java.util.function.Function<Dynamic, thenComparing.U>, param2:java.util.Comparator<Dynamic>):java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparingInt(param1:java.util.function.ToIntFunction<Dynamic>):java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparingLong(param1:java.util.function.ToLongFunction<Dynamic>):java.util.Comparator<java.util.Comparator.T>;
+
+	function thenComparingDouble(param1:java.util.function.ToDoubleFunction<Dynamic>):java.util.Comparator<java.util.Comparator.T>;
+
+	static function reverseOrder<T:java.lang.Comparable<Dynamic>>():java.util.Comparator<reverseOrder.T>;
+
+	static function naturalOrder<T:java.lang.Comparable<Dynamic>>():java.util.Comparator<naturalOrder.T>;
+
+	static function nullsFirst<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<nullsFirst.T>;
+
+	static function nullsLast<T:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<nullsLast.T>;
+
+	static function comparing<T:Dynamic, U:Dynamic>(param1:java.util.function.Function<Dynamic, comparing.U>, param2:java.util.Comparator<Dynamic>):java.util.Comparator<comparing.T>;
+
+	static function comparing<T:Dynamic, U:java.lang.Comparable<Dynamic>>(param1:java.util.function.Function<Dynamic, comparing.U>):java.util.Comparator<comparing.T>;
+
+	static function comparingInt<T:Dynamic>(param1:java.util.function.ToIntFunction<Dynamic>):java.util.Comparator<comparingInt.T>;
+
+	static function comparingLong<T:Dynamic>(param1:java.util.function.ToLongFunction<Dynamic>):java.util.Comparator<comparingLong.T>;
+
+	static function comparingDouble<T:Dynamic>(param1:java.util.function.ToDoubleFunction<Dynamic>):java.util.Comparator<comparingDouble.T>;
+}

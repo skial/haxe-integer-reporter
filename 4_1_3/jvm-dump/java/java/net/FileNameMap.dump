@@ -1,0 +1,6 @@
+@:realPath("java.net.FileNameMap") @:used @:abstract @:libType @:javaNative @:native("java.net.FileNameMap") @:javaCanonical("java.net", "FileNameMap")
+extern interface java.net.FileNameMap {
+
+	@:overload
+	function getContentTypeFor(param1:java.lang.String):java.lang.String;
+}

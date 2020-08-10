@@ -1,0 +1,43 @@
+@:directlyUsed @:used @:nativeGen @:coreApi
+extern class String implements java.lang.CharSequence {
+
+	function new(string:String):Void;
+
+	function new(b:haxe.io.BytesData, offset:Int, length:Int, charsetName:String):Void;
+
+	function new(b:haxe.io.BytesData, offset:Int, length:Int):Void;
+
+	function new(b:java.NativeArray<java.Char16>):Void;
+
+	var length(default,null):Int;
+
+	function toUpperCase():String;
+
+	function toLowerCase():String;
+
+	function charAt(index:Int):String;
+
+	function charCodeAt(index:Int):Null<Int>;
+
+	function indexOf(str:String, startIndex:Null<Int>):Int;
+
+	function lastIndexOf(str:String, startIndex:Null<Int>):Int;
+
+	function split(delimiter:String):Array<String>;
+
+	function substr(pos:Int, len:Null<Int>):String;
+
+	function substring(startIndex:Int, endIndex:Null<Int>):String;
+
+	function toString():String;
+
+	function compareTo(anotherString:String):Int;
+
+	function codePointAt(idx:Int):Int;
+
+	function getBytes(encoding:String):haxe.io.BytesData;
+
+	function getBytes():haxe.io.BytesData;
+
+	static function fromCharCode(code:Int):String;
+}

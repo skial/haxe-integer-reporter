@@ -1,0 +1,42 @@
+@:realPath("java.io.Writer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.Writer") @:javaCanonical("java.io", "Writer")
+extern class java.io.Writer implements java.lang.Appendable implements java.io.Closeable implements java.io.Flushable {
+
+	@:overload @:protected
+	function new(param1:Dynamic):Void;
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.lang.CharSequence):java.io.Writer;
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.types.Char16):java.io.Writer;
+
+	@:overload @:throws("java.io.IOException")
+	function append(param1:java.lang.CharSequence, param2:Int, param3:Int):java.io.Writer;
+
+	@:overload @:throws("java.io.IOException")
+	function close():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function flush():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:String, param2:Int, param3:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Char16>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:String):Void;
+
+	@:protected
+	var lock:Dynamic;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.lang.Runnable") @:used @:abstract @:libType @:javaNative @:native("java.lang.Runnable") @:javaCanonical("java.lang", "Runnable")
+extern interface java.lang.Runnable {
+
+	@:overload
+	function run():Void;
+}

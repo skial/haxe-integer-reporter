@@ -1,0 +1,12 @@
+@:realPath("java.nio.file.attribute.UserPrincipalLookupService") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.UserPrincipalLookupService") @:javaCanonical("java.nio.file.attribute", "UserPrincipalLookupService")
+extern class java.nio.file.attribute.UserPrincipalLookupService {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function lookupPrincipalByGroupName(param1:String):java.nio.file.attribute.GroupPrincipal;
+
+	@:overload @:throws("java.io.IOException")
+	function lookupPrincipalByName(param1:String):java.nio.file.attribute.UserPrincipal;
+}

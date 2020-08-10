@@ -1,0 +1,27 @@
+@:keep @:directlyUsed @:used @:coreApi
+class haxe.io.Bytes {
+
+	function new(b:hl.Bytes, length:Int) {
+		this.b = b;
+		this.length = length;
+	}
+
+	public var length(default,null):Int;
+
+	var b:hl.Bytes;
+
+	public static function ofString(s:String, encoding:Null<haxe.io.Encoding> = null) {
+		if ((encoding == null)) encoding = haxe.io.Encoding.UTF8;
+		switch ((@:exhaustive enumIndex encoding)) {
+			case 0: {
+				var size = 0;
+				var s1 = s.bytes;
+				var s = s.length;
+				var this1 = $ref(size);
+				var b = hl._Bytes.Bytes_Impl_.utf16ToUtf8(s1, s, @:implicitCast this1);
+				return new haxe.io.Bytes(b, size);
+			};
+			case 1: return new haxe.io.Bytes(hl._Bytes.Bytes_Impl_.sub(s.bytes, 0, s.length << 1), s.length << 1);
+		};
+	}
+}

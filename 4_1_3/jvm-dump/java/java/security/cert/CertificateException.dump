@@ -1,0 +1,15 @@
+@:realPath("java.security.cert.CertificateException") @:libType @:javaNative @:native("java.security.cert.CertificateException") @:javaCanonical("java.security.cert", "CertificateException")
+extern class java.security.cert.CertificateException extends java.security.GeneralSecurityException {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+}

@@ -1,0 +1,32 @@
+@:realPath("java.nio.file.FileSystem") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.FileSystem") @:javaCanonical("java.nio.file", "FileSystem")
+extern class java.nio.file.FileSystem implements java.io.Closeable {
+
+	@:protected
+	function new():Void;
+
+	@:throws("java.io.IOException")
+	function newWatchService():java.nio.file.WatchService;
+
+	function getUserPrincipalLookupService():java.nio.file.attribute.UserPrincipalLookupService;
+
+	function getPathMatcher(param1:String):java.nio.file.PathMatcher;
+
+	function getPath(param1:String, param2:java.NativeArray<String>):java.nio.file.Path;
+
+	function supportedFileAttributeViews():java.util.Set<String>;
+
+	function getFileStores():java.lang.Iterable<java.nio.file.FileStore>;
+
+	function getRootDirectories():java.lang.Iterable<java.nio.file.Path>;
+
+	function getSeparator():String;
+
+	function isReadOnly():Bool;
+
+	function isOpen():Bool;
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	function provider():java.nio.file.spi.FileSystemProvider;
+}

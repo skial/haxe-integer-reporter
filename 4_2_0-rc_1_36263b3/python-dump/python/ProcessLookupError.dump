@@ -1,0 +1,3 @@
+@:realPath("python.ProcessLookupError") @:native("ProcessLookupError")
+extern class ProcessLookupError extends OSError {
+}

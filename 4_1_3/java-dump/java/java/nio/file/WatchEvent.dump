@@ -1,0 +1,12 @@
+@:realPath("java.nio.file.WatchEvent") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.WatchEvent") @:javaCanonical("java.nio.file", "WatchEvent")
+extern interface java.nio.file.WatchEvent<T : java.nio.file.WatchEvent.T> {
+
+	@:overload
+	function context():java.nio.file.WatchEvent.T;
+
+	@:overload
+	function count():Int;
+
+	@:overload
+	function kind():java.nio.file.WatchEvent$Kind<java.nio.file.WatchEvent.T>;
+}

@@ -1,0 +1,10 @@
+@:keep @:directlyUsed @:used
+class hl.types.ArrayDynKeyValueIterator extends haxe.iterators.ArrayKeyValueIterator<Dynamic> {
+
+	public function new(a:hl.types.ArrayBase) {
+		super(cast null);
+		this.a = a;
+	}
+
+	var a:hl.types.ArrayBase;
+}

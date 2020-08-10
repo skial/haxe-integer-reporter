@@ -1,0 +1,15 @@
+@:realPath("java.security.InvalidKeyException") @:nativeGen @:libType @:javaNative @:native("java.security.InvalidKeyException") @:javaCanonical("java.security", "InvalidKeyException")
+extern class java.security.InvalidKeyException extends java.security.KeyException {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new(param1:String, param2:java.lang.Throwable):Void;
+}

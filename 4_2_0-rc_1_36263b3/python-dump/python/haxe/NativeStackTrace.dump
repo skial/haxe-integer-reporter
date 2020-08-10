@@ -1,0 +1,15 @@
+@:keep @:directlyUsed @:used @:dox(hide) @:noCompletion
+class haxe.NativeStackTrace {
+
+	@:ifFeature("haxe.NativeStackTrace.exceptionStack")
+	public static inline function saveStack(exception:Any) {}
+
+	public static function exceptionStack() {
+		var exc = python.lib.Sys.exc_info();
+		if ((cast exc[2] != null)) {
+			var infos = python.lib.Traceback.extract_tb(cast exc[2]);
+			python.Syntax.call(python.Syntax.field(infos, "reverse"), []);
+			return infos;
+		} else return [];
+	}
+}

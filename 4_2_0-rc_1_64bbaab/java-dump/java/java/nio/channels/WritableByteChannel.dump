@@ -1,0 +1,11 @@
+@:realPath("java.nio.channels.WritableByteChannel") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.channels.WritableByteChannel") @:javaCanonical("java.nio.channels", "WritableByteChannel")
+extern interface java.nio.channels.WritableByteChannel implements java.nio.channels.Channel {
+
+	@:throws("java.io.IOException")
+	function write(param1:java.nio.ByteBuffer):Int;
+
+	function isOpen():Bool;
+
+	@:throws("java.lang.Exception")
+	function close():Void;
+}

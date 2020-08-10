@@ -1,0 +1,17 @@
+@:keep @:directlyUsed @:used @:hxGen
+class haxe.io.BytesBuffer {
+
+	public function new() {
+		this.b = new java.io.ByteArrayOutputStream();
+	}
+
+	var b:java.io.ByteArrayOutputStream;
+
+	@:has_untyped
+	public function getBytes() {
+		var buf = this.b.toByteArray();
+		var bytes = new haxe.io.Bytes(buf.length, buf);
+		this.b = null;
+		return bytes;
+	}
+}

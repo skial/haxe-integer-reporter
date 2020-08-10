@@ -1,0 +1,3 @@
+@:realPath("python.BufferError") @:native("BufferError")
+extern class BufferError extends BaseException {
+}

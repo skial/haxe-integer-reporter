@@ -1,0 +1,27 @@
+@:realPath("java.util.Dictionary") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.Dictionary") @:javaCanonical("java.util", "Dictionary")
+extern class java.util.Dictionary<K : java.util.Dictionary.K,V : java.util.Dictionary.V> {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function remove(param1:Dynamic):java.util.Dictionary.V;
+
+	@:overload
+	function put(param1:java.util.Dictionary.K, param2:java.util.Dictionary.V):java.util.Dictionary.V;
+
+	@:overload
+	function get(param1:Dynamic):java.util.Dictionary.V;
+
+	@:overload
+	function elements():java.util.Enumeration<java.util.Dictionary.V>;
+
+	@:overload
+	function keys():java.util.Enumeration<java.util.Dictionary.K>;
+
+	@:overload
+	function isEmpty():Bool;
+
+	@:overload
+	function size():Int;
+}

@@ -1,0 +1,2 @@
+@:hxGen @:coreType @:runtimeValue
+abstract Dynamic<T : Dynamic.T> {}

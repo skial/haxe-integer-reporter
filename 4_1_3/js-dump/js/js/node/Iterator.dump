@@ -1,0 +1,1 @@
+typedef js.node.Iterator<T : js.node.Iterator.T> = js.lib.Iterator<js.node.Iterator.T>

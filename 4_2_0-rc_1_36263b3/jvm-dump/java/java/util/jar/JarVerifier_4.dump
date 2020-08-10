@@ -1,0 +1,20 @@
+@:realPath("java.util.jar.JarVerifier_4") @:used @:native("java.util.jar.JarVerifier$4") @:libType
+extern class java.util.jar.JarVerifier$4 implements java.util.Enumeration<java.lang.String> {
+
+	function new(param1:java.util.jar.JarVerifier, param2:java.util.Enumeration<Dynamic>, param3:java.util.Map<Dynamic, Dynamic>):Void;
+
+	function hasMoreElements():Bool;
+
+	function nextElement():java.lang.String;
+
+	var name:java.lang.String;
+
+	@:realPath("val_entries") @:native("val$entries")
+	var val$entries(default,ctor):java.util.Enumeration<Dynamic>;
+
+	@:realPath("val_map") @:native("val$map")
+	var val$map(default,ctor):java.util.Map<Dynamic, Dynamic>;
+
+	@:realPath("this_0") @:native("this$0")
+	var this$0(default,ctor):java.util.jar.JarVerifier;
+}

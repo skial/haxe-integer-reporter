@@ -1,0 +1,27 @@
+@:used @:noDoc
+class hl.NativeArrayIterator_Dynamic {
+
+	public inline function new(arr:hl.NativeArray<Dynamic>) {
+		this.arr = arr;
+		this.pos = 0;
+		this.length = $asize(arr);
+	}
+
+	var arr:hl.NativeArray<Dynamic>;
+
+	var pos:Int;
+
+	var length:Int;
+
+	@:maybeUsed
+	public inline function hasNext() {
+		return this.pos < this.length;
+	}
+
+	@:maybeUsed
+	public inline function next() {
+		var this1 = this.arr;
+		var pos = this.pos ++;
+		return $aget(this1, pos);
+	}
+}

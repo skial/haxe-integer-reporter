@@ -1,0 +1,3 @@
+@:realPath("python.FileExistsError") @:native("FileExistsError")
+extern class FileExistsError extends OSError {
+}

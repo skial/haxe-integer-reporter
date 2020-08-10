@@ -1,0 +1,2 @@
+@:nativeGen
+private typedef haxe.ds._WeakMap.HashType = Int

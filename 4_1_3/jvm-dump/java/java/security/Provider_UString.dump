@@ -1,0 +1,12 @@
+@:realPath("java.security.Provider_UString") @:libType @:javaNative @:native("java.security.Provider$UString") @:javaCanonical("java.security", "Provider.UString")
+extern class java.security.Provider$UString {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+}

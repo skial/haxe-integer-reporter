@@ -1,0 +1,6 @@
+@:realPath("java.util.function.IntUnaryOperator_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.function.IntUnaryOperator") @:javaCanonical("java.util.function", "IntUnaryOperator")
+extern class java.util.function.IntUnaryOperator {
+
+	@:overload
+	static function identity():java.util.function.IntUnaryOperator;
+}

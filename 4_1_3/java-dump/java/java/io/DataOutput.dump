@@ -1,0 +1,45 @@
+@:realPath("java.io.DataOutput") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.DataOutput") @:javaCanonical("java.io", "DataOutput")
+extern interface java.io.DataOutput {
+
+	@:overload @:throws("java.io.IOException")
+	function writeUTF(param1:String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeChars(param1:String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeBytes(param1:String):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeDouble(param1:Float):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeFloat(param1:Single):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeLong(param1:haxe.Int64):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeInt(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeChar(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeShort(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeByte(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function writeBoolean(param1:Bool):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>):Void;
+}

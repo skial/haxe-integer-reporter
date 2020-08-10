@@ -1,0 +1,36 @@
+@:realPath("java.nio.file.FileStore") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.FileStore") @:javaCanonical("java.nio.file", "FileStore")
+extern class java.nio.file.FileStore {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function getAttribute(param1:String):Dynamic;
+
+	@:overload
+	function getFileStoreAttributeView<V : getFileStoreAttributeView.V>(param1:java.lang.Class<getFileStoreAttributeView.V>):getFileStoreAttributeView.V;
+
+	@:overload
+	function supportsFileAttributeView(param1:String):Bool;
+
+	@:overload
+	function supportsFileAttributeView(param1:java.lang.Class<java.nio.file.attribute.FileAttributeView>):Bool;
+
+	@:overload @:throws("java.io.IOException")
+	function getUnallocatedSpace():haxe.Int64;
+
+	@:overload @:throws("java.io.IOException")
+	function getUsableSpace():haxe.Int64;
+
+	@:overload @:throws("java.io.IOException")
+	function getTotalSpace():haxe.Int64;
+
+	@:overload
+	function isReadOnly():Bool;
+
+	@:overload
+	function type():String;
+
+	@:overload
+	function name():String;
+}

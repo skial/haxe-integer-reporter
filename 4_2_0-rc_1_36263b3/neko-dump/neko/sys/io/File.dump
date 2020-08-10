@@ -1,0 +1,25 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.File {
+
+	@:has_untyped
+	public static function getContent(path:String) {
+		return new String(sys.io.File.file_contents(path.__s));
+	}
+
+	public static function saveContent(path:String, content:String) {
+		var f = sys.io.File.write(path, null);
+		f.writeString(content, null);
+		f.close();
+	}
+
+	@:has_untyped @:value({ binary : true })
+	public static function write(path:String, binary:Bool = true) {
+		return new sys.io.FileOutput(sys.io.File.file_open(path.__s, (if ((binary)) "wb" else "w").__s));
+	}
+
+	@:value(neko.Lib.load("std", "file_contents", 1))
+	static var file_contents:Unknown<12> -> String = neko.Lib.load("std", "file_contents", 1);
+
+	@:value(neko.Lib.load("std", "file_open", 2))
+	static var file_open:(Unknown<13>, Unknown<14>) -> sys.io.FileHandle = neko.Lib.load("std", "file_open", 2);
+}

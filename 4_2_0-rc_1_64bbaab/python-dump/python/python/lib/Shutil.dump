@@ -1,0 +1,12 @@
+@:pythonImport("shutil")
+extern class python.lib.Shutil {
+
+	@:value({ ignore_errors : false })
+	static function rmtree(path:str, ignore_errors:Null<Bool>, onerror:Null<BaseException -> Void>):Void;
+
+	static function copyfile(src:str, dst:str):Void;
+
+	static function copy(src:str, dst:str):Void;
+
+	static function copy2(src:str, dst:str):Void;
+}

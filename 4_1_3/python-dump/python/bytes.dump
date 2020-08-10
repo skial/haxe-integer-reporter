@@ -1,0 +1,3 @@
+@:realPath("python.Bytes") @:used @:native("bytes")
+extern class bytes extends bytearray {
+}

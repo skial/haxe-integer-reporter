@@ -1,0 +1,2 @@
+@:used
+abstract js.node.events.Event<T : js.node.events.Event.T> from Symbol  from String to Symbol  to String {}

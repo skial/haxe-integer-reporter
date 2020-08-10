@@ -1,0 +1,24 @@
+@:keep @:directlyUsed @:used @:hxGen @:coreApi
+class Type {
+
+	@:has_untyped
+	public static function getEnum(o:EnumValue) {
+		if ((Std.isOfType(o, java.lang.Enum) || Std.isOfType(o, haxe.lang.Enum))) return o.getClass();
+		return null;
+	}
+
+	@:functionCode("\r\n\t\tArray<String> ret = new Array<String>();\r\n\t\tif (c == java.lang.String.class)\r\n\t\t{\r\n\t\t\tret.push(\"fromCharCode\");\r\n\t\t\treturn ret;\r\n\t\t}\r\n\r\n\t\tfor (java.lang.reflect.Field f : c.getDeclaredFields())\r\n\t\t{\r\n\t\t\tjava.lang.String fname = f.getName();\r\n\t\t\tif (java.lang.reflect.Modifier.isStatic(f.getModifiers()) && !fname.startsWith(\"__hx_\"))\r\n\t\t\tret.push(fname);\r\n\t\t}\r\n\r\n\t\tfor (java.lang.reflect.Method m : c.getDeclaredMethods())\r\n\t\t{\r\n\t\t\tif (m.getDeclaringClass() == java.lang.Object.class)\r\n\t\t\t\tcontinue;\r\n\t\t\tjava.lang.String mname = m.getName();\r\n\t\t\tif (java.lang.reflect.Modifier.isStatic(m.getModifiers()) && !mname.startsWith(\"__hx_\"))\r\n\t\t\t\tret.push(mname);\r\n\t\t}\r\n\r\n\t\treturn ret;\r\n\t")
+	public static function getClassFields(c:Class<Dynamic>) {
+		return null;
+	}
+
+	@:has_untyped @:functionCode("\r\n\t\t\tif (a instanceof haxe.lang.Enum)\r\n\t\t\t\treturn a.equals(b);\r\n\t\t\telse\r\n\t\t\t\treturn haxe.lang.Runtime.eq(a, b);\r\n\t")
+	public static function enumEq<T : enumEq.T>(a:enumEq.T, b:enumEq.T) {
+		return a == b;
+	}
+
+	@:has_untyped @:ifFeature("has_enum") @:functionCode("\r\n\t\tif (e instanceof java.lang.Enum)\r\n\t\t\treturn ((java.lang.Enum) e).ordinal();\r\n\t\telse\r\n\t\t\treturn ((haxe.lang.Enum) e).index;\r\n\t")
+	public static function enumIndex(e:EnumValue) {
+		return e.index;
+	}
+}

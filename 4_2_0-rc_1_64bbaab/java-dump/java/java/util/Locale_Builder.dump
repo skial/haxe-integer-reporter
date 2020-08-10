@@ -1,0 +1,31 @@
+@:realPath("java.util.Locale_Builder") @:nativeGen @:libType @:javaNative @:native("java.util.Locale$Builder") @:javaCanonical("java.util", "Locale.Builder")
+extern class java.util.Locale$Builder {
+
+	function new():Void;
+
+	function build():java.util.Locale;
+
+	function clearExtensions():java.util.Locale$Builder;
+
+	function clear():java.util.Locale$Builder;
+
+	function removeUnicodeLocaleAttribute(param1:String):java.util.Locale$Builder;
+
+	function addUnicodeLocaleAttribute(param1:String):java.util.Locale$Builder;
+
+	function setUnicodeLocaleKeyword(param1:String, param2:String):java.util.Locale$Builder;
+
+	function setExtension(param1:java.types.Char16, param2:String):java.util.Locale$Builder;
+
+	function setVariant(param1:String):java.util.Locale$Builder;
+
+	function setRegion(param1:String):java.util.Locale$Builder;
+
+	function setScript(param1:String):java.util.Locale$Builder;
+
+	function setLanguage(param1:String):java.util.Locale$Builder;
+
+	function setLanguageTag(param1:String):java.util.Locale$Builder;
+
+	function setLocale(param1:java.util.Locale):java.util.Locale$Builder;
+}

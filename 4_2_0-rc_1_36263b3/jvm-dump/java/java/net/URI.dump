@@ -1,0 +1,185 @@
+@:realPath("java.net.URI") @:used @:native("java.net.URI") @:libType
+extern class java.net.URI implements java.io.Serializable implements java.lang.Comparable<java.net.URI> {
+
+	function new(param1:java.lang.String):Void;
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String):Void;
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String):Void;
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String, param5:java.lang.String):Void;
+
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:Int, param5:java.lang.String, param6:java.lang.String, param7:java.lang.String):Void;
+
+	function parseServerAuthority():java.net.URI;
+
+	function normalize():java.net.URI;
+
+	function resolve(param1:java.net.URI):java.net.URI;
+
+	function resolve(param1:java.lang.String):java.net.URI;
+
+	function relativize(param1:java.net.URI):java.net.URI;
+
+	function toURL():java.net.URL;
+
+	function getScheme():java.lang.String;
+
+	function isAbsolute():Bool;
+
+	function isOpaque():Bool;
+
+	function getRawSchemeSpecificPart():java.lang.String;
+
+	function getSchemeSpecificPart():java.lang.String;
+
+	function getRawAuthority():java.lang.String;
+
+	function getAuthority():java.lang.String;
+
+	function getRawUserInfo():java.lang.String;
+
+	function getUserInfo():java.lang.String;
+
+	function getHost():java.lang.String;
+
+	function getPort():Int;
+
+	function getRawPath():java.lang.String;
+
+	function getPath():java.lang.String;
+
+	function getRawQuery():java.lang.String;
+
+	function getQuery():java.lang.String;
+
+	function getRawFragment():java.lang.String;
+
+	function getFragment():java.lang.String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function compareTo(param1:java.net.URI):Int;
+
+	function compareTo(param1:Dynamic):Int;
+
+	function toString():java.lang.String;
+
+	function toASCIIString():java.lang.String;
+
+	static function create(param1:java.lang.String):java.net.URI;
+
+	@:realPath("access_002") @:native("access$002")
+	static function access$002(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100():haxe.Int64;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200():haxe.Int64;
+
+	@:realPath("access_300") @:native("access$300")
+	static function access$300(param1:java.types.Char16, param2:haxe.Int64, param3:haxe.Int64):Bool;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400():haxe.Int64;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500():haxe.Int64;
+
+	@:realPath("access_600") @:native("access$600")
+	static function access$600():haxe.Int64;
+
+	@:realPath("access_702") @:native("access$702")
+	static function access$702(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800():haxe.Int64;
+
+	@:realPath("access_900") @:native("access$900")
+	static function access$900():haxe.Int64;
+
+	@:realPath("access_1002") @:native("access$1002")
+	static function access$1002(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_1102") @:native("access$1102")
+	static function access$1102(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_1200") @:native("access$1200")
+	static function access$1200():haxe.Int64;
+
+	@:realPath("access_1300") @:native("access$1300")
+	static function access$1300():haxe.Int64;
+
+	@:realPath("access_1402") @:native("access$1402")
+	static function access$1402(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_1502") @:native("access$1502")
+	static function access$1502(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_1600") @:native("access$1600")
+	static function access$1600():haxe.Int64;
+
+	@:realPath("access_1700") @:native("access$1700")
+	static function access$1700():haxe.Int64;
+
+	@:realPath("access_1800") @:native("access$1800")
+	static function access$1800():haxe.Int64;
+
+	@:realPath("access_1900") @:native("access$1900")
+	static function access$1900():haxe.Int64;
+
+	@:realPath("access_2000") @:native("access$2000")
+	static function access$2000():haxe.Int64;
+
+	@:realPath("access_2100") @:native("access$2100")
+	static function access$2100():haxe.Int64;
+
+	@:realPath("access_2202") @:native("access$2202")
+	static function access$2202(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_2302") @:native("access$2302")
+	static function access$2302(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_2402") @:native("access$2402")
+	static function access$2402(param1:java.net.URI, param2:java.lang.String):java.lang.String;
+
+	@:realPath("access_2502") @:native("access$2502")
+	static function access$2502(param1:java.net.URI, param2:Int):Int;
+
+	@:realPath("access_2600") @:native("access$2600")
+	static function access$2600():haxe.Int64;
+
+	@:realPath("access_2700") @:native("access$2700")
+	static function access$2700():haxe.Int64;
+
+	@:realPath("access_2800") @:native("access$2800")
+	static function access$2800():haxe.Int64;
+
+	@:realPath("access_2900") @:native("access$2900")
+	static function access$2900():haxe.Int64;
+
+	@:realPath("access_3000") @:native("access$3000")
+	static function access$3000():haxe.Int64;
+
+	@:realPath("access_3100") @:native("access$3100")
+	static function access$3100():haxe.Int64;
+
+	@:realPath("access_3200") @:native("access$3200")
+	static function access$3200():haxe.Int64;
+
+	@:realPath("access_3300") @:native("access$3300")
+	static function access$3300():haxe.Int64;
+
+	@:realPath("access_3400") @:native("access$3400")
+	static function access$3400():haxe.Int64;
+
+	static function <clinit>():Void;
+
+	static var serialVersionUID(default,never):haxe.Int64;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

@@ -1,0 +1,21 @@
+@:realPath("java.nio.file.attribute.BasicFileAttributes") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.BasicFileAttributes") @:javaCanonical("java.nio.file.attribute", "BasicFileAttributes")
+extern interface java.nio.file.attribute.BasicFileAttributes {
+
+	function fileKey():Dynamic;
+
+	function size():haxe.Int64;
+
+	function isOther():Bool;
+
+	function isSymbolicLink():Bool;
+
+	function isDirectory():Bool;
+
+	function isRegularFile():Bool;
+
+	function creationTime():java.nio.file.attribute.FileTime;
+
+	function lastAccessTime():java.nio.file.attribute.FileTime;
+
+	function lastModifiedTime():java.nio.file.attribute.FileTime;
+}

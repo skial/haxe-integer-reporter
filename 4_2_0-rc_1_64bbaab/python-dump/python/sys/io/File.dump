@@ -1,0 +1,16 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.File {
+
+	public static function getContent(path:str) {
+		var f = cast python.lib.Builtins.open(path, "r", -1, "utf-8", null, "");
+		var content = f.read(-1);
+		f.close();
+		return content;
+	}
+
+	public static function saveContent(path:str, content:str) {
+		var f = cast python.lib.Builtins.open(path, "w", -1, "utf-8", null, "");
+		f.write(content);
+		f.close();
+	}
+}

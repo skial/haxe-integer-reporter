@@ -1,0 +1,6 @@
+@:realPath("java.util.function.DoubleUnaryOperator_Statics") @:libType @:javaNative @:native("java.util.function.DoubleUnaryOperator") @:javaCanonical("java.util.function", "DoubleUnaryOperator")
+extern class java.util.function.DoubleUnaryOperator {
+
+	@:overload
+	static function identity():java.util.function.DoubleUnaryOperator;
+}

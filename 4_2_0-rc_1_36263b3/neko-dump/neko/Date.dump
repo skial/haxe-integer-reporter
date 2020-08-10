@@ -1,0 +1,29 @@
+@:keep @:used @:coreApi
+class Date {
+
+	public function new(year:Int, month:Int, day:Int, hour:Int, min:Int, sec:Int) {
+		this.__t = Date.date_set_day(0, year, month + 1, day);
+		this.__t = Date.date_set_hour(this.__t, hour, min, sec);
+	}
+
+	var __t:Dynamic;
+
+	@:keep
+	public function toString() {
+		return new String(Date.date_format(this.__t, null));
+	}
+
+	@:value(Lib.load("std", "date_format", 2))
+	static var date_format:(Dynamic, Unknown<1>) -> String = neko.Lib.load("std", "date_format", 2);
+
+	@:value(Lib.load("std", "date_set_hour", 4))
+	static var date_set_hour:(Dynamic, Int, Int, Int) -> Unknown<2> = neko.Lib.load("std", "date_set_hour", 4);
+
+	@:value(Lib.load("std", "date_set_day", 4))
+	static var date_set_day:(Int, Int, Int, Int) -> Unknown<3> = neko.Lib.load("std", "date_set_day", 4);
+
+	@:has_untyped @:keep
+	static function __string() {
+		return "Date".__s;
+	}
+}

@@ -1,0 +1,21 @@
+@:realPath("java.security.CodeSource") @:nativeGen @:libType @:javaNative @:native("java.security.CodeSource") @:javaCanonical("java.security", "CodeSource")
+extern class java.security.CodeSource implements java.io.Serializable {
+
+	function new(param1:java.net.URL, param2:java.NativeArray<java.security.CodeSigner>):Void;
+
+	function new(param1:java.net.URL, param2:java.NativeArray<java.security.cert.Certificate>):Void;
+
+	function toString():String;
+
+	function implies(param1:java.security.CodeSource):Bool;
+
+	function getCodeSigners():java.NativeArray<java.security.CodeSigner>;
+
+	function getCertificates():java.NativeArray<java.security.cert.Certificate>;
+
+	function getLocation():java.net.URL;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+}

@@ -1,0 +1,8 @@
+@:realPath("java.nio.channels.AsynchronousChannel") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.channels.AsynchronousChannel") @:javaCanonical("java.nio.channels", "AsynchronousChannel")
+extern interface java.nio.channels.AsynchronousChannel implements java.nio.channels.Channel {
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	function isOpen():Bool;
+}

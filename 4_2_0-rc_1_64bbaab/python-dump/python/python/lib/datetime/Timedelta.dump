@@ -1,0 +1,20 @@
+@:pythonImport("datetime", "timedelta")
+extern class python.lib.datetime.Timedelta {
+
+	@:value({ weeks : 0, hours : 0, minutes : 0, milliseconds : 0, microseconds : 0, seconds : 0, days : 0 })
+	function new(days:Int, seconds:Int, microseconds:Int, milliseconds:Int, minutes:Int, hours:Int, weeks:Int):Void;
+
+	var days:Int;
+
+	var seconds:Int;
+
+	var microseconds:Int;
+
+	function total_seconds():Float;
+
+	static var min:python.lib.datetime.Timedelta;
+
+	static var max:python.lib.datetime.Timedelta;
+
+	static var resolution:python.lib.datetime.Timedelta;
+}

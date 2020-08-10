@@ -1,0 +1,9 @@
+@:realPath("java.util.MissingResourceException") @:nativeGen @:libType @:javaNative @:native("java.util.MissingResourceException") @:javaCanonical("java.util", "MissingResourceException")
+extern class java.util.MissingResourceException extends java.lang.RuntimeException {
+
+	function new(param1:String, param2:String, param3:String):Void;
+
+	function getKey():String;
+
+	function getClassName():String;
+}

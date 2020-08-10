@@ -1,0 +1,13 @@
+@:keep @:directlyUsed @:used
+class neko.Lib {
+
+	@:has_untyped
+	public static function load(lib:String, prim:String, nargs:Int) {
+		return __dollar__loader.loadprim((lib + "@" + prim).__s, nargs);
+	}
+
+	@:has_untyped
+	public static function rethrow(e:Dynamic) {
+		return __dollar__rethrow(e);
+	}
+}

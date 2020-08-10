@@ -1,0 +1,3 @@
+@:realPath("python.ImportWarning") @:native("ImportWarning")
+extern class ImportWarning extends Warning {
+}

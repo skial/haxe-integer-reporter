@@ -1,0 +1,29 @@
+@:used @:pythonImport("io", "IOBase")
+extern class python.lib.io.IOBase {
+
+	function close():Void;
+
+	function flush():Void;
+
+	@:value({ limit : -1 })
+	function readline(limit:Int):str;
+
+	function readable():Bool;
+
+	var closed(default,null):Bool;
+
+	@:value({ hint : -1 })
+	function readlines(hint:Int):list<str>;
+
+	function tell():Int;
+
+	function writable():Bool;
+
+	function seekable():Bool;
+
+	function fileno():Int;
+
+	function seek(offset:Int, whence:python.lib.io.SeekSet):Int;
+
+	function truncate(size:Int):Int;
+}

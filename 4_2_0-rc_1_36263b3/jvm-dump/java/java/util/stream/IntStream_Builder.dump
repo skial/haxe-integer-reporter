@@ -1,0 +1,9 @@
+@:realPath("java.util.stream.IntStream_Builder") @:used @:native("java.util.stream.IntStream$Builder") @:libType
+extern interface java.util.stream.IntStream$Builder implements java.util.function.IntConsumer {
+
+	function accept(param1:Int):Void;
+
+	function add(param1:Int):java.util.stream.IntStream$Builder;
+
+	function build():java.util.stream.IntStream;
+}

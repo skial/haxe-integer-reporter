@@ -1,0 +1,15 @@
+@:realPath("java.security.KeyException") @:libType @:javaNative @:native("java.security.KeyException") @:javaCanonical("java.security", "KeyException")
+extern class java.security.KeyException extends java.security.GeneralSecurityException {
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+}

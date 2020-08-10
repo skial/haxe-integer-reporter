@@ -1,0 +1,3 @@
+@:realPath("python.OverflowError") @:native("OverflowError")
+extern class OverflowError extends ArithmeticError {
+}

@@ -1,0 +1,9 @@
+@:realPath("java.security.cert.Certificate_CertificateRep") @:libType @:javaNative @:native("java.security.cert.Certificate$CertificateRep") @:javaCanonical("java.security.cert", "Certificate.CertificateRep")
+extern class java.security.cert.Certificate$CertificateRep implements java.io.Serializable {
+
+	@:overload @:protected
+	function new(param1:java.lang.String, param2:java.NativeArray<java.types.Int8>):Void;
+
+	@:overload @:throws("java.io.ObjectStreamException") @:protected
+	function readResolve():Dynamic;
+}

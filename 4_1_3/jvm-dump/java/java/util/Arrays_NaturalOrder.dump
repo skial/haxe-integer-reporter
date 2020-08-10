@@ -1,0 +1,27 @@
+@:realPath("java.util.Arrays_NaturalOrder") @:used @:libType @:javaNative @:native("java.util.Arrays$NaturalOrder") @:javaCanonical("java.util", "Arrays.NaturalOrder")
+extern class java.util.Arrays$NaturalOrder implements java.util.Comparator<Dynamic> {
+
+	@:overload
+	function compare(param1:Dynamic, param2:Dynamic):Int;
+
+	@:overload
+	function reversed():java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparing(param1:java.util.Comparator<Dynamic>):java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparing<U : thenComparing.U>(param1:java.util.function.Function<Dynamic, thenComparing.U>):java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparing<U : thenComparing.U>(param1:java.util.function.Function<Dynamic, thenComparing.U>, param2:java.util.Comparator<Dynamic>):java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparingInt(param1:java.util.function.ToIntFunction<Dynamic>):java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparingLong(param1:java.util.function.ToLongFunction<Dynamic>):java.util.Comparator<Dynamic>;
+
+	@:overload
+	function thenComparingDouble(param1:java.util.function.ToDoubleFunction<Dynamic>):java.util.Comparator<Dynamic>;
+}

@@ -1,0 +1,4 @@
+extern class js.node.fs.FSWatcher extends js.node.events.EventEmitter<js.node.fs.FSWatcher> {
+
+	function close():Void;
+}

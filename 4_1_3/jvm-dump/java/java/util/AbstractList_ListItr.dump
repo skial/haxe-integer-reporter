@@ -1,0 +1,21 @@
+@:realPath("java.util.AbstractList_ListItr") @:used @:libType @:javaNative @:native("java.util.AbstractList$ListItr") @:javaCanonical("java.util", "AbstractList.ListItr")
+extern class java.util.AbstractList$ListItr extends java.util.AbstractList$Itr implements java.util.ListIterator<Dynamic> {
+
+	@:overload
+	function add(param1:Dynamic):Void;
+
+	@:overload
+	function set(param1:Dynamic):Void;
+
+	@:overload
+	function previousIndex():Int;
+
+	@:overload
+	function nextIndex():Int;
+
+	@:overload
+	function previous():Dynamic;
+
+	@:overload
+	function hasPrevious():Bool;
+}

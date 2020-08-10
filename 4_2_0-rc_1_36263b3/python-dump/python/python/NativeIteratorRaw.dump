@@ -1,0 +1,1 @@
+typedef python.NativeIteratorRaw<T> = { __next__ : () -> python.NativeIteratorRaw.T, __iter__ : () -> python.NativeIterator<python.NativeIteratorRaw.T> }

@@ -1,0 +1,6 @@
+@:realPath("java.net.URLStreamHandlerFactory") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.URLStreamHandlerFactory") @:javaCanonical("java.net", "URLStreamHandlerFactory")
+extern interface java.net.URLStreamHandlerFactory {
+
+	@:overload
+	function createURLStreamHandler(param1:String):java.net.URLStreamHandler;
+}

@@ -1,0 +1,3 @@
+@:realPath("java.lang.Throwable_WrappedPrintStream") @:libType @:javaNative @:native("java.lang.Throwable$WrappedPrintStream") @:javaCanonical("java.lang", "Throwable.WrappedPrintStream")
+extern class java.lang.Throwable$WrappedPrintStream extends java.lang.Throwable$PrintStreamOrWriter {
+}

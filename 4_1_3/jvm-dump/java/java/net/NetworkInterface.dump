@@ -1,0 +1,66 @@
+@:realPath("java.net.NetworkInterface") @:libType @:javaNative @:native("java.net.NetworkInterface") @:javaCanonical("java.net", "NetworkInterface")
+extern class java.net.NetworkInterface {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function isVirtual():Bool;
+
+	@:overload @:throws("java.net.SocketException")
+	function getMTU():Int;
+
+	@:overload @:throws("java.net.SocketException")
+	function getHardwareAddress():java.NativeArray<java.types.Int8>;
+
+	@:overload @:throws("java.net.SocketException")
+	function supportsMulticast():Bool;
+
+	@:overload @:throws("java.net.SocketException")
+	function isPointToPoint():Bool;
+
+	@:overload @:throws("java.net.SocketException")
+	function isLoopback():Bool;
+
+	@:overload @:throws("java.net.SocketException")
+	function isUp():Bool;
+
+	@:overload
+	function getDisplayName():java.lang.String;
+
+	@:overload
+	function getIndex():Int;
+
+	@:overload
+	function getParent():java.net.NetworkInterface;
+
+	@:overload
+	function getSubInterfaces():java.util.Enumeration<java.net.NetworkInterface>;
+
+	@:overload
+	function getInterfaceAddresses():java.util.List<java.net.InterfaceAddress>;
+
+	@:overload
+	function getInetAddresses():java.util.Enumeration<java.net.InetAddress>;
+
+	@:overload
+	function getName():java.lang.String;
+
+	@:overload @:throws("java.net.SocketException")
+	static function getNetworkInterfaces():java.util.Enumeration<java.net.NetworkInterface>;
+
+	@:overload @:throws("java.net.SocketException")
+	static function getByInetAddress(param1:java.net.InetAddress):java.net.NetworkInterface;
+
+	@:overload @:throws("java.net.SocketException")
+	static function getByIndex(param1:Int):java.net.NetworkInterface;
+
+	@:overload @:throws("java.net.SocketException")
+	static function getByName(param1:java.lang.String):java.net.NetworkInterface;
+}

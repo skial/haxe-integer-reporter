@@ -1,0 +1,105 @@
+@:noCompletion
+class _internal.SuppressDeprecated {
+
+	public static function run[Function:Void -> Void]
+		[Block:Void]
+			[Call:Void]
+				[Field:(callback : (Array<haxe.macro.ModuleType> -> Void)) -> Void]
+					[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+					[FStatic:(callback : (Array<haxe.macro.ModuleType> -> Void)) -> Void]
+						haxe.macro.Context
+						onAfterTyping:(callback : (Array<haxe.macro.ModuleType> -> Void)) -> Void
+				[Function:(_ : Array<haxe.macro.ModuleType>) -> Void]
+					[Arg:Array<haxe.macro.ModuleType>] [Local _(42635):Array<haxe.macro.ModuleType>]
+					[Block:Void]
+						[Call:Void]
+							[Field:(predicate : (haxe.macro.Message -> Bool)) -> Void]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:(predicate : (haxe.macro.Message -> Bool)) -> Void]
+									haxe.macro.Context
+									filterMessages:(predicate : (haxe.macro.Message -> Bool)) -> Void
+							[Function:(x : haxe.macro.Message) -> Bool]
+								[Arg:haxe.macro.Message] [Local x(42636):haxe.macro.Message]
+								[Return:Dynamic]
+									[Meta:Bool]
+										:ast(switch x {
+	case Warning(msg, pos) if (~/js/node/Url\.hx$/.match(Context.getPosInfos(pos).file)):
+		msg != "This typedef is deprecated in favor of { ?slashes : Null<Bool>, ?search : Null<String>, ?query : Null<haxe.extern.EitherType<String, haxe.DynamicAccess<String>>>, ?protocol : Null<String>, ?port : Null<String>, ?pathname : Null<String>, ?path : Null<String>, ?href : Null<String>, ?hostname : Null<String>, ?host : Null<String>, ?hash : Null<String>, ?auth : Null<String> }";	
+	case Warning(msg, pos) if (~/js/node/domain/Domain\.hx$/.match(Context.getPosInfos(pos).file)):
+		msg != "This typedef is deprecated in favor of { domainThrown : Bool, domainEmitter : js.node.events.IEventEmitter, domainBound : haxe.Function, domain : js.node.domain.Domain }";	
+	case _:
+		true;	
+})
+										[If:Bool]
+											[Binop:Bool]
+												[EnumIndex:Int] [Local x(42636):haxe.macro.Message:haxe.macro.Message]
+												==
+												[Const:Int] 1
+											[Then:Bool] [Block:Bool]
+												[Var `1(42643):haxe.macro.Position]
+													[EnumParameter:haxe.macro.Position]
+														[Local x(42636):haxe.macro.Message:haxe.macro.Message]
+														Warning
+														1
+												[Var `(42644):String]
+													[EnumParameter:String]
+														[Local x(42636):haxe.macro.Message:haxe.macro.Message]
+														Warning
+														0
+												[Block:Bool]
+													[Var pos(42645):haxe.macro.Position] [Local `1(42643):haxe.macro.Position:haxe.macro.Position]
+													[Var msg(42646):String] [Local `(42644):String:String]
+													[If:Bool]
+														[Call:Bool]
+															[Field:(s : String) -> Bool]
+																[New:EReg]
+																	EReg
+																	[Const:String] "js/node/Url\\.hx$"
+																	[Const:String] ""
+																[FInstance:(s : String) -> Bool]
+																	EReg
+																	match:(s : String) -> Bool
+															[Field:String]
+																[Call:{ min : Int, max : Int, file : String }]
+																	[Field:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }]
+																		[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																		[FStatic:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }]
+																			haxe.macro.Context
+																			getPosInfos:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }
+																	[Local pos(42645):haxe.macro.Position:haxe.macro.Position]
+																[FAnon:String] file:String
+														[Then:Bool] [Block:Bool]
+															[Binop:Bool]
+																[Local msg(42646):String:String]
+																!=
+																[Const:String] "This typedef is deprecated in favor of { ?slashes : Null<Bool>, ?search : Null<String>, ?query : Null<haxe.extern.EitherType<String, haxe.DynamicAccess<String>>>, ?protocol : Null<String>, ?port : Null<String>, ?pathname : Null<String>, ?path : Null<String>, ?href : Null<String>, ?hostname : Null<String>, ?host : Null<String>, ?hash : Null<String>, ?auth : Null<String> }"
+														[Else:Bool] [Block:Bool]
+															[Var pos(42647):haxe.macro.Position] [Local `1(42643):haxe.macro.Position:haxe.macro.Position]
+															[Var msg(42648):String] [Local `(42644):String:String]
+															[If:Bool]
+																[Call:Bool]
+																	[Field:(s : String) -> Bool]
+																		[New:EReg]
+																			EReg
+																			[Const:String] "js/node/domain/Domain\\.hx$"
+																			[Const:String] ""
+																		[FInstance:(s : String) -> Bool]
+																			EReg
+																			match:(s : String) -> Bool
+																	[Field:String]
+																		[Call:{ min : Int, max : Int, file : String }]
+																			[Field:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }]
+																				[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																				[FStatic:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }]
+																					haxe.macro.Context
+																					getPosInfos:(p : haxe.macro.Position) -> { min : Int, max : Int, file : String }
+																			[Local pos(42647):haxe.macro.Position:haxe.macro.Position]
+																		[FAnon:String] file:String
+																[Then:Bool] [Block:Bool]
+																	[Binop:Bool]
+																		[Local msg(42648):String:String]
+																		!=
+																		[Const:String] "This typedef is deprecated in favor of { domainThrown : Bool, domainEmitter : js.node.events.IEventEmitter, domainBound : haxe.Function, domain : js.node.domain.Domain }"
+																[Else:Bool] [Block:Bool] [Const:Bool] true
+											[Else:Bool] [Block:Bool] [Const:Bool] true
+}

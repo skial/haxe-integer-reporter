@@ -1,0 +1,24 @@
+@:realPath("java.util.HashMap_EntrySet") @:used @:libType @:javaNative @:native("java.util.HashMap$EntrySet") @:javaCanonical("java.util", "HashMap.EntrySet")
+extern class java.util.HashMap$EntrySet extends java.util.AbstractSet<java.util.Map$Entry<Dynamic, Dynamic>> {
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.util.Map$Entry<Dynamic, Dynamic>>;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.Map$Entry<Dynamic, Dynamic>>;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function size():Int;
+}

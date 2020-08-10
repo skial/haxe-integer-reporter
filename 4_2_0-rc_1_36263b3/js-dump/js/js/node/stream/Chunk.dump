@@ -1,0 +1,1 @@
+typedef js.node.stream.Chunk = { encoding : String, chunk : Dynamic }

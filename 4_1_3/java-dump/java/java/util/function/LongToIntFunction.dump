@@ -1,0 +1,6 @@
+@:realPath("java.util.function.LongToIntFunction") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.LongToIntFunction") @:javaCanonical("java.util.function", "LongToIntFunction")
+extern interface java.util.function.LongToIntFunction {
+
+	@:overload
+	function applyAsInt(param1:haxe.Int64):Int;
+}

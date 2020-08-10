@@ -1,0 +1,6 @@
+extern class js.node.fs.WriteStream extends js.node.stream.Writable<js.node.fs.WriteStream> {
+
+	var path:js.node.FsPath;
+
+	var bytesWritten:Int;
+}

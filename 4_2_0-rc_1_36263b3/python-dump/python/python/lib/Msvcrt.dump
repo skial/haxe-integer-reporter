@@ -1,0 +1,7 @@
+@:pythonImport("msvcrt", ignoreError = true)
+extern class python.lib.Msvcrt {
+
+	static function getch():bytes;
+
+	static function getwch():str;
+}

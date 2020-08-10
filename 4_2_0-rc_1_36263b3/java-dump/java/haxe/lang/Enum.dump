@@ -1,0 +1,23 @@
+@:realPath("java.internal.HxEnum") @:directlyUsed @:used @:nativeGen @:keep @:native("haxe.lang.Enum") @:nativeGen
+class haxe.lang.Enum {
+
+	@:has_untyped
+	public function new(index:Int) {
+		this.index = index;
+	}
+
+	@:readOnly
+	var index(default,never):Int;
+
+	public function getTag() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "java/internal/HxObject.hx", lineNumber : 224, className : "java.internal.HxEnum", methodName : "getTag"});
+	}
+
+	public function getParams() {
+		return [];
+	}
+
+	public function toString() {
+		return this.getTag();
+	}
+}

@@ -1,0 +1,6 @@
+@:realPath("java.nio.file.PathMatcher") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.PathMatcher") @:javaCanonical("java.nio.file", "PathMatcher")
+extern interface java.nio.file.PathMatcher {
+
+	@:overload
+	function matches(param1:java.nio.file.Path):Bool;
+}

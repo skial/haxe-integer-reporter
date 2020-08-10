@@ -1,0 +1,66 @@
+@:realPath("java.lang.ProcessBuilder") @:libType @:javaNative @:native("java.lang.ProcessBuilder") @:javaCanonical("java.lang", "ProcessBuilder")
+extern class java.lang.ProcessBuilder {
+
+	@:overload
+	function new(param1:java.NativeArray<java.lang.String>):Void;
+
+	@:overload
+	function new(param1:java.util.List<java.lang.String>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function start():java.lang.Process;
+
+	@:overload
+	function redirectErrorStream(param1:Bool):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectErrorStream():Bool;
+
+	@:overload
+	function inheritIO():java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectError():java.lang.ProcessBuilder$Redirect;
+
+	@:overload
+	function redirectError(param1:java.lang.ProcessBuilder$Redirect):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectError(param1:java.io.File):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectOutput():java.lang.ProcessBuilder$Redirect;
+
+	@:overload
+	function redirectOutput(param1:java.lang.ProcessBuilder$Redirect):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectOutput(param1:java.io.File):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectInput():java.lang.ProcessBuilder$Redirect;
+
+	@:overload
+	function redirectInput(param1:java.lang.ProcessBuilder$Redirect):java.lang.ProcessBuilder;
+
+	@:overload
+	function redirectInput(param1:java.io.File):java.lang.ProcessBuilder;
+
+	@:overload
+	function directory(param1:java.io.File):java.lang.ProcessBuilder;
+
+	@:overload
+	function directory():java.io.File;
+
+	@:overload
+	function environment():java.util.Map<java.lang.String, java.lang.String>;
+
+	@:overload
+	function command():java.util.List<java.lang.String>;
+
+	@:overload
+	function command(param1:java.util.List<java.lang.String>):java.lang.ProcessBuilder;
+
+	@:overload
+	function command(param1:java.NativeArray<java.lang.String>):java.lang.ProcessBuilder;
+}

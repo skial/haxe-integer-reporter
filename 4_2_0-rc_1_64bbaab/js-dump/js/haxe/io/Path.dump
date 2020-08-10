@@ -1,0 +1,67 @@
+@:keep @:directlyUsed @:used
+class haxe.io.Path {
+
+	public static function normalize(path:String) {
+		var slash = "/";
+		path = path.split("\\").join(slash);
+		if ((path == slash)) return slash;
+		var target = [];
+		{
+			var _g = 0;
+			var _g1 = path.split(slash);
+			while ((_g < _g1.length)) {
+				var token = _g1[_g];
+				++ _g;
+				if ((token == ".." && target.length > 0 && target[target.length - 1] != "..")) target.pop() else if ((token == "")) {
+					if ((target.length > 0 || @:pure HxOverrides.cca(path, 0) == 47)) target.push(token);
+				} else if ((token != ".")) target.push(token);
+			};
+		};
+		var tmp = target.join(slash);
+		var acc_b = "";
+		var colon = false;
+		var slashes = false;
+		{
+			var _g2_offset = 0;
+			var _g2_s = tmp;
+			while ((_g2_offset < _g2_s.length)) {
+				var s = _g2_s;
+				var index = _g2_offset ++;
+				var c = cast s.charCodeAt(index);
+				if ((c >= 55296 && c <= 56319)) c = c - 55232 << 10 | cast s.charCodeAt(index + 1) & 1023;
+				var c1 = c;
+				if ((c1 >= 65536)) ++ _g2_offset;
+				var c2 = c1;
+				switch ((c2)) {
+					case 47: if ((! colon)) slashes = true else {
+						var i = c2;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc_b += "/";
+								slashes = false;
+							};
+							acc_b += @:pure __define_feature__("String.fromCharCode", js.Syntax.code("String.fromCodePoint({0})", i));
+						};
+					};
+					case 58: {
+						acc_b += ":";
+						colon = true;
+					};
+					default: {
+						var i1 = c2;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc_b += "/";
+								slashes = false;
+							};
+							acc_b += @:pure __define_feature__("String.fromCharCode", js.Syntax.code("String.fromCodePoint({0})", i1));
+						};
+					}
+				};
+			};
+		};
+		return acc_b;
+	}
+}

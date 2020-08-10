@@ -1,0 +1,280 @@
+@:directlyUsed @:used @:coreApi
+class String {
+
+	public function new(string:String) {
+		this.bytes = string.bytes;
+		this.length = string.length;
+	}
+
+	var bytes:hl.Bytes;
+
+	public var length(default,null):Int;
+
+	public function toUpperCase() {
+		var b = hl._Bytes.Bytes_Impl_.ucs2Upper(this.bytes, 0, this.length);
+		var length = this.length;
+		var s = $new(String);
+		s.bytes = b;
+		s.length = length;
+		return s;
+	}
+
+	public function toLowerCase() {
+		var b = hl._Bytes.Bytes_Impl_.ucs2Lower(this.bytes, 0, this.length);
+		var length = this.length;
+		var s = $new(String);
+		s.bytes = b;
+		s.length = length;
+		return s;
+	}
+
+	public function charAt(index:Int) {
+		if ((cast index >= cast this.length)) return "";
+		var this1 = hl._Bytes.Bytes_Impl_.alloc(4);
+		var b = this1;
+		{
+			var this1 = this.bytes;
+			var v = $bgetui16(this1, index << 1);
+			$bsetui16(b, 0, v);
+		};
+		$bsetui16(b, 2, 0);
+		var s = $new(String);
+		s.bytes = b;
+		s.length = 1;
+		return s;
+	}
+
+	public function charCodeAt(index:Int) {
+		var idx = index;
+		if ((idx >= cast this.length)) return null;
+		var this1 = this.bytes;
+		return $bgetui16(this1, index << 1);
+	}
+
+	inline function findChar(start:Int, len:Int, src:hl.Bytes, srcLen:Int) {
+		var p = 0;
+		while ((true)) {
+			p = hl._Bytes.Bytes_Impl_.find(this.bytes, start, len - start, src, 0, srcLen);
+			if ((p < 0 || (p & 1) == 0)) break;
+			start = p + 1;
+		};
+		return p;
+	}
+
+	public function indexOf(str:String, startIndex:Null<Int> = null) {
+		var startByte = 0;
+		if ((startIndex != null && startIndex > 0)) {
+			if ((startIndex >= this.length)) {
+				if ((str == "")) return this.length else return -1;
+			};
+			startByte = startIndex << 1;
+		};
+		var start = startByte;
+		var len = this.length << 1;
+		var src = str.bytes;
+		var srcLen = str.length << 1;
+		var p = 0;
+		while ((true)) {
+			p = hl._Bytes.Bytes_Impl_.find(this.bytes, start, len - start, src, 0, srcLen);
+			if ((p < 0 || (p & 1) == 0)) break;
+			start = p + 1;
+		};
+		var p = p;
+		if ((p > 0)) p >>= 1;
+		return p;
+	}
+
+	public function lastIndexOf(str:String, startIndex:Null<Int> = null) {
+		var max = this.length;
+		if ((startIndex != null)) {
+			max = startIndex + str.length;
+			if ((max < 0)) max = 0;
+			if ((max > this.length)) max = this.length;
+		};
+		var pos = max - str.length;
+		var slen = str.length << 1;
+		while ((pos >= 0)) {
+			if ((hl._Bytes.Bytes_Impl_.compare(this.bytes, pos << 1, str.bytes, 0, slen) == 0)) return pos;
+			-- pos;
+		};
+		return -1;
+	}
+
+	public function split(delimiter:String) {
+		var out = [];
+		if ((this.length == 0)) {
+			out.push("");
+			return out;
+		};
+		if ((delimiter.length == 0)) {
+			{
+				var _g = 0;
+				var _g1 = this.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					out.push(this.substr(i, 1));
+				};
+			};
+			return out;
+		};
+		var pos = 0;
+		var dlen = delimiter.length;
+		while ((true)) {
+			var start = pos << 1;
+			var len = this.length << 1;
+			var src = delimiter.bytes;
+			var srcLen = dlen << 1;
+			var p = 0;
+			while ((true)) {
+				p = hl._Bytes.Bytes_Impl_.find(this.bytes, start, len - start, src, 0, srcLen);
+				if ((p < 0 || (p & 1) == 0)) break;
+				start = p + 1;
+			};
+			var p = p;
+			if ((p < 0)) {
+				out.push(this.substr(pos, this.length - pos));
+				break;
+			};
+			p >>= 1;
+			out.push(this.substr(pos, p - pos));
+			pos = p + dlen;
+		};
+		return out;
+	}
+
+	public function substr(pos:Int, len:Null<Int> = null) {
+		var sl = this.length;
+		var len = if ((len == null)) sl else len;
+		if ((len == 0)) return "";
+		if ((pos != 0 && len < 0)) return "";
+		if ((pos < 0)) {
+			pos = sl + pos;
+			if ((pos < 0)) pos = 0;
+		} else if ((len < 0)) {
+			len = sl + len - pos;
+			if ((len < 0)) return "";
+		};
+		if ((cast pos + len > cast sl)) len = sl - pos;
+		if ((pos < 0 || len <= 0)) return "";
+		var this1 = hl._Bytes.Bytes_Impl_.alloc(len + 1 << 1);
+		var b = this1;
+		hl._Bytes.Bytes_Impl_.blit(b, 0, this.bytes, pos << 1, len << 1);
+		$bsetui16(b, len << 1, 0);
+		var s = $new(String);
+		s.bytes = b;
+		s.length = len;
+		return s;
+	}
+
+	public function substring(startIndex:Int, endIndex:Null<Int> = null) {
+		var end;
+		if ((endIndex == null)) end = this.length else {
+			end = endIndex;
+			if ((end < 0)) end = 0 else if ((end > this.length)) end = this.length;
+		};
+		if ((startIndex < 0)) startIndex = 0 else if ((startIndex > this.length)) startIndex = this.length;
+		if ((startIndex > end)) {
+			var tmp = startIndex;
+			startIndex = end;
+			end = tmp;
+		};
+		return this.substr(startIndex, end - startIndex);
+	}
+
+	public function toString() {
+		return this;
+	}
+
+	function toUtf8() {
+		return hl._Bytes.Bytes_Impl_.utf16ToUtf8(this.bytes, 0, null);
+	}
+
+	@:keep
+	function __string() {
+		return this.bytes;
+	}
+
+	@:keep
+	function __compare(v:Dynamic) {
+		var s = Std.downcast(v, String);
+		if ((s == null)) return hl.Api.comparePointer(this, v);
+		var v = hl._Bytes.Bytes_Impl_.compare16(this.bytes, s.bytes, if ((this.length < s.length)) this.length else s.length);
+		if ((v == 0)) return this.length - s.length else return v;
+	}
+
+	public static function fromCharCode(code:Int) {
+		if ((code >= 0 && code < 65536)) {
+			if ((code >= 55296 && code <= 57343)) throw haxe.Exception.thrown("Invalid unicode char " + code);
+			var this1 = hl._Bytes.Bytes_Impl_.alloc(4);
+			var b = this1;
+			$bsetui16(b, 0, code);
+			$bsetui16(b, 2, 0);
+			var s = $new(String);
+			s.bytes = b;
+			s.length = 1;
+			return s;
+		} else if ((code < 1114112)) {
+			var this1 = hl._Bytes.Bytes_Impl_.alloc(6);
+			var b = this1;
+			code -= 65536;
+			$bsetui16(b, 0, (code >> 10) + 55296);
+			$bsetui16(b, 2, (code & 1023) + 56320);
+			$bsetui16(b, 4, 0);
+			var s = $new(String);
+			s.bytes = b;
+			s.length = 2;
+			return s;
+		} else throw haxe.Exception.thrown("Invalid unicode char " + code);
+	}
+
+	@:has_untyped @:keep
+	static inline function __alloc__(b:hl.Bytes, length:Int) {
+		var s = $new(String);
+		s.bytes = b;
+		s.length = length;
+		return s;
+	}
+
+	@:keep
+	static function call_toString(v:Dynamic) {
+		var s = v.toString();
+		return s.bytes;
+	}
+
+	@:has_untyped
+	static inline function fromUCS2(b:hl.Bytes) {
+		var s = $new(String);
+		s.bytes = b;
+		s.length = hl._Bytes.Bytes_Impl_.ucs2Length(b, 0);
+		return s;
+	}
+
+	@:keep
+	static function fromUTF8(b:hl.Bytes) {
+		var outLen = 0;
+		var this1 = $ref(outLen);
+		var b2 = hl._Bytes.Bytes_Impl_.utf8ToUtf16(b, 0, @:implicitCast this1);
+		var s = $new(String);
+		s.bytes = b2;
+		s.length = outLen >> 1;
+		return s;
+	}
+
+	@:keep
+	static function __add__(a:String, b:String) {
+		if ((a == null)) a = "null";
+		if ((b == null)) b = "null";
+		var asize = a.length << 1;
+		var bsize = b.length << 1;
+		var tot = asize + bsize;
+		var this1 = hl._Bytes.Bytes_Impl_.alloc(tot + 2);
+		var bytes = this1;
+		hl._Bytes.Bytes_Impl_.blit(bytes, 0, a.bytes, 0, asize);
+		hl._Bytes.Bytes_Impl_.blit(bytes, asize, b.bytes, 0, bsize);
+		$bsetui16(bytes, tot, 0);
+		var s = $new(String);
+		s.bytes = bytes;
+		s.length = tot >> 1;
+		return s;
+	}
+}

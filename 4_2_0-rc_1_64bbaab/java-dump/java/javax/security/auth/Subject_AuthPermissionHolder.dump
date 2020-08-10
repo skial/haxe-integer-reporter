@@ -1,0 +1,3 @@
+@:realPath("java.javax.security.auth.Subject_AuthPermissionHolder") @:nativeGen @:libType @:javaNative @:native("javax.security.auth.Subject$AuthPermissionHolder") @:javaCanonical("javax.security.auth", "Subject.AuthPermissionHolder")
+extern class javax.security.auth.Subject$AuthPermissionHolder {
+}

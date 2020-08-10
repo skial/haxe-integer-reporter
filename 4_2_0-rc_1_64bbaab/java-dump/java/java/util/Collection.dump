@@ -1,0 +1,39 @@
+@:realPath("java.util.Collection") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.Collection") @:javaCanonical("java.util", "Collection")
+extern interface java.util.Collection<E:Dynamic> implements java.lang.Iterable<java.util.Collection.E> {
+
+	function parallelStream():java.util.stream.Stream<java.util.Collection.E>;
+
+	function stream():java.util.stream.Stream<java.util.Collection.E>;
+
+	function spliterator():java.util.Spliterator<java.util.Collection.E>;
+
+	function clear():Void;
+
+	function retainAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function removeIf(param1:java.util.function.Predicate<Dynamic>):Bool;
+
+	function removeAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function addAll(param1:java.util.Collection<java.util.Collection.E>):Bool;
+
+	function containsAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	function remove(param1:Dynamic):Bool;
+
+	function add(param1:java.util.Collection.E):Bool;
+
+	function toArray<T:Dynamic>(param1:java.NativeArray<toArray.T>):java.NativeArray<toArray.T>;
+
+	function toArray():java.NativeArray<Dynamic>;
+
+	function iterator():java.util.Iterator<java.util.Collection.E>;
+
+	function contains(param1:Dynamic):Bool;
+
+	function isEmpty():Bool;
+
+	function size():Int;
+
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+}

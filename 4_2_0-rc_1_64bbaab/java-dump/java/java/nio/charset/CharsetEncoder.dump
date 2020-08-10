@@ -1,0 +1,60 @@
+@:realPath("java.nio.charset.CharsetEncoder") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.charset.CharsetEncoder") @:javaCanonical("java.nio.charset", "CharsetEncoder")
+extern class java.nio.charset.CharsetEncoder {
+
+	@:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single):Void;
+
+	@:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single, param4:java.NativeArray<java.types.Int8>):Void;
+
+	function canEncode(param1:java.lang.CharSequence):Bool;
+
+	function canEncode(param1:java.types.Char16):Bool;
+
+	@:throws("java.nio.charset.CharacterCodingException")
+	function encode(param1:java.nio.CharBuffer):java.nio.ByteBuffer;
+
+	function encode(param1:java.nio.CharBuffer, param2:java.nio.ByteBuffer, param3:Bool):java.nio.charset.CoderResult;
+
+	@:protected
+	function encodeLoop(param1:java.nio.CharBuffer, param2:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	@:protected
+	function implReset():Void;
+
+	function reset():java.nio.charset.CharsetEncoder;
+
+	@:protected
+	function implFlush(param1:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	function flush(param1:java.nio.ByteBuffer):java.nio.charset.CoderResult;
+
+	function maxBytesPerChar():Single;
+
+	function averageBytesPerChar():Single;
+
+	@:protected
+	function implOnUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):Void;
+
+	function onUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetEncoder;
+
+	function unmappableCharacterAction():java.nio.charset.CodingErrorAction;
+
+	@:protected
+	function implOnMalformedInput(param1:java.nio.charset.CodingErrorAction):Void;
+
+	function onMalformedInput(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetEncoder;
+
+	function malformedInputAction():java.nio.charset.CodingErrorAction;
+
+	function isLegalReplacement(param1:java.NativeArray<java.types.Int8>):Bool;
+
+	@:protected
+	function implReplaceWith(param1:java.NativeArray<java.types.Int8>):Void;
+
+	function replaceWith(param1:java.NativeArray<java.types.Int8>):java.nio.charset.CharsetEncoder;
+
+	function replacement():java.NativeArray<java.types.Int8>;
+
+	function charset():java.nio.charset.Charset;
+}

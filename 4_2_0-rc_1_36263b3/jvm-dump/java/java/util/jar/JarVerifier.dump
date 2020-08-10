@@ -1,0 +1,50 @@
+@:realPath("java.util.jar.JarVerifier") @:used @:native("java.util.jar.JarVerifier") @:libType
+extern class java.util.jar.JarVerifier {
+
+	function new(param1:java.NativeArray<java.types.Int8>):Void;
+
+	function beginEntry(param1:java.util.jar.JarEntry, param2:sun.security.util.ManifestEntryVerifier):Void;
+
+	function update(param1:Int, param2:sun.security.util.ManifestEntryVerifier):Void;
+
+	function update(param1:Int, param2:java.NativeArray<java.types.Int8>, param3:Int, param4:Int, param5:sun.security.util.ManifestEntryVerifier):Void;
+
+	@:deprecated
+	function getCerts(param1:java.lang.String):java.NativeArray<java.security.cert.Certificate>;
+
+	function getCerts(param1:java.util.jar.JarFile, param2:java.util.jar.JarEntry):java.NativeArray<java.security.cert.Certificate>;
+
+	function getCodeSigners(param1:java.lang.String):java.NativeArray<java.security.CodeSigner>;
+
+	function getCodeSigners(param1:java.util.jar.JarFile, param2:java.util.jar.JarEntry):java.NativeArray<java.security.CodeSigner>;
+
+	function nothingToVerify():Bool;
+
+	function doneWithMeta():Void;
+
+	function entryNames(param1:java.util.jar.JarFile, param2:java.NativeArray<java.security.CodeSource>):java.util.Enumeration<java.lang.String>;
+
+	function entries2(param1:java.util.jar.JarFile, param2:java.util.Enumeration<java.util.zip.ZipEntry>):java.util.Enumeration<java.util.jar.JarEntry>;
+
+	function getCodeSources(param1:java.util.jar.JarFile, param2:java.net.URL):java.NativeArray<java.security.CodeSource>;
+
+	function getCodeSource(param1:java.net.URL, param2:java.lang.String):java.security.CodeSource;
+
+	function getCodeSource(param1:java.net.URL, param2:java.util.jar.JarFile, param3:java.util.jar.JarEntry):java.security.CodeSource;
+
+	function setEagerValidation(param1:Bool):Void;
+
+	function getManifestDigests():java.util.List<Dynamic>;
+
+	var manifestRawBytes:java.NativeArray<java.types.Int8>;
+
+	var eagerValidation:Bool;
+
+	static function isSigningRelated(param1:java.lang.String):Bool;
+
+	static function getUnsignedCS(param1:java.net.URL):java.security.CodeSource;
+
+	static function <clinit>():Void;
+
+	static var debug(default,never):sun.security.util.Debug;
+}

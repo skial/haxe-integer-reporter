@@ -1,0 +1,27 @@
+@:realPath("java.util.stream.BaseStream") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.stream.BaseStream") @:javaCanonical("java.util.stream", "BaseStream")
+extern interface java.util.stream.BaseStream<T : java.util.stream.BaseStream.T,S : java.util.stream.BaseStream.S> implements java.lang.AutoCloseable {
+
+	@:overload
+	function close():Void;
+
+	@:overload
+	function onClose(param1:java.lang.Runnable):java.util.stream.BaseStream.S;
+
+	@:overload
+	function unordered():java.util.stream.BaseStream.S;
+
+	@:overload
+	function parallel():java.util.stream.BaseStream.S;
+
+	@:overload
+	function sequential():java.util.stream.BaseStream.S;
+
+	@:overload
+	function isParallel():Bool;
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.util.stream.BaseStream.T>;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.stream.BaseStream.T>;
+}

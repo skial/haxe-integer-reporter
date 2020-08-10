@@ -1,0 +1,1 @@
+typedef js.node.FsRmdirOptions = { ?retryDelay : Null<Int>, ?recursive : Null<Bool>, ?maxRetries : Null<Int> }

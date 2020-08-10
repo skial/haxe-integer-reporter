@@ -1,0 +1,1 @@
+typedef js.node.IteratorStep<T : js.node.IteratorStep.T> = js.lib.IteratorStep<js.node.IteratorStep.T>

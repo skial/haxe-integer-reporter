@@ -1,0 +1,61 @@
+@:realPath("java.util.SortedMap") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.SortedMap") @:javaCanonical("java.util", "SortedMap")
+extern interface java.util.SortedMap<K:Dynamic, V:Dynamic> implements java.util.Map<java.util.SortedMap.K, java.util.SortedMap.V> {
+
+	function entrySet():java.util.Set<java.util.Map$Entry<java.util.SortedMap.K, java.util.SortedMap.V>>;
+
+	function values():java.util.Collection<java.util.SortedMap.V>;
+
+	function keySet():java.util.Set<java.util.SortedMap.K>;
+
+	function lastKey():java.util.SortedMap.K;
+
+	function firstKey():java.util.SortedMap.K;
+
+	function tailMap(param1:java.util.SortedMap.K):java.util.SortedMap<java.util.SortedMap.K, java.util.SortedMap.V>;
+
+	function headMap(param1:java.util.SortedMap.K):java.util.SortedMap<java.util.SortedMap.K, java.util.SortedMap.V>;
+
+	function subMap(param1:java.util.SortedMap.K, param2:java.util.SortedMap.K):java.util.SortedMap<java.util.SortedMap.K, java.util.SortedMap.V>;
+
+	function comparator():java.util.Comparator<Dynamic>;
+
+	function size():Int;
+
+	function isEmpty():Bool;
+
+	function containsKey(param1:Dynamic):Bool;
+
+	function containsValue(param1:Dynamic):Bool;
+
+	function get(param1:Dynamic):java.util.SortedMap.V;
+
+	function put(param1:java.util.SortedMap.K, param2:java.util.SortedMap.V):java.util.SortedMap.V;
+
+	function remove(param1:Dynamic):java.util.SortedMap.V;
+
+	function remove(param1:Dynamic, param2:Dynamic):Bool;
+
+	function putAll(param1:java.util.Map<java.util.SortedMap.K, java.util.SortedMap.V>):Void;
+
+	function clear():Void;
+
+	function getOrDefault(param1:Dynamic, param2:java.util.SortedMap.V):java.util.SortedMap.V;
+
+	function forEach(param1:java.util.function.BiConsumer<Dynamic, Dynamic>):Void;
+
+	function replaceAll(param1:java.util.function.BiFunction<Dynamic, Dynamic, java.util.SortedMap.V>):Void;
+
+	function putIfAbsent(param1:java.util.SortedMap.K, param2:java.util.SortedMap.V):java.util.SortedMap.V;
+
+	function replace(param1:java.util.SortedMap.K, param2:java.util.SortedMap.V, param3:java.util.SortedMap.V):Bool;
+
+	function replace(param1:java.util.SortedMap.K, param2:java.util.SortedMap.V):java.util.SortedMap.V;
+
+	function computeIfAbsent(param1:java.util.SortedMap.K, param2:java.util.function.Function<Dynamic, java.util.SortedMap.V>):java.util.SortedMap.V;
+
+	function computeIfPresent(param1:java.util.SortedMap.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.SortedMap.V>):java.util.SortedMap.V;
+
+	function compute(param1:java.util.SortedMap.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.SortedMap.V>):java.util.SortedMap.V;
+
+	function merge(param1:java.util.SortedMap.K, param2:java.util.SortedMap.V, param3:java.util.function.BiFunction<Dynamic, Dynamic, java.util.SortedMap.V>):java.util.SortedMap.V;
+}

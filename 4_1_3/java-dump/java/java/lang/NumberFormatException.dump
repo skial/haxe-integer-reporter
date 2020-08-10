@@ -1,0 +1,9 @@
+@:realPath("java.lang.NumberFormatException") @:nativeGen @:libType @:javaNative @:native("java.lang.NumberFormatException") @:javaCanonical("java.lang", "NumberFormatException")
+extern class java.lang.NumberFormatException extends java.lang.IllegalArgumentException {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

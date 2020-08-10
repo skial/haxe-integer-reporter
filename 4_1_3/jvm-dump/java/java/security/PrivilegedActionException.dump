@@ -1,0 +1,15 @@
+@:realPath("java.security.PrivilegedActionException") @:libType @:javaNative @:native("java.security.PrivilegedActionException") @:javaCanonical("java.security", "PrivilegedActionException")
+extern class java.security.PrivilegedActionException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:java.lang.Exception):Void;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function getCause():java.lang.Throwable;
+
+	@:overload
+	function getException():java.lang.Exception;
+}

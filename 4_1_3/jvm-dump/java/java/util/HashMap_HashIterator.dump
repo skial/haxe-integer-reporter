@@ -1,0 +1,9 @@
+@:realPath("java.util.HashMap_HashIterator") @:used @:abstract @:libType @:javaNative @:native("java.util.HashMap$HashIterator") @:javaCanonical("java.util", "HashMap.HashIterator")
+extern class java.util.HashMap$HashIterator {
+
+	@:overload
+	function remove():Void;
+
+	@:overload
+	function hasNext():Bool;
+}

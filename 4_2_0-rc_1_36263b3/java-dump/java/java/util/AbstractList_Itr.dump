@@ -1,0 +1,11 @@
+@:realPath("java.util.AbstractList_Itr") @:used @:nativeGen @:libType @:javaNative @:native("java.util.AbstractList$Itr") @:javaCanonical("java.util", "AbstractList.Itr")
+extern class java.util.AbstractList$Itr implements java.util.Iterator<Dynamic> {
+
+	function remove():Void;
+
+	function next():Dynamic;
+
+	function hasNext():Bool;
+
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+}

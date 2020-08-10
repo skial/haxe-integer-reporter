@@ -1,0 +1,72 @@
+@:realPath("java.nio.charset.CharsetDecoder") @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.charset.CharsetDecoder") @:javaCanonical("java.nio.charset", "CharsetDecoder")
+extern class java.nio.charset.CharsetDecoder {
+
+	@:overload @:protected
+	function new(param1:java.nio.charset.Charset, param2:Single, param3:Single):Void;
+
+	@:overload
+	function detectedCharset():java.nio.charset.Charset;
+
+	@:overload
+	function isCharsetDetected():Bool;
+
+	@:overload
+	function isAutoDetecting():Bool;
+
+	@:overload @:throws("java.nio.charset.CharacterCodingException")
+	function decode(param1:java.nio.ByteBuffer):java.nio.CharBuffer;
+
+	@:overload
+	function decode(param1:java.nio.ByteBuffer, param2:java.nio.CharBuffer, param3:Bool):java.nio.charset.CoderResult;
+
+	@:overload @:protected
+	function decodeLoop(param1:java.nio.ByteBuffer, param2:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	@:overload @:protected
+	function implReset():Void;
+
+	@:overload
+	function reset():java.nio.charset.CharsetDecoder;
+
+	@:overload @:protected
+	function implFlush(param1:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	@:overload
+	function flush(param1:java.nio.CharBuffer):java.nio.charset.CoderResult;
+
+	@:overload
+	function maxCharsPerByte():Single;
+
+	@:overload
+	function averageCharsPerByte():Single;
+
+	@:overload @:protected
+	function implOnUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):Void;
+
+	@:overload
+	function onUnmappableCharacter(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetDecoder;
+
+	@:overload
+	function unmappableCharacterAction():java.nio.charset.CodingErrorAction;
+
+	@:overload @:protected
+	function implOnMalformedInput(param1:java.nio.charset.CodingErrorAction):Void;
+
+	@:overload
+	function onMalformedInput(param1:java.nio.charset.CodingErrorAction):java.nio.charset.CharsetDecoder;
+
+	@:overload
+	function malformedInputAction():java.nio.charset.CodingErrorAction;
+
+	@:overload @:protected
+	function implReplaceWith(param1:String):Void;
+
+	@:overload
+	function replaceWith(param1:String):java.nio.charset.CharsetDecoder;
+
+	@:overload
+	function replacement():String;
+
+	@:overload
+	function charset():java.nio.charset.Charset;
+}

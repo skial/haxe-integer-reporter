@@ -1,0 +1,24 @@
+@:used @:enum
+private extern class js.node.stream._Readable.ReadableEvent_Impl_ {
+
+	@:value(cast "close") @:enum @:impl
+	static inline var Close:js.node.stream.ReadableEvent<Void -> Void> = cast "close";
+
+	@:value(cast "data") @:enum @:impl
+	static inline var Data:js.node.stream.ReadableEvent<Dynamic -> Void> = cast "data";
+
+	@:value(cast "end") @:enum @:impl
+	static inline var End:js.node.stream.ReadableEvent<Void -> Void> = cast "end";
+
+	@:value(cast "error") @:enum @:impl
+	static inline var Error:js.node.stream.ReadableEvent<Error -> Void> = cast "error";
+
+	@:value(cast "pause") @:enum @:impl
+	static inline var Pause:js.node.stream.ReadableEvent<Void -> Void> = cast "pause";
+
+	@:value(cast "readable") @:enum @:impl
+	static inline var Readable:js.node.stream.ReadableEvent<Void -> Void> = cast "readable";
+
+	@:value(cast "resume") @:enum @:impl
+	static inline var Resume:js.node.stream.ReadableEvent<Void -> Void> = cast "resume";
+}

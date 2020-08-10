@@ -1,0 +1,27 @@
+@:realPath("java.security.cert.CertPath") @:nativeGen @:abstract @:libType @:javaNative @:native("java.security.cert.CertPath") @:javaCanonical("java.security.cert", "CertPath")
+extern class java.security.cert.CertPath implements java.io.Serializable {
+
+	@:protected
+	function new(param1:String):Void;
+
+	@:throws("java.io.ObjectStreamException") @:protected
+	function writeReplace():Dynamic;
+
+	function getCertificates():java.util.List<java.security.cert.Certificate>;
+
+	@:throws("java.security.cert.CertificateEncodingException")
+	function getEncoded(param1:String):java.NativeArray<java.types.Int8>;
+
+	@:throws("java.security.cert.CertificateEncodingException")
+	function getEncoded():java.NativeArray<java.types.Int8>;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getEncodings():java.util.Iterator<String>;
+
+	function getType():String;
+}

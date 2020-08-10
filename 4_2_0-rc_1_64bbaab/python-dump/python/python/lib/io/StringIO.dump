@@ -1,0 +1,7 @@
+@:directlyUsed @:used @:pythonImport("io", "StringIO")
+extern class python.lib.io.StringIO extends python.lib.io.TextIOBase {
+
+	function new(s:Null<str>):Void;
+
+	function getvalue():str;
+}

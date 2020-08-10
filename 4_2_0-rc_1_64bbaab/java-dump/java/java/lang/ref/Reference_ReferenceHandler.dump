@@ -1,0 +1,5 @@
+@:realPath("java.lang.ref.Reference_ReferenceHandler") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.ref.Reference$ReferenceHandler") @:javaCanonical("java.lang.ref", "Reference.ReferenceHandler")
+extern class java.lang.ref.Reference$ReferenceHandler extends java.lang.Thread {
+
+	function run():Void;
+}

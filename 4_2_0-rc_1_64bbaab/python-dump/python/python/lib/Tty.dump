@@ -1,0 +1,5 @@
+@:pythonImport("tty", ignoreError = true)
+extern class python.lib.Tty {
+
+	static function setraw(fileNo:Int):Void;
+}

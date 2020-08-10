@@ -1,0 +1,80 @@
+@:realPath("java.net.URI") @:used @:nativeGen @:libType @:javaNative @:native("java.net.URI") @:javaCanonical("java.net", "URI")
+extern class java.net.URI implements java.io.Serializable implements java.lang.Comparable<java.net.URI> {
+
+	@:throws("java.net.URISyntaxException")
+	function new(param1:String, param2:String, param3:String):Void;
+
+	@:throws("java.net.URISyntaxException")
+	function new(param1:String):Void;
+
+	@:throws("java.net.URISyntaxException")
+	function new(param1:String, param2:String, param3:String, param4:Int, param5:String, param6:String, param7:String):Void;
+
+	@:throws("java.net.URISyntaxException")
+	function new(param1:String, param2:String, param3:String, param4:String, param5:String):Void;
+
+	@:throws("java.net.URISyntaxException")
+	function new(param1:String, param2:String, param3:String, param4:String):Void;
+
+	function compareTo(param1:Dynamic):Int;
+
+	function compareTo(param1:java.net.URI):Int;
+
+	function toASCIIString():String;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getFragment():String;
+
+	function getRawFragment():String;
+
+	function getQuery():String;
+
+	function getRawQuery():String;
+
+	function getPath():String;
+
+	function getRawPath():String;
+
+	function getPort():Int;
+
+	function getHost():String;
+
+	function getUserInfo():String;
+
+	function getRawUserInfo():String;
+
+	function getAuthority():String;
+
+	function getRawAuthority():String;
+
+	function getSchemeSpecificPart():String;
+
+	function getRawSchemeSpecificPart():String;
+
+	function isOpaque():Bool;
+
+	function isAbsolute():Bool;
+
+	function getScheme():String;
+
+	@:throws("java.net.MalformedURLException")
+	function toURL():java.net.URL;
+
+	function relativize(param1:java.net.URI):java.net.URI;
+
+	function resolve(param1:String):java.net.URI;
+
+	function resolve(param1:java.net.URI):java.net.URI;
+
+	function normalize():java.net.URI;
+
+	@:throws("java.net.URISyntaxException")
+	function parseServerAuthority():java.net.URI;
+
+	static function create(param1:String):java.net.URI;
+}

@@ -1,0 +1,3 @@
+@:pythonImport("time", "struct_time")
+extern class python.lib.time.StructTime implements ArrayAccess<Int> {
+}

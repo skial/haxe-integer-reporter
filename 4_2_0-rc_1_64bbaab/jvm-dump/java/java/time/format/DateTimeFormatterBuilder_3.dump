@@ -1,0 +1,8 @@
+@:realPath("java.time.format.DateTimeFormatterBuilder_3") @:native("java.time.format.DateTimeFormatterBuilder$3") @:libType
+extern class java.time.format.DateTimeFormatterBuilder$3 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_time_format_SignStyle") @:native("$SwitchMap$java$time$format$SignStyle")
+	static var $SwitchMap$java$time$format$SignStyle(default,never):java.NativeArray<Int>;
+}

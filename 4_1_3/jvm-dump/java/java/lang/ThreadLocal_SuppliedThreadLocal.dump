@@ -1,0 +1,6 @@
+@:realPath("java.lang.ThreadLocal_SuppliedThreadLocal") @:used @:libType @:javaNative @:native("java.lang.ThreadLocal$SuppliedThreadLocal") @:javaCanonical("java.lang", "ThreadLocal.SuppliedThreadLocal")
+extern class java.lang.ThreadLocal$SuppliedThreadLocal<T : java.lang.ThreadLocal_SuppliedThreadLocal.T> extends java.lang.ThreadLocal<java.lang.ThreadLocal_SuppliedThreadLocal.T> {
+
+	@:overload @:protected
+	function initialValue():java.lang.ThreadLocal_SuppliedThreadLocal.T;
+}

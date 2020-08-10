@@ -1,0 +1,9 @@
+@:realPath("java.util.Locale_LocaleNameGetter") @:used @:libType @:javaNative @:native("java.util.Locale$LocaleNameGetter") @:javaCanonical("java.util", "Locale.LocaleNameGetter")
+extern class java.util.Locale$LocaleNameGetter implements sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter<java.util.spi.LocaleNameProvider, java.lang.String> {
+
+	@:overload
+	function getObject(param1:java.util.spi.LocaleServiceProvider, param2:java.util.Locale, param3:java.lang.String, param4:java.NativeArray<Dynamic>):Dynamic;
+
+	@:overload
+	function getObject(param1:java.util.spi.LocaleNameProvider, param2:java.util.Locale, param3:java.lang.String, param4:java.NativeArray<Dynamic>):java.lang.String;
+}

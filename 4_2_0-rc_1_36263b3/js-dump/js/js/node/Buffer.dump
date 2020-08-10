@@ -1,0 +1,1 @@
+typedef js.node.Buffer = js.node.buffer.Buffer

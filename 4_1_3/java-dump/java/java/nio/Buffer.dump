@@ -1,0 +1,54 @@
+@:realPath("java.nio.Buffer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.Buffer") @:javaCanonical("java.nio", "Buffer")
+extern class java.nio.Buffer {
+
+	@:overload
+	function isDirect():Bool;
+
+	@:overload
+	function arrayOffset():Int;
+
+	@:overload
+	function array():Dynamic;
+
+	@:overload
+	function hasArray():Bool;
+
+	@:overload
+	function isReadOnly():Bool;
+
+	@:overload
+	function hasRemaining():Bool;
+
+	@:overload
+	function remaining():Int;
+
+	@:overload
+	function rewind():java.nio.Buffer;
+
+	@:overload
+	function flip():java.nio.Buffer;
+
+	@:overload
+	function clear():java.nio.Buffer;
+
+	@:overload
+	function reset():java.nio.Buffer;
+
+	@:overload
+	function mark():java.nio.Buffer;
+
+	@:overload
+	function limit(param1:Int):java.nio.Buffer;
+
+	@:overload
+	function limit():Int;
+
+	@:overload
+	function position(param1:Int):java.nio.Buffer;
+
+	@:overload
+	function position():Int;
+
+	@:overload
+	function capacity():Int;
+}

@@ -1,0 +1,412 @@
+class haxe.SysTools {
+
+	@:value([" ".code, "(".code, ")".code, "%".code, "!".code, "^".code, "\"".code, "<".code, ">".code, "&".code, "|".code, "\n".code, "\r".code, ",".code, ";".code])
+	public static var winMetaCharacters(default,never):haxe.ds.ReadOnlyArray<Int> = [Cast:haxe.ds.ReadOnlyArray<Int>]
+		[ArrayDecl:Array<Int>]
+			[Const:Int] 32
+			[Const:Int] 40
+			[Const:Int] 41
+			[Const:Int] 37
+			[Const:Int] 33
+			[Const:Int] 94
+			[Const:Int] 34
+			[Const:Int] 60
+			[Const:Int] 62
+			[Const:Int] 38
+			[Const:Int] 124
+			[Const:Int] 10
+			[Const:Int] 13
+			[Const:Int] 44
+			[Const:Int] 59;
+
+	public static function quoteUnixArg[Function:(argument : String) -> String]
+		[Arg:String] [Local argument(110364):String]
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Local argument(110364):String:String]
+					==
+					[Const:String] ""
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "''"
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[New:EReg]
+								EReg
+								[Const:String] "[^a-zA-Z0-9_@%+=:,./-]"
+								[Const:String] ""
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local argument(110364):String:String]
+				[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local argument(110364):String:String]
+			[Return:Dynamic]
+				[Binop:String]
+					[Binop:String]
+						[Const:String] "'"
+						+
+						[Call:String]
+							[Field:(s : String, sub : String, by : String) -> String]
+								[TypeExpr StringTools:Class<StringTools>]
+								[FStatic:(s : String, sub : String, by : String) -> String]
+									StringTools
+									replace:(s : String, sub : String, by : String) -> String
+							[Local argument(110364):String:String]
+							[Const:String] "'"
+							[Const:String] "'\"'\"'"
+					+
+					[Const:String] "'"
+
+	public static function quoteWinArg[Function:(argument : String, escapeMetaCharacters : Bool) -> String]
+		[Arg:String] [Local argument(110368):String]
+		[Arg:Bool] [Local escapeMetaCharacters(110369):Bool]
+		[Block:Void]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[New:EReg]
+								EReg
+								[Const:String] "^[^ \t\\\\\"]+$"
+								[Const:String] ""
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local argument(110368):String:String]
+				[Then:String] [Block:String]
+					[Var result(110370):StringBuf] [New:StringBuf] StringBuf
+					[Var needquote(110371):Bool]
+						[Binop:Bool]
+							[Binop:Bool]
+								[Binop:Bool]
+									[Call:Int]
+										[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+											[Local argument(110368):String:String]
+											[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+												String
+												indexOf:(str : String, ?startIndex : Null<Int>) -> Int
+										[Const:String] " "
+										[Const:Null<Int>] null
+									!=
+									[Const:Int] -1
+								||
+								[Binop:Bool]
+									[Call:Int]
+										[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+											[Local argument(110368):String:String]
+											[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+												String
+												indexOf:(str : String, ?startIndex : Null<Int>) -> Int
+										[Const:String] "\t"
+										[Const:Null<Int>] null
+									!=
+									[Const:Int] -1
+							||
+							[Binop:Bool]
+								[Local argument(110368):String:String]
+								==
+								[Const:String] ""
+					[If:Void]
+						[Local needquote(110371):Bool:Bool]
+						[Then:Void] [Block:Void]
+							[Call:Void]
+								[Field:(x : String) -> Void]
+									[Local result(110370):StringBuf:StringBuf]
+									[FInstance:(x : String) -> Void]
+										StringBuf
+										add:(x : add.T) -> Void
+								[Const:String] "\""
+					[Var bs_buf(110372):StringBuf] [New:StringBuf] StringBuf
+					[Block:Void]
+						[Var `(110381):Int] [Const:Int] 0
+						[Var `1(110382):Int]
+							[Field:Int]
+								[Local argument(110368):String:String]
+								[FInstance:Int]
+									String
+									length:Int
+						[While:Void]
+							[Binop:Bool]
+								[Local `(110381):Int:Int]
+								<
+								[Local `1(110382):Int:Int]
+							[Block:Void]
+								[Var i(110373):Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local `(110381):Int:Int]
+								[Meta:Void]
+									:ast(switch (argument.charCodeAt(i)) {
+	case "\\".code:
+		bs_buf.add("\\");	
+	case "\"".code:
+		var bs = bs_buf.toString();
+		result.add(bs);
+		result.add(bs);
+		bs_buf = new StringBuf();
+		result.add("\\\"");	
+	case var c:
+		if (bs_buf.length > 0) {
+			result.add(bs_buf.toString());
+			bs_buf = new StringBuf();
+		};
+		result.addChar(c);	
+})
+									[Block:Void]
+										[Var `(110377):Null<Int>]
+											[Call:Null<Int>]
+												[Field:(index : Int) -> Null<Int>]
+													[Local argument(110368):String:String]
+													[FInstance:(index : Int) -> Null<Int>]
+														String
+														charCodeAt:(index : Int) -> Null<Int>
+												[Local i(110373):Int:Int]
+										[If:Void]
+											[Binop:Bool]
+												[Local `(110377):Null<Int>:Null<Int>]
+												==
+												[Const:Null<Int>] null
+											[Then:Void] [Block:Void]
+												[Var c(110378):Null<Int>] [Local `(110377):Null<Int>:Null<Int>]
+												[Block:Void]
+													[If:Void]
+														[Binop:Bool]
+															[Call:Int]
+																[Field:Void -> Int]
+																	[Local bs_buf(110372):StringBuf:StringBuf]
+																	[FInstance:Void -> Int]
+																		StringBuf
+																		get_length:Void -> Int
+															>
+															[Const:Int] 0
+														[Then:StringBuf] [Block:StringBuf]
+															[Call:Void]
+																[Field:(x : String) -> Void]
+																	[Local result(110370):StringBuf:StringBuf]
+																	[FInstance:(x : String) -> Void]
+																		StringBuf
+																		add:(x : add.T) -> Void
+																[Call:String]
+																	[Field:Void -> String]
+																		[Local bs_buf(110372):StringBuf:StringBuf]
+																		[FInstance:Void -> String]
+																			StringBuf
+																			toString:Void -> String
+															[Binop:StringBuf]
+																[Local bs_buf(110372):StringBuf:StringBuf]
+																=
+																[New:StringBuf] StringBuf
+													[Call:Void]
+														[Field:(c : Int) -> Void]
+															[Local result(110370):StringBuf:StringBuf]
+															[FInstance:(c : Int) -> Void]
+																StringBuf
+																addChar:(c : Int) -> Void
+														[Local c(110378):Null<Int>:Null<Int>]
+											[Else:Void] [Switch:Void]
+												[Local `(110377):Null<Int>:Null<Int>]
+												[Case:Void]
+													[Const:Int] 34
+													[Block:Void]
+														[Block:Void]
+															[Var bs(110379):String]
+																[Call:String]
+																	[Field:Void -> String]
+																		[Local bs_buf(110372):StringBuf:StringBuf]
+																		[FInstance:Void -> String]
+																			StringBuf
+																			toString:Void -> String
+															[Call:Void]
+																[Field:(x : String) -> Void]
+																	[Local result(110370):StringBuf:StringBuf]
+																	[FInstance:(x : String) -> Void]
+																		StringBuf
+																		add:(x : add.T) -> Void
+																[Local bs(110379):String:String]
+															[Call:Void]
+																[Field:(x : String) -> Void]
+																	[Local result(110370):StringBuf:StringBuf]
+																	[FInstance:(x : String) -> Void]
+																		StringBuf
+																		add:(x : add.T) -> Void
+																[Local bs(110379):String:String]
+															[Binop:StringBuf]
+																[Local bs_buf(110372):StringBuf:StringBuf]
+																=
+																[New:StringBuf] StringBuf
+															[Call:Void]
+																[Field:(x : String) -> Void]
+																	[Local result(110370):StringBuf:StringBuf]
+																	[FInstance:(x : String) -> Void]
+																		StringBuf
+																		add:(x : add.T) -> Void
+																[Const:String] "\\\""
+												[Case:Void]
+													[Const:Int] 92
+													[Block:Void]
+														[Block:Void]
+															[Call:Void]
+																[Field:(x : String) -> Void]
+																	[Local bs_buf(110372):StringBuf:StringBuf]
+																	[FInstance:(x : String) -> Void]
+																		StringBuf
+																		add:(x : add.T) -> Void
+																[Const:String] "\\"
+												[Default:Void]
+													[Block:Void]
+														[Var c(110380):Null<Int>] [Local `(110377):Null<Int>:Null<Int>]
+														[Block:Void]
+															[If:Void]
+																[Binop:Bool]
+																	[Call:Int]
+																		[Field:Void -> Int]
+																			[Local bs_buf(110372):StringBuf:StringBuf]
+																			[FInstance:Void -> Int]
+																				StringBuf
+																				get_length:Void -> Int
+																	>
+																	[Const:Int] 0
+																[Then:StringBuf] [Block:StringBuf]
+																	[Call:Void]
+																		[Field:(x : String) -> Void]
+																			[Local result(110370):StringBuf:StringBuf]
+																			[FInstance:(x : String) -> Void]
+																				StringBuf
+																				add:(x : add.T) -> Void
+																		[Call:String]
+																			[Field:Void -> String]
+																				[Local bs_buf(110372):StringBuf:StringBuf]
+																				[FInstance:Void -> String]
+																					StringBuf
+																					toString:Void -> String
+																	[Binop:StringBuf]
+																		[Local bs_buf(110372):StringBuf:StringBuf]
+																		=
+																		[New:StringBuf] StringBuf
+															[Call:Void]
+																[Field:(c : Int) -> Void]
+																	[Local result(110370):StringBuf:StringBuf]
+																	[FInstance:(c : Int) -> Void]
+																		StringBuf
+																		addChar:(c : Int) -> Void
+																[Local c(110380):Null<Int>:Null<Int>]
+					[Call:Void]
+						[Field:(x : String) -> Void]
+							[Local result(110370):StringBuf:StringBuf]
+							[FInstance:(x : String) -> Void]
+								StringBuf
+								add:(x : add.T) -> Void
+						[Call:String]
+							[Field:Void -> String]
+								[Local bs_buf(110372):StringBuf:StringBuf]
+								[FInstance:Void -> String]
+									StringBuf
+									toString:Void -> String
+					[If:Void]
+						[Local needquote(110371):Bool:Bool]
+						[Then:Void] [Block:Void]
+							[Call:Void]
+								[Field:(x : String) -> Void]
+									[Local result(110370):StringBuf:StringBuf]
+									[FInstance:(x : String) -> Void]
+										StringBuf
+										add:(x : add.T) -> Void
+								[Call:String]
+									[Field:Void -> String]
+										[Local bs_buf(110372):StringBuf:StringBuf]
+										[FInstance:Void -> String]
+											StringBuf
+											toString:Void -> String
+							[Call:Void]
+								[Field:(x : String) -> Void]
+									[Local result(110370):StringBuf:StringBuf]
+									[FInstance:(x : String) -> Void]
+										StringBuf
+										add:(x : add.T) -> Void
+								[Const:String] "\""
+					[Binop:String]
+						[Local argument(110368):String:String]
+						=
+						[Call:String]
+							[Field:Void -> String]
+								[Local result(110370):StringBuf:StringBuf]
+								[FInstance:Void -> String]
+									StringBuf
+									toString:Void -> String
+			[If:Void]
+				[Local escapeMetaCharacters(110369):Bool:Bool]
+				[Then:Dynamic] [Block:Dynamic]
+					[Var result(110383):StringBuf] [New:StringBuf] StringBuf
+					[Block:Void]
+						[Var `(110386):Int] [Const:Int] 0
+						[Var `1(110387):Int]
+							[Field:Int]
+								[Local argument(110368):String:String]
+								[FInstance:Int]
+									String
+									length:Int
+						[While:Void]
+							[Binop:Bool]
+								[Local `(110386):Int:Int]
+								<
+								[Local `1(110387):Int:Int]
+							[Block:Void]
+								[Var i(110384):Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local `(110386):Int:Int]
+								[Var c(110385):Null<Int>]
+									[Call:Null<Int>]
+										[Field:(index : Int) -> Null<Int>]
+											[Local argument(110368):String:String]
+											[FInstance:(index : Int) -> Null<Int>]
+												String
+												charCodeAt:(index : Int) -> Null<Int>
+										[Local i(110384):Int:Int]
+								[If:Void]
+									[Binop:Bool]
+										[Call:Int]
+											[Field:(x : Int, ?fromIndex : Null<Int>) -> Int]
+												[Field:Array<Int>]
+													[TypeExpr haxe.SysTools:Class<haxe.SysTools>]
+													[FStatic:Array<Int>]
+														haxe.SysTools
+														winMetaCharacters:haxe.ds.ReadOnlyArray<Int>
+												[FInstance:(x : Int, ?fromIndex : Null<Int>) -> Int]
+													Array<Int>
+													indexOf:(x : Array.T, ?fromIndex : Null<Int>) -> Int
+											[Local c(110385):Null<Int>:Null<Int>]
+											[Const:Null<Int>] null
+										>=
+										[Const:Int] 0
+									[Then:Void] [Block:Void]
+										[Call:Void]
+											[Field:(c : Int) -> Void]
+												[Local result(110383):StringBuf:StringBuf]
+												[FInstance:(c : Int) -> Void]
+													StringBuf
+													addChar:(c : Int) -> Void
+											[Const:Int] 94
+								[Call:Void]
+									[Field:(c : Int) -> Void]
+										[Local result(110383):StringBuf:StringBuf]
+										[FInstance:(c : Int) -> Void]
+											StringBuf
+											addChar:(c : Int) -> Void
+									[Local c(110385):Null<Int>:Null<Int>]
+					[Return:Dynamic]
+						[Call:String]
+							[Field:Void -> String]
+								[Local result(110383):StringBuf:StringBuf]
+								[FInstance:Void -> String]
+									StringBuf
+									toString:Void -> String
+				[Else:Dynamic] [Block:Dynamic] [Return:Dynamic] [Local argument(110368):String:String]
+}

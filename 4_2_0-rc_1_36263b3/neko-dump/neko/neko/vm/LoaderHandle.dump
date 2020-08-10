@@ -1,0 +1,2 @@
+@:callable @:coreType
+abstract neko.vm.LoaderHandle {}

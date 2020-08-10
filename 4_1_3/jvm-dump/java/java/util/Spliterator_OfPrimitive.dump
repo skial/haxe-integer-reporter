@@ -1,0 +1,33 @@
+@:realPath("java.util.Spliterator_OfPrimitive") @:used @:abstract @:libType @:javaNative @:native("java.util.Spliterator$OfPrimitive") @:javaCanonical("java.util", "Spliterator.OfPrimitive")
+extern interface java.util.Spliterator$OfPrimitive<T : java.util.Spliterator_OfPrimitive.T,T__CONS : java.util.Spliterator_OfPrimitive.T__CONS,T__SPLITR : java.util.Spliterator_OfPrimitive.T__SPLITR> implements java.util.Spliterator<java.util.Spliterator_OfPrimitive.T> {
+
+	@:overload
+	function trySplit():java.util.Spliterator_OfPrimitive.T__SPLITR;
+
+	@:overload
+	function forEachRemaining(param1:java.util.Spliterator_OfPrimitive.T__CONS):Void;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function tryAdvance(param1:java.util.Spliterator_OfPrimitive.T__CONS):Bool;
+
+	@:overload
+	function tryAdvance(param1:java.util.function.Consumer<Dynamic>):Bool;
+
+	@:overload
+	function estimateSize():haxe.Int64;
+
+	@:overload
+	function getExactSizeIfKnown():haxe.Int64;
+
+	@:overload
+	function characteristics():Int;
+
+	@:overload
+	function hasCharacteristics(param1:Int):Bool;
+
+	@:overload
+	function getComparator():java.util.Comparator<Dynamic>;
+}

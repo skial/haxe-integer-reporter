@@ -1,0 +1,45 @@
+@:directlyUsed @:used
+extern class python.internal.UBuiltins {
+
+	static function id(x:Dynamic):str;
+
+	static function len(x:Dynamic):Int;
+
+	static function isinstance(o:Dynamic, c:Dynamic):Bool;
+
+	static function str(o:Dynamic):str;
+
+	static function bool(o:Dynamic):Bool;
+
+	static function float(o:Dynamic):Float;
+
+	static function int(o:Dynamic, base:Null<Int>):Int;
+
+	static function list<T : list.T>(o:Dynamic):list<list.T>;
+
+	static function min<T : min.T>(a:min.T, b:min.T):min.T;
+
+	static function max<T : max.T>(a:max.T, b:max.T):max.T;
+
+	static function hasattr(o:Dynamic, a:str):Bool;
+
+	static function getattr(o:Dynamic, a:str, def:Null<Dynamic>):Dynamic;
+
+	static function setattr(o:Dynamic, a:str, v:Dynamic):Void;
+
+	static function delattr(o:Dynamic, attr:str):Void;
+
+	static function callable(x:Dynamic):Bool;
+
+	static function type(o:Dynamic):Dynamic;
+
+	static function ord(s:str):Int;
+
+	static function chr(c:Int):str;
+
+	static function map<T : map.T,S : map.S>(f:map.T -> map.S, a:list<map.T>):list<map.S>;
+
+	static function filter<T : filter.T>(f:filter.T -> Bool, a:list<filter.T>):list<filter.T>;
+
+	static function iter<T : iter.T>(o:python.NativeIterable<iter.T>):python.NativeIterator<iter.T>;
+}

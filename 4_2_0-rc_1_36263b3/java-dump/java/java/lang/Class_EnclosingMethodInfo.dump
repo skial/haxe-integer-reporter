@@ -1,0 +1,3 @@
+@:realPath("java.lang.Class_EnclosingMethodInfo") @:nativeGen @:libType @:javaNative @:native("java.lang.Class$EnclosingMethodInfo") @:javaCanonical("java.lang", "Class.EnclosingMethodInfo")
+extern class java.lang.Class$EnclosingMethodInfo {
+}

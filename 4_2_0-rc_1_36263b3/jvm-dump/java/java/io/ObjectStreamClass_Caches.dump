@@ -1,0 +1,15 @@
+@:realPath("java.io.ObjectStreamClass_Caches") @:native("java.io.ObjectStreamClass$Caches") @:libType
+extern class java.io.ObjectStreamClass$Caches {
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200():java.lang.ref.ReferenceQueue<Dynamic>;
+
+	@:realPath("access_2600") @:native("access$2600")
+	static function access$2600():java.lang.ref.ReferenceQueue<Dynamic>;
+
+	static function <clinit>():Void;
+
+	static var localDescs(default,never):java.util.concurrent.ConcurrentMap<java.io.ObjectStreamClass$WeakClassKey, java.lang.ref.Reference<Dynamic>>;
+
+	static var reflectors(default,never):java.util.concurrent.ConcurrentMap<java.io.ObjectStreamClass$FieldReflectorKey, java.lang.ref.Reference<Dynamic>>;
+}

@@ -1,0 +1,88 @@
+@:realPath("python.internal.StringImpl") @:keep @:directlyUsed @:used @:native("HxString")
+class HxString {
+
+	@:ifFeature("dynamic_read.split", "anon_optional_read.split", "python.internal.StringImpl.split")
+	public static inline function split(s:str, d:str) {
+		if ((d == "")) return python.internal.UBuiltins.list(s) else return python.Syntax.call(python.Syntax.field(s, "split"), [d]);
+	}
+
+	@:ifFeature("dynamic_read.charCodeAt", "anon_optional_read.charCodeAt", "python.internal.StringImpl.charCodeAt")
+	public static function charCodeAt(s:str, index:Int) {
+		if ((s == null || s.length == 0 || index < 0 || index >= s.length)) return null else return python.internal.UBuiltins.ord(python.Syntax._arrayAccess(s, [index]));
+	}
+
+	@:ifFeature("dynamic_read.charAt", "anon_optional_read.charAt", "python.internal.StringImpl.charAt")
+	public static inline function charAt(s:str, index:Int) {
+		if ((index < 0 || index >= s.length)) return "" else return python.Syntax._arrayAccess(s, [index]);
+	}
+
+	@:ifFeature("dynamic_read.lastIndexOf", "anon_optional_read.lastIndexOf", "python.internal.StringImpl.lastIndexOf")
+	public static inline function lastIndexOf(s:str, str:str, startIndex:Null<Int> = null) {
+		if ((startIndex == null)) return python.Syntax.call(python.Syntax.field(s, "rfind"), [str, 0, s.length]) else if ((str == "")) {
+			var length = s.length;
+			if ((startIndex < 0)) {
+				startIndex = length + startIndex;
+				if ((startIndex < 0)) startIndex = 0;
+			};
+			if ((startIndex > length)) return length else return startIndex;
+		} else {
+			var i = python.Syntax.call(python.Syntax.field(s, "rfind"), [str, 0, startIndex + 1]);
+			var startLeft = if ((i == -1)) python.internal.UBuiltins.max(0, startIndex + 1 - str.length) else i + 1;
+			var check = python.Syntax.call(python.Syntax.field(s, "find"), [str, startLeft, s.length]);
+			if ((check > i && check <= startIndex)) return check else return i;
+		};
+	}
+
+	@:ifFeature("dynamic_read.toUpperCase", "anon_optional_read.toUpperCase", "python.internal.StringImpl.toUpperCase")
+	public static inline function toUpperCase(s:str) {
+		return python.Syntax.call(python.Syntax.field(s, "upper"), []);
+	}
+
+	@:ifFeature("dynamic_read.toLowerCase", "anon_optional_read.toLowerCase", "python.internal.StringImpl.toLowerCase")
+	public static inline function toLowerCase(s:str) {
+		return python.Syntax.call(python.Syntax.field(s, "lower"), []);
+	}
+
+	@:ifFeature("dynamic_read.indexOf", "anon_optional_read.indexOf", "python.internal.StringImpl.indexOf")
+	public static inline function indexOf(s:str, str:str, startIndex:Null<Int> = null) {
+		if ((startIndex == null)) return python.Syntax.call(python.Syntax.field(s, "find"), [str]) else return HxString.indexOfImpl(s, str, startIndex);
+	}
+
+	static function indexOfImpl(s:str, str:str, startIndex:Int) {
+		if ((str == "")) {
+			var length = s.length;
+			if ((startIndex < 0)) {
+				startIndex = length + startIndex;
+				if ((startIndex < 0)) startIndex = 0;
+			};
+			if ((startIndex > length)) return length else return startIndex;
+		};
+		return python.Syntax.call(python.Syntax.field(s, "find"), [str, startIndex]);
+	}
+
+	@:ifFeature("dynamic_read.toString", "anon_optional_read.toString", "python.internal.StringImpl.toString")
+	public static inline function toString(s:str) {
+		return s;
+	}
+
+	@:ifFeature("dynamic_read.substring", "anon_optional_read.substring", "python.internal.StringImpl.substring")
+	public static function substring(s:str, startIndex:Int, endIndex:Null<Int> = null) {
+		if ((startIndex < 0)) startIndex = 0;
+		if ((endIndex == null)) return python.Syntax._arrayAccess(s, [startIndex], true) else {
+			if ((endIndex < 0)) endIndex = 0;
+			if ((endIndex < startIndex)) return python.Syntax._arrayAccess(s, [endIndex, startIndex]) else return python.Syntax._arrayAccess(s, [startIndex, endIndex]);
+		};
+	}
+
+	@:ifFeature("dynamic_read.substr", "anon_optional_read.substr", "python.internal.StringImpl.substr")
+	public static function substr(s:str, startIndex:Int, len:Null<Int> = null) {
+		if ((len == null)) return python.Syntax._arrayAccess(s, [startIndex], true) else {
+			if ((len == 0)) return "";
+			if ((startIndex < 0)) {
+				startIndex = s.length + startIndex;
+				if ((startIndex < 0)) startIndex = 0;
+			};
+			return python.Syntax._arrayAccess(s, [startIndex, startIndex + len]);
+		};
+	}
+}

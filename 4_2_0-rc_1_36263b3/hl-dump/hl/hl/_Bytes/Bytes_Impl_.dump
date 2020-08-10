@@ -1,0 +1,72 @@
+@:keep @:directlyUsed @:used
+private class hl._Bytes.Bytes_Impl_ {
+
+	@:hlNative("std", "bytes_blit")
+	public static function blit(this1:hl.Bytes, pos:Int, src:hl.Bytes, srcPos:Int, len:Int) {}
+
+	@:hlNative("std", "alloc_bytes")
+	static function alloc(size:Int) {
+		return null;
+	}
+
+	@:hlNative("std", "bytes_compare")
+	public static function compare(this1:hl.Bytes, pos:Int, bytes:hl.Bytes, bytesPos:Int, size:Int) {
+		return 0;
+	}
+
+	@:hlNative("std", "bytes_compare16")
+	public static function compare16(this1:hl.Bytes, bytes:hl.Bytes, size:Int) {
+		return 0;
+	}
+
+	@:hlNative("std", "bytes_find")
+	public static function find(this1:hl.Bytes, pos:Int, size:Int, bytes:hl.Bytes, bytesPos:Int, bytesSize:Int) {
+		return 0;
+	}
+
+	@:hlNative("std", "bytes_fill")
+	public static function fill(this1:hl.Bytes, pos:Int, size:Int, v:Int) {}
+
+	@:hlNative("std", "bsort_i32")
+	public static function sortI32(this1:hl.Bytes, pos:Int, length:Int, f:(Int, Int) -> Int) {}
+
+	@:hlNative("std", "bsort_f64")
+	public static function sortF64(this1:hl.Bytes, pos:Int, length:Int, f:(Float, Float) -> Int) {}
+
+	public static function sub(this1:hl.Bytes, pos:Int, size:Int) {
+		var this2 = hl._Bytes.Bytes_Impl_.alloc(size);
+		var b = this2;
+		hl._Bytes.Bytes_Impl_.blit(b, 0, this1, pos, size);
+		return b;
+	}
+
+	@:hlNative("std", "ucs2length")
+	public static function ucs2Length(this1:hl.Bytes, bytePos:Int) {
+		return 0;
+	}
+
+	@:hlNative("std", "utf8_to_utf16")
+	public static function utf8ToUtf16(this1:hl.Bytes, bytePos:Int, outSize:hl.Ref<Int>) {
+		return null;
+	}
+
+	@:hlNative("std", "utf16_to_utf8")
+	public static function utf16ToUtf8(this1:hl.Bytes, len:Int, outSize:hl.Ref<Int>) {
+		return null;
+	}
+
+	@:hlNative("std", "ucs2_upper")
+	static function ucs2Upper(this1:hl.Bytes, bytePos:Int, size:Int) {
+		return null;
+	}
+
+	@:hlNative("std", "ucs2_lower")
+	static function ucs2Lower(this1:hl.Bytes, bytePos:Int, size:Int) {
+		return null;
+	}
+
+	@:hlNative("std", "value_to_string")
+	public static function fromValue(v:Dynamic, length:hl.Ref<Int>) {
+		return null;
+	}
+}

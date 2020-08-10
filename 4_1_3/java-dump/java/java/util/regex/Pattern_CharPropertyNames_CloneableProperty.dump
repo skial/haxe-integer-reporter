@@ -1,0 +1,6 @@
+@:realPath("java.util.regex.Pattern_CharPropertyNames_CloneableProperty") @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.regex.Pattern$CharPropertyNames$CloneableProperty") @:javaCanonical("java.util.regex", "Pattern.CharPropertyNames.CloneableProperty")
+extern class java.util.regex.Pattern$CharPropertyNames$CloneableProperty extends java.util.regex.Pattern$CharProperty implements java.lang.Cloneable {
+
+	@:overload
+	function clone():java.util.regex.Pattern$CharPropertyNames$CloneableProperty;
+}

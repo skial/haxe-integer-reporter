@@ -1,0 +1,57 @@
+@:realPath("java.time.zone.ZoneRules") @:used @:nativeGen @:libType @:javaNative @:native("java.time.zone.ZoneRules") @:javaCanonical("java.time.zone", "ZoneRules")
+extern class java.time.zone.ZoneRules implements java.io.Serializable {
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getTransitionRules():java.util.List<java.time.zone.ZoneOffsetTransitionRule>;
+
+	@:overload
+	function getTransitions():java.util.List<java.time.zone.ZoneOffsetTransition>;
+
+	@:overload
+	function previousTransition(param1:java.time.Instant):java.time.zone.ZoneOffsetTransition;
+
+	@:overload
+	function nextTransition(param1:java.time.Instant):java.time.zone.ZoneOffsetTransition;
+
+	@:overload
+	function isValidOffset(param1:java.time.LocalDateTime, param2:java.time.ZoneOffset):Bool;
+
+	@:overload
+	function isDaylightSavings(param1:java.time.Instant):Bool;
+
+	@:overload
+	function getDaylightSavings(param1:java.time.Instant):java.time.Duration;
+
+	@:overload
+	function getStandardOffset(param1:java.time.Instant):java.time.ZoneOffset;
+
+	@:overload
+	function getTransition(param1:java.time.LocalDateTime):java.time.zone.ZoneOffsetTransition;
+
+	@:overload
+	function getValidOffsets(param1:java.time.LocalDateTime):java.util.List<java.time.ZoneOffset>;
+
+	@:overload
+	function getOffset(param1:java.time.LocalDateTime):java.time.ZoneOffset;
+
+	@:overload
+	function getOffset(param1:java.time.Instant):java.time.ZoneOffset;
+
+	@:overload
+	function isFixedOffset():Bool;
+
+	@:overload
+	static function of(param1:java.time.ZoneOffset):java.time.zone.ZoneRules;
+
+	@:overload
+	static function of(param1:java.time.ZoneOffset, param2:java.time.ZoneOffset, param3:java.util.List<java.time.zone.ZoneOffsetTransition>, param4:java.util.List<java.time.zone.ZoneOffsetTransition>, param5:java.util.List<java.time.zone.ZoneOffsetTransitionRule>):java.time.zone.ZoneRules;
+}

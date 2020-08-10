@@ -1,0 +1,164 @@
+@:realPath("java.internal.Runtime") @:directlyUsed @:used @:nativeGen @:native("haxe.lang.Runtime") @:nativeGen @:classCode("\r\n\tpublic static java.lang.Object getField(haxe.lang.IHxObject obj, java.lang.String field, boolean throwErrors)\r\n\t{\r\n\t\tif (obj == null && !throwErrors) return null;\r\n\t\treturn obj.__hx_getField(field, throwErrors, false, false);\r\n\t}\r\n\r\n\tpublic static double getField_f(haxe.lang.IHxObject obj, java.lang.String field, boolean throwErrors)\r\n\t{\r\n\t\tif (obj == null && !throwErrors) return 0.0;\r\n\t\treturn obj.__hx_getField_f(field, throwErrors, false);\r\n\t}\r\n\r\n\tpublic static java.lang.Object setField(haxe.lang.IHxObject obj, java.lang.String field, java.lang.Object value)\r\n\t{\r\n\t\treturn obj.__hx_setField(field, value, false);\r\n\t}\r\n\r\n\tpublic static double setField_f(haxe.lang.IHxObject obj, java.lang.String field, double value)\r\n\t{\r\n\t\treturn obj.__hx_setField_f(field, value, false);\r\n\t}\r\n\r\n\tpublic static java.lang.Object callField(haxe.lang.IHxObject obj, java.lang.String field, java.lang.Object[] args)\r\n\t{\r\n\t\treturn obj.__hx_invokeField(field, args);\r\n\t}\r\n") @:keep
+class haxe.lang.Runtime {
+
+	@:value({ })
+	public static var undefined:Dynamic = cast {};
+
+	@:functionCode("\r\n\treturn new haxe.lang.Closure(obj, field);\r\n\t")
+	public static function closure(obj:Dynamic, field:String) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\t\tif (v1 == v2)\r\n\t\t\t\treturn true;\r\n\t\t\tif (v1 == null || v2 == null)\r\n\t\t\t\treturn false;\r\n\r\n\t\t\tif (v1 instanceof java.lang.Number)\r\n\t\t\t{\r\n\t\t\t\tif (!(v2 instanceof java.lang.Number))\r\n\t\t\t\t\treturn false;\r\n\r\n\t\t\t\tjava.lang.Number v1c = (java.lang.Number) v1;\r\n\t\t\t\tjava.lang.Number v2c = (java.lang.Number) v2;\r\n\t\t\t\tif (v1 instanceof java.lang.Long || v2 instanceof java.lang.Long)\r\n\t\t\t\t\treturn v1c.longValue() == v2c.longValue();\r\n\t\t\t\treturn v1c.doubleValue() == v2c.doubleValue();\r\n\t\t\t} else if (v1 instanceof java.lang.String || v1 instanceof haxe.lang.IEquatable) { //TODO see what happens with Boolean cases\r\n\t\t\t\treturn v1.equals(v2);\r\n\t\t\t}\r\n\r\n\t\t\treturn false;\r\n\t")
+	public static function eq(v1:Dynamic, v2:Dynamic) {
+		return false;
+	}
+
+	@:functionCode("\r\n\t\tif (v1 == v2)\r\n\t\t\treturn true;\r\n\r\n\t\tif (v1 instanceof java.lang.String || v1 instanceof haxe.lang.IEquatable)\r\n\t\t{\r\n\t\t\treturn v1 != null && v1.equals(v2);\r\n\t\t} else {\r\n\t\t\treturn v1 == v2;\r\n\t\t}\r\n\t")
+	public static function refEq(v1:{ }, v2:{ }) {
+		return false;
+	}
+
+	@:functionCode("\r\n\t\treturn v1 == v2 || (v1 != null && v1.equals(v2));\r\n\t")
+	public static function valEq(v1:{ }, v2:{ }) {
+		return false;
+	}
+
+	@:functionCode("\r\n\t\treturn (obj == null) ? 0.0 : ((java.lang.Number) obj).doubleValue();\r\n\t")
+	public static function toDouble(obj:Dynamic) {
+		return 0.0;
+	}
+
+	public static function toBool(obj:java.lang.Boolean) {
+		if ((obj == null)) return false else return obj.booleanValue();
+	}
+
+	@:functionCode("\r\n\t\treturn (obj == null) ? 0 : ((java.lang.Number) obj).intValue();\r\n\t")
+	public static function toInt(obj:Dynamic) {
+		return 0;
+	}
+
+	public static function toLong(obj:Dynamic) {
+		if ((obj == null)) return cast 0 else return cast obj.longValue();
+	}
+
+	@:functionCode("\r\n\t\tif (obj != null && obj instanceof java.lang.Number)\r\n\t\t{\r\n\t\t\treturn true;\r\n\t\t} else {\r\n\t\t\treturn false;\r\n\t\t}\r\n\t")
+	public static function isDouble(obj:Dynamic) {
+		return false;
+	}
+
+	@:overload
+	public static function isInt(obj:Dynamic) {
+		if ((Std.isOfType(obj, java.lang.Number))) {
+			var n = obj;
+			return n.doubleValue() == n.intValue();
+		} else return false;
+	}
+
+	@:overload
+	public static function isInt(num:java.lang.Number) {
+		return num != null && num.doubleValue() == num.intValue();
+	}
+
+	@:functionCode("\r\n\t\tjava.lang.Class cl = null;\r\n\t\tif (o instanceof java.lang.Class)\r\n\t\t{\r\n\t\t\tif (o == java.lang.String.class)\r\n\t\t\t\treturn field.equals(\"fromCharCode\");\r\n\r\n\t\t\tcl = (java.lang.Class) o;\r\n\t\t} else if (o instanceof java.lang.String) {\r\n\t\t\treturn haxe.lang.StringRefl.handleGetField( (java.lang.String) o, field, false) != null;\r\n\t\t} else {\r\n\t\t\tcl = o.getClass();\r\n\t\t}\r\n\r\n\t\ttry\r\n\t\t{\r\n\t\t\tjava.lang.reflect.Field f = cl.getField(field);\r\n\t\t\treturn true;\r\n\t\t}\r\n\t\tcatch(Throwable t)\r\n\t\t{\r\n\t\t\tjava.lang.reflect.Method[] ms = cl.getMethods();\r\n\t\t\tfor (int i = 0; i < ms.length; i++)\r\n\t\t\t{\r\n\t\t\t\tif (ms[i].getName().equals(field))\r\n\t\t\t\t{\r\n\t\t\t\t\treturn true;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\treturn false;\r\n\t")
+	public static function slowHasField(o:Dynamic, field:String) {
+		return false;
+	}
+
+	@:functionCode("\r\n\t\t\tif (v1 == v2)\r\n\t\t\t\treturn 0;\r\n\t\t\tif (v1 == null) return -1;\r\n\t\t\tif (v2 == null) return 1;\r\n\r\n\t\t\tif (v1 instanceof java.lang.Number || v2 instanceof java.lang.Number)\r\n\t\t\t{\r\n\t\t\t\tjava.lang.Number v1c = (java.lang.Number) v1;\r\n\t\t\t\tjava.lang.Number v2c = (java.lang.Number) v2;\r\n\r\n\t\t\t\tif (v1 instanceof java.lang.Long || v2 instanceof java.lang.Long)\r\n\t\t\t\t{\r\n\t\t\t\t\tlong l1 = (v1 == null) ? 0L : v1c.longValue();\r\n\t\t\t\t\tlong l2 = (v2 == null) ? 0L : v2c.longValue();\r\n          return (l1 < l2) ? -1 : (l1 > l2) ? 1 : 0;\r\n\t\t\t\t} else {\r\n\t\t\t\t\tdouble d1 = (v1 == null) ? 0.0 : v1c.doubleValue();\r\n\t\t\t\t\tdouble d2 = (v2 == null) ? 0.0 : v2c.doubleValue();\r\n\r\n          return (d1 < d2) ? -1 : (d1 > d2) ? 1 : 0;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\t//if it's not a number it must be a String\r\n\t\t\treturn ((java.lang.String) v1).compareTo((java.lang.String) v2);\r\n\t")
+	public static function compare(v1:Dynamic, v2:Dynamic) {
+		return 0;
+	}
+
+	@:functionCode("\r\n\t\t\tif (v1 instanceof java.lang.String || v2 instanceof java.lang.String)\r\n\t\t\t\treturn toString(v1) + toString(v2);\r\n\r\n\t\t\tif (v1 instanceof java.lang.Number || v2 instanceof java.lang.Number)\r\n\t\t\t{\r\n\t\t\t\tjava.lang.Number v1c = (java.lang.Number) v1;\r\n\t\t\t\tjava.lang.Number v2c = (java.lang.Number) v2;\r\n\r\n\t\t\t\tdouble d1 = (v1 == null) ? 0.0 : v1c.doubleValue();\r\n\t\t\t\tdouble d2 = (v2 == null) ? 0.0 : v2c.doubleValue();\r\n\r\n\t\t\t\treturn d1 + d2;\r\n\t\t\t}\r\n\r\n\t\t\tthrow new java.lang.IllegalArgumentException(\"Cannot dynamically add \" + v1 + \" and \" + v2);\r\n\t")
+	public static function plus(v1:Dynamic, v2:Dynamic) {
+		return null;
+	}
+
+	@:functionCode("\r\n\r\n\tif (obj == null)\r\n\t\tif (throwErrors)\r\n\t\t\tthrow new java.lang.NullPointerException(\"Cannot access field '\" + field + \"' of null.\");\r\n\t\telse\r\n\t\t\treturn null;\r\n\r\n\tjava.lang.Class cl = null;\r\n\ttry\r\n\t{\r\n\t\tif (obj instanceof java.lang.Class)\r\n\t\t{\r\n\t\t\tif (obj == java.lang.String.class && field.equals(\"fromCharCode\"))\r\n\t\t\t\treturn new haxe.lang.Closure(haxe.lang.StringExt.class, field);\r\n\r\n\t\t\tcl = (java.lang.Class) obj;\r\n\t\t\tobj = null;\r\n\t\t} else if (obj instanceof java.lang.String) {\r\n\t\t\treturn haxe.lang.StringRefl.handleGetField((java.lang.String) obj, field, throwErrors);\r\n\t\t} else {\r\n\t\t\tcl = obj.getClass();\r\n\t\t}\r\n\r\n\t\tjava.lang.reflect.Field f = cl.getField(field);\r\n\t\tf.setAccessible(true);\r\n\t\treturn f.get(obj);\r\n\t} catch (Throwable t)\r\n\t{\r\n\t\ttry\r\n\t\t{\r\n\t\t\tjava.lang.reflect.Method[] ms = cl.getMethods();\r\n\t\t\tfor (int i = 0; i < ms.length; i++)\r\n\t\t\t{\r\n\t\t\t\tif (ms[i].getName().equals(field))\r\n\t\t\t\t{\r\n\t\t\t\t\treturn new haxe.lang.Closure(obj != null ? obj : cl, field);\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t} catch (Throwable t2)\r\n\t\t{\r\n\r\n\t\t}\r\n\r\n\t\tif (throwErrors)\r\n\t\t\tthrow (java.lang.RuntimeException)haxe.Exception.thrown(t);\r\n\r\n\t\treturn null;\r\n\t}\r\n\r\n\t")
+	public static function slowGetField(obj:Dynamic, field:String, throwErrors:Bool) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\tjava.lang.Class cl = null;\r\n\t\tif (obj instanceof java.lang.Class)\r\n\t\t{\r\n\t\t\tcl = (java.lang.Class) obj;\r\n\t\t\tobj = null;\r\n\t\t} else {\r\n\t\t\tcl = obj.getClass();\r\n\t\t}\r\n\r\n\t\ttry {\r\n\t\t\tjava.lang.reflect.Field f = cl.getField(field);\r\n\t\t\tf.setAccessible(true);\r\n\r\n\t\t\t//FIXME we must evaluate if field to be set receives either int or double\r\n\t\t\tif (isInt(value))\r\n\t\t\t{\r\n\t\t\t\tf.setInt(obj, toInt(value));\r\n\t\t\t} else if (isDouble(value)) {\r\n\t\t\t\tf.setDouble(obj, toDouble(value));\r\n\t\t\t} else {\r\n\t\t\t\tf.set(obj, value);\r\n\t\t\t}\r\n\t\t\treturn value;\r\n\t\t}\r\n\t\tcatch (Throwable t)\r\n\t\t{\r\n\t\t\tthrow (java.lang.RuntimeException)haxe.Exception.thrown(t);\r\n\t\t}\r\n\t")
+	public static function slowSetField(obj:Dynamic, field:String, value:Dynamic) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\tjava.lang.Class cl = null;\r\n\t\tif (obj instanceof java.lang.Class)\r\n\t\t{\r\n\t\t\tif (obj == java.lang.String.class && field.equals(\"fromCharCode\"))\r\n\t\t\t\treturn haxe.lang.StringExt.fromCharCode(toInt(args[0]));\r\n\r\n\t\t\tcl = (java.lang.Class) obj;\r\n\t\t\tobj = null;\r\n\t\t} else if (obj instanceof java.lang.String) {\r\n\t\t\treturn haxe.lang.StringRefl.handleCallField((java.lang.String) obj, field, args);\r\n\t\t} else {\r\n\t\t\tcl = obj.getClass();\r\n\t\t}\r\n\r\n\t\tif (args == null) args = new java.lang.Object[0];\r\n\r\n\t\tint len = args.length;\r\n\t\tjava.lang.Class[] cls = new java.lang.Class[len];\r\n\t\tjava.lang.Object[] objs = new java.lang.Object[len];\r\n\r\n\t\tjava.lang.reflect.Method[] ms = cl.getMethods();\r\n\t\tint msl = ms.length;\r\n\t\tint realMsl = 0;\r\n\t\tfor(int i =0; i < msl; i++)\r\n\t\t{\r\n\t\t\tif (!ms[i].getName().equals(field) || (!ms[i].isVarArgs() && ms[i].getParameterTypes().length != len))\r\n\t\t\t{\r\n\t\t\t\tms[i] = null;\r\n\t\t\t} else {\r\n\t\t\t\tms[realMsl] = ms[i];\r\n\t\t\t\tif (realMsl != i)\r\n\t\t\t\t\tms[i] = null;\r\n\t\t\t\trealMsl++;\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\tboolean hasNumber = false;\r\n\r\n\t\tfor (int i = 0; i < len; i++)\r\n\t\t{\r\n\t\t\tObject o = args[i];\r\n\t\t\tif (o == null)\r\n\t\t\t{\r\n\t\t\t\tcontinue; //can be anything\r\n\t\t\t}\r\n\t\t\tobjs[i]= o;\r\n\t\t\tcls[i] = o.getClass();\r\n\t\t\tboolean isNum = false;\r\n\r\n\t\t\tif (o instanceof java.lang.Number)\r\n\t\t\t{\r\n\t\t\t\tcls[i] = java.lang.Number.class;\r\n\t\t\t\tisNum = hasNumber = true;\r\n\t\t\t} else if (o instanceof java.lang.Boolean) {\r\n\t\t\t\tcls[i] = java.lang.Boolean.class;\r\n\t\t\t\tisNum = true;\r\n\t\t\t}\r\n\r\n\t\t\tmsl = realMsl;\r\n\t\t\trealMsl = 0;\r\n\r\n\t\t\tfor (int j = 0; j < msl; j++)\r\n\t\t\t{\r\n\t\t\t\tjava.lang.Class[] allcls = ms[j].getParameterTypes();\r\n\t\t\t\tif (i < allcls.length)\r\n\t\t\t\t{\r\n\t\t\t\t\tif (!  ((isNum && allcls[i].isPrimitive()) || allcls[i].isAssignableFrom(cls[i])) )\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tms[j] = null;\r\n\t\t\t\t\t} else {\r\n\t\t\t\t\t\tms[realMsl] = ms[j];\r\n\t\t\t\t\t\tif (realMsl != j)\r\n\t\t\t\t\t\t\tms[j] = null;\r\n\t\t\t\t\t\trealMsl++;\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t}\r\n\r\n\t\tjava.lang.reflect.Method found;\r\n\t\tif (ms.length == 0 || (found = ms[0]) == null)\r\n\t\t\tthrow (java.lang.RuntimeException)haxe.Exception.thrown(\"No compatible method found for: \" + field);\r\n\r\n\t\tif (hasNumber)\r\n\t\t{\r\n\t\t\tjava.lang.Class[] allcls = found.getParameterTypes();\r\n\r\n\t\t\tfor (int i = 0; i < len; i++)\r\n\t\t\t{\r\n\t\t\t\tjava.lang.Object o = objs[i];\r\n\t\t\t\tif (o instanceof java.lang.Number)\r\n\t\t\t\t{\r\n\t\t\t\t\tjava.lang.Class curCls = null;\r\n\t\t\t\t\tif (i < allcls.length)\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tcurCls = allcls[i];\r\n\t\t\t\t\t\tif (!curCls.isAssignableFrom(o.getClass()))\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tString name = curCls.getName();\r\n\t\t\t\t\t\t\tif (name.equals(\"double\") || name.equals(\"java.lang.Double\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).doubleValue();\r\n\t\t\t\t\t\t\t} else if (name.equals(\"int\") || name.equals(\"java.lang.Integer\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).intValue();\r\n\t\t\t\t\t\t\t} else if (name.equals(\"float\") || name.equals(\"java.lang.Float\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).floatValue();\r\n\t\t\t\t\t\t\t} else if (name.equals(\"byte\") || name.equals(\"java.lang.Byte\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).byteValue();\r\n\t\t\t\t\t\t\t} else if (name.equals(\"short\") || name.equals(\"java.lang.Short\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).shortValue();\r\n\t\t\t\t\t\t\t} else if (name.equals(\"long\") || name.equals(\"java.lang.Long\"))\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tobjs[i] = ((java.lang.Number)o).longValue();\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t} //else varargs not handled TODO\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\r\n\t\ttry {\r\n\t\t\tfound.setAccessible(true);\r\n\t\t\treturn found.invoke(obj, objs);\r\n\t\t}\r\n\r\n\t\tcatch (java.lang.reflect.InvocationTargetException e)\r\n\t\t{\r\n\t\t\tthrow (java.lang.RuntimeException)haxe.Exception.thrown(e.getCause());\r\n\t\t}\r\n\r\n\t\tcatch (Throwable t)\r\n\t\t{\r\n\t\t\tthrow (java.lang.RuntimeException)haxe.Exception.thrown(t);\r\n\t\t}\r\n\t")
+	public static function slowCallField(obj:Dynamic, field:String, args:java.NativeArray<Dynamic>) {
+		return null;
+	}
+
+	@:functionCode("\r\n\t\tif (obj instanceof haxe.lang.IHxObject)\r\n\t\t{\r\n\t\t\treturn ((haxe.lang.IHxObject) obj).__hx_invokeField(field, args);\r\n\t\t}\r\n\r\n\t\treturn slowCallField(obj, field, args);\r\n\t")
+	public static function callField(obj:Dynamic, field:String, args:java.NativeArray<Dynamic>) {
+		return null;
+	}
+
+	@:functionCode("\r\n\r\n\t\tif (obj instanceof haxe.lang.IHxObject)\r\n\t\t\treturn ((haxe.lang.IHxObject) obj).__hx_getField(field, throwErrors, false, false);\r\n\r\n\t\treturn slowGetField(obj, field, throwErrors);\r\n\r\n\t")
+	public static function getField(obj:Dynamic, field:String, throwErrors:Bool) {
+		return null;
+	}
+
+	@:functionCode("\r\n\r\n\t\tif (obj instanceof haxe.lang.IHxObject)\r\n\t\t\treturn ((haxe.lang.IHxObject) obj).__hx_getField_f(field, throwErrors, false);\r\n\r\n\t\treturn toDouble(slowGetField(obj, field, throwErrors));\r\n\r\n\t")
+	public static function getField_f(obj:Dynamic, field:String, throwErrors:Bool) {
+		return 0.0;
+	}
+
+	@:functionCode("\r\n\r\n\t\tif (obj instanceof haxe.lang.IHxObject)\r\n\t\t\treturn ((haxe.lang.IHxObject) obj).__hx_setField(field, value, false);\r\n\r\n\t\treturn slowSetField(obj, field, value);\r\n\r\n\t")
+	public static function setField(obj:Dynamic, field:String, value:Dynamic) {
+		return null;
+	}
+
+	@:functionCode("\r\n\r\n\t\tif (obj instanceof haxe.lang.IHxObject)\r\n\t\t\treturn ((haxe.lang.IHxObject) obj).__hx_setField_f(field, value, false);\r\n\r\n\t\treturn toDouble(slowSetField(obj, field, value));\r\n\r\n\t")
+	public static function setField_f(obj:Dynamic, field:String, value:Float) {
+		return 0.0;
+	}
+
+	@:has_untyped
+	public static function toString(obj:Dynamic) {
+		if ((obj == null)) return null;
+		if ((Std.isOfType(obj, java.lang.Number) && ! Std.isOfType(obj, java.lang.Integer) && haxe.lang.Runtime.isInt(cast obj))) return java.lang.Integer.toString(haxe.lang.Runtime.toInt(obj));
+		return obj.toString();
+	}
+
+	public static function isFinite(v:Float) {
+		if ((v == v)) return ! java.lang.Double.isInfinite(v) else return false;
+	}
+
+	public static function getIntFromNumber(n:java.lang.Number) {
+		if ((n == null)) return 0 else return n.intValue();
+	}
+
+	public static function getFloatFromNumber(n:java.lang.Number) {
+		if ((n == null)) return 0.0 else return n.doubleValue();
+	}
+
+	public static function getInt64FromNumber(n:java.lang.Number) {
+		if ((n == null)) return 0.0 else return n.longValue();
+	}
+
+	public static function numToInteger(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Integer))) return cast num else return java.lang.Integer.valueOf(num.intValue());
+	}
+
+	public static function numToDouble(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Double))) return cast num else return java.lang.Double.valueOf(num.doubleValue());
+	}
+
+	public static function numToFloat(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Float))) return cast num else return java.lang.Float.valueOf(num.floatValue());
+	}
+
+	public static function numToByte(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Byte))) return cast num else return java.lang.Byte.valueOf(num.byteValue());
+	}
+
+	public static function numToLong(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Long))) return cast num else return java.lang.Long.valueOf(num.longValue());
+	}
+
+	public static function numToShort(num:java.lang.Number) {
+		if ((num == null)) return null else if ((Std.isOfType(num, java.lang.Short))) return cast num else return java.lang.Short.valueOf(num.shortValue());
+	}
+}

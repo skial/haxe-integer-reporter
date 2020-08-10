@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.fs.FSWatcherEvent<T : js.node.fs.FSWatcherEvent.T> to js.node.events.Event<js.node.fs.FSWatcherEvent.T> {}

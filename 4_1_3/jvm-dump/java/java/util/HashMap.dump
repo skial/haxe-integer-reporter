@@ -1,0 +1,87 @@
+@:realPath("java.util.HashMap") @:directlyUsed @:used @:libType @:javaNative @:native("java.util.HashMap") @:javaCanonical("java.util", "HashMap")
+extern class java.util.HashMap<K : java.util.HashMap.K,V : java.util.HashMap.V> extends java.util.AbstractMap<java.util.HashMap.K, java.util.HashMap.V> implements java.io.Serializable implements java.lang.Cloneable implements java.util.Map<java.util.HashMap.K, java.util.HashMap.V> {
+
+	@:overload
+	function new(param1:java.util.Map<java.util.HashMap.K, java.util.HashMap.V>):Void;
+
+	@:overload
+	function new(param1:Int, param2:Single):Void;
+
+	@:overload
+	function new(param1:Int):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	function replaceAll(param1:java.util.function.BiFunction<Dynamic, Dynamic, java.util.HashMap.V>):Void;
+
+	@:overload
+	function forEach(param1:java.util.function.BiConsumer<Dynamic, Dynamic>):Void;
+
+	@:overload
+	function merge(param1:java.util.HashMap.K, param2:java.util.HashMap.V, param3:java.util.function.BiFunction<Dynamic, Dynamic, java.util.HashMap.V>):java.util.HashMap.V;
+
+	@:overload
+	function compute(param1:java.util.HashMap.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.HashMap.V>):java.util.HashMap.V;
+
+	@:overload
+	function computeIfPresent(param1:java.util.HashMap.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.HashMap.V>):java.util.HashMap.V;
+
+	@:overload
+	function computeIfAbsent(param1:java.util.HashMap.K, param2:java.util.function.Function<Dynamic, java.util.HashMap.V>):java.util.HashMap.V;
+
+	@:overload
+	function replace(param1:java.util.HashMap.K, param2:java.util.HashMap.V):java.util.HashMap.V;
+
+	@:overload
+	function replace(param1:java.util.HashMap.K, param2:java.util.HashMap.V, param3:java.util.HashMap.V):Bool;
+
+	@:overload
+	function remove(param1:Dynamic, param2:Dynamic):Bool;
+
+	@:overload
+	function remove(param1:Dynamic):java.util.HashMap.V;
+
+	@:overload
+	function putIfAbsent(param1:java.util.HashMap.K, param2:java.util.HashMap.V):java.util.HashMap.V;
+
+	@:overload
+	function getOrDefault(param1:Dynamic, param2:java.util.HashMap.V):java.util.HashMap.V;
+
+	@:overload
+	function entrySet():java.util.Set<java.util.Map$Entry<java.util.HashMap.K, java.util.HashMap.V>>;
+
+	@:overload
+	function values():java.util.Collection<java.util.HashMap.V>;
+
+	@:overload
+	function keySet():java.util.Set<java.util.HashMap.K>;
+
+	@:overload
+	function containsValue(param1:Dynamic):Bool;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function putAll(param1:java.util.Map<java.util.HashMap.K, java.util.HashMap.V>):Void;
+
+	@:overload
+	function put(param1:java.util.HashMap.K, param2:java.util.HashMap.V):java.util.HashMap.V;
+
+	@:overload
+	function containsKey(param1:Dynamic):Bool;
+
+	@:overload
+	function get(param1:Dynamic):java.util.HashMap.V;
+
+	@:overload
+	function isEmpty():Bool;
+
+	@:overload
+	function size():Int;
+}

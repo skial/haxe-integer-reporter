@@ -1,0 +1,15 @@
+@:realPath("java.lang.ref.ReferenceQueue") @:used @:libType @:javaNative @:native("java.lang.ref.ReferenceQueue") @:javaCanonical("java.lang.ref", "ReferenceQueue")
+extern class java.lang.ref.ReferenceQueue<T : java.lang.ref.ReferenceQueue.T> {
+
+	@:overload
+	function new():Void;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function remove():java.lang.ref.Reference<java.lang.ref.ReferenceQueue.T>;
+
+	@:overload @:throws("java.lang.InterruptedException") @:throws("java.lang.IllegalArgumentException")
+	function remove(param1:haxe.Int64):java.lang.ref.Reference<java.lang.ref.ReferenceQueue.T>;
+
+	@:overload
+	function poll():java.lang.ref.Reference<java.lang.ref.ReferenceQueue.T>;
+}

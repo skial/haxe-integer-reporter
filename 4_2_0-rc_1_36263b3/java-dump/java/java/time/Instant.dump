@@ -1,0 +1,89 @@
+@:realPath("java.time.Instant") @:used @:nativeGen @:libType @:javaNative @:native("java.time.Instant") @:javaCanonical("java.time", "Instant")
+extern class java.time.Instant implements java.io.Serializable implements java.lang.Comparable<java.time.Instant> implements java.time.temporal.TemporalAdjuster implements java.time.temporal.Temporal {
+
+	function compareTo(param1:Dynamic):Int;
+
+	function compareTo(param1:java.time.Instant):Int;
+
+	function with(param1:java.time.temporal.TemporalAdjuster):java.time.Instant;
+
+	function with(param1:java.time.temporal.TemporalField, param2:haxe.Int64):java.time.Instant;
+
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.Instant;
+
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.Instant;
+
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function isBefore(param1:java.time.Instant):Bool;
+
+	function isAfter(param1:java.time.Instant):Bool;
+
+	function toEpochMilli():haxe.Int64;
+
+	function atZone(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	function atOffset(param1:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	function until(param1:java.time.temporal.Temporal, param2:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	function query<R:Dynamic>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	function minusNanos(param1:haxe.Int64):java.time.Instant;
+
+	function minusMillis(param1:haxe.Int64):java.time.Instant;
+
+	function minusSeconds(param1:haxe.Int64):java.time.Instant;
+
+	function plusNanos(param1:haxe.Int64):java.time.Instant;
+
+	function plusMillis(param1:haxe.Int64):java.time.Instant;
+
+	function plusSeconds(param1:haxe.Int64):java.time.Instant;
+
+	function truncatedTo(param1:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	function getNano():Int;
+
+	function getEpochSecond():haxe.Int64;
+
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	function isSupported(param1:java.time.temporal.TemporalUnit):Bool;
+
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	static function parse(param1:java.lang.CharSequence):java.time.Instant;
+
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.Instant;
+
+	static function ofEpochMilli(param1:haxe.Int64):java.time.Instant;
+
+	static function ofEpochSecond(param1:haxe.Int64, param2:haxe.Int64):java.time.Instant;
+
+	static function ofEpochSecond(param1:haxe.Int64):java.time.Instant;
+
+	static function now(param1:java.time.Clock):java.time.Instant;
+
+	static function now():java.time.Instant;
+
+	static var EPOCH(default,never):java.time.Instant;
+
+	static var MIN(default,never):java.time.Instant;
+
+	static var MAX(default,never):java.time.Instant;
+}

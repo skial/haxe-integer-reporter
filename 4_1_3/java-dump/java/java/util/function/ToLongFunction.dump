@@ -1,0 +1,6 @@
+@:realPath("java.util.function.ToLongFunction") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.ToLongFunction") @:javaCanonical("java.util.function", "ToLongFunction")
+extern interface java.util.function.ToLongFunction<T : java.util.function.ToLongFunction.T> {
+
+	@:overload
+	function applyAsLong(param1:java.util.function.ToLongFunction.T):haxe.Int64;
+}

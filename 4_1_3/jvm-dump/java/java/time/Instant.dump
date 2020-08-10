@@ -1,0 +1,129 @@
+@:realPath("java.time.Instant") @:used @:libType @:javaNative @:native("java.time.Instant") @:javaCanonical("java.time", "Instant")
+extern class java.time.Instant implements java.io.Serializable implements java.lang.Comparable<java.time.Instant> implements java.time.temporal.TemporalAdjuster implements java.time.temporal.Temporal {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.time.Instant):Int;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalAdjuster):java.time.Instant;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalField, param2:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.Instant;
+
+	@:overload
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	@:overload
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.Instant;
+
+	@:overload
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function isBefore(param1:java.time.Instant):Bool;
+
+	@:overload
+	function isAfter(param1:java.time.Instant):Bool;
+
+	@:overload
+	function toEpochMilli():haxe.Int64;
+
+	@:overload
+	function atZone(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function atOffset(param1:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	function until(param1:java.time.temporal.Temporal, param2:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	@:overload
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function query<R : query.R>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	@:overload
+	function minusNanos(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function minusMillis(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function minusSeconds(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function plusNanos(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function plusMillis(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function plusSeconds(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	function truncatedTo(param1:java.time.temporal.TemporalUnit):java.time.Instant;
+
+	@:overload
+	function getNano():Int;
+
+	@:overload
+	function getEpochSecond():haxe.Int64;
+
+	@:overload
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalUnit):Bool;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence):java.time.Instant;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.Instant;
+
+	@:overload
+	static function ofEpochMilli(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	static function ofEpochSecond(param1:haxe.Int64, param2:haxe.Int64):java.time.Instant;
+
+	@:overload
+	static function ofEpochSecond(param1:haxe.Int64):java.time.Instant;
+
+	@:overload
+	static function now(param1:java.time.Clock):java.time.Instant;
+
+	@:overload
+	static function now():java.time.Instant;
+
+	static var EPOCH(default,never):java.time.Instant;
+
+	static var MIN(default,never):java.time.Instant;
+
+	static var MAX(default,never):java.time.Instant;
+}

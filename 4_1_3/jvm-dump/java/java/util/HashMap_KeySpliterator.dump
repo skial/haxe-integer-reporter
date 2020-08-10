@@ -1,0 +1,24 @@
+@:realPath("java.util.HashMap_KeySpliterator") @:used @:libType @:javaNative @:native("java.util.HashMap$KeySpliterator") @:javaCanonical("java.util", "HashMap.KeySpliterator")
+extern class java.util.HashMap$KeySpliterator<K : java.util.HashMap_KeySpliterator.K,V : java.util.HashMap_KeySpliterator.V> extends java.util.HashMap$HashMapSpliterator<java.util.HashMap_KeySpliterator.K, java.util.HashMap_KeySpliterator.V> implements java.util.Spliterator<java.util.HashMap_KeySpliterator.K> {
+
+	@:overload
+	function trySplit():java.util.HashMap$KeySpliterator<java.util.HashMap_KeySpliterator.K, java.util.HashMap_KeySpliterator.V>;
+
+	@:overload
+	function characteristics():Int;
+
+	@:overload
+	function tryAdvance(param1:java.util.function.Consumer<Dynamic>):Bool;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function getExactSizeIfKnown():haxe.Int64;
+
+	@:overload
+	function hasCharacteristics(param1:Int):Bool;
+
+	@:overload
+	function getComparator():java.util.Comparator<Dynamic>;
+}

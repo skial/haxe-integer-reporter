@@ -1,0 +1,58 @@
+@:realPath("python.Set") @:directlyUsed @:used @:native("set")
+extern class set<T : python.Set.T> {
+
+	function new(iterable:Null<python.NativeIterable<python.Set.T>>):Void;
+
+	function new(array:Null<list<python.Set.T>>):Void;
+
+	var length(get,never):Int;
+
+	inline function get_length():Int;
+
+	inline function has(v:python.Set.T):Bool;
+
+	function isdisjoint(other:set<python.Set.T>):Bool;
+
+	function issubset(other:set<python.Set.T>):Bool;
+
+	inline function issubset_proper(other:set<python.Set.T>):Bool;
+
+	function issuperset(other:set<python.Set.T>):Bool;
+
+	inline function issuperset_proper(other:set<python.Set.T>):Bool;
+
+	function union(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function intersection(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function difference(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function symmetric_difference(other:set<python.Set.T>):set<python.Set.T>;
+
+	function copy():set<python.Set.T>;
+
+	function update(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function intersection_update(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function difference_update(other:set<python.Set.T>, others:haxe.extern.Rest<set<python.Set.T>>):set<python.Set.T>;
+
+	function symmetric_difference_update(other:set<python.Set.T>):set<python.Set.T>;
+
+	function add(elem:python.Set.T):Void;
+
+	function remove(elem:python.Set.T):Void;
+
+	function discard(elem:python.Set.T):Void;
+
+	function pop():python.Set.T;
+
+	function clear():Void;
+
+	inline function iter():python.NativeIterator<python.Set.T>;
+
+	inline function iterator():Iterator<python.Set.T>;
+
+	@:maybeUsed
+	function __iter__():python.NativeIterator<python.Set.T>;
+}

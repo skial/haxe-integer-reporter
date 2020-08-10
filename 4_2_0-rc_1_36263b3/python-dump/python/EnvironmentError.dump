@@ -1,0 +1,3 @@
+@:realPath("python.EnvironmentError") @:native("EnvironmentError")
+extern class EnvironmentError extends Exception {
+}

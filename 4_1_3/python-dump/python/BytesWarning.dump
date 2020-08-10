@@ -1,0 +1,3 @@
+@:realPath("python.BytesWarning") @:native("BytesWarning")
+extern class BytesWarning extends Warning {
+}

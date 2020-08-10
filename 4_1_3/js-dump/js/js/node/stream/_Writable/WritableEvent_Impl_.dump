@@ -1,0 +1,21 @@
+@:used @:enum
+private extern class js.node.stream._Writable.WritableEvent_Impl_ {
+
+	@:value(cast "close") @:enum @:impl
+	static inline var Close:js.node.stream.WritableEvent<Void -> Void> = cast "close";
+
+	@:value(cast "drain") @:enum @:impl
+	static inline var Drain:js.node.stream.WritableEvent<Void -> Void> = cast "drain";
+
+	@:value(cast "error") @:enum @:impl
+	static inline var Error:js.node.stream.WritableEvent<Error -> Void> = cast "error";
+
+	@:value(cast "finish") @:enum @:impl
+	static inline var Finish:js.node.stream.WritableEvent<Void -> Void> = cast "finish";
+
+	@:value(cast "pipe") @:enum @:impl
+	static inline var Pipe:js.node.stream.WritableEvent<js.node.stream.IReadable -> Void> = cast "pipe";
+
+	@:value(cast "unpipe") @:enum @:impl
+	static inline var Unpipe:js.node.stream.WritableEvent<js.node.stream.IReadable -> Void> = cast "unpipe";
+}

@@ -1,0 +1,6 @@
+@:realPath("java.lang.annotation.Annotation") @:directlyUsed @:used @:abstract @:libType @:javaNative @:native("java.lang.annotation.Annotation") @:javaCanonical("java.lang.annotation", "Annotation")
+extern interface java.lang.annotation.Annotation {
+
+	@:overload
+	function annotationType():java.lang.Class<java.lang.annotation.Annotation>;
+}

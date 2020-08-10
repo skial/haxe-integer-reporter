@@ -1,0 +1,17 @@
+@:realPath("java.time.temporal.TemporalUnit") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.time.temporal.TemporalUnit") @:javaCanonical("java.time.temporal", "TemporalUnit")
+extern interface java.time.temporal.TemporalUnit {
+
+	function between(param1:java.time.temporal.Temporal, param2:java.time.temporal.Temporal):haxe.Int64;
+
+	function addTo<R:java.time.temporal.Temporal>(param1:addTo.R, param2:haxe.Int64):addTo.R;
+
+	function isSupportedBy(param1:java.time.temporal.Temporal):Bool;
+
+	function isTimeBased():Bool;
+
+	function isDateBased():Bool;
+
+	function isDurationEstimated():Bool;
+
+	function getDuration():java.time.Duration;
+}

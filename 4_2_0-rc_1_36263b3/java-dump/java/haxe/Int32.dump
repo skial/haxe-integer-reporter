@@ -1,0 +1,2 @@
+@:hxGen @:transitive
+abstract haxe.Int32 from Int to Int {}

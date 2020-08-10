@@ -1,0 +1,9 @@
+@:realPath("java.util.LinkedHashMap_LinkedHashIterator") @:used @:abstract @:libType @:javaNative @:native("java.util.LinkedHashMap$LinkedHashIterator") @:javaCanonical("java.util", "LinkedHashMap.LinkedHashIterator")
+extern class java.util.LinkedHashMap$LinkedHashIterator {
+
+	@:overload
+	function remove():Void;
+
+	@:overload
+	function hasNext():Bool;
+}

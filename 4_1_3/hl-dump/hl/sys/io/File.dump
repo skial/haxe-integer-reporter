@@ -1,0 +1,32 @@
+@:keep @:directlyUsed @:used @:access(Sys) @:coreApi
+class sys.io.File {
+
+	public static function getContent(path:String) {
+		var bytes = sys.io.File.file_contents(Sys.getPath(path), null);
+		if ((bytes == null)) throw haxe.Exception.thrown(new SysError("Can't read " + path));
+		return String.fromUTF8(bytes);
+	}
+
+	public static function saveContent(path:String, content:String) {
+		var f = sys.io.File.write(path, null);
+		f.writeString(content, null);
+		f.close();
+	}
+
+	@:value({ binary : true })
+	public static function write(path:String, binary:Bool = true) {
+		var f = sys.io.File.file_open(Sys.getPath(path), 1, binary);
+		if ((f == null)) throw haxe.Exception.thrown(new SysError("Can't open " + path + " for writing"));
+		return new sys.io.FileOutput(f);
+	}
+
+	@:hlNative("std", "file_open")
+	static function file_open(path:hl.Bytes, mode:Int, binary:Bool) {
+		return null;
+	}
+
+	@:hlNative("std", "file_contents")
+	static function file_contents(path:hl.Bytes, size:hl.Ref<Int>) {
+		return null;
+	}
+}

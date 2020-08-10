@@ -1,0 +1,5 @@
+@:realPath("java.util.Locale_Category") @:used @:flatEnum @:javaCanonical("java.util", "Locale.Category") @:native("java.util.Locale$Category")
+extern enum java.util.Locale$Category {
+	FORMAT;
+	DISPLAY;
+}

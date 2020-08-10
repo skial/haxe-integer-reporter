@@ -1,0 +1,7 @@
+@:realPath("java.lang.Math_RandomNumberGeneratorHolder") @:native("java.lang.Math$RandomNumberGeneratorHolder") @:libType
+extern class java.lang.Math$RandomNumberGeneratorHolder {
+
+	static function <clinit>():Void;
+
+	static var randomNumberGenerator(default,never):java.util.Random;
+}

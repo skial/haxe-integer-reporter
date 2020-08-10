@@ -1,0 +1,21 @@
+@:realPath("java.util.stream.IntStream_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.stream.IntStream") @:javaCanonical("java.util.stream", "IntStream")
+extern class java.util.stream.IntStream {
+
+	static function concat(param1:java.util.stream.IntStream, param2:java.util.stream.IntStream):java.util.stream.IntStream;
+
+	static function rangeClosed(param1:Int, param2:Int):java.util.stream.IntStream;
+
+	static function range(param1:Int, param2:Int):java.util.stream.IntStream;
+
+	static function generate(param1:java.util.function.IntSupplier):java.util.stream.IntStream;
+
+	static function iterate(param1:Int, param2:java.util.function.IntUnaryOperator):java.util.stream.IntStream;
+
+	static function of(param1:java.NativeArray<Int>):java.util.stream.IntStream;
+
+	static function of(param1:Int):java.util.stream.IntStream;
+
+	static function empty():java.util.stream.IntStream;
+
+	static function builder():java.util.stream.IntStream$Builder;
+}

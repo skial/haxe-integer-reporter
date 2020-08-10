@@ -1,0 +1,9 @@
+@:used @:enum
+private extern class js.node.fs._FSWatcher.FSWatcherEvent_Impl_ {
+
+	@:value(cast "change") @:enum @:impl
+	static inline var Change:js.node.fs.FSWatcherEvent<(js.node.fs.FSWatcherChangeType, js.node.FsPath) -> Void> = cast "change";
+
+	@:value(cast "error") @:enum @:impl
+	static inline var Error:js.node.fs.FSWatcherEvent<Error -> Void> = cast "error";
+}

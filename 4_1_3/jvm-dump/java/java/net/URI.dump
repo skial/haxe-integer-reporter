@@ -1,0 +1,108 @@
+@:realPath("java.net.URI") @:used @:libType @:javaNative @:native("java.net.URI") @:javaCanonical("java.net", "URI")
+extern class java.net.URI implements java.io.Serializable implements java.lang.Comparable<java.net.URI> {
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String):Void;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function new(param1:java.lang.String):Void;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:Int, param5:java.lang.String, param6:java.lang.String, param7:java.lang.String):Void;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String, param5:java.lang.String):Void;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function new(param1:java.lang.String, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String):Void;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.net.URI):Int;
+
+	@:overload
+	function toASCIIString():java.lang.String;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getFragment():java.lang.String;
+
+	@:overload
+	function getRawFragment():java.lang.String;
+
+	@:overload
+	function getQuery():java.lang.String;
+
+	@:overload
+	function getRawQuery():java.lang.String;
+
+	@:overload
+	function getPath():java.lang.String;
+
+	@:overload
+	function getRawPath():java.lang.String;
+
+	@:overload
+	function getPort():Int;
+
+	@:overload
+	function getHost():java.lang.String;
+
+	@:overload
+	function getUserInfo():java.lang.String;
+
+	@:overload
+	function getRawUserInfo():java.lang.String;
+
+	@:overload
+	function getAuthority():java.lang.String;
+
+	@:overload
+	function getRawAuthority():java.lang.String;
+
+	@:overload
+	function getSchemeSpecificPart():java.lang.String;
+
+	@:overload
+	function getRawSchemeSpecificPart():java.lang.String;
+
+	@:overload
+	function isOpaque():Bool;
+
+	@:overload
+	function isAbsolute():Bool;
+
+	@:overload
+	function getScheme():java.lang.String;
+
+	@:overload @:throws("java.net.MalformedURLException")
+	function toURL():java.net.URL;
+
+	@:overload
+	function relativize(param1:java.net.URI):java.net.URI;
+
+	@:overload
+	function resolve(param1:java.lang.String):java.net.URI;
+
+	@:overload
+	function resolve(param1:java.net.URI):java.net.URI;
+
+	@:overload
+	function normalize():java.net.URI;
+
+	@:overload @:throws("java.net.URISyntaxException")
+	function parseServerAuthority():java.net.URI;
+
+	@:overload
+	static function create(param1:java.lang.String):java.net.URI;
+}

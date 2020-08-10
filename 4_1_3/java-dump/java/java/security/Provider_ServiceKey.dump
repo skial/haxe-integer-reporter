@@ -1,0 +1,9 @@
+@:realPath("java.security.Provider_ServiceKey") @:nativeGen @:libType @:javaNative @:native("java.security.Provider$ServiceKey") @:javaCanonical("java.security", "Provider.ServiceKey")
+extern class java.security.Provider$ServiceKey {
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+}

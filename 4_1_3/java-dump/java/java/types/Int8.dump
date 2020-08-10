@@ -1,0 +1,2 @@
+@:nativeGen
+typedef java.types.Int8 = java.Int8

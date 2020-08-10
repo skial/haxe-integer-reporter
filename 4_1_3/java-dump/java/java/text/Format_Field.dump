@@ -1,0 +1,6 @@
+@:realPath("java.text.Format_Field") @:used @:nativeGen @:libType @:javaNative @:native("java.text.Format$Field") @:javaCanonical("java.text", "Format.Field")
+extern class java.text.Format$Field extends java.text.AttributedCharacterIterator$Attribute {
+
+	@:overload @:protected
+	function new(param1:String):Void;
+}

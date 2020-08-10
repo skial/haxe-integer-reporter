@@ -1,0 +1,45 @@
+@:directlyUsed @:used @:pythonImport("os")
+extern class python.lib.Os {
+
+	static var environ:dict<str, str>;
+
+	static function putenv(name:str, value:str):Void;
+
+	static function chdir(path:str):Void;
+
+	static function unlink(path:str):Void;
+
+	static function remove(path:str):Void;
+
+	static function getcwd():str;
+
+	static function getcwdb():bytes;
+
+	static function removedirs(path:str):Void;
+
+	static function rename(src:str, dest:str):Void;
+
+	static function renames(oldName:str, newName:str):Void;
+
+	static function rmdir(path:str):Void;
+
+	static function stat(path:str):python.lib.Stat;
+
+	static function fchdir(fd:python.lib.FileDescriptor):Void;
+
+	@:value({ path : "." })
+	static function listdir(path:str):list<str>;
+
+	@:value({ followlinks : false, onerror : null, topdown : true })
+	static function walk(top:str, topdown:Bool, onerror:Null<OSError -> Void>, followlinks:Bool):tuple<str, list<str>, list<str>>;
+
+	static var sep(default,null):str;
+
+	static var pathsep(default,null):str;
+
+	@:value({ exist_ok : false, mode : 511 })
+	static function makedirs(path:str, mode:Int, exist_ok:Bool):Void;
+
+	@:value({ mode : 511 })
+	static function mkdir(path:str, mode:Int):Void;
+}

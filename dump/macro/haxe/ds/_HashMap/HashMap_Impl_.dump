@@ -1,0 +1,233 @@
+private class haxe.ds._HashMap.HashMap_Impl_ {
+
+	@:impl @:noCompletion
+	public static inline function _new[Function:Void -> haxe.ds.HashMap<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Dynamic]
+			[Var this(109551):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+			[Binop:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+				[Local this(109551):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+				=
+				[New:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+			[Return:Dynamic] [Cast:haxe.ds.HashMap<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109551):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+
+	@:impl @:arrayAccess
+	public static inline function set[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>, k : haxe.ds.HashMap.K, v : haxe.ds.HashMap.V) -> Void]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109552):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds.HashMap.K] [Local k(109553):haxe.ds.HashMap.K]
+		[Arg:haxe.ds.HashMap.V] [Local v(109554):haxe.ds.HashMap.V]
+		[Block:Void]
+			[Call:Void]
+				[Field:(key : Int, value : haxe.ds.HashMap.K) -> Void]
+					[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+						[Local this(109552):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+						[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+							keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+					[FInstance:(key : Int, value : haxe.ds.HashMap.K) -> Void]
+						haxe.ds.IntMap<haxe.ds.HashMap.K>
+						set:(key : Int, value : haxe.ds.IntMap.T) -> Void
+				[Call:Int]
+					[Field:Void -> Int]
+						[Local k(109553):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+						[FAnon:Void -> Int] hashCode:Void -> Int
+				[Local k(109553):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+			[Call:Void]
+				[Field:(key : Int, value : haxe.ds.HashMap.V) -> Void]
+					[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+						[Local this(109552):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+						[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+							values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+					[FInstance:(key : Int, value : haxe.ds.HashMap.V) -> Void]
+						haxe.ds.IntMap<haxe.ds.HashMap.V>
+						set:(key : Int, value : haxe.ds.IntMap.T) -> Void
+				[Call:Int]
+					[Field:Void -> Int]
+						[Local k(109553):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+						[FAnon:Void -> Int] hashCode:Void -> Int
+				[Local v(109554):haxe.ds.HashMap.V:haxe.ds.HashMap.V]
+
+	@:impl @:arrayAccess
+	public static inline function get[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>, k : haxe.ds.HashMap.K) -> Null<haxe.ds.HashMap.V>]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109545):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds.HashMap.K] [Local k(109546):haxe.ds.HashMap.K]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Null<haxe.ds.HashMap.V>]
+					[Field:(key : Int) -> Null<haxe.ds.HashMap.V>]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							[Local this(109545):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+						[FInstance:(key : Int) -> Null<haxe.ds.HashMap.V>]
+							haxe.ds.IntMap<haxe.ds.HashMap.V>
+							get:(key : Int) -> Null<haxe.ds.IntMap.T>
+					[Call:Int]
+						[Field:Void -> Int]
+							[Local k(109546):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+							[FAnon:Void -> Int] hashCode:Void -> Int
+
+	@:impl
+	public static inline function exists[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>, k : haxe.ds.HashMap.K) -> Bool]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109555):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds.HashMap.K] [Local k(109556):haxe.ds.HashMap.K]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Bool]
+					[Field:(key : Int) -> Bool]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							[Local this(109555):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+						[FInstance:(key : Int) -> Bool]
+							haxe.ds.IntMap<haxe.ds.HashMap.V>
+							exists:(key : Int) -> Bool
+					[Call:Int]
+						[Field:Void -> Int]
+							[Local k(109556):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+							[FAnon:Void -> Int] hashCode:Void -> Int
+
+	@:impl
+	public static inline function remove[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>, k : haxe.ds.HashMap.K) -> Bool]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109557):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds.HashMap.K] [Local k(109558):haxe.ds.HashMap.K]
+		[Block:Dynamic]
+			[Call:Bool]
+				[Field:(key : Int) -> Bool]
+					[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+						[Local this(109557):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+						[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+							values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+					[FInstance:(key : Int) -> Bool]
+						haxe.ds.IntMap<haxe.ds.HashMap.V>
+						remove:(key : Int) -> Bool
+				[Call:Int]
+					[Field:Void -> Int]
+						[Local k(109558):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+						[FAnon:Void -> Int] hashCode:Void -> Int
+			[Return:Dynamic]
+				[Call:Bool]
+					[Field:(key : Int) -> Bool]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							[Local this(109557):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+						[FInstance:(key : Int) -> Bool]
+							haxe.ds.IntMap<haxe.ds.HashMap.K>
+							remove:(key : Int) -> Bool
+					[Call:Int]
+						[Field:Void -> Int]
+							[Local k(109558):haxe.ds.HashMap.K:haxe.ds.HashMap.K]
+							[FAnon:Void -> Int] hashCode:Void -> Int
+
+	@:impl
+	public static inline function keys[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>) -> Iterator<haxe.ds.HashMap.K>]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109540):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Iterator<haxe.ds.HashMap.K>]
+					[Field:Void -> Iterator<haxe.ds.HashMap.K>]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							[Local this(109540):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+						[FInstance:Void -> Iterator<haxe.ds.HashMap.K>]
+							haxe.ds.IntMap<haxe.ds.HashMap.K>
+							iterator:Void -> Iterator<haxe.ds.IntMap.T>
+
+	@:impl
+	public static function copy[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>) -> haxe.ds.HashMap<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109559):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Dynamic]
+			[Var copied(109560):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [New:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+			[Binop:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+				[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+					[Local copied(109560):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+					[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+						haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+						keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+				=
+				[Call:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+					[Field:Void -> haxe.ds.IntMap<haxe.ds.HashMap.K>]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							[Local this(109559):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+						[FInstance:Void -> haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							haxe.ds.IntMap<haxe.ds.HashMap.K>
+							copy:Void -> haxe.ds.IntMap<haxe.ds.IntMap.T>
+			[Binop:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+				[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+					[Local copied(109560):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+					[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+						haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+						values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+				=
+				[Call:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+					[Field:Void -> haxe.ds.IntMap<haxe.ds.HashMap.V>]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							[Local this(109559):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+						[FInstance:Void -> haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							haxe.ds.IntMap<haxe.ds.HashMap.V>
+							copy:Void -> haxe.ds.IntMap<haxe.ds.IntMap.T>
+			[Return:Dynamic] [Cast:haxe.ds.HashMap<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local copied(109560):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+
+	@:impl
+	public static inline function iterator[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>) -> Iterator<haxe.ds.HashMap.V>]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109561):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Iterator<haxe.ds.HashMap.V>]
+					[Field:Void -> Iterator<haxe.ds.HashMap.V>]
+						[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							[Local this(109561):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+							[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+								haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+								values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+						[FInstance:Void -> Iterator<haxe.ds.HashMap.V>]
+							haxe.ds.IntMap<haxe.ds.HashMap.V>
+							iterator:Void -> Iterator<haxe.ds.IntMap.T>
+
+	@:impl
+	public static inline function keyValueIterator[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>) -> haxe.iterators.HashMapKeyValueIterator<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109562):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[New:haxe.iterators.HashMapKeyValueIterator<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+					haxe.iterators.HashMapKeyValueIterator<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+					[Cast:haxe.ds.HashMap<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109562):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+
+	@:impl
+	public static inline function clear[Function:(this : haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>) -> Void]
+		[Arg:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>] [Local this(109563):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+		[Block:Void]
+			[Call:Void]
+				[Field:Void -> Void]
+					[Field:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+						[Local this(109563):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+						[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.K>]
+							haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+							keys:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.K>
+					[FInstance:Void -> Void]
+						haxe.ds.IntMap<haxe.ds.HashMap.K>
+						clear:Void -> Void
+			[Call:Void]
+				[Field:Void -> Void]
+					[Field:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+						[Local this(109563):haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>:haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>]
+						[FInstance:haxe.ds.IntMap<haxe.ds.HashMap.V>]
+							haxe.ds._HashMap.HashMapData<haxe.ds.HashMap.K, haxe.ds.HashMap.V>
+							values:haxe.ds.IntMap<haxe.ds._HashMap.HashMapData.V>
+					[FInstance:Void -> Void]
+						haxe.ds.IntMap<haxe.ds.HashMap.V>
+						clear:Void -> Void
+}

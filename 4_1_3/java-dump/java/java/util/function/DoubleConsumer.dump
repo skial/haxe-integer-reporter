@@ -1,0 +1,9 @@
+@:realPath("java.util.function.DoubleConsumer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.DoubleConsumer") @:javaCanonical("java.util.function", "DoubleConsumer")
+extern interface java.util.function.DoubleConsumer {
+
+	@:overload
+	function andThen(param1:java.util.function.DoubleConsumer):java.util.function.DoubleConsumer;
+
+	@:overload
+	function accept(param1:Float):Void;
+}

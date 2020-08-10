@@ -1,0 +1,3 @@
+@:realPath("java.net.URI_Parser") @:nativeGen @:libType @:javaNative @:native("java.net.URI$Parser") @:javaCanonical("java.net", "URI.Parser")
+extern class java.net.URI$Parser {
+}

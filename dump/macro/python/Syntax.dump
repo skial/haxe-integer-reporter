@@ -1,0 +1,1294 @@
+@:noPackageRestrict @:noClosure
+class python.Syntax {
+
+	@:has_untyped @:noUsing
+	public static macro function importModule[Function:(module : String) -> haxe.macro.Expr]
+		[Arg:String] [Local module(59244):String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<76>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 1394
+													[Const:Int] 1400
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<77>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 1394
+											[Const:Int] 1407
+									[Const:String] "code"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<78>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 1394
+									[Const:Int] 1412
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Call:haxe.macro.Expr]
+									[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+										[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+										[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+											haxe.macro.Context
+											makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+									[Binop:String]
+										[Const:String] "import "
+										+
+										[Local module(59244):String:String]
+									[Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<79>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 1415
+										[Const:Int] 1435
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<80>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 1394
+							[Const:Int] 1436
+
+	@:has_untyped @:noUsing
+	public static macro function importAs[Function:(module : String, className : String) -> haxe.macro.Expr]
+		[Arg:String] [Local module(59245):String]
+		[Arg:String] [Local className(59246):String]
+		[Block:Dynamic]
+			[Var n(59247):String]
+				[Call:String]
+					[Field:(sep : String) -> String]
+						[Call:Array<String>]
+							[Field:(delimiter : String) -> Array<String>]
+								[Local className(59246):String:String]
+								[FInstance:(delimiter : String) -> Array<String>]
+									String
+									split:(delimiter : String) -> Array<String>
+							[Const:String] "."
+						[FInstance:(sep : String) -> String]
+							Array<String>
+							join:(sep : String) -> String
+					[Const:String] "_"
+			[Var e(59248):String]
+				[Binop:String]
+					[Binop:String]
+						[Binop:String]
+							[Const:String] "import "
+							+
+							[Local module(59245):String:String]
+						+
+						[Const:String] " as "
+					+
+					[Local n(59247):String:String]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<81>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 1649
+													[Const:Int] 1655
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<82>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 1649
+											[Const:Int] 1662
+									[Const:String] "code"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<83>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 1649
+									[Const:Int] 1667
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Call:haxe.macro.Expr]
+									[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+										[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+										[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+											haxe.macro.Context
+											makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+									[Local e(59248):String:String]
+									[Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<84>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 1670
+										[Const:Int] 1673
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<85>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 1649
+							[Const:Int] 1674
+
+	@:has_untyped @:noUsing @:deprecated("python.Syntax.newInstance() is deprecated. Use python.Syntax.construct() instead.")
+	public static macro function newInstance[Function:(c : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local c(59249):haxe.macro.Expr]
+		[Arg:Array<haxe.macro.Expr>] [Local params(59250):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<86>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 1888
+													[Const:Int] 1894
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<87>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 1888
+											[Const:Int] 1901
+									[Const:String] "_newInstance"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<88>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 1888
+									[Const:Int] 1914
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Local c(59249):haxe.macro.Expr:haxe.macro.Expr]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EArrayDecl
+										[Local params(59250):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<89>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 1921
+										[Const:Int] 1929
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<90>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 1888
+							[Const:Int] 1930
+
+	@:noUsing @:deprecated("python.Syntax.pythonCode() is deprecated. Use python.Syntax.code() instead.")
+	public static macro function pythonCode[Function:(b : haxe.macro.Expr, rest : Array<haxe.macro.Expr>) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local b(59251):haxe.macro.Expr]
+		[Arg:Array<haxe.macro.Expr>] [Local rest(59252):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Local rest(59252):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+					==
+					[Const:Array<haxe.macro.Expr>] null
+				[Then:Array<haxe.macro.Expr>] [Block:Array<haxe.macro.Expr>]
+					[Binop:Array<haxe.macro.Expr>]
+						[Local rest(59252):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+						=
+						[ArrayDecl:Array<haxe.macro.Expr>]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									EUntyped
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											ECall
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EField
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	EConst
+															[Call:haxe.macro.Constant]
+																[Field:(s : String) -> haxe.macro.Constant]
+																	[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																	[FEnum:(s : String) -> haxe.macro.Constant]
+																		haxe.macro.Constant
+																		CIdent
+																[Const:String] "python"
+														pos: [Call:haxe.macro.Position]
+															[Field:Void -> haxe.macro.Position]
+																[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																[FStatic:Void -> haxe.macro.Position]
+																	haxe.macro.Context
+																	currentPos:Void -> haxe.macro.Position
+													[Const:String] "Syntax"
+												pos: [Call:haxe.macro.Position]
+													[Field:Void -> haxe.macro.Position]
+														[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+														[FStatic:Void -> haxe.macro.Position]
+															haxe.macro.Context
+															currentPos:Void -> haxe.macro.Position
+											[Const:String] "_pythonCode"
+										pos: [Call:haxe.macro.Position]
+											[Field:Void -> haxe.macro.Position]
+												[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+												[FStatic:Void -> haxe.macro.Position]
+													haxe.macro.Context
+													currentPos:Void -> haxe.macro.Position
+									[ArrayDecl:Array<haxe.macro.Expr>]
+										[Local b(59251):haxe.macro.Expr:haxe.macro.Expr]
+										[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+											expr: [Call:haxe.macro.ExprDef]
+												[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+													[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+													[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+														haxe.macro.ExprDef
+														EArrayDecl
+												[Local rest(59252):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+											pos: [Call:haxe.macro.Position]
+												[Field:Void -> haxe.macro.Position]
+													[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+													[FStatic:Void -> haxe.macro.Position]
+														haxe.macro.Context
+														currentPos:Void -> haxe.macro.Position
+								pos: [Call:haxe.macro.Position]
+									[Field:Void -> haxe.macro.Position]
+										[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+										[FStatic:Void -> haxe.macro.Position]
+											haxe.macro.Context
+											currentPos:Void -> haxe.macro.Position
+						pos: [Call:haxe.macro.Position]
+							[Field:Void -> haxe.macro.Position]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:Void -> haxe.macro.Position]
+									haxe.macro.Context
+									currentPos:Void -> haxe.macro.Position
+
+	@:has_untyped @:noUsing
+	public static macro function arrayAccess[Function:(x : haxe.macro.Expr, rest : Array<haxe.macro.Expr>) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local x(59253):haxe.macro.Expr]
+		[Arg:Array<haxe.macro.Expr>] [Local rest(59254):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<91>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 2379
+													[Const:Int] 2385
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<92>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 2379
+											[Const:Int] 2392
+									[Const:String] "_arrayAccess"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<93>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 2379
+									[Const:Int] 2405
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Local x(59253):haxe.macro.Expr:haxe.macro.Expr]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EArrayDecl
+										[Local rest(59254):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<94>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 2412
+										[Const:Int] 2418
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<95>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 2379
+							[Const:Int] 2419
+
+	@:has_untyped @:noUsing
+	public static macro function arrayAccessWithTrailingColon[Function:(x : haxe.macro.Expr, rest : Array<haxe.macro.Expr>) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local x(59255):haxe.macro.Expr]
+		[Arg:Array<haxe.macro.Expr>] [Local rest(59256):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<96>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 2559
+													[Const:Int] 2565
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<97>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 2559
+											[Const:Int] 2572
+									[Const:String] "_arrayAccess"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<98>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 2559
+									[Const:Int] 2585
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Local x(59255):haxe.macro.Expr:haxe.macro.Expr]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EArrayDecl
+										[Local rest(59256):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<99>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 2592
+										[Const:Int] 2598
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EConst
+										[Call:haxe.macro.Constant]
+											[Field:(s : String) -> haxe.macro.Constant]
+												[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+												[FEnum:(s : String) -> haxe.macro.Constant]
+													haxe.macro.Constant
+													CIdent
+											[Const:String] "true"
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<100>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 2600
+										[Const:Int] 2604
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<101>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 2559
+							[Const:Int] 2605
+
+	@:has_untyped @:noUsing
+	public static macro function foreach<T : foreach.T>[Function:(v : haxe.macro.Expr, it : haxe.macro.Expr, b : haxe.macro.Expr) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local v(59257):haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local it(59258):haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local b(59259):haxe.macro.Expr]
+		[Block:Dynamic]
+			[Var id(59268):String]
+				[Meta:String]
+					:ast(switch (v.expr) {
+	case EConst(CIdent(x)):
+		x;	
+	case _:
+		Context.error("unexpected " + ExprTools.toString(v) + ": const ident expected", v.pos);	
+})
+					[Block:String]
+						[Var `(59264):haxe.macro.ExprDef]
+							[Field:haxe.macro.ExprDef]
+								[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+								[FAnon:haxe.macro.ExprDef] expr:haxe.macro.ExprDef
+						[If:String]
+							[Binop:Bool]
+								[EnumIndex:Int] [Local `(59264):haxe.macro.ExprDef:haxe.macro.ExprDef]
+								==
+								[Const:Int] 0
+							[Then:String] [Block:String]
+								[Var `1(59265):haxe.macro.Constant]
+									[EnumParameter:haxe.macro.Constant]
+										[Local `(59264):haxe.macro.ExprDef:haxe.macro.ExprDef]
+										EConst
+										0
+								[If:String]
+									[Binop:Bool]
+										[EnumIndex:Int] [Local `1(59265):haxe.macro.Constant:haxe.macro.Constant]
+										==
+										[Const:Int] 3
+									[Then:String] [Block:String]
+										[Var `2(59266):String]
+											[EnumParameter:String]
+												[Local `1(59265):haxe.macro.Constant:haxe.macro.Constant]
+												CIdent
+												0
+										[Block:String]
+											[Var x(59267):String] [Local `2(59266):String:String]
+											[Block:String] [Local x(59267):String:String]
+									[Else:Dynamic] [Block:Dynamic]
+										[Call:Dynamic]
+											[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+												[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+												[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+													haxe.macro.Context
+													error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+											[Binop:String]
+												[Binop:String]
+													[Const:String] "unexpected "
+													+
+													[Call:String]
+														[Field:(e : haxe.macro.Expr) -> String]
+															[TypeExpr haxe.macro.ExprTools:Class<haxe.macro.ExprTools>]
+															[FStatic:(e : haxe.macro.Expr) -> String]
+																haxe.macro.ExprTools
+																toString:(e : haxe.macro.Expr) -> String
+														[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+												+
+												[Const:String] ": const ident expected"
+											[Field:haxe.macro.Position]
+												[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+												[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+							[Else:Dynamic] [Block:Dynamic]
+								[Call:Dynamic]
+									[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+										[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+										[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+											haxe.macro.Context
+											error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+									[Binop:String]
+										[Binop:String]
+											[Const:String] "unexpected "
+											+
+											[Call:String]
+												[Field:(e : haxe.macro.Expr) -> String]
+													[TypeExpr haxe.macro.ExprTools:Class<haxe.macro.ExprTools>]
+													[FStatic:(e : haxe.macro.Expr) -> String]
+														haxe.macro.ExprTools
+														toString:(e : haxe.macro.Expr) -> String
+												[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+										+
+										[Const:String] ": const ident expected"
+									[Field:haxe.macro.Position]
+										[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+										[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+			[Var iter(59271):haxe.macro.Expr]
+				[Try:haxe.macro.Expr]
+					[Block:haxe.macro.Expr]
+						[Var it(59269):haxe.macro.Expr]
+							[Cast:haxe.macro.Expr]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EParenthesis
+										[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+											expr: [Call:haxe.macro.ExprDef]
+												[Field:(e : haxe.macro.Expr, t : haxe.macro.ComplexType) -> haxe.macro.ExprDef]
+													[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+													[FEnum:(e : haxe.macro.Expr, t : haxe.macro.ComplexType) -> haxe.macro.ExprDef]
+														haxe.macro.ExprDef
+														ECheckType
+												[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+													expr: [Call:haxe.macro.ExprDef]
+														[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+															[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+															[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+																haxe.macro.ExprDef
+																ECall
+														[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+															expr: [Call:haxe.macro.ExprDef]
+																[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																	[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																	[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																		haxe.macro.ExprDef
+																		EField
+																[Local it(59258):haxe.macro.Expr:haxe.macro.Expr]
+																[Const:String] "__iter__"
+															pos: [Call:haxe.macro.Position]
+																[Ident:(String, Int, Int) -> Unknown<105>] $__mk_pos__
+																[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+																[Const:Int] 2906
+																[Const:Int] 2918
+														[ArrayDecl:Array<haxe.macro.Expr>]
+													pos: [Call:haxe.macro.Position]
+														[Ident:(String, Int, Int) -> Unknown<106>] $__mk_pos__
+														[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+														[Const:Int] 2906
+														[Const:Int] 2920
+												[Call:haxe.macro.ComplexType]
+													[Field:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+														[TypeExpr haxe.macro.ComplexType:Enum<haxe.macro.ComplexType>]
+														[FEnum:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+															haxe.macro.ComplexType
+															TPath
+													[ObjectDecl:{ sub : String, params : Array<haxe.macro.TypeParam>, pack : Array<String>, name : String }]
+														pack: [ArrayDecl:Array<String>] [Const:String] "python"
+														name: [Const:String] "NativeIterator"
+														params: [ArrayDecl:Array<haxe.macro.TypeParam>]
+															[Call:haxe.macro.TypeParam]
+																[Field:(t : haxe.macro.ComplexType) -> haxe.macro.TypeParam]
+																	[TypeExpr haxe.macro.TypeParam:Enum<haxe.macro.TypeParam>]
+																	[FEnum:(t : haxe.macro.ComplexType) -> haxe.macro.TypeParam]
+																		haxe.macro.TypeParam
+																		TPType
+																[Call:haxe.macro.ComplexType]
+																	[Field:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																		[TypeExpr haxe.macro.ComplexType:Enum<haxe.macro.ComplexType>]
+																		[FEnum:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																			haxe.macro.ComplexType
+																			TPath
+																	[ObjectDecl:{ params : Array<haxe.macro.TypeParam>, pack : Array<String>, name : String }]
+																		pack: [ArrayDecl:Array<String>]
+																		name: [Const:String] "T"
+																		params: [ArrayDecl:Array<haxe.macro.TypeParam>]
+														sub: [Const:String] "NativeIteratorRaw"
+											pos: [Call:haxe.macro.Position]
+												[Ident:(String, Int, Int) -> Unknown<107>] $__mk_pos__
+												[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+												[Const:Int] 2905
+												[Const:Int] 2966
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<108>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 2905
+										[Const:Int] 2966
+						[Call:haxe.macro.Type]
+							[Field:(e : haxe.macro.Expr) -> haxe.macro.Type]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:(e : haxe.macro.Expr) -> haxe.macro.Type]
+									haxe.macro.Context
+									typeof:(e : haxe.macro.Expr) -> haxe.macro.Type
+							[Local it(59269):haxe.macro.Expr:haxe.macro.Expr]
+						[Local it(59269):haxe.macro.Expr:haxe.macro.Expr]
+					Catch [Local `24(59284):Dynamic]
+						[Block:haxe.macro.Expr]
+							[Block:Void]
+							[Block:Void]
+							[If:haxe.macro.Expr]
+								[Const:Bool] true
+								[Then:haxe.macro.Expr] [Block:haxe.macro.Expr]
+									[Block:Void]
+									[Block:haxe.macro.Expr]
+										[Cast:haxe.macro.Expr]
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EParenthesis
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(e : haxe.macro.Expr, t : haxe.macro.ComplexType) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(e : haxe.macro.Expr, t : haxe.macro.ComplexType) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	ECheckType
+															[Local it(59258):haxe.macro.Expr:haxe.macro.Expr]
+															[Call:haxe.macro.ComplexType]
+																[Field:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																	[TypeExpr haxe.macro.ComplexType:Enum<haxe.macro.ComplexType>]
+																	[FEnum:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																		haxe.macro.ComplexType
+																		TPath
+																[ObjectDecl:{ sub : String, params : Array<haxe.macro.TypeParam>, pack : Array<String>, name : String }]
+																	pack: [ArrayDecl:Array<String>] [Const:String] "python"
+																	name: [Const:String] "NativeIterable"
+																	params: [ArrayDecl:Array<haxe.macro.TypeParam>]
+																		[Call:haxe.macro.TypeParam]
+																			[Field:(t : haxe.macro.ComplexType) -> haxe.macro.TypeParam]
+																				[TypeExpr haxe.macro.TypeParam:Enum<haxe.macro.TypeParam>]
+																				[FEnum:(t : haxe.macro.ComplexType) -> haxe.macro.TypeParam]
+																					haxe.macro.TypeParam
+																					TPType
+																			[Call:haxe.macro.ComplexType]
+																				[Field:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																					[TypeExpr haxe.macro.ComplexType:Enum<haxe.macro.ComplexType>]
+																					[FEnum:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+																						haxe.macro.ComplexType
+																						TPath
+																				[ObjectDecl:{ params : Array<haxe.macro.TypeParam>, pack : Array<String>, name : String }]
+																					pack: [ArrayDecl:Array<String>]
+																					name: [Const:String] "T"
+																					params: [ArrayDecl:Array<haxe.macro.TypeParam>]
+																	sub: [Const:String] "NativeIterableRaw"
+														pos: [Call:haxe.macro.Position]
+															[Ident:(String, Int, Int) -> Unknown<103>] $__mk_pos__
+															[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+															[Const:Int] 3034
+															[Const:Int] 3084
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<104>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 3034
+													[Const:Int] 3084
+								[Else:Unknown<102>] [Throw:Unknown<102>] [Local `24(59284):Dynamic:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(exprs : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(exprs : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									EBlock
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(vars : Array<haxe.macro.Var>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(vars : Array<haxe.macro.Var>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EVars
+										[ArrayDecl:Array<haxe.macro.Var>]
+											[ObjectDecl:{ type : Null<haxe.macro.ComplexType>, name : String, isFinal : Null<Bool>, expr : { pos : haxe.macro.Position, expr : haxe.macro.ExprDef } }]
+												name: [Local id(59268):String:String]
+												type: [Const:Null<haxe.macro.ComplexType>] null
+												expr: [ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+													expr: [Call:haxe.macro.ExprDef]
+														[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+															[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																haxe.macro.ExprDef
+																EConst
+														[Call:haxe.macro.Constant]
+															[Field:(s : String) -> haxe.macro.Constant]
+																[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																[FEnum:(s : String) -> haxe.macro.Constant]
+																	haxe.macro.Constant
+																	CIdent
+															[Const:String] "null"
+													pos: [Call:haxe.macro.Position]
+														[Ident:(String, Int, Int) -> Unknown<109>] $__mk_pos__
+														[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+														[Const:Int] 3125
+														[Const:Int] 3129
+												isFinal: [Cast:Null<Bool>] [Const:Bool] false
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<110>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 3115
+										[Const:Int] 3130
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												ECall
+										[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+											expr: [Call:haxe.macro.ExprDef]
+												[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+													[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+														haxe.macro.ExprDef
+														EField
+												[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+													expr: [Call:haxe.macro.ExprDef]
+														[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+															[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+															[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																haxe.macro.ExprDef
+																EField
+														[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+															expr: [Call:haxe.macro.ExprDef]
+																[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																	[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																	[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																		haxe.macro.ExprDef
+																		EConst
+																[Call:haxe.macro.Constant]
+																	[Field:(s : String) -> haxe.macro.Constant]
+																		[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																		[FEnum:(s : String) -> haxe.macro.Constant]
+																			haxe.macro.Constant
+																			CIdent
+																	[Const:String] "python"
+															pos: [Call:haxe.macro.Position]
+																[Ident:(String, Int, Int) -> Unknown<111>] $__mk_pos__
+																[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+																[Const:Int] 3135
+																[Const:Int] 3141
+														[Const:String] "Syntax"
+													pos: [Call:haxe.macro.Position]
+														[Ident:(String, Int, Int) -> Unknown<112>] $__mk_pos__
+														[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+														[Const:Int] 3135
+														[Const:Int] 3148
+												[Const:String] "_foreach"
+											pos: [Call:haxe.macro.Position]
+												[Ident:(String, Int, Int) -> Unknown<113>] $__mk_pos__
+												[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+												[Const:Int] 3135
+												[Const:Int] 3157
+										[ArrayDecl:Array<haxe.macro.Expr>]
+											[Local v(59257):haxe.macro.Expr:haxe.macro.Expr]
+											[Local it(59258):haxe.macro.Expr:haxe.macro.Expr]
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(e : haxe.macro.Expr, t : Null<haxe.macro.ComplexType>) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(e : haxe.macro.Expr, t : Null<haxe.macro.ComplexType>) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															ECast
+													[Local b(59259):haxe.macro.Expr:haxe.macro.Expr]
+													[Const:Null<haxe.macro.ComplexType>] null
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<114>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 3167
+													[Const:Int] 3174
+									pos: [Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<115>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 3135
+										[Const:Int] 3175
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<116>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 3109
+							[Const:Int] 3181
+
+	@:has_untyped @:noUsing
+	public static macro function importFromAs[Function:(from : String, module : String, className : String) -> haxe.macro.Expr]
+		[Arg:String] [Local from(59272):String]
+		[Arg:String] [Local module(59273):String]
+		[Arg:String] [Local className(59274):String]
+		[Block:Dynamic]
+			[Var n(59275):String]
+				[Call:String]
+					[Field:(sep : String) -> String]
+						[Call:Array<String>]
+							[Field:(delimiter : String) -> Array<String>]
+								[Local className(59274):String:String]
+								[FInstance:(delimiter : String) -> Array<String>]
+									String
+									split:(delimiter : String) -> Array<String>
+							[Const:String] "."
+						[FInstance:(sep : String) -> String]
+							Array<String>
+							join:(sep : String) -> String
+					[Const:String] "_"
+			[Var e(59276):String]
+				[Binop:String]
+					[Binop:String]
+						[Binop:String]
+							[Binop:String]
+								[Binop:String]
+									[Const:String] "from "
+									+
+									[Local from(59272):String:String]
+								+
+								[Const:String] " import "
+							+
+							[Local module(59273):String:String]
+						+
+						[Const:String] " as "
+					+
+					[Local n(59275):String:String]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<117>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 3430
+													[Const:Int] 3436
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<118>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 3430
+											[Const:Int] 3443
+									[Const:String] "code"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<119>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 3430
+									[Const:Int] 3448
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Call:haxe.macro.Expr]
+									[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+										[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+										[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+											haxe.macro.Context
+											makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+									[Local e(59276):String:String]
+									[Call:haxe.macro.Position]
+										[Ident:(String, Int, Int) -> Unknown<120>] $__mk_pos__
+										[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+										[Const:Int] 3451
+										[Const:Int] 3454
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<121>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 3430
+							[Const:Int] 3455
+
+	@:noUsing
+	public static macro function callField[Function:(o : haxe.macro.Expr, field : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local o(59277):haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local field(59278):haxe.macro.Expr]
+		[Arg:Array<haxe.macro.Expr>] [Local params(59279):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Field:haxe.macro.Position]
+													[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+													[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+											[Const:String] "Syntax"
+										pos: [Field:haxe.macro.Position]
+											[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+											[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+									[Const:String] "call"
+								pos: [Field:haxe.macro.Position]
+									[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+									[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												ECall
+										[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+											expr: [Call:haxe.macro.ExprDef]
+												[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+													[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+														haxe.macro.ExprDef
+														EField
+												[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+													expr: [Call:haxe.macro.ExprDef]
+														[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+															[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+															[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																haxe.macro.ExprDef
+																EField
+														[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+															expr: [Call:haxe.macro.ExprDef]
+																[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																	[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																	[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																		haxe.macro.ExprDef
+																		EConst
+																[Call:haxe.macro.Constant]
+																	[Field:(s : String) -> haxe.macro.Constant]
+																		[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																		[FEnum:(s : String) -> haxe.macro.Constant]
+																			haxe.macro.Constant
+																			CIdent
+																	[Const:String] "python"
+															pos: [Field:haxe.macro.Position]
+																[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+																[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+														[Const:String] "Syntax"
+													pos: [Field:haxe.macro.Position]
+														[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+														[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+												[Const:String] "field"
+											pos: [Field:haxe.macro.Position]
+												[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+												[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+										[ArrayDecl:Array<haxe.macro.Expr>]
+											[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+											[Local field(59278):haxe.macro.Expr:haxe.macro.Expr]
+									pos: [Field:haxe.macro.Position]
+										[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+										[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+								[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+									expr: [Call:haxe.macro.ExprDef]
+										[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+											[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+											[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+												haxe.macro.ExprDef
+												EArrayDecl
+										[Local params(59279):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+									pos: [Field:haxe.macro.Position]
+										[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+										[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+						pos: [Field:haxe.macro.Position]
+							[Local o(59277):haxe.macro.Expr:haxe.macro.Expr]
+							[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+
+	@:has_untyped @:noUsing
+	public static macro function tuple[Function:(args : Array<haxe.macro.Expr>) -> Dynamic]
+		[Arg:Array<haxe.macro.Expr>] [Local args(59280):Array<haxe.macro.Expr>]
+		[Block:Dynamic]
+			[Var args(59281):haxe.macro.Expr]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(values : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									EArrayDecl
+							[Local args(59280):Array<haxe.macro.Expr>:Array<haxe.macro.Expr>]
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<122>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 3772
+							[Const:Int] 3778
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<123>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+													[Const:Int] 3796
+													[Const:Int] 3802
+											[Const:String] "Syntax"
+										pos: [Call:haxe.macro.Position]
+											[Ident:(String, Int, Int) -> Unknown<124>] $__mk_pos__
+											[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+											[Const:Int] 3796
+											[Const:Int] 3809
+									[Const:String] "_tuple"
+								pos: [Call:haxe.macro.Position]
+									[Ident:(String, Int, Int) -> Unknown<125>] $__mk_pos__
+									[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+									[Const:Int] 3796
+									[Const:Int] 3816
+							[ArrayDecl:Array<haxe.macro.Expr>] [Local args(59281):haxe.macro.Expr:haxe.macro.Expr]
+						pos: [Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<126>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/python/Syntax.macro.hx"
+							[Const:Int] 3796
+							[Const:Int] 3823
+
+	public static macro function callNamedUntyped[Function:(e : haxe.macro.Expr, args : haxe.macro.Expr) -> haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local e(59282):haxe.macro.Expr]
+		[Arg:haxe.macro.Expr] [Local args(59283):haxe.macro.Expr]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+						expr: [Call:haxe.macro.ExprDef]
+							[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+								[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+								[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+									haxe.macro.ExprDef
+									ECall
+							[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+								expr: [Call:haxe.macro.ExprDef]
+									[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+										[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+										[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+											haxe.macro.ExprDef
+											EField
+									[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EConst
+													[Call:haxe.macro.Constant]
+														[Field:(s : String) -> haxe.macro.Constant]
+															[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+															[FEnum:(s : String) -> haxe.macro.Constant]
+																haxe.macro.Constant
+																CIdent
+														[Const:String] "python"
+												pos: [Field:haxe.macro.Position]
+													[Local e(59282):haxe.macro.Expr:haxe.macro.Expr]
+													[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+											[Const:String] "Syntax"
+										pos: [Field:haxe.macro.Position]
+											[Local e(59282):haxe.macro.Expr:haxe.macro.Expr]
+											[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+									[Const:String] "_callNamedUntyped"
+								pos: [Field:haxe.macro.Position]
+									[Local e(59282):haxe.macro.Expr:haxe.macro.Expr]
+									[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+							[ArrayDecl:Array<haxe.macro.Expr>]
+								[Local e(59282):haxe.macro.Expr:haxe.macro.Expr]
+								[Local args(59283):haxe.macro.Expr:haxe.macro.Expr]
+						pos: [Field:haxe.macro.Position]
+							[Local e(59282):haxe.macro.Expr:haxe.macro.Expr]
+							[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+}

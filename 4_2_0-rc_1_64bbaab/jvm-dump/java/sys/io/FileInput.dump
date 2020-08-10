@@ -1,0 +1,49 @@
+@:keep @:directlyUsed @:used
+class sys.io.FileInput extends haxe.io.Input {
+
+	function new(f:java.io.RandomAccessFile) {
+		this.f = f;
+		this._eof = false;
+	}
+
+	var f:java.io.RandomAccessFile;
+
+	var _eof:Bool;
+
+	public function close() {
+		try {
+			this.f.close();
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+
+	public function readByte() {
+		try {
+			return this.f.readUnsignedByte();
+		} catch (e:java.io.EOFException) {
+			this._eof = true;
+			throw cast haxe.Exception.thrown(new haxe.io.Eof());
+		},  catch (e:java.io.IOException) {
+			throw cast haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+	}
+
+	public function readBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		var ret = 0;
+		try {
+			ret = this.f.read(s.b, pos, len);
+		} catch (e:java.io.EOFException) {
+			this._eof = true;
+			throw cast haxe.Exception.thrown(new haxe.io.Eof());
+		},  catch (e:java.io.IOException) {
+			throw cast haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+		if ((ret == -1)) {
+			this._eof = true;
+			throw cast haxe.Exception.thrown(new haxe.io.Eof());
+		};
+		return ret;
+	}
+}

@@ -1,0 +1,3 @@
+@:realPath("python.IndentationError") @:native("IndentationError")
+extern class IndentationError extends SyntaxError {
+}

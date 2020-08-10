@@ -1,0 +1,13 @@
+@:realPath("java.nio.ByteOrder") @:libType @:javaNative @:native("java.nio.ByteOrder") @:javaCanonical("java.nio", "ByteOrder")
+extern class java.nio.ByteOrder {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	static function nativeOrder():java.nio.ByteOrder;
+
+	static var BIG_ENDIAN(default,never):java.nio.ByteOrder;
+
+	static var LITTLE_ENDIAN(default,never):java.nio.ByteOrder;
+}

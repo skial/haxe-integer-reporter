@@ -1,0 +1,6 @@
+@:realPath("java.sun.util.locale.provider.LocaleServiceProviderPool_LocalizedObjectGetter") @:used @:nativeGen @:noCompletion @:abstract @:libType @:javaNative @:native("sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter") @:javaCanonical("sun.util.locale.provider", "LocaleServiceProviderPool.LocalizedObjectGetter")
+extern interface sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter<P : java.sun.util.locale.provider.LocaleServiceProviderPool_LocalizedObjectGetter.P,S : java.sun.util.locale.provider.LocaleServiceProviderPool_LocalizedObjectGetter.S> {
+
+	@:overload
+	function getObject(param1:java.sun.util.locale.provider.LocaleServiceProviderPool_LocalizedObjectGetter.P, param2:java.util.Locale, param3:String, param4:java.NativeArray<Dynamic>):java.sun.util.locale.provider.LocaleServiceProviderPool_LocalizedObjectGetter.S;
+}

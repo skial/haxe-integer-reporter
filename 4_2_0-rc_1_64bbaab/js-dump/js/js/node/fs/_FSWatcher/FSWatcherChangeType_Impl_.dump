@@ -1,0 +1,9 @@
+@:used @:enum
+private extern class js.node.fs._FSWatcher.FSWatcherChangeType_Impl_ {
+
+	@:value(cast "change") @:impl @:enum
+	static inline var Change:js.node.fs.FSWatcherChangeType = cast "change";
+
+	@:value(cast "rename") @:impl @:enum
+	static inline var Rename:js.node.fs.FSWatcherChangeType = cast "rename";
+}

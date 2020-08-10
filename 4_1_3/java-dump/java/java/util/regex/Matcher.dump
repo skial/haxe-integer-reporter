@@ -1,0 +1,105 @@
+@:realPath("java.util.regex.Matcher") @:used @:nativeGen @:libType @:javaNative @:native("java.util.regex.Matcher") @:javaCanonical("java.util.regex", "Matcher")
+extern class java.util.regex.Matcher implements java.util.regex.MatchResult {
+
+	@:overload
+	function requireEnd():Bool;
+
+	@:overload
+	function hitEnd():Bool;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function useAnchoringBounds(param1:Bool):java.util.regex.Matcher;
+
+	@:overload
+	function hasAnchoringBounds():Bool;
+
+	@:overload
+	function useTransparentBounds(param1:Bool):java.util.regex.Matcher;
+
+	@:overload
+	function hasTransparentBounds():Bool;
+
+	@:overload
+	function regionEnd():Int;
+
+	@:overload
+	function regionStart():Int;
+
+	@:overload
+	function region(param1:Int, param2:Int):java.util.regex.Matcher;
+
+	@:overload
+	function replaceFirst(param1:String):String;
+
+	@:overload
+	function replaceAll(param1:String):String;
+
+	@:overload
+	function appendTail(param1:java.lang.StringBuffer):java.lang.StringBuffer;
+
+	@:overload
+	function appendReplacement(param1:java.lang.StringBuffer, param2:String):java.util.regex.Matcher;
+
+	@:overload
+	function lookingAt():Bool;
+
+	@:overload
+	function find(param1:Int):Bool;
+
+	@:overload
+	function find():Bool;
+
+	@:overload
+	function matches():Bool;
+
+	@:overload
+	function groupCount():Int;
+
+	@:overload
+	function group(param1:String):String;
+
+	@:overload
+	function group():String;
+
+	@:overload
+	function group(param1:Int):String;
+
+	@:overload
+	function end(param1:String):Int;
+
+	@:overload
+	function end():Int;
+
+	@:overload
+	function end(param1:Int):Int;
+
+	@:overload
+	function start(param1:String):Int;
+
+	@:overload
+	function start():Int;
+
+	@:overload
+	function start(param1:Int):Int;
+
+	@:overload
+	function reset(param1:java.lang.CharSequence):java.util.regex.Matcher;
+
+	@:overload
+	function reset():java.util.regex.Matcher;
+
+	@:overload
+	function usePattern(param1:java.util.regex.Pattern):java.util.regex.Matcher;
+
+	@:overload
+	function toMatchResult():java.util.regex.MatchResult;
+
+	@:overload
+	function pattern():java.util.regex.Pattern;
+
+	@:overload
+	static function quoteReplacement(param1:String):String;
+}

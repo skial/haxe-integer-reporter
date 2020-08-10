@@ -1,0 +1,6 @@
+@:realPath("java.util.function.LongUnaryOperator_Statics") @:libType @:javaNative @:native("java.util.function.LongUnaryOperator") @:javaCanonical("java.util.function", "LongUnaryOperator")
+extern class java.util.function.LongUnaryOperator {
+
+	@:overload
+	static function identity():java.util.function.LongUnaryOperator;
+}

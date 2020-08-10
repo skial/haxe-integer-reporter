@@ -1,0 +1,39 @@
+@:realPath("java.util.Spliterator_OfLong") @:used @:abstract @:libType @:javaNative @:native("java.util.Spliterator$OfLong") @:javaCanonical("java.util", "Spliterator.OfLong")
+extern interface java.util.Spliterator$OfLong implements java.util.Spliterator$OfPrimitive<java.lang.Long, java.util.function.LongConsumer, java.util.Spliterator$OfLong> {
+
+	@:overload
+	function trySplit():java.util.Spliterator$OfLong;
+
+	@:overload
+	function tryAdvance(param1:Dynamic):Bool;
+
+	@:overload
+	function tryAdvance(param1:java.util.function.LongConsumer):Bool;
+
+	@:overload
+	function tryAdvance(param1:java.util.function.Consumer<Dynamic>):Bool;
+
+	@:overload
+	function forEachRemaining(param1:Dynamic):Void;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.LongConsumer):Void;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function getComparator():java.util.Comparator<Dynamic>;
+
+	@:overload
+	function hasCharacteristics(param1:Int):Bool;
+
+	@:overload
+	function characteristics():Int;
+
+	@:overload
+	function getExactSizeIfKnown():haxe.Int64;
+
+	@:overload
+	function estimateSize():haxe.Int64;
+}

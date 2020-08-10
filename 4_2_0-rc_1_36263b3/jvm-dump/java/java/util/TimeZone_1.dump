@@ -1,0 +1,10 @@
+@:realPath("java.util.TimeZone_1") @:used @:native("java.util.TimeZone$1") @:libType
+extern class java.util.TimeZone$1 implements java.security.PrivilegedAction<java.lang.Void> {
+
+	function new(param1:java.lang.String):Void;
+
+	function run():java.lang.Void;
+
+	@:realPath("val_id") @:native("val$id")
+	var val$id(default,ctor):java.lang.String;
+}

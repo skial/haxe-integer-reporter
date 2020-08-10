@@ -1,0 +1,23 @@
+@:realPath("java.internal.HxEnum") @:directlyUsed @:used @:nativeGen @:keep @:native("haxe.lang.Enum") @:nativeGen
+class haxe.lang.Enum {
+
+	@:has_untyped
+	public function new(index:Int) {
+		this.index = index;
+	}
+
+	@:readOnly
+	var index(default,never):Int;
+
+	public function getTag() {
+		throw cast haxe.Exception.thrown("Not Implemented");
+	}
+
+	public function getParams() {
+		return [];
+	}
+
+	public function toString() {
+		return this.getTag();
+	}
+}

@@ -1,0 +1,7 @@
+@:realPath("java.util.stream.Collector_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.stream.Collector") @:javaCanonical("java.util.stream", "Collector")
+extern class java.util.stream.Collector {
+
+	static function of<T:Dynamic, A:Dynamic, R:Dynamic>(param1:java.util.function.Supplier<of.A>, param2:java.util.function.BiConsumer<of.A, of.T>, param3:java.util.function.BinaryOperator<of.A>, param4:java.util.function.Function<of.A, of.R>, param5:java.NativeArray<java.util.stream.Collector$Characteristics>):java.util.stream.Collector<of.T, of.A, of.R>;
+
+	static function of<T:Dynamic, R:Dynamic>(param1:java.util.function.Supplier<of.R>, param2:java.util.function.BiConsumer<of.R, of.T>, param3:java.util.function.BinaryOperator<of.R>, param4:java.NativeArray<java.util.stream.Collector$Characteristics>):java.util.stream.Collector<of.T, of.R, of.R>;
+}

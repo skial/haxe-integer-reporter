@@ -1,0 +1,107 @@
+@:directlyUsed @:used @:keep
+class hl.types.ArrayBase extends hl.types.ArrayAccess {
+
+	public var length(default,null):Int;
+
+	public function pushDyn(v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function popDyn() {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function shiftDyn() {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function unshiftDyn(v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function insertDyn(pos:Int, v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function containsDyn(v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function removeDyn(v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function sortDyn(f:(Dynamic, Dynamic) -> Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function slice(pos:Int, end:Null<Int> = null) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function splice(pos:Int, len:Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function join(sep:String) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function reverse() {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function resize(len:Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function toString() {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	function __cast(t:hl.Type) {
+		var v = null;
+		if ((t == $ttype(v))) return hl.types.ArrayDyn.alloc(this, false);
+		return null;
+	}
+
+	function isArrayObj() {
+		return false;
+	}
+
+	@:has_untyped
+	public static function allocI32(bytes:hl.BytesAccess<Int>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_Int);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocUI16(bytes:hl.BytesAccess<hl.UI16>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_hl_UI16);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocF32(bytes:hl.BytesAccess<hl.F32>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_hl_F32);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocF64(bytes:hl.BytesAccess<Float>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_Float);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+}

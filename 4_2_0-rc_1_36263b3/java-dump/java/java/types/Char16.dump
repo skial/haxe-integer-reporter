@@ -1,0 +1,2 @@
+@:nativeGen
+typedef java.types.Char16 = java.Char16

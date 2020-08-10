@@ -1,0 +1,9 @@
+@:realPath("java.nio.file.Watchable") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.Watchable") @:javaCanonical("java.nio.file", "Watchable")
+extern interface java.nio.file.Watchable {
+
+	@:overload @:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>):java.nio.file.WatchKey;
+
+	@:overload @:throws("java.io.IOException")
+	function register(param1:java.nio.file.WatchService, param2:java.NativeArray<java.nio.file.WatchEvent$Kind<Dynamic>>, param3:java.NativeArray<java.nio.file.WatchEvent$Modifier>):java.nio.file.WatchKey;
+}

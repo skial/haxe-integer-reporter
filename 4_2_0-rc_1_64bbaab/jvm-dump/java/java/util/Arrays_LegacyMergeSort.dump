@@ -1,0 +1,10 @@
+@:realPath("java.util.Arrays_LegacyMergeSort") @:native("java.util.Arrays$LegacyMergeSort") @:libType
+extern class java.util.Arrays$LegacyMergeSort {
+
+	function new():Void;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000():Bool;
+
+	static function <clinit>():Void;
+}

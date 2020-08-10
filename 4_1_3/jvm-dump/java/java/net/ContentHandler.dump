@@ -1,0 +1,12 @@
+@:realPath("java.net.ContentHandler") @:used @:abstract @:libType @:javaNative @:native("java.net.ContentHandler") @:javaCanonical("java.net", "ContentHandler")
+extern class java.net.ContentHandler {
+
+	@:overload
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent(param1:java.net.URLConnection, param2:java.NativeArray<java.lang.Class<Dynamic>>):Dynamic;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent(param1:java.net.URLConnection):Dynamic;
+}

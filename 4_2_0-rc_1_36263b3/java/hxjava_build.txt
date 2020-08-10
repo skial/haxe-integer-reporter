@@ -2,6 +2,9 @@ C:\haxe issues\haxe-integer-reporter
 begin defines
 collect.info
 dce
+dump
+dump-path
+dump_path
 haxe
 haxe3
 haxe4
@@ -32,6 +35,9 @@ end defines
 begin defines_data
 collect.info=1
 dce=std
+dump=pretty
+dump-path=./4_2_0-rc_1_36263b3/java-dump/
+dump_path=./4_2_0-rc_1_36263b3/java-dump/
 haxe=4.2.0-rc.1
 haxe3=1
 haxe4=1

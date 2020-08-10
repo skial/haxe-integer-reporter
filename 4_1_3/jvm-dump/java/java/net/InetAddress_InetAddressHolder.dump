@@ -1,0 +1,3 @@
+@:realPath("java.net.InetAddress_InetAddressHolder") @:libType @:javaNative @:native("java.net.InetAddress$InetAddressHolder") @:javaCanonical("java.net", "InetAddress.InetAddressHolder")
+extern class java.net.InetAddress$InetAddressHolder {
+}

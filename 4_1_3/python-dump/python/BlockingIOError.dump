@@ -1,0 +1,3 @@
+@:realPath("python.BlockingIOError") @:native("BlockingIOError")
+extern class BlockingIOError extends OSError {
+}

@@ -1,0 +1,51 @@
+@:realPath("java.lang.BooleanClass") @:directlyUsed @:used @:native("java.lang.Boolean")
+extern class java.lang.Boolean extends java.lang.Number implements java.lang.Comparable<java.lang.Boolean> {
+
+	@:overload
+	function new(bool:Bool):Void;
+
+	@:overload
+	function new(string:java.lang.String):Void;
+
+	@:overload
+	function booleanValue():Bool;
+
+	@:overload
+	function compareTo(param1:java.lang.Boolean):Int;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function toString():java.lang.String;
+
+	static var FALSE(default,never):java.lang.Boolean;
+
+	static var TRUE(default,never):java.lang.Boolean;
+
+	static var TYPE(default,never):java.lang.Class<java.lang.Boolean>;
+
+	@:overload
+	static function compare(param1:Bool, param2:Bool):Int;
+
+	@:overload
+	static function getBoolean(param1:java.lang.String):Bool;
+
+	@:overload
+	static function parseBoolean(param1:java.lang.String):Bool;
+
+	@:realPath("_toString") @:native("toString") @:overload
+	static function toString(param1:Bool):java.lang.String;
+
+	@:overload
+	static function valueOf(param1:Bool):java.lang.Boolean;
+
+	@:overload
+	static function valueOf(param1:java.lang.String):java.lang.Boolean;
+}

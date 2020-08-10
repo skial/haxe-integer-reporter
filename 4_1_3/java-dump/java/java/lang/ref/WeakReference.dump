@@ -1,0 +1,9 @@
+@:realPath("java.lang.ref.WeakReference") @:nativeGen @:libType @:javaNative @:native("java.lang.ref.WeakReference") @:javaCanonical("java.lang.ref", "WeakReference")
+extern class java.lang.ref.WeakReference<T : java.lang.ref.WeakReference.T> extends java.lang.ref.Reference<java.lang.ref.WeakReference.T> {
+
+	@:overload
+	function new(param1:java.lang.ref.WeakReference.T, param2:java.lang.ref.ReferenceQueue<Dynamic>):Void;
+
+	@:overload
+	function new(param1:java.lang.ref.WeakReference.T):Void;
+}

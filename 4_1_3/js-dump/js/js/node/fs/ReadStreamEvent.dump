@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.fs.ReadStreamEvent<T : js.node.fs.ReadStreamEvent.T> to js.node.events.Event<js.node.fs.ReadStreamEvent.T> {}

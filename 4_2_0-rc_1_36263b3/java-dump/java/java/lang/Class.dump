@@ -1,0 +1,152 @@
+@:realPath("java.lang.Class") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.lang.Class") @:javaCanonical("java.lang", "Class")
+extern class java.lang.Class<T:Dynamic> implements java.lang.reflect.AnnotatedElement implements java.lang.reflect.Type implements java.lang.reflect.GenericDeclaration implements java.io.Serializable {
+
+	function getAnnotatedInterfaces():java.NativeArray<java.lang.reflect.AnnotatedType>;
+
+	function getAnnotatedSuperclass():java.lang.reflect.AnnotatedType;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getDeclaredAnnotationsByType<A:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotationsByType.A>):java.NativeArray<getDeclaredAnnotationsByType.A>;
+
+	function getDeclaredAnnotation<A:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotation.A>):getDeclaredAnnotation.A;
+
+	function getAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<A:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.A>):java.NativeArray<getAnnotationsByType.A>;
+
+	function isAnnotationPresent(param1:java.lang.Class<java.lang.annotation.Annotation>):Bool;
+
+	function getAnnotation<A:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.A>):getAnnotation.A;
+
+	function asSubclass<U:Dynamic>(param1:java.lang.Class<asSubclass.U>):java.lang.Class<asSubclass.U>;
+
+	@:realPath("_cast") @:native("cast")
+	function cast(param1:Dynamic):java.lang.Class.T;
+
+	function getEnumConstants():java.NativeArray<java.lang.Class.T>;
+
+	function isEnum():Bool;
+
+	function desiredAssertionStatus():Bool;
+
+	function getProtectionDomain():java.security.ProtectionDomain;
+
+	function getResource(param1:String):java.net.URL;
+
+	function getResourceAsStream(param1:String):java.io.InputStream;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchMethodException")
+	function getDeclaredConstructor(param1:java.NativeArray<java.lang.Class<Dynamic>>):java.lang.reflect.Constructor<java.lang.Class.T>;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchMethodException")
+	function getDeclaredMethod(param1:String, param2:java.NativeArray<java.lang.Class<Dynamic>>):java.lang.reflect.Method;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchFieldException")
+	function getDeclaredField(param1:String):java.lang.reflect.Field;
+
+	@:throws("java.lang.SecurityException")
+	function getDeclaredConstructors():java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
+
+	@:throws("java.lang.SecurityException")
+	function getDeclaredMethods():java.NativeArray<java.lang.reflect.Method>;
+
+	@:throws("java.lang.SecurityException")
+	function getDeclaredFields():java.NativeArray<java.lang.reflect.Field>;
+
+	@:throws("java.lang.SecurityException")
+	function getDeclaredClasses():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchMethodException")
+	function getConstructor(param1:java.NativeArray<java.lang.Class<Dynamic>>):java.lang.reflect.Constructor<java.lang.Class.T>;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchMethodException")
+	function getMethod(param1:String, param2:java.NativeArray<java.lang.Class<Dynamic>>):java.lang.reflect.Method;
+
+	@:throws("java.lang.SecurityException") @:throws("java.lang.NoSuchFieldException")
+	function getField(param1:String):java.lang.reflect.Field;
+
+	@:throws("java.lang.SecurityException")
+	function getConstructors():java.NativeArray<java.lang.reflect.Constructor<Dynamic>>;
+
+	@:throws("java.lang.SecurityException")
+	function getMethods():java.NativeArray<java.lang.reflect.Method>;
+
+	@:throws("java.lang.SecurityException")
+	function getFields():java.NativeArray<java.lang.reflect.Field>;
+
+	function getClasses():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	function isMemberClass():Bool;
+
+	function isLocalClass():Bool;
+
+	function isAnonymousClass():Bool;
+
+	function getCanonicalName():String;
+
+	function getTypeName():String;
+
+	function getSimpleName():String;
+
+	@:throws("java.lang.SecurityException")
+	function getEnclosingClass():java.lang.Class<Dynamic>;
+
+	@:throws("java.lang.SecurityException")
+	function getDeclaringClass():java.lang.Class<Dynamic>;
+
+	@:throws("java.lang.SecurityException")
+	function getEnclosingConstructor():java.lang.reflect.Constructor<Dynamic>;
+
+	@:throws("java.lang.SecurityException")
+	function getEnclosingMethod():java.lang.reflect.Method;
+
+	function getSigners():java.NativeArray<Dynamic>;
+
+	function getModifiers():Int;
+
+	function getComponentType():java.lang.Class<Dynamic>;
+
+	function getGenericInterfaces():java.NativeArray<java.lang.reflect.Type>;
+
+	function getInterfaces():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	function getPackage():java.lang.Package;
+
+	function getGenericSuperclass():java.lang.reflect.Type;
+
+	function getSuperclass():java.lang.Class<Dynamic>;
+
+	function getTypeParameters():java.NativeArray<java.lang.reflect.TypeVariable<java.lang.Class<java.lang.Class.T>>>;
+
+	function getClassLoader():java.lang.ClassLoader;
+
+	function getName():String;
+
+	function isSynthetic():Bool;
+
+	function isAnnotation():Bool;
+
+	function isPrimitive():Bool;
+
+	function isArray():Bool;
+
+	function isInterface():Bool;
+
+	function isAssignableFrom(param1:java.lang.Class<Dynamic>):Bool;
+
+	function isInstance(param1:Dynamic):Bool;
+
+	@:throws("java.lang.IllegalAccessException") @:throws("java.lang.InstantiationException")
+	function newInstance():java.lang.Class.T;
+
+	function toGenericString():String;
+
+	function toString():String;
+
+	@:throws("java.lang.ClassNotFoundException")
+	static function forName(param1:String, param2:Bool, param3:java.lang.ClassLoader):java.lang.Class<Dynamic>;
+
+	@:throws("java.lang.ClassNotFoundException")
+	static function forName(param1:String):java.lang.Class<Dynamic>;
+}

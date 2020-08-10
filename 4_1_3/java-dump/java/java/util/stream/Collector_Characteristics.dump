@@ -1,0 +1,6 @@
+@:realPath("java.util.stream.Collector_Characteristics") @:used @:nativeGen @:flatEnum @:javaCanonical("java.util.stream", "Collector.Characteristics") @:native("java.util.stream.Collector$Characteristics")
+extern enum java.util.stream.Collector$Characteristics {
+	IDENTITY_FINISH;
+	UNORDERED;
+	CONCURRENT;
+}

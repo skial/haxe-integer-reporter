@@ -1,0 +1,138 @@
+@:realPath("java.net.URLConnection") @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.URLConnection") @:javaCanonical("java.net", "URLConnection")
+extern class java.net.URLConnection {
+
+	@:protected
+	function new(param1:java.net.URL):Void;
+
+	function getRequestProperties():java.util.Map<String, java.util.List<String>>;
+
+	function getRequestProperty(param1:String):String;
+
+	function addRequestProperty(param1:String, param2:String):Void;
+
+	function setRequestProperty(param1:String, param2:String):Void;
+
+	function setDefaultUseCaches(param1:Bool):Void;
+
+	function getDefaultUseCaches():Bool;
+
+	function getIfModifiedSince():haxe.Int64;
+
+	function setIfModifiedSince(param1:haxe.Int64):Void;
+
+	function getUseCaches():Bool;
+
+	function setUseCaches(param1:Bool):Void;
+
+	function getAllowUserInteraction():Bool;
+
+	function setAllowUserInteraction(param1:Bool):Void;
+
+	function getDoOutput():Bool;
+
+	function setDoOutput(param1:Bool):Void;
+
+	function getDoInput():Bool;
+
+	function setDoInput(param1:Bool):Void;
+
+	function toString():String;
+
+	@:throws("java.io.IOException")
+	function getOutputStream():java.io.OutputStream;
+
+	@:throws("java.io.IOException")
+	function getInputStream():java.io.InputStream;
+
+	@:throws("java.io.IOException")
+	function getPermission():java.security.Permission;
+
+	@:throws("java.io.IOException")
+	function getContent(param1:java.NativeArray<java.lang.Class<Dynamic>>):Dynamic;
+
+	@:throws("java.io.IOException")
+	function getContent():Dynamic;
+
+	function getHeaderField(param1:Int):String;
+
+	function getHeaderField(param1:String):String;
+
+	function getHeaderFieldKey(param1:Int):String;
+
+	function getHeaderFieldDate(param1:String, param2:haxe.Int64):haxe.Int64;
+
+	function getHeaderFieldLong(param1:String, param2:haxe.Int64):haxe.Int64;
+
+	function getHeaderFieldInt(param1:String, param2:Int):Int;
+
+	function getHeaderFields():java.util.Map<String, java.util.List<String>>;
+
+	function getLastModified():haxe.Int64;
+
+	function getDate():haxe.Int64;
+
+	function getExpiration():haxe.Int64;
+
+	function getContentEncoding():String;
+
+	function getContentType():String;
+
+	function getContentLengthLong():haxe.Int64;
+
+	function getContentLength():Int;
+
+	function getURL():java.net.URL;
+
+	function getReadTimeout():Int;
+
+	function setReadTimeout(param1:Int):Void;
+
+	function getConnectTimeout():Int;
+
+	function setConnectTimeout(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function connect():Void;
+
+	@:protected
+	var url:java.net.URL;
+
+	@:protected
+	var doInput:Bool;
+
+	@:protected
+	var doOutput:Bool;
+
+	@:protected
+	var allowUserInteraction:Bool;
+
+	@:protected
+	var useCaches:Bool;
+
+	@:protected
+	var ifModifiedSince:haxe.Int64;
+
+	@:protected
+	var connected:Bool;
+
+	@:throws("java.io.IOException")
+	static function guessContentTypeFromStream(param1:java.io.InputStream):String;
+
+	static function guessContentTypeFromName(param1:String):String;
+
+	static function setContentHandlerFactory(param1:java.net.ContentHandlerFactory):Void;
+
+	@:deprecated
+	static function getDefaultRequestProperty(param1:String):String;
+
+	@:deprecated
+	static function setDefaultRequestProperty(param1:String, param2:String):Void;
+
+	static function getDefaultAllowUserInteraction():Bool;
+
+	static function setDefaultAllowUserInteraction(param1:Bool):Void;
+
+	static function setFileNameMap(param1:java.net.FileNameMap):Void;
+
+	static function getFileNameMap():java.net.FileNameMap;
+}

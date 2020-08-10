@@ -1,0 +1,29 @@
+@:directlyUsed @:used @:pythonImport("sys")
+extern class python.lib.Sys {
+
+	static var argv(default,never):list<str>;
+
+	static var executable(default,never):str;
+
+	static function exit(x:Int):Void;
+
+	static function getfilesystemencoding():str;
+
+	static var version:str;
+
+	static var platform:str;
+
+	static var stdout(default,never):python.lib.io.TextIOBase;
+
+	static var stdin(default,never):python.lib.io.TextIOBase;
+
+	static var stderr(default,never):python.lib.io.TextIOBase;
+
+	static function getsizeof(t:Dynamic):Int;
+
+	static var maxsize:Int;
+
+	static function exc_info<T:BaseException>():tuple<Class<exc_info.T>, exc_info.T, python.lib.TB>;
+
+	static var version_info:tuple<Int, Int, Int, str, Int>;
+}

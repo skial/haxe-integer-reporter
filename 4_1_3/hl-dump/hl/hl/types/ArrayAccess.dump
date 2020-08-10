@@ -1,0 +1,15 @@
+@:used @:keep
+class hl.types.ArrayAccess {
+
+	public function getDyn(pos:Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function setDyn(pos:Int, v:Dynamic) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function blit(pos:Int, src:hl.types.ArrayAccess, srcpos:Int, len:Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+}

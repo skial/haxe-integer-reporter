@@ -1,0 +1,42 @@
+@:realPath("java.util.concurrent.ExecutorService") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.concurrent.ExecutorService") @:javaCanonical("java.util.concurrent", "ExecutorService")
+extern interface java.util.concurrent.ExecutorService implements java.util.concurrent.Executor {
+
+	@:overload @:throws("java.util.concurrent.TimeoutException") @:throws("java.util.concurrent.ExecutionException") @:throws("java.lang.InterruptedException")
+	function invokeAny<T : invokeAny.T>(param1:java.util.Collection<java.util.concurrent.Callable<invokeAny.T>>, param2:haxe.Int64, param3:java.util.concurrent.TimeUnit):invokeAny.T;
+
+	@:overload @:throws("java.util.concurrent.ExecutionException") @:throws("java.lang.InterruptedException")
+	function invokeAny<T : invokeAny.T>(param1:java.util.Collection<java.util.concurrent.Callable<invokeAny.T>>):invokeAny.T;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function invokeAll<T : invokeAll.T>(param1:java.util.Collection<java.util.concurrent.Callable<invokeAll.T>>, param2:haxe.Int64, param3:java.util.concurrent.TimeUnit):java.util.List<java.util.concurrent.Future<invokeAll.T>>;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function invokeAll<T : invokeAll.T>(param1:java.util.Collection<java.util.concurrent.Callable<invokeAll.T>>):java.util.List<java.util.concurrent.Future<invokeAll.T>>;
+
+	@:overload
+	function submit(param1:java.lang.Runnable):java.util.concurrent.Future<Dynamic>;
+
+	@:overload
+	function submit<T : submit.T>(param1:java.util.concurrent.Callable<submit.T>):java.util.concurrent.Future<submit.T>;
+
+	@:overload
+	function submit<T : submit.T>(param1:java.lang.Runnable, param2:submit.T):java.util.concurrent.Future<submit.T>;
+
+	@:overload @:throws("java.lang.InterruptedException")
+	function awaitTermination(param1:haxe.Int64, param2:java.util.concurrent.TimeUnit):Bool;
+
+	@:overload
+	function isTerminated():Bool;
+
+	@:overload
+	function isShutdown():Bool;
+
+	@:overload
+	function shutdownNow():java.util.List<java.lang.Runnable>;
+
+	@:overload
+	function shutdown():Void;
+
+	@:overload
+	function execute(param1:java.lang.Runnable):Void;
+}

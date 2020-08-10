@@ -1,0 +1,119 @@
+@:realPath("java.internal.FieldLookup") @:directlyUsed @:used @:hxGen @:native("haxe.lang.FieldLookup") @:keep @:static
+class haxe.lang.FieldLookup {
+
+	@:functionCode("\r\n\t\treturn s.hashCode();\r\n\t")
+	public static function hash(s:String) {
+		return 0;
+	}
+
+	@:has_untyped
+	public static function findHash(hash:String, hashs:java.NativeArray<String>, length:Int) {
+		var min = 0;
+		var max = length;
+		while ((min < max)) {
+			var mid = Std.int((max + min) / 2);
+			var classify = hash.compareTo(hashs[mid]);
+			if ((classify < 0)) max = mid else if ((classify > 0)) min = mid + 1 else return mid;
+		};
+		return ~ min;
+	}
+
+	public static function removeString(a:java.NativeArray<String>, length:Int, pos:Int) {
+		java.lang.System.arraycopy(a, pos + 1, a, pos, length - pos - 1);
+		a[length - 1] = null;
+	}
+
+	public static function removeFloat(a:java.NativeArray<Float>, length:Int, pos:Int) {
+		java.lang.System.arraycopy(a, pos + 1, a, pos, length - pos - 1);
+		a[length - 1] = 0;
+	}
+
+	public static function removeDynamic(a:java.NativeArray<Dynamic>, length:Int, pos:Int) {
+		java.lang.System.arraycopy(a, pos + 1, a, pos, length - pos - 1);
+		a[length - 1] = null;
+	}
+
+	public static function insertString(a:java.NativeArray<String>, length:Int, pos:Int, x:String) {
+		var a1 = a;
+		var capacity = a1.length;
+		if ((pos == length)) {
+			if ((capacity == length)) {
+				var newarr = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr, 0, a1.length);
+				a1 = newarr;
+			};
+		} else if ((pos == 0)) {
+			if ((capacity == length)) {
+				var newarr1 = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr1, 1, length);
+				a1 = newarr1;
+			} else java.lang.System.arraycopy(a1, 0, a1, 1, length);
+		} else if ((capacity == length)) {
+			var newarr2 = new java.NativeArray((length << 1) + 1);
+			java.lang.System.arraycopy(a1, 0, newarr2, 0, pos);
+			java.lang.System.arraycopy(a1, pos, newarr2, pos + 1, length - pos);
+			a1 = newarr2;
+		} else {
+			java.lang.System.arraycopy(a1, pos, a1, pos + 1, length - pos);
+			java.lang.System.arraycopy(a1, 0, a1, 0, pos);
+		};
+		a1[pos] = x;
+		return a1;
+	}
+
+	public static function insertFloat(a:java.NativeArray<Float>, length:Int, pos:Int, x:Float) {
+		var a1 = a;
+		var capacity = a1.length;
+		if ((pos == length)) {
+			if ((capacity == length)) {
+				var newarr = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr, 0, a1.length);
+				a1 = newarr;
+			};
+		} else if ((pos == 0)) {
+			if ((capacity == length)) {
+				var newarr1 = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr1, 1, length);
+				a1 = newarr1;
+			} else java.lang.System.arraycopy(a1, 0, a1, 1, length);
+		} else if ((capacity == length)) {
+			var newarr2 = new java.NativeArray((length << 1) + 1);
+			java.lang.System.arraycopy(a1, 0, newarr2, 0, pos);
+			java.lang.System.arraycopy(a1, pos, newarr2, pos + 1, length - pos);
+			a1 = newarr2;
+		} else {
+			java.lang.System.arraycopy(a1, pos, a1, pos + 1, length - pos);
+			java.lang.System.arraycopy(a1, 0, a1, 0, pos);
+		};
+		a1[pos] = x;
+		return a1;
+	}
+
+	public static function insertDynamic(a:java.NativeArray<Dynamic>, length:Int, pos:Int, x:Dynamic) {
+		var a1 = a;
+		var capacity = a1.length;
+		if ((pos == length)) {
+			if ((capacity == length)) {
+				var newarr = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr, 0, a1.length);
+				a1 = newarr;
+			};
+		} else if ((pos == 0)) {
+			if ((capacity == length)) {
+				var newarr1 = new java.NativeArray((length << 1) + 1);
+				java.lang.System.arraycopy(a1, 0, newarr1, 1, length);
+				a1 = newarr1;
+			} else java.lang.System.arraycopy(a1, 0, a1, 1, length);
+		} else if ((capacity == length)) {
+			var newarr2 = new java.NativeArray((length << 1) + 1);
+			java.lang.System.arraycopy(a1, 0, newarr2, 0, pos);
+			java.lang.System.arraycopy(a1, pos, newarr2, pos + 1, length - pos);
+			a1 = newarr2;
+		} else {
+			java.lang.System.arraycopy(a1, pos, a1, pos + 1, length - pos);
+			java.lang.System.arraycopy(a1, 0, a1, 0, pos);
+		};
+		a1[pos] = cast x;
+		return a1;
+	}
+}

@@ -1,0 +1,9 @@
+@:realPath("java.io.ObjectStreamException") @:abstract @:libType @:javaNative @:native("java.io.ObjectStreamException") @:javaCanonical("java.io", "ObjectStreamException")
+extern class java.io.ObjectStreamException extends java.io.IOException {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:protected
+	function new(param1:java.lang.String):Void;
+}

@@ -1,0 +1,17 @@
+private extern class haxe.ds._List.ListNode<T> extends neko.NativeArray<Dynamic> {
+
+	var item(get,set):haxe.ds._List.ListNode.T;
+
+	var next(get,set):haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>;
+
+	inline function get_item():haxe.ds._List.ListNode.T;
+
+	inline function set_item(v:haxe.ds._List.ListNode.T):haxe.ds._List.ListNode.T;
+
+	inline function get_next():haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>;
+
+	inline function set_next(v:haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>):haxe.ds._List.ListNode<haxe.ds._List.ListNode.T>;
+
+	@:has_untyped
+	static inline function create<T>(item:create.T, next:haxe.ds._List.ListNode<create.T>):haxe.ds._List.ListNode<create.T>;
+}

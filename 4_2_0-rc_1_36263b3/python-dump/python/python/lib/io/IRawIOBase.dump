@@ -1,0 +1,12 @@
+@:used @:remove
+extern interface python.lib.io.IRawIOBase {
+
+	function readall():bytes;
+
+	@:value({ n : -1 })
+	function read(n:Int):Null<bytes>;
+
+	function write(b:bytearray):Null<Int>;
+
+	function readinto(b:bytearray):Null<Int>;
+}

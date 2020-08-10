@@ -1,0 +1,146 @@
+@:keep @:directlyUsed @:used @:allow(Array)
+class python.internal.ArrayImpl {
+
+	@:ifFeature("dynamic_read.concat", "anon_optional_read.concat", "python.internal.ArrayImpl.concat")
+	public static inline function concat<T>(a1:list<concat.T>, a2:list<concat.T>) {
+		return python.Syntax.binop(a1, "+", a2);
+	}
+
+	@:ifFeature("dynamic_read.copy", "anon_optional_read.copy", "python.internal.ArrayImpl.copy")
+	public static inline function copy<T>(x:list<copy.T>) {
+		return python.internal.UBuiltins.list(x);
+	}
+
+	@:ifFeature("dynamic_read.iterator", "anon_optional_read.iterator", "python.internal.ArrayImpl.iterator")
+	public static inline function iterator<T>(x:list<iterator.T>) {
+		return new python.HaxeIterator(python.Syntax.call(python.Syntax.field(x, "__iter__"), []));
+	}
+
+	@:ifFeature("dynamic_read.keyValueIterator", "anon_optional_read.keyValueIterator", "python.internal.ArrayImpl.keyValueIterator")
+	public static inline function keyValueIterator<T>(x:list<keyValueIterator.T>) {
+		return new haxe.iterators.ArrayKeyValueIterator(x);
+	}
+
+	@:ifFeature("dynamic_read.indexOf", "anon_optional_read.indexOf", "python.internal.ArrayImpl.indexOf")
+	public static function indexOf<T>(a:list<indexOf.T>, x:indexOf.T, fromIndex:Null<Int> = null) {
+		var len = a.length;
+		var l = if ((fromIndex == null)) 0 else if ((fromIndex < 0)) len + fromIndex else fromIndex;
+		if ((l < 0)) l = 0;
+		{
+			var _g = l;
+			var _g1 = len;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				if ((cast python.Syntax._arrayAccess(a, [i]) == x)) return i;
+			};
+		};
+		return -1;
+	}
+
+	@:ifFeature("dynamic_read.lastIndexOf", "anon_optional_read.lastIndexOf", "python.internal.ArrayImpl.lastIndexOf")
+	public static function lastIndexOf<T>(a:list<lastIndexOf.T>, x:lastIndexOf.T, fromIndex:Null<Int> = null) {
+		var len = a.length;
+		var l = if ((fromIndex == null)) len else if ((fromIndex < 0)) len + fromIndex + 1 else fromIndex + 1;
+		if ((l > len)) l = len;
+		while ((true)) {
+			var tmp = -- l;
+			if ((! (tmp > -1))) break;
+			if ((cast python.Syntax._arrayAccess(a, [l]) == x)) return l;
+		};
+		return -1;
+	}
+
+	@:access(python.Boot) @:ifFeature("dynamic_read.join", "anon_optional_read.join", "python.internal.ArrayImpl.join")
+	public static inline function join<T>(x:list<join.T>, sep:str) {
+		return cast python.Syntax.field(sep, "join")(python.Syntax.code("[{0}(x1,'') for x1 in {1}]", python.Boot.toString1, x));
+	}
+
+	@:ifFeature("dynamic_read.toString", "anon_optional_read.toString", "python.internal.ArrayImpl.toString")
+	public static inline function toString<T>(x:list<toString.T>) {
+		return "[" + cast python.Syntax.field(",", "join")(python.Syntax.code("[{0}(x1,'') for x1 in {1}]", python.Boot.toString1, x)) + "]";
+	}
+
+	@:ifFeature("dynamic_read.pop", "anon_optional_read.pop", "python.internal.ArrayImpl.pop")
+	public static inline function pop<T>(x:list<pop.T>) {
+		if ((x.length == 0)) return null else return python.Syntax.call(python.Syntax.field(x, "pop"), []);
+	}
+
+	@:ifFeature("dynamic_read.push", "anon_optional_read.push", "python.internal.ArrayImpl.push")
+	public static inline function push<T>(x:list<push.T>, e:push.T) {
+		python.Syntax.call(python.Syntax.field(x, "append"), [e]);
+		return x.length;
+	}
+
+	@:ifFeature("dynamic_read.unshift", "anon_optional_read.unshift", "python.internal.ArrayImpl.unshift")
+	public static inline function unshift<T>(x:list<unshift.T>, e:unshift.T) {
+		python.Syntax.call(python.Syntax.field(x, "insert"), [0, e]);
+	}
+
+	@:ifFeature("dynamic_read.remove", "anon_optional_read.remove", "python.internal.ArrayImpl.remove")
+	public static function remove<T>(x:list<remove.T>, e:remove.T) {
+		try {
+			python.Syntax.call(python.Syntax.field(x, "remove"), [e]);
+			return true;
+		} catch (_g:BaseException) {
+			{
+				null;
+			};
+			return false;
+		};
+	}
+
+	@:ifFeature("dynamic_read.contains", "anon_optional_read.contains", "python.internal.ArrayImpl.contains")
+	public static inline function contains<T>(x:list<contains.T>, e:contains.T) {
+		return python.Syntax.isIn(e, x);
+	}
+
+	@:ifFeature("dynamic_read.shift", "anon_optional_read.shift", "python.internal.ArrayImpl.shift")
+	public static inline function shift<T>(x:list<shift.T>) {
+		if ((x.length == 0)) return null;
+		return python.Syntax.call(python.Syntax.field(x, "pop"), [0]);
+	}
+
+	@:ifFeature("dynamic_read.slice", "anon_optional_read.slice", "python.internal.ArrayImpl.slice")
+	public static inline function slice<T>(x:list<slice.T>, pos:Int, end:Null<Int> = null) {
+		return python.Syntax._arrayAccess(x, [pos, end]);
+	}
+
+	@:ifFeature("dynamic_read.sort", "anon_optional_read.sort", "python.internal.ArrayImpl.sort")
+	public static inline function sort<T>(x:list<sort.T>, f:(sort.T, sort.T) -> Int) {
+		python.Syntax._callNamedUntyped(python.Syntax.field(x, "sort"), {key : python.lib.Functools.cmp_to_key(f)});
+	}
+
+	@:ifFeature("dynamic_read.splice", "anon_optional_read.splice", "python.internal.ArrayImpl.splice")
+	public static inline function splice<T>(x:list<splice.T>, pos:Int, len:Int) {
+		if ((pos < 0)) pos = x.length + pos;
+		if ((pos < 0)) pos = 0;
+		var res = python.Syntax._arrayAccess(x, [pos, pos + len]);
+		python.Syntax.delete(python.Syntax._arrayAccess(x, [pos, pos + len]));
+		return res;
+	}
+
+	@:ifFeature("dynamic_read.map", "anon_optional_read.map", "python.internal.ArrayImpl.map")
+	public static inline function map<S, T>(x:list<map.T>, f:map.T -> map.S) {
+		return python.internal.UBuiltins.list(python.internal.UBuiltins.map(f, cast x));
+	}
+
+	@:ifFeature("dynamic_read.filter", "anon_optional_read.filter", "python.internal.ArrayImpl.filter")
+	public static inline function filter<T>(x:list<filter.T>, f:filter.T -> Bool) {
+		return python.internal.UBuiltins.list(python.internal.UBuiltins.filter(f, cast x));
+	}
+
+	@:ifFeature("dynamic_read.insert", "anon_optional_read.insert", "python.internal.ArrayImpl.insert")
+	public static inline function insert<T>(a:list<insert.T>, pos:Int, x:insert.T) {
+		python.Syntax.call(python.Syntax.field(a, "insert"), [pos, x]);
+	}
+
+	@:ifFeature("dynamic_read.reverse", "anon_optional_read.reverse", "python.internal.ArrayImpl.reverse")
+	public static inline function reverse<T>(a:list<reverse.T>) {
+		python.Syntax.call(python.Syntax.field(a, "reverse"), []);
+	}
+
+	@:ifFeature("array_read")
+	static inline function _get<T>(x:list<_get.T>, idx:Int) {
+		if ((idx > -1 && idx < x.length)) return cast python.Syntax._arrayAccess(x, [idx]) else return null;
+	}
+}

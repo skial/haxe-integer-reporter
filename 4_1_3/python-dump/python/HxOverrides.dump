@@ -1,0 +1,14 @@
+@:realPath("python.internal.HxOverrides") @:keep @:used @:noDoc @:native("HxOverrides") @:access(python.internal.ArrayImpl) @:access(python.Boot)
+class HxOverrides {
+
+	@:ifFeature("dynamic_binop_==", "dynamic_binop_!=")
+	static function eq(a:Dynamic, b:Dynamic) {
+		if ((python.internal.UBuiltins.isinstance(a, python.internal.UBuiltins.list) || python.internal.UBuiltins.isinstance(b, python.internal.UBuiltins.list))) return python.Syntax.code("a is b");
+		return python.Syntax.binop(a, "==", b);
+	}
+
+	@:ifFeature("unsafe_string_concat")
+	static function stringOrNull(s:str) {
+		if ((s == null)) return "null" else return s;
+	}
+}

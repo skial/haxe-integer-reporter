@@ -1,0 +1,1 @@
+typedef js.node.buffer.BufferConstants = { MAX_STRING_LENGTH : Int, MAX_LENGTH : Int }

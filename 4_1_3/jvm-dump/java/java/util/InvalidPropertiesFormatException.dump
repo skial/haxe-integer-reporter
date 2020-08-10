@@ -1,0 +1,9 @@
+@:realPath("java.util.InvalidPropertiesFormatException") @:libType @:javaNative @:native("java.util.InvalidPropertiesFormatException") @:javaCanonical("java.util", "InvalidPropertiesFormatException")
+extern class java.util.InvalidPropertiesFormatException extends java.io.IOException {
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new(param1:java.lang.Throwable):Void;
+}

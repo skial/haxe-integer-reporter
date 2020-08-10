@@ -1,0 +1,11 @@
+@:keep @:directlyUsed @:used @:dox(hide) @:noCompletion
+class haxe.NativeStackTrace {
+
+	@:ifFeature("haxe.NativeStackTrace.exceptionStack")
+	public static inline function saveStack(exception:Any) {}
+
+	@:has_untyped
+	public static function exceptionStack() {
+		return {skip : 0, stack : __dollar__excstack()};
+	}
+}

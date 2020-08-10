@@ -1,0 +1,3 @@
+@:realPath("python.ArithmeticError") @:native("ArithmeticError")
+extern class ArithmeticError extends Exception {
+}

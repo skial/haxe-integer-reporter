@@ -1,0 +1,99 @@
+@:realPath("java.security.Provider") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.security.Provider") @:javaCanonical("java.security", "Provider")
+extern class java.security.Provider extends java.util.Properties {
+
+	@:overload @:protected
+	function new(param1:String, param2:Float, param3:String):Void;
+
+	@:overload @:protected
+	function removeService(param1:java.security.Provider$Service):Void;
+
+	@:overload @:protected
+	function putService(param1:java.security.Provider$Service):Void;
+
+	@:overload
+	function getServices():java.util.Set<java.security.Provider$Service>;
+
+	@:overload
+	function getService(param1:String, param2:String):java.security.Provider$Service;
+
+	@:overload
+	function getProperty(param1:String):String;
+
+	@:overload
+	function elements():java.util.Enumeration<Dynamic>;
+
+	@:overload
+	function keys():java.util.Enumeration<Dynamic>;
+
+	@:overload
+	function forEach(param1:java.util.function.BiConsumer<Dynamic, Dynamic>):Void;
+
+	@:overload
+	function getOrDefault(param1:Dynamic, param2:Dynamic):Dynamic;
+
+	@:overload
+	function get(param1:Dynamic):Dynamic;
+
+	@:overload
+	function merge(param1:Dynamic, param2:Dynamic, param3:java.util.function.BiFunction<Dynamic, Dynamic, Dynamic>):Dynamic;
+
+	@:overload
+	function computeIfPresent(param1:Dynamic, param2:java.util.function.BiFunction<Dynamic, Dynamic, Dynamic>):Dynamic;
+
+	@:overload
+	function computeIfAbsent(param1:Dynamic, param2:java.util.function.Function<Dynamic, Dynamic>):Dynamic;
+
+	@:overload
+	function compute(param1:Dynamic, param2:java.util.function.BiFunction<Dynamic, Dynamic, Dynamic>):Dynamic;
+
+	@:overload
+	function replaceAll(param1:java.util.function.BiFunction<Dynamic, Dynamic, Dynamic>):Void;
+
+	@:overload
+	function replace(param1:Dynamic, param2:Dynamic):Dynamic;
+
+	@:overload
+	function replace(param1:Dynamic, param2:Dynamic, param3:Dynamic):Bool;
+
+	@:overload
+	function remove(param1:Dynamic, param2:Dynamic):Bool;
+
+	@:overload
+	function remove(param1:Dynamic):Dynamic;
+
+	@:overload
+	function putIfAbsent(param1:Dynamic, param2:Dynamic):Dynamic;
+
+	@:overload
+	function put(param1:Dynamic, param2:Dynamic):Dynamic;
+
+	@:overload
+	function values():java.util.Collection<Dynamic>;
+
+	@:overload
+	function keySet():java.util.Set<Dynamic>;
+
+	@:overload
+	function entrySet():java.util.Set<java.util.Map$Entry<Dynamic, Dynamic>>;
+
+	@:overload
+	function putAll(param1:java.util.Map<Dynamic, Dynamic>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function load(param1:java.io.InputStream):Void;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function getInfo():String;
+
+	@:overload
+	function getVersion():Float;
+
+	@:overload
+	function getName():String;
+}

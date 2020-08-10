@@ -1,0 +1,30 @@
+@:realPath("java.security.Provider_Service") @:libType @:javaNative @:native("java.security.Provider$Service") @:javaCanonical("java.security", "Provider.Service")
+extern class java.security.Provider$Service {
+
+	@:overload
+	function new(param1:java.security.Provider, param2:java.lang.String, param3:java.lang.String, param4:java.lang.String, param5:java.util.List<java.lang.String>, param6:java.util.Map<java.lang.String, java.lang.String>):Void;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function supportsParameter(param1:Dynamic):Bool;
+
+	@:overload @:throws("java.security.NoSuchAlgorithmException")
+	function newInstance(param1:Dynamic):Dynamic;
+
+	@:overload
+	function getAttribute(param1:java.lang.String):java.lang.String;
+
+	@:overload
+	function getClassName():java.lang.String;
+
+	@:overload
+	function getProvider():java.security.Provider;
+
+	@:overload
+	function getAlgorithm():java.lang.String;
+
+	@:overload
+	function getType():java.lang.String;
+}

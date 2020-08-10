@@ -1,0 +1,106 @@
+@:realPath("java.util.GregorianCalendar") @:used @:nativeGen @:libType @:javaNative @:native("java.util.GregorianCalendar") @:javaCanonical("java.util", "GregorianCalendar")
+extern class java.util.GregorianCalendar extends java.util.Calendar {
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.util.TimeZone):Void;
+
+	@:overload
+	function new(param1:java.util.Locale):Void;
+
+	@:overload
+	function new(param1:java.util.TimeZone, param2:java.util.Locale):Void;
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int):Void;
+
+	@:overload
+	function new(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	@:overload
+	function toZonedDateTime():java.time.ZonedDateTime;
+
+	@:overload @:protected
+	function computeTime():Void;
+
+	@:overload @:protected
+	function computeFields():Void;
+
+	@:overload
+	function getWeeksInWeekYear():Int;
+
+	@:overload
+	function setWeekDate(param1:Int, param2:Int, param3:Int):Void;
+
+	@:overload
+	function getWeekYear():Int;
+
+	@:overload
+	function isWeekDateSupported():Bool;
+
+	@:overload
+	function setTimeZone(param1:java.util.TimeZone):Void;
+
+	@:overload
+	function getTimeZone():java.util.TimeZone;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	function getActualMaximum(param1:Int):Int;
+
+	@:overload
+	function getActualMinimum(param1:Int):Int;
+
+	@:overload
+	function getLeastMaximum(param1:Int):Int;
+
+	@:overload
+	function getGreatestMinimum(param1:Int):Int;
+
+	@:overload
+	function getMaximum(param1:Int):Int;
+
+	@:overload
+	function getMinimum(param1:Int):Int;
+
+	@:overload
+	function roll(param1:Int, param2:Int):Void;
+
+	@:overload
+	function roll(param1:Int, param2:Bool):Void;
+
+	@:overload
+	function add(param1:Int, param2:Int):Void;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getCalendarType():String;
+
+	@:overload
+	function isLeapYear(param1:Int):Bool;
+
+	@:overload
+	function getGregorianChange():java.util.Date;
+
+	@:overload
+	function setGregorianChange(param1:java.util.Date):Void;
+
+	@:overload
+	static function from(param1:java.time.ZonedDateTime):java.util.GregorianCalendar;
+
+	static var BC(default,null):Int;
+
+	static var AD(default,null):Int;
+}

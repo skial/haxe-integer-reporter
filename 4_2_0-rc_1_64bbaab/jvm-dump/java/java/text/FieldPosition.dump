@@ -1,0 +1,41 @@
+@:realPath("java.text.FieldPosition") @:used @:native("java.text.FieldPosition") @:libType
+extern class java.text.FieldPosition {
+
+	function new(param1:Int):Void;
+
+	function new(param1:java.text.Format$Field, param2:Int):Void;
+
+	function new(param1:java.text.Format$Field):Void;
+
+	function getFieldAttribute():java.text.Format$Field;
+
+	function getField():Int;
+
+	function getBeginIndex():Int;
+
+	function getEndIndex():Int;
+
+	function setBeginIndex(param1:Int):Void;
+
+	function setEndIndex(param1:Int):Void;
+
+	function getFieldDelegate():java.text.Format$FieldDelegate;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function toString():java.lang.String;
+
+	var field:Int;
+
+	var endIndex:Int;
+
+	var beginIndex:Int;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:java.text.FieldPosition, param2:java.text.Format$Field):Bool;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:java.text.FieldPosition, param2:java.text.Format$Field, param3:Int):Bool;
+}

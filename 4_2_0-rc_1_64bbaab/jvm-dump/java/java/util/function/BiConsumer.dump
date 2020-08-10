@@ -1,0 +1,7 @@
+@:realPath("java.util.function.BiConsumer") @:used @:native("java.util.function.BiConsumer") @:libType
+extern interface java.util.function.BiConsumer<T:Dynamic, U:Dynamic> {
+
+	function accept(param1:java.util.function.BiConsumer.T, param2:java.util.function.BiConsumer.U):Void;
+
+	function andThen(param1:java.util.function.BiConsumer<Dynamic, Dynamic>):java.util.function.BiConsumer<java.util.function.BiConsumer.T, java.util.function.BiConsumer.U>;
+}

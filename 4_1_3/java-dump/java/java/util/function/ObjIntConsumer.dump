@@ -1,0 +1,6 @@
+@:realPath("java.util.function.ObjIntConsumer") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.ObjIntConsumer") @:javaCanonical("java.util.function", "ObjIntConsumer")
+extern interface java.util.function.ObjIntConsumer<T : java.util.function.ObjIntConsumer.T> {
+
+	@:overload
+	function accept(param1:java.util.function.ObjIntConsumer.T, param2:Int):Void;
+}

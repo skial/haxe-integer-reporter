@@ -1,0 +1,83 @@
+@:realPath("java.lang.DoubleClass") @:directlyUsed @:used @:nativeGen @:native("java.lang.Double")
+extern class java.lang.Double extends java.lang.Number implements java.lang.Comparable<java.lang.Double> {
+
+	@:overload
+	function new(param1:Float):Void;
+
+	@:overload @:throws("java.lang.NumberFormatException")
+	function new(param1:String):Void;
+
+	@:overload
+	function compareTo(param1:java.lang.Double):Int;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function isInfinite():Bool;
+
+	@:overload
+	function isNaN():Bool;
+
+	@:overload
+	function toString():String;
+
+	static var MAX_EXPONENT(default,never):Int;
+
+	static var MAX_VALUE(default,never):Float;
+
+	static var MIN_EXPONENT(default,never):Int;
+
+	static var MIN_NORMAL(default,never):Float;
+
+	static var MIN_VALUE(default,never):Float;
+
+	static var NEGATIVE_INFINITY(default,never):Float;
+
+	static var NaN(default,never):Float;
+
+	static var POSITIVE_INFINITY(default,never):Float;
+
+	static var SIZE(default,never):Int;
+
+	static var TYPE(default,never):java.lang.Class<java.lang.Double>;
+
+	@:overload
+	static function compare(param1:Float, param2:Float):Int;
+
+	@:overload
+	static function doubleToLongBits(param1:Float):haxe.Int64;
+
+	@:overload
+	static function doubleToRawLongBits(param1:Float):haxe.Int64;
+
+	@:realPath("_isInfinite") @:native("isInfinite") @:overload
+	static function isInfinite(param1:Float):Bool;
+
+	@:realPath("_isNaN") @:native("isNaN") @:overload
+	static function isNaN(param1:Float):Bool;
+
+	@:overload
+	static function longBitsToDouble(param1:haxe.Int64):Float;
+
+	@:overload @:throws("java.lang.NumberFormatException")
+	static function parseDouble(param1:String):Float;
+
+	@:overload
+	static function toHexString(param1:Float):String;
+
+	@:realPath("_toString") @:native("toString") @:overload
+	static function toString(param1:Float):String;
+
+	@:overload
+	static function valueOf(param1:Float):java.lang.Double;
+
+	@:overload @:throws("java.lang.NumberFormatException")
+	static function valueOf(param1:String):java.lang.Double;
+}

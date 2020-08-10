@@ -1,0 +1,240 @@
+@:require(sys) @:coreApi
+class Sys {
+
+	public static function print
+
+	public static function println
+
+	public static function args
+
+	public static function getEnv
+
+	public static function putEnv
+
+	public static function environment
+
+	public static function sleep
+
+	public static function setTimeLocale
+
+	public static function getCwd
+
+	public static function setCwd
+
+	public static function systemName
+
+	static function _command
+
+	public static function command[Function:(cmd : String, ?args : Null<Array<String>>) -> Int]
+		[Arg:String] [Local cmd(110388):String]
+		[Arg:Null<Array<String>>]
+			[Local args(110389):Null<Array<String>>]
+			[Const:Null<Array<String>>] null
+		[Block:Void]
+			[If:Void]
+				[Binop:Bool]
+					[Local args(110389):Null<Array<String>>:Null<Array<String>>]
+					==
+					[Const:Null<Array<String>>] null
+				[Then:Dynamic] [Block:Dynamic]
+					[Return:Dynamic]
+						[Call:Int]
+							[Field:(cmd : String) -> Int]
+								[TypeExpr Sys:Class<Sys>]
+								[FStatic:(cmd : String) -> Int]
+									Sys
+									_command:(cmd : String) -> Int
+							[Local cmd(110388):String:String]
+				[Else:Void] [Block:Void]
+					[Meta:Void]
+						:ast(switch (systemName()) {
+	case "Windows":
+		cmd = [for (a  in  [StringTools.replace(cmd, "/", "\\")].concat(args)) SysTools.quoteWinArg(a, true)].join(" ");
+		return _command(cmd);	
+	case _:
+		cmd = [cmd].concat(args).map(SysTools.quoteUnixArg).join(" ");
+		return _command(cmd);	
+})
+						[Block:Void]
+							[Var `(110402):String]
+								[Call:String]
+									[Field:Void -> String]
+										[TypeExpr Sys:Class<Sys>]
+										[FStatic:Void -> String]
+											Sys
+											systemName:Void -> String
+							[If:Void]
+								[Binop:Bool]
+									[Local `(110402):String:String]
+									==
+									[Const:String] "Windows"
+								[Then:Dynamic] [Block:Dynamic]
+									[Block:Dynamic]
+										[Binop:String]
+											[Local cmd(110388):String:String]
+											=
+											[Call:String]
+												[Field:(sep : String) -> String]
+													[Block:Array<String>]
+														[Var `(110403):Array<String>] [ArrayDecl:Array<String>]
+														[Block:Void]
+															[Var `1(110404):Int] [Const:Int] 0
+															[Var `2(110405):Array<String>]
+																[Call:Array<String>]
+																	[Field:(a : Array<String>) -> Array<String>]
+																		[ArrayDecl:Array<String>]
+																			[Call:String]
+																				[Field:(s : String, sub : String, by : String) -> String]
+																					[TypeExpr StringTools:Class<StringTools>]
+																					[FStatic:(s : String, sub : String, by : String) -> String]
+																						StringTools
+																						replace:(s : String, sub : String, by : String) -> String
+																				[Local cmd(110388):String:String]
+																				[Const:String] "/"
+																				[Const:String] "\\"
+																		[FInstance:(a : Array<String>) -> Array<String>]
+																			Array<String>
+																			concat:(a : Array<Array.T>) -> Array<Array.T>
+																	[Local args(110389):Null<Array<String>>:Null<Array<String>>]
+															[While:Void]
+																[Binop:Bool]
+																	[Local `1(110404):Int:Int]
+																	<
+																	[Field:Int]
+																		[Local `2(110405):Array<String>:Array<String>]
+																		[FInstance:Int]
+																			Array<String>
+																			length:Int
+																[Block:Void]
+																	[Var a(110406):String]
+																		[Array:String]
+																			[Local `2(110405):Array<String>:Array<String>]
+																			[Local `1(110404):Int:Int]
+																	[Unop:Int]
+																		++
+																		Prefix
+																		[Local `1(110404):Int:Int]
+																	[Call:Int]
+																		[Field:(x : String) -> Int]
+																			[Local `(110403):Array<String>:Array<String>]
+																			[FInstance:(x : String) -> Int]
+																				Array<String>
+																				push:(x : Array.T) -> Int
+																		[Call:String]
+																			[Field:(argument : String, escapeMetaCharacters : Bool) -> String]
+																				[TypeExpr haxe.SysTools:Class<haxe.SysTools>]
+																				[FStatic:(argument : String, escapeMetaCharacters : Bool) -> String]
+																					haxe.SysTools
+																					quoteWinArg:(argument : String, escapeMetaCharacters : Bool) -> String
+																			[Local a(110406):String:String]
+																			[Const:Bool] true
+														[Local `(110403):Array<String>:Array<String>]
+													[FInstance:(sep : String) -> String]
+														Array<String>
+														join:(sep : String) -> String
+												[Const:String] " "
+										[Return:Dynamic]
+											[Call:Int]
+												[Field:(cmd : String) -> Int]
+													[TypeExpr Sys:Class<Sys>]
+													[FStatic:(cmd : String) -> Int]
+														Sys
+														_command:(cmd : String) -> Int
+												[Local cmd(110388):String:String]
+								[Else:Dynamic] [Block:Dynamic]
+									[Binop:String]
+										[Local cmd(110388):String:String]
+										=
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Block:Array<String>]
+													[Var _this(110407):Array<String>]
+														[Call:Array<String>]
+															[Field:(a : Array<String>) -> Array<String>]
+																[ArrayDecl:Array<String>] [Local cmd(110388):String:String]
+																[FInstance:(a : Array<String>) -> Array<String>]
+																	Array<String>
+																	concat:(a : Array<Array.T>) -> Array<Array.T>
+															[Local args(110389):Null<Array<String>>:Null<Array<String>>]
+													[Var f(110408):String -> String]
+														[Field:(argument : String) -> String]
+															[TypeExpr haxe.SysTools:Class<haxe.SysTools>]
+															[FStatic:(argument : String) -> String]
+																haxe.SysTools
+																quoteUnixArg:(argument : String) -> String
+													[Block:Array<String>]
+														[Var `(110409):Array<String>] [ArrayDecl:Array<String>]
+														[Block:Void]
+															[Var `1(110410):Int] [Const:Int] 0
+															[Var `2(110411):Array<String>] [Local _this(110407):Array<String>:Array<String>]
+															[While:Void]
+																[Binop:Bool]
+																	[Local `1(110410):Int:Int]
+																	<
+																	[Field:Int]
+																		[Local `2(110411):Array<String>:Array<String>]
+																		[FInstance:Int]
+																			Array<String>
+																			length:Int
+																[Block:Void]
+																	[Var v(110412):String]
+																		[Array:String]
+																			[Local `2(110411):Array<String>:Array<String>]
+																			[Local `1(110410):Int:Int]
+																	[Unop:Int]
+																		++
+																		Prefix
+																		[Local `1(110410):Int:Int]
+																	[Call:Int]
+																		[Field:(x : String) -> Int]
+																			[Local `(110409):Array<String>:Array<String>]
+																			[FInstance:(x : String) -> Int]
+																				Array<String>
+																				push:(x : Array.T) -> Int
+																		[Call:String]
+																			[Local f(110408):String -> String:String -> String]
+																			[Local v(110412):String:String]
+														[Local `(110409):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] " "
+									[Return:Dynamic]
+										[Call:Int]
+											[Field:(cmd : String) -> Int]
+												[TypeExpr Sys:Class<Sys>]
+												[FStatic:(cmd : String) -> Int]
+													Sys
+													_command:(cmd : String) -> Int
+											[Local cmd(110388):String:String]
+
+	public static function executablePath[Function:Void -> String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:String]
+					[Field:Void -> String]
+						[TypeExpr Sys:Class<Sys>]
+						[FStatic:Void -> String]
+							Sys
+							programPath:Void -> String
+
+	public static function exit
+
+	public static function time
+
+	public static function cpuTime
+
+	public static function programPath
+
+	public static function getChar
+
+	public static function stdin
+
+	public static function stdout
+
+	public static function stderr
+
+	static function __init__() [Block:Void]
+		[Var _(110413):sys.io.FileOutput] [Parenthesis:sys.io.FileOutput] [Cast:sys.io.FileOutput] [Const:sys.io.FileOutput] null
+		[Var _(110414):sys.io.FileInput] [Parenthesis:sys.io.FileInput] [Cast:sys.io.FileInput] [Const:sys.io.FileInput] null
+}

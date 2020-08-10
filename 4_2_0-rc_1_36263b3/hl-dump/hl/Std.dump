@@ -1,0 +1,91 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Std {
+
+	static var rnd:_Std.Rand;
+
+	@:value(0)
+	static var toStringDepth:Int = 0;
+
+	@:hlNative("std", "rnd_init_system")
+	static function rnd_sys() {
+		return null;
+	}
+
+	public static function isOfType(v:Dynamic, t:Dynamic) {
+		var t = t;
+		if ((t == null)) return false;
+		{
+			var this1 = t.__type__;
+			switch (($tkind(this1))) {
+				case 3: {
+					var this1 = $tdyntype(v);
+					switch (($tkind(this1))) {
+						case 5, 6: {
+							var v = v;
+							return $int(v) == v;
+						};
+						default: {}
+					};
+				};
+				case 6: {
+					var this1 = $tdyntype(v);
+					switch (($tkind(this1))) {
+						case 1, 2, 3: return true;
+						default: {}
+					};
+				};
+				case 9: return v != null;
+				default: {}
+			};
+		};
+		return t.check(v);
+	}
+
+	@:keep
+	public static function string(s:Dynamic) {
+		var len = 0;
+		var this1 = $ref(len);
+		var bytes = hl._Bytes.Bytes_Impl_.fromValue(s, this1);
+		var s = $new(String);
+		s.bytes = bytes;
+		s.length = len;
+		return s;
+	}
+
+	@:keep
+	static function __add__(a:Dynamic, b:Dynamic) {
+		var ta = $tdyntype(a);
+		var tb = $tdyntype(b);
+		if ((ta == $ttype(""))) return cast a + Std.string(b);
+		if ((tb == $ttype(""))) return Std.string(a) + cast b;
+		switch (($tkind(ta))) {
+			case 0: switch (($tkind(tb))) {
+				case 0: return 0.;
+				case 1, 2, 3, 5, 6: return b;
+				default: {}
+			};
+			case 1, 2, 3: {
+				var a = a;
+				switch (($tkind(tb))) {
+					case 0: return a;
+					case 1, 2, 3: return a + cast b;
+					case 5, 6: return a + cast b;
+					default: {}
+				};
+			};
+			case 5, 6: {
+				var a = a;
+				switch (($tkind(tb))) {
+					case 0: return a;
+					case 1, 2, 3: return a + cast b;
+					case 5, 6: return a + cast b;
+					default: {}
+				};
+			};
+			default: {}
+		};
+		throw haxe.Exception.thrown("Can't add " + Std.string(a) + "(" + Std.string(ta) + ") and " + Std.string(b) + "(" + Std.string(tb) + ")");
+	}
+
+	static function __init__() Std.rnd = Std.rnd_sys()
+}

@@ -1,0 +1,6 @@
+@:realPath("java.util.function.LongFunction") @:used @:abstract @:libType @:javaNative @:native("java.util.function.LongFunction") @:javaCanonical("java.util.function", "LongFunction")
+extern interface java.util.function.LongFunction<R : java.util.function.LongFunction.R> {
+
+	@:overload
+	function apply(param1:haxe.Int64):java.util.function.LongFunction.R;
+}

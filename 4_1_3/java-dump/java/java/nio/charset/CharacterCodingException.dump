@@ -1,0 +1,6 @@
+@:realPath("java.nio.charset.CharacterCodingException") @:nativeGen @:libType @:javaNative @:native("java.nio.charset.CharacterCodingException") @:javaCanonical("java.nio.charset", "CharacterCodingException")
+extern class java.nio.charset.CharacterCodingException extends java.io.IOException {
+
+	@:overload
+	function new():Void;
+}

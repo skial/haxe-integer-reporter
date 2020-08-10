@@ -1,0 +1,102 @@
+@:realPath("java.lang.reflect.Field") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.reflect.Field") @:javaCanonical("java.lang.reflect", "Field")
+extern class java.lang.reflect.Field extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member {
+
+	@:overload
+	function getAnnotatedType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	@:overload
+	function getAnnotationsByType<T : getAnnotationsByType.T>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	@:overload
+	function getAnnotation<T : getAnnotation.T>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setDouble(param1:Dynamic, param2:Float):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setFloat(param1:Dynamic, param2:Single):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setLong(param1:Dynamic, param2:haxe.Int64):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setInt(param1:Dynamic, param2:Int):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setShort(param1:Dynamic, param2:java.types.Int16):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setChar(param1:Dynamic, param2:java.types.Char16):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setByte(param1:Dynamic, param2:java.types.Int8):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function setBoolean(param1:Dynamic, param2:Bool):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function set(param1:Dynamic, param2:Dynamic):Void;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getDouble(param1:Dynamic):Float;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getFloat(param1:Dynamic):Single;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getLong(param1:Dynamic):haxe.Int64;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getInt(param1:Dynamic):Int;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getShort(param1:Dynamic):java.types.Int16;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getChar(param1:Dynamic):java.types.Char16;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getByte(param1:Dynamic):java.types.Int8;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function getBoolean(param1:Dynamic):Bool;
+
+	@:overload @:throws("java.lang.IllegalAccessException") @:throws("java.lang.IllegalArgumentException")
+	function get(param1:Dynamic):Dynamic;
+
+	@:overload
+	function toGenericString():String;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getGenericType():java.lang.reflect.Type;
+
+	@:overload
+	function getType():java.lang.Class<Dynamic>;
+
+	@:overload
+	function isSynthetic():Bool;
+
+	@:overload
+	function isEnumConstant():Bool;
+
+	@:overload
+	function getModifiers():Int;
+
+	@:overload
+	function getName():String;
+
+	@:overload
+	function getDeclaringClass():java.lang.Class<Dynamic>;
+}

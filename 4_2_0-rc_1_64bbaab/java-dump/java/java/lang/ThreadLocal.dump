@@ -1,0 +1,16 @@
+@:realPath("java.lang.ThreadLocal") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.ThreadLocal") @:javaCanonical("java.lang", "ThreadLocal")
+extern class java.lang.ThreadLocal<T:Dynamic> {
+
+	function new():Void;
+
+	function remove():Void;
+
+	function set(param1:java.lang.ThreadLocal.T):Void;
+
+	function get():java.lang.ThreadLocal.T;
+
+	@:protected
+	function initialValue():java.lang.ThreadLocal.T;
+
+	static function withInitial<S:Dynamic>(param1:java.util.function.Supplier<withInitial.S>):java.lang.ThreadLocal<withInitial.S>;
+}

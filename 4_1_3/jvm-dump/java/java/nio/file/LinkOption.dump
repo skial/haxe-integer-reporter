@@ -1,0 +1,4 @@
+@:realPath("java.nio.file.LinkOption") @:used @:flatEnum @:javaCanonical("java.nio.file", "LinkOption") @:native("java.nio.file.LinkOption")
+extern enum java.nio.file.LinkOption {
+	NOFOLLOW_LINKS;
+}

@@ -1,0 +1,19 @@
+@:realPath("java.lang.reflect.GenericDeclaration") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.reflect.GenericDeclaration") @:javaCanonical("java.lang.reflect", "GenericDeclaration")
+extern interface java.lang.reflect.GenericDeclaration implements java.lang.reflect.AnnotatedElement {
+
+	function getTypeParameters():java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
+
+	function isAnnotationPresent(param1:java.lang.Class<java.lang.annotation.Annotation>):Bool;
+
+	function getAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	function getAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	function getDeclaredAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotation.T>):getDeclaredAnnotation.T;
+
+	function getDeclaredAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotationsByType.T>):java.NativeArray<getDeclaredAnnotationsByType.T>;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+}

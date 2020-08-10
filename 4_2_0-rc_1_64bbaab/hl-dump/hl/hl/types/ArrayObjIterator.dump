@@ -1,0 +1,20 @@
+@:keep @:directlyUsed @:used
+class hl.types.ArrayObjIterator<T> extends haxe.iterators.ArrayIterator<hl.types.ArrayObjIterator.T> {
+
+	public inline function new(arr:hl.types.ArrayObj<hl.types.ArrayObjIterator.T>) {
+		super(cast null);
+		this.arr = arr;
+	}
+
+	var arr:hl.types.ArrayObj<hl.types.ArrayObjIterator.T>;
+
+	public function hasNext() {
+		return this.current < this.arr.length;
+	}
+
+	public function next() {
+		var this1 = this.arr.array;
+		var pos = this.current ++;
+		return $aget(this1, pos);
+	}
+}

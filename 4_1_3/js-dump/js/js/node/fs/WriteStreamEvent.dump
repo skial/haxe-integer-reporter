@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.fs.WriteStreamEvent<T : js.node.fs.WriteStreamEvent.T> to js.node.events.Event<js.node.fs.WriteStreamEvent.T> {}

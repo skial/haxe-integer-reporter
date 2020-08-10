@@ -1,0 +1,3 @@
+@:realPath("python.ConnectionResetError") @:native("ConnectionResetError")
+extern class ConnectionResetError extends ConnectionError {
+}

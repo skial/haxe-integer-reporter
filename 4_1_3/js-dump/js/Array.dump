@@ -1,0 +1,16 @@
+@:keep @:directlyUsed @:used @:coreApi
+extern class Array<T : Array.T> {
+
+	function new():Void;
+
+	var length(default,null):Int;
+
+	function join(sep:String):String;
+
+	function pop():Null<Array.T>;
+
+	function push(x:Array.T):Int;
+
+	@:maybeUsed @:runtime
+	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
+}

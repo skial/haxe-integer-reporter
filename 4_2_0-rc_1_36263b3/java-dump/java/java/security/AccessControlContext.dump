@@ -1,0 +1,16 @@
+@:realPath("java.security.AccessControlContext") @:nativeGen @:libType @:javaNative @:native("java.security.AccessControlContext") @:javaCanonical("java.security", "AccessControlContext")
+extern class java.security.AccessControlContext {
+
+	function new(param1:java.security.AccessControlContext, param2:java.security.DomainCombiner):Void;
+
+	function new(param1:java.NativeArray<java.security.ProtectionDomain>):Void;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	@:throws("java.security.AccessControlException")
+	function checkPermission(param1:java.security.Permission):Void;
+
+	function getDomainCombiner():java.security.DomainCombiner;
+}

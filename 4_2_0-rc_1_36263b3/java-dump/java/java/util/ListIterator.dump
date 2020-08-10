@@ -1,0 +1,23 @@
+@:realPath("java.util.ListIterator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.ListIterator") @:javaCanonical("java.util", "ListIterator")
+extern interface java.util.ListIterator<E:Dynamic> implements java.util.Iterator<java.util.ListIterator.E> {
+
+	function add(param1:java.util.ListIterator.E):Void;
+
+	function set(param1:java.util.ListIterator.E):Void;
+
+	function remove():Void;
+
+	function previousIndex():Int;
+
+	function nextIndex():Int;
+
+	function previous():java.util.ListIterator.E;
+
+	function hasPrevious():Bool;
+
+	function next():java.util.ListIterator.E;
+
+	function hasNext():Bool;
+
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+}

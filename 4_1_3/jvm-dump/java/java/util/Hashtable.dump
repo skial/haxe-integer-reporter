@@ -1,0 +1,108 @@
+@:realPath("java.util.Hashtable") @:used @:libType @:javaNative @:native("java.util.Hashtable") @:javaCanonical("java.util", "Hashtable")
+extern class java.util.Hashtable<K : java.util.Hashtable.K,V : java.util.Hashtable.V> extends java.util.Dictionary<java.util.Hashtable.K, java.util.Hashtable.V> implements java.io.Serializable implements java.lang.Cloneable implements java.util.Map<java.util.Hashtable.K, java.util.Hashtable.V> {
+
+	@:overload
+	function new(param1:java.util.Map<java.util.Hashtable.K, java.util.Hashtable.V>):Void;
+
+	@:overload
+	function new(param1:Int, param2:Single):Void;
+
+	@:overload
+	function new(param1:Int):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function merge(param1:java.util.Hashtable.K, param2:java.util.Hashtable.V, param3:java.util.function.BiFunction<Dynamic, Dynamic, java.util.Hashtable.V>):java.util.Hashtable.V;
+
+	@:overload
+	function compute(param1:java.util.Hashtable.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.Hashtable.V>):java.util.Hashtable.V;
+
+	@:overload
+	function computeIfPresent(param1:java.util.Hashtable.K, param2:java.util.function.BiFunction<Dynamic, Dynamic, java.util.Hashtable.V>):java.util.Hashtable.V;
+
+	@:overload
+	function computeIfAbsent(param1:java.util.Hashtable.K, param2:java.util.function.Function<Dynamic, java.util.Hashtable.V>):java.util.Hashtable.V;
+
+	@:overload
+	function replace(param1:java.util.Hashtable.K, param2:java.util.Hashtable.V):java.util.Hashtable.V;
+
+	@:overload
+	function replace(param1:java.util.Hashtable.K, param2:java.util.Hashtable.V, param3:java.util.Hashtable.V):Bool;
+
+	@:overload
+	function remove(param1:Dynamic, param2:Dynamic):Bool;
+
+	@:overload
+	function remove(param1:Dynamic):java.util.Hashtable.V;
+
+	@:overload
+	function putIfAbsent(param1:java.util.Hashtable.K, param2:java.util.Hashtable.V):java.util.Hashtable.V;
+
+	@:overload
+	function replaceAll(param1:java.util.function.BiFunction<Dynamic, Dynamic, java.util.Hashtable.V>):Void;
+
+	@:overload
+	function forEach(param1:java.util.function.BiConsumer<Dynamic, Dynamic>):Void;
+
+	@:overload
+	function getOrDefault(param1:Dynamic, param2:java.util.Hashtable.V):java.util.Hashtable.V;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function values():java.util.Collection<java.util.Hashtable.V>;
+
+	@:overload
+	function entrySet():java.util.Set<java.util.Map$Entry<java.util.Hashtable.K, java.util.Hashtable.V>>;
+
+	@:overload
+	function keySet():java.util.Set<java.util.Hashtable.K>;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function putAll(param1:java.util.Map<java.util.Hashtable.K, java.util.Hashtable.V>):Void;
+
+	@:overload
+	function put(param1:java.util.Hashtable.K, param2:java.util.Hashtable.V):java.util.Hashtable.V;
+
+	@:overload @:protected
+	function rehash():Void;
+
+	@:overload
+	function get(param1:Dynamic):java.util.Hashtable.V;
+
+	@:overload
+	function containsKey(param1:Dynamic):Bool;
+
+	@:overload
+	function containsValue(param1:Dynamic):Bool;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function elements():java.util.Enumeration<java.util.Hashtable.V>;
+
+	@:overload
+	function keys():java.util.Enumeration<java.util.Hashtable.K>;
+
+	@:overload
+	function isEmpty():Bool;
+
+	@:overload
+	function size():Int;
+}

@@ -1,0 +1,7 @@
+@:realPath("java.text.ParseException") @:nativeGen @:libType @:javaNative @:native("java.text.ParseException") @:javaCanonical("java.text", "ParseException")
+extern class java.text.ParseException extends java.lang.Exception {
+
+	function new(param1:String, param2:Int):Void;
+
+	function getErrorOffset():Int;
+}

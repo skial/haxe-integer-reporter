@@ -1,0 +1,9 @@
+@:realPath("java.nio.file.attribute.GroupPrincipal") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.GroupPrincipal") @:javaCanonical("java.nio.file.attribute", "GroupPrincipal")
+extern interface java.nio.file.attribute.GroupPrincipal implements java.nio.file.attribute.UserPrincipal {
+
+	@:overload
+	function implies(param1:javax.security.auth.Subject):Bool;
+
+	@:overload
+	function getName():String;
+}

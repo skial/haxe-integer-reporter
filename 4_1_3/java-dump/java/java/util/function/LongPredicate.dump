@@ -1,0 +1,15 @@
+@:realPath("java.util.function.LongPredicate") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.function.LongPredicate") @:javaCanonical("java.util.function", "LongPredicate")
+extern interface java.util.function.LongPredicate {
+
+	@:overload
+	function or(param1:java.util.function.LongPredicate):java.util.function.LongPredicate;
+
+	@:overload
+	function negate():java.util.function.LongPredicate;
+
+	@:overload
+	function and(param1:java.util.function.LongPredicate):java.util.function.LongPredicate;
+
+	@:overload
+	function test(param1:haxe.Int64):Bool;
+}

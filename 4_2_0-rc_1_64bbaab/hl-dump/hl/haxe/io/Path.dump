@@ -1,0 +1,133 @@
+@:keep @:directlyUsed @:used
+class haxe.io.Path {
+
+	public function new(path:String) {
+		switch ((path)) {
+			case ".", "..": {
+				this.dir = path;
+				this.file = "";
+				return;
+			};
+		};
+		var c1 = path.lastIndexOf("/", null);
+		var c2 = path.lastIndexOf("\\", null);
+		if ((c1 < c2)) {
+			this.dir = path.substr(0, c2);
+			path = path.substr(c2 + 1, null);
+			this.backslash = true;
+		} else if ((c2 < c1)) {
+			this.dir = path.substr(0, c1);
+			path = path.substr(c1 + 1, null);
+		} else this.dir = null;
+		var cp = path.lastIndexOf(".", null);
+		if ((cp != -1)) {
+			this.ext = path.substr(cp + 1, null);
+			this.file = path.substr(0, cp);
+		} else {
+			this.ext = null;
+			this.file = path;
+		};
+	}
+
+	public var dir:Null<String>;
+
+	public var file:String;
+
+	public var ext:Null<String>;
+
+	public var backslash:Bool;
+
+	public static function directory(path:String) {
+		var s = new haxe.io.Path(path);
+		if ((s.dir == null)) return "";
+		return s.dir;
+	}
+
+	public static function normalize(path:String) {
+		var slash = "/";
+		path = path.split("\\").join(slash);
+		if ((path == slash)) return slash;
+		var target = [];
+		{
+			var _g = 0;
+			var _g1 = path.split(slash);
+			while ((_g < _g1.length)) {
+				var token = _g1[_g];
+				++ _g;
+				if ((token == ".." && target.length > 0 && target[target.length - 1] != "..")) target.pop() else if ((token == "")) {
+					if ((target.length > 0 || path.charCodeAt(0) == 47)) target.push(token);
+				} else if ((token != ".")) target.push(token);
+			};
+		};
+		var tmp = target.join(slash);
+		var acc = new StringBuf();
+		var colon = false;
+		var slashes = false;
+		{
+			var _g2_offset = 0;
+			var _g2_s = tmp;
+			while ((_g2_offset < _g2_s.length)) {
+				var s = _g2_s;
+				var index = _g2_offset ++;
+				var this1 = s.bytes;
+				var c = $bgetui16(this1, index << 1);
+				if ((c >= 55296 && c <= 56319)) {
+					var this1 = s.bytes;
+					c = c - 55232 << 10 | $bgetui16(this1, index + 1 << 1) & 1023;
+				};
+				var c = c;
+				if ((c >= 65536)) ++ _g2_offset;
+				var c = c;
+				switch ((c)) {
+					case 47: if ((! colon)) slashes = true else {
+						var i = c;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc.add("/");
+								slashes = false;
+							};
+							acc.addChar(i);
+						};
+					};
+					case 58: {
+						acc.add(":");
+						colon = true;
+					};
+					default: {
+						var i = c;
+						{
+							colon = false;
+							if ((slashes)) {
+								acc.add("/");
+								slashes = false;
+							};
+							acc.addChar(i);
+						};
+					}
+				};
+			};
+		};
+		return acc.toString();
+	}
+
+	public static function addTrailingSlash(path:String) {
+		if ((path.length == 0)) return "/";
+		var c1 = path.lastIndexOf("/", null);
+		var c2 = path.lastIndexOf("\\", null);
+		if ((c1 < c2)) {
+			if ((c2 != path.length - 1)) return path + "\\" else return path;
+		} else if ((c1 != path.length - 1)) return path + "/" else return path;
+	}
+
+	public static function removeTrailingSlashes(path:String) {
+		@:loopLabel(1) while ((true)) {
+			var _g = path.charCodeAt(path.length - 1);
+			if ((_g == null)) break else switch ((_g)) {
+				case 47, 92: path = path.substr(0, -1);
+				default: @:loopLabel(1) break
+			};
+		};
+		return path;
+	}
+}

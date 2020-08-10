@@ -1,0 +1,1 @@
+typedef python.lib.Repl = python.lib._Re.Choice<str, python.lib.MatchObject -> str>

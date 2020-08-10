@@ -1,0 +1,15 @@
+@:realPath("java.util.Locale_LocaleNameGetter") @:used @:native("java.util.Locale$LocaleNameGetter") @:libType
+extern class java.util.Locale$LocaleNameGetter implements sun.util.locale.provider.LocaleServiceProviderPool$LocalizedObjectGetter<java.util.spi.LocaleNameProvider, java.lang.String> {
+
+	function getObject(param1:java.util.spi.LocaleNameProvider, param2:java.util.Locale, param3:java.lang.String, param4:java.NativeArray<Dynamic>):java.lang.String;
+
+	function getObject(param1:java.util.spi.LocaleServiceProvider, param2:java.util.Locale, param3:java.lang.String, param4:java.NativeArray<Dynamic>):Dynamic;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500():java.util.Locale$LocaleNameGetter;
+
+	static function <clinit>():Void;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

@@ -1,0 +1,74 @@
+@:realPath("Array") @:directlyUsed @:used @:native("list") @:coreApi
+extern class list<T : Array.T> implements ArrayAccess<Array.T> {
+
+	function new():Void;
+
+	var length(default,null):Int;
+
+	inline function concat(a:list<Array.T>):list<Array.T>;
+
+	inline function copy():list<Array.T>;
+
+	@:maybeUsed @:runtime
+	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
+
+	@:runtime
+	inline function keyValueIterator():haxe.iterators.ArrayKeyValueIterator<Array.T>;
+
+	inline function insert(pos:Int, x:Array.T):Void;
+
+	@:runtime
+	inline function join(sep:str):str;
+
+	inline function toString():str;
+
+	@:runtime
+	inline function pop():Null<Array.T>;
+
+	@:runtime
+	inline function push(x:Array.T):Int;
+
+	inline function unshift(x:Array.T):Void;
+
+	inline function indexOf(x:Array.T, fromIndex:Null<Int>):Int;
+
+	inline function lastIndexOf(x:Array.T, fromIndex:Null<Int>):Int;
+
+	inline function remove(x:Array.T):Bool;
+
+	inline function contains(x:Array.T):Bool;
+
+	inline function reverse():Void;
+
+	@:runtime
+	inline function shift():Null<Array.T>;
+
+	inline function slice(pos:Int, end:Null<Int>):list<Array.T>;
+
+	inline function sort(f:(Array.T, Array.T) -> Int):Void;
+
+	inline function splice(pos:Int, len:Int):list<Array.T>;
+
+	@:runtime
+	inline function map<S : map.S>(f:Array.T -> map.S):list<map.S>;
+
+	@:runtime
+	inline function filter(f:Array.T -> Bool):list<Array.T>;
+
+	inline function resize(len:Int):Void;
+
+	@:keep
+	inline function _get(idx:Int):Array.T;
+
+	@:keep
+	inline function _set(idx:Int, val:Array.T):Array.T;
+
+	@:keep
+	inline function unsafeGet(idx:Int):Array.T;
+
+	@:keep
+	inline function unsafeSet(idx:Int, val:Array.T):Array.T;
+
+	@:maybeUsed @:noCompletion
+	function __iter__():python.NativeIterator<Array.T>;
+}

@@ -1,0 +1,6 @@
+@:realPath("java.nio.file.attribute.AttributeView") @:used @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.AttributeView") @:javaCanonical("java.nio.file.attribute", "AttributeView")
+extern interface java.nio.file.attribute.AttributeView {
+
+	@:overload
+	function name():java.lang.String;
+}

@@ -1,0 +1,40 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.io.File {
+
+	public static function getContent(path:java.lang.String) {
+		var f = sys.io.File.read(path, false);
+		var ret = f.readAll(null).toString();
+		f.close();
+		return ret;
+	}
+
+	public static function saveContent(path:java.lang.String, content:java.lang.String) {
+		var f = sys.io.File.write(path, false);
+		f.writeString(content, null);
+		f.close();
+	}
+
+	@:value({ binary : true })
+	public static function read(path:java.lang.String, binary:Null<Bool> = true) {
+		var binary = if ((binary == null)) true else cast binary;
+		try {
+			return new sys.io.FileInput(new java.io.RandomAccessFile(new java.io.File(path), "r"));
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+
+	@:value({ binary : true })
+	public static function write(path:java.lang.String, binary:Null<Bool> = true) {
+		var binary = if ((binary == null)) true else cast binary;
+		var f = new java.io.File(path);
+		if ((f.exists())) f.delete();
+		try {
+			return new sys.io.FileOutput(new java.io.RandomAccessFile(f, "rw"));
+		} catch (_g:java.lang.Throwable) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			throw cast haxe.Exception.thrown(e);
+		};
+	}
+}

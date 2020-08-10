@@ -1,0 +1,14 @@
+@:keep @:directlyUsed @:used
+class SysError {
+
+	public function new(msg:String) {
+		this.msg = msg;
+	}
+
+	public var msg:String;
+
+	@:keep
+	public function toString() {
+		return "SysError(" + this.msg + ")";
+	}
+}

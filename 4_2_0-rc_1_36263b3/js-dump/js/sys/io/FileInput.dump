@@ -1,0 +1,62 @@
+@:used @:coreApi
+class sys.io.FileInput extends haxe.io.Input {
+
+	@:allow(sys.io.File)
+	function new(fd:Int) {
+		this.fd = fd;
+		this.pos = 0;
+	}
+
+	var fd:Int;
+
+	var pos:Int;
+
+	public function readByte() {
+		var buf = js.node.buffer.Buffer.alloc(1);
+		var bytesRead;
+		try {
+			bytesRead = js.node.Fs.readSync(this.fd, buf, 0, 1, this.pos);
+		} catch (_g:Dynamic) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			if ((e.code == "EOF")) throw haxe.Exception.thrown(new haxe.io.Eof()) else throw haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+		if ((bytesRead == 0)) throw haxe.Exception.thrown(new haxe.io.Eof());
+		this.pos ++;
+		return buf[0];
+	}
+
+	public function readBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		var data = s.b;
+		var buf = js.node.buffer.Buffer.from(data.buffer, data.byteOffset, s.length);
+		var bytesRead;
+		try {
+			bytesRead = js.node.Fs.readSync(this.fd, buf, pos, len, this.pos);
+		} catch (_g:Dynamic) {
+			var e = cast haxe.Exception.caught(_g).unwrap();
+			if ((e.code == "EOF")) throw haxe.Exception.thrown(new haxe.io.Eof()) else throw haxe.Exception.thrown(haxe.io.Error.Custom(e));
+		};
+		if ((bytesRead == 0)) throw haxe.Exception.thrown(new haxe.io.Eof());
+		this.pos += bytesRead;
+		return bytesRead;
+	}
+
+	public function close() {
+		js.node.Fs.closeSync(this.fd);
+	}
+
+	public function seek(p:Int, pos:sys.io.FileSeek) {
+		switch ((@:exhaustive enumIndex pos)) {
+			case 0: this.pos = p;
+			case 1: this.pos += p;
+			case 2: this.pos = cast js.node.Fs.fstatSync(this.fd).size + p;
+		};
+	}
+
+	public function tell() {
+		return this.pos;
+	}
+
+	public function eof() {
+		return this.pos >= js.node.Fs.fstatSync(this.fd).size;
+	}
+}

@@ -1,0 +1,6 @@
+@:realPath("java.net.ContentHandlerFactory") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.ContentHandlerFactory") @:javaCanonical("java.net", "ContentHandlerFactory")
+extern interface java.net.ContentHandlerFactory {
+
+	@:overload
+	function createContentHandler(param1:String):java.net.ContentHandler;
+}

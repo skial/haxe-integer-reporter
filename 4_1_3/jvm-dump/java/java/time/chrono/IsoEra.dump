@@ -1,0 +1,5 @@
+@:realPath("java.time.chrono.IsoEra") @:used @:flatEnum @:javaCanonical("java.time.chrono", "IsoEra") @:native("java.time.chrono.IsoEra")
+extern enum java.time.chrono.IsoEra {
+	CE;
+	BCE;
+}

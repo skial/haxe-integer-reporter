@@ -1,0 +1,63 @@
+@:realPath("java.lang.reflect.Parameter") @:used @:libType @:javaNative @:native("java.lang.reflect.Parameter") @:javaCanonical("java.lang.reflect", "Parameter")
+extern class java.lang.reflect.Parameter implements java.lang.reflect.AnnotatedElement {
+
+	@:overload
+	function getAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	@:overload
+	function getDeclaredAnnotationsByType<T : getDeclaredAnnotationsByType.T>(param1:java.lang.Class<getDeclaredAnnotationsByType.T>):java.NativeArray<getDeclaredAnnotationsByType.T>;
+
+	@:overload
+	function getDeclaredAnnotation<T : getDeclaredAnnotation.T>(param1:java.lang.Class<getDeclaredAnnotation.T>):getDeclaredAnnotation.T;
+
+	@:overload
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	@:overload
+	function getAnnotationsByType<T : getAnnotationsByType.T>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	@:overload
+	function getAnnotation<T : getAnnotation.T>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	@:overload
+	function isVarArgs():Bool;
+
+	@:overload
+	function isSynthetic():Bool;
+
+	@:overload
+	function isImplicit():Bool;
+
+	@:overload
+	function getAnnotatedType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getType():java.lang.Class<Dynamic>;
+
+	@:overload
+	function getParameterizedType():java.lang.reflect.Type;
+
+	@:overload
+	function getName():java.lang.String;
+
+	@:overload
+	function getModifiers():Int;
+
+	@:overload
+	function getDeclaringExecutable():java.lang.reflect.Executable;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function isNamePresent():Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function isAnnotationPresent(param1:java.lang.Class<java.lang.annotation.Annotation>):Bool;
+}

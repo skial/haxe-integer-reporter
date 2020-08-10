@@ -1,0 +1,10 @@
+@:keep @:directlyUsed @:used
+class hl.types.ArrayObjKeyValueIterator<T> extends haxe.iterators.ArrayKeyValueIterator<hl.types.ArrayObjKeyValueIterator.T> {
+
+	public inline function new(arr:hl.types.ArrayObj<hl.types.ArrayObjKeyValueIterator.T>) {
+		super(cast null);
+		this.arr = arr;
+	}
+
+	var arr:hl.types.ArrayObj<hl.types.ArrayObjKeyValueIterator.T>;
+}

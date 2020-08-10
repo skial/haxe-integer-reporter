@@ -1,0 +1,4 @@
+@:realPath("java.internal.EmptyObject") @:used @:hxGen @:flatEnum @:keep @:native("haxe.lang.EmptyObject")
+enum haxe.lang.EmptyObject {
+	EMPTY;
+}

@@ -1,0 +1,7 @@
+@:realPath("java.lang.reflect.Member_Statics") @:libType @:javaNative @:native("java.lang.reflect.Member") @:javaCanonical("java.lang.reflect", "Member")
+extern class java.lang.reflect.Member {
+
+	static var PUBLIC(default,null):Int;
+
+	static var DECLARED(default,null):Int;
+}

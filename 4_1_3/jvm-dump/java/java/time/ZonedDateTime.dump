@@ -1,0 +1,255 @@
+@:realPath("java.time.ZonedDateTime") @:used @:libType @:javaNative @:native("java.time.ZonedDateTime") @:javaCanonical("java.time", "ZonedDateTime")
+extern class java.time.ZonedDateTime implements java.io.Serializable implements java.time.chrono.ChronoZonedDateTime<java.time.LocalDate> implements java.time.temporal.Temporal {
+
+	@:overload
+	function toLocalDate():java.time.LocalDate;
+
+	@:overload
+	function toLocalDateTime():java.time.LocalDateTime;
+
+	@:overload
+	function withEarlierOffsetAtOverlap():java.time.ZonedDateTime;
+
+	@:overload
+	function withLaterOffsetAtOverlap():java.time.ZonedDateTime;
+
+	@:overload
+	function withZoneSameLocal(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function withZoneSameInstant(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalAdjuster):java.time.ZonedDateTime;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalField, param2:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.ZonedDateTime;
+
+	@:overload
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.ZonedDateTime;
+
+	@:overload
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.ZonedDateTime;
+
+	@:overload
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.ZonedDateTime;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function toOffsetDateTime():java.time.OffsetDateTime;
+
+	@:overload
+	function format(param1:java.time.format.DateTimeFormatter):java.lang.String;
+
+	@:overload
+	function until(param1:java.time.temporal.Temporal, param2:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	@:overload
+	function query<R : query.R>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	@:overload
+	function minusNanos(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusSeconds(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusMinutes(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusHours(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusDays(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusWeeks(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusMonths(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function minusYears(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusNanos(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusSeconds(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusMinutes(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusHours(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusDays(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusWeeks(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusMonths(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function plusYears(param1:haxe.Int64):java.time.ZonedDateTime;
+
+	@:overload
+	function truncatedTo(param1:java.time.temporal.TemporalUnit):java.time.ZonedDateTime;
+
+	@:overload
+	function withNano(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withSecond(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withMinute(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withHour(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withDayOfYear(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withDayOfMonth(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withMonth(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function withYear(param1:Int):java.time.ZonedDateTime;
+
+	@:overload
+	function getNano():Int;
+
+	@:overload
+	function getSecond():Int;
+
+	@:overload
+	function getMinute():Int;
+
+	@:overload
+	function getHour():Int;
+
+	@:overload
+	function toLocalTime():java.time.LocalTime;
+
+	@:overload
+	function getDayOfWeek():java.time.DayOfWeek;
+
+	@:overload
+	function getDayOfYear():Int;
+
+	@:overload
+	function getDayOfMonth():Int;
+
+	@:overload
+	function getMonth():java.time.Month;
+
+	@:overload
+	function getMonthValue():Int;
+
+	@:overload
+	function getYear():Int;
+
+	@:overload
+	function withFixedOffsetZone():java.time.ZonedDateTime;
+
+	@:overload
+	function getZone():java.time.ZoneId;
+
+	@:overload
+	function getOffset():java.time.ZoneOffset;
+
+	@:overload
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalUnit):Bool;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	@:overload
+	function getChronology():java.time.chrono.Chronology;
+
+	@:overload
+	function toInstant():java.time.Instant;
+
+	@:overload
+	function toEpochSecond():haxe.Int64;
+
+	@:overload
+	function compareTo(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Int;
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function isBefore(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	@:overload
+	function isAfter(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	@:overload
+	function isEqual(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence, param2:java.time.format.DateTimeFormatter):java.time.ZonedDateTime;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence):java.time.ZonedDateTime;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.ZonedDateTime;
+
+	@:overload
+	static function ofStrict(param1:java.time.LocalDateTime, param2:java.time.ZoneOffset, param3:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function ofInstant(param1:java.time.LocalDateTime, param2:java.time.ZoneOffset, param3:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function ofInstant(param1:java.time.Instant, param2:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function ofLocal(param1:java.time.LocalDateTime, param2:java.time.ZoneId, param3:java.time.ZoneOffset):java.time.ZonedDateTime;
+
+	@:overload
+	static function of(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int, param7:Int, param8:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function of(param1:java.time.LocalDate, param2:java.time.LocalTime, param3:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function of(param1:java.time.LocalDateTime, param2:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	static function now(param1:java.time.Clock):java.time.ZonedDateTime;
+
+	@:overload
+	static function now():java.time.ZonedDateTime;
+
+	@:overload
+	static function now(param1:java.time.ZoneId):java.time.ZonedDateTime;
+}

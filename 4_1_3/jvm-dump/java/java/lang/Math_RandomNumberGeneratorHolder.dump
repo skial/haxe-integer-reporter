@@ -1,0 +1,3 @@
+@:realPath("java.lang.Math_RandomNumberGeneratorHolder") @:libType @:javaNative @:native("java.lang.Math$RandomNumberGeneratorHolder") @:javaCanonical("java.lang", "Math.RandomNumberGeneratorHolder")
+extern class java.lang.Math$RandomNumberGeneratorHolder {
+}

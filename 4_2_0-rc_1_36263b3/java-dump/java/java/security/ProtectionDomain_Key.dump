@@ -1,0 +1,3 @@
+@:realPath("java.security.ProtectionDomain_Key") @:nativeGen @:libType @:javaNative @:native("java.security.ProtectionDomain$Key") @:javaCanonical("java.security", "ProtectionDomain.Key")
+extern class java.security.ProtectionDomain$Key {
+}

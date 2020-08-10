@@ -1,0 +1,12 @@
+@:realPath("java.nio.file.DirectoryStream") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.DirectoryStream") @:javaCanonical("java.nio.file", "DirectoryStream")
+extern interface java.nio.file.DirectoryStream<T:Dynamic> implements java.lang.Iterable<java.nio.file.DirectoryStream.T> implements java.io.Closeable {
+
+	function iterator():java.util.Iterator<java.nio.file.DirectoryStream.T>;
+
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	function spliterator():java.util.Spliterator<java.nio.file.DirectoryStream.T>;
+
+	@:throws("java.lang.Exception")
+	function close():Void;
+}

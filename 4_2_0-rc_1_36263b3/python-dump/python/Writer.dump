@@ -1,0 +1,45 @@
+@:directlyUsed @:used
+class Writer {
+
+	@:value(Macros.getDirectory().normalize())
+	static var directory:str = haxe.io.Path.normalize("/");
+
+	@:value(Macros.getHaxever())
+	static var haxever:str = "4.2.0-rc.1_36263b3";
+
+	@:value(Macros.getTarget())
+	public static var file:str = "python";
+
+	@:isVar
+	public static var handle(get,default):str;
+
+	static function get_handle() {
+		if ((Writer.handle == null)) {
+			if ((! sys.FileSystem.exists("./" + Writer.directory))) sys.FileSystem.createDirectory("./" + Writer.directory);
+			Writer.handle = sys.io.File.getContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"));
+		};
+		return Writer.handle;
+	}
+
+	@:value(0)
+	static var lastIndex:Int = 0;
+
+	public static function writePair<T>(v1:writePair.T, v2:writePair.T, pos:Null<haxe.PosInfos> = null) {
+		var _this = Writer.get_handle();
+		var str = "| " + pos.lineNumber + " |";
+		var startIndex = Writer.lastIndex;
+		var index = if ((startIndex == null)) python.Syntax.call(python.Syntax.field(_this, "find"), [str]) else HxString.indexOfImpl(_this, str, startIndex);
+		var addition = "" + Std.string(v1) + "|" + Std.string(v2) + "|\n";
+		if ((index > -1)) {
+			Writer.lastIndex = index;
+			var _this = Writer.get_handle();
+			var nl = if ((index == null)) python.Syntax.call(python.Syntax.field(_this, "find"), ["\n"]) else HxString.indexOfImpl(_this, "\n", index);
+			if ((nl > -1)) Writer.handle = HxString.substring(Writer.get_handle(), 0, nl) + addition + HxString.substring(Writer.get_handle(), nl + 1, Writer.get_handle().length) else throw cast haxe.Exception.thrown("Unable to find newline.");
+		} else throw cast haxe.Exception.thrown("Unable to find line number `" + pos.lineNumber + "` for values " + Std.string(v1) + " and " + Std.string(v2));
+		haxe.Log.trace(pos.lineNumber, {fileName : "Writer.hx", lineNumber : 49, className : "Writer", methodName : "writePair", customParams : [v1, v2]});
+	}
+
+	public static function close() {
+		sys.io.File.saveContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"), Writer.get_handle());
+	}
+}

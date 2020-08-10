@@ -1,0 +1,42 @@
+@:keep @:directlyUsed @:used @:dox(hide) @:noCompletion
+class haxe.NativeStackTrace {
+
+	@:ifFeature("haxe.NativeStackTrace.exceptionStack")
+	public static inline function saveStack(exception:Any) {}
+
+	@:hlNative("std", "exception_stack")
+	public static function exceptionStack() {
+		return null;
+	}
+
+	public static function callStack() {
+		var stack;
+		try {
+			throw new haxe.Exception("", null, @:implicitCast cast cast "stack");
+		} catch (_g:Dynamic) {
+			stack = haxe.NativeStackTrace.exceptionStack();
+		};
+		var skip = 1;
+		{
+			var _g = 0;
+			var _g1 = $asize(stack) - 1;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				var b = $aget(stack, i);
+				var s = $new(String);
+				s.bytes = b;
+				s.length = hl._Bytes.Bytes_Impl_.ucs2Length(b, 0);
+				var s = s;
+				if ((s.indexOf("NativeStackTrace.callStack", null) < 0)) break;
+				++ skip;
+			};
+		};
+		if ((skip < $asize(stack))) {
+			var len = $asize(stack) - skip;
+			var this1 = $aalloc(len);
+			var n = this1;
+			hl._NativeArray.NativeArray_Impl_.blit(n, 0, stack, skip, len);
+			return n;
+		} else return stack;
+	}
+}

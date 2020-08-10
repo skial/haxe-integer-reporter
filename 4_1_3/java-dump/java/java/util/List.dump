@@ -1,0 +1,93 @@
+@:realPath("java.util.List") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.List") @:javaCanonical("java.util", "List")
+extern interface java.util.List<E : java.util.List.E> implements java.util.Collection<java.util.List.E> {
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.util.List.E>;
+
+	@:overload
+	function subList(param1:Int, param2:Int):java.util.List<java.util.List.E>;
+
+	@:overload
+	function listIterator(param1:Int):java.util.ListIterator<java.util.List.E>;
+
+	@:overload
+	function listIterator():java.util.ListIterator<java.util.List.E>;
+
+	@:overload
+	function lastIndexOf(param1:Dynamic):Int;
+
+	@:overload
+	function indexOf(param1:Dynamic):Int;
+
+	@:overload
+	function remove(param1:Int):java.util.List.E;
+
+	@:overload
+	function remove(param1:Dynamic):Bool;
+
+	@:overload
+	function add(param1:Int, param2:java.util.List.E):Void;
+
+	@:overload
+	function add(param1:java.util.List.E):Bool;
+
+	@:overload
+	function set(param1:Int, param2:java.util.List.E):java.util.List.E;
+
+	@:overload
+	function get(param1:Int):java.util.List.E;
+
+	@:overload
+	function clear():Void;
+
+	@:overload
+	function sort(param1:java.util.Comparator<Dynamic>):Void;
+
+	@:overload
+	function replaceAll(param1:java.util.function.UnaryOperator<java.util.List.E>):Void;
+
+	@:overload
+	function retainAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function removeAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function addAll(param1:Int, param2:java.util.Collection<java.util.List.E>):Bool;
+
+	@:overload
+	function addAll(param1:java.util.Collection<java.util.List.E>):Bool;
+
+	@:overload
+	function containsAll(param1:java.util.Collection<Dynamic>):Bool;
+
+	@:overload
+	function toArray<T : toArray.T>(param1:java.NativeArray<toArray.T>):java.NativeArray<toArray.T>;
+
+	@:overload
+	function toArray():java.NativeArray<Dynamic>;
+
+	@:overload
+	function iterator():java.util.Iterator<java.util.List.E>;
+
+	@:overload
+	function contains(param1:Dynamic):Bool;
+
+	@:overload
+	function isEmpty():Bool;
+
+	@:overload
+	function size():Int;
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function removeIf(param1:java.util.function.Predicate<Dynamic>):Bool;
+
+	@:overload
+	function stream():java.util.stream.Stream<java.util.List.E>;
+
+	@:overload
+	function parallelStream():java.util.stream.Stream<java.util.List.E>;
+}

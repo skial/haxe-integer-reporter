@@ -1,0 +1,7 @@
+@:realPath("java.nio.file.WatchEvent_Kind") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.WatchEvent$Kind") @:javaCanonical("java.nio.file", "WatchEvent.Kind")
+extern interface java.nio.file.WatchEvent$Kind<T:Dynamic> {
+
+	function type():java.lang.Class<java.nio.file.WatchEvent_Kind.T>;
+
+	function name():String;
+}

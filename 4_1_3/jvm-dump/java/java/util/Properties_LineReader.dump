@@ -1,0 +1,9 @@
+@:realPath("java.util.Properties_LineReader") @:libType @:javaNative @:native("java.util.Properties$LineReader") @:javaCanonical("java.util", "Properties.LineReader")
+extern class java.util.Properties$LineReader {
+
+	@:overload
+	function new(param1:java.util.Properties, param2:java.io.Reader):Void;
+
+	@:overload
+	function new(param1:java.util.Properties, param2:java.io.InputStream):Void;
+}

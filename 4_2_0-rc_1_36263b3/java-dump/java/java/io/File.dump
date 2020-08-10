@@ -1,0 +1,127 @@
+@:realPath("java.io.File") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.io.File") @:javaCanonical("java.io", "File")
+extern class java.io.File implements java.lang.Comparable<java.io.File> implements java.io.Serializable {
+
+	function new(param1:java.net.URI):Void;
+
+	function new(param1:String):Void;
+
+	function new(param1:String, param2:String):Void;
+
+	function new(param1:java.io.File, param2:String):Void;
+
+	function compareTo(param1:Dynamic):Int;
+
+	function compareTo(param1:java.io.File):Int;
+
+	function toPath():java.nio.file.Path;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function getUsableSpace():haxe.Int64;
+
+	function getFreeSpace():haxe.Int64;
+
+	function getTotalSpace():haxe.Int64;
+
+	function canExecute():Bool;
+
+	function setExecutable(param1:Bool):Bool;
+
+	function setExecutable(param1:Bool, param2:Bool):Bool;
+
+	function setReadable(param1:Bool):Bool;
+
+	function setReadable(param1:Bool, param2:Bool):Bool;
+
+	function setWritable(param1:Bool):Bool;
+
+	function setWritable(param1:Bool, param2:Bool):Bool;
+
+	function setReadOnly():Bool;
+
+	function setLastModified(param1:haxe.Int64):Bool;
+
+	function renameTo(param1:java.io.File):Bool;
+
+	function mkdirs():Bool;
+
+	function mkdir():Bool;
+
+	function listFiles(param1:java.io.FileFilter):java.NativeArray<java.io.File>;
+
+	function listFiles():java.NativeArray<java.io.File>;
+
+	function listFiles(param1:java.io.FilenameFilter):java.NativeArray<java.io.File>;
+
+	function list(param1:java.io.FilenameFilter):java.NativeArray<String>;
+
+	function list():java.NativeArray<String>;
+
+	function deleteOnExit():Void;
+
+	function delete():Bool;
+
+	@:throws("java.io.IOException")
+	function createNewFile():Bool;
+
+	function length():haxe.Int64;
+
+	function lastModified():haxe.Int64;
+
+	function isHidden():Bool;
+
+	function isFile():Bool;
+
+	function isDirectory():Bool;
+
+	function exists():Bool;
+
+	function canWrite():Bool;
+
+	function canRead():Bool;
+
+	function toURI():java.net.URI;
+
+	@:throws("java.net.MalformedURLException") @:deprecated
+	function toURL():java.net.URL;
+
+	@:throws("java.io.IOException")
+	function getCanonicalFile():java.io.File;
+
+	@:throws("java.io.IOException")
+	function getCanonicalPath():String;
+
+	function getAbsoluteFile():java.io.File;
+
+	function getAbsolutePath():String;
+
+	function isAbsolute():Bool;
+
+	function getPath():String;
+
+	function getParentFile():java.io.File;
+
+	function getParent():String;
+
+	function getName():String;
+
+	@:throws("java.io.IOException")
+	static function createTempFile(param1:String, param2:String):java.io.File;
+
+	@:throws("java.io.IOException")
+	static function createTempFile(param1:String, param2:String, param3:java.io.File):java.io.File;
+
+	static function listRoots():java.NativeArray<java.io.File>;
+
+	static var separatorChar(default,never):java.types.Char16;
+
+	static var separator(default,never):String;
+
+	static var pathSeparatorChar(default,never):java.types.Char16;
+
+	static var pathSeparator(default,never):String;
+}

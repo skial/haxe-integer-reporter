@@ -1,0 +1,31 @@
+@:realPath("java.internal._StringExt.JavaString") @:nativeGen @:keep @:native("haxe.lang.NativeString")
+private extern class haxe.lang.NativeString {
+
+	function _charAt(idx:Int):java.Char16;
+
+	function codePointAt(idx:Int):Int;
+
+	function codePointBefore(idx:Int):Int;
+
+	function codePointCount(begin:Int, end:Int):Int;
+
+	function offsetByCodePoints(index:Int, codePointOffset:Int):Int;
+
+	function getChars(srcBegin:Int, srcEnd:Int, dst:java.NativeArray<java.Char16>, dstBegin:Int):Void;
+
+	function startsWith(prefix:String):Bool;
+
+	function endsWith(suffix:String):Bool;
+
+	function _indexOf(str:String, fromIndex:Int):Int;
+
+	function _lastIndexOf(str:String, fromIndex:Int):Int;
+
+	function _substring(begin:Int, end:Int):String;
+
+	function replace(old:String, nw:String):String;
+
+	function _split(regex:String):java.NativeArray<String>;
+
+	function trim():String;
+}

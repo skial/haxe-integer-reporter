@@ -1,0 +1,9 @@
+@:realPath("java.util.Enumeration") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.Enumeration") @:javaCanonical("java.util", "Enumeration")
+extern interface java.util.Enumeration<E : java.util.Enumeration.E> {
+
+	@:overload
+	function nextElement():java.util.Enumeration.E;
+
+	@:overload
+	function hasMoreElements():Bool;
+}

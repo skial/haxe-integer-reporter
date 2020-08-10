@@ -1,0 +1,44 @@
+@:used @:coreApi
+class sys.io.FileOutput extends haxe.io.Output {
+
+	@:allow(sys.io.File)
+	function new(fd:Int) {
+		this.fd = fd;
+		this.pos = 0;
+	}
+
+	var fd:Int;
+
+	var pos:Int;
+
+	public function writeByte(b:Int) {
+		var buf = js.node.buffer.Buffer.alloc(1);
+		buf[0] = b;
+		js.node.Fs.writeSync(this.fd, buf, 0, 1, this.pos);
+		this.pos ++;
+	}
+
+	public function writeBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		var data = s.b;
+		var buf = js.node.buffer.Buffer.from(data.buffer, data.byteOffset, s.length);
+		var wrote = js.node.Fs.writeSync(this.fd, buf, pos, len, this.pos);
+		this.pos += wrote;
+		return wrote;
+	}
+
+	public function close() {
+		js.node.Fs.closeSync(this.fd);
+	}
+
+	public function seek(p:Int, pos:sys.io.FileSeek) {
+		switch ((@:exhaustive enumIndex pos)) {
+			case 0: this.pos = p;
+			case 1: this.pos += p;
+			case 2: this.pos = cast js.node.Fs.fstatSync(this.fd).size + p;
+		};
+	}
+
+	public function tell() {
+		return this.pos;
+	}
+}

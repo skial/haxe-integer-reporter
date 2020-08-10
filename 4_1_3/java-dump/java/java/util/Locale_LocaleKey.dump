@@ -1,0 +1,9 @@
+@:realPath("java.util.Locale_LocaleKey") @:nativeGen @:libType @:javaNative @:native("java.util.Locale$LocaleKey") @:javaCanonical("java.util", "Locale.LocaleKey")
+extern class java.util.Locale$LocaleKey {
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+}

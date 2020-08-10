@@ -1,0 +1,289 @@
+@:keep @:directlyUsed @:used @:dox(hide)
+class python.Boot {
+
+	@:value(new Set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"]))
+	static var keywords:set<str> = new set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"]);
+
+	@:has_untyped
+	static function toString1(o:Dynamic, s:str) {
+		if ((o == null)) return "null";
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.str))) return o;
+		if ((s == null)) s = "";
+		if ((s.length >= 5)) return "<...>";
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.bool))) {
+			if ((cast o)) return "true" else return "false";
+		};
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.int) && ! python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.bool))) return python.internal.UBuiltins.str(o);
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.float))) try {
+			if ((cast o == python.internal.UBuiltins.int(o))) return python.internal.UBuiltins.str(Math.floor(cast o + 0.5)) else return python.internal.UBuiltins.str(o);
+		} catch (_g:BaseException) {
+			{
+				null;
+			};
+			return python.internal.UBuiltins.str(o);
+		};
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.list))) {
+			var o1 = o;
+			var l = o1.length;
+			var st = "[";
+			s += "\t";
+			{
+				var _g = 0;
+				var _g1 = l;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					var prefix = "";
+					if ((i > 0)) prefix = ",";
+					st += prefix + python.Boot.toString1(o1[i], s);
+				};
+			};
+			st += "]";
+			return st;
+		};
+		try {
+			if ((python.internal.UBuiltins.hasattr(o, "toString"))) return python.Syntax.call(python.Syntax.field(o, "toString"), []);
+		} catch (_g:BaseException) {
+			{
+				null;
+			};
+		};
+		if ((python.internal.UBuiltins.hasattr(o, "__class__"))) {
+			if ((python.internal.UBuiltins.isinstance(o, _hx_AnonObject))) {
+				var toStr = null;
+				try {
+					var fields = python.Boot.fields(o);
+					var _g = [];
+					{
+						var _g1 = 0;
+						while ((_g1 < fields.length)) {
+							var f = fields[_g1];
+							++ _g1;
+							{
+								var x = "" + f + " : " + python.Boot.toString1(python.Boot.simpleField(o, f), s + "\t");
+								python.Syntax.call(python.Syntax.field(_g, "append"), [x]);
+							};
+						};
+					};
+					var fieldsStr = _g;
+					toStr = "{ " + cast python.Syntax.field(", ", "join")(python.Syntax.code("[x1 for x1 in {0}]", fieldsStr)) + " }";
+				} catch (_g:BaseException) {
+					{
+						null;
+					};
+					return "{ ... }";
+				};
+				if ((toStr == null)) return "{ ... }" else return toStr;
+			};
+			if ((python.internal.UBuiltins.isinstance(o, Enum))) {
+				var o1 = cast o;
+				var l = python.internal.UBuiltins.len(o1.params);
+				var hasParams = l > 0;
+				if ((hasParams)) {
+					var paramsStr = "";
+					{
+						var _g = 0;
+						var _g1 = l;
+						while ((_g < _g1)) {
+							var i = _g ++;
+							var prefix = "";
+							if ((i > 0)) prefix = ",";
+							paramsStr += prefix + python.Boot.toString1(o1.params[i], s);
+						};
+					};
+					return o1.tag + "(" + paramsStr + ")";
+				} else return o1.tag;
+			};
+			if ((__define_feature__("python._hx_class_name", python.internal.UBuiltins.hasattr(o, "_hx_class_name")))) {
+				if ((python.Syntax.field(python.Syntax.field(o, "__class__"), "__name__") != "type")) {
+					var fields = python.Boot.getInstanceFields(o);
+					var _g = [];
+					{
+						var _g1 = 0;
+						while ((_g1 < fields.length)) {
+							var f = fields[_g1];
+							++ _g1;
+							{
+								var x = "" + f + " : " + python.Boot.toString1(python.Boot.simpleField(o, f), s + "\t");
+								python.Syntax.call(python.Syntax.field(_g, "append"), [x]);
+							};
+						};
+					};
+					var fieldsStr = _g;
+					var toStr = __define_feature__("python._hx_class_name", python.Syntax.field(o, "_hx_class_name")) + "( " + cast python.Syntax.field(", ", "join")(python.Syntax.code("[x1 for x1 in {0}]", fieldsStr)) + " )";
+					return toStr;
+				} else {
+					var fields = python.Boot.getClassFields(o);
+					var _g = [];
+					{
+						var _g1 = 0;
+						while ((_g1 < fields.length)) {
+							var f = fields[_g1];
+							++ _g1;
+							{
+								var x = "" + f + " : " + python.Boot.toString1(python.Boot.simpleField(o, f), s + "\t");
+								python.Syntax.call(python.Syntax.field(_g, "append"), [x]);
+							};
+						};
+					};
+					var fieldsStr = _g;
+					var toStr = "#" + __define_feature__("python._hx_class_name", python.Syntax.field(o, "_hx_class_name")) + "( " + cast python.Syntax.field(", ", "join")(python.Syntax.code("[x1 for x1 in {0}]", fieldsStr)) + " )";
+					return toStr;
+				};
+			};
+			if ((cast python.Syntax.binop(o, "==", cast str))) return "#String";
+			if ((cast python.Syntax.binop(o, "==", cast list))) return "#Array";
+			if ((python.internal.UBuiltins.callable(o))) return "function";
+			try {
+				if ((python.internal.UBuiltins.hasattr(o, "__repr__"))) return python.Syntax.call(python.Syntax.field(o, "__repr__"), []);
+			} catch (_g:BaseException) {
+				{
+					null;
+				};
+			};
+			if ((python.internal.UBuiltins.hasattr(o, "__str__"))) return python.Syntax.call(python.Syntax.field(o, "__str__"), [[]]);
+			if ((python.internal.UBuiltins.hasattr(o, "__name__"))) return python.Syntax.field(o, "__name__");
+			return "???";
+		} else return python.internal.UBuiltins.str(o);
+	}
+
+	@:has_untyped @:analyzer(no_local_dce)
+	static function fields(o:Dynamic) {
+		var a = [];
+		if ((o != null)) {
+			if ((__define_feature__("python._hx_fields", python.internal.UBuiltins.hasattr(o, "_hx_fields")))) {
+				var fields = __define_feature__("python._hx_fields", python.Syntax.field(o, "_hx_fields"));
+				if ((fields != null)) return python.internal.UBuiltins.list(fields);
+			};
+			if ((python.internal.UBuiltins.isinstance(o, _hx_AnonObject))) {
+				var d = python.Syntax.field(o, "__dict__");
+				var keys = python.Syntax.call(python.Syntax.field(d, "keys"), []);
+				var handler = python.Boot.unhandleKeywords;
+				python.Syntax.code("for k in keys:");
+				python.Syntax.code("    if (k != '_hx_disable_getattr'):");
+				python.Syntax.code("        a.append(handler(k))");
+			} else if ((python.internal.UBuiltins.hasattr(o, "__dict__"))) {
+				var d = python.Syntax.field(o, "__dict__");
+				var keys1 = python.Syntax.call(python.Syntax.field(d, "keys"), []);
+				python.Syntax.code("for k in keys1:");
+				python.Syntax.code("    a.append(k)");
+			};
+		};
+		return a;
+	}
+
+	static function simpleField(o:Dynamic, field:str) {
+		if ((field == null)) return null;
+		var field1 = if ((python.Syntax.isIn(field, python.Boot.keywords))) cast python.Syntax.binop("_hx_", "+", field) else if ((field.length > 2 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [0])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [1])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [field.length - 1])) != 95)) cast python.Syntax.binop("_hx_", "+", field) else field;
+		if ((python.internal.UBuiltins.hasattr(o, field1))) return python.internal.UBuiltins.getattr(o, field1) else return null;
+	}
+
+	static function field(o:Dynamic, field:str) {
+		if ((field == null)) return null;
+		if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.str))) {
+			var field1 = field;
+			switch ((field1)) {
+				case "charAt": return cast new python.internal.MethodClosure(o, cast HxString.charAt);
+				case "charCodeAt": return cast new python.internal.MethodClosure(o, cast HxString.charCodeAt);
+				case "indexOf": return cast new python.internal.MethodClosure(o, cast HxString.indexOf);
+				case "lastIndexOf": return cast new python.internal.MethodClosure(o, cast HxString.lastIndexOf);
+				case "length": return python.internal.UBuiltins.len(cast o);
+				case "split": return cast new python.internal.MethodClosure(o, cast HxString.split);
+				case "substr": return cast new python.internal.MethodClosure(o, cast HxString.substr);
+				case "substring": return cast new python.internal.MethodClosure(o, cast HxString.substring);
+				case "toLowerCase": return cast new python.internal.MethodClosure(o, cast HxString.toLowerCase);
+				case "toString": return cast new python.internal.MethodClosure(o, cast HxString.toString);
+				case "toUpperCase": return cast new python.internal.MethodClosure(o, cast HxString.toUpperCase);
+				default: {
+					var field1 = if ((python.Syntax.isIn(field, python.Boot.keywords))) cast python.Syntax.binop("_hx_", "+", field) else if ((field.length > 2 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [0])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [1])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [field.length - 1])) != 95)) cast python.Syntax.binop("_hx_", "+", field) else field;
+					if ((python.internal.UBuiltins.hasattr(o, field1))) return python.internal.UBuiltins.getattr(o, field1) else return null;
+				}
+			};
+		} else if ((python.internal.UBuiltins.isinstance(o, python.internal.UBuiltins.list))) {
+			var field1 = field;
+			switch ((field1)) {
+				case "concat": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.concat);
+				case "contains": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.contains);
+				case "copy": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.copy);
+				case "filter": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.filter);
+				case "indexOf": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.indexOf);
+				case "insert": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.insert);
+				case "iterator": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.iterator);
+				case "join": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.join);
+				case "keyValueIterator": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.keyValueIterator);
+				case "lastIndexOf": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.lastIndexOf);
+				case "length": return python.internal.UBuiltins.len(cast o);
+				case "map": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.map);
+				case "pop": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.pop);
+				case "push": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.push);
+				case "remove": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.remove);
+				case "reverse": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.reverse);
+				case "shift": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.shift);
+				case "slice": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.slice);
+				case "sort": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.sort);
+				case "splice": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.splice);
+				case "toString": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.toString);
+				case "unshift": return cast new python.internal.MethodClosure(o, cast python.internal.ArrayImpl.unshift);
+				default: {
+					var field1 = if ((python.Syntax.isIn(field, python.Boot.keywords))) cast python.Syntax.binop("_hx_", "+", field) else if ((field.length > 2 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [0])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [1])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [field.length - 1])) != 95)) cast python.Syntax.binop("_hx_", "+", field) else field;
+					if ((python.internal.UBuiltins.hasattr(o, field1))) return python.internal.UBuiltins.getattr(o, field1) else return null;
+				}
+			};
+		} else {
+			var field1 = if ((python.Syntax.isIn(field, python.Boot.keywords))) cast python.Syntax.binop("_hx_", "+", field) else if ((field.length > 2 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [0])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [1])) == 95 && python.internal.UBuiltins.ord(python.Syntax._arrayAccess(field, [field.length - 1])) != 95)) cast python.Syntax.binop("_hx_", "+", field) else field;
+			if ((python.internal.UBuiltins.hasattr(o, field1))) return python.internal.UBuiltins.getattr(o, field1) else return null;
+		};
+	}
+
+	@:has_untyped
+	static function getInstanceFields(c:Class<Dynamic>) {
+		var f = if ((__define_feature__("python._hx_fields", python.internal.UBuiltins.hasattr(c, "_hx_fields")))) python.internal.UBuiltins.list(__define_feature__("python._hx_fields", python.Syntax.field(c, "_hx_fields"))) else [];
+		if ((__define_feature__("python._hx_methods", python.internal.UBuiltins.hasattr(c, "_hx_methods")))) f = cast python.Syntax.binop(f, "+", __define_feature__("python._hx_methods", python.Syntax.field(c, "_hx_methods")));
+		var sc = python.Boot.getSuperClass(c);
+		if ((sc == null)) return f else {
+			var scArr = python.Boot.getInstanceFields(sc);
+			var scMap = new set(scArr);
+			{
+				var _g = 0;
+				while ((_g < f.length)) {
+					var f1 = f[_g];
+					++ _g;
+					if ((! python.Syntax.isIn(f1, scMap))) python.Syntax.call(python.Syntax.field(scArr, "append"), [f1]);
+				};
+			};
+			return scArr;
+		};
+	}
+
+	@:has_untyped
+	static function getSuperClass(c:Class<Dynamic>) {
+		if ((c == null)) return null;
+		try {
+			if ((__define_feature__("python._hx_super", python.internal.UBuiltins.hasattr(c, "_hx_super")))) return __define_feature__("python._hx_super", python.Syntax.field(c, "_hx_super"));
+			return null;
+		} catch (_g:BaseException) {
+			{
+				null;
+			};
+		};
+		return null;
+	}
+
+	@:has_untyped
+	static function getClassFields(c:Class<Dynamic>) {
+		if ((__define_feature__("python._hx_statics", python.internal.UBuiltins.hasattr(c, "_hx_statics")))) {
+			var x = __define_feature__("python._hx_statics", python.Syntax.field(c, "_hx_statics"));
+			return python.internal.UBuiltins.list(x);
+		} else return [];
+	}
+
+	@:value(Internal.prefix().length)
+	static var prefixLength:Int = "_hx_".length;
+
+	static function unhandleKeywords(name:str) {
+		if ((HxString.substr(name, 0, python.Boot.prefixLength) == "_hx_")) {
+			var real = HxString.substr(name, python.Boot.prefixLength, null);
+			if ((python.Syntax.isIn(real, python.Boot.keywords))) return real;
+		};
+		return name;
+	}
+}

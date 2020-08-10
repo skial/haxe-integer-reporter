@@ -1,0 +1,6 @@
+@:realPath("java.security.DomainCombiner") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.security.DomainCombiner") @:javaCanonical("java.security", "DomainCombiner")
+extern interface java.security.DomainCombiner {
+
+	@:overload
+	function combine(param1:java.NativeArray<java.security.ProtectionDomain>, param2:java.NativeArray<java.security.ProtectionDomain>):java.NativeArray<java.security.ProtectionDomain>;
+}

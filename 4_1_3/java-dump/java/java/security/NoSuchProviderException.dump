@@ -1,0 +1,9 @@
+@:realPath("java.security.NoSuchProviderException") @:nativeGen @:libType @:javaNative @:native("java.security.NoSuchProviderException") @:javaCanonical("java.security", "NoSuchProviderException")
+extern class java.security.NoSuchProviderException extends java.security.GeneralSecurityException {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

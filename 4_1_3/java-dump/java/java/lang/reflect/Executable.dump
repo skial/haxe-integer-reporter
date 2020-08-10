@@ -1,0 +1,66 @@
+@:realPath("java.lang.reflect.Executable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.reflect.Executable") @:javaCanonical("java.lang.reflect", "Executable")
+extern class java.lang.reflect.Executable extends java.lang.reflect.AccessibleObject implements java.lang.reflect.Member implements java.lang.reflect.GenericDeclaration {
+
+	@:overload
+	function getAnnotatedExceptionTypes():java.NativeArray<java.lang.reflect.AnnotatedType>;
+
+	@:overload
+	function getAnnotatedParameterTypes():java.NativeArray<java.lang.reflect.AnnotatedType>;
+
+	@:overload
+	function getAnnotatedReceiverType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getAnnotatedReturnType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	@:overload
+	function getAnnotationsByType<T : getAnnotationsByType.T>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	@:overload
+	function getAnnotation<T : getAnnotation.T>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	@:overload
+	function getParameterAnnotations():java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+
+	@:overload
+	function isSynthetic():Bool;
+
+	@:overload
+	function isVarArgs():Bool;
+
+	@:overload
+	function toGenericString():String;
+
+	@:overload
+	function getGenericExceptionTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	@:overload
+	function getExceptionTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:overload
+	function getParameters():java.NativeArray<java.lang.reflect.Parameter>;
+
+	@:overload
+	function getGenericParameterTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	@:overload
+	function getParameterCount():Int;
+
+	@:overload
+	function getParameterTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:overload
+	function getTypeParameters():java.NativeArray<java.lang.reflect.TypeVariable<Dynamic>>;
+
+	@:overload
+	function getModifiers():Int;
+
+	@:overload
+	function getName():String;
+
+	@:overload
+	function getDeclaringClass():java.lang.Class<Dynamic>;
+}

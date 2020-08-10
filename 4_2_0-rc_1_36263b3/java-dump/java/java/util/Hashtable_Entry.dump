@@ -1,0 +1,21 @@
+@:realPath("java.util.Hashtable_Entry") @:used @:nativeGen @:libType @:javaNative @:native("java.util.Hashtable$Entry") @:javaCanonical("java.util", "Hashtable.Entry")
+extern class java.util.Hashtable$Entry<K:Dynamic, V:Dynamic> implements java.util.Map$Entry<java.util.Hashtable_Entry.K, java.util.Hashtable_Entry.V> {
+
+	@:protected
+	function new(param1:Int, param2:java.util.Hashtable_Entry.K, param3:java.util.Hashtable_Entry.V, param4:java.util.Hashtable$Entry<java.util.Hashtable_Entry.K, java.util.Hashtable_Entry.V>):Void;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function setValue(param1:java.util.Hashtable_Entry.V):java.util.Hashtable_Entry.V;
+
+	function getValue():java.util.Hashtable_Entry.V;
+
+	function getKey():java.util.Hashtable_Entry.K;
+
+	@:protected
+	function clone():Dynamic;
+}

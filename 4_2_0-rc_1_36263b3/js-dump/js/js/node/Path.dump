@@ -1,0 +1,33 @@
+@:directlyUsed @:used @:jsRequire("path")
+extern class js.node.Path {
+
+	static function basename(path:String, ext:Null<String>):String;
+
+	static var delimiter(default,null):String;
+
+	static function dirname(path:String):String;
+
+	static function extname(path:String):String;
+
+	static function format(pathObject:js.node.PathObject):String;
+
+	static function isAbsolute(path:String):Bool;
+
+	static function join(paths:haxe.extern.Rest<String>):String;
+
+	static function normalize(path:String):String;
+
+	static function parse(path:String):js.node.PathObject;
+
+	static var posix(default,null):js.node._Path.PathModule;
+
+	static function relative(from:String, to:String):String;
+
+	static function resolve(paths:haxe.extern.Rest<String>):String;
+
+	static var sep(default,null):String;
+
+	static function toNamespacedPath(path:String):String;
+
+	static var win32(default,null):js.node._Path.PathModule;
+}

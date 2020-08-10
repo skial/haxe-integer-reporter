@@ -1,0 +1,125 @@
+@:realPath("java.io.RandomAccessFile") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.io.RandomAccessFile") @:javaCanonical("java.io", "RandomAccessFile")
+extern class java.io.RandomAccessFile implements java.io.DataOutput implements java.io.DataInput implements java.io.Closeable {
+
+	@:throws("java.io.FileNotFoundException")
+	function new(param1:java.io.File, param2:String):Void;
+
+	@:throws("java.io.FileNotFoundException")
+	function new(param1:String, param2:String):Void;
+
+	@:throws("java.io.IOException")
+	function writeUTF(param1:String):Void;
+
+	@:throws("java.io.IOException")
+	function writeChars(param1:String):Void;
+
+	@:throws("java.io.IOException")
+	function writeBytes(param1:String):Void;
+
+	@:throws("java.io.IOException")
+	function writeDouble(param1:Float):Void;
+
+	@:throws("java.io.IOException")
+	function writeFloat(param1:Single):Void;
+
+	@:throws("java.io.IOException")
+	function writeLong(param1:haxe.Int64):Void;
+
+	@:throws("java.io.IOException")
+	function writeInt(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function writeChar(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function writeShort(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function writeByte(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function writeBoolean(param1:Bool):Void;
+
+	@:throws("java.io.IOException")
+	function readUTF():String;
+
+	@:throws("java.io.IOException")
+	function readLine():String;
+
+	@:throws("java.io.IOException")
+	function readDouble():Float;
+
+	@:throws("java.io.IOException")
+	function readFloat():Single;
+
+	@:throws("java.io.IOException")
+	function readLong():haxe.Int64;
+
+	@:throws("java.io.IOException")
+	function readInt():Int;
+
+	@:throws("java.io.IOException")
+	function readChar():java.types.Char16;
+
+	@:throws("java.io.IOException")
+	function readUnsignedShort():Int;
+
+	@:throws("java.io.IOException")
+	function readShort():java.types.Int16;
+
+	@:throws("java.io.IOException")
+	function readUnsignedByte():Int;
+
+	@:throws("java.io.IOException")
+	function readByte():java.types.Int8;
+
+	@:throws("java.io.IOException")
+	function readBoolean():Bool;
+
+	@:throws("java.io.IOException")
+	function close():Void;
+
+	@:throws("java.io.IOException")
+	function setLength(param1:haxe.Int64):Void;
+
+	@:throws("java.io.IOException")
+	function length():haxe.Int64;
+
+	@:throws("java.io.IOException")
+	function seek(param1:haxe.Int64):Void;
+
+	@:throws("java.io.IOException")
+	function getFilePointer():haxe.Int64;
+
+	@:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:throws("java.io.IOException")
+	function write(param1:Int):Void;
+
+	@:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>):Void;
+
+	@:throws("java.io.IOException")
+	function skipBytes(param1:Int):Int;
+
+	@:throws("java.io.IOException")
+	function readFully(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:throws("java.io.IOException")
+	function readFully(param1:java.NativeArray<java.types.Int8>):Void;
+
+	@:throws("java.io.IOException")
+	function read(param1:java.NativeArray<java.types.Int8>):Int;
+
+	@:throws("java.io.IOException")
+	function read():Int;
+
+	@:throws("java.io.IOException")
+	function read(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Int;
+
+	function getChannel():java.nio.channels.FileChannel;
+
+	@:throws("java.io.IOException")
+	function getFD():java.io.FileDescriptor;
+}

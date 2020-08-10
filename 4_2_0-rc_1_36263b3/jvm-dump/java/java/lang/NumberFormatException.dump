@@ -1,0 +1,11 @@
+@:realPath("java.lang.NumberFormatException") @:native("java.lang.NumberFormatException") @:libType
+extern class java.lang.NumberFormatException extends java.lang.IllegalArgumentException {
+
+	function new():Void;
+
+	function new(param1:java.lang.String):Void;
+
+	static function forInputString(param1:java.lang.String):java.lang.NumberFormatException;
+
+	static var serialVersionUID(default,never):haxe.Int64;
+}

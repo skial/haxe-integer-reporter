@@ -1,0 +1,21 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Std {
+
+	public static function isOfType(v:Dynamic, t:Dynamic) {
+		if ((v == null || t == null)) return false;
+		var clt = cast t;
+		if ((clt == null)) return false;
+		if ((clt == cast java.lang.Object)) return true;
+		clt = haxe.jvm.Jvm.getWrapperClass(clt);
+		if ((clt == cast java.lang.Double)) clt = cast java.lang.Number else if ((clt == cast java.lang.Integer)) {
+			if ((! haxe.jvm.Jvm.instanceof(v, java.lang.Number))) return false;
+			var n = cast v;
+			return n.doubleValue() == n.intValue();
+		};
+		return clt.isAssignableFrom(cast v.getClass());
+	}
+
+	public static function string(s:Dynamic) {
+		return haxe.jvm.Jvm.toString(s);
+	}
+}

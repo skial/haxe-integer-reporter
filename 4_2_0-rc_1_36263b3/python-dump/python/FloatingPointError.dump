@@ -1,0 +1,3 @@
+@:realPath("python.FloatingPointError") @:native("FloatingPointError")
+extern class FloatingPointError extends ArithmeticError {
+}

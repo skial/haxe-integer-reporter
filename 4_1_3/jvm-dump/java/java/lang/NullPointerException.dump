@@ -1,0 +1,9 @@
+@:realPath("java.lang.NullPointerException") @:directlyUsed @:used @:libType @:javaNative @:native("java.lang.NullPointerException") @:javaCanonical("java.lang", "NullPointerException")
+extern class java.lang.NullPointerException extends java.lang.RuntimeException {
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new():Void;
+}

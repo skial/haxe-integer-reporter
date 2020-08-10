@@ -1,0 +1,28 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Type {
+
+	public static function getEnum(o:EnumValue) {
+		if ((o == null)) return null;
+		var c = cast o.getClass().getSuperclass();
+		if ((! c.isAnnotationPresent(cast haxe.jvm.annotation.EnumReflectionInformation))) return null;
+		return cast c;
+	}
+
+	public static function getEnumConstructs(e:Enum<Dynamic>) {
+		var clInfo = cast haxe.jvm.annotation.EnumReflectionInformation;
+		var annotation = cast e.getAnnotation(clInfo);
+		return Array.ofNative(annotation.constructorNames());
+	}
+
+	public static function enumEq<T : enumEq.T>(a:enumEq.T, b:enumEq.T) {
+		if ((a == null)) return b == null;
+		var a = cast a;
+		var b = cast b;
+		return a.equals(b);
+	}
+
+	public static function enumParameters(e:EnumValue) {
+		var a = cast e._hx_getParameters();
+		return Array.ofNative(a);
+	}
+}

@@ -1,0 +1,77 @@
+@:realPath("java.time.Period") @:used @:nativeGen @:libType @:javaNative @:native("java.time.Period") @:javaCanonical("java.time", "Period")
+extern class java.time.Period implements java.time.chrono.ChronoPeriod implements java.io.Serializable {
+
+	function getChronology():java.time.chrono.IsoChronology;
+
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	function multipliedBy(param1:Int):java.time.Period;
+
+	function negated():java.time.Period;
+
+	function normalized():java.time.Period;
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function subtractFrom(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	function addTo(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	function toTotalMonths():haxe.Int64;
+
+	function minusDays(param1:haxe.Int64):java.time.Period;
+
+	function minusMonths(param1:haxe.Int64):java.time.Period;
+
+	function minusYears(param1:haxe.Int64):java.time.Period;
+
+	function plusDays(param1:haxe.Int64):java.time.Period;
+
+	function plusMonths(param1:haxe.Int64):java.time.Period;
+
+	function plusYears(param1:haxe.Int64):java.time.Period;
+
+	function withDays(param1:Int):java.time.Period;
+
+	function withMonths(param1:Int):java.time.Period;
+
+	function withYears(param1:Int):java.time.Period;
+
+	function getDays():Int;
+
+	function getMonths():Int;
+
+	function getYears():Int;
+
+	function isNegative():Bool;
+
+	function isZero():Bool;
+
+	function getUnits():java.util.List<java.time.temporal.TemporalUnit>;
+
+	function get(param1:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	static function between(param1:java.time.LocalDate, param2:java.time.LocalDate):java.time.Period;
+
+	static function parse(param1:java.lang.CharSequence):java.time.Period;
+
+	static function from(param1:java.time.temporal.TemporalAmount):java.time.Period;
+
+	static function of(param1:Int, param2:Int, param3:Int):java.time.Period;
+
+	static function ofDays(param1:Int):java.time.Period;
+
+	static function ofWeeks(param1:Int):java.time.Period;
+
+	static function ofMonths(param1:Int):java.time.Period;
+
+	static function ofYears(param1:Int):java.time.Period;
+
+	static var ZERO(default,never):java.time.Period;
+}

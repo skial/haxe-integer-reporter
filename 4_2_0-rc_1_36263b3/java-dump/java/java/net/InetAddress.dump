@@ -1,0 +1,60 @@
+@:realPath("java.net.InetAddress") @:nativeGen @:libType @:javaNative @:native("java.net.InetAddress") @:javaCanonical("java.net", "InetAddress")
+extern class java.net.InetAddress implements java.io.Serializable {
+
+	function toString():String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function getHostAddress():String;
+
+	function getAddress():java.NativeArray<java.types.Int8>;
+
+	function getCanonicalHostName():String;
+
+	function getHostName():String;
+
+	@:throws("java.io.IOException")
+	function isReachable(param1:java.net.NetworkInterface, param2:Int, param3:Int):Bool;
+
+	@:throws("java.io.IOException")
+	function isReachable(param1:Int):Bool;
+
+	function isMCOrgLocal():Bool;
+
+	function isMCSiteLocal():Bool;
+
+	function isMCLinkLocal():Bool;
+
+	function isMCNodeLocal():Bool;
+
+	function isMCGlobal():Bool;
+
+	function isSiteLocalAddress():Bool;
+
+	function isLinkLocalAddress():Bool;
+
+	function isLoopbackAddress():Bool;
+
+	function isAnyLocalAddress():Bool;
+
+	function isMulticastAddress():Bool;
+
+	@:throws("java.net.UnknownHostException")
+	static function getLocalHost():java.net.InetAddress;
+
+	@:throws("java.net.UnknownHostException")
+	static function getByAddress(param1:java.NativeArray<java.types.Int8>):java.net.InetAddress;
+
+	@:throws("java.net.UnknownHostException")
+	static function getByAddress(param1:String, param2:java.NativeArray<java.types.Int8>):java.net.InetAddress;
+
+	static function getLoopbackAddress():java.net.InetAddress;
+
+	@:throws("java.net.UnknownHostException")
+	static function getAllByName(param1:String):java.NativeArray<java.net.InetAddress>;
+
+	@:throws("java.net.UnknownHostException")
+	static function getByName(param1:String):java.net.InetAddress;
+}

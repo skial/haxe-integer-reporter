@@ -1,0 +1,313 @@
+@:realPath("java.util.Arrays") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.util.Arrays") @:javaCanonical("java.util", "Arrays")
+extern class java.util.Arrays {
+
+	static function stream(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.util.stream.DoubleStream;
+
+	static function stream<T:Dynamic>(param1:java.NativeArray<stream.T>):java.util.stream.Stream<stream.T>;
+
+	static function stream<T:Dynamic>(param1:java.NativeArray<stream.T>, param2:Int, param3:Int):java.util.stream.Stream<stream.T>;
+
+	static function stream(param1:java.NativeArray<Int>):java.util.stream.IntStream;
+
+	static function stream(param1:java.NativeArray<Int>, param2:Int, param3:Int):java.util.stream.IntStream;
+
+	static function stream(param1:java.NativeArray<haxe.Int64>):java.util.stream.LongStream;
+
+	static function stream(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int):java.util.stream.LongStream;
+
+	static function stream(param1:java.NativeArray<Float>):java.util.stream.DoubleStream;
+
+	static function spliterator(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.util.Spliterator$OfDouble;
+
+	static function spliterator<T:Dynamic>(param1:java.NativeArray<spliterator.T>):java.util.Spliterator<spliterator.T>;
+
+	static function spliterator<T:Dynamic>(param1:java.NativeArray<spliterator.T>, param2:Int, param3:Int):java.util.Spliterator<spliterator.T>;
+
+	static function spliterator(param1:java.NativeArray<Int>):java.util.Spliterator$OfInt;
+
+	static function spliterator(param1:java.NativeArray<Int>, param2:Int, param3:Int):java.util.Spliterator$OfInt;
+
+	static function spliterator(param1:java.NativeArray<haxe.Int64>):java.util.Spliterator$OfLong;
+
+	static function spliterator(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int):java.util.Spliterator$OfLong;
+
+	static function spliterator(param1:java.NativeArray<Float>):java.util.Spliterator$OfDouble;
+
+	static function parallelSetAll(param1:java.NativeArray<Float>, param2:java.util.function.IntToDoubleFunction):Void;
+
+	static function parallelSetAll<T:Dynamic>(param1:java.NativeArray<parallelSetAll.T>, param2:java.util.function.IntFunction<parallelSetAll.T>):Void;
+
+	static function parallelSetAll(param1:java.NativeArray<Int>, param2:java.util.function.IntUnaryOperator):Void;
+
+	static function parallelSetAll(param1:java.NativeArray<haxe.Int64>, param2:java.util.function.IntToLongFunction):Void;
+
+	static function setAll(param1:java.NativeArray<Float>, param2:java.util.function.IntToDoubleFunction):Void;
+
+	static function setAll<T:Dynamic>(param1:java.NativeArray<setAll.T>, param2:java.util.function.IntFunction<setAll.T>):Void;
+
+	static function setAll(param1:java.NativeArray<Int>, param2:java.util.function.IntUnaryOperator):Void;
+
+	static function setAll(param1:java.NativeArray<haxe.Int64>, param2:java.util.function.IntToLongFunction):Void;
+
+	static function deepToString(param1:java.NativeArray<Dynamic>):String;
+
+	static function toString(param1:java.NativeArray<Dynamic>):String;
+
+	static function toString(param1:java.NativeArray<haxe.Int64>):String;
+
+	static function toString(param1:java.NativeArray<Int>):String;
+
+	static function toString(param1:java.NativeArray<java.types.Int16>):String;
+
+	static function toString(param1:java.NativeArray<java.types.Char16>):String;
+
+	static function toString(param1:java.NativeArray<java.types.Int8>):String;
+
+	static function toString(param1:java.NativeArray<Bool>):String;
+
+	static function toString(param1:java.NativeArray<Single>):String;
+
+	static function toString(param1:java.NativeArray<Float>):String;
+
+	static function deepEquals(param1:java.NativeArray<Dynamic>, param2:java.NativeArray<Dynamic>):Bool;
+
+	static function deepHashCode(param1:java.NativeArray<Dynamic>):Int;
+
+	static function hashCode(param1:java.NativeArray<Dynamic>):Int;
+
+	static function hashCode(param1:java.NativeArray<haxe.Int64>):Int;
+
+	static function hashCode(param1:java.NativeArray<Int>):Int;
+
+	static function hashCode(param1:java.NativeArray<java.types.Int16>):Int;
+
+	static function hashCode(param1:java.NativeArray<java.types.Char16>):Int;
+
+	static function hashCode(param1:java.NativeArray<java.types.Int8>):Int;
+
+	static function hashCode(param1:java.NativeArray<Bool>):Int;
+
+	static function hashCode(param1:java.NativeArray<Single>):Int;
+
+	static function hashCode(param1:java.NativeArray<Float>):Int;
+
+	static function asList<T:Dynamic>(param1:java.NativeArray<asList.T>):java.util.List<asList.T>;
+
+	static function copyOfRange(param1:java.NativeArray<Bool>, param2:Int, param3:Int):java.NativeArray<Bool>;
+
+	static function copyOfRange<T:Dynamic>(param1:java.NativeArray<copyOfRange.T>, param2:Int, param3:Int):java.NativeArray<copyOfRange.T>;
+
+	static function copyOfRange<T:Dynamic, U:Dynamic>(param1:java.NativeArray<copyOfRange.U>, param2:Int, param3:Int, param4:java.lang.Class<java.NativeArray<copyOfRange.T>>):java.NativeArray<copyOfRange.T>;
+
+	static function copyOfRange(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):java.NativeArray<java.types.Int8>;
+
+	static function copyOfRange(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):java.NativeArray<java.types.Int16>;
+
+	static function copyOfRange(param1:java.NativeArray<Int>, param2:Int, param3:Int):java.NativeArray<Int>;
+
+	static function copyOfRange(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int):java.NativeArray<haxe.Int64>;
+
+	static function copyOfRange(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):java.NativeArray<java.types.Char16>;
+
+	static function copyOfRange(param1:java.NativeArray<Single>, param2:Int, param3:Int):java.NativeArray<Single>;
+
+	static function copyOfRange(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.NativeArray<Float>;
+
+	static function copyOf(param1:java.NativeArray<Bool>, param2:Int):java.NativeArray<Bool>;
+
+	static function copyOf<T:Dynamic>(param1:java.NativeArray<copyOf.T>, param2:Int):java.NativeArray<copyOf.T>;
+
+	static function copyOf<T:Dynamic, U:Dynamic>(param1:java.NativeArray<copyOf.U>, param2:Int, param3:java.lang.Class<java.NativeArray<copyOf.T>>):java.NativeArray<copyOf.T>;
+
+	static function copyOf(param1:java.NativeArray<java.types.Int8>, param2:Int):java.NativeArray<java.types.Int8>;
+
+	static function copyOf(param1:java.NativeArray<java.types.Int16>, param2:Int):java.NativeArray<java.types.Int16>;
+
+	static function copyOf(param1:java.NativeArray<Int>, param2:Int):java.NativeArray<Int>;
+
+	static function copyOf(param1:java.NativeArray<haxe.Int64>, param2:Int):java.NativeArray<haxe.Int64>;
+
+	static function copyOf(param1:java.NativeArray<java.types.Char16>, param2:Int):java.NativeArray<java.types.Char16>;
+
+	static function copyOf(param1:java.NativeArray<Single>, param2:Int):java.NativeArray<Single>;
+
+	static function copyOf(param1:java.NativeArray<Float>, param2:Int):java.NativeArray<Float>;
+
+	static function fill(param1:java.NativeArray<Dynamic>, param2:Int, param3:Int, param4:Dynamic):Void;
+
+	static function fill(param1:java.NativeArray<haxe.Int64>, param2:haxe.Int64):Void;
+
+	static function fill(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int, param4:haxe.Int64):Void;
+
+	static function fill(param1:java.NativeArray<Int>, param2:Int):Void;
+
+	static function fill(param1:java.NativeArray<Int>, param2:Int, param3:Int, param4:Int):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Int16>, param2:java.types.Int16):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int, param4:java.types.Int16):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Char16>, param2:java.types.Char16):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int, param4:java.types.Char16):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Int8>, param2:java.types.Int8):Void;
+
+	static function fill(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int, param4:java.types.Int8):Void;
+
+	static function fill(param1:java.NativeArray<Bool>, param2:Bool):Void;
+
+	static function fill(param1:java.NativeArray<Bool>, param2:Int, param3:Int, param4:Bool):Void;
+
+	static function fill(param1:java.NativeArray<Float>, param2:Float):Void;
+
+	static function fill(param1:java.NativeArray<Float>, param2:Int, param3:Int, param4:Float):Void;
+
+	static function fill(param1:java.NativeArray<Single>, param2:Single):Void;
+
+	static function fill(param1:java.NativeArray<Single>, param2:Int, param3:Int, param4:Single):Void;
+
+	static function fill(param1:java.NativeArray<Dynamic>, param2:Dynamic):Void;
+
+	static function equals(param1:java.NativeArray<Dynamic>, param2:java.NativeArray<Dynamic>):Bool;
+
+	static function equals(param1:java.NativeArray<haxe.Int64>, param2:java.NativeArray<haxe.Int64>):Bool;
+
+	static function equals(param1:java.NativeArray<Int>, param2:java.NativeArray<Int>):Bool;
+
+	static function equals(param1:java.NativeArray<java.types.Int16>, param2:java.NativeArray<java.types.Int16>):Bool;
+
+	static function equals(param1:java.NativeArray<java.types.Char16>, param2:java.NativeArray<java.types.Char16>):Bool;
+
+	static function equals(param1:java.NativeArray<java.types.Int8>, param2:java.NativeArray<java.types.Int8>):Bool;
+
+	static function equals(param1:java.NativeArray<Bool>, param2:java.NativeArray<Bool>):Bool;
+
+	static function equals(param1:java.NativeArray<Float>, param2:java.NativeArray<Float>):Bool;
+
+	static function equals(param1:java.NativeArray<Single>, param2:java.NativeArray<Single>):Bool;
+
+	static function binarySearch<T:Dynamic>(param1:java.NativeArray<binarySearch.T>, param2:Int, param3:Int, param4:binarySearch.T, param5:java.util.Comparator<Dynamic>):Int;
+
+	static function binarySearch(param1:java.NativeArray<haxe.Int64>, param2:haxe.Int64):Int;
+
+	static function binarySearch(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int, param4:haxe.Int64):Int;
+
+	static function binarySearch(param1:java.NativeArray<Int>, param2:Int):Int;
+
+	static function binarySearch(param1:java.NativeArray<Int>, param2:Int, param3:Int, param4:Int):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Int16>, param2:java.types.Int16):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int, param4:java.types.Int16):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Char16>, param2:java.types.Char16):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int, param4:java.types.Char16):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Int8>, param2:java.types.Int8):Int;
+
+	static function binarySearch(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int, param4:java.types.Int8):Int;
+
+	static function binarySearch(param1:java.NativeArray<Float>, param2:Float):Int;
+
+	static function binarySearch(param1:java.NativeArray<Float>, param2:Int, param3:Int, param4:Float):Int;
+
+	static function binarySearch(param1:java.NativeArray<Single>, param2:Single):Int;
+
+	static function binarySearch(param1:java.NativeArray<Single>, param2:Int, param3:Int, param4:Single):Int;
+
+	static function binarySearch(param1:java.NativeArray<Dynamic>, param2:Dynamic):Int;
+
+	static function binarySearch(param1:java.NativeArray<Dynamic>, param2:Int, param3:Int, param4:Dynamic):Int;
+
+	static function binarySearch<T:Dynamic>(param1:java.NativeArray<binarySearch.T>, param2:binarySearch.T, param3:java.util.Comparator<Dynamic>):Int;
+
+	static function parallelPrefix(param1:java.NativeArray<Int>, param2:Int, param3:Int, param4:java.util.function.IntBinaryOperator):Void;
+
+	static function parallelPrefix<T:Dynamic>(param1:java.NativeArray<parallelPrefix.T>, param2:java.util.function.BinaryOperator<parallelPrefix.T>):Void;
+
+	static function parallelPrefix<T:Dynamic>(param1:java.NativeArray<parallelPrefix.T>, param2:Int, param3:Int, param4:java.util.function.BinaryOperator<parallelPrefix.T>):Void;
+
+	static function parallelPrefix(param1:java.NativeArray<haxe.Int64>, param2:java.util.function.LongBinaryOperator):Void;
+
+	static function parallelPrefix(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int, param4:java.util.function.LongBinaryOperator):Void;
+
+	static function parallelPrefix(param1:java.NativeArray<Float>, param2:java.util.function.DoubleBinaryOperator):Void;
+
+	static function parallelPrefix(param1:java.NativeArray<Float>, param2:Int, param3:Int, param4:java.util.function.DoubleBinaryOperator):Void;
+
+	static function parallelPrefix(param1:java.NativeArray<Int>, param2:java.util.function.IntBinaryOperator):Void;
+
+	static function sort<T:Dynamic>(param1:java.NativeArray<sort.T>, param2:Int, param3:Int, param4:java.util.Comparator<Dynamic>):Void;
+
+	static function sort(param1:java.NativeArray<Int>):Void;
+
+	static function sort(param1:java.NativeArray<Int>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<haxe.Int64>):Void;
+
+	static function sort(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Int16>):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Char16>):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Int8>):Void;
+
+	static function sort(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<Single>):Void;
+
+	static function sort(param1:java.NativeArray<Single>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<Float>):Void;
+
+	static function sort(param1:java.NativeArray<Float>, param2:Int, param3:Int):Void;
+
+	static function sort(param1:java.NativeArray<Dynamic>):Void;
+
+	static function sort(param1:java.NativeArray<Dynamic>, param2:Int, param3:Int):Void;
+
+	static function sort<T:Dynamic>(param1:java.NativeArray<sort.T>, param2:java.util.Comparator<Dynamic>):Void;
+
+	static function parallelSort<T:Dynamic>(param1:java.NativeArray<parallelSort.T>, param2:Int, param3:Int, param4:java.util.Comparator<Dynamic>):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Int8>):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Char16>):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Int16>):Void;
+
+	static function parallelSort(param1:java.NativeArray<java.types.Int16>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<Int>):Void;
+
+	static function parallelSort(param1:java.NativeArray<Int>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<haxe.Int64>):Void;
+
+	static function parallelSort(param1:java.NativeArray<haxe.Int64>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<Single>):Void;
+
+	static function parallelSort(param1:java.NativeArray<Single>, param2:Int, param3:Int):Void;
+
+	static function parallelSort(param1:java.NativeArray<Float>):Void;
+
+	static function parallelSort(param1:java.NativeArray<Float>, param2:Int, param3:Int):Void;
+
+	static function parallelSort<T:java.lang.Comparable<Dynamic>>(param1:java.NativeArray<parallelSort.T>):Void;
+
+	static function parallelSort<T:java.lang.Comparable<Dynamic>>(param1:java.NativeArray<parallelSort.T>, param2:Int, param3:Int):Void;
+
+	static function parallelSort<T:Dynamic>(param1:java.NativeArray<parallelSort.T>, param2:java.util.Comparator<Dynamic>):Void;
+}

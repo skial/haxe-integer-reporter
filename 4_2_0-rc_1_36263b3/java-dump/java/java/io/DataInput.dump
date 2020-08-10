@@ -1,0 +1,48 @@
+@:realPath("java.io.DataInput") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.DataInput") @:javaCanonical("java.io", "DataInput")
+extern interface java.io.DataInput {
+
+	@:throws("java.io.IOException")
+	function readUTF():String;
+
+	@:throws("java.io.IOException")
+	function readLine():String;
+
+	@:throws("java.io.IOException")
+	function readDouble():Float;
+
+	@:throws("java.io.IOException")
+	function readFloat():Single;
+
+	@:throws("java.io.IOException")
+	function readLong():haxe.Int64;
+
+	@:throws("java.io.IOException")
+	function readInt():Int;
+
+	@:throws("java.io.IOException")
+	function readChar():java.types.Char16;
+
+	@:throws("java.io.IOException")
+	function readUnsignedShort():Int;
+
+	@:throws("java.io.IOException")
+	function readShort():java.types.Int16;
+
+	@:throws("java.io.IOException")
+	function readUnsignedByte():Int;
+
+	@:throws("java.io.IOException")
+	function readByte():java.types.Int8;
+
+	@:throws("java.io.IOException")
+	function readBoolean():Bool;
+
+	@:throws("java.io.IOException")
+	function skipBytes(param1:Int):Int;
+
+	@:throws("java.io.IOException")
+	function readFully(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:throws("java.io.IOException")
+	function readFully(param1:java.NativeArray<java.types.Int8>):Void;
+}

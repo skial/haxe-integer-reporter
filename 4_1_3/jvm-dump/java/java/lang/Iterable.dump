@@ -1,0 +1,12 @@
+@:realPath("java.lang.Iterable") @:used @:abstract @:libType @:javaNative @:native("java.lang.Iterable") @:javaCanonical("java.lang", "Iterable")
+extern interface java.lang.Iterable<T : java.lang.Iterable.T> {
+
+	@:overload
+	function spliterator():java.util.Spliterator<java.lang.Iterable.T>;
+
+	@:overload
+	function forEach(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function iterator():java.util.Iterator<java.lang.Iterable.T>;
+}

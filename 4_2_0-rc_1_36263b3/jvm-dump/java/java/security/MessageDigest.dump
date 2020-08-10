@@ -1,0 +1,56 @@
+@:realPath("java.security.MessageDigest") @:used @:native("java.security.MessageDigest") @:libType
+extern class java.security.MessageDigest extends java.security.MessageDigestSpi {
+
+	function new(param1:java.lang.String):Void;
+
+	function getProvider():java.security.Provider;
+
+	function update(param1:java.types.Int8):Void;
+
+	function update(param1:java.nio.ByteBuffer):Void;
+
+	function update(param1:java.NativeArray<java.types.Int8>):Void;
+
+	function update(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	function digest():java.NativeArray<java.types.Int8>;
+
+	function digest(param1:java.NativeArray<java.types.Int8>):java.NativeArray<java.types.Int8>;
+
+	function digest(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Int;
+
+	function toString():java.lang.String;
+
+	function reset():Void;
+
+	function getAlgorithm():java.lang.String;
+
+	function getDigestLength():Int;
+
+	function clone():Dynamic;
+
+	static function getInstance(param1:java.lang.String):java.security.MessageDigest;
+
+	static function getInstance(param1:java.lang.String, param2:java.security.Provider):java.security.MessageDigest;
+
+	static function getInstance(param1:java.lang.String, param2:java.lang.String):java.security.MessageDigest;
+
+	static function isEqual(param1:java.NativeArray<java.types.Int8>, param2:java.NativeArray<java.types.Int8>):Bool;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.security.MessageDigest):java.lang.String;
+
+	@:realPath("access_102") @:native("access$102")
+	static function access$102(param1:java.security.MessageDigest, param2:java.security.Provider):java.security.Provider;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:java.security.MessageDigest):java.security.Provider;
+
+	@:realPath("access_202") @:native("access$202")
+	static function access$202(param1:java.security.MessageDigest, param2:Int):Int;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:java.security.MessageDigest):Int;
+
+	static function <clinit>():Void;
+}

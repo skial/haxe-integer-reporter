@@ -1,0 +1,9 @@
+@:realPath("java.lang.CloneNotSupportedException") @:libType @:javaNative @:native("java.lang.CloneNotSupportedException") @:javaCanonical("java.lang", "CloneNotSupportedException")
+extern class java.lang.CloneNotSupportedException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function new():Void;
+}

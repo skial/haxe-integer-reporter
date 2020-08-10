@@ -1,0 +1,165 @@
+@:realPath("java.lang.StringBuilder") @:directlyUsed @:used @:nativeGen @:libType @:javaNative @:native("java.lang.StringBuilder") @:javaCanonical("java.lang", "StringBuilder")
+extern class java.lang.StringBuilder extends java.lang.AbstractStringBuilder implements java.io.Serializable implements java.lang.CharSequence {
+
+	@:overload
+	function new(param1:java.lang.CharSequence):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:Int):Void;
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function append(param1:java.lang.CharSequence):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:Float):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:Single):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:haxe.Int64):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:Int):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:Bool):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:java.NativeArray<java.types.Char16>):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:java.lang.StringBuffer):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:String):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:Dynamic):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:java.types.Char16):java.lang.StringBuilder;
+
+	@:overload
+	function append(param1:java.lang.CharSequence, param2:Int, param3:Int):java.lang.StringBuilder;
+
+	@:overload
+	function length():Int;
+
+	@:overload
+	function capacity():Int;
+
+	@:overload
+	function ensureCapacity(param1:Int):Void;
+
+	@:overload
+	function trimToSize():Void;
+
+	@:overload
+	function setLength(param1:Int):Void;
+
+	@:overload
+	function charAt(param1:Int):java.types.Char16;
+
+	@:overload
+	function codePointAt(param1:Int):Int;
+
+	@:overload
+	function codePointBefore(param1:Int):Int;
+
+	@:overload
+	function codePointCount(param1:Int, param2:Int):Int;
+
+	@:overload
+	function offsetByCodePoints(param1:Int, param2:Int):Int;
+
+	@:overload
+	function getChars(param1:Int, param2:Int, param3:java.NativeArray<java.types.Char16>, param4:Int):Void;
+
+	@:overload
+	function setCharAt(param1:Int, param2:java.types.Char16):Void;
+
+	@:overload
+	function delete(param1:Int, param2:Int):java.lang.StringBuilder;
+
+	@:overload
+	function appendCodePoint(param1:Int):java.lang.StringBuilder;
+
+	@:overload
+	function deleteCharAt(param1:Int):java.lang.StringBuilder;
+
+	@:overload
+	function replace(param1:Int, param2:Int, param3:String):java.lang.StringBuilder;
+
+	@:overload
+	function substring(param1:Int):String;
+
+	@:overload
+	function substring(param1:Int, param2:Int):String;
+
+	@:overload
+	function subSequence(param1:Int, param2:Int):java.lang.CharSequence;
+
+	@:overload
+	function insert(param1:Int, param2:java.NativeArray<java.types.Char16>, param3:Int, param4:Int):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:Float):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:Single):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:haxe.Int64):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:Int):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:java.types.Char16):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:Bool):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:java.lang.CharSequence, param3:Int, param4:Int):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:java.lang.CharSequence):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:java.NativeArray<java.types.Char16>):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:String):java.lang.StringBuilder;
+
+	@:overload
+	function insert(param1:Int, param2:Dynamic):java.lang.StringBuilder;
+
+	@:overload
+	function reverse():java.lang.StringBuilder;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function lastIndexOf(param1:String, param2:Int):Int;
+
+	@:overload
+	function lastIndexOf(param1:String):Int;
+
+	@:overload
+	function indexOf(param1:String, param2:Int):Int;
+
+	@:overload
+	function indexOf(param1:String):Int;
+}

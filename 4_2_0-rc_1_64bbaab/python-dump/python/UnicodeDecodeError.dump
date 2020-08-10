@@ -1,0 +1,3 @@
+@:realPath("python.UnicodeDecodeError") @:native("UnicodeDecodeError")
+extern class UnicodeDecodeError extends UnicodeError {
+}

@@ -1,0 +1,42 @@
+@:keep @:used @:hxGen
+class haxe.io.Input {
+
+	public function readByte() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "haxe/io/Input.hx", lineNumber : 53, className : "haxe.io.Input", methodName : "readByte"});
+	}
+
+	public function readBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		var k = len;
+		var b = s.b;
+		if ((pos < 0 || len < 0 || pos + len > s.length)) throw cast haxe.Exception.thrown(haxe.io.Error.OutsideBounds);
+		try {
+			while ((k > 0)) {
+				b[pos] = cast this.readByte();
+				++ pos;
+				-- k;
+			};
+		} catch (_g:java.lang.Throwable) {
+			if ((! Std.isOfType(cast haxe.Exception.caught(_g).unwrap(), haxe.io.Eof))) throw _g;
+		};
+		return len - k;
+	}
+
+	public function readAll(bufsize:Null<Int> = null) {
+		if ((bufsize == null)) bufsize = 16384;
+		var buf = haxe.io.Bytes.alloc(bufsize);
+		var total = new haxe.io.BytesBuffer();
+		try {
+			while ((true)) {
+				var len = this.readBytes(buf, 0, bufsize);
+				if ((len == 0)) throw cast haxe.Exception.thrown(haxe.io.Error.Blocked);
+				{
+					if ((len < 0 || len > buf.length)) throw cast haxe.Exception.thrown(haxe.io.Error.OutsideBounds);
+					total.b.write(buf.b, 0, len);
+				};
+			};
+		} catch (_g:java.lang.Throwable) {
+			if ((! Std.isOfType(cast haxe.Exception.caught(_g).unwrap(), haxe.io.Eof))) throw _g;
+		};
+		return total.getBytes();
+	}
+}

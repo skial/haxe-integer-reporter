@@ -1,0 +1,49 @@
+@:used @:jsRequire("stream", "Readable")
+extern class js.node.stream.Readable<TSelf : js.node.stream.Readable.TSelf> extends js.node.Stream<js.node.stream.Readable.TSelf> {
+
+	function new(options:Null<js.node.stream.ReadableNewOptions>):Void;
+
+	function destroy(error:Null<Error>):js.node.stream.Readable.TSelf;
+
+	var destroyed(default,null):Bool;
+
+	function isPaused():Bool;
+
+	function pause():js.node.stream.Readable.TSelf;
+
+	function pipe<T : pipe.T>(destination:pipe.T, options:Null<{ ?end : Null<Bool> }>):pipe.T;
+
+	function read(size:Null<Int>):Null<Dynamic>;
+
+	var readable(default,null):Bool;
+
+	var readableEncoding(default,null):Null<String>;
+
+	var readableEnded(default,null):Bool;
+
+	var readableHighWaterMark(default,null):Int;
+
+	var readableLength(default,null):Int;
+
+	var readableObjectMode(default,null):Bool;
+
+	function resume():js.node.stream.Readable.TSelf;
+
+	function setEncoding(encoding:String):js.node.stream.Readable.TSelf;
+
+	function unpipe(destination:Null<js.node.stream.IWritable>):js.node.stream.Readable.TSelf;
+
+	function unshift(chunk:Null<Dynamic>, encoding:Null<String>):Void;
+
+	function wrap(stream:Dynamic):js.node.stream.IReadable;
+
+	function _read(size:Int):Void;
+
+	function _destroy(err:Null<Error>, callback:Null<Error> -> Void):Void;
+
+	function push(chunk:Null<Dynamic>, encoding:Null<String>):Bool;
+
+	var isTTY(default,null):Bool;
+
+	static function from<T : from.T>(iterable:js.node.Iterator<from.T>, options:Null<js.node.stream.ReadableNewOptions>):js.node.stream.IReadable;
+}

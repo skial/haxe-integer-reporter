@@ -1,0 +1,3 @@
+@:realPath("java.internal._HxObject.HxObject") @:used @:hxGen @:native("haxe.lang.HxObject") @:keep
+private class haxe.lang.HxObject implements haxe.lang.IHxObject {
+}

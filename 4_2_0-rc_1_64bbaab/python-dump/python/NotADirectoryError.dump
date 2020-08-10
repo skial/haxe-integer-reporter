@@ -1,0 +1,3 @@
+@:realPath("python.NotADirectoryError") @:native("NotADirectoryError")
+extern class NotADirectoryError extends OSError {
+}

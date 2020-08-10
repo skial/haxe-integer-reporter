@@ -1,0 +1,16 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Sys {
+
+	public static function systemName() {
+		var _g = python.lib.Sys.platform;
+		var x = _g;
+		if ((cast python.Syntax.field(x, "startswith")("linux"))) return "Linux" else {
+			var _g1 = _g;
+			switch ((_g1)) {
+				case "cygwin", "win32": return "Windows";
+				case "darwin": return "Mac";
+				default: throw cast haxe.Exception.thrown("not supported platform")
+			};
+		};
+	}
+}

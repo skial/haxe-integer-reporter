@@ -1,0 +1,14 @@
+@:realPath("java.io.ObjectInputStream_ValidationList") @:used @:native("java.io.ObjectInputStream$ValidationList") @:libType
+extern class java.io.ObjectInputStream$ValidationList {
+
+	function new():Void;
+
+	function register(param1:java.io.ObjectInputValidation, param2:Int):Void;
+
+	function doCallbacks():Void;
+
+	function clear():Void;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:java.io.ObjectInputStream$ValidationList):java.io.ObjectInputStream$ValidationList$Callback;
+}

@@ -1,0 +1,3 @@
+@:realPath("java.lang.ref.ReferenceQueue_Lock") @:nativeGen @:libType @:javaNative @:native("java.lang.ref.ReferenceQueue$Lock") @:javaCanonical("java.lang.ref", "ReferenceQueue.Lock")
+extern class java.lang.ref.ReferenceQueue$Lock {
+}

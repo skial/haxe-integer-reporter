@@ -1,0 +1,6 @@
+@:realPath("java.security.Guard") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.security.Guard") @:javaCanonical("java.security", "Guard")
+extern interface java.security.Guard {
+
+	@:throws("java.lang.SecurityException")
+	function checkGuard(param1:Dynamic):Void;
+}

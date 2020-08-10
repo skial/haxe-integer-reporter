@@ -1,0 +1,26 @@
+@:realPath("java.util.OptionalDouble") @:used @:nativeGen @:libType @:javaNative @:native("java.util.OptionalDouble") @:javaCanonical("java.util", "OptionalDouble")
+extern class java.util.OptionalDouble {
+
+	function toString():String;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	@:throws("StdTypes")
+	function orElseThrow<X:java.lang.Throwable>(param1:java.util.function.Supplier<orElseThrow.X>):Float;
+
+	function orElseGet(param1:java.util.function.DoubleSupplier):Float;
+
+	function orElse(param1:Float):Float;
+
+	function ifPresent(param1:java.util.function.DoubleConsumer):Void;
+
+	function isPresent():Bool;
+
+	function getAsDouble():Float;
+
+	static function of(param1:Float):java.util.OptionalDouble;
+
+	static function empty():java.util.OptionalDouble;
+}

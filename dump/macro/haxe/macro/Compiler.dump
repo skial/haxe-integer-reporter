@@ -1,0 +1,2230 @@
+class haxe.macro.Compiler {
+
+	@:has_untyped
+	public static macro function getDefine[Function:(key : String) -> haxe.macro.Expr]
+		[Arg:String] [Local key(111994):String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:haxe.macro.Expr]
+					[Call:haxe.macro.Expr]
+						[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+								haxe.macro.Context
+								makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+						[Call:String]
+							[Field:(key : String) -> String]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:(key : String) -> String]
+									haxe.macro.Context
+									definedValue:(key : String) -> String
+							[Local key(111994):String:String]
+						[Call:haxe.macro.Position]
+							[Ident:(String, Int, Int) -> Unknown<9>] $__mk_pos__
+							[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/haxe/macro/Compiler.hx"
+							[Const:Int] 1980
+							[Const:Int] 2018
+
+	@:value(~/^[A-Za-z_][A-Za-z0-9_]*$/)
+	static var ident:EReg = [New:EReg]
+		EReg
+		[Const:String] "^[A-Za-z_][A-Za-z0-9_]*$"
+		[Const:String] "";
+
+	@:value(~/^[A-Za-z_][A-Za-z0-9_.]*$/)
+	static var path:EReg = [New:EReg]
+		EReg
+		[Const:String] "^[A-Za-z_][A-Za-z0-9_.]*$"
+		[Const:String] "";
+
+	public static function allowPackage[Function:(v : String) -> Void]
+		[Arg:String] [Local v(111995):String]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "allow_package"
+					[Const:Int] 1
+				[Local v(111995):String:String]
+
+	public static function define[Function:(flag : String, ?value : Null<String>) -> Void]
+		[Arg:String] [Local flag(112002):String]
+		[Arg:Null<String>]
+			[Local value(112003):Null<String>]
+			[Const:Null<String>] null
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "define"
+					[Const:Int] 2
+				[Local flag(112002):String:String]
+				[Local value(112003):Null<String>:Null<String>]
+
+	public static function removeField[Function:(className : String, field : String, ?isStatic : Null<Bool>) -> Void]
+		[Arg:String] [Local className(112008):String]
+		[Arg:String] [Local field(112009):String]
+		[Arg:Null<Bool>]
+			[Local isStatic(112010):Null<Bool>]
+			[Const:Null<Bool>] null
+		[Block:Dynamic]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[Field:EReg]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:EReg]
+									haxe.macro.Compiler
+									path:EReg
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local className(112008):String:String]
+				[Then:Unknown<10>] [Block:Unknown<10>]
+					[Throw:Unknown<10>]
+						[Throw:Unknown<10>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local className(112008):String:String]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[Field:EReg]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:EReg]
+									haxe.macro.Compiler
+									ident:EReg
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local field(112009):String:String]
+				[Then:Unknown<11>] [Block:Unknown<11>]
+					[Throw:Unknown<11>]
+						[Throw:Unknown<11>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local field(112009):String:String]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "type_patch"
+					[Const:Int] 4
+				[Local className(112008):String:String]
+				[Local field(112009):String:String]
+				[Binop:Bool]
+					[Local isStatic(112010):Null<Bool>:Null<Bool>]
+					==
+					[Const:Bool] true
+				[Const:Unknown<12>] null
+
+	public static function setFieldType[Function:(className : String, field : String, type : String, ?isStatic : Null<Bool>) -> Void]
+		[Arg:String] [Local className(112015):String]
+		[Arg:String] [Local field(112016):String]
+		[Arg:String] [Local type(112017):String]
+		[Arg:Null<Bool>]
+			[Local isStatic(112018):Null<Bool>]
+			[Const:Null<Bool>] null
+		[Block:Dynamic]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[Field:EReg]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:EReg]
+									haxe.macro.Compiler
+									path:EReg
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local className(112015):String:String]
+				[Then:Unknown<13>] [Block:Unknown<13>]
+					[Throw:Unknown<13>]
+						[Throw:Unknown<13>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local className(112015):String:String]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[Field:EReg]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:EReg]
+									haxe.macro.Compiler
+									ident:EReg
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[If:String]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Call:String]
+										[Field:(index : Int) -> String]
+											[Local field(112016):String:String]
+											[FInstance:(index : Int) -> String]
+												String
+												charAt:(index : Int) -> String
+										[Const:Int] 0
+									==
+									[Const:String] "$"
+							[Then:String] [Block:String]
+								[Call:String]
+									[Field:(pos : Int, ?len : Null<Int>) -> String]
+										[Local field(112016):String:String]
+										[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+											String
+											substr:(pos : Int, ?len : Null<Int>) -> String
+									[Const:Int] 1
+									[Const:Null<Int>] null
+							[Else:String] [Block:String] [Local field(112016):String:String]
+				[Then:Unknown<14>] [Block:Unknown<14>]
+					[Throw:Unknown<14>]
+						[Throw:Unknown<14>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local field(112016):String:String]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "type_patch"
+					[Const:Int] 4
+				[Local className(112015):String:String]
+				[Local field(112016):String:String]
+				[Binop:Bool]
+					[Local isStatic(112018):Null<Bool>:Null<Bool>]
+					==
+					[Const:Bool] true
+				[Local type(112017):String:String]
+
+	public static function addMetadata[Function:(meta : String, className : String, ?field : Null<String>, ?isStatic : Null<Bool>) -> Void]
+		[Arg:String] [Local meta(112023):String]
+		[Arg:String] [Local className(112024):String]
+		[Arg:Null<String>]
+			[Local field(112025):Null<String>]
+			[Const:Null<String>] null
+		[Arg:Null<Bool>]
+			[Local isStatic(112026):Null<Bool>]
+			[Const:Null<Bool>] null
+		[Block:Dynamic]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(s : String) -> Bool]
+							[Field:EReg]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:EReg]
+									haxe.macro.Compiler
+									path:EReg
+							[FInstance:(s : String) -> Bool]
+								EReg
+								match:(s : String) -> Bool
+						[Local className(112024):String:String]
+				[Then:Unknown<15>] [Block:Unknown<15>]
+					[Throw:Unknown<15>]
+						[Throw:Unknown<15>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local className(112024):String:String]
+			[If:Void]
+				[Binop:Bool]
+					[Binop:Bool]
+						[Local field(112025):Null<String>:Null<String>]
+						!=
+						[Const:Null<String>] null
+					&&
+					[Unop:Bool]
+						!
+						Prefix
+						[Call:Bool]
+							[Field:(s : String) -> Bool]
+								[Field:EReg]
+									[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+									[FStatic:EReg]
+										haxe.macro.Compiler
+										ident:EReg
+								[FInstance:(s : String) -> Bool]
+									EReg
+									match:(s : String) -> Bool
+							[Local field(112025):Null<String>:Null<String>]
+				[Then:Unknown<16>] [Block:Unknown<16>]
+					[Throw:Unknown<16>]
+						[Throw:Unknown<16>]
+							[Call:Any]
+								[Field:(value : Any) -> Any]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> Any]
+										haxe.Exception
+										thrown:(value : Any) -> Any
+								[Binop:String]
+									[Const:String] "Invalid "
+									+
+									[Local field(112025):Null<String>:Null<String>]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "meta_patch"
+					[Const:Int] 4
+				[Local meta(112023):String:String]
+				[Local className(112024):String:String]
+				[Local field(112025):Null<String>:Null<String>]
+				[Binop:Bool]
+					[Local isStatic(112026):Null<Bool>:Null<Bool>]
+					==
+					[Const:Bool] true
+
+	public static function addClassPath[Function:(path : String) -> Void]
+		[Arg:String] [Local path(112031):String]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "add_class_path"
+					[Const:Int] 1
+				[Local path(112031):String:String]
+
+	public static function getOutput[Function:Void -> String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Call:Dynamic]
+						[Field:(f : String, nargs : Int) -> Dynamic]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(f : String, nargs : Int) -> Dynamic]
+								haxe.macro.Context
+								load:(f : String, nargs : Int) -> Dynamic
+						[Const:String] "get_output"
+						[Const:Int] 0
+
+	public static function setOutput[Function:(fileOrDir : String) -> Void]
+		[Arg:String] [Local fileOrDir(112040):String]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "set_output"
+					[Const:Int] 1
+				[Local fileOrDir(112040):String:String]
+
+	public static function getDisplayPos[Function:Void -> Null<{ pos : Int, file : String }>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Call:Dynamic]
+						[Field:(f : String, nargs : Int) -> Dynamic]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(f : String, nargs : Int) -> Dynamic]
+								haxe.macro.Context
+								load:(f : String, nargs : Int) -> Dynamic
+						[Const:String] "get_display_pos"
+						[Const:Int] 0
+
+	public static function addNativeLib[Function:(name : String) -> Void]
+		[Arg:String] [Local name(112049):String]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "add_native_lib"
+					[Const:Int] 1
+				[Local name(112049):String:String]
+
+	public static function addNativeArg[Function:(argument : String) -> Void]
+		[Arg:String] [Local argument(112054):String]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "add_native_arg"
+					[Const:Int] 1
+				[Local argument(112054):String:String]
+
+	@:value({ strict : false, rec : true })
+	public static function include[Function:(pack : String, ?rec : Null<Bool>, ?ignore : Null<Array<String>>, ?classPaths : Null<Array<String>>, ?strict : Bool) -> Void]
+		[Arg:String] [Local pack(112059):String]
+		[Arg:Null<Bool>]
+			[Local rec(112060):Null<Bool>]
+			[Const:Bool] true
+		[Arg:Null<Array<String>>]
+			[Local ignore(112061):Null<Array<String>>]
+			[Const:Null<Array<String>>] null
+		[Arg:Null<Array<String>>]
+			[Local classPaths(112062):Null<Array<String>>]
+			[Const:Null<Array<String>>] null
+		[Arg:Bool]
+			[Local strict(112063):Bool]
+			[Const:Bool] false
+		[Block:Void]
+			[Var ignoreWildcard(112064):Array<String>] [ArrayDecl:Array<String>]
+			[Var ignoreString(112065):Array<String>] [ArrayDecl:Array<String>]
+			[If:Void]
+				[Binop:Bool]
+					[Local ignore(112061):Null<Array<String>>:Null<Array<String>>]
+					!=
+					[Const:Null<Array<String>>] null
+				[Then:Void] [Block:Void]
+					[Block:Void]
+						[Var `(112071):Int] [Const:Int] 0
+						[While:Void]
+							[Binop:Bool]
+								[Local `(112071):Int:Int]
+								<
+								[Field:Int]
+									[Local ignore(112061):Null<Array<String>>:Null<Array<String>>]
+									[FInstance:Int]
+										Array<String>
+										length:Int
+							[Block:Void]
+								[Var ignoreRule(112066):String]
+									[Array:String]
+										[Local ignore(112061):Null<Array<String>>:Null<Array<String>>]
+										[Local `(112071):Int:Int]
+								[Unop:Int]
+									++
+									Prefix
+									[Local `(112071):Int:Int]
+								[If:Void]
+									[Call:Bool]
+										[Field:(s : String, end : String) -> Bool]
+											[TypeExpr StringTools:Class<StringTools>]
+											[FStatic:(s : String, end : String) -> Bool]
+												StringTools
+												endsWith:(s : String, end : String) -> Bool
+										[Local ignoreRule(112066):String:String]
+										[Const:String] "*"
+									[Then:Int] [Block:Int]
+										[Call:Int]
+											[Field:(x : String) -> Int]
+												[Local ignoreWildcard(112064):Array<String>:Array<String>]
+												[FInstance:(x : String) -> Int]
+													Array<String>
+													push:(x : Array.T) -> Int
+											[Call:String]
+												[Field:(pos : Int, ?len : Null<Int>) -> String]
+													[Local ignoreRule(112066):String:String]
+													[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+														String
+														substr:(pos : Int, ?len : Null<Int>) -> String
+												[Const:Int] 0
+												[Binop:Int]
+													[Field:Int]
+														[Local ignoreRule(112066):String:String]
+														[FInstance:Int]
+															String
+															length:Int
+													-
+													[Const:Int] 1
+									[Else:Int] [Block:Int]
+										[Call:Int]
+											[Field:(x : String) -> Int]
+												[Local ignoreString(112065):Array<String>:Array<String>]
+												[FInstance:(x : String) -> Int]
+													Array<String>
+													push:(x : Array.T) -> Int
+											[Local ignoreRule(112066):String:String]
+			[Var skip(112079):(c : String) -> Bool]
+				[If:(c : String) -> Bool]
+					[Binop:Bool]
+						[Local ignore(112061):Null<Array<String>>:Null<Array<String>>]
+						==
+						[Const:Null<Array<String>>] null
+					[Then:(c : String) -> Bool] [Block:(c : String) -> Bool]
+						[Function:(c : String) -> Bool]
+							[Arg:String] [Local c(112072):String]
+							[Return:Dynamic] [Const:Bool] false
+					[Else:(c : String) -> Bool] [Block:(c : String) -> Bool]
+						[Function:(c : String) -> Bool]
+							[Arg:String] [Local c(112073):String]
+							[Block:Dynamic]
+								[If:Void]
+									[Call:Bool]
+										[Field:(it : Iterable<String>, elt : String) -> Bool]
+											[TypeExpr Lambda:Class<Lambda>]
+											[FStatic:(it : Iterable<String>, elt : String) -> Bool]
+												Lambda
+												has:(it : Iterable<has.A>, elt : has.A) -> Bool
+										[Local ignoreString(112065):Array<String>:Array<String>]
+										[Local c(112073):String:String]
+									[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+								[Block:Void]
+									[Var `(112078):Int] [Const:Int] 0
+									[While:Void]
+										[Binop:Bool]
+											[Local `(112078):Int:Int]
+											<
+											[Field:Int]
+												[Local ignoreWildcard(112064):Array<String>:Array<String>]
+												[FInstance:Int]
+													Array<String>
+													length:Int
+										[Block:Void]
+											[Var ignoreRule(112077):String]
+												[Array:String]
+													[Local ignoreWildcard(112064):Array<String>:Array<String>]
+													[Local `(112078):Int:Int]
+											[Unop:Int]
+												++
+												Prefix
+												[Local `(112078):Int:Int]
+											[If:Void]
+												[Call:Bool]
+													[Field:(s : String, start : String) -> Bool]
+														[TypeExpr StringTools:Class<StringTools>]
+														[FStatic:(s : String, start : String) -> Bool]
+															StringTools
+															startsWith:(s : String, start : String) -> Bool
+													[Local c(112073):String:String]
+													[Local ignoreRule(112077):String:String]
+												[Then:Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:Bool] true
+								[Return:Dynamic] [Const:Bool] false
+			[Var displayValue(112080):String]
+				[Call:String]
+					[Field:(key : String) -> String]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(key : String) -> String]
+							haxe.macro.Context
+							definedValue:(key : String) -> String
+					[Const:String] "display"
+			[If:Void]
+				[Binop:Bool]
+					[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+					==
+					[Const:Null<Array<String>>] null
+				[Then:Void] [Block:Void]
+					[Binop:Null<Array<String>>]
+						[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+						=
+						[Call:Array<String>]
+							[Field:Void -> Array<String>]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:Void -> Array<String>]
+									haxe.macro.Context
+									getClassPath:Void -> Array<String>
+					[Meta:Void]
+						:ast(switch (displayValue) {
+	case null:
+	case "usage":
+	case _:
+		return;	
+})
+						[If:Void]
+							[Binop:Bool]
+								[Local displayValue(112080):String:String]
+								==
+								[Const:String] null
+							[Then:Void] [Block:Void]
+							[Else:Void] [If:Void]
+								[Binop:Bool]
+									[Local displayValue(112080):String:String]
+									==
+									[Const:String] "usage"
+								[Then:Void] [Block:Void] [Block:Void]
+								[Else:Dynamic] [Block:Dynamic] [Return:Dynamic]
+					[Block:Void]
+						[Var `(112083):Int] [Const:Int] 0
+						[Var `1(112084):Int]
+							[Field:Int]
+								[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+								[FInstance:Int]
+									Array<String>
+									length:Int
+						[While:Void]
+							[Binop:Bool]
+								[Local `(112083):Int:Int]
+								<
+								[Local `1(112084):Int:Int]
+							[Block:String]
+								[Var i(112081):Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local `(112083):Int:Int]
+								[Var cp(112082):String]
+									[Call:String]
+										[Field:(s : String, sub : String, by : String) -> String]
+											[TypeExpr StringTools:Class<StringTools>]
+											[FStatic:(s : String, sub : String, by : String) -> String]
+												StringTools
+												replace:(s : String, sub : String, by : String) -> String
+										[Array:String]
+											[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+											[Local i(112081):Int:Int]
+										[Const:String] "\\"
+										[Const:String] "/"
+								[If:Void]
+									[Call:Bool]
+										[Field:(s : String, end : String) -> Bool]
+											[TypeExpr StringTools:Class<StringTools>]
+											[FStatic:(s : String, end : String) -> Bool]
+												StringTools
+												endsWith:(s : String, end : String) -> Bool
+										[Local cp(112082):String:String]
+										[Const:String] "/"
+									[Then:String] [Block:String]
+										[Binop:String]
+											[Local cp(112082):String:String]
+											=
+											[Call:String]
+												[Field:(pos : Int, ?len : Null<Int>) -> String]
+													[Local cp(112082):String:String]
+													[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+														String
+														substr:(pos : Int, ?len : Null<Int>) -> String
+												[Const:Int] 0
+												[Const:Int] -1
+								[If:Void]
+									[Binop:Bool]
+										[Local cp(112082):String:String]
+										==
+										[Const:String] ""
+									[Then:String] [Block:String]
+										[Binop:String]
+											[Local cp(112082):String:String]
+											=
+											[Const:String] "."
+								[Binop:String]
+									[Array:String]
+										[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+										[Local i(112081):Int:Int]
+									=
+									[Local cp(112082):String:String]
+			[Var prefix(112085):String]
+				[If:String]
+					[Binop:Bool]
+						[Local pack(112059):String:String]
+						==
+						[Const:String] ""
+					[Then:String] [Block:String] [Const:String] ""
+					[Else:String] [Block:String]
+						[Binop:String]
+							[Local pack(112059):String:String]
+							+
+							[Const:String] "."
+			[Var found(112086):Bool] [Const:Bool] false
+			[Block:Void]
+				[Var `(112093):Int] [Const:Int] 0
+				[While:Void]
+					[Binop:Bool]
+						[Local `(112093):Int:Int]
+						<
+						[Field:Int]
+							[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+							[FInstance:Int]
+								Array<String>
+								length:Int
+					[Block:Void]
+						[Var cp(112087):String]
+							[Array:String]
+								[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+								[Local `(112093):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local `(112093):Int:Int]
+						[Var path(112088):String]
+							[If:String]
+								[Binop:Bool]
+									[Local pack(112059):String:String]
+									==
+									[Const:String] ""
+								[Then:String] [Block:String] [Local cp(112087):String:String]
+								[Else:String] [Block:String]
+									[Binop:String]
+										[Binop:String]
+											[Local cp(112087):String:String]
+											+
+											[Const:String] "/"
+										+
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Call:Array<String>]
+													[Field:(delimiter : String) -> Array<String>]
+														[Local pack(112059):String:String]
+														[FInstance:(delimiter : String) -> Array<String>]
+															String
+															split:(delimiter : String) -> Array<String>
+													[Const:String] "."
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] "/"
+						[If:Void]
+							[Binop:Bool]
+								[Unop:Bool]
+									!
+									Prefix
+									[Call:Bool]
+										[Field:(path : String) -> Bool]
+											[TypeExpr sys.FileSystem:Class<sys.FileSystem>]
+											[FStatic:(path : String) -> Bool]
+												sys.FileSystem
+												exists:(path : String) -> Bool
+										[Local path(112088):String:String]
+								||
+								[Unop:Bool]
+									!
+									Prefix
+									[Call:Bool]
+										[Field:(path : String) -> Bool]
+											[TypeExpr sys.FileSystem:Class<sys.FileSystem>]
+											[FStatic:(path : String) -> Bool]
+												sys.FileSystem
+												isDirectory:(path : String) -> Bool
+										[Local path(112088):String:String]
+							[Then:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+						[Binop:Bool]
+							[Local found(112086):Bool:Bool]
+							=
+							[Const:Bool] true
+						[Block:Void]
+							[Var `(112091):Int] [Const:Int] 0
+							[Var `1(112092):Array<String>]
+								[Call:Array<String>]
+									[Field:(path : String) -> Array<String>]
+										[TypeExpr sys.FileSystem:Class<sys.FileSystem>]
+										[FStatic:(path : String) -> Array<String>]
+											sys.FileSystem
+											readDirectory:(path : String) -> Array<String>
+									[Local path(112088):String:String]
+							[While:Void]
+								[Binop:Bool]
+									[Local `(112091):Int:Int]
+									<
+									[Field:Int]
+										[Local `1(112092):Array<String>:Array<String>]
+										[FInstance:Int]
+											Array<String>
+											length:Int
+								[Block:Void]
+									[Var file(112089):String]
+										[Array:String]
+											[Local `1(112092):Array<String>:Array<String>]
+											[Local `(112091):Int:Int]
+									[Unop:Int]
+										++
+										Prefix
+										[Local `(112091):Int:Int]
+									[If:Void]
+										[Binop:Bool]
+											[Call:Bool]
+												[Field:(s : String, end : String) -> Bool]
+													[TypeExpr StringTools:Class<StringTools>]
+													[FStatic:(s : String, end : String) -> Bool]
+														StringTools
+														endsWith:(s : String, end : String) -> Bool
+												[Local file(112089):String:String]
+												[Const:String] ".hx"
+											&&
+											[Binop:Bool]
+												[Call:Int]
+													[Field:(str : String, ?startIndex : Null<Int>) -> Int]
+														[Call:String]
+															[Field:(pos : Int, ?len : Null<Int>) -> String]
+																[Local file(112089):String:String]
+																[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+																	String
+																	substr:(pos : Int, ?len : Null<Int>) -> String
+															[Const:Int] 0
+															[Binop:Int]
+																[Field:Int]
+																	[Local file(112089):String:String]
+																	[FInstance:Int]
+																		String
+																		length:Int
+																-
+																[Const:Int] 3
+														[FInstance:(str : String, ?startIndex : Null<Int>) -> Int]
+															String
+															indexOf:(str : String, ?startIndex : Null<Int>) -> Int
+													[Const:String] "."
+													[Const:Null<Int>] null
+												<
+												[Const:Int] 0
+										[Then:Array<haxe.macro.Type>] [Block:Array<haxe.macro.Type>]
+											[If:Void]
+												[Binop:Bool]
+													[Local file(112089):String:String]
+													==
+													[Const:String] "import.hx"
+												[Then:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+											[Var cl(112090):String]
+												[Binop:String]
+													[Local prefix(112085):String:String]
+													+
+													[Call:String]
+														[Field:(pos : Int, ?len : Null<Int>) -> String]
+															[Local file(112089):String:String]
+															[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+																String
+																substr:(pos : Int, ?len : Null<Int>) -> String
+														[Const:Int] 0
+														[Binop:Int]
+															[Field:Int]
+																[Local file(112089):String:String]
+																[FInstance:Int]
+																	String
+																	length:Int
+															-
+															[Const:Int] 3
+											[If:Void]
+												[Call:Bool]
+													[Local skip(112079):(c : String) -> Bool:(c : String) -> Bool]
+													[Local cl(112090):String:String]
+												[Then:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+											[Call:Array<haxe.macro.Type>]
+												[Field:(name : String) -> Array<haxe.macro.Type>]
+													[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+													[FStatic:(name : String) -> Array<haxe.macro.Type>]
+														haxe.macro.Context
+														getModule:(name : String) -> Array<haxe.macro.Type>
+												[Local cl(112090):String:String]
+										[Else:Void] [Block:Void]
+											[If:Void]
+												[Binop:Bool]
+													[Binop:Bool]
+														[Local rec(112060):Null<Bool>:Null<Bool>]
+														&&
+														[Call:Bool]
+															[Field:(path : String) -> Bool]
+																[TypeExpr sys.FileSystem:Class<sys.FileSystem>]
+																[FStatic:(path : String) -> Bool]
+																	sys.FileSystem
+																	isDirectory:(path : String) -> Bool
+															[Binop:String]
+																[Binop:String]
+																	[Local path(112088):String:String]
+																	+
+																	[Const:String] "/"
+																+
+																[Local file(112089):String:String]
+													&&
+													[Unop:Bool]
+														!
+														Prefix
+														[Call:Bool]
+															[Local skip(112079):(c : String) -> Bool:(c : String) -> Bool]
+															[Binop:String]
+																[Local prefix(112085):String:String]
+																+
+																[Local file(112089):String:String]
+												[Then:Void] [Block:Void]
+													[Call:Void]
+														[Field:(pack : String, ?rec : Null<Bool>, ?ignore : Null<Array<String>>, ?classPaths : Null<Array<String>>, ?strict : Bool) -> Void]
+															[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+															[FStatic:(pack : String, ?rec : Null<Bool>, ?ignore : Null<Array<String>>, ?classPaths : Null<Array<String>>, ?strict : Bool) -> Void]
+																haxe.macro.Compiler
+																include:(pack : String, ?rec : Null<Bool>, ?ignore : Null<Array<String>>, ?classPaths : Null<Array<String>>, ?strict : Bool) -> Void
+														[Binop:String]
+															[Local prefix(112085):String:String]
+															+
+															[Local file(112089):String:String]
+														[Const:Bool] true
+														[Local ignore(112061):Null<Array<String>>:Null<Array<String>>]
+														[Local classPaths(112062):Null<Array<String>>:Null<Array<String>>]
+														[Const:Null<Bool>] null
+			[If:Void]
+				[Binop:Bool]
+					[Local strict(112063):Bool:Bool]
+					&&
+					[Unop:Bool]
+						!
+						Prefix
+						[Local found(112086):Bool:Bool]
+				[Then:Dynamic] [Block:Dynamic]
+					[Call:Dynamic]
+						[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+								haxe.macro.Context
+								error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+						[Binop:String]
+							[Binop:String]
+								[Const:String] "Package \""
+								+
+								[Local pack(112059):String:String]
+							+
+							[Const:String] "\" was not found in any of class paths"
+						[Call:haxe.macro.Position]
+							[Field:Void -> haxe.macro.Position]
+								[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+								[FStatic:Void -> haxe.macro.Position]
+									haxe.macro.Context
+									currentPos:Void -> haxe.macro.Position
+
+	static function excludeBaseType[Function:(baseType : haxe.macro.BaseType) -> Void]
+		[Arg:haxe.macro.BaseType] [Local baseType(112094):haxe.macro.BaseType]
+		[Block:Void]
+			[If:Void]
+				[Unop:Bool]
+					!
+					Prefix
+					[Field:Bool]
+						[Local baseType(112094):haxe.macro.BaseType:haxe.macro.BaseType]
+						[FAnon:Bool] isExtern:Bool
+				[Then:Void] [Block:Void]
+					[Var meta(112095):haxe.macro.MetaAccess]
+						[Field:haxe.macro.MetaAccess]
+							[Local baseType(112094):haxe.macro.BaseType:haxe.macro.BaseType]
+							[FAnon:haxe.macro.MetaAccess] meta:haxe.macro.MetaAccess
+					[If:Void]
+						[Unop:Bool]
+							!
+							Prefix
+							[Call:Bool]
+								[Field:(name : String) -> Bool]
+									[Local meta(112095):haxe.macro.MetaAccess:haxe.macro.MetaAccess]
+									[FAnon:(name : String) -> Bool] has:(name : String) -> Bool
+								[Const:String] ":nativeGen"
+						[Then:Void] [Block:Void]
+							[Call:Void]
+								[Field:(name : String, params : Array<haxe.macro.Expr>, pos : haxe.macro.Position) -> Void]
+									[Local meta(112095):haxe.macro.MetaAccess:haxe.macro.MetaAccess]
+									[FAnon:(name : String, params : Array<haxe.macro.Expr>, pos : haxe.macro.Position) -> Void] add:(name : String, params : Array<haxe.macro.Expr>, pos : haxe.macro.Position) -> Void
+								[Const:String] ":hxGen"
+								[ArrayDecl:Array<haxe.macro.Expr>]
+								[Field:haxe.macro.Position]
+									[Local baseType(112094):haxe.macro.BaseType:haxe.macro.BaseType]
+									[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+					[Call:Void]
+						[Field:Void -> Void]
+							[Local baseType(112094):haxe.macro.BaseType:haxe.macro.BaseType]
+							[FAnon:Void -> Void] exclude:Void -> Void
+
+	@:value({ rec : true })
+	public static function exclude[Function:(pack : String, ?rec : Null<Bool>) -> Void]
+		[Arg:String] [Local pack(112096):String]
+		[Arg:Null<Bool>]
+			[Local rec(112097):Null<Bool>]
+			[Const:Bool] true
+		[Block:Void]
+			[Call:Void]
+				[Field:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void]
+					[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+					[FStatic:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void]
+						haxe.macro.Context
+						onGenerate:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void
+				[Function:(types : Array<haxe.macro.Type>) -> Void]
+					[Arg:Array<haxe.macro.Type>] [Local types(112098):Array<haxe.macro.Type>]
+					[Block:Void]
+						[Block:Void]
+							[Var `(112115):Int] [Const:Int] 0
+							[While:Void]
+								[Binop:Bool]
+									[Local `(112115):Int:Int]
+									<
+									[Field:Int]
+										[Local types(112098):Array<haxe.macro.Type>:Array<haxe.macro.Type>]
+										[FInstance:Int]
+											Array<haxe.macro.Type>
+											length:Int
+								[Block:Void]
+									[Var t(112099):haxe.macro.Type]
+										[Array:haxe.macro.Type]
+											[Local types(112098):Array<haxe.macro.Type>:Array<haxe.macro.Type>]
+											[Local `(112115):Int:Int]
+									[Unop:Int]
+										++
+										Prefix
+										[Local `(112115):Int:Int]
+									[Var b(112100):haxe.macro.BaseType]
+									[Var name(112101):String]
+									[Meta:Void]
+										:ast(switch (t) {
+	case TInst(c, _):
+		name = c.toString();
+		b = c.get();	
+	case TEnum(e, _):
+		name = e.toString();
+		b = e.get();	
+	default:
+		continue;	
+})
+										[Switch:Void]
+											[EnumIndex:Int] [Local t(112099):haxe.macro.Type:haxe.macro.Type]
+											[Case:haxe.macro.BaseType]
+												[Const:Int] 1
+												[Block:haxe.macro.BaseType]
+													[Var `3(112108):Array<haxe.macro.Type>]
+														[EnumParameter:Array<haxe.macro.Type>]
+															[Local t(112099):haxe.macro.Type:haxe.macro.Type]
+															TEnum
+															1
+													[Var `2(112109):haxe.macro.Ref<haxe.macro.EnumType>]
+														[EnumParameter:haxe.macro.Ref<haxe.macro.EnumType>]
+															[Local t(112099):haxe.macro.Type:haxe.macro.Type]
+															TEnum
+															0
+													[Block:haxe.macro.BaseType]
+														[Var e(112110):haxe.macro.Ref<haxe.macro.EnumType>] [Local `2(112109):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+														[Block:haxe.macro.BaseType]
+															[Binop:String]
+																[Local name(112101):String:String]
+																=
+																[Call:String]
+																	[Field:Void -> String]
+																		[Local e(112110):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+																		[FAnon:Void -> String] toString:Void -> String
+															[Binop:haxe.macro.BaseType]
+																[Local b(112100):haxe.macro.BaseType:haxe.macro.BaseType]
+																=
+																[Call:haxe.macro.EnumType]
+																	[Field:Void -> haxe.macro.EnumType]
+																		[Local e(112110):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+																		[FAnon:Void -> haxe.macro.EnumType] get:Void -> haxe.macro.EnumType
+											[Case:haxe.macro.BaseType]
+												[Const:Int] 2
+												[Block:haxe.macro.BaseType]
+													[Var `1(112111):Array<haxe.macro.Type>]
+														[EnumParameter:Array<haxe.macro.Type>]
+															[Local t(112099):haxe.macro.Type:haxe.macro.Type]
+															TInst
+															1
+													[Var `(112112):haxe.macro.Ref<haxe.macro.ClassType>]
+														[EnumParameter:haxe.macro.Ref<haxe.macro.ClassType>]
+															[Local t(112099):haxe.macro.Type:haxe.macro.Type]
+															TInst
+															0
+													[Block:haxe.macro.BaseType]
+														[Var c(112113):haxe.macro.Ref<haxe.macro.ClassType>] [Local `(112112):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+														[Block:haxe.macro.BaseType]
+															[Binop:String]
+																[Local name(112101):String:String]
+																=
+																[Call:String]
+																	[Field:Void -> String]
+																		[Local c(112113):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+																		[FAnon:Void -> String] toString:Void -> String
+															[Binop:haxe.macro.BaseType]
+																[Local b(112100):haxe.macro.BaseType:haxe.macro.BaseType]
+																=
+																[Call:haxe.macro.ClassType]
+																	[Field:Void -> haxe.macro.ClassType]
+																		[Local c(112113):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+																		[FAnon:Void -> haxe.macro.ClassType] get:Void -> haxe.macro.ClassType
+											[Default:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+									[Var p(112114):String]
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Field:Array<String>]
+													[Local b(112100):haxe.macro.BaseType:haxe.macro.BaseType]
+													[FAnon:Array<String>] pack:Array<String>
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] "."
+									[If:Void]
+										[Binop:Bool]
+											[Parenthesis:Bool]
+												[Binop:Bool]
+													[Binop:Bool]
+														[Local p(112114):String:String]
+														==
+														[Local pack(112096):String:String]
+													||
+													[Binop:Bool]
+														[Local name(112101):String:String]
+														==
+														[Local pack(112096):String:String]
+											||
+											[Parenthesis:Bool]
+												[Binop:Bool]
+													[Local rec(112097):Null<Bool>:Null<Bool>]
+													&&
+													[Call:Bool]
+														[Field:(s : String, start : String) -> Bool]
+															[TypeExpr StringTools:Class<StringTools>]
+															[FStatic:(s : String, start : String) -> Bool]
+																StringTools
+																startsWith:(s : String, start : String) -> Bool
+														[Local p(112114):String:String]
+														[Binop:String]
+															[Local pack(112096):String:String]
+															+
+															[Const:String] "."
+										[Then:Void] [Block:Void]
+											[Call:Void]
+												[Field:(baseType : haxe.macro.BaseType) -> Void]
+													[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+													[FStatic:(baseType : haxe.macro.BaseType) -> Void]
+														haxe.macro.Compiler
+														excludeBaseType:(baseType : haxe.macro.BaseType) -> Void
+												[Local b(112100):haxe.macro.BaseType:haxe.macro.BaseType]
+				[Const:Bool] false
+
+	public static function excludeFile[Function:(fileName : String) -> Void]
+		[Arg:String] [Local fileName(112116):String]
+		[Block:Void]
+			[Binop:String]
+				[Local fileName(112116):String:String]
+				=
+				[Call:String]
+					[Field:(file : String) -> String]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(file : String) -> String]
+							haxe.macro.Context
+							resolvePath:(file : String) -> String
+					[Local fileName(112116):String:String]
+			[Var f(112117):sys.io.FileInput]
+				[Call:sys.io.FileInput]
+					[Field:(path : String, ?binary : Bool) -> sys.io.FileInput]
+						[TypeExpr sys.io.File:Class<sys.io.File>]
+						[FStatic:(path : String, ?binary : Bool) -> sys.io.FileInput]
+							sys.io.File
+							read:(path : String, ?binary : Bool) -> sys.io.FileInput
+					[Local fileName(112116):String:String]
+					[Const:Bool] true
+			[Var classes(112118):haxe.ds.StringMap<Bool>] [New:haxe.ds.StringMap<Bool>] haxe.ds.StringMap<Bool>
+			[Try:Void]
+				[Block:Void]
+					[While:Void]
+						[Const:Bool] true
+						[Block:Void]
+							[Var l(112119):String]
+								[Call:String]
+									[Field:(s : String) -> String]
+										[TypeExpr StringTools:Class<StringTools>]
+										[FStatic:(s : String) -> String]
+											StringTools
+											trim:(s : String) -> String
+									[Call:String]
+										[Field:Void -> String]
+											[Local f(112117):sys.io.FileInput:sys.io.FileInput]
+											[FInstance:Void -> String]
+												haxe.io.Input
+												readLine:Void -> String
+							[If:Void]
+								[Binop:Bool]
+									[Binop:Bool]
+										[Local l(112119):String:String]
+										==
+										[Const:String] ""
+									||
+									[Unop:Bool]
+										!
+										Prefix
+										[Call:Bool]
+											[Field:(s : String) -> Bool]
+												[New:EReg]
+													EReg
+													[Const:String] "[A-Za-z0-9._]"
+													[Const:String] ""
+												[FInstance:(s : String) -> Bool]
+													EReg
+													match:(s : String) -> Bool
+											[Local l(112119):String:String]
+								[Then:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+							[Call:Void]
+								[Field:(key : String, value : Bool) -> Void]
+									[Local classes(112118):haxe.ds.StringMap<Bool>:haxe.ds.StringMap<Bool>]
+									[FInstance:(key : String, value : Bool) -> Void]
+										haxe.ds.StringMap<Bool>
+										set:(key : String, value : haxe.ds.StringMap.T) -> Void
+								[Local l(112119):String:String]
+								[Const:Bool] true
+				Catch [Local `3(117493):Dynamic]
+					[Block:Void]
+						[Var `4(117494):haxe.Exception]
+							[Call:haxe.Exception]
+								[Field:(value : Any) -> haxe.Exception]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> haxe.Exception]
+										haxe.Exception
+										caught:(value : Any) -> haxe.Exception
+								[Local `3(117493):Dynamic:Dynamic]
+						[Var `5(117495):Dynamic]
+							[Call:Any]
+								[Field:Void -> Any]
+									[Local `4(117494):haxe.Exception:haxe.Exception]
+									[FInstance:Void -> Any]
+										haxe.Exception
+										unwrap:Void -> Any
+						[If:Void]
+							[Call:Bool]
+								[Field:(v : Dynamic, t : Dynamic) -> Bool]
+									[TypeExpr Std:{ Statics Std }]
+									[FStatic:(v : Dynamic, t : Dynamic) -> Bool]
+										Std
+										isOfType:(v : Dynamic, t : Dynamic) -> Bool
+								[Local `5(117495):Dynamic:Dynamic]
+								[TypeExpr haxe.io.Eof:haxe.io.Eof]
+							[Then:Void] [Block:Void]
+								[Block:Void]
+								[Block:Void]
+							[Else:Unknown<17>] [Throw:Unknown<17>] [Local `3(117493):Dynamic:Dynamic]
+			[Call:Void]
+				[Field:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void]
+					[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+					[FStatic:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void]
+						haxe.macro.Context
+						onGenerate:(callback : (Array<haxe.macro.Type> -> Void), ?persistent : Bool) -> Void
+				[Function:(types : Array<haxe.macro.Type>) -> Void]
+					[Arg:Array<haxe.macro.Type>] [Local types(112121):Array<haxe.macro.Type>]
+					[Block:Void]
+						[Block:Void]
+							[Var `(112135):Int] [Const:Int] 0
+							[While:Void]
+								[Binop:Bool]
+									[Local `(112135):Int:Int]
+									<
+									[Field:Int]
+										[Local types(112121):Array<haxe.macro.Type>:Array<haxe.macro.Type>]
+										[FInstance:Int]
+											Array<haxe.macro.Type>
+											length:Int
+								[Block:Void]
+									[Var t(112122):haxe.macro.Type]
+										[Array:haxe.macro.Type]
+											[Local types(112121):Array<haxe.macro.Type>:Array<haxe.macro.Type>]
+											[Local `(112135):Int:Int]
+									[Unop:Int]
+										++
+										Prefix
+										[Local `(112135):Int:Int]
+									[Meta:Void]
+										:ast(switch (t) {
+	case TInst(c, _):
+		if (classes.exists(c.toString())) excludeBaseType(c.get());	
+	case TEnum(e, _):
+		if (classes.exists(e.toString())) excludeBaseType(e.get());	
+	default:
+})
+										[Switch:Void]
+											[EnumIndex:Int] [Local t(112122):haxe.macro.Type:haxe.macro.Type]
+											[Case:Void]
+												[Const:Int] 1
+												[Block:Void]
+													[Var `3(112129):Array<haxe.macro.Type>]
+														[EnumParameter:Array<haxe.macro.Type>]
+															[Local t(112122):haxe.macro.Type:haxe.macro.Type]
+															TEnum
+															1
+													[Var `2(112130):haxe.macro.Ref<haxe.macro.EnumType>]
+														[EnumParameter:haxe.macro.Ref<haxe.macro.EnumType>]
+															[Local t(112122):haxe.macro.Type:haxe.macro.Type]
+															TEnum
+															0
+													[Block:Void]
+														[Var e(112131):haxe.macro.Ref<haxe.macro.EnumType>] [Local `2(112130):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+														[Block:Void]
+															[If:Void]
+																[Call:Bool]
+																	[Field:(key : String) -> Bool]
+																		[Local classes(112118):haxe.ds.StringMap<Bool>:haxe.ds.StringMap<Bool>]
+																		[FInstance:(key : String) -> Bool]
+																			haxe.ds.StringMap<Bool>
+																			exists:(key : String) -> Bool
+																	[Call:String]
+																		[Field:Void -> String]
+																			[Local e(112131):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+																			[FAnon:Void -> String] toString:Void -> String
+																[Then:Void] [Block:Void]
+																	[Call:Void]
+																		[Field:(baseType : haxe.macro.BaseType) -> Void]
+																			[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+																			[FStatic:(baseType : haxe.macro.BaseType) -> Void]
+																				haxe.macro.Compiler
+																				excludeBaseType:(baseType : haxe.macro.BaseType) -> Void
+																		[Call:haxe.macro.EnumType]
+																			[Field:Void -> haxe.macro.EnumType]
+																				[Local e(112131):haxe.macro.Ref<haxe.macro.EnumType>:haxe.macro.Ref<haxe.macro.EnumType>]
+																				[FAnon:Void -> haxe.macro.EnumType] get:Void -> haxe.macro.EnumType
+											[Case:Void]
+												[Const:Int] 2
+												[Block:Void]
+													[Var `1(112132):Array<haxe.macro.Type>]
+														[EnumParameter:Array<haxe.macro.Type>]
+															[Local t(112122):haxe.macro.Type:haxe.macro.Type]
+															TInst
+															1
+													[Var `(112133):haxe.macro.Ref<haxe.macro.ClassType>]
+														[EnumParameter:haxe.macro.Ref<haxe.macro.ClassType>]
+															[Local t(112122):haxe.macro.Type:haxe.macro.Type]
+															TInst
+															0
+													[Block:Void]
+														[Var c(112134):haxe.macro.Ref<haxe.macro.ClassType>] [Local `(112133):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+														[Block:Void]
+															[If:Void]
+																[Call:Bool]
+																	[Field:(key : String) -> Bool]
+																		[Local classes(112118):haxe.ds.StringMap<Bool>:haxe.ds.StringMap<Bool>]
+																		[FInstance:(key : String) -> Bool]
+																			haxe.ds.StringMap<Bool>
+																			exists:(key : String) -> Bool
+																	[Call:String]
+																		[Field:Void -> String]
+																			[Local c(112134):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+																			[FAnon:Void -> String] toString:Void -> String
+																[Then:Void] [Block:Void]
+																	[Call:Void]
+																		[Field:(baseType : haxe.macro.BaseType) -> Void]
+																			[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+																			[FStatic:(baseType : haxe.macro.BaseType) -> Void]
+																				haxe.macro.Compiler
+																				excludeBaseType:(baseType : haxe.macro.BaseType) -> Void
+																		[Call:haxe.macro.ClassType]
+																			[Field:Void -> haxe.macro.ClassType]
+																				[Local c(112134):haxe.macro.Ref<haxe.macro.ClassType>:haxe.macro.Ref<haxe.macro.ClassType>]
+																				[FAnon:Void -> haxe.macro.ClassType] get:Void -> haxe.macro.ClassType
+											[Default:Void] [Block:Void]
+				[Const:Null<Bool>] null
+
+	public static function patchTypes[Function:(file : String) -> Void]
+		[Arg:String] [Local file(112136):String]
+		[Block:Void]
+			[Var file(112137):String]
+				[Call:String]
+					[Field:(file : String) -> String]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(file : String) -> String]
+							haxe.macro.Context
+							resolvePath:(file : String) -> String
+					[Local file(112136):String:String]
+			[Var f(112138):sys.io.FileInput]
+				[Call:sys.io.FileInput]
+					[Field:(path : String, ?binary : Bool) -> sys.io.FileInput]
+						[TypeExpr sys.io.File:Class<sys.io.File>]
+						[FStatic:(path : String, ?binary : Bool) -> sys.io.FileInput]
+							sys.io.File
+							read:(path : String, ?binary : Bool) -> sys.io.FileInput
+					[Local file(112137):String:String]
+					[Const:Bool] true
+			[Try:Void]
+				[Block:Void]
+					[While:Void]
+						[Const:Bool] true
+						[Block:Unknown<19>]
+							[Var r(112139):String]
+								[Call:String]
+									[Field:(s : String) -> String]
+										[TypeExpr StringTools:Class<StringTools>]
+										[FStatic:(s : String) -> String]
+											StringTools
+											trim:(s : String) -> String
+									[Call:String]
+										[Field:Void -> String]
+											[Local f(112138):sys.io.FileInput:sys.io.FileInput]
+											[FInstance:Void -> String]
+												haxe.io.Input
+												readLine:Void -> String
+							[If:Void]
+								[Binop:Bool]
+									[Binop:Bool]
+										[Local r(112139):String:String]
+										==
+										[Const:String] ""
+									||
+									[Binop:Bool]
+										[Call:String]
+											[Field:(pos : Int, ?len : Null<Int>) -> String]
+												[Local r(112139):String:String]
+												[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+													String
+													substr:(pos : Int, ?len : Null<Int>) -> String
+											[Const:Int] 0
+											[Const:Int] 2
+										==
+										[Const:String] "//"
+								[Then:Dynamic] [Block:Dynamic] [Continue:Dynamic]
+							[If:Void]
+								[Call:Bool]
+									[Field:(s : String, end : String) -> Bool]
+										[TypeExpr StringTools:Class<StringTools>]
+										[FStatic:(s : String, end : String) -> Bool]
+											StringTools
+											endsWith:(s : String, end : String) -> Bool
+									[Local r(112139):String:String]
+									[Const:String] ";"
+								[Then:String] [Block:String]
+									[Binop:String]
+										[Local r(112139):String:String]
+										=
+										[Call:String]
+											[Field:(pos : Int, ?len : Null<Int>) -> String]
+												[Local r(112139):String:String]
+												[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+													String
+													substr:(pos : Int, ?len : Null<Int>) -> String
+											[Const:Int] 0
+											[Const:Int] -1
+							[If:Void]
+								[Binop:Bool]
+									[Call:String]
+										[Field:(index : Int) -> String]
+											[Local r(112139):String:String]
+											[FInstance:(index : Int) -> String]
+												String
+												charAt:(index : Int) -> String
+										[Const:Int] 0
+									==
+									[Const:String] "-"
+								[Then:Dynamic] [Block:Dynamic]
+									[Binop:String]
+										[Local r(112139):String:String]
+										=
+										[Call:String]
+											[Field:(pos : Int, ?len : Null<Int>) -> String]
+												[Local r(112139):String:String]
+												[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+													String
+													substr:(pos : Int, ?len : Null<Int>) -> String
+											[Const:Int] 1
+											[Const:Null<Int>] null
+									[Var isStatic(112140):Bool]
+										[Call:Bool]
+											[Field:(s : String, start : String) -> Bool]
+												[TypeExpr StringTools:Class<StringTools>]
+												[FStatic:(s : String, start : String) -> Bool]
+													StringTools
+													startsWith:(s : String, start : String) -> Bool
+											[Local r(112139):String:String]
+											[Const:String] "static "
+									[If:Void]
+										[Local isStatic(112140):Bool:Bool]
+										[Then:String] [Block:String]
+											[Binop:String]
+												[Local r(112139):String:String]
+												=
+												[Call:String]
+													[Field:(pos : Int, ?len : Null<Int>) -> String]
+														[Local r(112139):String:String]
+														[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+															String
+															substr:(pos : Int, ?len : Null<Int>) -> String
+													[Const:Int] 7
+													[Const:Null<Int>] null
+									[Var p(112141):Array<String>]
+										[Call:Array<String>]
+											[Field:(delimiter : String) -> Array<String>]
+												[Local r(112139):String:String]
+												[FInstance:(delimiter : String) -> Array<String>]
+													String
+													split:(delimiter : String) -> Array<String>
+											[Const:String] "."
+									[Var field(112142):Null<String>]
+										[Call:Null<String>]
+											[Field:Void -> Null<String>]
+												[Local p(112141):Array<String>:Array<String>]
+												[FInstance:Void -> Null<String>]
+													Array<String>
+													pop:Void -> Null<Array.T>
+									[Call:Void]
+										[Field:(className : String, field : String, ?isStatic : Null<Bool>) -> Void]
+											[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+											[FStatic:(className : String, field : String, ?isStatic : Null<Bool>) -> Void]
+												haxe.macro.Compiler
+												removeField:(className : String, field : String, ?isStatic : Null<Bool>) -> Void
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Local p(112141):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] "."
+										[Local field(112142):Null<String>:Null<String>]
+										[Local isStatic(112140):Bool:Bool]
+									[Continue:Dynamic]
+							[If:Void]
+								[Binop:Bool]
+									[Call:String]
+										[Field:(index : Int) -> String]
+											[Local r(112139):String:String]
+											[FInstance:(index : Int) -> String]
+												String
+												charAt:(index : Int) -> String
+										[Const:Int] 0
+									==
+									[Const:String] "@"
+								[Then:Dynamic] [Block:Dynamic]
+									[Var rp(112143):Array<String>]
+										[Call:Array<String>]
+											[Field:(delimiter : String) -> Array<String>]
+												[Local r(112139):String:String]
+												[FInstance:(delimiter : String) -> Array<String>]
+													String
+													split:(delimiter : String) -> Array<String>
+											[Const:String] " "
+									[Var type(112144):Null<String>]
+										[Call:Null<String>]
+											[Field:Void -> Null<String>]
+												[Local rp(112143):Array<String>:Array<String>]
+												[FInstance:Void -> Null<String>]
+													Array<String>
+													pop:Void -> Null<Array.T>
+									[Var isStatic(112145):Bool]
+										[Binop:Bool]
+											[Array:String]
+												[Local rp(112143):Array<String>:Array<String>]
+												[Binop:Int]
+													[Field:Int]
+														[Local rp(112143):Array<String>:Array<String>]
+														[FInstance:Int]
+															Array<String>
+															length:Int
+													-
+													[Const:Int] 1
+											==
+											[Const:String] "static"
+									[If:Void]
+										[Local isStatic(112145):Bool:Bool]
+										[Then:Null<String>] [Block:Null<String>]
+											[Call:Null<String>]
+												[Field:Void -> Null<String>]
+													[Local rp(112143):Array<String>:Array<String>]
+													[FInstance:Void -> Null<String>]
+														Array<String>
+														pop:Void -> Null<Array.T>
+									[Var meta(112146):String]
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Local rp(112143):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] " "
+									[Var p(112147):Array<String>]
+										[Call:Array<String>]
+											[Field:(delimiter : String) -> Array<String>]
+												[Local type(112144):Null<String>:Null<String>]
+												[FInstance:(delimiter : String) -> Array<String>]
+													String
+													split:(delimiter : String) -> Array<String>
+											[Const:String] "."
+									[Var field(112148):Null<String>]
+										[If:Null<String>]
+											[Binop:Bool]
+												[Binop:Bool]
+													[Field:Int]
+														[Local p(112147):Array<String>:Array<String>]
+														[FInstance:Int]
+															Array<String>
+															length:Int
+													>
+													[Const:Int] 1
+												&&
+												[Binop:Bool]
+													[Call:String]
+														[Field:(index : Int) -> String]
+															[Array:String]
+																[Local p(112147):Array<String>:Array<String>]
+																[Binop:Int]
+																	[Field:Int]
+																		[Local p(112147):Array<String>:Array<String>]
+																		[FInstance:Int]
+																			Array<String>
+																			length:Int
+																	-
+																	[Const:Int] 2
+															[FInstance:(index : Int) -> String]
+																String
+																charAt:(index : Int) -> String
+														[Const:Int] 0
+													>=
+													[Const:String] "a"
+											[Then:Null<String>] [Block:Null<String>] [Const:Null<String>] null
+											[Else:Null<String>] [Block:Null<String>]
+												[Call:Null<String>]
+													[Field:Void -> Null<String>]
+														[Local p(112147):Array<String>:Array<String>]
+														[FInstance:Void -> Null<String>]
+															Array<String>
+															pop:Void -> Null<Array.T>
+									[Call:Void]
+										[Field:(meta : String, className : String, ?field : Null<String>, ?isStatic : Null<Bool>) -> Void]
+											[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+											[FStatic:(meta : String, className : String, ?field : Null<String>, ?isStatic : Null<Bool>) -> Void]
+												haxe.macro.Compiler
+												addMetadata:(meta : String, className : String, ?field : Null<String>, ?isStatic : Null<Bool>) -> Void
+										[Local meta(112146):String:String]
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Local p(112147):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] "."
+										[Local field(112148):Null<String>:Null<String>]
+										[Local isStatic(112145):Bool:Bool]
+									[Continue:Dynamic]
+							[If:Void]
+								[Call:Bool]
+									[Field:(s : String, start : String) -> Bool]
+										[TypeExpr StringTools:Class<StringTools>]
+										[FStatic:(s : String, start : String) -> Bool]
+											StringTools
+											startsWith:(s : String, start : String) -> Bool
+									[Local r(112139):String:String]
+									[Const:String] "enum "
+								[Then:Dynamic] [Block:Dynamic]
+									[Call:Void]
+										[Field:(flag : String, ?value : Null<String>) -> Void]
+											[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+											[FStatic:(flag : String, ?value : Null<String>) -> Void]
+												haxe.macro.Compiler
+												define:(flag : String, ?value : Null<String>) -> Void
+										[Binop:String]
+											[Const:String] "enumAbstract:"
+											+
+											[Call:String]
+												[Field:(pos : Int, ?len : Null<Int>) -> String]
+													[Local r(112139):String:String]
+													[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+														String
+														substr:(pos : Int, ?len : Null<Int>) -> String
+												[Const:Int] 5
+												[Const:Null<Int>] null
+										[Const:Null<String>] null
+									[Continue:Dynamic]
+							[Var rp(112149):Array<String>]
+								[Call:Array<String>]
+									[Field:(delimiter : String) -> Array<String>]
+										[Local r(112139):String:String]
+										[FInstance:(delimiter : String) -> Array<String>]
+											String
+											split:(delimiter : String) -> Array<String>
+									[Const:String] " : "
+							[If:Void]
+								[Binop:Bool]
+									[Field:Int]
+										[Local rp(112149):Array<String>:Array<String>]
+										[FInstance:Int]
+											Array<String>
+											length:Int
+									>
+									[Const:Int] 1
+								[Then:Dynamic] [Block:Dynamic]
+									[Binop:String]
+										[Local r(112139):String:String]
+										=
+										[Call:Null<String>]
+											[Field:Void -> Null<String>]
+												[Local rp(112149):Array<String>:Array<String>]
+												[FInstance:Void -> Null<String>]
+													Array<String>
+													shift:Void -> Null<Array.T>
+									[Var isStatic(112150):Bool]
+										[Call:Bool]
+											[Field:(s : String, start : String) -> Bool]
+												[TypeExpr StringTools:Class<StringTools>]
+												[FStatic:(s : String, start : String) -> Bool]
+													StringTools
+													startsWith:(s : String, start : String) -> Bool
+											[Local r(112139):String:String]
+											[Const:String] "static "
+									[If:Void]
+										[Local isStatic(112150):Bool:Bool]
+										[Then:String] [Block:String]
+											[Binop:String]
+												[Local r(112139):String:String]
+												=
+												[Call:String]
+													[Field:(pos : Int, ?len : Null<Int>) -> String]
+														[Local r(112139):String:String]
+														[FInstance:(pos : Int, ?len : Null<Int>) -> String]
+															String
+															substr:(pos : Int, ?len : Null<Int>) -> String
+													[Const:Int] 7
+													[Const:Null<Int>] null
+									[Var p(112151):Array<String>]
+										[Call:Array<String>]
+											[Field:(delimiter : String) -> Array<String>]
+												[Local r(112139):String:String]
+												[FInstance:(delimiter : String) -> Array<String>]
+													String
+													split:(delimiter : String) -> Array<String>
+											[Const:String] "."
+									[Var field(112152):Null<String>]
+										[Call:Null<String>]
+											[Field:Void -> Null<String>]
+												[Local p(112151):Array<String>:Array<String>]
+												[FInstance:Void -> Null<String>]
+													Array<String>
+													pop:Void -> Null<Array.T>
+									[Call:Void]
+										[Field:(className : String, field : String, type : String, ?isStatic : Null<Bool>) -> Void]
+											[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+											[FStatic:(className : String, field : String, type : String, ?isStatic : Null<Bool>) -> Void]
+												haxe.macro.Compiler
+												setFieldType:(className : String, field : String, type : String, ?isStatic : Null<Bool>) -> Void
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Local p(112151):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] "."
+										[Local field(112152):Null<String>:Null<String>]
+										[Call:String]
+											[Field:(sep : String) -> String]
+												[Local rp(112149):Array<String>:Array<String>]
+												[FInstance:(sep : String) -> String]
+													Array<String>
+													join:(sep : String) -> String
+											[Const:String] " : "
+										[Local isStatic(112150):Bool:Bool]
+									[Continue:Dynamic]
+							[Throw:Unknown<19>]
+								[Throw:Unknown<19>]
+									[Call:Any]
+										[Field:(value : Any) -> Any]
+											[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+											[FStatic:(value : Any) -> Any]
+												haxe.Exception
+												thrown:(value : Any) -> Any
+										[Binop:String]
+											[Const:String] "Invalid type patch "
+											+
+											[Local r(112139):String:String]
+				Catch [Local `6(117496):Dynamic]
+					[Block:Void]
+						[Var `7(117497):haxe.Exception]
+							[Call:haxe.Exception]
+								[Field:(value : Any) -> haxe.Exception]
+									[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+									[FStatic:(value : Any) -> haxe.Exception]
+										haxe.Exception
+										caught:(value : Any) -> haxe.Exception
+								[Local `6(117496):Dynamic:Dynamic]
+						[Var `8(117498):Dynamic]
+							[Call:Any]
+								[Field:Void -> Any]
+									[Local `7(117497):haxe.Exception:haxe.Exception]
+									[FInstance:Void -> Any]
+										haxe.Exception
+										unwrap:Void -> Any
+						[If:Void]
+							[Call:Bool]
+								[Field:(v : Dynamic, t : Dynamic) -> Bool]
+									[TypeExpr Std:{ Statics Std }]
+									[FStatic:(v : Dynamic, t : Dynamic) -> Bool]
+										Std
+										isOfType:(v : Dynamic, t : Dynamic) -> Bool
+								[Local `8(117498):Dynamic:Dynamic]
+								[TypeExpr haxe.io.Eof:haxe.io.Eof]
+							[Then:Void] [Block:Void]
+								[Block:Void]
+								[Block:Void]
+							[Else:Unknown<18>] [Throw:Unknown<18>] [Local `6(117496):Dynamic:Dynamic]
+
+	@:value({ recursive : true })
+	public static function keep[Function:(?path : Null<String>, ?paths : Null<Array<String>>, ?recursive : Null<Bool>) -> Void]
+		[Arg:Null<String>]
+			[Local path(112154):Null<String>]
+			[Const:Null<String>] null
+		[Arg:Null<Array<String>>]
+			[Local paths(112155):Null<Array<String>>]
+			[Const:Null<Array<String>>] null
+		[Arg:Null<Bool>]
+			[Local recursive(112156):Null<Bool>]
+			[Const:Bool] true
+		[Block:Void]
+			[If:Void]
+				[Binop:Bool]
+					[Const:Null<Array<String>>] null
+					==
+					[Local paths(112155):Null<Array<String>>:Null<Array<String>>]
+				[Then:Null<Array<String>>] [Block:Null<Array<String>>]
+					[Binop:Null<Array<String>>]
+						[Local paths(112155):Null<Array<String>>:Null<Array<String>>]
+						=
+						[ArrayDecl:Array<String>]
+			[If:Void]
+				[Binop:Bool]
+					[Const:Null<String>] null
+					!=
+					[Local path(112154):Null<String>:Null<String>]
+				[Then:Int] [Block:Int]
+					[Call:Int]
+						[Field:(x : String) -> Int]
+							[Local paths(112155):Null<Array<String>>:Null<Array<String>>]
+							[FInstance:(x : String) -> Int]
+								Array<String>
+								push:(x : Array.T) -> Int
+						[Local path(112154):Null<String>:Null<String>]
+			[Block:Void]
+				[Var `(112167):Int] [Const:Int] 0
+				[While:Void]
+					[Binop:Bool]
+						[Local `(112167):Int:Int]
+						<
+						[Field:Int]
+							[Local paths(112155):Null<Array<String>>:Null<Array<String>>]
+							[FInstance:Int]
+								Array<String>
+								length:Int
+					[Block:Void]
+						[Var path(112157):String]
+							[Array:String]
+								[Local paths(112155):Null<Array<String>>:Null<Array<String>>]
+								[Local `(112167):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local `(112167):Int:Int]
+						[Call:Void]
+							[Field:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void]
+								[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+								[FStatic:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void]
+									haxe.macro.Compiler
+									addGlobalMetadata:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void
+							[Local path(112157):String:String]
+							[Const:String] "@:keep"
+							[Local recursive(112156):Null<Bool>:Null<Bool>]
+							[Const:Bool] true
+							[Const:Bool] true
+
+	@:value({ recursive : true, mode : Loose })
+	public static function nullSafety[Function:(path : String, ?mode : haxe.macro.NullSafetyMode, ?recursive : Bool) -> Void]
+		[Arg:String] [Local path(112168):String]
+		[Arg:haxe.macro.NullSafetyMode]
+			[Local mode(112169):haxe.macro.NullSafetyMode]
+			[Const:String] "Loose"
+		[Arg:Bool]
+			[Local recursive(112170):Bool]
+			[Const:Bool] true
+		[Block:Void]
+			[Call:Void]
+				[Field:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void]
+					[TypeExpr haxe.macro.Compiler:Class<haxe.macro.Compiler>]
+					[FStatic:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void]
+						haxe.macro.Compiler
+						addGlobalMetadata:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void
+				[Local path(112168):String:String]
+				[Binop:String]
+					[Binop:String]
+						[Const:String] "@:nullSafety("
+						+
+						[Local mode(112169):haxe.macro.NullSafetyMode:haxe.macro.NullSafetyMode]
+					+
+					[Const:String] ")"
+				[Local recursive(112170):Bool:Bool]
+				[Const:Null<Bool>] null
+				[Const:Null<Bool>] null
+
+	@:value({ toFields : false, toTypes : true, recursive : true })
+	public static function addGlobalMetadata[Function:(pathFilter : String, meta : String, ?recursive : Null<Bool>, ?toTypes : Null<Bool>, ?toFields : Null<Bool>) -> Void]
+		[Arg:String] [Local pathFilter(112158):String]
+		[Arg:String] [Local meta(112159):String]
+		[Arg:Null<Bool>]
+			[Local recursive(112160):Null<Bool>]
+			[Const:Bool] true
+		[Arg:Null<Bool>]
+			[Local toTypes(112161):Null<Bool>]
+			[Const:Bool] true
+		[Arg:Null<Bool>]
+			[Local toFields(112162):Null<Bool>]
+			[Const:Bool] false
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "add_global_metadata_impl"
+					[Const:Int] 5
+				[Local pathFilter(112158):String:String]
+				[Local meta(112159):String:String]
+				[Local recursive(112160):Null<Bool>:Null<Bool>]
+				[Local toTypes(112161):Null<Bool>:Null<Bool>]
+				[Local toFields(112162):Null<Bool>:Null<Bool>]
+
+	public static function setCustomJSGenerator[Function:(callb : (haxe.macro.JSGenApi -> Void)) -> Void]
+		[Arg:haxe.macro.JSGenApi -> Void] [Local callb(112171):haxe.macro.JSGenApi -> Void]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "set_custom_js_generator"
+					[Const:Int] 1
+				[Local callb(112171):haxe.macro.JSGenApi -> Void:haxe.macro.JSGenApi -> Void]
+
+	static inline function load[Function:(f : String, nargs : Int) -> Dynamic]
+		[Arg:String] [Local f(111996):String]
+		[Arg:Int] [Local nargs(111997):Int]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Local f(111996):String:String]
+					[Local nargs(111997):Int:Int]
+
+	public static function flushDiskCache[Function:Void -> Void]
+		[Block:Dynamic]
+			[Call:Dynamic]
+				[Call:Dynamic]
+					[Field:(f : String, nargs : Int) -> Dynamic]
+						[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+						[FStatic:(f : String, nargs : Int) -> Dynamic]
+							haxe.macro.Context
+							load:(f : String, nargs : Int) -> Dynamic
+					[Const:String] "flush_disk_cache"
+					[Const:Int] 0
+
+	@:has_untyped @:value({ position : Top })
+	public static function includeFile[Function:(file : String, ?position : haxe.macro.IncludePosition) -> haxe.macro.Expr]
+		[Arg:String] [Local file(112180):String]
+		[Arg:haxe.macro.IncludePosition]
+			[Local position(112181):haxe.macro.IncludePosition]
+			[Const:String] "top"
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Meta:haxe.macro.Expr]
+					:ast(switch (((position : String)).toLowerCase()) {
+	case Inline:
+		if (Context.getLocalModule() == "") Context.error("Cannot use inline mode when includeFile is called by `--macro`", Context.currentPos());
+		var f = try sys.io.File.getContent(Context.resolvePath(file)) catch(e:Dynamic) Context.error(Std.string(e), Context.currentPos());
+		var p = Context.currentPos();
+		if (Context.defined("js")) {
+			({ expr : ECall({ expr : EField({ expr : EField({ expr : EConst(CIdent("js")), pos : p }, "Syntax"), pos : p }, "plainCode"), pos : p }, [haxe.macro.Context.makeExpr(@$v f, p)]), pos : p } : haxe.macro.Expr);
+		} else {
+			({ expr : EUntyped({ expr : ECall({ expr : EConst(CIdent("__lua__")), pos : p }, [haxe.macro.Context.makeExpr(@$v f, p)]), pos : p }), pos : p } : haxe.macro.Expr);
+		};	
+	case Top | Closure:
+		@:privateAccess Context.includeFile(file, position);
+		({ expr : EBlock([]), pos : untyped $__mk_pos__("C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/haxe/macro/Compiler.hx", 16159, 16161) } : haxe.macro.Expr);	
+	case _:
+		Context.error("unknown includeFile position: " + position, Context.currentPos());	
+})
+					[Block:haxe.macro.Expr]
+						[Var `(112186):String]
+							[Call:String]
+								[Field:Void -> String]
+									[Parenthesis:String] [Cast:String] [Local position(112181):haxe.macro.IncludePosition:haxe.macro.IncludePosition]
+									[FInstance:Void -> String]
+										String
+										toLowerCase:Void -> String
+						[Switch:haxe.macro.Expr]
+							[Local `(112186):String:String]
+							[Case:haxe.macro.Expr]
+								[Const:String] "closure"
+								[Const:String] "top"
+								[Block:haxe.macro.Expr]
+									[Block:haxe.macro.Expr]
+										[Call:Void]
+											[Field:(file : String, position : String) -> Void]
+												[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+												[FStatic:(file : String, position : String) -> Void]
+													haxe.macro.Context
+													includeFile:(file : String, position : String) -> Void
+											[Local file(112180):String:String]
+											[Local position(112181):haxe.macro.IncludePosition:haxe.macro.IncludePosition]
+										[Cast:haxe.macro.Expr]
+											[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+												expr: [Call:haxe.macro.ExprDef]
+													[Field:(exprs : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+														[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+														[FEnum:(exprs : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+															haxe.macro.ExprDef
+															EBlock
+													[ArrayDecl:Array<haxe.macro.Expr>]
+												pos: [Call:haxe.macro.Position]
+													[Ident:(String, Int, Int) -> Unknown<20>] $__mk_pos__
+													[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/haxe/macro/Compiler.hx"
+													[Const:Int] 16159
+													[Const:Int] 16161
+							[Case:haxe.macro.Expr]
+								[Const:String] "inline"
+								[Block:haxe.macro.Expr]
+									[Block:haxe.macro.Expr]
+										[If:Void]
+											[Binop:Bool]
+												[Call:String]
+													[Field:Void -> String]
+														[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+														[FStatic:Void -> String]
+															haxe.macro.Context
+															getLocalModule:Void -> String
+												==
+												[Const:String] ""
+											[Then:Dynamic] [Block:Dynamic]
+												[Call:Dynamic]
+													[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+														[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+														[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+															haxe.macro.Context
+															error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+													[Const:String] "Cannot use inline mode when includeFile is called by `--macro`"
+													[Call:haxe.macro.Position]
+														[Field:Void -> haxe.macro.Position]
+															[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+															[FStatic:Void -> haxe.macro.Position]
+																haxe.macro.Context
+																currentPos:Void -> haxe.macro.Position
+										[Var f(112187):String]
+											[Try:String]
+												[Block:String]
+													[Call:String]
+														[Field:(path : String) -> String]
+															[TypeExpr sys.io.File:Class<sys.io.File>]
+															[FStatic:(path : String) -> String]
+																sys.io.File
+																getContent:(path : String) -> String
+														[Call:String]
+															[Field:(file : String) -> String]
+																[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																[FStatic:(file : String) -> String]
+																	haxe.macro.Context
+																	resolvePath:(file : String) -> String
+															[Local file(112180):String:String]
+												Catch [Local `9(117499):Dynamic]
+													[Block:String]
+														[Var `10(117500):haxe.Exception]
+															[Call:haxe.Exception]
+																[Field:(value : Any) -> haxe.Exception]
+																	[TypeExpr haxe.Exception:{ Statics haxe.Exception }]
+																	[FStatic:(value : Any) -> haxe.Exception]
+																		haxe.Exception
+																		caught:(value : Any) -> haxe.Exception
+																[Local `9(117499):Dynamic:Dynamic]
+														[Var `11(117501):Dynamic]
+															[Call:Any]
+																[Field:Void -> Any]
+																	[Local `10(117500):haxe.Exception:haxe.Exception]
+																	[FInstance:Void -> Any]
+																		haxe.Exception
+																		unwrap:Void -> Any
+														[If:String]
+															[Const:Bool] true
+															[Then:Dynamic] [Block:Dynamic]
+																[Var e(112188):Dynamic] [Local `11(117501):Dynamic:Dynamic]
+																[Call:Dynamic]
+																	[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+																		[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																		[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+																			haxe.macro.Context
+																			error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+																	[Call:String]
+																		[Field:(s : Dynamic) -> String]
+																			[TypeExpr Std:Class<Std>]
+																			[FStatic:(s : Dynamic) -> String]
+																				Std
+																				string:(s : Dynamic) -> String
+																		[Local e(112188):Dynamic:Dynamic]
+																	[Call:haxe.macro.Position]
+																		[Field:Void -> haxe.macro.Position]
+																			[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																			[FStatic:Void -> haxe.macro.Position]
+																				haxe.macro.Context
+																				currentPos:Void -> haxe.macro.Position
+															[Else:Unknown<21>] [Throw:Unknown<21>] [Local `9(117499):Dynamic:Dynamic]
+										[Var p(112189):haxe.macro.Position]
+											[Call:haxe.macro.Position]
+												[Field:Void -> haxe.macro.Position]
+													[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+													[FStatic:Void -> haxe.macro.Position]
+														haxe.macro.Context
+														currentPos:Void -> haxe.macro.Position
+										[If:haxe.macro.Expr]
+											[Call:Bool]
+												[Field:(s : String) -> Bool]
+													[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+													[FStatic:(s : String) -> Bool]
+														haxe.macro.Context
+														defined:(s : String) -> Bool
+												[Const:String] "js"
+											[Then:haxe.macro.Expr] [Block:haxe.macro.Expr]
+												[Cast:haxe.macro.Expr]
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	ECall
+															[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+																expr: [Call:haxe.macro.ExprDef]
+																	[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																		[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																		[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																			haxe.macro.ExprDef
+																			EField
+																	[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+																		expr: [Call:haxe.macro.ExprDef]
+																			[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																				[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																				[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																					haxe.macro.ExprDef
+																					EField
+																			[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+																				expr: [Call:haxe.macro.ExprDef]
+																					[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																						[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																						[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																							haxe.macro.ExprDef
+																							EConst
+																					[Call:haxe.macro.Constant]
+																						[Field:(s : String) -> haxe.macro.Constant]
+																							[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																							[FEnum:(s : String) -> haxe.macro.Constant]
+																								haxe.macro.Constant
+																								CIdent
+																						[Const:String] "js"
+																				pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+																			[Const:String] "Syntax"
+																		pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+																	[Const:String] "plainCode"
+																pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+															[ArrayDecl:Array<haxe.macro.Expr>]
+																[Call:haxe.macro.Expr]
+																	[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+																		[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																		[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+																			haxe.macro.Context
+																			makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+																	[Local f(112187):String:String]
+																	[Local p(112189):haxe.macro.Position:haxe.macro.Position]
+														pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+											[Else:haxe.macro.Expr] [Block:haxe.macro.Expr]
+												[Cast:haxe.macro.Expr]
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(e : haxe.macro.Expr) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	EUntyped
+															[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+																expr: [Call:haxe.macro.ExprDef]
+																	[Field:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+																		[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																		[FEnum:(e : haxe.macro.Expr, params : Array<haxe.macro.Expr>) -> haxe.macro.ExprDef]
+																			haxe.macro.ExprDef
+																			ECall
+																	[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+																		expr: [Call:haxe.macro.ExprDef]
+																			[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																				[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																				[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																					haxe.macro.ExprDef
+																					EConst
+																			[Call:haxe.macro.Constant]
+																				[Field:(s : String) -> haxe.macro.Constant]
+																					[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																					[FEnum:(s : String) -> haxe.macro.Constant]
+																						haxe.macro.Constant
+																						CIdent
+																				[Const:String] "__lua__"
+																		pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+																	[ArrayDecl:Array<haxe.macro.Expr>]
+																		[Call:haxe.macro.Expr]
+																			[Field:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+																				[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+																				[FStatic:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr]
+																					haxe.macro.Context
+																					makeExpr:(v : Dynamic, pos : haxe.macro.Position) -> haxe.macro.Expr
+																			[Local f(112187):String:String]
+																			[Local p(112189):haxe.macro.Position:haxe.macro.Position]
+																pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+														pos: [Local p(112189):haxe.macro.Position:haxe.macro.Position]
+							[Default:Dynamic]
+								[Block:Dynamic]
+									[Call:Dynamic]
+										[Field:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+											[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+											[FStatic:(msg : String, pos : haxe.macro.Position) -> Dynamic]
+												haxe.macro.Context
+												error:(msg : String, pos : haxe.macro.Position) -> Dynamic
+										[Binop:String]
+											[Const:String] "unknown includeFile position: "
+											+
+											[Local position(112181):haxe.macro.IncludePosition:haxe.macro.IncludePosition]
+										[Call:haxe.macro.Position]
+											[Field:Void -> haxe.macro.Position]
+												[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+												[FStatic:Void -> haxe.macro.Position]
+													haxe.macro.Context
+													currentPos:Void -> haxe.macro.Position
+}

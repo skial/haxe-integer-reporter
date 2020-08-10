@@ -1,0 +1,51 @@
+@:realPath("java.time.temporal.ValueRange") @:used @:libType @:javaNative @:native("java.time.temporal.ValueRange") @:javaCanonical("java.time.temporal", "ValueRange")
+extern class java.time.temporal.ValueRange implements java.io.Serializable {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function checkValidIntValue(param1:haxe.Int64, param2:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function checkValidValue(param1:haxe.Int64, param2:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function isValidIntValue(param1:haxe.Int64):Bool;
+
+	@:overload
+	function isValidValue(param1:haxe.Int64):Bool;
+
+	@:overload
+	function isIntValue():Bool;
+
+	@:overload
+	function getMaximum():haxe.Int64;
+
+	@:overload
+	function getSmallestMaximum():haxe.Int64;
+
+	@:overload
+	function getLargestMinimum():haxe.Int64;
+
+	@:overload
+	function getMinimum():haxe.Int64;
+
+	@:overload
+	function isFixed():Bool;
+
+	@:overload
+	static function of(param1:haxe.Int64, param2:haxe.Int64, param3:haxe.Int64, param4:haxe.Int64):java.time.temporal.ValueRange;
+
+	@:overload
+	static function of(param1:haxe.Int64, param2:haxe.Int64):java.time.temporal.ValueRange;
+
+	@:overload
+	static function of(param1:haxe.Int64, param2:haxe.Int64, param3:haxe.Int64):java.time.temporal.ValueRange;
+}

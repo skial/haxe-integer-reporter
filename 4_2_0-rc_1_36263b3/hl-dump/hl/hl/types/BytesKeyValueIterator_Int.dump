@@ -1,0 +1,21 @@
+@:directlyUsed @:used @:keep @:noDoc
+class hl.types.BytesKeyValueIterator_Int extends haxe.iterators.ArrayKeyValueIterator<Int> {
+
+	public function new(a:hl.types.ArrayBytes_Int) {
+		super(cast null);
+		this.a = a;
+	}
+
+	var a:hl.types.ArrayBytes_Int;
+
+	public function hasNext() {
+		return this.current < this.a.length;
+	}
+
+	public function next() {
+		var this1 = this.a.bytes;
+		var pos = this.current;
+		var v = $bget(this1, pos);
+		return {key : this.current ++, value : v};
+	}
+}

@@ -1,0 +1,19 @@
+@:realPath("java.lang.reflect.AnnotatedType") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.lang.reflect.AnnotatedType") @:javaCanonical("java.lang.reflect", "AnnotatedType")
+extern interface java.lang.reflect.AnnotatedType implements java.lang.reflect.AnnotatedElement {
+
+	function getType():java.lang.reflect.Type;
+
+	function isAnnotationPresent(param1:java.lang.Class<java.lang.annotation.Annotation>):Bool;
+
+	function getAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	function getAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	function getDeclaredAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotation.T>):getDeclaredAnnotation.T;
+
+	function getDeclaredAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotationsByType.T>):java.NativeArray<getDeclaredAnnotationsByType.T>;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+}

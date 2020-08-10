@@ -1,0 +1,24 @@
+@:realPath("java.util.Hashtable_Enumerator") @:used @:nativeGen @:libType @:javaNative @:native("java.util.Hashtable$Enumerator") @:javaCanonical("java.util", "Hashtable.Enumerator")
+extern class java.util.Hashtable$Enumerator<T : java.util.Hashtable_Enumerator.T> implements java.util.Iterator<java.util.Hashtable_Enumerator.T> implements java.util.Enumeration<java.util.Hashtable_Enumerator.T> {
+
+	@:overload
+	function remove():Void;
+
+	@:overload
+	function next():java.util.Hashtable_Enumerator.T;
+
+	@:overload
+	function hasNext():Bool;
+
+	@:overload
+	function nextElement():java.util.Hashtable_Enumerator.T;
+
+	@:overload
+	function hasMoreElements():Bool;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:protected
+	var expectedModCount:Int;
+}

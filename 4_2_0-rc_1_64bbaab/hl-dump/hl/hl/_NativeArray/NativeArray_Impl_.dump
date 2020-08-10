@@ -1,0 +1,11 @@
+@:keep @:directlyUsed @:used
+private class hl._NativeArray.NativeArray_Impl_ {
+
+	@:hlNative("std", "array_type")
+	public static function getType(this1:hl.NativeArray<hl.NativeArray.T>) {
+		return null;
+	}
+
+	@:hlNative("std", "array_blit")
+	public static function blit(this1:hl.NativeArray<hl.NativeArray.T>, pos:Int, src:hl.NativeArray<hl.NativeArray.T>, srcPos:Int, srcLen:Int) {}
+}

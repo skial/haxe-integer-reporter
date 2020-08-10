@@ -1,0 +1,90 @@
+@:realPath("java.nio.file.spi.FileSystemProvider") @:abstract @:libType @:javaNative @:native("java.nio.file.spi.FileSystemProvider") @:javaCanonical("java.nio.file.spi", "FileSystemProvider")
+extern class java.nio.file.spi.FileSystemProvider {
+
+	@:overload @:protected
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function setAttribute(param1:java.nio.file.Path, param2:java.lang.String, param3:Dynamic, param4:java.NativeArray<java.nio.file.LinkOption>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function readAttributes(param1:java.nio.file.Path, param2:java.lang.String, param3:java.NativeArray<java.nio.file.LinkOption>):java.util.Map<java.lang.String, Dynamic>;
+
+	@:overload @:throws("java.io.IOException")
+	function readAttributes<A : readAttributes.A>(param1:java.nio.file.Path, param2:java.lang.Class<readAttributes.A>, param3:java.NativeArray<java.nio.file.LinkOption>):readAttributes.A;
+
+	@:overload
+	function getFileAttributeView<V : getFileAttributeView.V>(param1:java.nio.file.Path, param2:java.lang.Class<getFileAttributeView.V>, param3:java.NativeArray<java.nio.file.LinkOption>):getFileAttributeView.V;
+
+	@:overload @:throws("java.io.IOException")
+	function checkAccess(param1:java.nio.file.Path, param2:java.NativeArray<java.nio.file.AccessMode>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function getFileStore(param1:java.nio.file.Path):java.nio.file.FileStore;
+
+	@:overload @:throws("java.io.IOException")
+	function isHidden(param1:java.nio.file.Path):Bool;
+
+	@:overload @:throws("java.io.IOException")
+	function isSameFile(param1:java.nio.file.Path, param2:java.nio.file.Path):Bool;
+
+	@:overload @:throws("java.io.IOException")
+	function move(param1:java.nio.file.Path, param2:java.nio.file.Path, param3:java.NativeArray<java.nio.file.CopyOption>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function copy(param1:java.nio.file.Path, param2:java.nio.file.Path, param3:java.NativeArray<java.nio.file.CopyOption>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function readSymbolicLink(param1:java.nio.file.Path):java.nio.file.Path;
+
+	@:overload @:throws("java.io.IOException")
+	function deleteIfExists(param1:java.nio.file.Path):Bool;
+
+	@:overload @:throws("java.io.IOException")
+	function delete(param1:java.nio.file.Path):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function createLink(param1:java.nio.file.Path, param2:java.nio.file.Path):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function createSymbolicLink(param1:java.nio.file.Path, param2:java.nio.file.Path, param3:java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function createDirectory(param1:java.nio.file.Path, param2:java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function newDirectoryStream(param1:java.nio.file.Path, param2:java.nio.file.DirectoryStream$Filter<Dynamic>):java.nio.file.DirectoryStream<java.nio.file.Path>;
+
+	@:overload @:throws("java.io.IOException")
+	function newByteChannel(param1:java.nio.file.Path, param2:java.util.Set<java.nio.file.OpenOption>, param3:java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>):java.nio.channels.SeekableByteChannel;
+
+	@:overload @:throws("java.io.IOException")
+	function newAsynchronousFileChannel(param1:java.nio.file.Path, param2:java.util.Set<java.nio.file.OpenOption>, param3:java.util.concurrent.ExecutorService, param4:java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>):java.nio.channels.AsynchronousFileChannel;
+
+	@:overload @:throws("java.io.IOException")
+	function newFileChannel(param1:java.nio.file.Path, param2:java.util.Set<java.nio.file.OpenOption>, param3:java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>):java.nio.channels.FileChannel;
+
+	@:overload @:throws("java.io.IOException")
+	function newOutputStream(param1:java.nio.file.Path, param2:java.NativeArray<java.nio.file.OpenOption>):java.io.OutputStream;
+
+	@:overload @:throws("java.io.IOException")
+	function newInputStream(param1:java.nio.file.Path, param2:java.NativeArray<java.nio.file.OpenOption>):java.io.InputStream;
+
+	@:overload @:throws("java.io.IOException")
+	function newFileSystem(param1:java.nio.file.Path, param2:java.util.Map<java.lang.String, Dynamic>):java.nio.file.FileSystem;
+
+	@:overload @:throws("java.io.IOException")
+	function newFileSystem(param1:java.net.URI, param2:java.util.Map<java.lang.String, Dynamic>):java.nio.file.FileSystem;
+
+	@:overload
+	function getPath(param1:java.net.URI):java.nio.file.Path;
+
+	@:overload
+	function getFileSystem(param1:java.net.URI):java.nio.file.FileSystem;
+
+	@:overload
+	function getScheme():java.lang.String;
+
+	@:overload
+	static function installedProviders():java.util.List<java.nio.file.spi.FileSystemProvider>;
+}

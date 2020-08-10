@@ -1,0 +1,39 @@
+@:used @:enum
+private extern class js.node._Fs.FsOpenFlag_Impl_ {
+
+	@:value(cast "r") @:enum @:impl
+	static inline var Read:js.node.FsOpenFlag = cast "r";
+
+	@:value(cast "r+") @:enum @:impl
+	static inline var ReadWrite:js.node.FsOpenFlag = cast "r+";
+
+	@:value(cast "rs") @:enum @:impl
+	static inline var ReadSync:js.node.FsOpenFlag = cast "rs";
+
+	@:value(cast "rs+") @:enum @:impl
+	static inline var ReadWriteSync:js.node.FsOpenFlag = cast "rs+";
+
+	@:value(cast "w") @:enum @:impl
+	static inline var WriteCreate:js.node.FsOpenFlag = cast "w";
+
+	@:value(cast "wx") @:enum @:impl
+	static inline var WriteCheck:js.node.FsOpenFlag = cast "wx";
+
+	@:value(cast "w+") @:enum @:impl
+	static inline var WriteReadCreate:js.node.FsOpenFlag = cast "w+";
+
+	@:value(cast "wx+") @:enum @:impl
+	static inline var WriteReadCheck:js.node.FsOpenFlag = cast "wx+";
+
+	@:value(cast "a") @:enum @:impl
+	static inline var AppendCreate:js.node.FsOpenFlag = cast "a";
+
+	@:value(cast "ax") @:enum @:impl
+	static inline var AppendCheck:js.node.FsOpenFlag = cast "ax";
+
+	@:value(cast "a+") @:enum @:impl
+	static inline var AppendReadCreate:js.node.FsOpenFlag = cast "a+";
+
+	@:value(cast "ax+") @:enum @:impl
+	static inline var AppendReadCheck:js.node.FsOpenFlag = cast "ax+";
+}

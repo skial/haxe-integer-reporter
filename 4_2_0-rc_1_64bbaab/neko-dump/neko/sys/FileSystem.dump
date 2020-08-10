@@ -1,0 +1,35 @@
+@:keep @:directlyUsed @:used @:coreApi
+class sys.FileSystem {
+
+	@:has_untyped
+	public static function exists(path:String) {
+		return sys.FileSystem.sys_exists((if ((path.charCodeAt(1) == 58 && path.length <= 3)) haxe.io.Path.addTrailingSlash(path) else if ((path == "/")) "/" else haxe.io.Path.removeTrailingSlashes(path)).__s);
+	}
+
+	@:has_untyped
+	public static function createDirectory(path:String) {
+		var path = haxe.io.Path.addTrailingSlash(path);
+		var _p = null;
+		var parts = [];
+		while ((true)) {
+			_p = haxe.io.Path.directory(path);
+			if ((! (path != _p))) break;
+			parts.unshift(path);
+			path = _p;
+		};
+		{
+			var _g = 0;
+			while ((_g < parts.length)) {
+				var part = parts[_g];
+				++ _g;
+				if ((part.charCodeAt(part.length - 1) != 58 && ! sys.FileSystem.exists(part))) sys.FileSystem.sys_create_dir(part.__s, 493);
+			};
+		};
+	}
+
+	@:value(neko.Lib.load("std", "sys_exists", 1))
+	static var sys_exists:Unknown<9> -> Bool = neko.Lib.load("std", "sys_exists", 1);
+
+	@:value(neko.Lib.load("std", "sys_create_dir", 2))
+	static var sys_create_dir:(Unknown<10>, Int) -> Unknown<11> = neko.Lib.load("std", "sys_create_dir", 2);
+}

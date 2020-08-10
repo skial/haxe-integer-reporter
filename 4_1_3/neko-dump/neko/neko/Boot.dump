@@ -1,0 +1,148 @@
+@:directlyUsed @:used @:dox(hide) @:keep
+class neko.Boot {
+
+	@:has_untyped
+	static function __tmp_str() {
+		return "<...>".__s;
+	}
+
+	@:has_untyped
+	static function __enum_str(e:Dynamic) {
+		if ((e.args == null)) return e.tag;
+		var s = e.tag + "(".__s;
+		var i = 0;
+		var l = __dollar__asize(e.args);
+		var old = e.__string;
+		e.__string = neko.Boot.__tmp_str;
+		while ((i < l)) {
+			if ((i != 0)) s += ",".__s;
+			try {
+				s += __dollar__string(e.args[i]);
+			} catch (_g:Dynamic) {
+				{
+					null;
+				};
+				s += neko.Boot.__tmp_str();
+			};
+			++ i;
+		};
+		e.__string = old;
+		return s + ")".__s;
+	}
+
+	static function __interfLoop(cc:Dynamic, cl:Dynamic) {
+		if ((cc == null)) return false;
+		if ((cc == cl)) return true;
+		var intf = cc.__interfaces__;
+		if ((intf != null)) {
+			var _g = 0;
+			var _g1 = cast intf.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				var i = intf[i];
+				if ((i == cl || neko.Boot.__interfLoop(i, cl))) return true;
+			};
+		};
+		return neko.Boot.__interfLoop(cc.__super__, cl);
+	}
+
+	@:has_untyped @:ifFeature("typed_catch")
+	static function __instanceof(o:Dynamic, cl:Dynamic) {
+		if ((cl == Dynamic)) return o != null;
+		switch ((__dollar__typeof(o))) {
+			case 1: if ((cl != Int)) return cl == Float else return true;
+			case 2: if ((cl != Float)) {
+				if ((cl == Int)) return __dollar__int(o) == o else return false;
+			} else return true;
+			case 3: return cl == Bool;
+			case 5: {
+				if ((cl == null)) return false;
+				if ((! (neko.Boot.__interfLoop(o.__class__, cl) || o.__enum__ == cl || cl == Class && o.__name__ != null))) {
+					if ((cl == Enum)) return o.__ename__ != null else return false;
+				} else return true;
+			};
+			default: return false
+		};
+	}
+
+	@:has_untyped
+	static function __serialize(o:{ __enum__ : { __ename__ : { length : Int } }, __class__ : { __name__ : { length : Int } } }) {
+		if ((o.__class__ != null)) {
+			var n = o.__class__.__name__;
+			var x = __dollar__amake(n.length);
+			{
+				var _g = 0;
+				var _g1 = n.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					x[i] = n[i].__s;
+				};
+			};
+			return x;
+		};
+		if ((o.__enum__ != null)) {
+			var n = o.__enum__.__ename__;
+			var x = __dollar__amake(n.length);
+			{
+				var _g = 0;
+				var _g1 = n.length;
+				while ((_g < _g1)) {
+					var i = _g ++;
+					x[i] = n[i].__s;
+				};
+			};
+			return x;
+		};
+		throw haxe.Exception.thrown("Can't serialize");
+	}
+
+	@:has_untyped
+	static function __tagserialize(o:Dynamic) {
+		var n = o.__enum__.__ename__;
+		var x = __dollar__amake(n.length + 1);
+		{
+			var _g = 0;
+			var _g1 = n.length;
+			while ((_g < _g1)) {
+				var i = _g ++;
+				x[i] = n[i].__s;
+			};
+		};
+		x[n.length] = o.tag;
+		return x;
+	}
+
+	@:has_untyped
+	static function __unserialize(v:Dynamic) {
+		if ((__dollar__typeof(v) != __dollar__tarray)) throw haxe.Exception.thrown("Invalid serialized class data");
+		{
+			var _g = 0;
+			var _g1 = __dollar__asize(v);
+			while ((_g < _g1)) {
+				var i = _g ++;
+				if ((__dollar__typeof(v[i]) != __dollar__tstring)) throw haxe.Exception.thrown("Invalid serialized class data");
+			};
+		};
+		var cl = neko.Boot.__classes;
+		{
+			var _g = 0;
+			var _g1 = __dollar__asize(v);
+			while ((_g < _g1)) {
+				var i = _g ++;
+				cl = __dollar__objget(cl, __dollar__hash(v[i]));
+				if ((cl == null)) throw haxe.Exception.thrown("Class not found " + Std.string(v));
+			};
+		};
+		if ((__dollar__typeof(cl) == __dollar__tobject)) {
+			if ((cl.__name__ != null || cl.__ename__ != null)) return cl.prototype;
+			if ((cl.__enum__ != null && __dollar__typeof(cl.tag) == __dollar__tstring)) return cl;
+		};
+		throw haxe.Exception.thrown("Invalid class " + Std.string(v));
+	}
+
+	@:has_untyped
+	static function __init() {
+		__dollar__exports.__unserialize = neko.Boot.__unserialize;
+		__dollar__exports.__classes = neko.Boot.__classes;
+	}
+}

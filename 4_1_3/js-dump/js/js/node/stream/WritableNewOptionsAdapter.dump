@@ -1,0 +1,2 @@
+@:used @:forward
+abstract js.node.stream.WritableNewOptionsAdapter {}

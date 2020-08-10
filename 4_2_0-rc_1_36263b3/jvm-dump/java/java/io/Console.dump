@@ -1,0 +1,55 @@
+@:realPath("java.io.Console") @:used @:native("java.io.Console") @:libType
+extern class java.io.Console implements java.io.Flushable {
+
+	function new(param1:java.io.Console$1):Void;
+
+	function writer():java.io.PrintWriter;
+
+	function reader():java.io.Reader;
+
+	function format(param1:java.lang.String, param2:java.NativeArray<Dynamic>):java.io.Console;
+
+	function printf(param1:java.lang.String, param2:java.NativeArray<Dynamic>):java.io.Console;
+
+	function readLine(param1:java.lang.String, param2:java.NativeArray<Dynamic>):java.lang.String;
+
+	function readLine():java.lang.String;
+
+	function readPassword(param1:java.lang.String, param2:java.NativeArray<Dynamic>):java.NativeArray<java.types.Char16>;
+
+	function readPassword():java.NativeArray<java.types.Char16>;
+
+	function flush():Void;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.io.Console):Dynamic;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:java.io.Console):java.NativeArray<java.types.Char16>;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:java.io.Console):java.NativeArray<java.types.Char16>;
+
+	@:realPath("access_300") @:native("access$300")
+	static function access$300():Bool;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:Bool):Bool;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500():Bool;
+
+	@:realPath("access_600") @:native("access$600")
+	static function access$600():java.io.Console;
+
+	@:realPath("access_602") @:native("access$602")
+	static function access$602(param1:java.io.Console):java.io.Console;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800(param1:java.io.Console):java.nio.charset.Charset;
+
+	static function <clinit>():Void;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

@@ -1,0 +1,11 @@
+@:keep @:directlyUsed @:used
+private class hl.types._BytesMap.BytesMap_Impl_ {
+
+	@:hlNative("std", "hballoc")
+	static function alloc() {
+		return null;
+	}
+
+	@:hlNative("std", "hbset")
+	public static function set(this1:hl.types.BytesMapData, key:hl.Bytes, value:Dynamic) {}
+}

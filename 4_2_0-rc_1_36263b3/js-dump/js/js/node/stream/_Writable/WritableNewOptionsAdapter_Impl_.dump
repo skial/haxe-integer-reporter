@@ -1,0 +1,11 @@
+@:used
+private class js.node.stream._Writable.WritableNewOptionsAdapter_Impl_ {
+
+	@:from
+	public static function from(options:js.node.stream.WritableNewOptions) {
+		if ((! @:pure cast Object.prototype.hasOwnProperty.call(cast options, "final"))) Object.defineProperty(options, "final", {get : cast function() {
+			return @:implicitCast cast options.final_;
+		}});
+		return cast options;
+	}
+}

@@ -1,0 +1,1 @@
+private typedef haxe._NativeStackTrace.NativeTrace = list<tuple<str, Int, str, str>>

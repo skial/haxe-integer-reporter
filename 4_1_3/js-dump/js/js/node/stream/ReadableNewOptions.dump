@@ -1,0 +1,1 @@
+typedef js.node.stream.ReadableNewOptions = { ?read : Null<(size : Int) -> Void>, ?objectMode : Null<Bool>, ?highWaterMark : Null<Int>, ?encoding : Null<String>, ?emitClose : Null<Bool>, ?destroy : Null<(err : Null<Error>, callback : (Null<Error> -> Void)) -> Void>, ?autoDestroy : Null<Bool> }

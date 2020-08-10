@@ -1,0 +1,24 @@
+@:realPath("python.internal.EnumImpl") @:keep @:used @:ifFeature("has_enum", "Enum.*") @:native("Enum")
+class Enum {
+
+	@:ifFeature("has_enum", "Enum.*")
+	public function new(tag:str, index:Int, params:tuple<Dynamic>) {
+		this.tag = tag;
+		this.index = index;
+		this.params = params;
+	}
+
+	@:ifFeature("has_enum", "Enum.*")
+	public var tag:str;
+
+	@:ifFeature("has_enum", "Enum.*")
+	public var index:Int;
+
+	@:ifFeature("has_enum", "Enum.*")
+	public var params:tuple<Dynamic>;
+
+	@:ifFeature("has_enum", "Enum.*")
+	function __str__() {
+		if ((this.params == null)) return this.tag else return python.Syntax.code("{0} + '(' + (', '.join(str(v) for v in {1})) + ')'", this.tag, this.params);
+	}
+}

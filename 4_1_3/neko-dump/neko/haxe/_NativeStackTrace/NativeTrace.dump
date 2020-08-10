@@ -1,0 +1,1 @@
+private typedef haxe._NativeStackTrace.NativeTrace = { stack : Dynamic, skip : Int }

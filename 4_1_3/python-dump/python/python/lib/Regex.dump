@@ -1,0 +1,35 @@
+extern class python.lib.Regex {
+
+	@:value({ pos : 0 })
+	function search(string:str, pos:Int, endpos:Null<Int>):Null<python.lib.MatchObject>;
+
+	@:value({ pos : 0 })
+	function match(string:str, pos:Int, endpos:Null<Int>):Null<python.lib.MatchObject>;
+
+	@:value({ maxsplit : 0 })
+	function split(string:str, maxsplit:Int):list<str>;
+
+	inline function findallString(string:str, pos:Null<Int>, endpos:Null<Int>):list<str>;
+
+	inline function findallDynamic(string:str, pos:Null<Int>, endpos:Null<Int>):list<Dynamic>;
+
+	inline function findallTuple(string:str, pos:Null<Int>, endpos:Null<Int>):list<tuple<str>>;
+
+	inline function findallArray(string:str, pos:Null<Int>, endpos:Null<Int>):list<list<str>>;
+
+	function finditer(string:str, pos:Null<Int>, endpos:Null<Int>):python.NativeIterator<python.lib.MatchObject>;
+
+	@:value({ count : 0 })
+	function sub(repl:python.lib.Repl, string:str, count:Int):str;
+
+	@:value({ count : 0 })
+	function subn(repl:python.lib.Repl, string:str, count:Int):str;
+
+	var flags(default,null):Int;
+
+	var groups(default,null):Int;
+
+	var groupindex(default,null):dict<str, Int>;
+
+	var pattern(default,null):str;
+}

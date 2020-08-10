@@ -1,0 +1,17 @@
+@:used @:pythonImport("io", "BufferedIOBase")
+extern class python.lib.io.BufferedIOBase extends python.lib.io.IOBase {
+
+	var raw:python.lib.io.RawIOBase;
+
+	function write(b:bytearray):Int;
+
+	function readinto(b:bytearray):Int;
+
+	function detach():python.lib.io.RawIOBase;
+
+	@:value({ n : -1 })
+	function read(n:Int):Null<bytes>;
+
+	@:value({ n : -1 })
+	function read1(n:Int):Null<bytes>;
+}

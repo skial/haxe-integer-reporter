@@ -1,0 +1,250 @@
+@:realPath("java.time.OffsetDateTime") @:used @:nativeGen @:libType @:javaNative @:native("java.time.OffsetDateTime") @:javaCanonical("java.time", "OffsetDateTime")
+extern class java.time.OffsetDateTime implements java.io.Serializable implements java.lang.Comparable<java.time.OffsetDateTime> implements java.time.temporal.TemporalAdjuster implements java.time.temporal.Temporal {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.time.OffsetDateTime):Int;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalAdjuster):java.time.OffsetDateTime;
+
+	@:overload
+	function with(param1:java.time.temporal.TemporalField, param2:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.OffsetDateTime;
+
+	@:overload
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.OffsetDateTime;
+
+	@:overload
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.OffsetDateTime;
+
+	@:overload
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.OffsetDateTime;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function isEqual(param1:java.time.OffsetDateTime):Bool;
+
+	@:overload
+	function isBefore(param1:java.time.OffsetDateTime):Bool;
+
+	@:overload
+	function isAfter(param1:java.time.OffsetDateTime):Bool;
+
+	@:overload
+	function toEpochSecond():haxe.Int64;
+
+	@:overload
+	function toInstant():java.time.Instant;
+
+	@:overload
+	function toZonedDateTime():java.time.ZonedDateTime;
+
+	@:overload
+	function toOffsetTime():java.time.OffsetTime;
+
+	@:overload
+	function atZoneSimilarLocal(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function atZoneSameInstant(param1:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function format(param1:java.time.format.DateTimeFormatter):String;
+
+	@:overload
+	function until(param1:java.time.temporal.Temporal, param2:java.time.temporal.TemporalUnit):haxe.Int64;
+
+	@:overload
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function query<R : query.R>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	@:overload
+	function minusNanos(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusSeconds(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusMinutes(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusHours(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusDays(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusWeeks(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusMonths(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function minusYears(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusNanos(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusSeconds(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusMinutes(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusHours(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusDays(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusWeeks(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusMonths(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function plusYears(param1:haxe.Int64):java.time.OffsetDateTime;
+
+	@:overload
+	function truncatedTo(param1:java.time.temporal.TemporalUnit):java.time.OffsetDateTime;
+
+	@:overload
+	function withNano(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withSecond(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withMinute(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withHour(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withDayOfYear(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withDayOfMonth(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withMonth(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function withYear(param1:Int):java.time.OffsetDateTime;
+
+	@:overload
+	function getNano():Int;
+
+	@:overload
+	function getSecond():Int;
+
+	@:overload
+	function getMinute():Int;
+
+	@:overload
+	function getHour():Int;
+
+	@:overload
+	function toLocalTime():java.time.LocalTime;
+
+	@:overload
+	function getDayOfWeek():java.time.DayOfWeek;
+
+	@:overload
+	function getDayOfYear():Int;
+
+	@:overload
+	function getDayOfMonth():Int;
+
+	@:overload
+	function getMonth():java.time.Month;
+
+	@:overload
+	function getMonthValue():Int;
+
+	@:overload
+	function getYear():Int;
+
+	@:overload
+	function toLocalDate():java.time.LocalDate;
+
+	@:overload
+	function toLocalDateTime():java.time.LocalDateTime;
+
+	@:overload
+	function withOffsetSameInstant(param1:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	function withOffsetSameLocal(param1:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	function getOffset():java.time.ZoneOffset;
+
+	@:overload
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalUnit):Bool;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence, param2:java.time.format.DateTimeFormatter):java.time.OffsetDateTime;
+
+	@:overload
+	static function parse(param1:java.lang.CharSequence):java.time.OffsetDateTime;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.OffsetDateTime;
+
+	@:overload
+	static function ofInstant(param1:java.time.Instant, param2:java.time.ZoneId):java.time.OffsetDateTime;
+
+	@:overload
+	static function of(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int, param7:Int, param8:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	static function of(param1:java.time.LocalDate, param2:java.time.LocalTime, param3:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	static function of(param1:java.time.LocalDateTime, param2:java.time.ZoneOffset):java.time.OffsetDateTime;
+
+	@:overload
+	static function now(param1:java.time.Clock):java.time.OffsetDateTime;
+
+	@:overload
+	static function now():java.time.OffsetDateTime;
+
+	@:overload
+	static function now(param1:java.time.ZoneId):java.time.OffsetDateTime;
+
+	@:overload
+	static function timeLineOrder():java.util.Comparator<java.time.OffsetDateTime>;
+
+	static var MIN(default,never):java.time.OffsetDateTime;
+
+	static var MAX(default,never):java.time.OffsetDateTime;
+}

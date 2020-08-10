@@ -1,0 +1,27 @@
+@:realPath("java.security.ProtectionDomain") @:used @:libType @:javaNative @:native("java.security.ProtectionDomain") @:javaCanonical("java.security", "ProtectionDomain")
+extern class java.security.ProtectionDomain {
+
+	@:overload
+	function new(param1:java.security.CodeSource, param2:java.security.PermissionCollection, param3:java.lang.ClassLoader, param4:java.NativeArray<java.security.Principal>):Void;
+
+	@:overload
+	function new(param1:java.security.CodeSource, param2:java.security.PermissionCollection):Void;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function implies(param1:java.security.Permission):Bool;
+
+	@:overload
+	function getPermissions():java.security.PermissionCollection;
+
+	@:overload
+	function getPrincipals():java.NativeArray<java.security.Principal>;
+
+	@:overload
+	function getClassLoader():java.lang.ClassLoader;
+
+	@:overload
+	function getCodeSource():java.security.CodeSource;
+}

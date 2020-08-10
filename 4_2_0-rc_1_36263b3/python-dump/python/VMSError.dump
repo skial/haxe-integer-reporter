@@ -1,0 +1,3 @@
+@:realPath("python.VMSError") @:native("VMSError")
+extern class VMSError extends OSError {
+}

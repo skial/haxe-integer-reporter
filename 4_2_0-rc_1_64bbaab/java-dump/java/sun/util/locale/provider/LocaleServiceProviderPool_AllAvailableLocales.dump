@@ -1,0 +1,3 @@
+@:realPath("java.sun.util.locale.provider.LocaleServiceProviderPool_AllAvailableLocales") @:nativeGen @:noCompletion @:libType @:javaNative @:native("sun.util.locale.provider.LocaleServiceProviderPool$AllAvailableLocales") @:javaCanonical("sun.util.locale.provider", "LocaleServiceProviderPool.AllAvailableLocales")
+extern class sun.util.locale.provider.LocaleServiceProviderPool$AllAvailableLocales {
+}

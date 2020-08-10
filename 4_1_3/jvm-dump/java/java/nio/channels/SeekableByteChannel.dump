@@ -1,0 +1,27 @@
+@:realPath("java.nio.channels.SeekableByteChannel") @:used @:abstract @:libType @:javaNative @:native("java.nio.channels.SeekableByteChannel") @:javaCanonical("java.nio.channels", "SeekableByteChannel")
+extern interface java.nio.channels.SeekableByteChannel implements java.nio.channels.ByteChannel {
+
+	@:overload @:throws("java.io.IOException")
+	function truncate(param1:haxe.Int64):java.nio.channels.SeekableByteChannel;
+
+	@:overload @:throws("java.io.IOException")
+	function size():haxe.Int64;
+
+	@:overload @:throws("java.io.IOException")
+	function position(param1:haxe.Int64):java.nio.channels.SeekableByteChannel;
+
+	@:overload @:throws("java.io.IOException")
+	function position():haxe.Int64;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.nio.ByteBuffer):Int;
+
+	@:overload @:throws("java.io.IOException")
+	function read(param1:java.nio.ByteBuffer):Int;
+
+	@:overload
+	function isOpen():Bool;
+
+	@:overload @:throws("java.lang.Exception")
+	function close():Void;
+}

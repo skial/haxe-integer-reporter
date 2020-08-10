@@ -1,0 +1,12 @@
+@:realPath("java.security.AccessControlException") @:libType @:javaNative @:native("java.security.AccessControlException") @:javaCanonical("java.security", "AccessControlException")
+extern class java.security.AccessControlException extends java.lang.SecurityException {
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.security.Permission):Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+
+	@:overload
+	function getPermission():java.security.Permission;
+}

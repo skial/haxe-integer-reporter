@@ -1,0 +1,6 @@
+@:used @:enum
+private extern class js.node.fs._ReadStream.ReadStreamEvent_Impl_ {
+
+	@:value(cast "open") @:impl @:enum
+	static inline var Open:js.node.fs.ReadStreamEvent<Int -> Void> = cast "open";
+}

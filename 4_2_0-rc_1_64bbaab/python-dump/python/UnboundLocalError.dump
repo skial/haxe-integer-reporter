@@ -1,0 +1,3 @@
+@:realPath("python.UnboundLocalError") @:native("UnboundLocalError")
+extern class UnboundLocalError extends NameError {
+}

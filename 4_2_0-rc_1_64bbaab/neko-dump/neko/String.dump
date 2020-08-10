@@ -1,0 +1,182 @@
+@:directlyUsed @:used @:coreApi
+class String {
+
+	@:has_untyped
+	public function new(string:String) {
+		if ((__dollar__typeof(string) != __dollar__tstring)) string = __dollar__string(string);
+		this.__s = string;
+		this.length = __dollar__ssize(string);
+	}
+
+	public var length(default,null):Int;
+
+	@:has_untyped
+	public function charAt(index:Int) {
+		try {
+			var s = __dollar__smake(1);
+			__dollar__sset(s, 0, __dollar__sget(this.__s, index));
+			return new String(s);
+		} catch (_g:Dynamic) {
+			{
+				null;
+			};
+			return "";
+		};
+	}
+
+	@:has_untyped
+	public function charCodeAt(index:Int) {
+		return __dollar__sget(this.__s, index);
+	}
+
+	@:has_untyped
+	public function indexOf(str:String, startIndex:Null<Int> = null) {
+		var l = __dollar__ssize(this.__s);
+		if ((startIndex == null || startIndex < - l)) startIndex = 0;
+		if ((str == "" && startIndex >= l)) return l;
+		if ((startIndex > l)) return -1;
+		if ((__dollar__ssize(str.__s) == 0)) {
+			if ((startIndex < 0)) return l + startIndex else return startIndex;
+		};
+		var p;
+		try {
+			p = __dollar__sfind(this.__s, startIndex, str.__s);
+		} catch (_g:Dynamic) {
+			{
+				null;
+			};
+			p = null;
+		};
+		if ((p == null)) return -1;
+		return p;
+	}
+
+	@:has_untyped
+	public function lastIndexOf(str:String, startIndex:Null<Int> = null) {
+		var last = -1;
+		var l = __dollar__ssize(this.__s);
+		if ((startIndex == null)) startIndex = l;
+		if ((__dollar__ssize(str.__s) == 0)) {
+			if ((startIndex > l)) return l else return startIndex;
+		};
+		while ((true)) {
+			var p;
+			try {
+				p = __dollar__sfind(this.__s, last + 1, str.__s);
+			} catch (_g:Dynamic) {
+				{
+					null;
+				};
+				p = null;
+			};
+			if ((p == null || p > startIndex)) return last;
+			last = p;
+		};
+	}
+
+	@:has_untyped
+	public function split(delimiter:String) {
+		var l = String.__split(this.__s, delimiter.__s);
+		var a = new Array();
+		if ((l == null)) {
+			a.push("");
+			return a;
+		};
+		while ((true)) {
+			a.push(new String(l[0]));
+			l = l[1];
+			if ((! (l != null))) break;
+		};
+		return a;
+	}
+
+	@:has_untyped
+	public function substr(pos:Int, len:Null<Int> = null) {
+		if ((len == 0)) return "";
+		var sl = this.length;
+		if ((len == null)) len = sl;
+		if ((pos == null)) pos = 0;
+		if ((pos != 0 && len < 0)) return "";
+		if ((pos < 0)) {
+			pos = sl + pos;
+			if ((pos < 0)) pos = 0;
+		} else if ((len < 0)) len = sl + len - pos;
+		if ((pos + len > sl)) len = sl - pos;
+		if ((pos < 0 || len <= 0)) return "";
+		return new String(__dollar__ssub(this.__s, pos, len));
+	}
+
+	public function substring(startIndex:Int, endIndex:Null<Int> = null) {
+		if ((endIndex == null)) endIndex = this.length else if ((endIndex < 0)) endIndex = 0 else if ((endIndex > this.length)) endIndex = this.length;
+		if ((startIndex < 0)) startIndex = 0 else if ((startIndex > this.length)) startIndex = this.length;
+		if ((startIndex > endIndex)) {
+			var tmp = startIndex;
+			startIndex = endIndex;
+			endIndex = tmp;
+		};
+		return this.substr(startIndex, endIndex - startIndex);
+	}
+
+	@:has_untyped
+	public function toLowerCase() {
+		var s = this.__s;
+		var l = this.length;
+		var s2 = __dollar__scopy(s);
+		var i = 0;
+		while ((i < l)) {
+			var c = __dollar__sget(s, i);
+			if ((c >= 65 && c <= 90)) __dollar__sset(s2, i, c - 65 + 97);
+			++ i;
+		};
+		return new String(s2);
+	}
+
+	@:has_untyped
+	public function toUpperCase() {
+		var s = this.__s;
+		var l = this.length;
+		var s2 = __dollar__scopy(s);
+		var i = 0;
+		while ((i < l)) {
+			var c = __dollar__sget(s, i);
+			if ((c >= 97 && c <= 122)) __dollar__sset(s2, i, c - 97 + 65);
+			++ i;
+		};
+		return new String(s2);
+	}
+
+	public function toString() {
+		return this;
+	}
+
+	@:has_untyped
+	function __compare(o:String) {
+		return __dollar__compare(this.__s, o.__s);
+	}
+
+	@:has_untyped
+	function __add(s:Dynamic) {
+		var tmp = __dollar__string(s);
+		return new String(this.__s + tmp);
+	}
+
+	@:has_untyped
+	function __radd(s:Dynamic) {
+		return new String(__dollar__string(s) + this.__s);
+	}
+
+	@:value(true)
+	static var __is_String:Bool = true;
+
+	@:value(neko.Lib.load("std", "string_split", 2))
+	static var __split:Dynamic = neko.Lib.load("std", "string_split", 2);
+
+	@:has_untyped
+	public static function fromCharCode(code:Int) {
+		var s = __dollar__smake(1);
+		__dollar__sset(s, 0, code);
+		return new String(s);
+	}
+
+	static function __init__() String.__is_String = true
+}

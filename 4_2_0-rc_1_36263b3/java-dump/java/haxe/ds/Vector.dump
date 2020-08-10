@@ -1,0 +1,2 @@
+@:used @:nativeGen
+abstract haxe.ds.Vector<T> {}

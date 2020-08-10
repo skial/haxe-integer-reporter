@@ -1,0 +1,5 @@
+@:realPath("java.security.Key_Statics") @:libType @:javaNative @:native("java.security.Key") @:javaCanonical("java.security", "Key")
+extern class java.security.Key {
+
+	static var serialVersionUID(default,null):haxe.Int64;
+}

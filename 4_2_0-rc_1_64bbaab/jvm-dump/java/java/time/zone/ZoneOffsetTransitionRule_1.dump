@@ -1,0 +1,8 @@
+@:realPath("java.time.zone.ZoneOffsetTransitionRule_1") @:native("java.time.zone.ZoneOffsetTransitionRule$1") @:libType
+extern class java.time.zone.ZoneOffsetTransitionRule$1 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_time_zone_ZoneOffsetTransitionRule_TimeDefinition") @:native("$SwitchMap$java$time$zone$ZoneOffsetTransitionRule$TimeDefinition")
+	static var $SwitchMap$java$time$zone$ZoneOffsetTransitionRule$TimeDefinition(default,never):java.NativeArray<Int>;
+}

@@ -1,0 +1,3 @@
+@:realPath("python.PendingDeprecationWarning") @:native("PendingDeprecationWarning")
+extern class PendingDeprecationWarning extends Warning {
+}

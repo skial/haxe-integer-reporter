@@ -1,0 +1,15 @@
+@:realPath("java.util.Iterator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.Iterator") @:javaCanonical("java.util", "Iterator")
+extern interface java.util.Iterator<E : java.util.Iterator.E> {
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function remove():Void;
+
+	@:maybeUsed @:overload
+	function next():java.util.Iterator.E;
+
+	@:maybeUsed @:overload
+	function hasNext():Bool;
+}

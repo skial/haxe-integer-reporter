@@ -1,0 +1,24 @@
+@:realPath("java.util.stream.DoubleStream_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.stream.DoubleStream") @:javaCanonical("java.util.stream", "DoubleStream")
+extern class java.util.stream.DoubleStream {
+
+	@:overload
+	static function concat(param1:java.util.stream.DoubleStream, param2:java.util.stream.DoubleStream):java.util.stream.DoubleStream;
+
+	@:overload
+	static function generate(param1:java.util.function.DoubleSupplier):java.util.stream.DoubleStream;
+
+	@:overload
+	static function iterate(param1:Float, param2:java.util.function.DoubleUnaryOperator):java.util.stream.DoubleStream;
+
+	@:overload
+	static function of(param1:java.NativeArray<Float>):java.util.stream.DoubleStream;
+
+	@:overload
+	static function of(param1:Float):java.util.stream.DoubleStream;
+
+	@:overload
+	static function empty():java.util.stream.DoubleStream;
+
+	@:overload
+	static function builder():java.util.stream.DoubleStream$Builder;
+}

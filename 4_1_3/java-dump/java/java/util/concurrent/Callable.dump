@@ -1,0 +1,6 @@
+@:realPath("java.util.concurrent.Callable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.concurrent.Callable") @:javaCanonical("java.util.concurrent", "Callable")
+extern interface java.util.concurrent.Callable<V : java.util.concurrent.Callable.V> {
+
+	@:overload @:throws("java.lang.Exception")
+	function call():java.util.concurrent.Callable.V;
+}

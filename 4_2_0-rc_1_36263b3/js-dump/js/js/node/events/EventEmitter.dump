@@ -1,0 +1,37 @@
+@:used @:jsRequire("events", "EventEmitter")
+extern class js.node.events.EventEmitter<TSelf:js.node.events.EventEmitter<js.node.events.EventEmitter.TSelf>> {
+
+	function new():Void;
+
+	function addListener<T:haxe.Function>(eventName:js.node.events.Event<addListener.T>, listener:addListener.T):js.node.events.EventEmitter.TSelf;
+
+	function emit<T:haxe.Function>(eventName:js.node.events.Event<emit.T>, args:haxe.extern.Rest<Dynamic>):Bool;
+
+	function eventNames():Array<haxe.extern.EitherType<String, Symbol>>;
+
+	function getMaxListeners():Int;
+
+	function listenerCount<T:haxe.Function>(eventName:js.node.events.Event<listenerCount.T>):Int;
+
+	function listeners<T:haxe.Function>(eventName:js.node.events.Event<listeners.T>):Array<listeners.T>;
+
+	function off<T:haxe.Function>(eventName:js.node.events.Event<off.T>, listener:off.T):js.node.events.EventEmitter.TSelf;
+
+	function on<T:haxe.Function>(eventName:js.node.events.Event<on.T>, listener:on.T):js.node.events.EventEmitter.TSelf;
+
+	function once<T:haxe.Function>(eventName:js.node.events.Event<once.T>, listener:once.T):js.node.events.EventEmitter.TSelf;
+
+	function prependListener<T:haxe.Function>(eventName:js.node.events.Event<prependListener.T>, listener:prependListener.T):js.node.events.EventEmitter.TSelf;
+
+	function prependOnceListener<T:haxe.Function>(eventName:js.node.events.Event<prependOnceListener.T>, listener:prependOnceListener.T):js.node.events.EventEmitter.TSelf;
+
+	function removeAllListeners<T:haxe.Function>(eventName:Null<js.node.events.Event<removeAllListeners.T>>):js.node.events.EventEmitter.TSelf;
+
+	function removeListener<T:haxe.Function>(eventName:js.node.events.Event<removeListener.T>, listener:removeListener.T):js.node.events.EventEmitter.TSelf;
+
+	function setMaxListeners(n:Int):Void;
+
+	function rawListeners<T:haxe.Function>(eventName:js.node.events.Event<rawListeners.T>):Array<rawListeners.T>;
+
+	static var defaultMaxListeners:Int;
+}

@@ -1,0 +1,66 @@
+@:realPath("java.lang.reflect.Constructor") @:used @:libType @:javaNative @:native("java.lang.reflect.Constructor") @:javaCanonical("java.lang.reflect", "Constructor")
+extern class java.lang.reflect.Constructor<T : java.lang.reflect.Constructor.T> extends java.lang.reflect.Executable {
+
+	@:overload
+	function getAnnotatedReceiverType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getAnnotatedReturnType():java.lang.reflect.AnnotatedType;
+
+	@:overload
+	function getParameterAnnotations():java.NativeArray<java.NativeArray<java.lang.annotation.Annotation>>;
+
+	@:overload
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	@:overload
+	function getAnnotation<T : getAnnotation.T>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	@:overload
+	function isSynthetic():Bool;
+
+	@:overload
+	function isVarArgs():Bool;
+
+	@:overload @:throws("java.lang.reflect.InvocationTargetException") @:throws("java.lang.IllegalArgumentException") @:throws("java.lang.IllegalAccessException") @:throws("java.lang.InstantiationException")
+	function newInstance(param1:java.NativeArray<Dynamic>):java.lang.reflect.Constructor.T;
+
+	@:overload
+	function toGenericString():java.lang.String;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getGenericExceptionTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	@:overload
+	function getExceptionTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:overload
+	function getGenericParameterTypes():java.NativeArray<java.lang.reflect.Type>;
+
+	@:overload
+	function getParameterCount():Int;
+
+	@:overload
+	function getParameterTypes():java.NativeArray<java.lang.Class<Dynamic>>;
+
+	@:overload
+	function getTypeParameters():java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<java.lang.reflect.Constructor.T>>>;
+
+	@:overload
+	function getModifiers():Int;
+
+	@:overload
+	function getName():java.lang.String;
+
+	@:overload
+	function getDeclaringClass():java.lang.Class<java.lang.reflect.Constructor.T>;
+}

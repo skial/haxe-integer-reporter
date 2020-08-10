@@ -1,0 +1,36 @@
+@:realPath("java.util.OptionalLong") @:used @:libType @:javaNative @:native("java.util.OptionalLong") @:javaCanonical("java.util", "OptionalLong")
+extern class java.util.OptionalLong {
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload @:throws("StdTypes")
+	function orElseThrow<X : orElseThrow.X>(param1:java.util.function.Supplier<orElseThrow.X>):haxe.Int64;
+
+	@:overload
+	function orElseGet(param1:java.util.function.LongSupplier):haxe.Int64;
+
+	@:overload
+	function orElse(param1:haxe.Int64):haxe.Int64;
+
+	@:overload
+	function ifPresent(param1:java.util.function.LongConsumer):Void;
+
+	@:overload
+	function isPresent():Bool;
+
+	@:overload
+	function getAsLong():haxe.Int64;
+
+	@:overload
+	static function of(param1:haxe.Int64):java.util.OptionalLong;
+
+	@:overload
+	static function empty():java.util.OptionalLong;
+}

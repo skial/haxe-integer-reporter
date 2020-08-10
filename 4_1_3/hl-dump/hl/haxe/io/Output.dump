@@ -1,0 +1,36 @@
+@:keep @:used
+class haxe.io.Output {
+
+	public function writeByte(c:Int) {
+		throw haxe.Exception.thrown("Not implemented");
+	}
+
+	public function writeBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		if ((pos < 0 || len < 0 || pos + len > s.length)) throw haxe.Exception.thrown(haxe.io.Error.OutsideBounds);
+		var this1 = new haxe.io.BytesDataImpl(s.b, s.length);
+		var b = cast this1;
+		var k = len;
+		while ((k > 0)) {
+			var this1 = cast b.bytes;
+			this.writeByte($bgetui8(this1, pos));
+			++ pos;
+			-- k;
+		};
+		return len;
+	}
+
+	public function close() {}
+
+	public function writeFullBytes(s:haxe.io.Bytes, pos:Int, len:Int) {
+		while ((len > 0)) {
+			var k = this.writeBytes(s, pos, len);
+			pos += k;
+			len -= k;
+		};
+	}
+
+	public function writeString(s:String, encoding:Null<haxe.io.Encoding> = null) {
+		var b = haxe.io.Bytes.ofString(s, encoding);
+		this.writeFullBytes(b, 0, b.length);
+	}
+}

@@ -1,0 +1,21 @@
+@:realPath("java.net.InterfaceAddress") @:nativeGen @:libType @:javaNative @:native("java.net.InterfaceAddress") @:javaCanonical("java.net", "InterfaceAddress")
+extern class java.net.InterfaceAddress {
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function getNetworkPrefixLength():java.types.Int16;
+
+	@:overload
+	function getBroadcast():java.net.InetAddress;
+
+	@:overload
+	function getAddress():java.net.InetAddress;
+}

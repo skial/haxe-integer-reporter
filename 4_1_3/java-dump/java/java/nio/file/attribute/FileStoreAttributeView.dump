@@ -1,0 +1,6 @@
+@:realPath("java.nio.file.attribute.FileStoreAttributeView") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.attribute.FileStoreAttributeView") @:javaCanonical("java.nio.file.attribute", "FileStoreAttributeView")
+extern interface java.nio.file.attribute.FileStoreAttributeView implements java.nio.file.attribute.AttributeView {
+
+	@:overload
+	function name():String;
+}

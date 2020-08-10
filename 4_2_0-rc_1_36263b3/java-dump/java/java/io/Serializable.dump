@@ -1,0 +1,3 @@
+@:realPath("java.io.Serializable") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.io.Serializable") @:javaCanonical("java.io", "Serializable")
+extern interface java.io.Serializable {
+}

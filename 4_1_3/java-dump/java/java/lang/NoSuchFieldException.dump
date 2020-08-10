@@ -1,0 +1,9 @@
+@:realPath("java.lang.NoSuchFieldException") @:nativeGen @:libType @:javaNative @:native("java.lang.NoSuchFieldException") @:javaCanonical("java.lang", "NoSuchFieldException")
+extern class java.lang.NoSuchFieldException extends java.lang.ReflectiveOperationException {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

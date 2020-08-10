@@ -1,0 +1,9 @@
+@:realPath("java.lang.InterruptedException") @:nativeGen @:libType @:javaNative @:native("java.lang.InterruptedException") @:javaCanonical("java.lang", "InterruptedException")
+extern class java.lang.InterruptedException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:String):Void;
+
+	@:overload
+	function new():Void;
+}

@@ -1,0 +1,14 @@
+@:realPath("java.lang.reflect.InvocationTargetException") @:nativeGen @:libType @:javaNative @:native("java.lang.reflect.InvocationTargetException") @:javaCanonical("java.lang.reflect", "InvocationTargetException")
+extern class java.lang.reflect.InvocationTargetException extends java.lang.ReflectiveOperationException {
+
+	function new(param1:java.lang.Throwable, param2:String):Void;
+
+	@:protected
+	function new():Void;
+
+	function new(param1:java.lang.Throwable):Void;
+
+	function getCause():java.lang.Throwable;
+
+	function getTargetException():java.lang.Throwable;
+}

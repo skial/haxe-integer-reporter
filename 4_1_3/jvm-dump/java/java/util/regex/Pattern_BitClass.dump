@@ -1,0 +1,3 @@
+@:realPath("java.util.regex.Pattern_BitClass") @:libType @:javaNative @:native("java.util.regex.Pattern$BitClass") @:javaCanonical("java.util.regex", "Pattern.BitClass")
+extern class java.util.regex.Pattern$BitClass extends java.util.regex.Pattern$BmpCharProperty {
+}

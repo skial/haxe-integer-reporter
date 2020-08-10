@@ -1,0 +1,3 @@
+@:realPath("python.EOFError") @:native("EOFError")
+extern class EOFError extends Exception {
+}

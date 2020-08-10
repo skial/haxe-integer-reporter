@@ -1,0 +1,3 @@
+@:realPath("java.lang.Thread_Caches") @:nativeGen @:libType @:javaNative @:native("java.lang.Thread$Caches") @:javaCanonical("java.lang", "Thread.Caches")
+extern class java.lang.Thread$Caches {
+}

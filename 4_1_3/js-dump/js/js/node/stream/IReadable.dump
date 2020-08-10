@@ -1,0 +1,37 @@
+@:used @:remove
+extern interface js.node.stream.IReadable {
+
+	function destroy(error:Null<Error>):js.node.stream.IReadable;
+
+	var destroyed(default,null):Bool;
+
+	function isPaused():Bool;
+
+	function pause():js.node.stream.IReadable;
+
+	function pipe<T : pipe.T>(destination:pipe.T, options:Null<{ ?end : Null<Bool> }>):pipe.T;
+
+	function read(size:Null<Int>):Null<Dynamic>;
+
+	var readable(default,null):Bool;
+
+	var readableEncoding(default,null):Null<String>;
+
+	var readableEnded(default,null):Bool;
+
+	var readableHighWaterMark(default,null):Int;
+
+	var readableLength(default,null):Int;
+
+	var readableObjectMode(default,null):Bool;
+
+	function resume():js.node.stream.IReadable;
+
+	function setEncoding(encoding:String):js.node.stream.IReadable;
+
+	function unpipe(destination:Null<js.node.stream.IWritable>):js.node.stream.IReadable;
+
+	function unshift(chunk:Null<Dynamic>, encoding:Null<String>):Void;
+
+	function wrap(stream:Dynamic):js.node.stream.IReadable;
+}

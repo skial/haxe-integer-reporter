@@ -1,0 +1,7 @@
+@:pythonImport("io", "FileIO")
+extern class python.lib.io.FileIO extends python.lib.io.RawIOBase {
+
+	var mode:str;
+
+	var name:str;
+}

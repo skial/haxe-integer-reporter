@@ -1,0 +1,12 @@
+@:realPath("java.lang.LinkageError") @:libType @:javaNative @:native("java.lang.LinkageError") @:javaCanonical("java.lang", "LinkageError")
+extern class java.lang.LinkageError extends java.lang.Error {
+
+	@:overload
+	function new(param1:java.lang.String, param2:java.lang.Throwable):Void;
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function new(param1:java.lang.String):Void;
+}

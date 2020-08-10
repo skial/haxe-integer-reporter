@@ -1,0 +1,7 @@
+@:realPath("java.io.UnsupportedEncodingException") @:nativeGen @:libType @:javaNative @:native("java.io.UnsupportedEncodingException") @:javaCanonical("java.io", "UnsupportedEncodingException")
+extern class java.io.UnsupportedEncodingException extends java.io.IOException {
+
+	function new(param1:String):Void;
+
+	function new():Void;
+}

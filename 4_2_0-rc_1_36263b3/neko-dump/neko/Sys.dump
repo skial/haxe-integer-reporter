@@ -1,0 +1,8 @@
+@:keep @:directlyUsed @:used @:coreApi
+class Sys {
+
+	@:has_untyped
+	public static function println(v:Dynamic) {
+		__dollar__print(v, "\n");
+	}
+}

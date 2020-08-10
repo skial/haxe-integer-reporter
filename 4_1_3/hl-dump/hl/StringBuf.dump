@@ -1,0 +1,123 @@
+@:keep @:directlyUsed @:used @:coreApi
+class StringBuf {
+
+	public function new() {
+		this.pos = 0;
+		this.size = 8;
+		var this1 = hl._Bytes.Bytes_Impl_.alloc(this.size);
+		this.b = this1;
+	}
+
+	var b:hl.Bytes;
+
+	var size:Int;
+
+	var pos:Int;
+
+	public function add<T : add.T>(x:add.T) {
+		var slen = 0;
+		var str = Std.downcast(cast x, String);
+		if ((str != null)) {
+			{
+				var bytes = str.bytes;
+				var ssize = str.length << 1;
+				if ((this.pos + ssize > this.size)) {
+					var need = this.pos + ssize;
+					var nsize = this.size * 3 >> 1;
+					if ((need > nsize)) nsize = need;
+					var this1 = hl._Bytes.Bytes_Impl_.alloc(nsize);
+					var b2 = this1;
+					hl._Bytes.Bytes_Impl_.blit(b2, 0, this.b, 0, this.pos);
+					this.b = b2;
+					this.size = nsize;
+				};
+				hl._Bytes.Bytes_Impl_.blit(this.b, this.pos, bytes, 0, ssize);
+				this.pos += ssize;
+			};
+			return;
+		};
+		var this1 = $ref(slen);
+		var sbytes = hl._Bytes.Bytes_Impl_.fromValue(x, this1);
+		{
+			var ssize = slen << 1;
+			if ((this.pos + ssize > this.size)) {
+				var need = this.pos + ssize;
+				var nsize = this.size * 3 >> 1;
+				if ((need > nsize)) nsize = need;
+				var this1 = hl._Bytes.Bytes_Impl_.alloc(nsize);
+				var b2 = this1;
+				hl._Bytes.Bytes_Impl_.blit(b2, 0, this.b, 0, this.pos);
+				this.b = b2;
+				this.size = nsize;
+			};
+			hl._Bytes.Bytes_Impl_.blit(this.b, this.pos, sbytes, 0, ssize);
+			this.pos += ssize;
+		};
+	}
+
+	public function addChar(c:Int) {
+		if ((c >= 0 && c < 65536)) {
+			if ((c >= 55296 && c <= 57343)) throw haxe.Exception.thrown("Invalid unicode char " + c);
+			if ((this.pos + 2 > this.size)) {
+				var nsize = this.size * 3 >> 1;
+				if ((0 > nsize)) nsize = 0;
+				var this1 = hl._Bytes.Bytes_Impl_.alloc(nsize);
+				var b2 = this1;
+				hl._Bytes.Bytes_Impl_.blit(b2, 0, this.b, 0, this.pos);
+				this.b = b2;
+				this.size = nsize;
+			};
+			{
+				var this1 = this.b;
+				var pos = this.pos;
+				$bsetui16(this1, pos, c);
+			};
+			this.pos += 2;
+		} else if ((c < 1114112)) {
+			if ((this.pos + 4 > this.size)) {
+				var nsize = this.size * 3 >> 1;
+				if ((0 > nsize)) nsize = 0;
+				var this1 = hl._Bytes.Bytes_Impl_.alloc(nsize);
+				var b2 = this1;
+				hl._Bytes.Bytes_Impl_.blit(b2, 0, this.b, 0, this.pos);
+				this.b = b2;
+				this.size = nsize;
+			};
+			c -= 65536;
+			{
+				var this1 = this.b;
+				var pos = this.pos;
+				$bsetui16(this1, pos, (c >> 10) + 55296);
+			};
+			{
+				var this1 = this.b;
+				var pos = this.pos + 2;
+				$bsetui16(this1, pos, (c & 1023) + 56320);
+			};
+			this.pos += 4;
+		} else throw haxe.Exception.thrown("Invalid unicode char " + c);
+	}
+
+	public function toString() {
+		if ((this.pos + 2 > this.size)) {
+			var nsize = this.size * 3 >> 1;
+			if ((0 > nsize)) nsize = 0;
+			var this1 = hl._Bytes.Bytes_Impl_.alloc(nsize);
+			var b2 = this1;
+			hl._Bytes.Bytes_Impl_.blit(b2, 0, this.b, 0, this.pos);
+			this.b = b2;
+			this.size = nsize;
+		};
+		{
+			var this1 = this.b;
+			var pos = this.pos;
+			$bsetui16(this1, pos, 0);
+		};
+		var b = this.b;
+		var length = this.pos >> 1;
+		var s = $new(String);
+		s.bytes = b;
+		s.length = length;
+		return s;
+	}
+}

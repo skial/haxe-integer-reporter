@@ -1,0 +1,6 @@
+@:realPath("java.time.temporal.TemporalQuery") @:used @:abstract @:libType @:javaNative @:native("java.time.temporal.TemporalQuery") @:javaCanonical("java.time.temporal", "TemporalQuery")
+extern interface java.time.temporal.TemporalQuery<R : java.time.temporal.TemporalQuery.R> {
+
+	@:overload
+	function queryFrom(param1:java.time.temporal.TemporalAccessor):java.time.temporal.TemporalQuery.R;
+}

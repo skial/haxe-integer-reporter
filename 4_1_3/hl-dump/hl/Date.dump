@@ -1,0 +1,31 @@
+@:keep @:used @:coreApi
+class Date {
+
+	public function new(year:Int, month:Int, day:Int, hour:Int, min:Int, sec:Int) {
+		this.t = Date.date_new(year, month, day, hour, min, sec);
+	}
+
+	var t:Int;
+
+	@:keep
+	public function toString() {
+		var outLen = 0;
+		var bytes = this.t;
+		var this1 = $ref(outLen);
+		var bytes = Date.date_to_string(bytes, @:implicitCast this1);
+		var s = $new(String);
+		s.bytes = bytes;
+		s.length = outLen;
+		return s;
+	}
+
+	@:hlNative
+	static function date_new(year:Int, month:Int, day:Int, hours:Int, minutes:Int, seconds:Int) {
+		return 0;
+	}
+
+	@:hlNative
+	static function date_to_string(t:Int, outLen:hl.Ref<Int>) {
+		return null;
+	}
+}

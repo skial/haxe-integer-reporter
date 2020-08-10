@@ -1,0 +1,73 @@
+@:realPath("java.time.chrono.ChronoZonedDateTime") @:used @:native("java.time.chrono.ChronoZonedDateTime") @:libType
+extern interface java.time.chrono.ChronoZonedDateTime<D:java.time.chrono.ChronoLocalDate> implements java.lang.Comparable<java.time.chrono.ChronoZonedDateTime<Dynamic>> implements java.time.temporal.Temporal {
+
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	function toLocalDate():java.time.chrono.ChronoZonedDateTime.D;
+
+	function toLocalTime():java.time.LocalTime;
+
+	function toLocalDateTime():java.time.chrono.ChronoLocalDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function getChronology():java.time.chrono.Chronology;
+
+	function getOffset():java.time.ZoneOffset;
+
+	function getZone():java.time.ZoneId;
+
+	function withEarlierOffsetAtOverlap():java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function withLaterOffsetAtOverlap():java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function withZoneSameLocal(param1:java.time.ZoneId):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function withZoneSameInstant(param1:java.time.ZoneId):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	function isSupported(param1:java.time.temporal.TemporalUnit):Bool;
+
+	function with(param1:java.time.temporal.TemporalAdjuster):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function with(param1:java.time.temporal.TemporalField, param2:haxe.Int64):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function plus(param1:java.time.temporal.TemporalAmount):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function plus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function minus(param1:java.time.temporal.TemporalAmount):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function minus(param1:haxe.Int64, param2:java.time.temporal.TemporalUnit):java.time.chrono.ChronoZonedDateTime<java.time.chrono.ChronoZonedDateTime.D>;
+
+	function query<R:Dynamic>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	function format(param1:java.time.format.DateTimeFormatter):java.lang.String;
+
+	function toInstant():java.time.Instant;
+
+	function toEpochSecond():haxe.Int64;
+
+	function compareTo(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Int;
+
+	function compareTo(param1:Dynamic):Int;
+
+	function isBefore(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	function isAfter(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	function isEqual(param1:java.time.chrono.ChronoZonedDateTime<Dynamic>):Bool;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function toString():java.lang.String;
+
+	static function timeLineOrder():java.util.Comparator<java.time.chrono.ChronoZonedDateTime<Dynamic>>;
+
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.chrono.ChronoZonedDateTime<Dynamic>;
+}

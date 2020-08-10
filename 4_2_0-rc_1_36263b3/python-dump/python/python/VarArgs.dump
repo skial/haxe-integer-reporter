@@ -1,0 +1,2 @@
+@:used @:analyzer(no_simplification)
+abstract python.VarArgs<T> {}

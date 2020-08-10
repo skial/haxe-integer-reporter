@@ -1,0 +1,18 @@
+@:realPath("java.util.PrimitiveIterator") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.PrimitiveIterator") @:javaCanonical("java.util", "PrimitiveIterator")
+extern interface java.util.PrimitiveIterator<T : java.util.PrimitiveIterator.T,T__CONS : java.util.PrimitiveIterator.T__CONS> implements java.util.Iterator<java.util.PrimitiveIterator.T> {
+
+	@:overload
+	function forEachRemaining(param1:java.util.PrimitiveIterator.T__CONS):Void;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function hasNext():Bool;
+
+	@:overload
+	function next():java.util.PrimitiveIterator.T;
+
+	@:overload
+	function remove():Void;
+}

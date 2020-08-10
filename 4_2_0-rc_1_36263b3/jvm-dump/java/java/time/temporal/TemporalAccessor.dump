@@ -1,0 +1,13 @@
+@:realPath("java.time.temporal.TemporalAccessor") @:used @:native("java.time.temporal.TemporalAccessor") @:libType
+extern interface java.time.temporal.TemporalAccessor {
+
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	function query<R:Dynamic>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+}

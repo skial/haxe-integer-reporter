@@ -1,0 +1,2 @@
+@:hxGen @:callable
+abstract haxe.Function {}

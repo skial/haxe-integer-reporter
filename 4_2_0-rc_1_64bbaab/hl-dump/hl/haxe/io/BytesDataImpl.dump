@@ -1,0 +1,12 @@
+@:keep @:directlyUsed @:used
+class haxe.io.BytesDataImpl {
+
+	public function new(b:hl.Bytes, length:Int) {
+		this.bytes = b;
+		this.length = length;
+	}
+
+	public var bytes:hl.Bytes;
+
+	public var length:Int;
+}

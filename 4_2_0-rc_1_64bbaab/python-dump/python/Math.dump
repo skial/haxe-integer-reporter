@@ -1,0 +1,64 @@
+@:directlyUsed @:used @:pythonImport("math") @:coreApi
+extern class Math {
+
+	static var PI(default,null):Float;
+
+	static var NEGATIVE_INFINITY(default,null):Float;
+
+	static var POSITIVE_INFINITY(default,null):Float;
+
+	static var NaN(default,null):Float;
+
+	static inline function abs(v:Float):Float;
+
+	static inline function min(a:Float, b:Float):Float;
+
+	static inline function max(a:Float, b:Float):Float;
+
+	static inline function sin(v:Float):Float;
+
+	static inline function cos(v:Float):Float;
+
+	static function tan(v:Float):Float;
+
+	static function asin(v:Float):Float;
+
+	static function acos(v:Float):Float;
+
+	static function atan(v:Float):Float;
+
+	static function atan2(y:Float, x:Float):Float;
+
+	static inline function exp(v:Float):Float;
+
+	static inline function log(v:Float):Float;
+
+	static function pow(v:Float, exp:Float):Float;
+
+	static inline function sqrt(v:Float):Float;
+
+	static inline function round(v:Float):Int;
+
+	static function floor(v:Float):Int;
+
+	static function ceil(v:Float):Int;
+
+	static inline function random():Float;
+
+	static inline function ffloor(v:Float):Float;
+
+	static inline function fceil(v:Float):Float;
+
+	static inline function fround(v:Float):Float;
+
+	static inline function isFinite(f:Float):Bool;
+
+	static inline function isNaN(f:Float):Bool;
+
+	static function __init__() {
+		Math.NEGATIVE_INFINITY = python.internal.UBuiltins.float("-inf");
+		Math.POSITIVE_INFINITY = python.internal.UBuiltins.float("inf");
+		Math.NaN = python.internal.UBuiltins.float("nan");
+		Math.PI = python.lib.Math.pi;
+	}
+}

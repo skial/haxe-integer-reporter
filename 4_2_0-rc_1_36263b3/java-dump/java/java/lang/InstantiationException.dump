@@ -1,0 +1,7 @@
+@:realPath("java.lang.InstantiationException") @:nativeGen @:libType @:javaNative @:native("java.lang.InstantiationException") @:javaCanonical("java.lang", "InstantiationException")
+extern class java.lang.InstantiationException extends java.lang.ReflectiveOperationException {
+
+	function new(param1:String):Void;
+
+	function new():Void;
+}

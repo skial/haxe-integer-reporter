@@ -1,0 +1,13 @@
+@:realPath("java.nio.file.WatchKey") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.nio.file.WatchKey") @:javaCanonical("java.nio.file", "WatchKey")
+extern interface java.nio.file.WatchKey {
+
+	function watchable():java.nio.file.Watchable;
+
+	function cancel():Void;
+
+	function reset():Bool;
+
+	function pollEvents():java.util.List<java.nio.file.WatchEvent<Dynamic>>;
+
+	function isValid():Bool;
+}

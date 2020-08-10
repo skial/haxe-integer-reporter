@@ -1,0 +1,21 @@
+@:realPath("java.net.URISyntaxException") @:nativeGen @:libType @:javaNative @:native("java.net.URISyntaxException") @:javaCanonical("java.net", "URISyntaxException")
+extern class java.net.URISyntaxException extends java.lang.Exception {
+
+	@:overload
+	function new(param1:String, param2:String):Void;
+
+	@:overload
+	function new(param1:String, param2:String, param3:Int):Void;
+
+	@:overload
+	function getMessage():String;
+
+	@:overload
+	function getIndex():Int;
+
+	@:overload
+	function getReason():String;
+
+	@:overload
+	function getInput():String;
+}

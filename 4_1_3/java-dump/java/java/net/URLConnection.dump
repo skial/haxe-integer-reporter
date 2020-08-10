@@ -1,0 +1,180 @@
+@:realPath("java.net.URLConnection") @:nativeGen @:abstract @:libType @:javaNative @:native("java.net.URLConnection") @:javaCanonical("java.net", "URLConnection")
+extern class java.net.URLConnection {
+
+	@:overload @:protected
+	function new(param1:java.net.URL):Void;
+
+	@:overload
+	function getRequestProperties():java.util.Map<String, java.util.List<String>>;
+
+	@:overload
+	function getRequestProperty(param1:String):String;
+
+	@:overload
+	function addRequestProperty(param1:String, param2:String):Void;
+
+	@:overload
+	function setRequestProperty(param1:String, param2:String):Void;
+
+	@:overload
+	function setDefaultUseCaches(param1:Bool):Void;
+
+	@:overload
+	function getDefaultUseCaches():Bool;
+
+	@:overload
+	function getIfModifiedSince():haxe.Int64;
+
+	@:overload
+	function setIfModifiedSince(param1:haxe.Int64):Void;
+
+	@:overload
+	function getUseCaches():Bool;
+
+	@:overload
+	function setUseCaches(param1:Bool):Void;
+
+	@:overload
+	function getAllowUserInteraction():Bool;
+
+	@:overload
+	function setAllowUserInteraction(param1:Bool):Void;
+
+	@:overload
+	function getDoOutput():Bool;
+
+	@:overload
+	function setDoOutput(param1:Bool):Void;
+
+	@:overload
+	function getDoInput():Bool;
+
+	@:overload
+	function setDoInput(param1:Bool):Void;
+
+	@:overload
+	function toString():String;
+
+	@:overload @:throws("java.io.IOException")
+	function getOutputStream():java.io.OutputStream;
+
+	@:overload @:throws("java.io.IOException")
+	function getInputStream():java.io.InputStream;
+
+	@:overload @:throws("java.io.IOException")
+	function getPermission():java.security.Permission;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent(param1:java.NativeArray<java.lang.Class<Dynamic>>):Dynamic;
+
+	@:overload @:throws("java.io.IOException")
+	function getContent():Dynamic;
+
+	@:overload
+	function getHeaderField(param1:Int):String;
+
+	@:overload
+	function getHeaderField(param1:String):String;
+
+	@:overload
+	function getHeaderFieldKey(param1:Int):String;
+
+	@:overload
+	function getHeaderFieldDate(param1:String, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	function getHeaderFieldLong(param1:String, param2:haxe.Int64):haxe.Int64;
+
+	@:overload
+	function getHeaderFieldInt(param1:String, param2:Int):Int;
+
+	@:overload
+	function getHeaderFields():java.util.Map<String, java.util.List<String>>;
+
+	@:overload
+	function getLastModified():haxe.Int64;
+
+	@:overload
+	function getDate():haxe.Int64;
+
+	@:overload
+	function getExpiration():haxe.Int64;
+
+	@:overload
+	function getContentEncoding():String;
+
+	@:overload
+	function getContentType():String;
+
+	@:overload
+	function getContentLengthLong():haxe.Int64;
+
+	@:overload
+	function getContentLength():Int;
+
+	@:overload
+	function getURL():java.net.URL;
+
+	@:overload
+	function getReadTimeout():Int;
+
+	@:overload
+	function setReadTimeout(param1:Int):Void;
+
+	@:overload
+	function getConnectTimeout():Int;
+
+	@:overload
+	function setConnectTimeout(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function connect():Void;
+
+	@:protected
+	var url:java.net.URL;
+
+	@:protected
+	var doInput:Bool;
+
+	@:protected
+	var doOutput:Bool;
+
+	@:protected
+	var allowUserInteraction:Bool;
+
+	@:protected
+	var useCaches:Bool;
+
+	@:protected
+	var ifModifiedSince:haxe.Int64;
+
+	@:protected
+	var connected:Bool;
+
+	@:overload @:throws("java.io.IOException")
+	static function guessContentTypeFromStream(param1:java.io.InputStream):String;
+
+	@:overload
+	static function guessContentTypeFromName(param1:String):String;
+
+	@:overload
+	static function setContentHandlerFactory(param1:java.net.ContentHandlerFactory):Void;
+
+	@:overload @:deprecated
+	static function getDefaultRequestProperty(param1:String):String;
+
+	@:overload @:deprecated
+	static function setDefaultRequestProperty(param1:String, param2:String):Void;
+
+	@:overload
+	static function getDefaultAllowUserInteraction():Bool;
+
+	@:overload
+	static function setDefaultAllowUserInteraction(param1:Bool):Void;
+
+	@:overload
+	static function setFileNameMap(param1:java.net.FileNameMap):Void;
+
+	@:overload
+	static function getFileNameMap():java.net.FileNameMap;
+}

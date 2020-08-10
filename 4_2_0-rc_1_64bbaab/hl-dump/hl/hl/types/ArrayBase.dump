@@ -1,0 +1,107 @@
+@:directlyUsed @:used @:keep
+class hl.types.ArrayBase extends hl.types.ArrayAccess {
+
+	public var length(default,null):Int;
+
+	public function pushDyn(v:Dynamic) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 46, className : "hl.types.ArrayBase", methodName : "pushDyn"});
+	}
+
+	public function popDyn() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 51, className : "hl.types.ArrayBase", methodName : "popDyn"});
+	}
+
+	public function shiftDyn() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 56, className : "hl.types.ArrayBase", methodName : "shiftDyn"});
+	}
+
+	public function unshiftDyn(v:Dynamic) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 61, className : "hl.types.ArrayBase", methodName : "unshiftDyn"});
+	}
+
+	public function insertDyn(pos:Int, v:Dynamic) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 65, className : "hl.types.ArrayBase", methodName : "insertDyn"});
+	}
+
+	public function containsDyn(v:Dynamic) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 69, className : "hl.types.ArrayBase", methodName : "containsDyn"});
+	}
+
+	public function removeDyn(v:Dynamic) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 74, className : "hl.types.ArrayBase", methodName : "removeDyn"});
+	}
+
+	public function sortDyn(f:(Dynamic, Dynamic) -> Int) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 79, className : "hl.types.ArrayBase", methodName : "sortDyn"});
+	}
+
+	public function slice(pos:Int, end:Null<Int> = null) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 83, className : "hl.types.ArrayBase", methodName : "slice"});
+	}
+
+	public function splice(pos:Int, len:Int) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 88, className : "hl.types.ArrayBase", methodName : "splice"});
+	}
+
+	public function join(sep:String) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 93, className : "hl.types.ArrayBase", methodName : "join"});
+	}
+
+	public function reverse() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 98, className : "hl.types.ArrayBase", methodName : "reverse"});
+	}
+
+	public function resize(len:Int) {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 102, className : "hl.types.ArrayBase", methodName : "resize"});
+	}
+
+	public function toString() {
+		throw new haxe.exceptions.NotImplementedException(null, null, {fileName : "hl/types/ArrayBase.hx", lineNumber : 106, className : "hl.types.ArrayBase", methodName : "toString"});
+	}
+
+	function __cast(t:hl.Type) {
+		var v = null;
+		if ((t == $ttype(v))) return hl.types.ArrayDyn.alloc(this, false);
+		return null;
+	}
+
+	function isArrayObj() {
+		return false;
+	}
+
+	@:has_untyped
+	public static function allocI32(bytes:hl.BytesAccess<Int>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_Int);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocUI16(bytes:hl.BytesAccess<hl.UI16>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_hl_UI16);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocF32(bytes:hl.BytesAccess<hl.F32>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_hl_F32);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+
+	@:has_untyped
+	public static function allocF64(bytes:hl.BytesAccess<Float>, length:Int) {
+		var a = $new(hl.types.ArrayBytes_Float);
+		a.length = length;
+		a.bytes = bytes;
+		a.size = length;
+		return a;
+	}
+}

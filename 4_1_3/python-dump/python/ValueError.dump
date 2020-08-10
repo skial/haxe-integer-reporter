@@ -1,0 +1,3 @@
+@:realPath("python.ValueError") @:native("ValueError")
+extern class ValueError extends Exception {
+}

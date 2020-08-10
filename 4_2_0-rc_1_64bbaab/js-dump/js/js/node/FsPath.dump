@@ -1,0 +1,1 @@
+typedef js.node.FsPath = haxe.extern.EitherType<String, js.node.Buffer>

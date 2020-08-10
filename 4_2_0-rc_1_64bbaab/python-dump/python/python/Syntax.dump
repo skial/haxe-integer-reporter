@@ -1,0 +1,12 @@
+@:directlyUsed @:used @:noPackageRestrict @:noClosure
+extern class python.Syntax {
+
+	static function construct<T>(cls:Class<construct.T>, args:haxe.extern.Rest<Dynamic>):construct.T;
+
+	static function construct(className:str, args:haxe.extern.Rest<Dynamic>):Dynamic;
+
+	static function code(code:str, args:haxe.extern.Rest<Dynamic>):Dynamic;
+
+	@:noUsing
+	static function _pythonCode<T>(b:str, args:list<Dynamic>):_pythonCode.T;
+}

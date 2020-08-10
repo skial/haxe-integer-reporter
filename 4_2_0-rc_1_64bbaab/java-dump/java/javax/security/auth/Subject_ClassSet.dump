@@ -1,0 +1,9 @@
+@:realPath("java.javax.security.auth.Subject_ClassSet") @:used @:nativeGen @:libType @:javaNative @:native("javax.security.auth.Subject$ClassSet") @:javaCanonical("javax.security.auth", "Subject.ClassSet")
+extern class javax.security.auth.Subject$ClassSet<T:Dynamic> extends java.util.AbstractSet<java.javax.security.auth.Subject_ClassSet.T> {
+
+	function add(param1:java.javax.security.auth.Subject_ClassSet.T):Bool;
+
+	function iterator():java.util.Iterator<java.javax.security.auth.Subject_ClassSet.T>;
+
+	function size():Int;
+}

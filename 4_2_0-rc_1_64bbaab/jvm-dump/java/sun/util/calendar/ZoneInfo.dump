@@ -1,0 +1,55 @@
+@:realPath("java.sun.util.calendar.ZoneInfo") @:used @:native("sun.util.calendar.ZoneInfo") @:libType
+extern class sun.util.calendar.ZoneInfo extends java.util.TimeZone {
+
+	function new():Void;
+
+	function new(param1:java.lang.String, param2:Int, param3:Int, param4:Int, param5:java.NativeArray<haxe.Int64>, param6:java.NativeArray<Int>, param7:java.NativeArray<Int>, param8:Bool):Void;
+
+	function new(param1:java.lang.String, param2:Int):Void;
+
+	function getOffset(param1:haxe.Int64):Int;
+
+	function getOffset(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Int;
+
+	function getOffsets(param1:haxe.Int64, param2:java.NativeArray<Int>):Int;
+
+	function getOffsetsByStandard(param1:haxe.Int64, param2:java.NativeArray<Int>):Int;
+
+	function getOffsetsByWall(param1:haxe.Int64, param2:java.NativeArray<Int>):Int;
+
+	function setRawOffset(param1:Int):Void;
+
+	function getRawOffset():Int;
+
+	function isDirty():Bool;
+
+	function useDaylightTime():Bool;
+
+	function observesDaylightTime():Bool;
+
+	function inDaylightTime(param1:java.util.Date):Bool;
+
+	function getDSTSavings():Int;
+
+	function toString():java.lang.String;
+
+	function getLastRuleInstance():java.util.SimpleTimeZone;
+
+	function clone():Dynamic;
+
+	function hashCode():Int;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hasSameRules(param1:java.util.TimeZone):Bool;
+
+	static function getAvailableIDs():java.NativeArray<java.lang.String>;
+
+	static function getAvailableIDs(param1:Int):java.NativeArray<java.lang.String>;
+
+	static function getTimeZone(param1:java.lang.String):java.util.TimeZone;
+
+	static function getAliasTable():java.util.Map<java.lang.String, java.lang.String>;
+
+	static function <clinit>():Void;
+}

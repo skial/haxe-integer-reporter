@@ -1,0 +1,67 @@
+@:keep @:used @:coreApi
+class Type {
+
+	@:has_untyped @:keep
+	static function init() {
+		$allTypes({
+			var this1;
+			this1 = hl.types._BytesMap.BytesMap_Impl_.alloc();
+			cast this1;
+		});
+	}
+
+	@:keep
+	static function initClass(ct:hl.Type, t:hl.Type, name:hl.Bytes) {
+		var c = hl._Type.Type_Impl_.allocObject(ct);
+		hl._Type.Type_Impl_.setGlobal(t, c);
+		c.__type__ = t;
+		var s = $new(String);
+		s.bytes = name;
+		s.length = hl._Bytes.Bytes_Impl_.ucs2Length(name, 0);
+		c.__name__ = s;
+		Type.register(name, c);
+		return c;
+	}
+
+	@:keep
+	static function initEnum(et:hl.Type, t:hl.Type) {
+		var e = hl._Type.Type_Impl_.allocObject(et);
+		e.__type__ = t;
+		e.__evalues__ = hl._Type.Type_Impl_.getEnumValues(t);
+		var s = hl._Type.Type_Impl_.getNameBytes(t);
+		var tmp;
+		if ((s == null)) tmp = null else {
+			var s1 = $new(String);
+			s1.bytes = s;
+			s1.length = hl._Bytes.Bytes_Impl_.ucs2Length(s, 0);
+			tmp = s1;
+		};
+		e.__ename__ = cast tmp;
+		var this1 = hl.types._BytesMap.BytesMap_Impl_.alloc();
+		e.__emap__ = cast this1;
+		e.__constructs__ = new Array();
+		var cl = hl._Type.Type_Impl_.getEnumFields(t);
+		{
+			var _g = 0;
+			var _g1 = $asize(cl);
+			while ((_g < _g1)) {
+				var i = _g ++;
+				var name = $aget(cl, i);
+				hl.types._BytesMap.BytesMap_Impl_.set(e.__emap__, name, i);
+				var e = e.__constructs__;
+				var s = $new(String);
+				s.bytes = name;
+				s.length = hl._Bytes.Bytes_Impl_.ucs2Length(name, 0);
+				e.push(s);
+			};
+		};
+		Type.register(e.__ename__.bytes, e);
+		hl._Type.Type_Impl_.setGlobal(t, e);
+		return e;
+	}
+
+	@:keep
+	static function register(b:hl.Bytes, t:hl.BaseType) {
+		hl.types._BytesMap.BytesMap_Impl_.set($allTypes(), b, t);
+	}
+}

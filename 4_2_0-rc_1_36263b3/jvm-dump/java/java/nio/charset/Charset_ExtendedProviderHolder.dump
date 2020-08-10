@@ -1,0 +1,7 @@
+@:realPath("java.nio.charset.Charset_ExtendedProviderHolder") @:native("java.nio.charset.Charset$ExtendedProviderHolder") @:libType
+extern class java.nio.charset.Charset$ExtendedProviderHolder {
+
+	static function <clinit>():Void;
+
+	static var extendedProvider(default,never):java.nio.charset.spi.CharsetProvider;
+}

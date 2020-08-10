@@ -1,0 +1,178 @@
+@:realPath("java.io.ObjectStreamClass") @:used @:native("java.io.ObjectStreamClass") @:libType
+extern class java.io.ObjectStreamClass implements java.io.Serializable {
+
+	function new():Void;
+
+	function getName():java.lang.String;
+
+	function getSerialVersionUID():haxe.Int64;
+
+	function forClass():java.lang.Class<Dynamic>;
+
+	function getFields():java.NativeArray<java.io.ObjectStreamField>;
+
+	function getFields(param1:Bool):java.NativeArray<java.io.ObjectStreamField>;
+
+	function getField(param1:java.lang.String):java.io.ObjectStreamField;
+
+	function getField(param1:java.lang.String, param2:java.lang.Class<Dynamic>):java.io.ObjectStreamField;
+
+	function toString():java.lang.String;
+
+	function initProxy(param1:java.lang.Class<Dynamic>, param2:java.lang.ClassNotFoundException, param3:java.io.ObjectStreamClass):Void;
+
+	function initNonProxy(param1:java.io.ObjectStreamClass, param2:java.lang.Class<Dynamic>, param3:java.lang.ClassNotFoundException, param4:java.io.ObjectStreamClass):Void;
+
+	function readNonProxy(param1:java.io.ObjectInputStream):Void;
+
+	function writeNonProxy(param1:java.io.ObjectOutputStream):Void;
+
+	function getResolveException():java.lang.ClassNotFoundException;
+
+	function checkDeserialize():Void;
+
+	function checkSerialize():Void;
+
+	function checkDefaultSerialize():Void;
+
+	function getSuperDesc():java.io.ObjectStreamClass;
+
+	function getLocalDesc():java.io.ObjectStreamClass;
+
+	function isProxy():Bool;
+
+	function isEnum():Bool;
+
+	function isExternalizable():Bool;
+
+	function isSerializable():Bool;
+
+	function hasBlockExternalData():Bool;
+
+	function hasWriteObjectData():Bool;
+
+	function isInstantiable():Bool;
+
+	function hasWriteObjectMethod():Bool;
+
+	function hasReadObjectMethod():Bool;
+
+	function hasReadObjectNoDataMethod():Bool;
+
+	function hasWriteReplaceMethod():Bool;
+
+	function hasReadResolveMethod():Bool;
+
+	function newInstance():Dynamic;
+
+	function invokeWriteObject(param1:Dynamic, param2:java.io.ObjectOutputStream):Void;
+
+	function invokeReadObject(param1:Dynamic, param2:java.io.ObjectInputStream):Void;
+
+	function invokeReadObjectNoData(param1:Dynamic):Void;
+
+	function invokeWriteReplace(param1:Dynamic):Dynamic;
+
+	function invokeReadResolve(param1:Dynamic):Dynamic;
+
+	function getClassDataLayout():java.NativeArray<java.io.ObjectStreamClass$ClassDataSlot>;
+
+	function getPrimDataSize():Int;
+
+	function getNumObjFields():Int;
+
+	function getPrimFieldValues(param1:Dynamic, param2:java.NativeArray<java.types.Int8>):Void;
+
+	function setPrimFieldValues(param1:Dynamic, param2:java.NativeArray<java.types.Int8>):Void;
+
+	function getObjFieldValues(param1:Dynamic, param2:java.NativeArray<Dynamic>):Void;
+
+	function setObjFieldValues(param1:Dynamic, param2:java.NativeArray<Dynamic>):Void;
+
+	static function lookup(param1:java.lang.Class<Dynamic>):java.io.ObjectStreamClass;
+
+	static function lookup(param1:java.lang.Class<Dynamic>, param2:Bool):java.io.ObjectStreamClass;
+
+	static function lookupAny(param1:java.lang.Class<Dynamic>):java.io.ObjectStreamClass;
+
+	static function processQueue(param1:java.lang.ref.ReferenceQueue<java.lang.Class<Dynamic>>, param2:java.util.concurrent.ConcurrentMap<java.lang.ref.WeakReference<java.lang.Class<Dynamic>>, Dynamic>):Void;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.io.ObjectStreamClass):java.lang.Class<Dynamic>;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100(param1:java.lang.Class<Dynamic>):haxe.Int64;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:java.io.ObjectStreamClass):Bool;
+
+	@:realPath("access_502") @:native("access$502")
+	static function access$502(param1:java.io.ObjectStreamClass, param2:java.lang.Long):java.lang.Long;
+
+	@:realPath("access_602") @:native("access$602")
+	static function access$602(param1:java.io.ObjectStreamClass, param2:java.NativeArray<java.io.ObjectStreamField>):java.NativeArray<java.io.ObjectStreamField>;
+
+	@:realPath("access_700") @:native("access$700")
+	static function access$700(param1:java.lang.Class<Dynamic>):java.lang.Long;
+
+	@:realPath("access_800") @:native("access$800")
+	static function access$800(param1:java.lang.Class<Dynamic>):java.NativeArray<java.io.ObjectStreamField>;
+
+	@:realPath("access_900") @:native("access$900")
+	static function access$900(param1:java.io.ObjectStreamClass):Void;
+
+	@:realPath("access_1002") @:native("access$1002")
+	static function access$1002(param1:java.io.ObjectStreamClass, param2:java.io.ObjectStreamClass$ExceptionInfo):java.io.ObjectStreamClass$ExceptionInfo;
+
+	@:realPath("access_1102") @:native("access$1102")
+	static function access$1102(param1:java.io.ObjectStreamClass, param2:java.io.ObjectStreamClass$ExceptionInfo):java.io.ObjectStreamClass$ExceptionInfo;
+
+	@:realPath("access_1200") @:native("access$1200")
+	static function access$1200(param1:java.io.ObjectStreamClass):Bool;
+
+	@:realPath("access_1302") @:native("access$1302")
+	static function access$1302(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Constructor<Dynamic>):java.lang.reflect.Constructor<Dynamic>;
+
+	@:realPath("access_1400") @:native("access$1400")
+	static function access$1400(param1:java.lang.Class<Dynamic>):java.lang.reflect.Constructor<Dynamic>;
+
+	@:realPath("access_1500") @:native("access$1500")
+	static function access$1500(param1:java.lang.Class<Dynamic>):java.lang.reflect.Constructor<Dynamic>;
+
+	@:realPath("access_1602") @:native("access$1602")
+	static function access$1602(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Method):java.lang.reflect.Method;
+
+	@:realPath("access_1700") @:native("access$1700")
+	static function access$1700(param1:java.lang.Class<Dynamic>, param2:java.lang.String, param3:java.NativeArray<java.lang.Class<Dynamic>>, param4:java.lang.Class<Dynamic>):java.lang.reflect.Method;
+
+	@:realPath("access_1802") @:native("access$1802")
+	static function access$1802(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Method):java.lang.reflect.Method;
+
+	@:realPath("access_1902") @:native("access$1902")
+	static function access$1902(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Method):java.lang.reflect.Method;
+
+	@:realPath("access_2002") @:native("access$2002")
+	static function access$2002(param1:java.io.ObjectStreamClass, param2:Bool):Bool;
+
+	@:realPath("access_1600") @:native("access$1600")
+	static function access$1600(param1:java.io.ObjectStreamClass):java.lang.reflect.Method;
+
+	@:realPath("access_2102") @:native("access$2102")
+	static function access$2102(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Method):java.lang.reflect.Method;
+
+	@:realPath("access_2200") @:native("access$2200")
+	static function access$2200(param1:java.lang.Class<Dynamic>, param2:java.lang.String, param3:java.NativeArray<java.lang.Class<Dynamic>>, param4:java.lang.Class<Dynamic>):java.lang.reflect.Method;
+
+	@:realPath("access_2302") @:native("access$2302")
+	static function access$2302(param1:java.io.ObjectStreamClass, param2:java.lang.reflect.Method):java.lang.reflect.Method;
+
+	@:realPath("access_2400") @:native("access$2400")
+	static function access$2400(param1:java.lang.Class<Dynamic>):java.lang.String;
+
+	@:realPath("access_2500") @:native("access$2500")
+	static function access$2500(param1:java.NativeArray<java.lang.Class<Dynamic>>, param2:java.lang.Class<Dynamic>):java.lang.String;
+
+	static function <clinit>():Void;
+
+	static var NO_FIELDS(default,never):java.NativeArray<java.io.ObjectStreamField>;
+}

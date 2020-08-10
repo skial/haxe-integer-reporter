@@ -1,0 +1,9 @@
+@:realPath("java.util.LinkedHashMap_LinkedEntryIterator") @:used @:libType @:javaNative @:native("java.util.LinkedHashMap$LinkedEntryIterator") @:javaCanonical("java.util", "LinkedHashMap.LinkedEntryIterator")
+extern class java.util.LinkedHashMap$LinkedEntryIterator extends java.util.LinkedHashMap$LinkedHashIterator implements java.util.Iterator<java.util.Map$Entry<Dynamic, Dynamic>> {
+
+	@:overload
+	function next():java.util.Map$Entry<Dynamic, Dynamic>;
+
+	@:overload
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+}

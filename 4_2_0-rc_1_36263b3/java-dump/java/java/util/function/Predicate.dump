@@ -1,0 +1,5 @@
+@:realPath("java.util.function.Predicate_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.function.Predicate") @:javaCanonical("java.util.function", "Predicate")
+extern class java.util.function.Predicate {
+
+	static function isEqual<T:Dynamic>(param1:Dynamic):java.util.function.Predicate<isEqual.T>;
+}

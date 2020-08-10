@@ -1,0 +1,1 @@
+typedef js.node.FsWatchFileOptions = { ?persistent : Null<Bool>, ?interval : Null<Int> }

@@ -1,0 +1,6 @@
+@:used @:enum
+private extern class js.node.fs._WriteStream.WriteStreamEvent_Impl_ {
+
+	@:value(cast "open") @:enum @:impl
+	static inline var Open:js.node.fs.WriteStreamEvent<Int -> Void> = cast "open";
+}

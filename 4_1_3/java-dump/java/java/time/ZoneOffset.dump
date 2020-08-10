@@ -1,0 +1,75 @@
+@:realPath("java.time.ZoneOffset") @:used @:nativeGen @:libType @:javaNative @:native("java.time.ZoneOffset") @:javaCanonical("java.time", "ZoneOffset")
+extern class java.time.ZoneOffset extends java.time.ZoneId implements java.io.Serializable implements java.lang.Comparable<java.time.ZoneOffset> implements java.time.temporal.TemporalAdjuster implements java.time.temporal.TemporalAccessor {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.time.ZoneOffset):Int;
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function adjustInto(param1:java.time.temporal.Temporal):java.time.temporal.Temporal;
+
+	@:overload
+	function query<R : query.R>(param1:java.time.temporal.TemporalQuery<query.R>):query.R;
+
+	@:overload
+	function getLong(param1:java.time.temporal.TemporalField):haxe.Int64;
+
+	@:overload
+	function get(param1:java.time.temporal.TemporalField):Int;
+
+	@:overload
+	function range(param1:java.time.temporal.TemporalField):java.time.temporal.ValueRange;
+
+	@:overload
+	function isSupported(param1:java.time.temporal.TemporalField):Bool;
+
+	@:overload
+	function getRules():java.time.zone.ZoneRules;
+
+	@:overload
+	function getId():String;
+
+	@:overload
+	function getTotalSeconds():Int;
+
+	@:overload
+	static function ofTotalSeconds(param1:Int):java.time.ZoneOffset;
+
+	@:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.ZoneOffset;
+
+	@:realPath("_from") @:native("from") @:deprecated("This static field `_from` is deprecated and will be removed in later versions. Please use `from` instead") @:overload
+	static function from(param1:java.time.temporal.TemporalAccessor):java.time.ZoneOffset;
+
+	@:overload
+	static function ofHoursMinutesSeconds(param1:Int, param2:Int, param3:Int):java.time.ZoneOffset;
+
+	@:overload
+	static function ofHoursMinutes(param1:Int, param2:Int):java.time.ZoneOffset;
+
+	@:overload
+	static function ofHours(param1:Int):java.time.ZoneOffset;
+
+	@:overload
+	static function of(param1:String):java.time.ZoneOffset;
+
+	@:realPath("_of") @:native("of") @:deprecated("This static field `_of` is deprecated and will be removed in later versions. Please use `of` instead") @:overload
+	static function of(param1:String):java.time.ZoneOffset;
+
+	static var UTC(default,never):java.time.ZoneOffset;
+
+	static var MIN(default,never):java.time.ZoneOffset;
+
+	static var MAX(default,never):java.time.ZoneOffset;
+}

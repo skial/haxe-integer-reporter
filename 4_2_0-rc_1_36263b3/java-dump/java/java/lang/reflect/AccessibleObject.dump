@@ -1,0 +1,31 @@
+@:realPath("java.lang.reflect.AccessibleObject") @:used @:nativeGen @:libType @:javaNative @:native("java.lang.reflect.AccessibleObject") @:javaCanonical("java.lang.reflect", "AccessibleObject")
+extern class java.lang.reflect.AccessibleObject implements java.lang.reflect.AnnotatedElement {
+
+	@:protected
+	function new():Void;
+
+	function getDeclaredAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getDeclaredAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotationsByType.T>):java.NativeArray<getDeclaredAnnotationsByType.T>;
+
+	function getDeclaredAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getDeclaredAnnotation.T>):getDeclaredAnnotation.T;
+
+	function getAnnotations():java.NativeArray<java.lang.annotation.Annotation>;
+
+	function getAnnotationsByType<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotationsByType.T>):java.NativeArray<getAnnotationsByType.T>;
+
+	function isAnnotationPresent(param1:java.lang.Class<java.lang.annotation.Annotation>):Bool;
+
+	function getAnnotation<T:java.lang.annotation.Annotation>(param1:java.lang.Class<getAnnotation.T>):getAnnotation.T;
+
+	function isAccessible():Bool;
+
+	@:throws("java.lang.SecurityException")
+	function setAccessible(param1:Bool):Void;
+
+	@:throws("java.lang.SecurityException")
+	static function setAccessible(param1:java.NativeArray<java.lang.reflect.AccessibleObject>, param2:Bool):Void;
+
+	@:realPath("_setAccessible") @:native("setAccessible") @:deprecated("This static field `_setAccessible` is deprecated and will be removed in later versions. Please use `setAccessible` instead") @:throws("java.lang.SecurityException")
+	static function setAccessible(param1:java.NativeArray<java.lang.reflect.AccessibleObject>, param2:Bool):Void;
+}

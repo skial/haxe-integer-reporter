@@ -1,0 +1,6 @@
+@:realPath("java.io.SyncFailedException") @:nativeGen @:libType @:javaNative @:native("java.io.SyncFailedException") @:javaCanonical("java.io", "SyncFailedException")
+extern class java.io.SyncFailedException extends java.io.IOException {
+
+	@:overload
+	function new(param1:String):Void;
+}

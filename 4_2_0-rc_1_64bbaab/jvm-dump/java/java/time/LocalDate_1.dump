@@ -1,0 +1,11 @@
+@:realPath("java.time.LocalDate_1") @:native("java.time.LocalDate$1") @:libType
+extern class java.time.LocalDate$1 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_time_temporal_ChronoField") @:native("$SwitchMap$java$time$temporal$ChronoField")
+	static var $SwitchMap$java$time$temporal$ChronoField(default,never):java.NativeArray<Int>;
+
+	@:realPath("_SwitchMap_java_time_temporal_ChronoUnit") @:native("$SwitchMap$java$time$temporal$ChronoUnit")
+	static var $SwitchMap$java$time$temporal$ChronoUnit(default,never):java.NativeArray<Int>;
+}

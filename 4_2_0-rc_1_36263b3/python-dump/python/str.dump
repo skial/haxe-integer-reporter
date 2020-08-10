@@ -1,0 +1,32 @@
+@:realPath("String") @:directlyUsed @:used @:coreApi @:native("str")
+extern class str {
+
+	function new(string:str):Void;
+
+	var length(default,null):Int;
+
+	@:runtime
+	inline function toUpperCase():str;
+
+	@:runtime
+	inline function toLowerCase():str;
+
+	inline function charAt(index:Int):str;
+
+	inline function charCodeAt(index:Int):Null<Int>;
+
+	inline function indexOf(str:str, startIndex:Null<Int>):Int;
+
+	inline function lastIndexOf(str:str, startIndex:Null<Int>):Int;
+
+	@:runtime
+	inline function split(delimiter:str):list<str>;
+
+	inline function substr(pos:Int, len:Null<Int>):str;
+
+	inline function substring(startIndex:Int, endIndex:Null<Int>):str;
+
+	inline function toString():str;
+
+	static inline function fromCharCode(code:Int):str;
+}

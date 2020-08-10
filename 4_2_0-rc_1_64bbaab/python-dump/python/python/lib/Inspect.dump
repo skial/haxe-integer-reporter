@@ -1,0 +1,16 @@
+@:directlyUsed @:used @:pythonImport("inspect")
+extern class python.lib.Inspect {
+
+	static function getmembers(object:Dynamic, predicate:Null<Dynamic -> Bool>):list<tuple<str, Dynamic>>;
+
+	static function ismethod(object:Dynamic):Bool;
+
+	static function isclass(object:Dynamic):Bool;
+
+	static function isfunction(object:Dynamic):Bool;
+
+	static function getsourcefile(object:Dynamic):str;
+
+	@:has_untyped
+	static inline function isInterface(cls:Class<Dynamic>):Bool;
+}

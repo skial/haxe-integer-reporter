@@ -1,0 +1,79 @@
+@:realPath("java.util.TimeZone") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.TimeZone") @:javaCanonical("java.util", "TimeZone")
+extern class java.util.TimeZone implements java.io.Serializable implements java.lang.Cloneable {
+
+	@:overload
+	function new():Void;
+
+	@:overload
+	function clone():Dynamic;
+
+	@:overload
+	function hasSameRules(param1:java.util.TimeZone):Bool;
+
+	@:overload
+	function toZoneId():java.time.ZoneId;
+
+	@:overload
+	function inDaylightTime(param1:java.util.Date):Bool;
+
+	@:overload
+	function observesDaylightTime():Bool;
+
+	@:overload
+	function useDaylightTime():Bool;
+
+	@:overload
+	function getDSTSavings():Int;
+
+	@:overload
+	function getDisplayName(param1:Bool, param2:Int, param3:java.util.Locale):String;
+
+	@:overload
+	function getDisplayName():String;
+
+	@:overload
+	function getDisplayName(param1:java.util.Locale):String;
+
+	@:overload
+	function getDisplayName(param1:Bool, param2:Int):String;
+
+	@:overload
+	function setID(param1:String):Void;
+
+	@:overload
+	function getID():String;
+
+	@:overload
+	function getRawOffset():Int;
+
+	@:overload
+	function setRawOffset(param1:Int):Void;
+
+	@:overload
+	function getOffset(param1:haxe.Int64):Int;
+
+	@:overload
+	function getOffset(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Int;
+
+	@:overload
+	static function setDefault(param1:java.util.TimeZone):Void;
+
+	@:overload
+	static function getDefault():java.util.TimeZone;
+
+	@:overload
+	static function getAvailableIDs():java.NativeArray<String>;
+
+	@:overload
+	static function getAvailableIDs(param1:Int):java.NativeArray<String>;
+
+	@:overload
+	static function getTimeZone(param1:java.time.ZoneId):java.util.TimeZone;
+
+	@:overload
+	static function getTimeZone(param1:String):java.util.TimeZone;
+
+	static var SHORT(default,null):Int;
+
+	static var LONG(default,null):Int;
+}

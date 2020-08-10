@@ -1,0 +1,2 @@
+@:used @:forward(bytes, length)
+abstract haxe.io.BytesDataAbstract {}

@@ -1,0 +1,14 @@
+@:realPath("java.lang.Error") @:nativeGen @:libType @:javaNative @:native("java.lang.Error") @:javaCanonical("java.lang", "Error")
+extern class java.lang.Error extends java.lang.Throwable {
+
+	@:protected
+	function new(param1:String, param2:java.lang.Throwable, param3:Bool, param4:Bool):Void;
+
+	function new():Void;
+
+	function new(param1:String):Void;
+
+	function new(param1:String, param2:java.lang.Throwable):Void;
+
+	function new(param1:java.lang.Throwable):Void;
+}

@@ -1,0 +1,3 @@
+@:remove
+extern interface js.node.IStream {
+}

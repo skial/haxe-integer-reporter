@@ -1,0 +1,3 @@
+@:realPath("python.IndexError") @:native("IndexError")
+extern class IndexError extends LookupError {
+}

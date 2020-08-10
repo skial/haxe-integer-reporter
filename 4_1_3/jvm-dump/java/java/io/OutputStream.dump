@@ -1,0 +1,21 @@
+@:realPath("java.io.OutputStream") @:used @:abstract @:libType @:javaNative @:native("java.io.OutputStream") @:javaCanonical("java.io", "OutputStream")
+extern class java.io.OutputStream implements java.io.Closeable implements java.io.Flushable {
+
+	@:overload
+	function new():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function close():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function flush():Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:Int):Void;
+
+	@:overload @:throws("java.io.IOException")
+	function write(param1:java.NativeArray<java.types.Int8>):Void;
+}

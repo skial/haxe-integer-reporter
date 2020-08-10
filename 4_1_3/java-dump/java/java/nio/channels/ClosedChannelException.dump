@@ -1,0 +1,6 @@
+@:realPath("java.nio.channels.ClosedChannelException") @:nativeGen @:libType @:javaNative @:native("java.nio.channels.ClosedChannelException") @:javaCanonical("java.nio.channels", "ClosedChannelException")
+extern class java.nio.channels.ClosedChannelException extends java.io.IOException {
+
+	@:overload
+	function new():Void;
+}

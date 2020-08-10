@@ -1,0 +1,27 @@
+@:pythonImport("subprocess")
+extern class python.lib.Subprocess {
+
+	static function STARTUPINFO():python.lib.StartupInfo;
+
+	static var STD_INPUT_HANDLE:Int;
+
+	static var STD_OUTPUT_HANDLE:Int;
+
+	static var STD_ERROR_HANDLE:Int;
+
+	static var SW_HIDE:Int;
+
+	static var STARTF_USESTDHANDLES:Int;
+
+	static var STARTF_USESHOWWINDOW:Int;
+
+	static var CREATE_NEW_CONSOLE:Int;
+
+	static var CREATE_NEW_PROCESS_GROUP:Int;
+
+	static var PIPE:Int;
+
+	static var STDOUT:Int;
+
+	static function call(args:haxe.extern.EitherType<str, list<str>>, kwArgs:Null<python.KwArgs<Dynamic>>):Int;
+}

@@ -1,0 +1,1 @@
+typedef js.node.FsCreateWriteStreamOptions = { ?start : Null<Int>, ?mode : Null<js.node.FsMode>, ?flags : Null<js.node.FsOpenFlag>, ?encoding : Null<String> }

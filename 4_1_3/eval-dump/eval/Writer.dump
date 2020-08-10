@@ -1,0 +1,41 @@
+@:directlyUsed @:used
+class Writer {
+
+	@:value(Macros.getDirectory().normalize())
+	static var directory:String = haxe.io.Path.normalize("4_1_3");
+
+	@:value(Macros.getHaxever())
+	static var haxever:String = "4.1.3";
+
+	@:value(Macros.getTarget())
+	public static var file:String = "eval";
+
+	@:isVar
+	public static var handle(get,default):String;
+
+	static function get_handle() {
+		if ((Writer.handle == null)) {
+			if ((! sys.FileSystem.exists("./" + Writer.directory))) sys.FileSystem.createDirectory("./" + Writer.directory);
+			Writer.handle = sys.io.File.getContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"));
+		};
+		return Writer.handle;
+	}
+
+	@:value(0)
+	static var lastIndex:Int = 0;
+
+	public static function writePair<T : writePair.T>(v1:writePair.T, v2:writePair.T, pos:Null<haxe.PosInfos> = null) {
+		var index = Writer.get_handle().indexOf("| " + pos.lineNumber + " |", Writer.lastIndex);
+		var addition = "" + Std.string(v1) + "|" + Std.string(v2) + "|\n";
+		if ((index > -1)) {
+			Writer.lastIndex = index;
+			var nl = Writer.get_handle().indexOf("\n", index);
+			if ((nl > -1)) Writer.handle = Writer.get_handle().substring(0, nl) + addition + Writer.get_handle().substring(nl + 1, Writer.get_handle().length) else throw haxe.Exception.thrown("Unable to find newline.");
+		} else throw haxe.Exception.thrown("Unable to find line number `" + pos.lineNumber + "` for values " + Std.string(v1) + " and " + Std.string(v2));
+		haxe.Log.trace(pos.lineNumber, {fileName : "Writer.hx", lineNumber : 49, className : "Writer", methodName : "writePair", customParams : [v1, v2]});
+	}
+
+	public static function close() {
+		sys.io.File.saveContent(haxe.io.Path.normalize("./" + Writer.directory + "/" + Writer.file + ".md"), Writer.get_handle());
+	}
+}

@@ -1,0 +1,13 @@
+@:keep @:directlyUsed @:used
+class python.Lib {
+
+	@:value(Sys.systemName() == "Windows" ? "\r\n" : "\n")
+	static var lineEnd:str = if ((Sys.systemName() == "Windows")) "\r\n" else "\n";
+
+	static function printString(str:str) {
+		var encoding = "utf-8";
+		if ((encoding == null)) encoding = "utf-8";
+		python.lib.Sys.stdout.buffer.write(cast python.Syntax.call(python.Syntax.field(str, "encode"), [encoding, "strict"]));
+		python.lib.Sys.stdout.flush();
+	}
+}

@@ -1,0 +1,14 @@
+@:realPath("java.internal.VarArgsFunction") @:used @:nativeGen @:nativeGen @:native("haxe.lang.VarArgsFunction") @:keep
+class haxe.lang.VarArgsFunction extends haxe.lang.VarArgsBase {
+
+	public function new(fun:Array<Dynamic> -> Dynamic) {
+		super(-1, -1);
+		this.fun = fun;
+	}
+
+	var fun:Array<Dynamic> -> Dynamic;
+
+	public function __hx_invokeDynamic(dynArgs:java.NativeArray<Dynamic>) {
+		return this.fun(if ((dynArgs == null)) [] else Array.ofNative(dynArgs));
+	}
+}

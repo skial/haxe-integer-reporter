@@ -1,0 +1,81 @@
+@:realPath("java.nio.DoubleBuffer") @:used @:abstract @:libType @:javaNative @:native("java.nio.DoubleBuffer") @:javaCanonical("java.nio", "DoubleBuffer")
+extern class java.nio.DoubleBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.DoubleBuffer> {
+
+	@:overload
+	function compareTo(param1:Dynamic):Int;
+
+	@:overload
+	function compareTo(param1:java.nio.DoubleBuffer):Int;
+
+	@:overload
+	function array():java.NativeArray<Float>;
+
+	@:overload
+	function order():java.nio.ByteOrder;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function toString():java.lang.String;
+
+	@:overload
+	function isDirect():Bool;
+
+	@:overload
+	function compact():java.nio.DoubleBuffer;
+
+	@:overload
+	function arrayOffset():Int;
+
+	@:overload
+	function hasArray():Bool;
+
+	@:overload
+	function put(param1:java.NativeArray<Float>):java.nio.DoubleBuffer;
+
+	@:overload
+	function put(param1:Float):java.nio.DoubleBuffer;
+
+	@:overload
+	function put(param1:Int, param2:Float):java.nio.DoubleBuffer;
+
+	@:overload
+	function put(param1:java.nio.DoubleBuffer):java.nio.DoubleBuffer;
+
+	@:overload
+	function put(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.nio.DoubleBuffer;
+
+	@:overload
+	function get(param1:java.NativeArray<Float>):java.nio.DoubleBuffer;
+
+	@:overload
+	function get():Float;
+
+	@:overload
+	function get(param1:Int):Float;
+
+	@:overload
+	function get(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.nio.DoubleBuffer;
+
+	@:overload
+	function asReadOnlyBuffer():java.nio.DoubleBuffer;
+
+	@:overload
+	function duplicate():java.nio.DoubleBuffer;
+
+	@:overload
+	function slice():java.nio.DoubleBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<Float>):java.nio.DoubleBuffer;
+
+	@:overload
+	static function wrap(param1:java.NativeArray<Float>, param2:Int, param3:Int):java.nio.DoubleBuffer;
+
+	@:overload
+	static function allocate(param1:Int):java.nio.DoubleBuffer;
+}

@@ -1,0 +1,9 @@
+@:realPath("java.text.Format_FieldDelegate") @:used @:abstract @:libType @:javaNative @:native("java.text.Format$FieldDelegate") @:javaCanonical("java.text", "Format.FieldDelegate")
+extern interface java.text.Format$FieldDelegate {
+
+	@:overload
+	function formatted(param1:Int, param2:java.text.Format$Field, param3:Dynamic, param4:Int, param5:Int, param6:java.lang.StringBuffer):Void;
+
+	@:overload
+	function formatted(param1:java.text.Format$Field, param2:Dynamic, param3:Int, param4:Int, param5:java.lang.StringBuffer):Void;
+}

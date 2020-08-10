@@ -1,0 +1,6 @@
+@:realPath("java.lang.Thread_UncaughtExceptionHandler") @:used @:abstract @:libType @:javaNative @:native("java.lang.Thread$UncaughtExceptionHandler") @:javaCanonical("java.lang", "Thread.UncaughtExceptionHandler")
+extern interface java.lang.Thread$UncaughtExceptionHandler {
+
+	@:overload
+	function uncaughtException(param1:java.lang.Thread, param2:java.lang.Throwable):Void;
+}

@@ -1,0 +1,12 @@
+@:realPath("java.io.Console_LineReader") @:used @:libType @:javaNative @:native("java.io.Console$LineReader") @:javaCanonical("java.io", "Console.LineReader")
+extern class java.io.Console$LineReader extends java.io.Reader {
+
+	@:overload @:throws("java.io.IOException")
+	function read(param1:java.NativeArray<java.types.Char16>, param2:Int, param3:Int):Int;
+
+	@:overload @:throws("java.io.IOException")
+	function ready():Bool;
+
+	@:overload
+	function close():Void;
+}

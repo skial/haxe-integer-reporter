@@ -1,0 +1,310 @@
+@:realPath("java.util.Calendar") @:used @:native("java.util.Calendar") @:libType
+extern class java.util.Calendar implements java.lang.Comparable<java.util.Calendar> implements java.lang.Cloneable implements java.io.Serializable {
+
+	function new():Void;
+
+	function new(param1:java.util.TimeZone, param2:java.util.Locale):Void;
+
+	function computeTime():Void;
+
+	function computeFields():Void;
+
+	function getTime():java.util.Date;
+
+	function setTime(param1:java.util.Date):Void;
+
+	function getTimeInMillis():haxe.Int64;
+
+	function setTimeInMillis(param1:haxe.Int64):Void;
+
+	function get(param1:Int):Int;
+
+	function internalGet(param1:Int):Int;
+
+	function internalSet(param1:Int, param2:Int):Void;
+
+	function set(param1:Int, param2:Int):Void;
+
+	function set(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int, param6:Int):Void;
+
+	function set(param1:Int, param2:Int, param3:Int, param4:Int, param5:Int):Void;
+
+	function set(param1:Int, param2:Int, param3:Int):Void;
+
+	function clear():Void;
+
+	function clear(param1:Int):Void;
+
+	function isSet(param1:Int):Bool;
+
+	function getDisplayName(param1:Int, param2:Int, param3:java.util.Locale):java.lang.String;
+
+	function getDisplayNames(param1:Int, param2:Int, param3:java.util.Locale):java.util.Map<java.lang.String, java.lang.Integer>;
+
+	function checkDisplayNameParams(param1:Int, param2:Int, param3:Int, param4:Int, param5:java.util.Locale, param6:Int):Bool;
+
+	function complete():Void;
+
+	function isExternallySet(param1:Int):Bool;
+
+	function getSetStateFields():Int;
+
+	function setFieldsComputed(param1:Int):Void;
+
+	function setFieldsNormalized(param1:Int):Void;
+
+	function isPartiallyNormalized():Bool;
+
+	function isFullyNormalized():Bool;
+
+	function setUnnormalized():Void;
+
+	function selectFields():Int;
+
+	function getBaseStyle(param1:Int):Int;
+
+	function isStandaloneStyle(param1:Int):Bool;
+
+	function isNarrowStyle(param1:Int):Bool;
+
+	function getCalendarType():java.lang.String;
+
+	function equals(param1:Dynamic):Bool;
+
+	function hashCode():Int;
+
+	function before(param1:Dynamic):Bool;
+
+	function after(param1:Dynamic):Bool;
+
+	function compareTo(param1:java.util.Calendar):Int;
+
+	function compareTo(param1:Dynamic):Int;
+
+	function add(param1:Int, param2:Int):Void;
+
+	function roll(param1:Int, param2:Bool):Void;
+
+	function roll(param1:Int, param2:Int):Void;
+
+	function setTimeZone(param1:java.util.TimeZone):Void;
+
+	function getTimeZone():java.util.TimeZone;
+
+	function getZone():java.util.TimeZone;
+
+	function setZoneShared(param1:Bool):Void;
+
+	function setLenient(param1:Bool):Void;
+
+	function isLenient():Bool;
+
+	function setFirstDayOfWeek(param1:Int):Void;
+
+	function getFirstDayOfWeek():Int;
+
+	function setMinimalDaysInFirstWeek(param1:Int):Void;
+
+	function getMinimalDaysInFirstWeek():Int;
+
+	function isWeekDateSupported():Bool;
+
+	function getWeekYear():Int;
+
+	function setWeekDate(param1:Int, param2:Int, param3:Int):Void;
+
+	function getWeeksInWeekYear():Int;
+
+	function getMinimum(param1:Int):Int;
+
+	function getMaximum(param1:Int):Int;
+
+	function getGreatestMinimum(param1:Int):Int;
+
+	function getLeastMaximum(param1:Int):Int;
+
+	function getActualMinimum(param1:Int):Int;
+
+	function getActualMaximum(param1:Int):Int;
+
+	function clone():Dynamic;
+
+	function toString():java.lang.String;
+
+	function toInstant():java.time.Instant;
+
+	var fields:java.NativeArray<Int>;
+
+	var time:haxe.Int64;
+
+	var isTimeSet:Bool;
+
+	var areFieldsSet:Bool;
+
+	var areAllFieldsSet:Bool;
+
+	static function getInstance():java.util.Calendar;
+
+	static function getInstance(param1:java.util.TimeZone, param2:java.util.Locale):java.util.Calendar;
+
+	static function getInstance(param1:java.util.Locale):java.util.Calendar;
+
+	static function getInstance(param1:java.util.TimeZone):java.util.Calendar;
+
+	static function getAvailableLocales():java.NativeArray<java.util.Locale>;
+
+	static function isFieldSet(param1:Int, param2:Int):Bool;
+
+	static function getAvailableCalendarTypes():java.util.Set<java.lang.String>;
+
+	static function getFieldName(param1:Int):java.lang.String;
+
+	static function <clinit>():Void;
+
+	static var ERA(default,never):Int;
+
+	static var YEAR(default,never):Int;
+
+	static var MONTH(default,never):Int;
+
+	static var WEEK_OF_YEAR(default,never):Int;
+
+	static var WEEK_OF_MONTH(default,never):Int;
+
+	static var DATE(default,never):Int;
+
+	static var DAY_OF_MONTH(default,never):Int;
+
+	static var DAY_OF_YEAR(default,never):Int;
+
+	static var DAY_OF_WEEK(default,never):Int;
+
+	static var DAY_OF_WEEK_IN_MONTH(default,never):Int;
+
+	static var AM_PM(default,never):Int;
+
+	static var HOUR(default,never):Int;
+
+	static var HOUR_OF_DAY(default,never):Int;
+
+	static var MINUTE(default,never):Int;
+
+	static var SECOND(default,never):Int;
+
+	static var MILLISECOND(default,never):Int;
+
+	static var ZONE_OFFSET(default,never):Int;
+
+	static var DST_OFFSET(default,never):Int;
+
+	static var FIELD_COUNT(default,never):Int;
+
+	static var SUNDAY(default,never):Int;
+
+	static var MONDAY(default,never):Int;
+
+	static var TUESDAY(default,never):Int;
+
+	static var WEDNESDAY(default,never):Int;
+
+	static var THURSDAY(default,never):Int;
+
+	static var FRIDAY(default,never):Int;
+
+	static var SATURDAY(default,never):Int;
+
+	static var JANUARY(default,never):Int;
+
+	static var FEBRUARY(default,never):Int;
+
+	static var MARCH(default,never):Int;
+
+	static var APRIL(default,never):Int;
+
+	static var MAY(default,never):Int;
+
+	static var JUNE(default,never):Int;
+
+	static var JULY(default,never):Int;
+
+	static var AUGUST(default,never):Int;
+
+	static var SEPTEMBER(default,never):Int;
+
+	static var OCTOBER(default,never):Int;
+
+	static var NOVEMBER(default,never):Int;
+
+	static var DECEMBER(default,never):Int;
+
+	static var UNDECIMBER(default,never):Int;
+
+	static var AM(default,never):Int;
+
+	static var PM(default,never):Int;
+
+	static var ALL_STYLES(default,never):Int;
+
+	static var STANDALONE_MASK(default,never):Int;
+
+	static var SHORT(default,never):Int;
+
+	static var LONG(default,never):Int;
+
+	static var NARROW_FORMAT(default,never):Int;
+
+	static var NARROW_STANDALONE(default,never):Int;
+
+	static var SHORT_FORMAT(default,never):Int;
+
+	static var LONG_FORMAT(default,never):Int;
+
+	static var SHORT_STANDALONE(default,never):Int;
+
+	static var LONG_STANDALONE(default,never):Int;
+
+	static var ALL_FIELDS(default,never):Int;
+
+	static var currentSerialVersion(default,never):Int;
+
+	static var serialVersionUID(default,never):haxe.Int64;
+
+	static var ERA_MASK(default,never):Int;
+
+	static var YEAR_MASK(default,never):Int;
+
+	static var MONTH_MASK(default,never):Int;
+
+	static var WEEK_OF_YEAR_MASK(default,never):Int;
+
+	static var WEEK_OF_MONTH_MASK(default,never):Int;
+
+	static var DAY_OF_MONTH_MASK(default,never):Int;
+
+	static var DATE_MASK(default,never):Int;
+
+	static var DAY_OF_YEAR_MASK(default,never):Int;
+
+	static var DAY_OF_WEEK_MASK(default,never):Int;
+
+	static var DAY_OF_WEEK_IN_MONTH_MASK(default,never):Int;
+
+	static var AM_PM_MASK(default,never):Int;
+
+	static var HOUR_MASK(default,never):Int;
+
+	static var HOUR_OF_DAY_MASK(default,never):Int;
+
+	static var MINUTE_MASK(default,never):Int;
+
+	static var SECOND_MASK(default,never):Int;
+
+	static var MILLISECOND_MASK(default,never):Int;
+
+	static var ZONE_OFFSET_MASK(default,never):Int;
+
+	static var DST_OFFSET_MASK(default,never):Int;
+
+	@:realPath("_assertionsDisabled") @:native("$assertionsDisabled")
+	static var $assertionsDisabled(default,never):Bool;
+}

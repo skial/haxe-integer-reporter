@@ -1,0 +1,8 @@
+@:realPath("java.time.format.DateTimeTextProvider_2") @:native("java.time.format.DateTimeTextProvider$2") @:libType
+extern class java.time.format.DateTimeTextProvider$2 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_time_temporal_ChronoField") @:native("$SwitchMap$java$time$temporal$ChronoField")
+	static var $SwitchMap$java$time$temporal$ChronoField(default,never):java.NativeArray<Int>;
+}

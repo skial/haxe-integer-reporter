@@ -1,0 +1,3 @@
+@:realPath("python.ConnectionRefusedError") @:native("ConnectionRefusedError")
+extern class ConnectionRefusedError extends ConnectionError {
+}

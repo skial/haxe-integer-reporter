@@ -1,0 +1,48 @@
+@:realPath("java.util.Optional") @:used @:nativeGen @:libType @:javaNative @:native("java.util.Optional") @:javaCanonical("java.util", "Optional")
+extern class java.util.Optional<T : java.util.Optional.T> {
+
+	@:overload
+	function toString():String;
+
+	@:overload
+	function hashCode():Int;
+
+	@:overload
+	function equals(param1:Dynamic):Bool;
+
+	@:overload @:throws("StdTypes")
+	function orElseThrow<X : orElseThrow.X>(param1:java.util.function.Supplier<orElseThrow.X>):java.util.Optional.T;
+
+	@:overload
+	function orElseGet(param1:java.util.function.Supplier<java.util.Optional.T>):java.util.Optional.T;
+
+	@:overload
+	function orElse(param1:java.util.Optional.T):java.util.Optional.T;
+
+	@:overload
+	function flatMap<U : flatMap.U>(param1:java.util.function.Function<Dynamic, java.util.Optional<flatMap.U>>):java.util.Optional<flatMap.U>;
+
+	@:overload
+	function map<U : map.U>(param1:java.util.function.Function<Dynamic, map.U>):java.util.Optional<map.U>;
+
+	@:overload
+	function filter(param1:java.util.function.Predicate<Dynamic>):java.util.Optional<java.util.Optional.T>;
+
+	@:overload
+	function ifPresent(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	@:overload
+	function isPresent():Bool;
+
+	@:overload
+	function get():java.util.Optional.T;
+
+	@:overload
+	static function ofNullable<T : ofNullable.T>(param1:ofNullable.T):java.util.Optional<ofNullable.T>;
+
+	@:overload
+	static function of<T : of.T>(param1:of.T):java.util.Optional<of.T>;
+
+	@:overload
+	static function empty<T : empty.T>():java.util.Optional<empty.T>;
+}

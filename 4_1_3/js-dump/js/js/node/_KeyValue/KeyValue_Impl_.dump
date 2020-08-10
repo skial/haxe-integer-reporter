@@ -1,0 +1,19 @@
+@:used
+private class js.node._KeyValue.KeyValue_Impl_ {
+
+	@:impl
+	public static var key(get,never):js.node.KeyValue.K;
+
+	@:impl
+	public static var value(get,never):js.node.KeyValue.V;
+
+	@:impl
+	static inline function get_key(this1:Array<Any>) {
+		return @:implicitCast cast cast this1[0];
+	}
+
+	@:impl
+	static inline function get_value(this1:Array<Any>) {
+		return @:implicitCast cast cast this1[1];
+	}
+}

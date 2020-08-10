@@ -1,0 +1,4 @@
+extern class js.node.fs.ReadStream extends js.node.stream.Readable<js.node.fs.ReadStream> {
+
+	var path:js.node.FsPath;
+}

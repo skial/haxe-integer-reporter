@@ -1,0 +1,17 @@
+@:realPath("java.util.PrimitiveIterator_OfInt") @:used @:nativeGen @:abstract @:libType @:javaNative @:native("java.util.PrimitiveIterator$OfInt") @:javaCanonical("java.util", "PrimitiveIterator.OfInt")
+extern interface java.util.PrimitiveIterator$OfInt implements java.util.PrimitiveIterator<java.lang.Integer, java.util.function.IntConsumer> {
+
+	function next():java.lang.Integer;
+
+	function forEachRemaining(param1:Dynamic):Void;
+
+	function forEachRemaining(param1:java.util.function.IntConsumer):Void;
+
+	function forEachRemaining(param1:java.util.function.Consumer<Dynamic>):Void;
+
+	function nextInt():Int;
+
+	function remove():Void;
+
+	function hasNext():Bool;
+}

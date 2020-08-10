@@ -1,0 +1,28 @@
+@:realPath("java.internal.Closure") @:directlyUsed @:used @:nativeGen @:nativeGen @:native("haxe.lang.Closure") @:keep
+class haxe.lang.Closure extends haxe.lang.VarArgsBase {
+
+	public function new(obj:Dynamic, field:String) {
+		super(-1, -1);
+		this.obj = obj;
+		this.field = field;
+	}
+
+	var obj:Dynamic;
+
+	var field:String;
+
+	public function __hx_invokeDynamic(dynArgs:java.NativeArray<Dynamic>) {
+		return haxe.lang.Runtime.callField(this.obj, this.field, dynArgs);
+	}
+
+	public function equals(obj:Dynamic) {
+		if ((obj == null)) return false;
+		var c = cast obj;
+		if ((c.obj == this.obj)) return c.field == this.field else return false;
+	}
+
+	@:has_untyped
+	public function hashCode() {
+		return this.obj.hashCode() ^ this.field.hashCode();
+	}
+}

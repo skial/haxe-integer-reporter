@@ -1,0 +1,11 @@
+@:realPath("java.util.Map_Entry_Statics") @:nativeGen @:libType @:javaNative @:native("java.util.Map$Entry") @:javaCanonical("java.util", "Map.Entry")
+extern class java.util.Map$Entry {
+
+	static function comparingByValue<K:Dynamic, V:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<java.util.Map$Entry<comparingByValue.K, comparingByValue.V>>;
+
+	static function comparingByValue<K:Dynamic, V:java.lang.Comparable<Dynamic>>():java.util.Comparator<java.util.Map$Entry<comparingByValue.K, comparingByValue.V>>;
+
+	static function comparingByKey<K:Dynamic, V:Dynamic>(param1:java.util.Comparator<Dynamic>):java.util.Comparator<java.util.Map$Entry<comparingByKey.K, comparingByKey.V>>;
+
+	static function comparingByKey<K:java.lang.Comparable<Dynamic>, V:Dynamic>():java.util.Comparator<java.util.Map$Entry<comparingByKey.K, comparingByKey.V>>;
+}

@@ -1,0 +1,229 @@
+class haxe.macro.MacroStringTools {
+
+	public static function formatString[Function:(s : String, pos : haxe.macro.Position) -> Unknown<68>]
+		[Arg:String] [Local s(113006):String]
+		[Arg:haxe.macro.Position] [Local pos(113007):haxe.macro.Position]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Call:Dynamic]
+						[Field:(f : String, nargs : Int) -> Dynamic]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(f : String, nargs : Int) -> Dynamic]
+								haxe.macro.Context
+								load:(f : String, nargs : Int) -> Dynamic
+						[Const:String] "format_string"
+						[Const:Int] 2
+					[Local s(113006):String:String]
+					[Local pos(113007):haxe.macro.Position:haxe.macro.Position]
+
+	public static function isFormatExpr[Function:(e : haxe.macro.ExprOf<String>) -> Bool]
+		[Arg:haxe.macro.ExprOf<String>] [Local e(112389):haxe.macro.ExprOf<String>]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Call:Dynamic]
+					[Call:Dynamic]
+						[Field:(f : String, nargs : Int) -> Dynamic]
+							[TypeExpr haxe.macro.Context:Class<haxe.macro.Context>]
+							[FStatic:(f : String, nargs : Int) -> Dynamic]
+								haxe.macro.Context
+								load:(f : String, nargs : Int) -> Dynamic
+						[Const:String] "is_fmt_string"
+						[Const:Int] 1
+					[Field:haxe.macro.Position]
+						[Local e(112389):haxe.macro.ExprOf<String>:haxe.macro.ExprOf<String>]
+						[FAnon:haxe.macro.Position] pos:haxe.macro.Position
+
+	static function isFmtString[Function:(p : haxe.macro.Position) -> Bool]
+		[Arg:haxe.macro.Position] [Local p(113008):haxe.macro.Position]
+		[Block:Dynamic] [Return:Dynamic] [Const:Bool] false
+
+	@:has_untyped
+	public static function toFieldExpr[Function:(sl : Array<String>, ?pos : Null<haxe.macro.Position>) -> haxe.macro.Expr]
+		[Arg:Array<String>] [Local sl(113009):Array<String>]
+		[Arg:Null<haxe.macro.Position>]
+			[Local pos(113010):Null<haxe.macro.Position>]
+			[Const:Null<haxe.macro.Position>] null
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Local pos(113010):Null<haxe.macro.Position>:Null<haxe.macro.Position>]
+					==
+					[Const:Null<haxe.macro.Position>] null
+				[Then:Dynamic] [Block:Dynamic]
+					[Return:Dynamic]
+						[Call:haxe.macro.Expr]
+							[Field:(it : Iterable<String>, f : ((item : String, result : haxe.macro.Expr) -> haxe.macro.Expr), first : haxe.macro.Expr) -> haxe.macro.Expr]
+								[TypeExpr Lambda:Class<Lambda>]
+								[FStatic:(it : Iterable<String>, f : ((item : String, result : haxe.macro.Expr) -> haxe.macro.Expr), first : haxe.macro.Expr) -> haxe.macro.Expr]
+									Lambda
+									fold:(it : Iterable<fold.A>, f : ((item : fold.A, result : fold.B) -> fold.B), first : fold.B) -> fold.B
+							[Local sl(113009):Array<String>:Array<String>]
+							[Function:(s : String, e : haxe.macro.Expr) -> haxe.macro.Expr]
+								[Arg:String] [Local s(113011):String]
+								[Arg:haxe.macro.Expr] [Local e(113012):haxe.macro.Expr]
+								[Return:Dynamic]
+									[If:haxe.macro.Expr]
+										[Binop:Bool]
+											[Local e(113012):haxe.macro.Expr:haxe.macro.Expr]
+											==
+											[Const:haxe.macro.Expr] null
+										[Then:haxe.macro.Expr] [Block:haxe.macro.Expr]
+											[Parenthesis:haxe.macro.Expr]
+												[Cast:haxe.macro.Expr]
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	EConst
+															[Call:haxe.macro.Constant]
+																[Field:(s : String) -> haxe.macro.Constant]
+																	[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+																	[FEnum:(s : String) -> haxe.macro.Constant]
+																		haxe.macro.Constant
+																		CIdent
+																[Local s(113011):String:String]
+														pos: [Call:haxe.macro.Position]
+															[Ident:(String, Int, Int) -> Unknown<70>] $__mk_pos__
+															[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/haxe/macro/MacroStringTools.hx"
+															[Const:Int] 2798
+															[Const:Int] 2801
+										[Else:haxe.macro.Expr] [Block:haxe.macro.Expr]
+											[Parenthesis:haxe.macro.Expr]
+												[Cast:haxe.macro.Expr]
+													[ObjectDecl:{ pos : haxe.macro.Position, expr : haxe.macro.ExprDef }]
+														expr: [Call:haxe.macro.ExprDef]
+															[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+																[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+																	haxe.macro.ExprDef
+																	EField
+															[Local e(113012):haxe.macro.Expr:haxe.macro.Expr]
+															[Local s(113011):String:String]
+														pos: [Call:haxe.macro.Position]
+															[Ident:(String, Int, Int) -> Unknown<69>] $__mk_pos__
+															[Const:String] "C:\\Users\\LAT6440\\AppData\\Roaming/haxe/versions/4.1.3/std/haxe/macro/MacroStringTools.hx"
+															[Const:Int] 2812
+															[Const:Int] 2817
+							[Const:haxe.macro.Expr] null
+			[Var e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }] [Const:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }] null
+			[Block:Void]
+				[Var `(113015):Int] [Const:Int] 0
+				[While:Void]
+					[Binop:Bool]
+						[Local `(113015):Int:Int]
+						<
+						[Field:Int]
+							[Local sl(113009):Array<String>:Array<String>]
+							[FInstance:Int]
+								Array<String>
+								length:Int
+					[Block:Void]
+						[Var v(113014):String]
+							[Array:String]
+								[Local sl(113009):Array<String>:Array<String>]
+								[Local `(113015):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local `(113015):Int:Int]
+						[If:Void]
+							[Binop:Bool]
+								[Local e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+								==
+								[Const:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }] null
+							[Then:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }] [Block:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+								[Binop:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+									[Local e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+									=
+									[ObjectDecl:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(c : haxe.macro.Constant) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EConst
+											[Call:haxe.macro.Constant]
+												[Field:(s : String) -> haxe.macro.Constant]
+													[TypeExpr haxe.macro.Constant:Enum<haxe.macro.Constant>]
+													[FEnum:(s : String) -> haxe.macro.Constant]
+														haxe.macro.Constant
+														CIdent
+												[Local v(113014):String:String]
+										pos: [Local pos(113010):Null<haxe.macro.Position>:Null<haxe.macro.Position>]
+							[Else:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }] [Block:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+								[Binop:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+									[Local e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+									=
+									[ObjectDecl:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+										expr: [Call:haxe.macro.ExprDef]
+											[Field:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+												[TypeExpr haxe.macro.ExprDef:Enum<haxe.macro.ExprDef>]
+												[FEnum:(e : haxe.macro.Expr, field : String) -> haxe.macro.ExprDef]
+													haxe.macro.ExprDef
+													EField
+											[Local e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+											[Local v(113014):String:String]
+										pos: [Local pos(113010):Null<haxe.macro.Position>:Null<haxe.macro.Position>]
+			[Return:Dynamic] [Local e(113013):{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }:{ pos : Null<haxe.macro.Position>, expr : haxe.macro.ExprDef }]
+
+	public static function toDotPath[Function:(pack : Array<String>, name : String) -> String]
+		[Arg:Array<String>] [Local pack(113016):Array<String>]
+		[Arg:String] [Local name(113017):String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[If:String]
+					[Binop:Bool]
+						[Field:Int]
+							[Local pack(113016):Array<String>:Array<String>]
+							[FInstance:Int]
+								Array<String>
+								length:Int
+						==
+						[Const:Int] 0
+					[Then:String] [Block:String] [Local name(113017):String:String]
+					[Else:String] [Block:String]
+						[Binop:String]
+							[Binop:String]
+								[Call:String]
+									[Field:(sep : String) -> String]
+										[Local pack(113016):Array<String>:Array<String>]
+										[FInstance:(sep : String) -> String]
+											Array<String>
+											join:(sep : String) -> String
+									[Const:String] "."
+								+
+								[Const:String] "."
+							+
+							[Local name(113017):String:String]
+
+	public static function toComplex[Function:(path : String) -> haxe.macro.ComplexType]
+		[Arg:String] [Local path(113018):String]
+		[Block:Dynamic]
+			[Var pack(113019):Array<String>]
+				[Call:Array<String>]
+					[Field:(delimiter : String) -> Array<String>]
+						[Local path(113018):String:String]
+						[FInstance:(delimiter : String) -> Array<String>]
+							String
+							split:(delimiter : String) -> Array<String>
+					[Const:String] "."
+			[Return:Dynamic]
+				[Call:haxe.macro.ComplexType]
+					[Field:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+						[TypeExpr haxe.macro.ComplexType:Enum<haxe.macro.ComplexType>]
+						[FEnum:(p : haxe.macro.TypePath) -> haxe.macro.ComplexType]
+							haxe.macro.ComplexType
+							TPath
+					[ObjectDecl:{ params : Array<haxe.macro.TypeParam>, pack : Array<String>, name : Null<String> }]
+						pack: [Local pack(113019):Array<String>:Array<String>]
+						name: [Call:Null<String>]
+							[Field:Void -> Null<String>]
+								[Local pack(113019):Array<String>:Array<String>]
+								[FInstance:Void -> Null<String>]
+									Array<String>
+									pop:Void -> Null<Array.T>
+						params: [ArrayDecl:Array<haxe.macro.TypeParam>]
+}

@@ -1,0 +1,3 @@
+@:realPath("java.lang.ClassLoader_ParallelLoaders") @:nativeGen @:libType @:javaNative @:native("java.lang.ClassLoader$ParallelLoaders") @:javaCanonical("java.lang", "ClassLoader.ParallelLoaders")
+extern class java.lang.ClassLoader$ParallelLoaders {
+}

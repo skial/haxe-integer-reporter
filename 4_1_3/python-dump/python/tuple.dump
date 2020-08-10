@@ -1,0 +1,25 @@
+@:realPath("python.Tuple5") @:native("tuple")
+extern class tuple<A : python.Tuple5.A,B : python.Tuple5.B,C : python.Tuple5.C,D : python.Tuple5.D,E : python.Tuple5.E> extends tuple<Dynamic> {
+
+	var _1(get,null):python.Tuple5.A;
+
+	inline function get__1():python.Tuple5.A;
+
+	var _2(get,null):python.Tuple5.B;
+
+	inline function get__2():python.Tuple5.B;
+
+	var _3(get,null):python.Tuple5.C;
+
+	inline function get__3():python.Tuple5.C;
+
+	var _4(get,null):python.Tuple5.D;
+
+	inline function get__4():python.Tuple5.D;
+
+	var _5(get,null):python.Tuple5.E;
+
+	inline function get__5():python.Tuple5.E;
+
+	static inline function make<A : make.A,B : make.B,C : make.C,D : make.D,E : make.E>(a:make.A, b:make.B, c:make.C, d:make.D, e:make.E):tuple<make.A, make.B, make.C, make.D, make.E>;
+}

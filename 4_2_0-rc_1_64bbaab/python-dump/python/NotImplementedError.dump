@@ -1,0 +1,3 @@
+@:realPath("python.NotImplementedError") @:native("NotImplementedError")
+extern class NotImplementedError extends RuntimeError {
+}

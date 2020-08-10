@@ -1,0 +1,2 @@
+@:used @:enum
+abstract js.node.fs.FSWatcherChangeType from String to String {}

@@ -1,0 +1,8 @@
+@:realPath("java.nio.file.attribute.FileTime_1") @:native("java.nio.file.attribute.FileTime$1") @:libType
+extern class java.nio.file.attribute.FileTime$1 {
+
+	static function <clinit>():Void;
+
+	@:realPath("_SwitchMap_java_util_concurrent_TimeUnit") @:native("$SwitchMap$java$util$concurrent$TimeUnit")
+	static var $SwitchMap$java$util$concurrent$TimeUnit(default,never):java.NativeArray<Int>;
+}

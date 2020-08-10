@@ -1,0 +1,24 @@
+private class haxe.ds._ReadOnlyArray.ReadOnlyArray_Impl_ {
+
+	@:impl
+	public static var length(get,never):Int;
+
+	@:impl
+	static inline function get_length[Function:(this : Array<haxe.ds.ReadOnlyArray.T>) -> Int]
+		[Arg:Array<haxe.ds.ReadOnlyArray.T>] [Local this(110361):Array<haxe.ds.ReadOnlyArray.T>]
+		[Return:Dynamic]
+			[Field:Int]
+				[Local this(110361):Array<haxe.ds.ReadOnlyArray.T>:Array<haxe.ds.ReadOnlyArray.T>]
+				[FInstance:Int]
+					Array<haxe.ds.ReadOnlyArray.T>
+					length:Int
+
+	@:impl @:arrayAccess
+	static inline function get[Function:(this : Array<haxe.ds.ReadOnlyArray.T>, i : Int) -> haxe.ds.ReadOnlyArray.T]
+		[Arg:Array<haxe.ds.ReadOnlyArray.T>] [Local this(110362):Array<haxe.ds.ReadOnlyArray.T>]
+		[Arg:Int] [Local i(110363):Int]
+		[Return:Dynamic]
+			[Array:haxe.ds.ReadOnlyArray.T]
+				[Local this(110362):Array<haxe.ds.ReadOnlyArray.T>:Array<haxe.ds.ReadOnlyArray.T>]
+				[Local i(110363):Int:Int]
+}

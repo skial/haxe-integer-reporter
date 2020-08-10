@@ -1,0 +1,123 @@
+@:realPath("java.io.PrintStream") @:used @:nativeGen @:libType @:javaNative @:native("java.io.PrintStream") @:javaCanonical("java.io", "PrintStream")
+extern class java.io.PrintStream extends java.io.FilterOutputStream implements java.lang.Appendable implements java.io.Closeable {
+
+	@:overload @:throws("java.io.UnsupportedEncodingException") @:throws("java.io.FileNotFoundException")
+	function new(param1:java.io.File, param2:String):Void;
+
+	@:overload
+	function new(param1:java.io.OutputStream):Void;
+
+	@:overload
+	function new(param1:java.io.OutputStream, param2:Bool):Void;
+
+	@:overload @:throws("java.io.UnsupportedEncodingException")
+	function new(param1:java.io.OutputStream, param2:Bool, param3:String):Void;
+
+	@:overload @:throws("java.io.FileNotFoundException")
+	function new(param1:String):Void;
+
+	@:overload @:throws("java.io.UnsupportedEncodingException") @:throws("java.io.FileNotFoundException")
+	function new(param1:String, param2:String):Void;
+
+	@:overload @:throws("java.io.FileNotFoundException")
+	function new(param1:java.io.File):Void;
+
+	@:overload
+	function append(param1:java.lang.CharSequence):java.io.PrintStream;
+
+	@:overload
+	function append(param1:java.types.Char16):java.io.PrintStream;
+
+	@:overload
+	function append(param1:java.lang.CharSequence, param2:Int, param3:Int):java.io.PrintStream;
+
+	@:overload
+	function format(param1:java.util.Locale, param2:String, param3:java.NativeArray<Dynamic>):java.io.PrintStream;
+
+	@:overload
+	function format(param1:String, param2:java.NativeArray<Dynamic>):java.io.PrintStream;
+
+	@:overload
+	function printf(param1:java.util.Locale, param2:String, param3:java.NativeArray<Dynamic>):java.io.PrintStream;
+
+	@:overload
+	function printf(param1:String, param2:java.NativeArray<Dynamic>):java.io.PrintStream;
+
+	@:overload
+	function println(param1:Dynamic):Void;
+
+	@:overload
+	function println():Void;
+
+	@:overload
+	function println(param1:Bool):Void;
+
+	@:overload
+	function println(param1:java.types.Char16):Void;
+
+	@:overload
+	function println(param1:Int):Void;
+
+	@:overload
+	function println(param1:haxe.Int64):Void;
+
+	@:overload
+	function println(param1:Single):Void;
+
+	@:overload
+	function println(param1:Float):Void;
+
+	@:overload
+	function println(param1:java.NativeArray<java.types.Char16>):Void;
+
+	@:overload
+	function println(param1:String):Void;
+
+	@:overload
+	function print(param1:Dynamic):Void;
+
+	@:overload
+	function print(param1:Bool):Void;
+
+	@:overload
+	function print(param1:java.types.Char16):Void;
+
+	@:overload
+	function print(param1:Int):Void;
+
+	@:overload
+	function print(param1:haxe.Int64):Void;
+
+	@:overload
+	function print(param1:Single):Void;
+
+	@:overload
+	function print(param1:Float):Void;
+
+	@:overload
+	function print(param1:java.NativeArray<java.types.Char16>):Void;
+
+	@:overload
+	function print(param1:String):Void;
+
+	@:overload
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	@:overload
+	function write(param1:Int):Void;
+
+	@:overload @:protected
+	function clearError():Void;
+
+	@:overload @:protected
+	function setError():Void;
+
+	@:overload
+	function checkError():Bool;
+
+	@:overload
+	function close():Void;
+
+	@:overload
+	function flush():Void;
+}

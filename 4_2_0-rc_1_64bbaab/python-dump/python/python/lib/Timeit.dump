@@ -1,0 +1,5 @@
+@:pythonImport("timeit")
+extern class python.lib.Timeit {
+
+	static function default_timer():Float;
+}

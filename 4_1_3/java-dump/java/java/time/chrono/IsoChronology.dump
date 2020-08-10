@@ -1,0 +1,68 @@
+@:realPath("java.time.chrono.IsoChronology") @:used @:nativeGen @:libType @:javaNative @:native("java.time.chrono.IsoChronology") @:javaCanonical("java.time.chrono", "IsoChronology")
+extern class java.time.chrono.IsoChronology extends java.time.chrono.AbstractChronology implements java.io.Serializable {
+
+	@:overload
+	function date(param1:java.time.chrono.Era, param2:Int, param3:Int, param4:Int):java.time.LocalDate;
+
+	@:overload
+	function date(param1:java.time.temporal.TemporalAccessor):java.time.LocalDate;
+
+	@:overload
+	function date(param1:Int, param2:Int, param3:Int):java.time.LocalDate;
+
+	@:overload
+	function dateYearDay(param1:java.time.chrono.Era, param2:Int, param3:Int):java.time.LocalDate;
+
+	@:overload
+	function dateYearDay(param1:Int, param2:Int):java.time.LocalDate;
+
+	@:overload
+	function dateEpochDay(param1:haxe.Int64):java.time.LocalDate;
+
+	@:overload
+	function dateNow():java.time.LocalDate;
+
+	@:overload
+	function dateNow(param1:java.time.Clock):java.time.LocalDate;
+
+	@:overload
+	function dateNow(param1:java.time.ZoneId):java.time.LocalDate;
+
+	@:overload
+	function localDateTime(param1:java.time.temporal.TemporalAccessor):java.time.LocalDateTime;
+
+	@:overload
+	function zonedDateTime(param1:java.time.temporal.TemporalAccessor):java.time.ZonedDateTime;
+
+	@:overload
+	function zonedDateTime(param1:java.time.Instant, param2:java.time.ZoneId):java.time.ZonedDateTime;
+
+	@:overload
+	function eraOf(param1:Int):java.time.chrono.IsoEra;
+
+	@:overload
+	function period(param1:Int, param2:Int, param3:Int):java.time.Period;
+
+	@:overload
+	function resolveDate(param1:java.util.Map<java.time.temporal.TemporalField, java.lang.Long>, param2:java.time.format.ResolverStyle):java.time.LocalDate;
+
+	@:overload
+	function range(param1:java.time.temporal.ChronoField):java.time.temporal.ValueRange;
+
+	@:overload
+	function eras():java.util.List<java.time.chrono.Era>;
+
+	@:overload
+	function prolepticYear(param1:java.time.chrono.Era, param2:Int):Int;
+
+	@:overload
+	function isLeapYear(param1:haxe.Int64):Bool;
+
+	@:overload
+	function getCalendarType():String;
+
+	@:overload
+	function getId():String;
+
+	static var INSTANCE(default,never):java.time.chrono.IsoChronology;
+}

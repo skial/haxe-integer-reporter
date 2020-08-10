@@ -1,0 +1,8 @@
+@:keep @:directlyUsed @:used
+class StringTools {
+
+	@:has_untyped
+	public static function fastCodeAt(s:String, index:Int) {
+		return s.cca(index);
+	}
+}

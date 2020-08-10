@@ -1,0 +1,3 @@
+@:realPath("java.util.LinkedHashMap_Entry") @:libType @:javaNative @:native("java.util.LinkedHashMap$Entry") @:javaCanonical("java.util", "LinkedHashMap.Entry")
+extern class java.util.LinkedHashMap$Entry<K : java.util.LinkedHashMap_Entry.K,V : java.util.LinkedHashMap_Entry.V> extends java.util.HashMap$Node<java.util.LinkedHashMap_Entry.K, java.util.LinkedHashMap_Entry.V> {
+}

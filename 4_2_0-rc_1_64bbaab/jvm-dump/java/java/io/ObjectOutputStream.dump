@@ -1,0 +1,93 @@
+@:realPath("java.io.ObjectOutputStream") @:used @:native("java.io.ObjectOutputStream") @:libType
+extern class java.io.ObjectOutputStream extends java.io.OutputStream implements java.io.ObjectOutput implements java.io.ObjectStreamConstants {
+
+	function new(param1:java.io.OutputStream):Void;
+
+	function new():Void;
+
+	function useProtocolVersion(param1:Int):Void;
+
+	function writeObject(param1:Dynamic):Void;
+
+	function writeObjectOverride(param1:Dynamic):Void;
+
+	function writeUnshared(param1:Dynamic):Void;
+
+	function defaultWriteObject():Void;
+
+	function putFields():java.io.ObjectOutputStream$PutField;
+
+	function writeFields():Void;
+
+	function reset():Void;
+
+	function annotateClass(param1:java.lang.Class<Dynamic>):Void;
+
+	function annotateProxyClass(param1:java.lang.Class<Dynamic>):Void;
+
+	function replaceObject(param1:Dynamic):Dynamic;
+
+	function enableReplaceObject(param1:Bool):Bool;
+
+	function writeStreamHeader():Void;
+
+	function writeClassDescriptor(param1:java.io.ObjectStreamClass):Void;
+
+	function write(param1:Int):Void;
+
+	function write(param1:java.NativeArray<java.types.Int8>, param2:Int, param3:Int):Void;
+
+	function write(param1:java.NativeArray<java.types.Int8>):Void;
+
+	function flush():Void;
+
+	function drain():Void;
+
+	function close():Void;
+
+	function writeBoolean(param1:Bool):Void;
+
+	function writeByte(param1:Int):Void;
+
+	function writeShort(param1:Int):Void;
+
+	function writeChar(param1:Int):Void;
+
+	function writeInt(param1:Int):Void;
+
+	function writeLong(param1:haxe.Int64):Void;
+
+	function writeFloat(param1:Single):Void;
+
+	function writeDouble(param1:Float):Void;
+
+	function writeBytes(param1:java.lang.String):Void;
+
+	function writeChars(param1:java.lang.String):Void;
+
+	function writeUTF(param1:java.lang.String):Void;
+
+	function getProtocolVersion():Int;
+
+	function writeTypeString(param1:java.lang.String):Void;
+
+	@:realPath("access_000") @:native("access$000")
+	static function access$000(param1:java.io.ObjectOutputStream):java.io.ObjectOutputStream$BlockDataOutputStream;
+
+	@:realPath("access_100") @:native("access$100")
+	static function access$100():Bool;
+
+	@:realPath("access_200") @:native("access$200")
+	static function access$200(param1:java.io.ObjectOutputStream):java.io.ObjectOutputStream$DebugTraceInfoStack;
+
+	@:realPath("access_300") @:native("access$300")
+	static function access$300(param1:java.io.ObjectOutputStream, param2:Dynamic, param3:Bool):Void;
+
+	@:realPath("access_400") @:native("access$400")
+	static function access$400(param1:java.NativeArray<Single>, param2:Int, param3:java.NativeArray<java.types.Int8>, param4:Int, param5:Int):Void;
+
+	@:realPath("access_500") @:native("access$500")
+	static function access$500(param1:java.NativeArray<Float>, param2:Int, param3:java.NativeArray<java.types.Int8>, param4:Int, param5:Int):Void;
+
+	static function <clinit>():Void;
+}
