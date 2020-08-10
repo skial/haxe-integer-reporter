@@ -36,6 +36,8 @@ class Macros {
 
     #if macro
     public static function setup() {
+        Compiler.define('dump-path', './$directory/$target-dump/');
+        Compiler.define('dump', 'pretty');
         Context.onAfterTyping( onGenerate );
     }
     public static var ereg = ~/[ \\-\\:\\.]/gi;
